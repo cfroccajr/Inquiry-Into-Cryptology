@@ -261,8 +261,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<tabular top="minor" left="minor" right="minor" halign="center">
 						<row>
 							<cell>plain</cell>
-							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell><cell>f</cell><cell>g</cell>
-							<cell>h</cell><cell>i</cell>
+							<cell>a</cell><cell>b</cell><cell>c</cell>
+							<cell>d</cell><cell>e</cell><cell>f</cell>
+							<cell>g</cell><cell>h</cell><cell>i</cell>
 						</row>
 						<row>
 							<cell>CIPHER</cell>
@@ -272,8 +273,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</row>
 						<row>
 							<cell>plain</cell>
-							<cell>j</cell><cell>k</cell><cell>l</cell><cell>m</cell><cell>n</cell><cell>o</cell><cell>p</cell>
-							<cell>q</cell><cell>r</cell>
+							<cell>j</cell><cell>k</cell><cell>l</cell>
+							<cell>m</cell><cell>n</cell><cell>o</cell>
+							<cell>p</cell><cell>q</cell><cell>r</cell>
 						</row>
 						<row>
 							<cell>CIPHER</cell>
@@ -283,8 +285,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</row>
 						<row>
 							<cell>plain</cell>
-							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell><cell>x</cell><cell>y</cell>
-							<cell>z</cell><cell></cell>
+							<cell>s</cell><cell>t</cell><cell>u</cell>
+							<cell>v</cell><cell>w</cell><cell>x</cell>
+							<cell>y</cell><cell>z</cell><cell></cell>
 						</row>
 						<row bottom="minor">
 							<cell>CIPHER</cell>
@@ -300,7 +303,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<section xml:id="arab_ciphers">
 		<title>Arabic Numerical Ciphers</title>
 		<p>
-			In this section we will look at some of the ciphers introduced by Arabic scholars which employ mathematics in encipherment.
+			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until Arabic scholars performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
+		</p>
+		<p>
+			In thus section I want to introduce some other work performed by Arabic scholars.  Here we will look at some methods of enciphering text which today we would call a variation on an <term>affine cipher</term><index><main>affine cipher</main></index>.
 		</p>
 	</section>
 

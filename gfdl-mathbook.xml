@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--********************************************************************
-Copyright 2015-2016 Robert A. Beezer
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
 
 This file is part of MathBook XML.
 
