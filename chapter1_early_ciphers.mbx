@@ -32,27 +32,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<title> Caesar's Shifty Idea </title>
 
 	<introduction>
-		In this chapter discuss ancient encryption systems:
-		<ul>
-			<li> Caesar's Shift</li>
-			<li> Skytle</li>
-			<li> Others?</li>
-			<li> Slight improvements: Nomenclatures, Nulls, etc.</li>
-		</ul>
+		<p>
+			In this chapter discuss ancient encryption systems:
+			<ul>
+				<li> Caesar's Shift</li>
+				<li> Skytle</li>
+				<li> Others?</li>
+				<li> Slight improvements: Nomenclatures, Nulls, etc.</li>
+			</ul>
+		</p>
 	</introduction>
 
 
 	<section xml:id="Ancient_Ciphers">
 		<title> Simple Early Ciphers (and a little math)</title>
 
-		<p>
-			<definition xml:id="Def_Ciphers">
-				<title> Cipher </title>
-				<p> 
+		<definition xml:id="Def_Ciphers">
+			<title> Cipher </title>
+			<statement>
+				<p>
 					A <term> cipher </term><index><main>cipher</main> </index> is a system by which a letter or block of letters is replaced by another letter or block of letters in a systematic way.
 				</p>
-			</definition>
-		</p>
+			</statement>
+		</definition>
 
 		
 
@@ -79,7 +81,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			Try to figure out the message in the passage below which has been <term>enciphered</term><index><main>encipher</main></index>.  As you look at it try to answer the following questions:
 		</p>
 		<exercise> 
-			<statement>Cipher Text:
+			<statement>
+				<p>
+					Cipher Text:
+				</p>
 				<pre>
 					RQH RI WKH HDUOLHVW WBSHV RI FLSKHU (VRPHWLPHV VSHOOHG FBSKHU 
 					LQ ROGHU GRFXPHQWV) WKDW ZH KDYH D UHFRUG RI ZDV WKH FDHVDU 
@@ -170,7 +175,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Plain Text About Ciphers Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 		<exercise>
-			<statement>Cipher Text:
+			<statement>
+				<p>
+					Cipher Text:
+				</p>
 				<pre>
 					IL JVWF UVD AV TLU VM NYVZZLY ISVVK, HUK ALHJO AOLT 
 					OVD AV DHY. HUK FVB, NVVK FLVTHU, DOVZL SPTIZ DLYL 
@@ -187,7 +195,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</statement>
 		</exercise>
 		<exercise>
-			<statement>Cipher Text:
+			<statement>
+				<p>
+					Cipher Text:
+				</p>
 				<pre>
 					BJKJB BJMFU UDKJB BJGFS ITKGW TYMJW XKTWM JYTIF DYMFY 
 					XMJIX MNXGQ TTIBN YMRJX MFQQG JRDGW TYMJW GJMJS JJWXT 
@@ -212,32 +223,41 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</ol>
 
 			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  John Falconer in the seventeenth century described this as follows:
-			<blockquote>
+		</p>
+		<blockquote>
+			<p>
 				<em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348484017332394393600000.</me> 
 				From "Cryptomenysis Patefacta" by John Falconer, 1685.
-			</blockquote>
-
-			<poem halign="center">
-				<stanza>
-					<line><alert> Warning!  -- Modern Mathematics Ahead -- Warning!</alert></line>
-				</stanza>
-			</poem>
-
-			Today we would call the huge number we calculated above <m>26!</m>, which is read 26 factorial, and certainly takes up a lot less room.
-
-			<p>
-				<definition xml:id="factorial">
-					<title> Factorial </title>
-					<p> 
-						Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
-						<men>
-							n!=n(n-1)(n-2)\cdots 2 \cdot 1 
-						</men>
-						Note that for a variety of reasons <m>0!=1</m>.
-					</p>
-				</definition>
 			</p>
+		</blockquote>
 
+
+		<table>
+			<tabular halign="center">
+				<row>
+					<cell>
+						<alert> Warning!  -- Modern Mathematics Ahead -- Warning!</alert>
+					</cell>
+				</row>
+			</tabular>
+		</table>
+
+		<p>
+			Today we would call the huge number we calculated above <m>26!</m>, which is read 26 factorial, and certainly takes up a lot less room.
+		</p>
+		<definition xml:id="factorial">
+			<title> Factorial </title>
+			<statement> 
+				<p>
+					Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+					<men>
+						n!=n(n-1)(n-2)\cdots 2 \cdot 1 
+					</men>
+					Note that for a variety of reasons <m>0!=1</m>.
+				</p>
+			</statement>
+		</definition>
+		<p>
 			Thus we can make a message harder to decipher simply by using a more inventive method of encipherment.
 		</p>
 
@@ -248,7 +268,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			The last exercise in this section was enciphered with a slightly trickier cipher than the previous ciphers so I put the spaces and punctuation back in. Also, while it is a harder cipher it is not completely random, there is a pattern to how the key was generated; so in the table below the message try filling in the cipher alphabet below the plain alphabet and see if you can spot a pattern.
 		</p>
 		<exercise>
-			<statement> Cipher Text:
+			<statement>
+				<p>
+					Cipher Text:
+				</p>
 				<pre>
 					"Eacmpa xmt eadgl z sfgld, pakglr xmtpqajc sfzs rgccgbtjsgaq 
 					zlr rajzxq otgsa gknmqqgeja sm cmpaqaa zpa zfazr. Gc xmt 

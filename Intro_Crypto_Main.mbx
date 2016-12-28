@@ -31,39 +31,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+	<docinfo />
 	<book xml:id="IntroToCrypto">
 		<title>Cryptology Through History and Inquiry</title>
 
-<!-- Frontmatter Content -->
+	<!-- Frontmatter Content -->
 
-	<xi:include href="crypto_frontmatter.mbx" />
+		<xi:include href="crypto_frontmatter.mbx" />
 
-<!-- Chapter 1 Content -->
+	<!-- Chapter 1 Content -->
 
-	<xi:include href="chapter1_early_ciphers.mbx" />
+		<xi:include href="chapter1_early_ciphers.mbx" />
 
-<!-- Chapter 2 Content -->
+	<!-- Chapter 2 Content -->
 
 
-	<xi:include href="chapter2_arab_analysis.mbx" />
+		<xi:include href="chapter2_arab_analysis.mbx" />
 
-<!-- Chapter 3 Content -->
+	<!-- Chapter 3 Content -->
 
-	<xi:include href="chapter3_new_ciphers.mbx" />
+		<xi:include href="chapter3_new_ciphers.mbx" />
 
-<!-- Chapter 4 Content -->
+	<!-- Chapter 4 Content -->
 
-	<xi:include href="chapter4_mathematical_analysis.mbx" />
+		<xi:include href="chapter4_mathematical_analysis.mbx" />
 
-<!-- Chapter 5 Content -->
+	<!-- Chapter 5 Content -->
 
-	<xi:include href="chapter5_mechanical_ciphers.mbx" />
+		<xi:include href="chapter5_mechanical_ciphers.mbx" />
 
-<!-- Chapter 6 Content -->
+	<!-- Chapter 6 Content -->
 
-	<xi:include href="chapter6_modern_cryptology.mbx" />
+		<xi:include href="chapter6_modern_cryptology.mbx" />
 
-<!-- Backmatter Content -->
+	<!-- Backmatter Content -->
 
 		<xi:include href="crypto_backmatter.mbx" />
 
