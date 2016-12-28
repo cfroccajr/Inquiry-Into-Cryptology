@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<chapter xml:id="ModernCrypto">
+	<title> Mathematics to the Rescue </title>
+	<p>
+		In this chapter look at cryptology from about 1970 to today:
+		<ul>
+			<li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>
+			<li> Asymmetric ciphers (Diffie-Hellman, RSA, El Gamal?, etc.) and the roll of number theory</li>
+			<li> Absolute secrecy</li>
+		</ul>
+	</p>
+</chapter>

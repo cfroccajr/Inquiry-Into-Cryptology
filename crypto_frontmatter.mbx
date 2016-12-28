@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<frontmatter>
+<titlepage>
+   <author>
+	    <personname>Charles F. Rocca Jr.</personname>
+    	<department>Department of Mathematics</department>
+    	<institution>Western Connecticut State University</institution>
+    	<email>roccac@wcsu.edu</email>
+	</author>
+</titlepage>
+
+
+<!-- Introductory Remarks -->
+
+<preface xml:id="Intro">
+	<title> Introduction </title>
+	<p> 
+		Goals and Aims of the text:
+		<ul>
+			<li> Present a \textit{brief} overview of the history of cryptology</li>
+			<li> Present the cryptology as it was not with significantly newer or older concepts</li>
+			<li> Exception to the previous statement will be the use of some modern terminology where appropriate</li>
+			<li> Present a variety of mathematical topics: Statistical analysis, Linear Algebra, Number Theory, Group Theory</li>
+			<li> Present the material from an inquiry based perspective when possible</li>
+			<li> Present the text as a battle back and forth between making and breaking codes</li>
+		</ul>
+
+		\noindent
+		What should be covered in terms of content can be summarized by the list:
+		<ul>
+			<li> 500 B.C.E. (and before): Atabash, Scytale, Demaratus, Histiaeus</li>
+			<li>  50 B.C.E.: Caesar </li>
+			<li>  700-1000: Arab Cryptology* </li>
+			<li>  140"0-1850: Foiling Frequencies*: Alberti's, Vigen\'{e}re's , Jefferson's, and Playfair's Ciphers </li>
+									<li>  1846: Babbage / Kasiski Test* </li>
+									<li>  1914-1918: World War I: Zimmermann's Telegram, ADFGVX Cipher, etc.</li>
+									<li>  1919: One Time Pad* </li>
+									<li>  1929: Hill's Cipher* </li>
+									<li> 1934: Enigma* in the service of the German military </li>
+									<li> 1978:" RSA* </li>
+			<li>  1991: Zimmermann and PGP </li>
+			<li>  2000: Quantum Cryptology </li>
+		</ul>
+	</p>
+</preface>
+</frontmatter>

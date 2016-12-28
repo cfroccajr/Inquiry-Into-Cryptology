@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<chapter xml:id="early_riphers">
+	<title> Caesar's Shifty Idea </title>
+
+	<introduction>
+		In this chapter discuss ancient encryption systems:
+		<ul>
+			<li> Caesar's Shift</li>
+			<li> Skytle</li>
+			<li> Others?</li>
+			<li> Slight improvements: Nomenclatures, Nulls, etc.</li>
+		</ul>
+	</introduction>
+
+
+	<section xml:id="Ancient_Ciphers">
+		<title> Simple Early Ciphers (and a little math)</title>
+
+		<p>
+			<definition xml:id="Def_Ciphers">
+				<title> Cipher </title>
+				<p> 
+					A <term> cipher </term><index><main>cipher</main> </index> is a system by which a letter or block of letters is replaced by another letter or block of letters in a systematic way.
+				</p>
+			</definition>
+		</p>
+
+		
+
+		<!-- %%%%%%%%%% Here is the beginning of plain text which will enciphered in the final product %%%%%%%%%%
+		One of the earliest types of cipher (sometimes spelled cypher in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
+
+		%%%%%%%%%
+		There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.
+		%%%%%%%%%
+
+		Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
+
+		%%%%%%%%%%%%%%%%
+		When he had occasion to write in cypher he put b for a c for b so forth and instead of z, aa.
+		%%%%%%%%%%%%%%%%
+
+		Neither of these offer much security, nor do they take full advantage of the number of possible substitutions that can be made.
+
+		\hfill\cite[pages 37,134]{CR:Crypt:1901lives}
+
+		%%%%%%%%%%%%%%%%% -->
+
+		<p>
+			Try to figure out the message in the passage below which has been <term>enciphered</term><index><main>encipher</main></index>.  As you look at it try to answer the following questions:
+		</p>
+		<exercise> 
+			<statement>Cipher Text:
+				<pre>
+					RQH RI WKH HDUOLHVW WBSHV RI FLSKHU (VRPHWLPHV VSHOOHG FBSKHU 
+					LQ ROGHU GRFXPHQWV) WKDW ZH KDYH D UHFRUG RI ZDV WKH FDHVDU 
+					VKLIW FLSKHU XVHG EB MXOLXV FDHVDU DURXQG 100 EFH. KHUH LW LV 
+					DV GHVFULEHG EB VXHWRQLXV ZKR OLYHG DERXW 150 WR 200 BHDUV 
+					DIWHU MXOLXV FDHVDU.
+
+					"WKHUH DUH HAWDQW OLNHZLVH VRPH OHWWHUV IURP KLP WR FLFHUR 
+					DQG RWKHUV WR KLV IULHQGV FRQFHUQLQJ KLV GRPHVWLF DIIDLUV 
+					LQ ZKLFK LI WKHUH ZDV RFFDVLRQ IRU VHFUHFB KH ZURWH LQ 
+					FBSKHUV, WKDW LV KH XVHG WKH DOSKDEHW LQ VXFK D PDQQHU WKDW 
+					QRW D VLQJOH ZDUG FRXOG EH PDGH RXW. WKH ZDB WR GHFLSKHU WKRVH 
+					HSLVWOHV ZDV WR VXEVWLWXWH WKH IRXUWK IRU WKH ILUVW OHWWHU DV 
+					G IRU D DQG VR IRU WKH RWKHU OHWWHUV UHVSHFWLYHOB."
+					
+					DXJXVWXV FDHVDU D VKRUW WLPH ODWHU DOVR HPSORBHG D VKLIW 
+					FLSKHU, WKRXJK DUJXDEOB D PXFK OHVV HIIHFWLYH RQH:
+
+					"ZKHQ KH KDG RFFDVLRQ WR ZULWH LQ FBSKHU KH SXW E IRU D F 
+					IRU E VR IRUWK DQG LQVWHDG RI C, DD."
+
+					QHLWKHU RI WKHVH RIIHU PXFK VHFXULWB, QRU GR WKHB WDNH IXOO 
+					DGYDQWDJH RI WKH QXPEHU RI SRVVLEOH VXEVWLWXWLRQV WKDW FDQ EH 
+					PDGH.
+				</pre>
+			</statement>
+			<hint>
+				<p>
+					<ul>
+						<li> Which letters stand alone, i.e. are one letter words?  Can this tell you something about which letters they represent?</li>
+						<li> What about two or three letter words?  What might they be?</li>
+						<li> Do some of the letters appear more often than others?</li>
+						<li> Can you think of other properties of words and letters that could help us understand what a message says?</li>
+						<li> Do you see the general pattern that was used?</li>
+					</ul>
+				</p>
+			</hint>
+		</exercise>
+
+		<p>
+			Were you able to <term>decipher</term><index><main>decipher</main></index> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
+
+			<ul>
+				<li> How does the new method compare to those which we have previously considered, what does it do to make the message more secure?</li>
+				<li> Each time we change the method in which messages are enciphered what doesn't change?  </li>
+				<li> Are there any properties that can not change?  That is, are there rules about how English is put together that we can make use of?</li>
+				<li> If you have suspicions about what a message, or part of a message, might say how can you use this to help you?</li>
+				<li> What sort of data might we keep track of or how can we organize our thoughts to help us solve these puzzles?</li>
+			</ul>
+		</p>
+
+			<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% About Enciphering Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+			\begin{comment}
+
+			One of the easiest ways to try an foil the sort of analysis we used on the first message is to not leave in the word spacings.  
+			Consider the following two passages one of which was enciphered with the word spacings intact and the second with them removed.
+
+			%\begin{quote}
+			``Be copy now to men of grosser blood, 
+			And teach them how to war. And you, good yeoman, 
+			Whose limbs were made in England, show us here 
+			The mettle of your pasture; let us swear 
+			That you are worth your breeding; which I doubt not; 
+			For there is none of you so mean and base, 
+			That hath not noble lustre in your eyes. 
+			I see you stand like greyhounds in the slips, 
+			Straining upon the start. The game's afoot: 
+			Follow your spirit, and upon this charge 
+			Cry 'God for Harry, England, and Saint George!'' - Henry V, William Shakespeare
+			%\end{quote}
+
+			And now for a similar quote with them removed:
+
+			%\begin{quote}
+			``We few, we happy few, we band of brothers;
+			For he to-day that sheds his blood with me 
+			Shall be my brother; be he ne'er so vile, 
+			This day shall gentle his condition: 
+			And gentlemen in England now a-bed 
+			Shall think themselves accursed they were not here,
+			And hold their manhoods cheap whiles any speaks 
+			That fought with us upon Saint Crispin's day.'' - Henry V, by William Shakespeare
+			%\end{quote}
+
+
+			\end{comment}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Plain Text About Ciphers Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+		<exercise>
+			<statement>Cipher Text:
+				<pre>
+					IL JVWF UVD AV TLU VM NYVZZLY ISVVK, HUK ALHJO AOLT 
+					OVD AV DHY. HUK FVB, NVVK FLVTHU, DOVZL SPTIZ DLYL 
+					THKL PU LUNSHUK, ZOVD BZ OLYL AOL TLAASL VM FVBY 
+					WHZABYL; SLA BZ ZDLHY AOHA FVB HYL DVYAO FVBY 
+					IYLLKPUN; DOPJO P KVBIA UVA; MVY AOLYL PZ UVUL VM 
+					FVB ZV TLHU HUK IHZL, AOHA OHAO UVA UVISL SBZAYL 
+					PU FVBY LFLZ. P ZLL FVB ZAHUK SPRL NYLFOVBUKZ PU 
+					AOL ZSPWZ, ZAYHPUPUN BWVU AOL ZAHYA. AOL NHTL'Z 
+					HMVVA: MVSSVD FVBY ZWPYPA, HUK BWVU AOPZ JOHYNL JYF 
+					'NVK MVY OHYYF, LUNSHUK, HUK ZHPUA NLVYNL! - OLUYF 
+					C, DPSSPHT ZOHRLZWLHYL
+				</pre>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>Cipher Text:
+				<pre>
+					BJKJB BJMFU UDKJB BJGFS ITKGW TYMJW XKTWM JYTIF DYMFY 
+					XMJIX MNXGQ TTIBN YMRJX MFQQG JRDGW TYMJW GJMJS JJWXT 
+					ANQJY MNXIF DXMFQ QLJSY QJMNX HTSIN YNTSF SILJS YQJRJ 
+					SNSJS LQFSI STBFG JIXMF QQYMN SPYMJ RXJQA JXFHH ZWXJI 
+					YMJDB JWJST YMJWJ FSIMT QIYMJ NWRFS MTTIX HMJFU BMNQJ 
+					XFSDX UJFPX YMFYK TZLMY BNYMZ XZUTS XFNSY HWNXU NSXIF 
+					DMJSW DAGDB NQQNF RXMFP JXUJF WJ
+				</pre>
+			</statement>
+		</exercise>
+
+		<p>
+			Each of the previous messages used a simple shift cipher of which, in English, there are only twenty five.  However if we look at all the 
+			possible ways that we can rearrange twenty six letters we really have a lot more options. 
+			<ol>
+				<li> Assuming 26 letters in the alphabet, how many letters can you use to replace <c>a</c>? (For simplicity assume you could choose to replace <c>a</c> with its self if you were so inclined.)</li>
+				<li> Once you have chosen a letter to use in place of <c>a</c>, how many choices for <c>b</c>?</li>
+				<li> What about <c>c</c>?</li>
+				<li> Going in order how many choices do you have for all the remaining orders?</li>
+				<li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
+			</ol>
+
+			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  John Falconer in the seventeenth century described this as follows:
+			<blockquote>
+				<em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348484017332394393600000.</me> 
+				From "Cryptomenysis Patefacta" by John Falconer, 1685.
+			</blockquote>
+
+			<poem halign="center">
+				<stanza>
+					<line><alert> Warning!  -- Modern Mathematics Ahead -- Warning!</alert></line>
+				</stanza>
+			</poem>
+
+			Today we would call the huge number we calculated above <m>26!</m>, which is read 26 factorial, and certainly takes up a lot less room.
+
+			<p>
+				<definition xml:id="factorial">
+					<title> Factorial </title>
+					<p> 
+						Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+						<men>
+							n!=n(n-1)(n-2)\cdots 2 \cdot 1 
+						</men>
+						Note that for a variety of reasons <m>0!=1</m>.
+					</p>
+				</definition>
+			</p>
+
+			Thus we can make a message harder to decipher simply by using a more inventive method of encipherment.
+		</p>
+
+		<!-- ``Before you begin a thing, remind yourself that difficulties and delays quite impossible to foresee are ahead. If you could see them clearly, naturally you could do a great deal to get rid of them but you can't. You can only see one thing clearly and that is your goal. Form a mental vision of that and cling to it through thick and thin.'' - Kathleen Norris
+
+		This particular passage was enciphered using what is called a keyword cipher.  Try lining up the plain text and cipher text alphabets to see how this works. -->
+		<p>
+			The last exercise in this section was enciphered with a slightly trickier cipher than the previous ciphers so I put the spaces and punctuation back in. Also, while it is a harder cipher it is not completely random, there is a pattern to how the key was generated; so in the table below the message try filling in the cipher alphabet below the plain alphabet and see if you can spot a pattern.
+		</p>
+		<exercise>
+			<statement> Cipher Text:
+				<pre>
+					"Eacmpa xmt eadgl z sfgld, pakglr xmtpqajc sfzs rgccgbtjsgaq 
+					zlr rajzxq otgsa gknmqqgeja sm cmpaqaa zpa zfazr. Gc xmt 
+					bmtjr qaa sfak bjazpjx, lzstpzjjx xmt bmtjr rm z dpazs razj 
+					sm das pgr mc sfak ets xmt bzl's. Xmt bzl mljx qaa mla sfgld 
+					bjazpjx zlr sfzs gq xmtp dmzj. Cmpk z kalszj ugqgml mc sfzs 
+					zlr bjgld sm gs sfpmtdf sfgbi zlr sfgl." - Izsfjaal Lmppgq
+				</pre>
+				<table>
+					<tabular top="minor" left="minor" right="minor" halign="center">
+						<row>
+							<cell>plain</cell>
+							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell><cell>f</cell><cell>g</cell>
+							<cell>h</cell><cell>i</cell>
+						</row>
+						<row>
+							<cell>CIPHER</cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						</row>
+						<row>
+							<cell>plain</cell>
+							<cell>j</cell><cell>k</cell><cell>l</cell><cell>m</cell><cell>n</cell><cell>o</cell><cell>p</cell>
+							<cell>q</cell><cell>r</cell>
+						</row>
+						<row>
+							<cell>CIPHER</cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						</row>
+						<row>
+							<cell>plain</cell>
+							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell><cell>x</cell><cell>y</cell>
+							<cell>z</cell><cell></cell>
+						</row>
+						<row bottom="minor">
+							<cell>CIPHER</cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						</row>
+					</tabular>
+				</table>			
+			</statement>
+		</exercise>
+	</section>
+	<section xml:id="arab_ciphers">
+		<title>Arabic Numerical Ciphers</title>
+		<p>
+			In this section we will look at some of the ciphers introduced by Arabic scholars which employ mathematics in encipherment.
+		</p>
+	</section>
+
+</chapter>
+
