@@ -38,11 +38,37 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</ul>
 		</p>
 	</introduction>
-	<section xml:id="first_attacks">
-		<title> Arabs Examining the Alphabet</title>
+	<section xml:id="arab_attacks">
+		<title> Arabic Analysis of the Alphabet</title>
+		<p> 
+			The following is from <em>al-Kindi's</em><index><main>al-Kindi</main></index> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
+		</p>
+		<blockquote>
+			<p>
+				"<alert>Algorithms of Cryptanalysis</alert>
+			</p>
+			<p>
+				So we say, the enciphered letters are either in numerical proportions, that is poetry -because poetic meter, ipso facto, sets measures to the number of letters in each line-, or they are not. Non- poetry can be cryptanalyzed using either quantitative or qualitative expedients.
+			</p>
+			<p>
+				The <alert>quantitative</alert> expedients include determining the most frequently occurring letters in the language in which cryptograms are to be cryptanalyzed. If vowels functioned as the material from which any language is made, and non-vowels functioned as the shape of any language, and since many shapes can be made from the same material, then the number of vowels in any language would be greater than non- vowels. For instance, gold is the material of many shapes of finery and vessels; it may cover crowns, bangles, cups, etc.. The gold in these realizations is more than the shapes made of it. Similarly, the vowels which are the material of any kind of text are more than the non- vowels in any language. I mean by vowels the letters: (a), (y or i or e) and (o or u). Therefore the vowels in any language, inevitably, exceed in number the non-vowels in a text of that language. It happens that in certain languages some vowels are greater in number than some other vowels, while non-vowels may be frequent or scarce according to their usage in each language, such as the letter (s), of which frequency of occurrence is high in Latin.
+			</p>
+			<p>
+				Among the expedients we use in cryptanalyzing a cryptogram if the language is already known, is to acquire a fairly long plaintext in that language, and count the number of each of its letters. We mark the most frequent letter "first", the second most frequent "second", and the following one "third", and so forth until we have covered all its letters. Then we go back to the message we want to cryptanalyze, and classify the different symbols, searching for the most frequent symbol of the cryptogram and we regard it as being the same letter we have marked "first" -in the plaintext-; then we go to the second frequent letter and consider it as being the same letter we have termed "second", and the following one "third", and so on until we exhaust all the symbols used in this cryptogram sought for cryptanalysis.
+			</p>
+			<p>				
+				It could happen sometimes that short cryptograms are encountered, too short to contain all the symbols of the alphabet, and where the order of letter frequency cannot be applied. Indeed the order of letter frequency can normally be applied in long texts, where the scarcity of letters in one part of the text is compensated for by their abundance in another part.
+			</p>
+			<p>
+				Consequently, if the cryptogram was short, then the correlation between the order of letter frequency in it and in that of the language would no longer be reliable, and thereupon you should use another, <alert>qualitative</alert> expedient in cryptanalyzing the letters. It is to detect in the language in which cryptograms are enciphered the associable letters and the dissociable ones. When you discern two of them using the letter order of frequency, you see whether they are associable in that language. If so, you seek each of them elsewhere in the cryptogram, comparing it with the preceding and following dissociable letters by educing from the order of frequency of letters, so as to see whether they are combinable or non-combinable. If you find that all these letters are combinable with that letter, you look for letters combinable with the second letter. If found really combinable, so they are the expected letters suggested by the combination and non-combination of letters, and also by their order of frequency. Those expected letters are correlated with words that make sense. The same procedure is repeated elsewhere in the ciphertext until the whole message is cryptanalyzed." <xref ref="cr_crypt_arabic" detail="vol. 1, pp. 121-123" />
+			</p>
+		</blockquote>
+	</section>
+	<section xml:id="alberti_attacks">
+		<title> Alberti's Approach</title>
 		<p> this is a test</p>
 	</section>
-	<section xml:id="later_attacks">
+	<section xml:id="falconer_attacks">
 		<title> Falconer's Approach</title>
 		<p> this is a test</p>
 	</section>

@@ -29,44 +29,41 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
-	    <title>Back Matter</title> <!-- mostly for HTML sectioning -->
+	<!-- Refernces -->
+		<references xml:id="crypto_ref">
+			<title>References</title>
 
-	    <appendix>
-	        <title>Notation</title>
+			
 
-	        <p>The following table defines the notation used in this book. Page numbers or references refer to the first appearance of each symbol.</p>
+			<biblio type="raw" xml:id="cr_crypt_falconer">
+				John Falconer, 
+				<title> 
+					Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering.
+				</title>
+				Daniel Brown, London, <year>1685</year>.
+			</biblio>
 
-	        <!-- <notation-list /> -->
-	    </appendix>
+			<biblio type="raw" xml:id="cr_crypt_arabic">
+				M. Mrayati, Y. Meer Alam, and M.H. at Tayyan (eds.),
+				<title>
+					Series on arabic origins of cryptology in six volumes.
+				</title>
+<!-- 				<volume>
+					3
+				</volume> -->
+				KFCRIS and KACST, Riyadh,
+				<year>
+					2003
+				</year>
+<!-- 				<note>
+					<p>
+						Avalable at: 
+						<url href="http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf">
+							<c>http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf</c>
+						</url>
+					</p>
+				</note> -->
+			</biblio>
 
-		<!--<appendix>
-	        <title>Hints and Solutions to Selected Exercises</title>
-	        <solution-list />
-	    </appendix> -->
+		</references>
 
-
-	<!-- GFDL License text -->
-
-	    <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
-
-	<!-- references -->
-
-	    <xi:include href="crypto_references.mbx" />
-
-	<!-- Index follows appendices, preceded only colophon -->
-	    <index-part>
-	        <index-list />
-	    </index-part>
-
-	    <colophon>
-	        <p>This book was authored in MathBook XML.</p>
-	    </colophon>
-
-          
-
-
-
-
-
-	</backmatter>

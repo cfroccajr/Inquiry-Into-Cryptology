@@ -29,7 +29,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <chapter xml:id="early_riphers">
-	<title> Caesar's Shifty Idea </title>
+	<title>Caesar's Shifty Idea </title>
+
+<!-- Introduction -->
 
 	<introduction>
 		<p>
@@ -43,9 +45,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</p>
 	</introduction>
 
+<!-- Early simple ciphers Section -->
 
 	<section xml:id="Ancient_Ciphers">
-		<title> Simple Early Ciphers (and a little math)</title>
+		<title>Simple Early Ciphers (and a little math)</title>
 
 		<definition xml:id="Def_Ciphers">
 			<title> Cipher </title>
@@ -227,7 +230,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<blockquote>
 			<p>
 				<em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348484017332394393600000.</me> 
-				From "Cryptomenysis Patefacta" by John Falconer, 1685.
+				From "Cryptomenysis Patefacta" by John Falconer, 1685. <xref ref="cr_crypt_falconer" detail="pages 5-6" />
 			</p>
 		</blockquote>
 
@@ -243,7 +246,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</table>
 
 		<p>
-			Today we would call the huge number we calculated above <m>26!</m>, which is read 26 factorial, and certainly takes up a lot less room.
+			Today we would call the huge number we calculated above <m>26!</m>, which is read "26 factorial," and certainly takes up a lot less room.
 		</p>
 		<definition xml:id="factorial">
 			<title> Factorial </title>
@@ -273,12 +276,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Cipher Text:
 				</p>
 				<pre>
-					"Eacmpa xmt eadgl z sfgld, pakglr xmtpqajc sfzs rgccgbtjsgaq 
-					zlr rajzxq otgsa gknmqqgeja sm cmpaqaa zpa zfazr. Gc xmt 
-					bmtjr qaa sfak bjazpjx, lzstpzjjx xmt bmtjr rm z dpazs razj 
-					sm das pgr mc sfak ets xmt bzl's. Xmt bzl mljx qaa mla sfgld 
-					bjazpjx zlr sfzs gq xmtp dmzj. Cmpk z kalszj ugqgml mc sfzs 
-					zlr bjgld sm gs sfpmtdf sfgbi zlr sfgl." - Izsfjaal Lmppgq
+					"EACMPA XMT EADGL Z SFGLD, PAKGLR XMTPQAJC SFZS RGCCGBTJSGAQ 
+					ZLR RAJZXQ OTGSA GKNMQQGEJA SM CMPAQAA ZPA ZFAZR. GC XMT 
+					BMTJR QAA SFAK BJAZPJX, LZSTPZJJX XMT BMTJR RM Z DPAZS RAZJ 
+					SM DAS PGR MC SFAK ETS XMT BZL'S. XMT BZL MLJX QAA MLA SFGLD 
+					BJAZPJX ZLR SFZS GQ XMTP DMZJ. CMPK Z KALSZJ UGQGML MC SFZS 
+					ZLR BJGLD SM GS SFPMTDF SFGBI ZLR SFGL." - IZSFJAAL LMPPGQ
 				</pre>
 				<table>
 					<tabular top="minor" left="minor" right="minor" halign="center">
@@ -323,13 +326,204 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</statement>
 		</exercise>
 	</section>
+
+
+<!-- Arabic Encryption Section -->
+
+
 	<section xml:id="arab_ciphers">
 		<title>Arabic Numerical Ciphers</title>
 		<p>
-			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until Arabic scholars performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
+			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><index><main>Arabic scholar</main></index><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
 		</p>
 		<p>
-			In thus section I want to introduce some other work performed by Arabic scholars.  Here we will look at some methods of enciphering text which today we would call a variation on an <term>affine cipher</term><index><main>affine cipher</main></index>.
+			In this section we want to introduce some other work performed by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  Here we will look at some methods of enciphering text via changing the text to numbers, some of these today we would call variations on an <term>affine cipher</term><index><main>affine cipher</main></index>.
+		</p>
+		<p>
+			They began by associating each letter of the alphabet with a number in a manner similar to the following:
+		</p>
+		<table xml:id="alpha_table">
+			<caption> A Numerical Alphabet</caption>
+			<tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+				<row> 
+					<cell> 1 </cell> <cell> 2 </cell> <cell> 3 </cell>
+					<cell> 4 </cell> <cell> 5 </cell> <cell> 6 </cell>
+					<cell> 7 </cell> <cell> 8 </cell> <cell> 9 </cell> 
+				</row>
+				<row> 
+							<cell>a</cell><cell>b</cell><cell>c</cell>
+							<cell>d</cell><cell>e</cell><cell>f</cell>
+							<cell>g</cell><cell>h</cell><cell>i</cell>
+				</row>
+				<row> 
+					<cell> 10 </cell> <cell> 20 </cell> <cell> 30 </cell>
+					<cell> 40 </cell> <cell> 50 </cell> <cell> 60 </cell>
+					<cell> 70 </cell> <cell> 80 </cell> <cell> 90 </cell> 
+				</row>
+				<row> 
+							<cell>j</cell><cell>k</cell><cell>l</cell>
+							<cell>m</cell><cell>n</cell><cell>o</cell>
+							<cell>p</cell><cell>q</cell><cell>r</cell> 
+				</row>
+				<row> 
+					<cell> 100 </cell> <cell> 200 </cell> <cell> 300 </cell>
+					<cell> 400 </cell> <cell> 500 </cell> <cell> 600 </cell>
+					<cell> 700 </cell> <cell> 800 </cell> <cell> 900 </cell> 
+				</row>
+				<row> 
+							<cell>s</cell><cell>t</cell><cell>u</cell>
+							<cell>v</cell><cell>w</cell><cell>x</cell>
+							<cell>y</cell><cell>z</cell><cell></cell> 
+				</row>
+			</tabular>
+		</table>
+		<p> 
+			Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><index><main>ibn ad-Durayhim</main></index> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
+		</p>
+		<blockquote>
+			<p>
+				"<alert>5. On the replacement of letters using the decimally-weighted numerical alphabet:</alert>
+				<ul>
+					<li>
+						By substituting decimal numerical alphabet for letters in four different ways:
+						by writing the numbers in words as pronounced; or by finger-bending, using the fingers to communicate the message visually to a recipient; or by writing the numbers as numerals such as writing <em>(mhmd: forty, eight, forty, four)</em>; or by giving the cryptogram a semblance of a page of a financial register.
+					</li>
+					<li>
+						By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter, e.g. <em>(ali: dig, fad, cab, ab)</em>, in which case a line is to be drawn over two words to denote that they represent one letter. 
+					</li>
+					<li>
+						By multiplying the number representing the letter by two, and so write <em>(mhmd: q, jf, q, h)</em> and <em>(ali: ob, jh)</em>, etc; or multiply it by three, thus writing <em>(mhmd: sk, kd, sk, jb)</em> and <em>(ali: rc, kg)</em>. Numbers can also be multiplied by four or five."
+						<fn xml:id="arabic_fn">
+							The examples here are very loosely based on the Arabic examples in the translation. The "mhmd" is Mohamed since Arabic is written without vowels, and for "ali" the a and l together are treated as a single letter.
+						</fn>
+						<xref ref="cr_crypt_arabic" detail="vol. 3, pp. 69-70" />
+					</li>
+				</ul>
+			</p>
+		</blockquote>
+		<p>After carefully reading through the passage above consider the following questions and try the exercises below.
+			<ul>
+				<li>
+					In the second paragraph above, how did the author derive <em>fb</em> from <em>m</em> or <em>ab</em> from <em>i</em><m>\ </m>?
+				</li>
+				<li>
+					When converting letters to words <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
+				</li>
+				<li>
+					What letter(s) would be easier to translate into a variety of words?  Which letters would be harder to change into words?
+				</li>
+				<li>
+					In the third paragraph why is the <em>m</em> enciphered as a single <em>q</em> in the first example, but requires two letters, <em>sk</em> in the second?
+				</li>
+			</ul>
+		</p>
+		<exercise>
+			<statement>
+				<p>
+					Demonstrate your understanding of the systems above by enciphering <em>"ibex"</em> using each of the methods described above.
+					<ol>
+						<li>
+							By writing the numbers as numerals.
+						</li>
+						<li>
+							By writing letters in combinations of two or more letters.
+						</li>
+						<li>
+							By forming delusive words.
+						</li>
+						<li>
+							By tripling the values of the letters.
+						</li>
+					</ol>
+				</p>
+			</statement>
+			<hint>
+				<p>
+					For all of these the first step is to use table <xref ref="alpha_table" /> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
+				</p>
+			</hint>
+		</exercise>
+
+		<exercise>
+			<statement>
+				<p>
+					Encipher the word <em>"tan"</em> by doubling the values of the letters.  In how many ways do you think you can encipher each letter if you are allowed to use up to four letters to represent each letter? (For example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em>, though the last one is kind of silly.)
+				</p>
+			</statement>
+		</exercise>
+
+<!--  Plain text for the next exercise 
+
+When I want to understand what is happening today or try to decide what will happen tomorrow, I look back.
+Omar Khayyam 
+
+when: 500-8-5-50
+I: 9
+want: 500-1-5-200
+to: 200-60
+understand: 300-50-4-5-90-100-200-1-50-4
+what: 500-8-1-200
+is: 9-100
+happening: 8-1-70-70-5-50-9-50-7
+today: 200-60-4-1-700
+or: 60-90
+try: 200-90-700
+to: 200-60
+decide: 4-5-3-9-4-5
+what: 500-8-1-200
+will: 500-9-30-30
+happen: 8-1-700-700-5-50
+tomorrow: 200-60-40-60-90-90-60-500
+I: 9
+look: 30-60-60-20
+back: 2-1-3-20
+omar: 60-40-1-90
+khayyam: 20-8-1-700-700-1-40
+
+-->
+
+		<exercise>
+			<statement>
+				<p>
+					The following cipher text was enciphered using one of the above ciphers.
+				</p>
+				<pre>
+					JH ZT B J V V SK X S H J SQ T V B S H YU IG B SU GAJ 
+					T JF B SM QO FD S JH OM JD UT KS EC B ZX OO SLN V QS 
+					XVUS RJU SK EC J DB HJ H J YU JF B QKU UY JH O MK FJ 
+					B XZ YVU J MO SU KS Q SQ RPK MQ XV HJ O SK NP M D B 
+					F M NP Q B SQ M JF B VZT WXU B Q
+				</pre>
+			</statement>
+			<hint>
+				<p>
+					<ul>
+						<li>The message is a quote from a famous Arabic poet and mathematician.</li>
+						<li>There is at least one letter substitution which by necessity is always the same.</li>
+						<li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
+					</ul>
+				</p>
+			</hint>
+		</exercise>
+		<p>
+			Looking back at the exercises you have completed try to comment on the following questions:
+			<ul>
+				<li>
+					Looking at the number of different ways you could encipher some letters, like <em>t</em>, what advantage might these new ciphers have over the simpler ones we looked at previously?
+				</li>
+				<li>
+					Why might having a large number of different ways to encipher a single letter be a disadvantage?
+				</li>
+				<li>
+					Which of the methods described above do you think has the potential to be the most useful and why?
+				</li>
+				<li>
+					Do you think these methods are more or less secure than the methods we looked at in the previous section? Or, are they about the same?
+				</li>
+				<li>
+					In what way do you think you might be able to tweak one of the above methods in order to make it more effective? (Be sure to justify your suggestion.)
+				</li>
+			</ul>
 		</p>
 	</section>
 
