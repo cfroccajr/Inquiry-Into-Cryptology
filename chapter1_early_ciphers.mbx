@@ -283,7 +283,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					BJAZPJX ZLR SFZS GQ XMTP DMZJ. CMPK Z KALSZJ UGQGML MC SFZS 
 					ZLR BJGLD SM GS SFPMTDF SFGBI ZLR SFGL." - IZSFJAAL LMPPGQ
 				</pre>
-				<table>
+				<table xml:id="blank_key_table">
 					<tabular top="minor" left="minor" right="minor" halign="center">
 						<row>
 							<cell>plain</cell>
