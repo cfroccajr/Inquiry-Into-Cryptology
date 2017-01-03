@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="Arab_Analysis">
+<chapter xml:id="basic_analysis">
 	<title> Attacking the Alphabet </title>
 	<introduction>
 		<p>In this chapter look at the contributions of Arabic speaking scholars and others mostly to analysis:
@@ -38,7 +38,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</ul>
 		</p>
 	</introduction>
-	<section xml:id="arab_attacks">
+	<section xml:id="arab_analysis">
 		<title> Arabic Analysis of the Alphabet</title>
 		<p> 
 			The following is from <em>al-Kindi's</em><index><main>al-Kindi</main></index> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
@@ -66,7 +66,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<p>
             This is a test!!!!
         </p>
-        <sage xml:id="ngram_cell" type="display">
+        <sage xml:id="ngram_cell">
         	<input>
                 def ngram_count_simple(text,N=1):
                     ''' if N=1, return a dict containing each letter along with how many times the letter occurred.
