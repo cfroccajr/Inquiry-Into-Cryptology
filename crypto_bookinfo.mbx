@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <!--********************************************************************
 Copyright 2017 Charles F. Rocca Jr
@@ -29,49 +28,30 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
+<docinfo>
 
-<mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-	
+    <!-- the other option is "long" which will produce an -->
+    <!-- entire front matter section with more headings   -->
+    <!-- <author-biographies length="short" /> -->
 
-	<!-- author, brand, latex macros, etc. -->
-	
-		<xi:include href="crypto_bookinfo.mbx" />
+    <brandlogo  />
 
-	<book xml:id="IntroToCrypto">
-		<title>Cryptology Through History and Inquiry</title>
+    <!-- Prefix to enhance Sage notebook contents -->
+    <!-- <initialism>AATA</initialism> -->
 
-	<!-- Frontmatter Content -->
+    <macros>
+		\newcommand \ppa {\Large \lrcorner}
+    	\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
+		\newcommand \ppc {\Large \llcorner}
+		\newcommand \ppd {\Large \sqsupset}
+    </macros>
 
-		<xi:include href="crypto_frontmatter.mbx" />
+    <!-- tikz package and libraries for images -->
+    <latex-image-preamble>
+	    \usepackage{tikz}
+	    \usetikzlibrary{backgrounds}
+	    \usetikzlibrary{arrows,matrix}
+	    \usetikzlibrary{snakes}
+    </latex-image-preamble>
 
-	<!-- Chapter 1 Content -->
-
-		<xi:include href="chapter1_early_ciphers.mbx" />
-
-	<!-- Chapter 2 Content -->
-
-
-		<xi:include href="chapter2_arab_analysis.mbx" />
-
-	<!-- Chapter 3 Content -->
-
-		<xi:include href="chapter3_new_ciphers.mbx" />
-
-	<!-- Chapter 4 Content -->
-
-		<xi:include href="chapter4_mathematical_analysis.mbx" />
-
-	<!-- Chapter 5 Content -->
-
-		<xi:include href="chapter5_mechanical_ciphers.mbx" />
-
-	<!-- Chapter 6 Content -->
-
-		<xi:include href="chapter6_modern_cryptology.mbx" />
-
-	<!-- Backmatter Content -->
-
-		<xi:include href="crypto_backmatter.mbx" />
-
-	</book>
-</mathbook>
+</docinfo>

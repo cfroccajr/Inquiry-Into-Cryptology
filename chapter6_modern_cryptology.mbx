@@ -33,6 +33,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<p>
 		In this chapter look at cryptology from about 1970 to today:
 		<ul>
+			<li> Hill? </li>
+				<!-- this might be a better place for hill as a precursor to modern ciphers -->
 			<li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>
 			<li> Asymmetric ciphers (Diffie-Hellman, RSA, El Gamal?, etc.) and the roll of number theory</li>
 			<li> Absolute secrecy</li>

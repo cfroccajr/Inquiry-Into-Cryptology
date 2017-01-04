@@ -29,15 +29,23 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="Mechanical_Ciphers">
+<chapter xml:id="early_20_century">
 	<title> March of Progress </title>
 	<p>
-		In this chapter discuss the use of ciphers implemented with machines and computers:
+		In this chapter discuss the use of ciphers from the early <m>20^{th}</m> century:
 		<ul>
+			<li> Telegraph Codes and Ciphers?</li> 
+				<!-- 
+					look up chris christention enciphered codes wednesday at 10 look for 
+					article in feb. Math Horizons JN25? this was attacked using messages in 
+					depth and differences?	
+				-->
+			<li> Hill?</li>
 			<li> Enigma</li>
-			<li> Lorenz</li>
-			<li> Purple</li>
+			<li> Lorenz?</li>
+			<li> Purple?</li>
 			<li> Also included Stinson episode, use Friedman article</li>
+			<li> Turing Papers?</li><!-- see talk on wednesday at 9:30 on turing -->
 		</ul>
 	</p>
 </chapter>
