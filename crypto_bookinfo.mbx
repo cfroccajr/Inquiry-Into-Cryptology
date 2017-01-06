@@ -40,10 +40,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <!-- <initialism>AATA</initialism> -->
 
     <macros>
+    	%%%%%%%%%%%%%%%%%%%% Pig Pen Cipher Macros %%%%%%%%%%%%%%%%%%%%
 		\newcommand \ppa {\Large \lrcorner}
     	\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
 		\newcommand \ppc {\Large \llcorner}
-		\newcommand \ppd {\Large \sqsupset}
+		\newcommand \ppd {\sqsupset}
+		\newcommand \ppe {\square}
+		\newcommand \ppf {\sqsubset}
+		\newcommand \ppg {\Large \urcorner}
+    	\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
+		\newcommand \ppi {\Large \ulcorner}
     </macros>
 
     <!-- tikz package and libraries for images -->

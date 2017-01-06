@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+
+<chapter xml:id="sage_cells">
+	<title>Sage Cell Utilities</title>
+
+	<p>Ngram Analysis Cell</p>
+	<sage xml:id="sage_ngram_cell">
+        	<input>
+                def ngram_count_simple(text,N=1):
+                        text = text.upper()
+                        count = {}
+                        for i in range(len(text)-N+1):
+                            c = text[i:i+N]
+                            if c in count: count[c] += 1
+                            else: count[c] = 1
+                        return [count,len(text)]
+                ngram_count_simple("Place the text that you would like to analyze here!!!")
+            </input>
+            <output>
+                [{' ': 9,'!': 3,'A': 4,'C': 1,'D': 1,'E': 7,'H': 3,'I': 1,
+                    'K': 1,'L': 4,'N': 1,'O': 3,'P': 1,'R': 1,'T': 6,'U': 2,
+                    'W': 1,'X': 1,'Y': 2,'Z': 1},53]
+            </output>
+    	</sage>
+
+    	<p>Substitution Cipher Cell</p>
+    	<sage xml:id="sage_sub_cell">
+            <input>
+                # S is a generic substatution cipher system.
+                S = SubstitutionCryptosystem(AlphabeticStrings())
+                
+                # K and Ki are the key and inverse key for S
+                K=S.encoding("ZYXWVUTSRQPONMLKJIHGFEDCBA")
+                Ki=S.inverse_key(K)
+                
+                # e and d are the enciphering and deciphering routines
+                e=S(K)
+                d=S(Ki)
+                
+                # M is your message which you wish to encipher or decipher
+                M=S.encoding("Hello World")
+                e(M)
+            </input>
+            <output></output>
+        </sage>
+
+
+</chapter>
+
