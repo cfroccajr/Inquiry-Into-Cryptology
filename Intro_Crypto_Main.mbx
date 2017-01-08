@@ -69,9 +69,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<xi:include href="chapter6_modern_cryptology.mbx" />
 
-	<!-- Sage Cell Appendix -->
-
-		<xi:include href="sage_cell_appendix.mbx" />
 
 	<!-- Backmatter Content -->
 

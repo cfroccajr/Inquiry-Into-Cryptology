@@ -32,6 +32,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
 	    <title>Back Matter</title> <!-- mostly for HTML sectioning -->
 
+	<!-- Sage Cell Appendix -->
+
+		<xi:include href="sage_cell_appendix.mbx" />
+
 	    <appendix>
 	        <title>Notation</title>
 
