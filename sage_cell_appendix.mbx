@@ -35,13 +35,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>N-Gram Analysis Cell</p>
             <sage xml:id="sage_ngram_cell">
                 <input>
+import re
 @interact
 def ngram_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
                     label="Enter your message", height=3, width=80, type=str),N=[1..6]):
-    message = str(text).upper()
+    message = re.sub('[^A-Z]','',str(text).upper())
     count = {}
-    for i in range(len(text)-N+1):
+    for i in range(len(message)-N+1):
         c = message[i:i+N]
         if c in count: count[c] += 1
         else: count[c] = 1
