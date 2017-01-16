@@ -39,7 +39,7 @@ import re
 @interact
 def ngram_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=80, type=str),N=[1..6]):
+                    label="Enter your message", height=3, width=60, type=str),N=[1..6]):
     message = re.sub('[^A-Z]','',str(text).upper())
     count = {}
     for i in range(len(message)-N+1):
@@ -48,7 +48,7 @@ def ngram_count_simple(
         else: count[c] = 1
     print "The length of your message is {}".format(len(message))
     for c in count:
-        print c,"appears",count[c],"times, with frequency",str(count[c]/len(message)*1.0) 
+        print c,"appears",count[c],"times, with frequency %.4G" % (count[c]/len(message)*100.0), "percent"
                 </input>
                 <output>
                     [{' ': 9,'!': 3,'A': 4,'C': 1,'D': 1,'E': 7,'H': 3,'I': 1,
@@ -67,29 +67,22 @@ def _(k = input_grid(2,13,
     default = [['a','b','c','d','e','f','g','h','i','j','k','l','m'],
     ['n','o','p','q','r','s','t','u','v','w','x','y','z']],
     label='Cipher Alphabet:', type=str,width=1),
-      m=input_box('sage', label="Message", height=3, width=80, type=str)):
+      m=input_box('sage', label="Message", height=3, width=60, type=str)):
     key=""
     for i in range(0,2):
         for j in range(0,13):
             key=key+str(k[i][j])
             #print str(key)
-    print "Your cipher key is:", str(key)
-
-    # S is a generic substatution cipher system.
+    print"Your cipher key is:", str(key)
     S = SubstitutionCryptosystem(AlphabeticStrings())
-
-    # K and Ki are the key and inverse key for S
     K=S.encoding(str(key))
-    Ki=S.inverse_key(K)
-
-    # e and d are the enciphering and deciphering routines
     e=S(K)
-    d=S(Ki)
-
-    # M is your message which you wish to encipher or decipher
-    M=S.encoding(str(m))
-    print "Encoding with this key we get:", e(M)
-    print "Decocing with this key we get:", d(M)
+    clean_text = S.encoding(str(m))
+    cipher_text = e(clean_text)
+    print "Your substitution enciphering text is\n"
+    for i in xrange(0,len(cipher_text),5):
+        print cipher_text[i:i+5],
+        if i%50 == 0 and i>0: print "\n"
             </input>
             <output></output>
         </sage>
@@ -102,15 +95,87 @@ def _(k = input_grid(2,13,
 
 <!-- Python/Sage Function -->
 @interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=80, type=str),shift=[0..25]):
+def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),shift=[0..25]):
     S = ShiftCryptosystem(AlphabeticStrings())
     e = S(shift)
     clean_text = S.encoding(str(m))
-    print "Your plain text is {}".format(m)
-    print "Your shifted cipher text is {}".format(e(clean_text))
+    cipher_text = e(clean_text)
+    print "Your shift enciphering text is\n"
+    for i in xrange(0,len(cipher_text),5):
+        print cipher_text[i:i+5],
+        if i%50 == 0 and i>0: print "\n"
 
     		</input>
     		<output></output>
     	</sage>
+
+    	<p>Affine Cipher Cell</p>
+    	<sage xml:id="sage_affine_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),a=[1..25], b=[0..25]):
+    S = AffineCryptosystem(AlphabeticStrings())
+    e = S(a,b)
+    clean_text = S.encoding(str(m))
+    cipher_text = e(clean_text)
+    print "Your affine enciphering text is\n"
+    for i in xrange(0,len(cipher_text),5):
+        print cipher_text[i:i+5],
+        if i%50 == 0 and i>0: print "\n"
+
+    		</input>
+    		<output></output>
+    	</sage>
+
+    	<p>Vigenere Cipher Cell</p>
+    	<sage xml:id="sage_vigenere_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),
+		key=input_box('sage', label="Enter your key", height=1, width=20, type=str)):
+    cipher_key=str(key)
+    S = VigenereCryptosystem(AlphabeticStrings(),len(cipher_key))
+    K = S.encoding(cipher_key)
+    e = S(K)
+    clean_text = S.encoding(str(m))
+    cipher_text = e(clean_text)
+    print "Your Vigenere enciphering text is\n"
+    for i in xrange(0,len(cipher_text),5):
+        print cipher_text[i:i+5],
+        if i%50 == 0 and i>0: print "\n"
+
+    		</input>
+    		<output></output>
+    	</sage>
+
+    	<p>Hill Cipher Cell</p>
+    	<sage xml:id="sage_hill_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, 
+    width=60, type=str),
+	key=input_grid(2,2,default=[[1,0],[0,1]],type=int,width=2)):
+    S = HillCryptosystem(AlphabeticStrings(),2)
+    M = MatrixSpace(IntegerModRing(26),2,2)
+    e = S(M(key))
+    clean_text = S.encoding(str(m))
+    if len(clean_text)%2 == 1:
+        clean_text = S.encoding(str(m)+"Z")
+    cipher_text = e(clean_text)
+    print "Your Hill enciphering text is\n"
+    for i in xrange(0,len(cipher_text),5):
+        print cipher_text[i:i+5],
+        if i%50 == 0 and i>0: print "\n"
+    		</input>
+    		<output></output>
+    	</sage>
+
+
 </appendix>
 

@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="early_riphers">
+<chapter xml:id="chapter_early_riphers">
 	<title>Caesar's Shifty Idea </title>
 
 <!-- Introduction -->
@@ -47,7 +47,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- Early simple ciphers Section -->
 
-	<section xml:id="Ancient_Ciphers">
+	<section xml:id="section_ancient_ciphers">
 		<title>Simple Early Ciphers (and a little math)</title>
 
 		<definition xml:id="Def_Ciphers">

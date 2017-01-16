@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="basic_analysis">
+<chapter xml:id="chapter_basic_analysis">
 	<title> Attacking the Alphabet </title>
 	<introduction>
 		<p>In this chapter look at the contributions of Arabic speaking scholars and others mostly to analysis:
@@ -38,7 +38,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</ul>
 		</p>
 	</introduction>
-	<section xml:id="arab_analysis">
+	<section xml:id="section_arab_analysis">
 		<title> Arabic Analysis of the Alphabet</title>
 		<p> 
 			The following is from <em>al-Kindi's</em><index><main>al-Kindi</main></index> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
@@ -64,21 +64,92 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 		</blockquote>
 		<p>
-            This is a test!!!!
-        </p>
-        <sage copy="sage_ngram_cell" />
-    	<sage copy="sage_sub_cell" />
-        <p>
-        	Here is some more test stuff <m>\ppa\ppb\ppc\ppd\ppe\ppf\ppg\pph\ppi</m>
-        </p>
+			<ul>
+				<li>What do you think the author means when he says <q>vowels function as the material of a language</q>? </li>
+				<li>In what way then do the <q>non-vowels function as the shape</q>?</li>
+				<li>He also says that there are more vowels than non-vowels, how many vowels are in this sentence?  Where there more vowels? 
+					If not then how might his statement still be true?</li>
+				<li>How does the gold in his analogy function like the vowels?</li>
+				<li>Finally, how do the author's comments compare to your experiences in section <xref ref="section_ancient_ciphers" />?</li>
+			</ul>
+		</p>
+
+		<exercise>
+			<statement>
+				<p>
+					Try following al-Kindi's directions in paragraph three above.  Find a large sample of normal English text and use the 
+					<em>n-gram counter</em> below to count the number of times each letter appears and with what frequency.
+				</p>
+	        </statement>
+    	</exercise>
+    	<p>
+    		<alert>N-Gram Counter:</alert>
+    	</p>
+    	<p>
+    		To use the n-gram counter press the <em>Evaluate Sage Code</em> button, copy and paste the text you wish to analyze into the 
+    		input box, and select 1 for <em>N</em> since we are analyzing single letters.
+    	</p>
+       	<sage copy="sage_ngram_cell" />
+
+		<exercise>
+			<statement>
+				<p>
+					Repeat what you did before with text from a variety of sources.  Be sure to try both long and short pieces of 
+					text.  Do you agree with the authors statements about shorter pieces of text?  Finally, make a table of your results 
+					for future reference.
+				</p>
+	        </statement>
+    	</exercise>
+
+        
 	</section>
-	<section xml:id="alberti_attacks">
-		<title> Alberti's Approach</title>
-		<p> this is a test</p>
+	<section xml:id="section_alberti_attacks">
+		<title> (*)Alberti's Approach</title>
+		<p> Text based on the work of Leon Battista Alberti will go here.</p>
 	</section>
-	<section xml:id="falconer_attacks">
+	<section xml:id="section_falconer_attacks">
 		<title> Falconer's Approach</title>
-		<p> this is a test</p>
+		<p> Text from John Falconer will go here.</p>
+		<blockquote>
+			<p>
+				"<em>First, Distinguish the Vowels from the Consonants.</em>
+			</p>
+			<p>
+				<ol>
+					<li>
+						And first, the vowels generally discover themselves by their frequency; for because they are but few in number, and no word made up without some of them, they must frequently be used in any writing.
+					</li>
+					<li>
+						Where you find any character or letter standing by it self, it must be a vowel.
+					</li>
+					<li>
+						If you find any character doubled in the beginning of a word, in any language it is a vowel, as <em>Aaron, Eel, Jilt, Oogala, Vulture, etc.</em>, except for some English proper names, as Llandaff or Lloyd.
+					</li>
+					<li>
+						In monosyllables of two letters you may distinguish it from the consonant joined with it by its frequency.
+					</li>
+					<li>
+						In a word of three letters beginning and ending in the same letter the vowel is probably included.
+					</li>
+					<li>
+						When you find a character doubled in the middle of a word of four letters, `tis probably the vowel <em>e</em> or <em>o</em>.
+					</li>
+					<li>
+						In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following.
+					</li>
+				</ol>
+			</p>
+			<p>
+				<em>Secondly, Distinguish the Vowels from Themselves.</em>
+			</p>
+			<p>
+				<em>Distinguish the Consonants Amongst Themselves.</em>
+			</p>
+			<p>
+				<em>Additional Observations</em>"
+				<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
+			</p>
+		</blockquote>
 	</section>
 
 </chapter>
