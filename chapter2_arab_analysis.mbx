@@ -42,6 +42,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<title> Arabic Analysis of the Alphabet</title>
 		<p> 
 			The following is from <em>al-Kindi's</em><index><main>al-Kindi</main></index> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
+			<index><main>cryptanalysis</main></index>
 		</p>
 		<blockquote>
 			<p>
@@ -73,7 +74,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<li>Finally, how do the author's comments compare to your experiences in section <xref ref="section_ancient_ciphers" />?</li>
 			</ul>
 		</p>
-
+		<p>
+			What al-Kindi is describing above is what we now call <term>frequency analysis</term> which is the first step in 
+			<term>cryptanalysis</term>.
+		</p>
+		<definition xml:id="definition_freq_analysis">
+			<title>Frequency Analysis</title>
+			<statement>
+				<p>
+					Basic <term><alert>Frequency Analysis</alert></term><index><main>frequency analysis</main></index> is the 
+					process of counting the characters in a text in order to determine how many of each character there are 
+					relative to the entire length of the text.  This is typically the first step in the 
+					<term>cryptanalysis</term><index><main>cryptanalysis</main></index>, the process of breaking an unknown cipher or code.
+				</p>
+			</statement>
+		</definition>
 		<exercise>
 			<statement>
 				<p>
@@ -103,53 +118,129 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         
 	</section>
-	<section xml:id="section_alberti_attacks">
+	<section xml:id="section_alberti_analysis">
 		<title> (*)Alberti's Approach</title>
 		<p> Text based on the work of Leon Battista Alberti will go here.</p>
 	</section>
-	<section xml:id="section_falconer_attacks">
+
+	<section xml:id="section_falconer_analysis">
 		<title> Falconer's Approach</title>
-		<p> Text from John Falconer will go here.</p>
-		<blockquote>
+		<introduction>
+			<p> Text from John Falconer will go here.<index><main>Falconer, John</main></index></p>
+		</introduction>
+
+		<subsection xml:id="subsection_falconer_step_one">
+			<title><em>First, Distinguish the Vowels from the Consonants.</em></title>
+			<blockquote>
+				<p>
+					<ol>
+						<li>
+							And first, the vowels generally discover themselves by their frequency; for because they are but few in number, and no word made up without some of them, they must frequently be used in any writing.
+						</li>
+						<li>
+							Where you find any character or letter standing by it self, it must be a vowel.
+						</li>
+						<li>
+							If you find any character doubled in the beginning of a word, in any language it is a vowel, as <em>Aaron, Eel, Jilt, Oogala, Vulture, etc.</em>, except for some English proper names, as Llandaff or Lloyd.
+						</li>
+						<li>
+							In monosyllables of two letters you may distinguish it from the consonant joined with it by its frequency.
+						</li>
+						<li>
+							In a word of three letters beginning and ending in the same letter the vowel is probably included.
+						</li>
+						<li>
+							When you find a character doubled in the middle of a word of four letters, `tis probably the vowel <em>e</em> or <em>o</em>.
+						</li>
+						<li>
+							In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following." <xref ref="cr_crypt_falconer" detail="pp. 8-9" />
+						</li>
+					</ol>
+				</p>
+			</blockquote>
 			<p>
-				"<em>First, Distinguish the Vowels from the Consonants.</em>
+				<ul>
+					<li>Do some of these sound familiar from what we have studied previously?</li>
+					<li>Which of these are new? Do any of those seem strange to you?</li>
+					<li>Try to find out why Falconer says <em><q>Jilt</q></em> and <em><q>Vulture</q></em> begin with 
+					a double vowel.</li>
+				</ul>
 			</p>
-			<p>
-				<ol>
-					<li>
-						And first, the vowels generally discover themselves by their frequency; for because they are but few in number, and no word made up without some of them, they must frequently be used in any writing.
-					</li>
-					<li>
-						Where you find any character or letter standing by it self, it must be a vowel.
-					</li>
-					<li>
-						If you find any character doubled in the beginning of a word, in any language it is a vowel, as <em>Aaron, Eel, Jilt, Oogala, Vulture, etc.</em>, except for some English proper names, as Llandaff or Lloyd.
-					</li>
-					<li>
-						In monosyllables of two letters you may distinguish it from the consonant joined with it by its frequency.
-					</li>
-					<li>
-						In a word of three letters beginning and ending in the same letter the vowel is probably included.
-					</li>
-					<li>
-						When you find a character doubled in the middle of a word of four letters, `tis probably the vowel <em>e</em> or <em>o</em>.
-					</li>
-					<li>
-						In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following.
-					</li>
-				</ol>
-			</p>
-			<p>
-				<em>Secondly, Distinguish the Vowels from Themselves.</em>
-			</p>
-			<p>
-				<em>Distinguish the Consonants Amongst Themselves.</em>
-			</p>
-			<p>
-				<em>Additional Observations</em>"
-				<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
-			</p>
-		</blockquote>
+			<exercise xml:id="exercise_falconer_one">
+				<statement>
+					<p>
+						Find a large sample of fairly normal English text (you can just reuse the text you used for the exercises 
+						in section <xref ref="section_arab_analysis" />).  Go through the text carefully and see if you agree with 
+						Falconer's observations. You should make use of the <em>n-gram counter</em> to help you, in order to find 
+						strings of length greater than one try changing the value of <em>N</em>. There is also a separate word counter to count distinct words in your text.
+					</p>
+				</statement>
+			</exercise>
+
+			<p><alert>N-Gram Counter:</alert></p>
+			<sage copy="sage_ngram_cell" />
+			<p><em><alert>Word Counter:</alert></em></p>
+			<sage copy="sage_word_cell" />
+		</subsection>
+		<subsection xml:id="subsection_falconer_step_two">
+			<title><em>Secondly, Distinguish the Vowels from Themselves.</em></title>
+			<blockquote>
+				<p>
+					<ol>
+						<li>
+							Compare their frequency, and <em>e</em>, as we observed before, is generally the most used in 
+							the English tongue, next <em>o</em>, then <em>a</em> and <em>i</em>; but <em>u</em> and <em>y</em> 
+							are not so frequently used as some of the consonants.
+						</li>
+						<li>
+							It is remarkable that amongst the vowels, <em>e</em> and <em>o</em> are often doubled, the rest seldom 
+							or never.
+						</li>
+						<li>
+							<em>e</em> is very often a terminal letter, and <em>y</em> terminates words, but they are 
+							distinguishable, because there is no proportion to their frequency: <em>o</em> is not often 
+							in the end of words, except in monosyllables.
+						</li>
+						<li>
+							<em>e</em> is the only vowel that can be doubled in the of an English word, except 
+							<em>o</em> in <em>too</em>, etc.
+						</li>
+						<li>
+							You may consider which of the vowels, in any language, can stand alone, as <em>a</em>, <em>i</em>, 
+							and sometimes <em>o</em> in English, <em>a</em>, <em>e</em>, <em>o</em>, in Latin or <em>i</em> 
+							the imperative of <em>eo</em>.<xref ref="cr_crypt_falconer" detail="pp. 9-10" />
+						</li>
+					</ol>
+				</p>
+			</blockquote>
+			<exercise xml:id="exercise_falconer_two">
+				<statement>
+					<p>
+						Test out Falconer's observations about vowels using the same sample of text that 
+						you analyzed in exercise <xref ref="exercise_falconer_one" />.  Do his statements 
+						hold true or has the language changed since 1685?
+					</p>
+				</statement>
+			</exercise>
+		</subsection>
+		<subsection xml:id="subsection_falconer_step_three">
+			<title><em>Distinguish the Consonants Amongst Themselves.</em></title>
+			<blockquote>
+				<p>
+					<em>Distinguish the Consonants Amongst Themselves.</em>
+					<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
+				</p>
+			</blockquote>
+		</subsection>
+		<subsection xml:id="subsection_falconer_step_four">
+			<title><em>Additional Observations</em></title>
+			<blockquote>		
+				<p>
+					<em>Additional Observations</em>
+					<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
+				</p>
+			</blockquote>
+		</subsection>
 	</section>
 
 </chapter>

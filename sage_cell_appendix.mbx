@@ -50,11 +50,7 @@ def ngram_count_simple(
     for c in count:
         print c,"appears",count[c],"times, with frequency %.4G" % (count[c]/len(message)*100.0), "percent"
                 </input>
-                <output>
-                    [{' ': 9,'!': 3,'A': 4,'C': 1,'D': 1,'E': 7,'H': 3,'I': 1,
-                        'K': 1,'L': 4,'N': 1,'O': 3,'P': 1,'R': 1,'T': 6,'U': 2,
-                        'W': 1,'X': 1,'Y': 2,'Z': 1},53]
-                </output>
+                <output></output>
             </sage>
 
     	<p>Substitution Cipher Cell</p>
@@ -176,6 +172,39 @@ def _(m=input_box('sage', label="Enter your message", height=3,
     		<output></output>
     	</sage>
 
+
+
+    	<p>Word Count Cell</p>
+    	<sage xml:id="sage_word_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+import re
+@interact
+def ngram_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=60, type=str)):
+    message = re.sub('[^A-Z]',' ',str(text).upper())+" "
+    count = {}
+    words = 0
+    c=""
+    for l in message:
+        if l==" ":
+            if c in count: 
+                count[c] += 1
+                words += 1
+            elif c!="": 
+                count[c] = 1
+                words += 1
+            c=""
+        else: c=c+l
+    print "The total number of words in your message is {}".format(words)
+    print "The number of distinct words in your message is {}".format(len(count))
+    for c in count:
+        print c,"appears",count[c],"times, with frequency %.4G" % (count[c]/words*100.0), "percent"
+    		</input>
+    		<output></output>
+    	</sage>
 
 </appendix>
 

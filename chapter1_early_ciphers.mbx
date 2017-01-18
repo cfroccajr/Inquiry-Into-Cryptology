@@ -225,7 +225,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
 			</ol>
 
-			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  John Falconer in the seventeenth century described this as follows:
+			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  <em>John Falconer</em><index><main>Falconer, John</main></index> in the seventeenth century described this as follows:
 		</p>
 		<blockquote>
 			<p>
@@ -248,7 +248,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<p>
 			Today we would call the huge number we calculated above <m>26!</m>, which is read "26 factorial," and certainly takes up a lot less room.
 		</p>
-		<definition xml:id="factorial">
+		<definition xml:id="definition_factorial">
 			<title> Factorial </title>
 			<statement> 
 				<p>
