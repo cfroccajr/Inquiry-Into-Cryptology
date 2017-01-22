@@ -153,7 +153,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							When you find a character doubled in the middle of a word of four letters, `tis probably the vowel <em>e</em> or <em>o</em>.
 						</li>
 						<li>
-							In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following." <xref ref="cr_crypt_falconer" detail="pp. 8-9" />
+							In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following.<xref ref="cr_crypt_falconer" detail="pp. 8-9" />
 						</li>
 					</ol>
 				</p>
@@ -202,7 +202,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							in the end of words, except in monosyllables.
 						</li>
 						<li>
-							<em>e</em> is the only vowel that can be doubled in the of an English word, except 
+							<em>e</em> is the only vowel that can be doubled in the end of an English word, except 
 							<em>o</em> in <em>too</em>, etc.
 						</li>
 						<li>
@@ -213,6 +213,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</ol>
 				</p>
 			</blockquote>
+			<p>
+				<ul>
+					<li>Do you agree with his comments about <em>e, o</em> and the other vowels?  Why or why not?</li>
+					<li>Can you think of examples of or exceptions to his third and fourth comments above?</li>
+					<li>Can you think of or find an example of <em>o</em> standing alone in English?</li>
+				</ul>
+			</p>
 			<exercise xml:id="exercise_falconer_two">
 				<statement>
 					<p>
@@ -227,20 +234,210 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title><em>Distinguish the Consonants Amongst Themselves.</em></title>
 			<blockquote>
 				<p>
-					<em>Distinguish the Consonants Amongst Themselves.</em>
-					<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
+					<ol>
+						<li>
+							As before before observe their frequency.  Those of most use in 
+							Englich are <em>d, h, n, r, s, t</em>, and next to those may be reckoned 
+							<em> c, f, g, l, m, w</em>, in third rank may be placed 
+							<em>b, k, p</em>, and lastly <em>q, x, z</em>...
+						</li>
+						<li>
+							You may consider which consonants may be doubled in the middle or end of 
+							words.
+						</li>
+						<li>
+							What are terminal letters, etc.
+						</li>
+						<li>
+							The number and nature of consonants and vowels that fall together, or 
+							do usually fall together.<xref ref="cr_crypt_falconer" detail="p. 10" />
+						</li>
+					</ol>
 				</p>
 			</blockquote>
+			<exercise>
+				<statement>
+					<p>
+						Falconer's first three pieces of advice are similar to what we have looked at before; 
+						his fourth comment is something a little new.  Using the same text which you analyzed before 
+						set the <em>n-gram counter</em> to count two letter combinations in your text (<m>N=2</m>). Once you have 
+						the count take note of which combinations appear most often and for each vowel which two or 
+						three consonants it is most often paired with.
+					</p>
+				</statement>
+			</exercise>
 		</subsection>
 		<subsection xml:id="subsection_falconer_step_four">
 			<title><em>Additional Observations</em></title>
 			<blockquote>		
 				<p>
-					<em>Additional Observations</em>
-					<xref ref="cr_crypt_falconer" detail="pp. 8-12" />
+					<ol>
+						<li>
+							A word of three letters, beginning and ending with the same, may be supposed <em>did</em> 
+						</li>
+						<li>
+							A word consisting of four characters, with the same letter in the beginning and 
+							end, is probably <em>that</em> or <em>hath</em>
+						</li>
+						<li>
+							A word consisting of five letters, when the second and last are the same, 
+							is commonly <em>which</em>, though it may be otherways, as in <em>known</em>, 
+							<em>serve</em>, etc. And you may judge of the truth of such suppositions by the 
+							frequency of the letters in the word supposed.
+						</li>
+					</ol>
+				</p>
+				<p>
+					Next you may compare words one with another, as <em>on</em> and <em>no</em>, each being 
+					the other reversed; so <em>of</em> and <em>for</em>, the last being the first reversed 
+					with the addition of a letter; for and from will discover each other, etc.
+				</p>
+				<p>
+					You may also likewise observe some of the usual propositions and terminations of 
+					words, such as <em>com, con, ing, ed</em>, etc. Note that <em>t</em> and <em>h</em> 
+					are often joined in the beginning and end of English words, and sometimes in the 
+					middle.<xref ref="cr_crypt_falconer" detail="pp. 11-12" />
 				</p>
 			</blockquote>
+			<p>
+				<ul>
+					<li>
+						Can you think of more examples of three or four letter words beginning and 
+						ending with the same letter?
+					</li>
+					<li> 
+						What about five little words in which the second and last letters are the same? 
+					</li>
+					<li> 
+						How many words like <em>on</em> and <em>no</em> or <em>of</em> and <em>for</em> 
+						can you think of?
+					</li>
+					<li>
+						Compared with other suggestions we have looked at, how practical do these seem?  
+						Do they seem a little to subtle?
+					</li>
+				</ul>
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						Looking one last time at the text which you have been using identify common prefixes 
+						and suffixes (what Falconer called <em>propositions and terminations</em>) within the text.  
+						Are you finding any of the examples which he gave?
+					</p>
+				</statement>
+			</exercise>
 		</subsection>
 	</section>
-
+	<exercises xml:id="exercises_analysis">
+		<title>Bringing it all Together</title>
+		<exercisegroup>
+			<introduction>
+				<p>
+					Through the next several exercises you will review the ideas we have explored in this chapter.  
+					When you are done you should have generated for yourself a guide which you can use when you are 
+					attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical 
+					English text which is at least 1000 characters long.  You will use the <em>sage cells</em> to 
+					examine this text in the following exercises.
+				</p>
+			<p><alert>N-Gram Counter:</alert></p>
+			<sage copy="sage_ngram_cell" />
+			<p><em><alert>Word Counter:</alert></em></p>
+			<sage copy="sage_word_cell" />
+			</introduction>
+			<exercise>
+				<statement>
+					<p>
+						letter frequencies
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						bi-grams and tri-grams frequencies
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Common words
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						prefixes and suffixes
+					</p>
+				</statement>
+			</exercise>			
+			<conclusion>
+				<p>
+					Put together all the information you have just gathered into a neat one page analysis guide.  You 
+					should type this up neatly, in a reasonably sized font.  It should include:
+					<ul>
+						<li> 
+							a list of frequencies for all the letters in the alphabet, 
+						</li>
+						<li> 
+							frequencies for at least the top 20 <term>bi-grams</term> and <term>tri-grams</term>
+							<index><main>bi-gram</main></index><index><main>tri-gram</main></index>
+						</li>
+						<li>
+							a list of the top 20 most common words,
+						</li>
+						<li>
+							a list of your top 20 most common prefixes and suffixes, and
+						</li>
+						<li>
+							any other types of information you think might be useful which you have looked at in this chapter.
+						</li>
+					</ul>
+				</p>
+			</conclusion>
+		</exercisegroup>
+		<exercise>
+			<statement>
+				<p>
+					Practice Deciphering
+				</p>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Practice Deciphering
+				</p>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Seventeenth Century Exercise
+				</p>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>Consider the following comment from John Falconer:</p>
+				<blockquote>
+					<p>
+						I have not meddled here with any language but English; ... However, by a little practice of 
+						decyphering in one language, you may decipher an epistle in any, even tho the plain speech 
+						itself be a mystery to you, if you first observe the frequency of the letters, the terminal 
+						letters, what letters can be doubled in the beginning, middle, and end of words; and such 
+						general rules.<xref ref="cr_crypt_falconer" detail="p. 12" />
+					</p>
+				</blockquote>
+				<p>
+					Find a large piece of typical text written in a language other than English.  Perform an 
+					analysis of this text and then create a cheat sheet just like you did for English. 
+					Finally, encipher a message written in this new language which 
+					your classmates can try to decipher using your cheat sheet.
+				</p>
+			</statement>
+		</exercise>		
+	</exercises>
 </chapter>

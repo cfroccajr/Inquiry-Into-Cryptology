@@ -32,23 +32,69 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <appendix xml:id="sage_cells">
 	<title>Sage Cell Utilities</title>
 
+
+    	<p>Word Count Cell</p>
+    	<sage xml:id="sage_word_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+import re
+@interact
+def word_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=60, type=str)):
+    message = re.sub('[^A-Z]',' ',str(text).upper())+" "
+    count = {}
+    words = 0
+    c=""
+    for l in message:
+        if l==" ":
+            if c in count: 
+                count[c] += 1
+                words += 1
+            elif c!="": 
+                count[c] = 1
+                words += 1
+            c=""
+        else: c=c+l
+    print "The total number of words in your message is {}".format(words)
+    print "The number of distinct words in your message is {}".format(len(count))
+    count = reversed(sorted([(value, key) for key, value in count.items()]))
+    print "Word\t\tCount\t\tPercent"
+    for c in count:
+        if len(c[1])>6: 
+            tab="\t"
+        else:
+            tab="\t\t"
+        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/words*100.0)
+    		</input>
+    		<output></output>
+    	</sage>
+
+
+
             <p>N-Gram Analysis Cell</p>
             <sage xml:id="sage_ngram_cell">
                 <input>
-import re
 @interact
 def ngram_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
                     label="Enter your message", height=3, width=60, type=str),N=[1..6]):
-    message = re.sub('[^A-Z]','',str(text).upper())
+    message = AlphabeticStrings().encoding(str(text))
     count = {}
     for i in range(len(message)-N+1):
         c = message[i:i+N]
         if c in count: count[c] += 1
         else: count[c] = 1
     print "The length of your message is {}".format(len(message))
+    count = reversed(sorted([(value, key) for key, value in count.items()]))
+    print "N-Gram\t\tCount\t\tPercent"
     for c in count:
-        print c,"appears",count[c],"times, with frequency %.4G" % (count[c]/len(message)*100.0), "percent"
+        if len(c[1])>6: 
+            tab="\t"
+        else:
+            tab="\t\t"
+        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(message)*100.0)
                 </input>
                 <output></output>
             </sage>
@@ -174,37 +220,7 @@ def _(m=input_box('sage', label="Enter your message", height=3,
 
 
 
-    	<p>Word Count Cell</p>
-    	<sage xml:id="sage_word_cell">
-        	<input>
 
-<!-- Python/Sage Function -->
-import re
-@interact
-def ngram_count_simple(
-                    text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=60, type=str)):
-    message = re.sub('[^A-Z]',' ',str(text).upper())+" "
-    count = {}
-    words = 0
-    c=""
-    for l in message:
-        if l==" ":
-            if c in count: 
-                count[c] += 1
-                words += 1
-            elif c!="": 
-                count[c] = 1
-                words += 1
-            c=""
-        else: c=c+l
-    print "The total number of words in your message is {}".format(words)
-    print "The number of distinct words in your message is {}".format(len(count))
-    for c in count:
-        print c,"appears",count[c],"times, with frequency %.4G" % (count[c]/words*100.0), "percent"
-    		</input>
-    		<output></output>
-    	</sage>
 
 </appendix>
 

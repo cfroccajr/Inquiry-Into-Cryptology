@@ -217,13 +217,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<p>
 			Each of the previous messages used a simple shift cipher of which, in English, there are only twenty five.  However if we look at all the 
 			possible ways that we can rearrange twenty six letters we really have a lot more options. 
-			<ol>
+			<ul>
 				<li> Assuming 26 letters in the alphabet, how many letters can you use to replace <c>a</c>? (For simplicity assume you could choose to replace <c>a</c> with its self if you were so inclined.)</li>
 				<li> Once you have chosen a letter to use in place of <c>a</c>, how many choices for <c>b</c>?</li>
 				<li> What about <c>c</c>?</li>
 				<li> Going in order how many choices do you have for all the remaining orders?</li>
 				<li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
-			</ol>
+			</ul>
 
 			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  <em>John Falconer</em><index><main>Falconer, John</main></index> in the seventeenth century described this as follows:
 		</p>
