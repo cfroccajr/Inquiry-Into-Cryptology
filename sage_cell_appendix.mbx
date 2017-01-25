@@ -115,7 +115,7 @@ def _(k = input_grid(2,13,
         for j in range(0,13):
             key=key+str(k[i][j])
             #print str(key)
-    print"Your cipher key is:", str(key)
+    print "Your cipher key is:", str(key)
     S = SubstitutionCryptosystem(AlphabeticStrings())
     K=S.encoding(str(key))
     e=S(K)
@@ -124,7 +124,7 @@ def _(k = input_grid(2,13,
     print "Your substitution enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
-        if i%50 == 0 and i>0: print "\n"
+        if (i+5)%50 == 0: print "\n"
             </input>
             <output></output>
         </sage>
@@ -145,7 +145,7 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
     print "Your shift enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
-        if i%50 == 0 and i>0: print "\n"
+        if (i+5)%50 == 0: print "\n"
 
     		</input>
     		<output></output>
@@ -165,7 +165,7 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
     print "Your affine enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
-        if i%50 == 0 and i>0: print "\n"
+        if (i+5)%50 == 0: print "\n"
 
     		</input>
     		<output></output>
@@ -188,7 +188,7 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
     print "Your Vigenere enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
-        if i%50 == 0 and i>0: print "\n"
+        if (i+5)%50 == 0: print "\n"
 
     		</input>
     		<output></output>
@@ -213,7 +213,7 @@ def _(m=input_box('sage', label="Enter your message", height=3,
     print "Your Hill enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
-        if i%50 == 0 and i>0: print "\n"
+        if (i+5)%50 == 0: print "\n"
     		</input>
     		<output></output>
     	</sage>

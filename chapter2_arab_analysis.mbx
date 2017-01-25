@@ -330,11 +330,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</subsection>
 	</section>
 	<exercises xml:id="exercises_analysis">
-		<title>Bringing it all Together</title>
+		<title> Bringing it all Together</title>
 		<exercisegroup>
 			<introduction>
 				<p>
-					Through the next several exercises you will review the ideas we have explored in this chapter.  
+					For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> 
+					you will review the ideas we have explored in this chapter.  
 					When you are done you should have generated for yourself a guide which you can use when you are 
 					attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical 
 					English text which is at least 1000 characters long.  You will use the <em>sage cells</em> to 
@@ -345,7 +346,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p><em><alert>Word Counter:</alert></em></p>
 			<sage copy="sage_word_cell" />
 			</introduction>
-			<exercise>
+			<exercise xml:id="exercise_freq_count">
 				<statement>
 					<p>
 						letter frequencies
@@ -366,7 +367,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</p>
 				</statement>
 			</exercise>
-			<exercise>
+			<exercise xml:id="exercise_prefix">
 				<statement>
 					<p>
 						prefixes and suffixes
@@ -382,7 +383,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							a list of frequencies for all the letters in the alphabet, 
 						</li>
 						<li> 
-							frequencies for at least the top 20 <term>bi-grams</term> and <term>tri-grams</term>
+							frequencies for at least the top 20 <term>bi-grams</term> (two letter combinations) and 
+							<term>tri-grams</term> (three letter combinations)
 							<index><main>bi-gram</main></index><index><main>tri-gram</main></index>
 						</li>
 						<li>
@@ -401,23 +403,78 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<exercise>
 			<statement>
 				<p>
-					Practice Deciphering
+					Use the skills we have been practicing in class together with the cheat sheet you just put 
+					together in order to crack this cipher.
 				</p>
+				<pre>
+					LU ZOO GSZG RH TLLW, HFYORNRGB RH HFKIVNV. HFXXVVWRMT RH GSV 
+					XLNRMT GLTVGSVI LU ZOO GSZG RH YVZFGRUFO. UFIGSVIZMXV RH GSV 
+					ZTIVVNVMG LU ZOO GSZG RH QFHG. KVIHVEVIZMXV RH GSV ULFMWZGRLM 
+					LU ZOO ZXGRLMH. - OZL GAF
+				</pre>
 			</statement>
-		</exercise>		
+		</exercise>
 		<exercise>
 			<statement>
 				<p>
-					Practice Deciphering
+					Use the skills we have been practicing in class together with the cheat sheet you just put 
+					together in order to crack this cipher.
 				</p>
+				<pre>
+					SNE ORGGRE VF VG GB QNER ZVTUGL GUVATF, GB JVA TYBEVBHF GEVHZCUF, 
+					RIRA GUBHTU PURPXRERQ OL SNVYHER ... GUNA GB ENAX JVGU GUBFR CBBE 
+					FCVEVGF JUB ARVGURE RAWBL ABE FHSSRE ZHPU, ORPNHFR GURL YVIR VA N 
+					TENL GJVYVTUG GUNG XABJF ABG IVPGBEL ABE QRSRNG. - GURBQBER 
+					EBBFRIRYG
+				</pre>
 			</statement>
-		</exercise>		
+			<hint>
+				<p>
+					Be patient, the letter frequencies are ... abnormal.
+				</p>
+			</hint>
+		</exercise>
 		<exercise>
 			<statement>
 				<p>
-					Seventeenth Century Exercise
+					Use the skills we have been practicing in class together with the cheat sheet you just put 
+					together in order to crack this cipher.
 				</p>
+				<pre>
+					WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR 
+
+					PSIEL DIQJF VDICS MPJHF LGJOT KDQQJ PTTKL CPSIR TKDIC DQTJH 
+
+					LSHFL TJPLS QJIHS EBWSP RTKST DQSVL PYUQL OUFSE EJGMF DQKGL 
+
+					ITSIR SVLPY LSQYJ ILHUT MLJMF LRJIJ TMPSE TDELD TGUEK DITKL 
+
+					LVLPY RSYSO OSDPQ JOFDO LDTDQ GJPLU QLOUF TJPLS QJIOJ PWSPR 
+
+					SIRQJ TKLJT KLPEJ GLQTJ HLILC FLETL RTKLP LSPLO DOTYW KJESI 
+
+					PLSQJ IQYIT KLTDE SFFYO JPJIL WKJES IPLSQ JISIS FYTDE SFFYG 
+
+					JQTML JMFLD OYJUR LQEPD HLSTP SDIJO LVLIT QTJTK LGWDF FTLFF 
+
+					YJUWK STTKL PLQUF TWJUF RHLTK LYESI MUTTK JQLLV LITQT JCLTK 
+
+					LPDIT KLDPG DIRQS IRSPC ULOPJ GTKLG TKSTQ JGLTK DICWD FFEJG 
+
+					LTJMS QQTKL PLSPL OLWML JMFLK JWLVL PWKJD OYJUT JFRTK LGSPL 
+
+					QUFTW JUFRH LSHFL TJLVJ FVLOP JGTKL DPJWI DIILP EJIQE DJUQI 
+
+					LQQWK STTKL QTLMQ WLPLW KDEKF LRUMT JTKST PLQUF TTKDQ MJWLP 
+
+					DQWKS TDGLS IWKLI DTSFB JOPLS QJIDI CHSEB WSPRJ PSISF YTDES 
+
+					FFYSQ TURYD IQESP FLTQK LPFJE BKJFG LQ
+				</pre>
 			</statement>
+			<hint><p>
+				This is a quote from a famous fictional nineteenth century detective and makes use of a keyword cipher.
+			</p></hint>
 		</exercise>		
 		<exercise>
 			<statement>
@@ -436,6 +493,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					analysis of this text and then create a cheat sheet just like you did for English. 
 					Finally, encipher a message written in this new language which 
 					your classmates can try to decipher using your cheat sheet.
+				</p>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					A lot of the general advice that Falconer gave us was good, but his specifics didn't match 
+					what we expect to see when we read a more modern text.  Find a typical piece of text or 
+					literature from seventeenth century England (or better yet Scotland) and analyze this text 
+					to create a cheat sheet like the one you did for modern English.  How do your findings match 
+					what Falconer told us to expect?
 				</p>
 			</statement>
 		</exercise>		

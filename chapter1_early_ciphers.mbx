@@ -43,6 +43,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<li> Slight improvements: Nomenclatures, Nulls, etc.</li>
 			</ul>
 		</p>
+		<todo> Add specific sections on atabash and keyword.  Also, intoduce more vocabulary in an official manner.</todo>
 	</introduction>
 
 <!-- Early simple ciphers Section -->
@@ -54,7 +55,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title> Cipher </title>
 			<statement>
 				<p>
-					A <term> cipher </term><index><main>cipher</main> </index> is a system by which a letter or block of letters is replaced by another letter or block of letters in a systematic way.
+					A <term> cipher </term><index><main>cipher</main> </index> is a system by which a letter or block of letters 
+					in a message is replaced by another letter or block of letters in a systematic way.  In this chapter we will 
+					mostly focus on <term>monoalphabetic substitution ciphers</term>
+					<index><main>monoalphabetic substitution cipher</main></index> in which the substitution is always 
+					carried out in the same way with one-to-one correspondence between letters.
 				</p>
 			</statement>
 		</definition>
@@ -128,7 +133,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</exercise>
 
 		<p>
-			Were you able to <term>decipher</term><index><main>decipher</main></index> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
+			Were you able to <term>decrypt</term><index><main>decrypt</main></index> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
 
 			<ul>
 				<li> How does the new method compare to those which we have previously considered, what does it do to make the message more secure?</li>
@@ -342,7 +347,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<p>
 			They began by associating each letter of the alphabet with a number in a manner similar to the following:
 		</p>
-		<table xml:id="alpha_table">
+		<table xml:id="table_numeric_alpha">
 			<caption> A Numerical Alphabet</caption>
 			<tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
 				<row> 
@@ -439,7 +444,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</statement>
 			<hint>
 				<p>
-					For all of these the first step is to use table <xref ref="alpha_table" /> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
+					For all of these the first step is to use table <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
 				</p>
 			</hint>
 		</exercise>
@@ -526,6 +531,197 @@ khayyam: 20-8-1-700-700-1-40
 			</ul>
 		</p>
 	</section>
+	<exercises xml:id="exercises_monoenciphering">
+		<title>How Shifty are You?</title>
+		<introduction><p>
+			For each exercise where you need to encipher or decipher a message do enough work to demonstrate that 
+			you clearly understand how to do the job; say at least 10 characters or write down the plain text 
+			and corresponding cipher text alphabet. 
+		</p></introduction>
+		<exercise>
+			<statement>
+				<p>Encipher the following using a shift cipher with a key of 9:</p>
+				<blockquote>
+					<p>
+						<q>We’ve all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the internet, we know this is not true.</q> - Professor Robert Silensky
+					</p>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
+					<xref ref="table_numeric_alpha" />, 
+					multiplying by 5, and finally converting the numbers back to letters.
+				</p>
+				<blockquote>
+					<p>
+						zoologist 
+					</p>
+				</blockquote>
+				<p>
+					Did you run into any particular problem enciphering this message?  Is there only one unique way to do it? 
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
+					<xref ref="table_numeric_alpha" />, 
+					and then split those numeral up so as to form <em>delusive words</em>.
+				</p>
+				<blockquote>
+					<p>
+						pizza
+					</p>
+				</blockquote>
+				<p>
+					Did you run into any particular problem enciphering this message?  Are there some 
+					letters that couldn't be changed?  Is there only one unique way to do it? 
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Another type of monoalphabetic substitution cipher
+					<index><main>monoalphabetic substitution cipher</main></index> is called <term>atabash</term>
+					<index><main>atabash</main></index> and first appeared in the bible.  To encipher a message in 
+					atabash you replace <em>a</em> with <em>z</em>, <em>b</em> with <em>y</em>, <em>c</em> with <em>x</em>, 
+					and so on.  Try to encipher the following message with atabash.
+				</p>
+				<blockquote>
+					<p>
+						<q>Mistakes are a part of being human. Appreciate your mistakes for what they are: precious life lessons that can only be learned the hard way. Unless it’s a fatal mistake, which, at least, others can learn from.</q> - Al Franken, <q>Oh, the Things I Know</q>, 2002
+					</p>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Decipher the message that was enciphered with a shift of 10.
+<!-- 					”Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.” - Jerry Seinfeld -->
+				</p>
+				<pre>
+					XYGDR OICRY GIYER YGNOD OBQOX DCDKU OYEDL VYYNC DKSXC KZBOD 
 
+					DIFSY VOXDS WKQOD ROBOS DRSXU SPIYE FOQYD KDCRS BDGSD RKLVY 
+
+					YNCDK SXKVV YFOBS DWKIL OVKEX NBISC XDIYE BLSQQ OCDZB YLVOW 
+
+					WKILO IYECR YEVNQ ODBSN YPDRO LYNIL OPYBO IYENY DROGK CRTOB 
+
+					BICOS XPOVN
+				</pre>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Decipher this message that was enciphered using a shift of 25.
+<!-- 					”One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.” - Albert Einstein -->
+				</p>
+				<pre>
+					NMDRG NTKCF TZQCZ FZHMR SOQDZ BGHMF SNXNT MFODN OKDRT BBDRR 
+
+					HMSGD BTRSN LZQXE NQLZR SGDLZ HMZHL HMKHE DSGDL NRSHL ONQSZ 
+
+					MSLNS HUDEN QVNQJ HMRBG NNKZM CHMKH EDHRO KDZRT QDHMV NQJOK 
+
+					DZRTQ DHMHS RQDRT KSZMC SGDJM NVKDC FDNES GDUZK TDNES GDQDR 
+
+					TKSSN SGDBN LLTMH SXZKA DQSDH MRSDH M
+				</pre>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Decipher this message which was enciphered using atabash.
+<!-- 					”In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.” - Lee Iacocca -->
+				</p>
+				<pre>
+					RMZXL NKOVG VOBIZ GRLMZ OHLXR VGBGS VYVHG LUFHD LFOWY VGVZX 
+
+					SVIHZ MWGSV IVHGL UFHDL FOWSZ EVGLH VGGOV ULIHL NVGSR MTOVH 
+
+					HYVXZ FHVKZ HHRMT XRERO RAZGR LMZOL MTUIL NLMVT VMVIZ GRLMG 
+
+					LGSVM VCGLF TSGGL YVGSV SRTSV HGSLM LIZMW GSVSR TSVHG IVHKL 
+
+					MHRYR ORGBZ MBLMV XLFOW SZEVO VVRZX LXXZ
+				</pre>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Another type of monoalphabetic substitution cipher is called a <term>key word cipher</term>.  
+					<index><main>key word cipher</main></index>The key for this cipher consists of two pieces, a 
+					<em>key word</em> and a <em>key letter</em>.  You write the key word in the cipher alphabet starting 
+					underneath the key letter and then write the remaining letters of the alphabet in order after that.  So, if 
+					the key word is <em>ZEBRA</em> with key letter <em>F</em> we start as follows:
+				</p>
+				<table xml:id="cipher_zebra">
+					<tabular top="minor" left="minor" right="minor" halign="center">
+						<row>
+							<cell>plain</cell>
+							<cell>a</cell><cell>b</cell><cell>c</cell>
+							<cell>d</cell><cell>e</cell><cell>f</cell>
+							<cell>g</cell><cell>h</cell><cell>i</cell>
+						</row>
+						<row>
+							<cell>CIPHER</cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell>Z</cell>
+							<cell>E</cell><cell>B</cell><cell>R</cell>
+						</row>
+						<row>
+							<cell>plain</cell>
+							<cell>j</cell><cell>k</cell><cell>l</cell>
+							<cell>m</cell><cell>n</cell><cell>o</cell>
+							<cell>p</cell><cell>q</cell><cell>r</cell>
+						</row>
+						<row>
+							<cell>CIPHER</cell>
+							<cell>A</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						</row>
+						<row>
+							<cell>plain</cell>
+							<cell>s</cell><cell>t</cell><cell>u</cell>
+							<cell>v</cell><cell>w</cell><cell>x</cell>
+							<cell>y</cell><cell>z</cell><cell></cell>
+						</row>
+						<row bottom="minor">
+							<cell>CIPHER</cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						</row>
+					</tabular>
+				</table>
+				<p>
+					Fill in the rest of the alphabet and then use it to decipher this message.
+<!-- 					”The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.” - St. Augustine -->
+				</p>
+				<pre>
+					MBYEH HXWBK RLMRU GLBHN DXVYP UKYHZ FUMBY FUMRW RUGLU GXUDD 
+
+					MBHLY PBHFU CYYFI MSIKH IBYWR YLMBY XUGEY KUDKY UXSYQ RLMLM 
+
+					BUMFU MBYFU MRWRU GLBUO YFUXY UWHOY GUGMP RMBMB YXYOR DMHXU 
+
+					KCYGM BYLIR KRMUG XWHGZ RGYFU GRGMB YVHGX LHZBY DDLMU NENLM 
+
+					RGY
+				</pre>
+			</statement>
+		</exercise>
+	</exercises>
 </chapter>
 
