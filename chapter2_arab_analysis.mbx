@@ -236,7 +236,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					<ol>
 						<li>
-							As before before observe their frequency.  Those of most use in 
+							As before observe their frequency.  Those of most use in 
 							Englich are <em>d, h, n, r, s, t</em>, and next to those may be reckoned 
 							<em> c, f, g, l, m, w</em>, in third rank may be placed 
 							<em>b, k, p</em>, and lastly <em>q, x, z</em>...
@@ -341,10 +341,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					English text which is at least 1000 characters long.  You will use the <em>sage cells</em> to 
 					examine this text in the following exercises.
 				</p>
-			<p><alert>N-Gram Counter:</alert></p>
-			<sage copy="sage_ngram_cell" />
-			<p><em><alert>Word Counter:</alert></em></p>
-			<sage copy="sage_word_cell" />
 			</introduction>
 			<exercise xml:id="exercise_freq_count">
 				<statement>
@@ -506,6 +502,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					what Falconer told us to expect?
 				</p>
 			</statement>
-		</exercise>		
+		</exercise>
+		<conclusion>
+			<p><alert>N-Gram Counter:</alert></p>
+				<sage copy="sage_ngram_cell" />
+			<p><em><alert>Word Counter:</alert></em></p>
+				<sage copy="sage_word_cell" />
+		</conclusion>
 	</exercises>
 </chapter>
