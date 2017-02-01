@@ -394,7 +394,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						by writing the numbers in words as pronounced; or by finger-bending, using the fingers to communicate the message visually to a recipient; or by writing the numbers as numerals such as writing <em>(mhmd: forty, eight, forty, four)</em>; or by giving the cryptogram a semblance of a page of a financial register.
 					</li>
 					<li>
-						By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter, e.g. <em>(ali: dig, fad, cab, ab)</em>, in which case a line is to be drawn over two words to denote that they represent one letter. 
+						By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter, 
+						e.g. <em>(ali: <m>\overline{dig\ fad}</m>, <m>\overline{cab\ ab}</m>)</em>, 
+						in which case a line is to be drawn over two words to denote that they represent one letter. 
 					</li>
 					<li>
 						By multiplying the number representing the letter by two, and so write <em>(mhmd: q, jf, q, h)</em> and <em>(ali: ob, jh)</em>, etc; or multiply it by three, thus writing <em>(mhmd: sk, kd, sk, jb)</em> and <em>(ali: rc, kg)</em>. Numbers can also be multiplied by four or five."
@@ -409,7 +411,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<p>After carefully reading through the passage above consider the following questions and try the exercises below.
 			<ul>
 				<li>
-					In the second paragraph above, how did the author derive <em>fb</em> from <em>m</em> or <em>ab</em> from <em>i</em><m>\ </m>?
+					In the second paragraph above, how did the author derive <em>jl</em> from <em>m</em> 
+					or <em><m>\overline{cab\ ab}</m></em> from <em>i</em><m>\ </m>?
 				</li>
 				<li>
 					When converting letters to words <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?

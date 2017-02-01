@@ -65,5 +65,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</note> -->
 			</biblio>
 
+			<biblio type="raw" xml:id="cr_crypt_alberti">
+				K. Williams, L. March, and S. Wassell (eds.),
+				<title>
+					The mathematical works of leon battista alberti
+				</title>
+				Birkhäuser, Basel
+				<year>
+					2010
+				</year>
+			</biblio>
+
 		</references>
 

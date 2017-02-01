@@ -30,14 +30,233 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <chapter xml:id="New_Ciphers">
 	<title> Mixing Things Up </title>
-	<p>
-		In this chapter look at real improvements to cryptology:
-		<ul>
-			<li> Arabic Encryption (does it offer much more security?)</li>
-			<li> Polyalphabetics (Alberti)</li>
-			<li> Autokey Cipher (Vigenere)</li>
-			<li> Keyed Columnar Ciphers and Codes (Falconer)</li>
-			<li> Thomas Jeffersons contributions</li>
-		</ul>
-	</p>
+	<introduction>
+		<p>
+			In this chapter look at real improvements to cryptology:
+			<ul>
+				<li> Polyalphabetics (Alberti)</li>
+				<li> Autokey Cipher (Vigenere)</li>
+				<li> Keyed Columnar Ciphers and Codes (Falconer)</li>
+				<li> Thomas Jefferson's contributions???</li>
+			</ul>
+		</p>
+	</introduction>
+
+
+
+
+
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+	
+		Alberti and Polyalphabetics 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_alberti">
+		<title> Alberit's Great Idea </title>
+		<objectives>
+			<ul>
+				<li>
+					Alberti's Biography
+				</li>
+				<li>
+					Alberti's Polyalphabetic
+				</li>
+				<li>
+					Modern/Vigenere's Polyalphabetic
+				</li>
+			</ul>
+		</objectives>
+
+		<subsection>
+			<title> Alberti's Biography </title>
+			<p>
+				For now see his biography on the MacTutor History of Mathematics Site: 
+				<url href="http://www-groups.dcs.st-and.ac.uk/history/Biographies/Alberti.html">
+				Leon Battista Alberti</url>
+			</p>
+		</subsection>
+
+		<subsection>
+			<title>Alberti's Polyalphabetic Cipher</title>
+			<p>
+				One of Leon Battista Alberti's greatest contributions to cryptology was not his 
+				cryptanalysis skills but an entirely new kind of cipher.  Many efforts had been and 
+				would be made to shore up monoalphabetic substitution ciphers.  Some of these efforts 
+				worked well enough but they were never sufficiently different to make them immune to 
+				the sorts of attacks we have studied before.   Alberti made something truly different
+				he invented a <term>polyalphabetic substitution cipher</term>
+			 	<index><main>polyalphabetic substitution cipher</main></index>.  This was a cipher
+			 	that did not just replace the plain text alphabet with a single separate alphabet but 
+			 	instead used multiple enciphering alphabets to create greater confusion and security.
+			</p>
+			<sidebyside widths="50% 40%" margins="0%">
+				<paragraphs>
+					<p>
+						The key to Alberti's new system was a device he called a <term><q>formula</q></term>
+						<index><main>formula (Alberti)</main></index>.  This was a cipher disk consisting of 
+						a fixed outer disk and a mobile inner disk.  In his basic description of his new 
+						cipher he would use the outer ring of upper case letters for his plain text and 
+						the inner mobile ring of lower case letters for his cipher text.
+					</p>
+					<p>
+						For the following it will be helpful to have a working copy of Alberti's formula
+						[<xref ref="figure_alberti_disk" autoname="yes"/>], there is a larger version in the 
+						appendices [<xref ref="appendix_figure_alberti" />].
+					</p>
+				</paragraphs>
+				<figure xml:id="figure_alberti_disk">
+					<caption>Alberti's Cipher Disk or <term><q>Formula</q></term></caption>
+					<image width="100%" source="images/Alberti_cipher_disk.png">
+						<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
+					</image>
+				</figure>
+			</sidebyside>
+			<blockquote>
+				<p>
+					<q>
+						Say for example we mutually establish <em>k</em> as the index of the mobile circle.  
+						Writing, the formulae are positioned at will, say such <em>k</em> lies under the 
+						uppercase <em>B</em> [<xref ref="figure_alberti_disk" autoname="yes"/>]
+						and the next letter corresponds to the letter that comes next.  
+						In writing to you, I will first put the uppercase <em>B</em> under which lies the 
+						index <em>k</em> in the formula; this is to signal you far away, wanting to read what 
+						I have written, that you should set up the twin formula in your keeping, positioning 
+						the mobile circle so that the <em>B</em> sits over the index <em>k</em>.  Then all of 
+						the rest of the lowercase letters present in the coded text will take their meaning 
+						and sound from those of the fixed circle above them.
+					</q>
+				</p>
+				<p>
+					<q>
+						After I have written three or four words I will mutate the position of the index in our 
+						formula, rotating the disk let's say, so that the index <em>k</em> falls below the 
+						upper case <em>R</em>.  Then in this missive I write an uppercase <em>R</em> to indicate 
+						that <em>k</em> no longer refers to <em>B</em>, but to <em>R</em>, and the letters that 
+						will follow will assume new meanings.
+					</q> <xref ref="cr_crypt_alberti" detail="p. 181"/>
+				</p>
+			</blockquote>
+			<p>
+				<ul>
+					<li>
+						If you compare the inner and outer rings of the formula (cipher disk) what difference do 
+						you notice?  Why do you think Alberti might have made these choices?  (For reference 
+						I made an updated version in the appendix where I made similar choices, 
+						<xref ref="appendix_figure_modern" />)
+					</li>
+					<li>
+						Suppose that <q>Blgiq Ryam Vydme</q> was enciphered using an index of <em>k</em> 
+						as directed by Alberti, what does it say? <!--cats and dogs-->
+					</li>
+					<li>
+						What step in the process above stops this from simply being a shift cipher?
+					</li>
+					<li>
+						How does the recipient of a message using Alberti's method know how to set their disk and 
+						when they should change it?
+					</li>
+					<li>
+						Is there an obvious weakness in the way that Alberti suggests using his system?
+					</li>
+				</ul>
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						If you have not done so already make a copy of Alberti's formula 
+						[<xref ref="appendix_figure_alberti" />] so that you can use it 
+						for enciphering and deciphering.  Now encipher 
+						<q>See my first message</q> using an index of <em>c</em> 
+						initially underneath the <em>G</em>, but shift it underneath 
+						<em>V</em> after the first two words.
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Team up with a partner and agree on a lower case index.  Now try enciphering 
+						a short message, only five or six words, be sure to adjust your formula after 
+						every couple of words.  Then exchange messages with your partner and decipher 
+						each others messages.
+					</p>
+				</statement>
+			</exercise>
+		</subsection>
+
+
+	</section>
+
+
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+		Agripa and the Pigpen Cipher 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_agripa">
+		<title> Variation on a Theme </title>
+		<objectives>
+			<ul>
+				<li>
+					Agripa's Biography
+				</li>
+				<li>
+					Agripa/Vigeners's Pigpen Cipher
+				</li>
+				<li>
+					Modern Pigpen Cipher
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+		Vigenere and the Autokey Cipher 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_vigenere">
+		<title> An Automatic Hit </title>
+		<objectives>
+			<ul>
+				<li>
+					Vigenere's Biography
+				</li>
+				<li>
+					Vigeners's Autokey Cipher
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+		Falconer and the Columnar Transposition 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_falconer_cipher">
+		<title> Stiring Things Up </title>
+		<objectives>
+			<ul>
+				<li>
+					Falconer's Biography
+				</li>
+				<li>
+					Falconer's Columnar Transposition
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+
+
 </chapter>

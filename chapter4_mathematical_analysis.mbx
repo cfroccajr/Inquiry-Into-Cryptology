@@ -30,13 +30,94 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <chapter xml:id="Mathematical_Analysis">
 	<title> Triumphs of Logic and Statistics </title>
-	<p>
-		In this chapter discuss the emerging roll of mathematics in analysis:
-		<ul>
-			<li> Falconer's Attacks</li>
-			<li> Babbage's attack</li>
-			<li> Friedman and Statistics</li>
-			<li> Sukhotin's Algorithm</li>
-		</ul>
-	</p>
+	<introduction>
+		<p>
+			In this chapter discuss the emerging roll of mathematics in analysis:
+			<ul>
+				<li> Falconer's Attacks</li>
+				<li> Babbage's attack</li>
+				<li> Friedman and Statistics</li>
+				<li> Sukhotin's Algorithm</li>
+			</ul>
+		</p>
+	</introduction>
+
+
+
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    	Falconer's Attack on the Columnar Transposition 
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_falconer_attack">
+		<title> A Simple Solution </title>
+		<objectives>
+			<ul>
+				<li>
+					Factoring Integers
+				</li>
+				<li>
+					Falconer's Solution to the Columnar Transposition
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    	Attacks on Polyalphabetics: Falconer, Babbage, Friedman 
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_polyalphabetic_attack">
+		<title> Breaking the Impossible </title>
+		<objectives>
+			<ul>
+				<li>
+					Falconer's Attack
+				</li>
+				<li>
+					Babbage's Attack
+				</li>
+				<li>
+					Friedman and the Index of Coincidence
+				</li>
+				<li>
+					Attacking Autokey Ciphers (Polyalphabetics Big Brother)
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    	Monoalphabetics: Friedman, Sukhotin's Algorithm 
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_statisticsl_attack">
+		<title> A Statistical Approach </title>
+		<objectives>
+			<ul>
+				<li>
+					Friedman's Use of Statistics
+				</li>
+				<li>
+					Sukhotin's Algorithm
+				</li>
+			</ul>
+		</objectives>
+	</section>
+
+
+
+
+
+
 </chapter>

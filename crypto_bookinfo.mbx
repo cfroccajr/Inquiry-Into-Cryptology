@@ -50,14 +50,52 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		\newcommand \ppg {\Large \urcorner}
     	\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
 		\newcommand \ppi {\Large \ulcorner}
+
+
+        %%%%%%%%%%%%%%%%%%%%% S-Box Macros for rSDES %%%%%%%%%%%%%%%%%%
+        \newcommand \sboxOne{
+            \mbox{
+                $
+                \begin{array}{|c|c|c|c|c|}\hline
+                        \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+                    00 \amp 01 \amp 11 \amp 10 \amp 11 \\       \hline
+                    01 \amp 11 \amp 10 \amp 01 \amp 00 \\       \hline
+                    10 \amp 00 \amp 10 \amp 01 \amp 11 \\       \hline
+                    11 \amp 11 \amp 01 \amp 11 \amp 10 \\       \hline
+                \end{array}
+                $
+            }
+        }
+
+        \newcommand \sboxTwo{
+            \mbox{
+                $
+                \begin{array}{|c|c|c|c|c|}\hline
+                        \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+                    00 \amp 00 \amp 01 \amp 10 \amp 11 \\       \hline
+                    01 \amp 10 \amp 00 \amp 01 \amp 11 \\       \hline
+                    10 \amp 11 \amp 00 \amp 01 \amp 00 \\       \hline
+                    11 \amp 10 \amp 01 \amp 10 \amp 11 \\       \hline
+                \end{array}
+                $
+            }
+        }
+
     </macros>
 
     <!-- tikz package and libraries for images -->
+    <!--
+    Extra packages, package options, and package settings for latex-based images.
+    Inserted in the preamble for LaTeX output.
+    Inserted in the preamble to each standalone latex-based image for HMTL SVG output.
+    -->
     <latex-image-preamble>
-	    \usepackage{tikz}
-	    \usetikzlibrary{backgrounds}
-	    \usetikzlibrary{arrows,matrix}
-	    \usetikzlibrary{snakes}
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
     </latex-image-preamble>
 
 </docinfo>

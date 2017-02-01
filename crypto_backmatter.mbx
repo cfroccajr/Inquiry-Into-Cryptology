@@ -36,6 +36,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<xi:include href="sage_cell_appendix.mbx" />
 
+		<xi:include href="chart_appendix.mbx" />
+
 	    <appendix>
 	        <title>Notation</title>
 
