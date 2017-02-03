@@ -41,6 +41,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering.
 				</title>
 				Daniel Brown, London, <year>1685</year>.
+				<note>
+					<p>
+						<url href="https://archive.org/details/cryptomenysispat00falc">
+							https://archive.org/details/cryptomenysispat00falc
+						</url>
+					</p>
+				</note>
 			</biblio>
 
 			<biblio type="raw" xml:id="cr_crypt_arabic">
@@ -63,6 +70,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</url>
 					</p>
 				</note> -->
+			</biblio>
+
+			<biblio type="raw" xml:id="cr_crypt_vigenere">
+				Blaise de Vigen&#x00E8;re,
+				<title>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire,</title>
+				Chez Abel L’Angelier, Paris, 
+				<year>1586</year>
+				<note>
+					<p>
+						<url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
+							 http://gallica.bnf.fr/ark:/12148/bpt6k73371g
+						</url>
+					</p>
+				</note>
 			</biblio>
 
 			<biblio type="raw" xml:id="cr_crypt_alberti">

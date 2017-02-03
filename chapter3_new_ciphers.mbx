@@ -72,7 +72,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				For now see his biography on the MacTutor History of Mathematics Site: 
 				<url href="http://www-groups.dcs.st-and.ac.uk/history/Biographies/Alberti.html">
-				Leon Battista Alberti</url>
+				Leon Battista Alberti</url><index><main>Alberti, Leon Battista</main></index>
 			</p>
 		</subsection>
 
@@ -145,10 +145,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<xref ref="appendix_figure_modern" />)
 					</li>
 					<li>
-						Suppose that <q>Blgiq Ryam Vydme</q> was enciphered using an index of <em>k</em> 
-						as directed by Alberti, what does it say? <!--cats and dogs-->
-					</li>
-					<li>
 						What step in the process above stops this from simply being a shift cipher?
 					</li>
 					<li>
@@ -175,10 +171,108 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<exercise>
 				<statement>
 					<p>
+						Suppose that <q>Blgiq Ryam Vydme</q> was enciphered using an index of <em>k</em> 
+						as directed by Alberti, what does it say? <!--cats and dogs-->
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
 						Team up with a partner and agree on a lower case index.  Now try enciphering 
 						a short message, only five or six words, be sure to adjust your formula after 
 						every couple of words.  Then exchange messages with your partner and decipher 
 						each others messages.
+					</p>
+				</statement>
+			</exercise>
+		</subsection>
+
+		<subsection>
+			<title>Vigen&#x00E8;re's Cipher</title>
+			<p>
+				In spite of the fact that Alberti invented the polyalphabetic cipher his is note the 
+				name associated with it, instead that honor goes to the Frenchmen 
+				<em><alert>Blaise de Viegen&#x00E8;re</alert></em>
+				<index><main>Viegen&#x00E8;re, Blaise de</main></index>.
+				Vigen&#x00E8;re made a careful study of the cryptographers who had come before him and 
+				in 1586 he published the culmination of his work 
+				<em>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire</em>.  
+				In the Traict&#x00E9; he described a wide variety of older ciphers and his improvements to 
+				them.  Among these was his take on Alberti's polyalphabetic cipher.
+			</p>
+			<p>
+				One of the key advances that Vigenere made was to replace the disk 
+				with a table [<xref ref="figure_vigenere_table" autoname="yes"/>, 
+				<xref ref="cr_crypt_vigenere" detail="p. 102 (50b)"/>
+				<fn>In the page designation <q>p. 102 (50b)</q> the 102 is the page in the pdf document 
+				while the 50b is the page in the manuscript.</fn>].  This made 
+				it easier to vary between alphabets without having to move inner and outer 
+				disks to different positions.
+			</p>
+			<sidebyside widths="40% 60%" margins="0%">
+				<paragraphs>
+					<p>
+						Suppose we wish to encipher <q>defend paris</q> using Vigenere's cipher table.  
+						First we need to agree on a key word which will tell us which rows to utilize and 
+						in what order, let's use <q>HENRI</q>.  To encipher the <em>d</em> in the message 
+						we replace it with the letter in row <em>H</em> and column <em>d</em> (for this 
+						example use the outer row and column markers), this gives us <em>G</em>. Next, 
+						we encipher the <em>e</em> by replacing it with the letter in row <em>E</em> and 
+						column <em>e</em> which is, coincidentally another <em>E</em>.  For the <em>f</em> 
+						we will go to row <em>N</em> and column <em>f</em> to get <em>O</em>.  Continuing in 
+						this way we get the cipher text <em>GEORRG PHGOX</em>.
+					</p>
+				</paragraphs>
+				<figure xml:id="figure_vigenere_table">
+					<caption>
+						Vigenere's Tableau [see also <xref ref="appendix_figure_vigenere_table" autoname="yes"/>]
+					</caption>
+					<image width="100%" source="images/vigenere_table.png">
+						<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
+					</image>
+				</figure>
+			</sidebyside>
+			<exercise>
+				<statement>
+					<p>
+						Above, we described how to get the first three letters of the cipher text <em>GEORRG PHGOX</em>, 
+						how do we get the fourth and fifth letters? How are we deciding which columns and rows to use?
+					</p>
+				</statement>
+				<hint>
+					<p>
+						Be sure to compare our choices of row and column for the first three letters to the key <q>HENRI</q> 
+						and the message <q>defend paris</q>.
+					</p>
+				</hint>
+			</exercise>
+						<exercise>
+				<statement>
+					<p>
+						What do we do after we have enciphered the first five characters?  How did we get 
+						<em>G PHGO</em> for the next five characters?
+					</p>
+				</statement>
+				<hint>
+					<p>
+						What rows must we use in order to get <em>G</em> from <em>d</em> or <em>H</em> from <em>a</em>?
+					</p>
+				</hint>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						To further check your understanding try enciphering the message <q>vive la france</q> using the 
+						key <q>HELP</q>.
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						To further check your understanding try deciphering the message <q>BIXR VGNG</q> using the 
+						key <q>DOG</q>.
 					</p>
 				</statement>
 			</exercise>

@@ -42,16 +42,16 @@ import re
 @interact
 def word_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=60, type=str)):
-    message = re.sub('[^A-Z]',' ',str(text).upper())+" "
+                    label="Enter your message", height=3, width=50, type=str)):
+    message = re.sub('[^A-Z]',' ',str(text.encode('ascii','replace')).upper())+" "
     count = {}
     words = 0
     c=""
     for l in message:
         if l==" ":
-            if c in count: 
+            if c in count:
+                words += 1 
                 count[c] += 1
-                words += 1
             elif c!="": 
                 count[c] = 1
                 words += 1
@@ -59,9 +59,10 @@ def word_count_simple(
         else: c=c+l
     print "The total number of words in your message is {}".format(words)
     print "The number of distinct words in your message is {}".format(len(count))
-    count = reversed(sorted([(value, key) for key, value in count.items()]))
+    count = sorted([(value, key) for key, value in count.items()])
     print "Word\t\tCount\t\tPercent"
-    for c in count:
+    count.reverse()
+    for c in count[0:min(30,len(count))]:
         if len(c[1])>6: 
             tab="\t"
         else:
@@ -76,20 +77,22 @@ def word_count_simple(
             <p>N-Gram Analysis Cell</p>
             <sage xml:id="sage_ngram_cell">
                 <input>
+
 @interact
 def ngram_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=60, type=str),N=[1..6]):
-    message = AlphabeticStrings().encoding(str(text))
+                    label="Enter your message", height=3, width=50, type=str),N=[1..6]):
+    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace')))
     count = {}
     for i in range(len(message)-N+1):
         c = message[i:i+N]
         if c in count: count[c] += 1
         else: count[c] = 1
     print "The length of your message is {}".format(len(message))
-    count = reversed(sorted([(value, key) for key, value in count.items()]))
+    count = sorted([(value, key) for key, value in count.items()])
     print "N-Gram\t\tCount\t\tPercent"
-    for c in count:
+    count.reverse()
+    for c in count[0:min(30,len(count))]:
         if len(c[1])>6: 
             tab="\t"
         else:
@@ -109,7 +112,7 @@ def _(k = input_grid(2,13,
     default = [['a','b','c','d','e','f','g','h','i','j','k','l','m'],
     ['n','o','p','q','r','s','t','u','v','w','x','y','z']],
     label='Cipher Alphabet:', type=str,width=1),
-      m=input_box('sage', label="Message", height=3, width=60, type=str)):
+      m=input_box('sage', label="Message", height=3, width=50, type=str)):
     key=""
     for i in range(0,2):
         for j in range(0,13):
@@ -119,7 +122,7 @@ def _(k = input_grid(2,13,
     S = SubstitutionCryptosystem(AlphabeticStrings())
     K=S.encoding(str(key))
     e=S(K)
-    clean_text = S.encoding(str(m))
+    clean_text = S.encoding(str(m.encode('ascii','replace')))
     cipher_text = e(clean_text)
     print "Your substitution enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
@@ -137,10 +140,10 @@ def _(k = input_grid(2,13,
 
 <!-- Python/Sage Function -->
 @interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),shift=[0..25]):
+def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),shift=[0..25]):
     S = ShiftCryptosystem(AlphabeticStrings())
     e = S(shift)
-    clean_text = S.encoding(str(m))
+    clean_text = S.encoding(str(m.encode('ascii','replace')))
     cipher_text = e(clean_text)
     print "Your shift enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
@@ -157,10 +160,10 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
 
 <!-- Python/Sage Function -->
 @interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),a=[1..25], b=[0..25]):
+def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),a=[1..25], b=[0..25]):
     S = AffineCryptosystem(AlphabeticStrings())
     e = S(a,b)
-    clean_text = S.encoding(str(m))
+    clean_text = S.encoding(str(m.encode('ascii','replace')))
     cipher_text = e(clean_text)
     print "Your affine enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
@@ -177,13 +180,13 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
 
 <!-- Python/Sage Function -->
 @interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=str),
+def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
 		key=input_box('sage', label="Enter your key", height=1, width=20, type=str)):
     cipher_key=str(key)
     S = VigenereCryptosystem(AlphabeticStrings(),len(cipher_key))
     K = S.encoding(cipher_key)
     e = S(K)
-    clean_text = S.encoding(str(m))
+    clean_text = S.encoding(str(m.encode('ascii','replace')))
     cipher_text = e(clean_text)
     print "Your Vigenere enciphering text is\n"
     for i in xrange(0,len(cipher_text),5):
@@ -201,12 +204,12 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=60, type=s
 <!-- Python/Sage Function -->
 @interact
 def _(m=input_box('sage', label="Enter your message", height=3, 
-    width=60, type=str),
+    width=50, type=str),
 	key=input_grid(2,2,default=[[1,0],[0,1]],type=int,width=2)):
     S = HillCryptosystem(AlphabeticStrings(),2)
     M = MatrixSpace(IntegerModRing(26),2,2)
     e = S(M(key))
-    clean_text = S.encoding(str(m))
+    clean_text = S.encoding(str(m.encode('ascii','replace')))
     if len(clean_text)%2 == 1:
         clean_text = S.encoding(str(m)+"Z")
     cipher_text = e(clean_text)
