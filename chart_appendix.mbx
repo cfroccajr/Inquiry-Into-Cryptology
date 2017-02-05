@@ -152,7 +152,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<image width="65%">
 			<description> This is an image of modern version of Alberti's Cipher Disk. </description>
 			<latex-image-code>
-			    \begin{tikzpicture}[scale=4,cap=round,>=latex]
+			    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\begin{tikzpicture}[scale=4,cap=round,>=latex]
 			        % draw the circles
 			        \draw[thick] (0cm,0cm) circle(0.98cm);
 			        \draw[thick] (0cm,0cm) circle(1cm);
@@ -180,7 +181,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			            124.65/t,
 			            138.50/v,
 			            152.35/z,
-			            166.20/*,
+			            166.20/\&,
 			            180.05/x,
 			            193.90/y,
 			            207.75/s,
@@ -228,7 +229,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			        }
 			        \draw (-\x:1.15cm) node[fill=white, rotate=270-\x] {\Large$\mathit{\ptext}$};
 
-			    \end{tikzpicture}
+			    \end{tikzpicture}]]>
 			</latex-image-code>
 		</image>
 	</figure>
@@ -237,12 +238,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	Vigenere Tableau
+	Vigen&#x00E8;re Tableau
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
 	<figure xml:id="appendix_figure_vigenere_table">
-		<caption>Vigenere's Tableau</caption>
+		<caption>Vigen&#x00E8;re's Tableau</caption>
 		<image width="80%" source="images/vigenere_table.png">
 			<description> This is a copy of Vigen&#x00E8;re's Table.</description>
 		</image>
@@ -250,28 +251,31 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-	<figure xml:id="appendix_figure_vigenere_table_new">
-		<caption>Updated Vigenere Tableau</caption>
-		<image width="85%">
-			<description> Updated Vigenere Tableau </description>
+	<figure xml:id="appendix_figure_Vigenee_table_new">
+		<caption>Updated Vigen&#x00E8;re Tableau</caption>
+		<image width="90%">
+			<description> Updated Vigen&#x00E8;re Tableau </description>
 			<latex-image-code>
 			    \begin{tikzpicture}
-			    \foreach \y  in {0,1,...,25}
+			    \foreach \y  in {0,1,...,25}{
+			    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
+					\filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (0,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
     			    \foreach \x/\ctext in 
 			    	{0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
 						13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
     			    { 
-			    	\pgfmathtruncatemacro{\n}{mod(\x-\y+26,26)}
-    				\draw (1+0.5*\n,-0.5*\y) node {$\ctext$};
+			    	\pgfmathtruncatemacro{\n}{mod(\x-\y+26,26)};
+    				\draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
     				}
+				}
     			\foreach \x/\ctext in 
 				{0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
 				{
 					\draw (0.5,-0.5*\x) node {$\ctext$};
-					\draw (1+0.5*\x,0.5) node {$\ctext$};
+					\draw (1+0.55*\x,0.5) node {$\ctext$};
 				}
-				\draw (0,0.25)--(14,0.25);
-				\draw (0.75,1)--(0.75,-13);
+				\draw (0,0.25)--(15,0.25);
+				\draw (0.75,1)--(0.75,-12.75);
 
 			    \end{tikzpicture}
 			</latex-image-code>
