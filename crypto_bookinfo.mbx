@@ -41,16 +41,51 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <macros>
     	%%%%%%%%%%%%%%%%%%%% Pig Pen Cipher Macros %%%%%%%%%%%%%%%%%%%%
-		\newcommand \ppa {\Large \lrcorner}
-    	\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
+		\newcommand{\pigletter}[1]{{\large\ #1}}
+		\newcommand{\pigdotletter}[1]{{\large\ {#1\mkern-5.5pt&#8901;}}}
+		\newcommand\ppa{\pigletter{&#5287;}}
+		\newcommand\ppb{\pigletter{&#8852;}}
+		\newcommand\ppc{\pigletter{&#5290;}}
+		\newcommand\ppd{\pigletter{&#8848;}}
+		\newcommand\ppe{\pigletter{&#9633;}}
+		\newcommand\ppf{\pigletter{&#8847;}}
+		\newcommand\ppg{\pigletter{&#5283;}}
+		\newcommand\pph{\pigletter{&#8851;}}
+		\newcommand\ppi{\pigletter{&#5285;}}
+		\newcommand\pps{\pigletter{&#5167;}}
+		\newcommand\ppt{\pigletter{&#5171;}}
+		\newcommand\ppu{\pigletter{&#5176;}}
+		\newcommand\ppv{\pigletter{&#5169;}}
+
+
+		\newcommand\ppj{\pigdotletter{&#5287;}}
+		\newcommand\ppk{\pigdotletter{&#8852;}}
+		\newcommand\ppl{\pigdotletter{&#5290;\mkern+2pt}}
+
+		\newcommand\ppm{\pigdotletter{&#8848;\mkern-3.5pt}}
+		\newcommand\ppn{\pigdotletter{&#9633;\mkern-0.75pt}}
+		\newcommand\ppo{\pigdotletter{&#8847;\mkern-4pt}}
+		
+		\newcommand\ppp{\pigdotletter{&#5283;}}
+		\newcommand\ppq{\pigdotletter{&#8851;}}
+		\newcommand\ppr{\pigdotletter{&#5285;\mkern+2pt}}
+		
+		\newcommand\ppw{\pigdotletter{&#5167;\mkern-0.25pt}}
+		\newcommand\ppx{\pigdotletter{&#5171;\mkern-1pt}}
+		\newcommand\ppy{\pigdotletter{&#5176;\mkern+1pt}}
+
+		\newcommand\ppz{\pigdotletter{&#5169;}}
+				
+<!-- 		\newcommand \ppa {\Large \lrcorner}
+		\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
 		\newcommand \ppc {\Large \llcorner}
 		\newcommand \ppd {\sqsupset}
 		\newcommand \ppe {\square}
 		\newcommand \ppf {\sqsubset}
 		\newcommand \ppg {\Large \urcorner}
-    	\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
+		\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
 		\newcommand \ppi {\Large \ulcorner}
-
+ -->
 
         %%%%%%%%%%%%%%%%%%%%% S-Box Macros for rSDES %%%%%%%%%%%%%%%%%%
         \newcommand \sboxOne{
