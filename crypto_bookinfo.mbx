@@ -41,14 +41,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <macros>
     	%%%%%%%%%%%%%%%%%%%% Pig Pen Cipher Macros %%%%%%%%%%%%%%%%%%%%
+		\newcommand{\pigletter}[1]{{\large #1}}
+		\newcommand{\pigdotletter}[1]{{\large #1\mkern-9pt&#183;}}
+		\newcommand\ppm{{\large &#8848;\mkern-9pt&#183;}}
+		\newcommand\pps{\pigletter{&#5167;}}
+		\newcommand\ppt{\pigletter{&#5171;}}
+		
 		\newcommand \ppa {\Large \lrcorner}
-    	\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
+		\newcommand \ppb {\Large \llcorner\mkern-10mu\lrcorner}
 		\newcommand \ppc {\Large \llcorner}
 		\newcommand \ppd {\sqsupset}
 		\newcommand \ppe {\square}
 		\newcommand \ppf {\sqsubset}
 		\newcommand \ppg {\Large \urcorner}
-    	\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
+		\newcommand \pph {\Large \ulcorner\mkern-10mu\urcorner}
 		\newcommand \ppi {\Large \ulcorner}
 
 
