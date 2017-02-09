@@ -277,7 +277,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</statement>
 			</exercise>
 			<p> 
-				Today when we use the Vigenere Cipher we use a table 
+				Today when we use the Viegen&#x00E8;re Cipher we use a table 
 				<xref ref="appendix_figure_Vigenee_table_new" autoname="yes" /> 
 				which is technically simpler, but as we shall see in the next chapter it is not really significantly easier to crack.
 				You will play with the modern version in the exercises, but for now let's look at another way that cryptographers tried 

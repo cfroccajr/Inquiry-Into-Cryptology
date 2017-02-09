@@ -41,41 +41,41 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <macros>
     	%%%%%%%%%%%%%%%%%%%% Pig Pen Cipher Macros %%%%%%%%%%%%%%%%%%%%
+        <![CDATA[
+            \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
+            \def\ppb{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+            \def\ppc{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(15pt,-10pt)}
 
-        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
-        \def\ppb{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
-        \def\ppc{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(15pt,-10pt)}
+            \def\ppd{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
+            \def\ppe{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+            \def\ppf{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
 
-        \def\ppd{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
-        \def\ppe{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
-        \def\ppf{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+            \def\ppg{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
+            \def\pph{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+            \def\ppi{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
 
-        \def\ppg{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
-        \def\pph{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
-        \def\ppi{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+            \def\ppj{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppk{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppl{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
 
-        \def\ppj{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppk{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppl{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppm{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppn{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppo{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
 
-        \def\ppm{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppn{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppo{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppp{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppq{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppr{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
 
-        \def\ppp{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppq{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppr{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\pps{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(5pt,-10pt)}
+            \def\ppt{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(15pt,0pt)}
+            \def\ppu{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(5pt,0pt)}
+            \def\ppv{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(5pt,0pt)}
 
-        \def\pps{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(5pt,-10pt)}
-        \def\ppt{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(15pt,0pt)}
-        \def\ppu{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(5pt,0pt)}
-        \def\ppv{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(5pt,0pt)}
-
-        \def\ppw{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppx{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppy{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-        \def\ppz{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
-
+            \def\ppw{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppx{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppy{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+            \def\ppz{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+        ]]>
 
         %%%%%%%%%%%%%%%%%%%%% S-Box Macros for rSDES %%%%%%%%%%%%%%%%%%
         \newcommand \sboxOne{
