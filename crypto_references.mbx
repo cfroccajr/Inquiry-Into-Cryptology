@@ -34,6 +34,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title>References</title>
 
 			
+			<biblio type="raw" xml:id="cr_crypt_agripa">
+				Heinrich Cornelius Agrippa (1486?-1535),
+				<title>
+					De occulta philosophia.
+				</title>
+				<year>Coloniae, 1533</year>
+				<note>
+					<p>
+						<url href="https://lccn.loc.gov/20007812">
+							https://lccn.loc.gov/20007812
+						</url>
+					</p>
+				</note>
+			</biblio>
 
 			<biblio type="raw" xml:id="cr_crypt_falconer">
 				John Falconer, 

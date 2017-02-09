@@ -283,6 +283,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	</figure>
 
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	Pigpen Key
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+	<figure xml:id="appendix_figure_pigpen">
+		<caption>Pigpen Cipher Key</caption>
+		<image width="40%" source="images/Pigpen.png">
+			<description> Cipher Key for the Pigpen Cipher </description>
+		</image>
+	</figure>
+
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
