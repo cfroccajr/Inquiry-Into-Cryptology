@@ -320,22 +320,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				The pigpen cipher ... <index><main>pigpen cipher</main></index>
 			</p>
-			<sidebyside widths="50% 50%" margins="0%">
+			<sidebyside widths="45% 45%" margins="0%">
 				<figure xml:id="figure_vigenere_pig">
-					<caption> Vigenere's Variant on the Pigpen Cipher <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/></caption>
+					<caption> Vigenere's Variant on the Pigpen Cipher <!-- <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> --></caption>
 		            <image width="100%" source="images/vigenere_p534.png">
 		            	<description> Vigenere's Pigpen Variant</description>
 		            </image>
 		        </figure>
 		        <figure xml:id="figure_agripa_pig">
-		        	<caption> Agripa's Variant on the Pigpen Cipher <xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/></caption>
+		        	<caption> Agripa's Variant on the Pigpen Cipher<!--  <xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/> --></caption>
 		            <image width="100%" source="images/agripa_p279.png">
 		            	<description> Agripa's Pigpen Variant</description>
 		            </image>
 		        </figure>
 	        </sidebyside>
 	        <figure xml:id="figure_modern_pig">
-	        	<caption> Modern key for the Pigpen Cipher </caption>
+	        	<caption> Modern key for the Pigpen Cipher</caption>
 	            <image width="50%" source="images/Pigpen.png">
 	            	<description> Modern Pigpen Cipher</description>
 	            </image>

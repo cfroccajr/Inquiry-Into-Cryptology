@@ -306,9 +306,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_rSDES">
 		<caption>A Highly Simplified two step DES</caption>
-<!-- 		<image width="125%" source="images/rSDES.png">
-			<description> This is a highly simplified example of the Data Encryption Standard </description>
-		</image> -->
         <image width="100%">
         	<description> This is a highly simplified example of the Data Encryption Standard </description>
 	        <latex-image-code>

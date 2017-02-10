@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+<docinfo>
+
+    <!-- the other option is "long" which will produce an -->
+    <!-- entire front matter section with more headings   -->
+    <!-- <author-biographies length="short" /> -->
+
+    <brandlogo  />
+
+    <!-- Prefix to enhance Sage notebook contents -->
+    <!-- <initialism>AATA</initialism> -->
+
+    <macros>
+
+
+        %%%%%%%%%%%%%%%%%%%%% S-Box Macros for rSDES %%%%%%%%%%%%%%%%%%
+        \newcommand \sboxOne{
+            \mbox{
+                $
+                \begin{array}{|c|c|c|c|c|}\hline
+                        \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+                    00 \amp 01 \amp 11 \amp 10 \amp 11 \\       \hline
+                    01 \amp 11 \amp 10 \amp 01 \amp 00 \\       \hline
+                    10 \amp 00 \amp 10 \amp 01 \amp 11 \\       \hline
+                    11 \amp 11 \amp 01 \amp 11 \amp 10 \\       \hline
+                \end{array}
+                $
+            }
+        }
+
+        \newcommand \sboxTwo{
+            \mbox{
+                $
+                \begin{array}{|c|c|c|c|c|}\hline
+                        \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+                    00 \amp 00 \amp 01 \amp 10 \amp 11 \\       \hline
+                    01 \amp 10 \amp 00 \amp 01 \amp 11 \\       \hline
+                    10 \amp 11 \amp 00 \amp 01 \amp 00 \\       \hline
+                    11 \amp 10 \amp 01 \amp 10 \amp 11 \\       \hline
+                \end{array}
+                $
+            }
+        }
+
+    </macros>
+
+    <!-- tikz package and libraries for images -->
+    <!--
+    Extra packages, package options, and package settings for latex-based images.
+    Inserted in the preamble for LaTeX output.
+    Inserted in the preamble to each standalone latex-based image for HMTL SVG output.
+    -->
+    <latex-image-preamble>
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
+    </latex-image-preamble>
+
+</docinfo>

@@ -258,9 +258,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<statement> 
 				<p>
 					Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
-					<men>
-						n!=n(n-1)(n-2)\cdots 2 \cdot 1 
-					</men>
+					<men>n!=n(n-1)(n-2)\cdots 2 \cdot 1</men>
 					Note that for a variety of reasons <m>0!=1</m>.
 				</p>
 			</statement>
