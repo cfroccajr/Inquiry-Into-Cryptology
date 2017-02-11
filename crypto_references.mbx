@@ -39,7 +39,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>
 					De occulta philosophia.
 				</title>
-				<year>Coloniae, 1533</year>
+				<year>Coloniae, 1533</year>.
 				<note>
 					<p>
 						<url href="https://lccn.loc.gov/20007812">
@@ -64,6 +64,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</note>
 			</biblio>
 
+			<biblio type="raw" xml:id="cr_crypt_kahn">
+				David Kahn, 
+				<title>
+					The codebreakers: the story of secret writing.
+				</title> 
+				Scribner, New York, <year>1996</year>.
+			</biblio>
+
+			<biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
+				Charles J. Mendelsohn
+				<title>
+					Blaise de Vigenère and the <q>Chiffre Carré</q>.
+				</title>
+				Proceedings of the American Philosophical Society, Vol. 82, No. 2 (Mar. 22, 1940), pp. 103-129.
+				<note>
+					<p>Stable URL:
+						<url href="http://www.jstor.org/stable/985011">
+							http://www.jstor.org/stable/985011
+						</url>
+					</p>
+				</note>
+			</biblio>
+
 			<biblio type="raw" xml:id="cr_crypt_arabic">
 				M. Mrayati, Y. Meer Alam, and M.H. at Tayyan (eds.),
 				<title>
@@ -75,7 +98,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				KFCRIS and KACST, Riyadh,
 				<year>
 					2003
-				</year>
+				</year>.
 <!-- 				<note>
 					<p>
 						Avalable at: 
@@ -86,11 +109,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</note> -->
 			</biblio>
 
+			<biblio type="raw" xml:id="cr_crypt_singh">
+				Simon Singh,
+				<title> 
+					The code book: the science of secrecy from ancient egypt to quantum cryptography.
+				</title> 
+				Anchor Books, New York, <year>2000</year>.
+			</biblio>
+
 			<biblio type="raw" xml:id="cr_crypt_vigenere">
 				Blaise de Vigen&#x00E8;re,
 				<title>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire,</title>
 				Chez Abel L’Angelier, Paris, 
-				<year>1586</year>
+				<year>1586</year>.
 				<note>
 					<p>
 						<url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
@@ -108,7 +139,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Birkhäuser, Basel
 				<year>
 					2010
-				</year>
+				</year>.
 			</biblio>
 
 		</references>

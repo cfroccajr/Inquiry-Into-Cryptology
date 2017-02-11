@@ -17,7 +17,10 @@ Bibliography Refs:
 	<references xml:id="crypto_ref">
 	<biblio type="raw" xml:id="cr_crypt_agripa">
 	<biblio type="raw" xml:id="cr_crypt_falconer">
+	<biblio type="raw" xml:id="cr_crypt_kahn">
+	<biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
 	<biblio type="raw" xml:id="cr_crypt_arabic">
+	<biblio type="raw" xml:id="cr_crypt_singh">
 	<biblio type="raw" xml:id="cr_crypt_vigenere">
 	<biblio type="raw" xml:id="cr_crypt_alberti">
 
@@ -30,4 +33,4 @@ xmllint --xinclude --postvalid --noout --dtdvalid ~/applications/git/mathbook/sc
 xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Intro_Crypto_Main.mbx
 ~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.mbx
 
-
+xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx

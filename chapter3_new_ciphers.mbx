@@ -188,7 +188,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</exercise>
 		</subsection>
 
-		<subsection>
+		<subsection xml:id="vigenere_cipher">
 			<title>Vigen&#x00E8;re's Cipher</title>
 			<p>
 				In spite of the fact that Alberti invented the polyalphabetic cipher his is not the 
@@ -318,7 +318,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<subsection xml:id="pigpen_cipher">
 			<title> Pigpen Cipher </title>
 			<p>
-				The pigpen cipher ... <index><main>pigpen cipher</main></index>
+				<index><main>pigpen cipher</main></index>In his treatise on cryptology <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> 
+				Viegen&#x00E8;re describes a cipher that he found in Agripa's <em>De Occulta Philosophia</em>
+				<xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/> in chapter 30 which discusses traditional ciphers 
+				used by cabals.
 			</p>
 			<sidebyside widths="45% 45%" margins="0%">
 				<figure xml:id="figure_vigenere_pig">
@@ -334,12 +337,82 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		            </image>
 		        </figure>
 	        </sidebyside>
+	        <p>
+	        	For this cipher you begin by drawing four lines to form a three by three grid.  Next, you assign each character which 
+	        	you wish to encipher to one of the grid section.  Now when you wish to convey your message, the first letter assigned 
+	        	to a section is represented by the shape of the section, the second by the shape of the section with the addition of a 
+	        	single dot, and the third (if there is a third) by the shape of the section with two dots.
+	        	<fn>
+	        		What is described here is the cipher as Vigen&#x00E8;re illustrates it and is closer to the modern usage.  
+	        		Agripa appears to put superscript dots on all the letters.
+	        	</fn>
+	        </p>
+	        <p>
+	        	The pigpen cipher as we use it today has evolved and standardized to use the key in 
+	        	<xref ref="figure_modern_pig" autoname="yes"/> which includes all twenty six letters of modern English.  
+	        	It has the advantages that it is quick to learn and it is easy to recreate the cipher key. Also, for each 
+	        	shape you never add more than a single dot so that there is less opportunity for confusion.
+
+	        </p>
 	        <figure xml:id="figure_modern_pig">
 	        	<caption> Modern key for the Pigpen Cipher</caption>
 	            <image width="50%" source="images/Pigpen.png">
 	            	<description> Modern Pigpen Cipher</description>
 	            </image>
 	        </figure>
+	        <exercise>
+	        	<statement>
+	        		<p>
+	        			Use the key in <xref ref="figure_modern_pig" autoname="yes"/> to decipher the message 
+	        			below.
+	        		</p>
+<!-- 	        		"I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals." ― Winston S. Churchill -->
+					<figure>
+		        		<image>
+		        			<latex-image-code>
+		        				\begin{tikzpicture}
+		        					\draw (0,-0.5) \ppi ++(5pt,0pt) \ppa\ppm ++(5pt,0pt) \ppf\ppo\ppn\ppd ++(5pt,0pt) \ppo\ppf ++(5pt,0pt) \ppp\ppi\ppg\pps;
+		        					
+		        					\draw (0,-1) \ppd\ppo\ppg\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppu\ppp ++(5pt,0pt) \ppt\ppo; 
+		        					
+		        					\draw (0,-1.5) \ppu\pps \ppc\ppa\ppt\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppd\ppo\ppw\ppn;
+		        					
+		        					\draw (0,-2) \ppo\ppn ++(5pt,0pt) \ppu\pps ++(5pt,0pt) \ppp\ppi\ppg\pps ++(5pt,0pt) \ppt\ppr\ppe\ppa\ppt;
+		        					
+		        					\draw (0,-2.5) \ppu\pps ++(5pt,0pt) \ppa\pps ++(5pt,0pt) \ppe\ppq\ppu\ppa\ppl\pps;
+
+		        					\draw (0,-3) \ppw\ppi\ppn\pps\ppt\ppo\ppn ++(5pt,0pt) \pps ++(5pt,0pt) \ppc\pph\ppu\ppr\ppc\pph\ppi\ppl\ppl;
+		        				\end{tikzpicture}
+		        			</latex-image-code>
+		        		</image>
+		        	</figure>
+	        	</statement>
+	        </exercise>
+	        <exercise>
+	        	<statement>
+	        		<p>
+	        			Try to encipher the first few words of this next message using the modern variation on the pigpen cipher.
+	        		</p>
+	        		<p>
+	        			<q>Never wrestle with pigs. You both get dirty and the pig likes it.</q> ― George Bernard Shaw
+					</p>
+	        	</statement>
+	        </exercise>
+			<p>
+		        <ul>
+		        	<li>
+		        		Do you think that the pigpen cipher offers as much security as the Vigen&#x00E8;re cipher?  Why or why not?
+		        	</li>
+		        	<li>
+		        		In how many ways can you encipher each character using the pigpen cipher?  What type of cipher does that make 
+		        		this?
+		        	</li>
+		        	<li>
+		        		If you were confronted with a similar cipher which used symbols in place of letters how could you first 
+		        		rewrite your message so that you could then apply the cryptanalysis techniques we discussed previously?
+		        	</li>
+		        </ul>
+		    </p>
         </subsection>
 	</section>
 
@@ -363,6 +436,106 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
+		<subsection xml:id="vigenere_bio">
+			<title>Biography of Blaise de Vigen&#x00E8;re</title>
+			<p>
+				Insert biography when available
+			</p>
+		</subsection>
+		<subsection xml:id="autokey_cipher">
+			<title>The Autokey Cipher</title>
+			<p>
+				<index><main>autokey</main></index>
+				Description of Alberti's autokey from Kahn ... </p>
+			<p>
+				Below is a description of Vigen&#x00E8;re's more secure variations on an autokey cipher.
+				<fn>
+					This translation is by Charles Mendelsohn in 
+					<xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>, 
+					the original description by Vigen&#x00E8;re is in 
+					<xref ref="cr_crypt_vigenere" detail="pp. 99-100 (49-49b)"/>.
+				</fn> 
+				Read carefully through the passage above, you will need to 
+				use <xref ref="vigenere_auto_table" autoname="yes" /> 
+				in order to follow along.
+			</p>
+			<blockquote>
+				<p>
+					<q>
+						Each letter may be enciphered by the preceding letter, thus: with the . . . text. . . . 
+						Au nom de l'eternel and the key D, we say, a [the first letter of the text] from D 
+						[the key letter] gives x; u [the second letter of the text] from A [the first letter of 
+						the text, which now becomes the key] gives i; n from U, a; o from N, h . . . etc. The other 
+						method, which is more secret, is to encipher each letter of the clear text not by the 
+						letter [of that text] which precedes it, but by the letter by which the preceding letter is 
+						enciphered. Thus, a from D, which is the key, gives x; u from X 
+						[the first letter of the cipher text] h; n from H, e; o from E, e. . . .
+					</q> <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>
+				</p>
+			</blockquote>
+			<p>
+				Mendelsohn only translates a sample of Vigen&#x00E8;re's work, here is the rest of this
+				first encipherment:
+			</p>
+			<figure xml:id="vigenere_first_auto">
+				<caption>Vigen&#x00E8;re's first autokey method</caption>
+				<image width="80%" source="images/vigenere_autokey.png">
+					<description>This is a snippet from Vigenere's work showing his first autokey method.</description>
+				</image>
+			</figure>
+			<figure xml:id="vigenere_auto_table">
+				<caption>Table used for Vigen&#x00E8;re's Autokey Cipher</caption>
+				<image width="70%" source="images/vigenere_auto_table.png">
+					<description>This is the table that Vigen&#x00E8;re used for his Autokey Cipher</description>
+				</image>
+			</figure>
+			<p>
+				<ul>
+					<li>
+						Vigen&#x00E8;re uses a <em>D</em> as the key to encipher the first letter, in the first 
+						method described where does he get the subsequent letters for the key? 
+					</li>
+					<li>
+						At one point Vigen&#x00E8;re uses a key letter of <em>U</em> but there is no row 
+						<em>U</em> on his table, looking at how the <em>U</em> enciphers the <em>n</em>, what 
+						row is he using in place of <em>U</em>?
+					</li>
+					<li>
+						In the second method described he again starts with a key of <em>D</em> but then where 
+						does he get the rest of the key?
+					</li>
+					<li>
+						If you had to describe these methods in terms of the Vigen&#x00E8;re cipher we discussed in 
+						<xref ref="vigenere_cipher" autoname="yes"/>, where we discussed what is now called 
+						Vigen&#x00E8;re's Cipher, what could you say about the key used?
+					</li>
+					<li>
+						Vigen&#x00E8;re believes his second method is more secure, looking at the <em>key</em> for the second 
+						method why do you think he believes this?
+					</li>
+					<li>
+						If you compare the <em>key</em> for his second method to the cipher text he generates why is 
+						Vigen&#x00E8;re wrong about his second method being more secure?
+					</li>
+				</ul>
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						Check your understanding by enciphering the message <em>automatic confusion</em> using Vigen&#x00E8;re's 
+						first and second autokey methods, use <em>Q</em> for the initial key letter. 
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						The message <em>...</em> was enciphered using Vigen&#x00E8;re's first autokey method with 
+						and initial key letter of <em>C</em>, check your understanding of the method by deciphering it. 
+					</p>
+				</statement>
+			</exercise>
+		</subsection>
 	</section>
 
 

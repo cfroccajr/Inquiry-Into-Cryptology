@@ -77,7 +77,6 @@ def word_count_simple(
             <p>N-Gram Analysis Cell</p>
             <sage xml:id="sage_ngram_cell">
                 <input>
-
 @interact
 def ngram_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
