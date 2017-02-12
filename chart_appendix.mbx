@@ -141,7 +141,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_alberti">
 		<caption>Alberti's Cipher Disk or <q>Formula</q></caption>
-		<image width="60%" source="images/Alberti_cipher_disk.png" archive="svg png pdf">
+		<image width="60%" source="images/Alberti_cipher_disk.png" > <!-- archive="svg png pdf" -->
 			<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
 		</image>
 	</figure>
