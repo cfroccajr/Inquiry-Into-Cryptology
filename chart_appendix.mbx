@@ -39,6 +39,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
+<!-- 	<figure xml:id="appendix_figure_key_table">
+		<caption> Blank <em>plain text - CIPHER TEXT</em> table</caption>
+		<image width="70%" source="images/blank_cipher_chart.png" archive="png pdf">
+			<description>Blank plain text to cipher text cipher chart.</description> 
+		</image>
+	</figure> -->
 
 	<table xml:id="appendix_key_table">
 		<caption> Blank <em>plain text - CIPHER TEXT</em> table</caption>
@@ -135,7 +141,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_alberti">
 		<caption>Alberti's Cipher Disk or <q>Formula</q></caption>
-		<image width="60%" source="images/Alberti_cipher_disk.png">
+		<image width="60%" source="images/Alberti_cipher_disk.png" archive="svg png pdf">
 			<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
 		</image>
 	</figure>
@@ -149,7 +155,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_modern">
 		<caption>Modern Cipher Disk or <q>Formula</q></caption>
-		<image width="65%">
+		<image width="65%" archive="svg png pdf">
 			<description> This is an image of modern version of Alberti's Cipher Disk. </description>
 			<latex-image-code>
 			    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
@@ -244,7 +250,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_vigenere_table">
 		<caption>Vigen&#x00E8;re's Tableau</caption>
-		<image width="80%" source="images/vigenere_table.png">
+		<image width="80%" source="images/vigenere_table.png" archive="svg png pdf">
 			<description> This is a copy of Vigen&#x00E8;re's Table.</description>
 		</image>
 	</figure>
@@ -253,7 +259,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_Vigenee_table_new">
 		<caption>Updated Vigen&#x00E8;re Tableau</caption>
-		<image width="90%">
+		<image width="90%" archive="svg png pdf">
 			<description> Updated Vigen&#x00E8;re Tableau </description>
 			<latex-image-code>
 			    \begin{tikzpicture}
@@ -285,13 +291,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+	Vigen&#x00E8;re Autokey Tableau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<figure xml:id="appendix_figure_vigenere_auto_table">
+		<caption>Vigen&#x00E8;re's Autokey Tableau</caption>
+		<image width="80%" source="images/vigenere_auto_table.png" archive="svg png pdf">
+			<description> This is a copy of Vigen&#x00E8;re's Auotkey Table.</description>
+		</image>
+	</figure>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	Pigpen Key
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
 	<figure xml:id="appendix_figure_pigpen">
 		<caption>Pigpen Cipher Key</caption>
-		<image width="40%" source="images/Pigpen.png">
+		<image width="40%" source="images/Pigpen.png" archive="svg png pdf">
 			<description> Cipher Key for the Pigpen Cipher </description>
 		</image>
 	</figure>
@@ -306,7 +325,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<figure xml:id="appendix_figure_rSDES">
 		<caption>A Highly Simplified two step DES</caption>
-        <image width="100%">
+        <image width="100%" archive="svg png pdf">
         	<description> This is a highly simplified example of the Data Encryption Standard </description>
 	        <latex-image-code>
 	        	\scalebox{0.75}{
