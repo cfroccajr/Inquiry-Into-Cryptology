@@ -73,7 +73,7 @@ def word_count_simple(
     	</sage>
 
     	<p>String Count Cell</p>
-    	<sage xml:id="sage_word_cell">
+    	<sage xml:id="sage_string_cell">
         	<input>
 
 <!-- Python/Sage Function -->
@@ -131,9 +131,9 @@ def ngram_count_simple(
 <!-- Python/Sage Function -->
 @interact
 def _(k = input_grid(3,9, 
-    default = [['a','b','c','d','e','f','g','h','i'],
-               ['j','k','l','m','n','o','p','q','r'],
-               ['s','t','u','v','w','x','y','z',' ']],
+    default = [['A','B','C','D','E','F','G','H','I'],
+               ['J','K','L','M','N','O','P','Q','R'],
+               ['S','T','U','V','W','X','Y','Z',' ']],
               label='Cipher Alphabet:', type=str,width=1),
               m=input_box('sage', label="Message", height=3, width=50, type=str)):
     plainAlpha = 'abcdefghijklmnopqrstuvwxyz'
@@ -143,18 +143,25 @@ def _(k = input_grid(3,9,
             key=key+str(k[i][j])
             #print str(key)
     S = SubstitutionCryptosystem(AlphabeticStrings())
-    K=S.encoding(str(key))
+    K = S.encoding(str(key))
+    L = S.inverse_key(K)
     print "\nPlain alphabet is:",str(plainAlpha)
     print "Cipher alphabet is:", str(K)
     if len(str(K))!=26:
         print "\nYOUR CIPHER KEY IS THE WRONG LENGTH!!!\n"
     else:
-        e=S(K)
+        e = S(K)
+        d = S(L)
         clean_text = S.encoding(str(m.encode('ascii','replace')))
         cipher_text = e(clean_text)
-        print "Your substitution enciphering text is:\n"
+        plain_text = d(clean_text)
+        print "\nYour substitution enciphering text is:"
         for i in xrange(0,len(cipher_text),5):
             print cipher_text[i:i+5],
+            if (i+5)%50 == 0: print "\n"
+        print "\n\nYour substitution deciphering text is:"
+        for i in xrange(0,len(plain_text),5):
+            print str(plain_text[i:i+5]).lower(),
             if (i+5)%50 == 0: print "\n"
             </input>
             <output></output>
