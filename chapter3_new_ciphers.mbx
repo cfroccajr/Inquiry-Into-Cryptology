@@ -35,7 +35,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			In this chapter look at real improvements to cryptology:
 			<ul>
 				<li> Polyalphabetics (Alberti)</li>
-				<li> Autokey Cipher (Viegen&#x00E8;re)</li>
+				<li> Autokey Cipher (Vigen&#x00E8;re)</li>
 				<li> Keyed Columnar Ciphers and Codes (Falconer)</li>
 				<li> Thomas Jefferson's contributions???</li>
 			</ul>
@@ -52,7 +52,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 	<section xml:id="section_alberti">
-		<title> Alberit's Great Idea </title>
+		<title> Alberti's Great Idea </title>
 		<objectives>
 			<ul>
 				<li>
@@ -62,7 +62,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Alberti's Polyalphabetic
 				</li>
 				<li>
-					Modern/Viegen&#x00E8;re's Polyalphabetic
+					Modern/Vigen&#x00E8;re's Polyalphabetic
 				</li>
 			</ul>
 		</objectives>
@@ -193,8 +193,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				In spite of the fact that Alberti invented the polyalphabetic cipher his is not the 
 				name associated with it, instead that honor goes to the Frenchmen 
-				<em><alert>Blaise de Viegen&#x00E8;re</alert></em>
-				<index><main>Viegen&#x00E8;re, Blaise de</main></index>.
+				<em><alert>Blaise de Vigen&#x00E8;re</alert></em>
+				<index><main>Vigen&#x00E8;re, Blaise de</main></index>.
 				Vigen&#x00E8;re made a careful study of the cryptographers who had come before him and 
 				in 1586 he published the culmination of his work 
 				<em>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire</em><xref ref="cr_crypt_vigenere" />.  
@@ -202,7 +202,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				them.  Among these was his take on Alberti's polyalphabetic cipher.
 			</p>
 			<p>
-				One of the key advances that Viegen&#x00E8;re made was to replace the disk 
+				One of the key advances that Vigen&#x00E8;re made was to replace the disk 
 				with a table [<xref ref="figure_vigenere_table" autoname="yes"/>, 
 				<xref ref="cr_crypt_vigenere" detail="p. 102 (50b)"/>
 				<fn>In the page designation <q>p. 102 (50b)</q> the 102 is the page in the pdf document 
@@ -213,7 +213,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<sidebyside widths="40% 60%" margins="0%">
 				<paragraphs>
 					<p>
-						Suppose we wish to encipher <q>defend paris</q> using Viegen&#x00E8;re's cipher table.  
+						Suppose we wish to encipher <q>defend paris</q> using Vigen&#x00E8;re's cipher table.  
 						First we need to agree on a key word which will tell us which rows to utilize and 
 						in what order, let's use <q>HENRI</q>.  To encipher the <em>d</em> in the message 
 						we replace it with the letter in row <em>H</em> and column <em>d</em> (for this 
@@ -226,7 +226,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</paragraphs>
 				<figure xml:id="figure_vigenere_table">
 					<caption>
-						Viegen&#x00E8;re's Tableau [see also <xref ref="appendix_figure_vigenere_table" autoname="yes"/>]
+						Vigen&#x00E8;re's Tableau [see also <xref ref="appendix_figure_vigenere_table" autoname="yes"/>]
 					</caption>
 					<image width="100%" source="images/vigenere_table.png">
 						<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
@@ -277,7 +277,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</statement>
 			</exercise>
 			<p> 
-				Today when we use the Viegen&#x00E8;re Cipher we use a table 
+				Today when we use the Vigen&#x00E8;re Cipher we use a table 
 				<xref ref="appendix_figure_Vigenee_table_new" autoname="yes" /> 
 				which is technically simpler, but as we shall see in the next chapter it is not really significantly easier to crack.
 				You will play with the modern version in the exercises, but for now let's look at another way that cryptographers tried 
@@ -319,7 +319,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title> Pigpen Cipher </title>
 			<p>
 				<index><main>pigpen cipher</main></index>In his treatise on cryptology <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> 
-				Viegen&#x00E8;re describes a cipher that he found in Agripa's <em>De Occulta Philosophia</em>
+				Vigen&#x00E8;re describes a cipher that he found in Agripa's <em>De Occulta Philosophia</em>
 				<xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/> in chapter 30 which discusses traditional ciphers 
 				used by cabals.
 			</p>
@@ -429,10 +429,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<objectives>
 			<ul>
 				<li>
-					Viegen&#x00E8;re's Biography
+					Vigen&#x00E8;re's Biography
 				</li>
 				<li>
-					Viegen&#x00E8;re's Autokey Cipher
+					Vigen&#x00E8;re's Autokey Cipher
 				</li>
 			</ul>
 		</objectives>
