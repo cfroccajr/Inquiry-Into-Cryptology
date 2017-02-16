@@ -1,0 +1,17 @@
+{
+	"selector": "source.mbx",
+	"cmd": ["xsltproc", "--xinclude", "c:/mathbook/xsl/mathbook-html.xsl", "../src/$file_name"],
+	"working_dir": "$file_path/../tmp",
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+	
+
+	"variants": [
+		{"name": "Check DTD",
+			"cmd": ["xmllint", "--xinclude", "--postvalid", "--noout", "--dtdvalid", "c:/mathbook/schema/dtd/mathbook.dtd", "../src/$file_name"]
+		},
+
+		{"name": "Build Images",
+			"cmd": ["c:/mathbook/script/mbx", "-vv -c latex-image -f svg -d images", "../src/$file_name"]
+		}
+	]
+}
