@@ -9,6 +9,7 @@ Charts and tables appendix:
 	<figure xml:id="appendix_figure_modern"> %%% Modern Alberti Disc
 	<figure xml:id="appendix_figure_vigenere_table">
 	<figure xml:id="appendix_figure_Vigenee_table_new">
+	<table xml:id="appendix_trans_table">	
 	<figure xml:id="appendix_figure_rSDES">
 
 

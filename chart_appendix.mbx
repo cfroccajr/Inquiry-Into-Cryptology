@@ -316,6 +316,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	</figure>
 
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	Transposition Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+
+	<table xml:id="appendix_trans_table">
+		<caption> Falconer's Transposition Table</caption>
+		<tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+			<row>
+				<cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+			</row>
+			<row>
+				<cell>1</cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+			<row>
+				<cell>2</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+			<row>
+				<cell>3</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+			<row>
+				<cell>4</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+			<row>
+				<cell>5</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+			<row>
+				<cell>6</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+			</row>
+		</tabular>
+	</table>
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -399,8 +433,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        </latex-image-code>
 	    </image>
 	</figure>
-
-
 
 
 </appendix>

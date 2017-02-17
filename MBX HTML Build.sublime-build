@@ -1,17 +1,28 @@
 {
 	"selector": "source.mbx",
-	"cmd": ["xsltproc", "--xinclude", "c:/mathbook/xsl/mathbook-html.xsl", "../src/$file_name"],
+	"cmd": ["xsltproc", "--xinclude", "~/applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$file_name"],
 	"working_dir": "$file_path/../tmp",
 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 	
 
 	"variants": [
 		{"name": "Check DTD",
-			"cmd": ["xmllint", "--xinclude", "--postvalid", "--noout", "--dtdvalid", "c:/mathbook/schema/dtd/mathbook.dtd", "../src/$file_name"]
+			"cmd": ["xmllint", "--xinclude", "--postvalid", "--noout", "--dtdvalid", "~/applications/git/mathbook/schema/dtd/mathbook.dtd", "../src/$file_name"]
 		},
 
+		{"name": "Build TeX File",
+			"cmd": ["xsltproc", "--xinclude -stringparam whitespace flexible", "~/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$file_name"]}
+
 		{"name": "Build Images",
-			"cmd": ["c:/mathbook/script/mbx", "-vv -c latex-image -f svg -d images", "../src/$file_name"]
+			"cmd": ["~/applications/git/mathbook/script/mbx", "-vv -c latex-image -f svg -d images", "../src/$file_name"]
 		}
 	]
 }
+
+
+
+xmllint --xinclude --postvalid --noout --dtdvalid ~/applications/git/mathbook/schema/dtd/mathbook.dtd ../src/Intro_Crypto_Main.mbx
+xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Intro_Crypto_Main.mbx
+~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.mbx
+
+xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx

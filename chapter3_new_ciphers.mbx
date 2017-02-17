@@ -233,33 +233,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</image>
 				</figure>
 			</sidebyside>
-			<exercise>
-				<statement>
-					<p>
+			<p>
+				<ul>
+					<li>
 						Above, we described how to get the first three letters of the cipher text <em>GEORRG PHGOX</em>, 
 						how do we get the fourth and fifth letters? How are we deciding which columns and rows to use?
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Be sure to compare our choices of row and column for the first three letters to the key <q>HENRI</q> 
-						and the message <q>defend paris</q>.
-					</p>
-				</hint>
-			</exercise>
-						<exercise>
-				<statement>
-					<p>
+					</li>
+					<li>
 						What do we do after we have enciphered the first five characters?  How did we get 
 						<em>G PHGO</em> for the next five characters?
-					</p>
-				</statement>
-				<hint>
-					<p>
-						What rows must we use in order to get <em>G</em> from <em>d</em> or <em>H</em> from <em>a</em>?
-					</p>
-				</hint>
-			</exercise>
+					</li>
+					<li>Looking at what we just enciphered how was the first plain text <em>e</em> enciphered?  What about the second one?</li>
+					<li>Now, looking at the cipher text what does the first <em>R</em> represent?  What about the second <em>R</em>?</li>
+				</ul>
+			</p>
 			<exercise>
 				<statement>
 					<p>
@@ -530,8 +517,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<exercise>
 				<statement>
 					<p>
-						The message <em>...</em> was enciphered using Vigen&#x00E8;re's first autokey method with 
+						The message <c>HFABH CXNXM GFMRR MDDMR</c> was enciphered using Vigen&#x00E8;re's first autokey method with 
 						and initial key letter of <em>C</em>, check your understanding of the method by deciphering it. 
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						The message <c>MPTMG POHGS OOHLR RXUGE</c> was enciphered using Vigen&#x00E8;re's second autokey method with 
+						and initial key letter of <em>Q</em>, check your understanding of the method by deciphering it. 
 					</p>
 				</statement>
 			</exercise>
@@ -554,10 +549,222 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Falconer's Biography
 				</li>
 				<li>
+					Falconer's Discussion of Permutations
+				</li>
+				<li>
 					Falconer's Columnar Transposition
 				</li>
 			</ul>
 		</objectives>
+		<subsection xml:id="falconer_bio">
+			<title>John Falconer's Biography</title>
+			<p>
+				Insert biography here when ready
+			</p>
+		</subsection>
+		<subsection xml:id="falconer_permutations">
+			<title>Key Permutations</title>
+			<p>
+				Insert permutations here when ready
+			</p>
+		</subsection>
+		<subsection xml:id="falconer_transposition">
+			<title>Transposition</title>
+			<blockquote>
+				<p><em>A New Method How to Write Secretly by the Art of Combinations</em></p>
+				<p>
+					<ol>
+						<li>
+							To write by the method proposed, a certain number of letters are combined to lock and unlock the epistle.  
+							The differences of writing down the positions [of the letters] ... may be varied to a vast number; ...
+						</li>
+						<li>
+							The order of rows is agreed upon in parting.
+						</li>
+						<li>
+							The number of letters combined, which is the key, may be expressed in the epistle by some mathematical 
+							figure, as <m>\scriptsize\triangle</m> for three letters, <m>\Box</m> for 4, etc. or by some private mark.
+						</li>
+						<li>
+							They [the individuals communicating] frame a rectangular table of as many columns as there are letters combined.
+						</li>
+						<li>
+							The letters so combined are placed in their natural order along the top of the table.
+						</li>
+						<li>
+							Having determined of how many lines the table shall consist, the order of combinations agreed upon is set down in a row 
+							in the first column towards the left hand; as you may see in the following table.
+						</li>
+						<li>
+							The table being thus prepared for writing, they observe the order of the combinations, and write according to its direction.
+						</li>
+						<li>
+							When they have placed one letter of every column of all the lines, they begin a new, and so go on until the writing be finished.
+						</li>
+						<li>
+							And lastly, they take the letters out of the table according to their partitions, as so many barbarous words, upon paper apart and send it to the confidant. 
+							- John Falconer <xref ref="cr_crypt_falconer" autoname="yes" detail="pp. 68-72 (40-43)"/>
+						</li>
+					</ol>
+				</p>
+			</blockquote>
+			<p>
+				Let's see if you can follow Falconer's directions.  Below I set up a table according to his description in steps (5) and (6) and used it to encipher: 
+			</p>
+			<blockquote>
+				<p>
+					<em><q>the quick brown fox jumped over the lazy sleeping dog.</q></em>
+				</p>
+			</blockquote>
+			<table xml:id="falconer_trans_table_1">
+				<caption> Falconer's Transposition Table Initial Setup</caption>
+				<tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+					<row>
+						<cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+					</row>
+					<row>
+						<cell>1</cell><cell>CBA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+					</row>
+					<row>
+						<cell>2</cell><cell>CAB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+					</row>
+					<row>
+						<cell>3</cell><cell>ACB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+					</row>
+					<row>
+						<cell>4</cell><cell>BCA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+					</row>
+					<row>
+						<cell>5</cell><cell>BAC</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+					</row>
+				</tabular>
+			</table>
+			<table xml:id="falconer_trans_table_2">
+				<caption> Falconer's Transposition Table First Pass</caption>
+				<tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+					<row>
+						<cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+					</row>
+					<row>
+						<cell>1</cell><cell>CBA</cell><cell>E</cell><cell>H</cell><cell>T</cell>
+					</row>
+					<row>
+						<cell>2</cell><cell>CAB</cell><cell>U</cell><cell>I</cell><cell>Q</cell>
+					</row>
+					<row>
+						<cell>3</cell><cell>ACB</cell><cell>C</cell><cell>B</cell><cell>K</cell>
+					</row>
+					<row>
+						<cell>4</cell><cell>BCA</cell><cell>W</cell><cell>R</cell><cell>O</cell>
+					</row>
+					<row>
+						<cell>5</cell><cell>BAC</cell><cell><m>\phantom{W}</m>F<m>\phantom{W}</m></cell>
+						<cell><m>\phantom{W}</m>N<m>\phantom{W}</m></cell>
+						<cell><m>\phantom{W}</m>O<m>\phantom{W}</m></cell>
+					</row>
+				</tabular>
+			</table>
+			<table xml:id="falconer_trans_table_3">
+				<caption> Falconer's Transposition Table Filled Table</caption>
+				<tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+					<row>
+						<cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+					</row>
+					<row>
+						<cell>1</cell><cell>CBA</cell><cell>EUS</cell><cell>HJY</cell><cell>TXZ</cell>
+					</row>
+					<row>
+						<cell>2</cell><cell>CAB</cell><cell>UPE</cell><cell>ISE</cell><cell>QML</cell>
+					</row>
+					<row>
+						<cell>3</cell><cell>ACB</cell><cell>COP</cell><cell>BEN</cell><cell>KVI</cell>
+					</row>
+					<row>
+						<cell>4</cell><cell>BCA</cell><cell>WHO</cell><cell>RRG</cell><cell>OTD</cell>
+					</row>
+					<row>
+						<cell>5</cell><cell>BAC</cell><cell><m>\phantom{I}</m>FL<m>\phantom{I}</m></cell>
+						<cell><m>\phantom{I}</m>NEG<m>\phantom{I}</m></cell>
+						<cell><m>\phantom{I}</m>OA<m>\phantom{I}</m></cell>
+					</row>
+				</tabular>
+			</table>
+			<paragraphs>
+				<p>Final Message:</p>
+				<blockquote>
+					<p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
+				</blockquote>
+			</paragraphs>
+			<p>
+				<ul>
+					<li>
+						Looking at <xref ref="falconer_trans_table_2" autoname="yes"/> why did the <em>the</em> from the beginning of the sentence 
+						get written backwards? (Be sure to look carefully at the letters to the left of the row when answering.)
+					</li>
+					<li> 
+						In the second row of the same table why is the <em>qui</em> form <em>quick</em> written in the order it is written? 
+						(Again, be sure to look carefully at the letters to the left of the row when answering.)
+					</li>
+					<li>
+						In the last row we put down the <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the 
+						order they are in and looking at the next table (<xref ref="falconer_trans_table_3" autoname="yes" />) where do we put 
+						the <em>x</em> from <em>fox</em> and why?
+					</li>
+					<li>
+						How do we finish off writing the rest of the message into the boxes in the table?
+					</li>
+					<li>
+						Finally, looking at the final message why is there a little triangle at the start of the message and why 
+						were the blocks of letters written in the order they were written?
+					</li>
+					<li>
+						In what ways is this different from other ciphers we have looked at?  (Hint: in this cipher what does
+						cipher text <em>E</em> represent, or cipher text <em>F</em>?)
+					</li>
+				</ul>
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						Decipher the following message which used the same key as the one represented in 
+						<xref ref="falconer_trans_table_1" autoname="yes"/>:
+					</p>
+					<blockquote>
+						<p>
+							<m>\scriptsize\triangle</m> WU OO NR MD A IN L T L N U R D E A
+						</p>
+					</blockquote>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Encipher the following message using the same key as the one represented in 
+						<xref ref="falconer_trans_table_1" autoname="yes"/>:
+					</p>
+					<blockquote>
+						<p>
+							<q>As long as the world is turning and spinning, we're gonna be dizzy and we're gonna make 
+							mistakes.</q> - Mel Brooks
+						</p>
+					</blockquote>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Encipher the following message using the three letters as before, but with the row keys 
+						<c>ACB - CAB - BAC - ABC</c>, <xref ref="appendix_trans_table" autoname="yes"/> is a blank table you 
+						can copy if you need to:
+					</p>
+					<blockquote>
+						<p>
+							<q>A person who never made a mistake never tried anything new.</q> - Albert Einstein
+						</p>
+					</blockquote>
+				</statement>
+			</exercise>
+		</subsection>
 	</section>
 
 
