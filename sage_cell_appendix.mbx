@@ -130,22 +130,11 @@ def ngram_count_simple(
 
 <!-- Python/Sage Function -->
 @interact
-def _(k = input_grid(3,9, 
-               default = 
-               [['C','I','P','H','E','R','A','B','D'],
-               ['Q','O','N','M','L','K','J','G','F'],
-               ['S','T','U','V','W','X','Y','Z',' ']],
-              label='Cipher Alphabet:', type=str,width=1),
-              mode=selector(['encipher','decipher'], buttons=True),
-              m=input_box('sage', label="Message", height=3, width=50, type=str)):
-    key=""
-    for i in range(0,3):
-        for j in range(0,9):
-            letter = str(k[i][j]).upper()
-            if letter not in key:
-                key += letter
+def _(k = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher Alphabet:', type=str,width=50,height=1),
+      mode=selector(['encipher','decipher'], buttons=True),
+      m=input_box('sage', label="Message", height=3, width=50, type=str)):
     S = SubstitutionCryptosystem(AlphabeticStrings())
-    K = S.encoding(str(key))
+    K = S.encoding(str(k.encode('ascii','replace')))
     print "\nYour Plain alphabet is: abcdefghijklmnopqrstuvwxyz"
     print "Your Cipher alphabet is:", str(K)
     if len(str(K))!=26:
@@ -156,7 +145,11 @@ def _(k = input_grid(3,9,
             e = S(K)
             out_text = str(e(clean_text)).upper()
         else:
-            L = S.inverse_key(K)
+            try:
+                L = S.inverse_key(K)
+            except:
+                print "\n Could not generate valid inverse key.\n Using enciphering key instead. \n"
+                L = K
             e = S(L)
             out_text = str(e(clean_text)).lower()
         print "\nYour substitution output text is:\n"
