@@ -613,7 +613,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 			<blockquote>
 				<p>
-					<em><q>the quick brown fox jumped over the lazy sleeping dog.</q></em>
+					<em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
 				</p>
 			</blockquote>
 			<table xml:id="falconer_trans_table_1">
