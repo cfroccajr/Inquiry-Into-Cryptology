@@ -255,7 +255,7 @@ def falconer(message=input_box("The quick brown fox jumps over the lazy sleeping
             except:
                 pass
     out_message = ""
-    print len(text)
+    print "Chracters in text: ",len(text)
     print "Cipher Table:"
     for k in range(len(key)):
         print "\t",str(key[k][0:3]),":"," ".join(message_table[k])
