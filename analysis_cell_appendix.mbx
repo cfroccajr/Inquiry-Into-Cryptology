@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+
+<appendix xml:id="sage_analysis_cells">
+	<title>Sage Cell Analysis Utilities</title>
+
+    	<p>Word Count Cell</p>
+    	<sage xml:id="sage_word_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+import re
+@interact
+def word_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str)):
+    message = re.sub('[^A-Z]',' ',str(text.encode('ascii','replace')).upper())+" "
+    count = {}
+    words = 0
+    c=""
+    for l in message:
+        if l==" ":
+            if c in count:
+                words += 1 
+                count[c] += 1
+            elif c!="": 
+                count[c] = 1
+                words += 1
+            c=""
+        else: c=c+l
+    print "The total number of words in your message is {}".format(words)
+    print "The number of distinct words in your message is {}".format(len(count))
+    count = sorted([(value, key) for key, value in count.items()])
+    print "Word\t\tCount\t\tPercent"
+    count.reverse()
+    for c in count[0:min(30,len(count))]:
+        if len(c[1])>6: 
+            tab="\t"
+        else:
+            tab="\t\t"
+        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/words*100.0)
+    		</input>
+    		<output></output>
+    	</sage>
+
+    	<p>String Count Cell</p>
+    	<sage xml:id="sage_string_cell">
+        	<input>
+
+<!-- Python/Sage Function -->
+import re
+@interact
+def word_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),
+                    key=input_box('sage', label="String to search", height=1, width=20, type=str)):
+    message = re.sub('[^A-Z]','',str(text.encode('ascii','replace')).upper())+" "
+    count = 0
+    K = re.sub('[^A-Z]',' ',str(key.encode('ascii','replace')).upper())
+    N = len(K)
+    c=""
+    for i in range(len(message)-N+1):
+        c = message[i:i+N]
+        if c == K: count += 1
+    print "Your string appears ",str(count)," times."
+    		</input>
+    		<output></output>
+    	</sage>    
+    
+    
+            <p>N-Gram Analysis Cell</p>
+            <sage xml:id="sage_ngram_cell">
+                <input>
+@interact
+def ngram_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),N=[1..6]):
+    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace')))
+    count = {}
+    for i in range(len(message)-N+1):
+        c = message[i:i+N]
+        if c in count: count[c] += 1
+        else: count[c] = 1
+    print "The length of your message is {}".format(len(message))
+    count = sorted([(value, key) for key, value in count.items()])
+    print "N-Gram\t\tCount\t\tPercent"
+    count.reverse()
+    for c in count[0:min(30,len(count))]:
+        if len(c[1])>6: 
+            tab="\t"
+        else:
+            tab="\t\t"
+        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(message)*100.0)
+                </input>
+                <output></output>
+            </sage>
+
+
+            <p>Subset Analysis Cell</p>
+            <sage xml:id="sage_subset_cell">
+                <input>
+
+@interact
+def subset_count(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),
+                    Subsets=[1..10]):
+    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace')))
+    S = Subsets
+    sets = [""]*S
+    for i in range(0,len(message)):
+        sets[i%S] += str(message[i])
+    for i in range(S):
+        tmp_message = sets[i]
+        count = {}
+        for i in range(len(tmp_message)):
+            c = tmp_message[i:i+1]
+            if c in count: count[c] += 1
+            else: count[c] = 1
+        print "The length of this subset is {}".format(len(tmp_message))
+        count = sorted([(value, key) for key, value in count.items()])
+        print "Character\tCount\t\tPercent"
+        count.reverse()
+        IC = 0
+        for c in count[0:min(30,len(count))]:
+            if len(c[1])>6: 
+                tab="\t"
+            else:
+                tab="\t\t"
+            print c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(tmp_message)*100.0)
+            IC += c[0]*(c[0]-1.0)/len(tmp_message)^2
+        print "And, the index of coincidence for this set is %.4G\n" %  (IC)
+                </input>
+                <output></output>
+            </sage>
+
+
+
+
+
+</appendix>
+

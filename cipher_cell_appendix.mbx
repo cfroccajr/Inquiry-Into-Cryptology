@@ -29,137 +29,59 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-<appendix xml:id="sage_cells">
-	<title>Sage Cell Utilities</title>
+<appendix xml:id="sage_cipher_cells">
+	<title>Sage Cell Cipher Utilities</title>
 
 
-    	<p>Word Count Cell</p>
-    	<sage xml:id="sage_word_cell">
-        	<input>
 
-<!-- Python/Sage Function -->
-import re
-@interact
-def word_count_simple(
-                    text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=50, type=str)):
-    message = re.sub('[^A-Z]',' ',str(text.encode('ascii','replace')).upper())+" "
-    count = {}
-    words = 0
-    c=""
-    for l in message:
-        if l==" ":
-            if c in count:
-                words += 1 
-                count[c] += 1
-            elif c!="": 
-                count[c] = 1
-                words += 1
-            c=""
-        else: c=c+l
-    print "The total number of words in your message is {}".format(words)
-    print "The number of distinct words in your message is {}".format(len(count))
-    count = sorted([(value, key) for key, value in count.items()])
-    print "Word\t\tCount\t\tPercent"
-    count.reverse()
-    for c in count[0:min(30,len(count))]:
-        if len(c[1])>6: 
-            tab="\t"
-        else:
-            tab="\t\t"
-        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/words*100.0)
-    		</input>
-    		<output></output>
-    	</sage>
-
-    	<p>String Count Cell</p>
-    	<sage xml:id="sage_string_cell">
-        	<input>
-
-<!-- Python/Sage Function -->
-import re
-@interact
-def word_count_simple(
-                    text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=50, type=str),
-                    key=input_box('sage', label="String to search", height=1, width=20, type=str)):
-    message = re.sub('[^A-Z]','',str(text.encode('ascii','replace')).upper())+" "
-    count = 0
-    K = re.sub('[^A-Z]',' ',str(key.encode('ascii','replace')).upper())
-    N = len(K)
-    c=""
-    for i in range(len(message)-N+1):
-        c = message[i:i+N]
-        if c == K: count += 1
-    print "Your string appears ",str(count)," times."
-    		</input>
-    		<output></output>
-    	</sage>    
-    
-    
-            <p>N-Gram Analysis Cell</p>
-            <sage xml:id="sage_ngram_cell">
-                <input>
-@interact
-def ngram_count_simple(
-                    text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=50, type=str),N=[1..6]):
-    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace')))
-    count = {}
-    for i in range(len(message)-N+1):
-        c = message[i:i+N]
-        if c in count: count[c] += 1
-        else: count[c] = 1
-    print "The length of your message is {}".format(len(message))
-    count = sorted([(value, key) for key, value in count.items()])
-    print "N-Gram\t\tCount\t\tPercent"
-    count.reverse()
-    for c in count[0:min(30,len(count))]:
-        if len(c[1])>6: 
-            tab="\t"
-        else:
-            tab="\t\t"
-        print c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(message)*100.0)
-                </input>
-                <output></output>
-            </sage>
 
     	<p>Substitution Cipher Cell</p>
     	<sage xml:id="sage_sub_cell">
         	<input>
 
 <!-- Python/Sage Function -->
+import textwrap
 @interact
-def _(k = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher Alphabet:', type=str,width=50,height=1),
-      mode=selector(['encipher','decipher'], buttons=True),
-      m=input_box('sage', label="Message", height=3, width=50, type=str)):
-    S = SubstitutionCryptosystem(AlphabeticStrings())
-    K = S.encoding(str(k.encode('ascii','replace')))
-    print "\nYour Plain alphabet is: abcdefghijklmnopqrstuvwxyz"
-    print "Your Cipher alphabet is:", str(K)
-    if len(str(K))!=26:
-        print "\nYOUR CIPHER KEY IS THE WRONG LENGTH!!!\n"
+def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=50,height=1),
+            c = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher', type=str,width=50,height=1),
+            shift=[0..25],
+            mode=selector(['encipher','decipher'], buttons=True),
+            spaces = selector(['yes','no'], buttons=True),
+            m=input_box('sage', label="Message", height=3, width=50, type=str)):
+    P = str(p.encode('ascii','replace')).upper()
+    C = str(c.encode('ascii','replace')).upper()
+    C = C[shift:]+C[:shift]
+    Message = str(m.encode('ascii','replace')).upper()
+    print "\nYour Plain alphabet is:  ", str(P).lower()
+    print "Your Cipher alphabet is: ", str(C)
+    if len(C)!=len(P):
+        print "Key lengths do not match."
     else:
-        clean_text = S.encoding(str(m.encode('ascii','replace')))
         if mode == 'encipher':
-            e = S(K)
-            out_text = str(e(clean_text)).upper()
+            inText = P
+            outText = C
         else:
+            inText = C.lower()
+            outText = P.lower()
+            Message = Message.lower()
+        output = ""
+        for char in Message:
             try:
-                L = S.inverse_key(K)
+                position = inText.index(char)
+                output += outText[position]
             except:
-                print "\n Could not generate valid inverse key.\n Using enciphering key instead. \n"
-                L = K
-            e = S(L)
-            out_text = str(e(clean_text)).lower()
-        print "\nYour substitution output text is:\n"
-        for i in xrange(0,len(out_text),5):
-            print out_text[i:i+5],
-            if (i+5)%50 == 0: print "\n"
+                if spaces=='yes': output += char
+                else: pass
+        print "\nHere is your output:\n"
+        if spaces == 'yes':
+            print textwrap.fill(output, 50)
+        else:
+            for i in xrange(0,len(output),5):
+                print output[i:i+5],
+                if (i+5)%50 == 0: print "\n"
             </input>
             <output></output>
         </sage>
-
 
 
     	<p>Shift Cipher Cell</p>
@@ -293,37 +215,44 @@ def _(m=input_box('sage', label="Enter your message", height=3,
     		<output></output>
     	</sage>
 
-
-<!-- @interact
-def ngram_count_simple(
-                    text=input_box('Place the text that you would like to analyze here!!!', 
-                    label="Enter your message", height=3, width=50, type=str),
-                    N=[1..6],
-                    S=[1..10]):
-    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace')))
-    sets = [""]*S
-    print str(sets)
-    for i in range(0,len(message)):
-        sets[i%S] += str(message[i])
-    print str(sets)
-    for i in range(S):
-        tmp_message = sets[i]
-        count = {}
-        for i in range(len(tmp_message)-N+1):
-            c = tmp_message[i:i+N]
-            if c in count: count[c] += 1
-            else: count[c] = 1
-        print "The length of your message is {}".format(len(tmp_message))
-        count = sorted([(value, key) for key, value in count.items()])
-        print "N-Gram\t\tCount\t\tPercent"
-        count.reverse()
-        for c in count[0:min(30,len(count))]:
-            if len(c[1])>6: 
-                tab="\t"
-            else:
-                tab="\t\t"
-            print c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(tmp_message)*100.0)
--->
-
 </appendix>
+
+
+<!-- Python/Sage Function -->
+<!--
+@interact
+def _(k = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher Alphabet:', type=str,width=50,height=1),
+            mode=selector(['encipher','decipher'], buttons=True),
+            m=input_box('sage', label="Message", height=3, width=50, type=str)):
+    S = SubstitutionCryptosystem(AlphabeticStrings())
+    K = S.encoding(str(k.encode('ascii','replace')))
+    print "\nYour Plain alphabet is: abcdefghijklmnopqrstuvwxyz"
+    print "Your Cipher alphabet is:", str(K)
+    if len(str(K))!=26:
+        print "\nYOUR CIPHER KEY IS THE WRONG LENGTH!!!\n"
+    else:
+        clean_text = S.encoding(str(m.encode('ascii','replace')))
+        if mode == 'encipher':
+            e = S(K)
+            out_text = str(e(clean_text)).upper()
+        else:
+            try:
+                L = S.inverse_key(K)
+            except:
+                print "\n Could not generate valid inverse key.\n Using enciphering key instead. \n"
+                L = K
+            e = S(L)
+            out_text = str(e(clean_text)).lower()
+        print "\nYour substitution output text is:\n"
+        for i in xrange(0,len(out_text),5):
+            print out_text[i:i+5],
+            if (i+5)%50 == 0: print "\n"
+            </input>
+            <output></output>
+        </sage>
+
+        <p>Substitution Cipher Alternate</p>
+        <sage xml:id="sage_sub_alt">
+            <input>
+-->
 

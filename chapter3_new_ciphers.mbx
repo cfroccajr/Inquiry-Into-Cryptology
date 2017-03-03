@@ -768,8 +768,159 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	</section>
 
 
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+		Thomas Jefferson's Wheel Cipher 
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<section xml:id="section_jefferson_cipher">
+		<title> Presidential Secrets </title>
+		<objectives>
+			<ul>
+				<li>
+					Jefferson's Biography
+				</li>
+				<li>
+					Jefferson's Wheel Cipher
+				</li>
+			</ul>
+		</objectives>
+		<!--
+		<url href="https://www.monticello.org/site/research-and-collections/wheel-cipher">
+				Leon Battista Alberti</url>
+		-->
+		<subsection>
+			<title>Thomas Jefferson's Biography</title>
+			<p>
+				A brief biography of
+				<url href="https://www.monticello.org/site/jefferson/thomas-jefferson-brief-biography">
+				Thomas Jefferson</url>.
+			</p>
+		</subsection>
+		<subsection>
+			<title>Thomas Jefferson's Wheel Cipher</title>
+			<p>
+				A brief description of Thomas Jefferson's 
+				<url href="https://www.monticello.org/site/research-and-collections/wheel-cipher">
+				wheel cipher</url>.
+			</p>
+		</subsection>		
+	</section>
 
 
+	<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+		Exercises
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+	<exercises xml:id="poly_exercises">
+		<title> How Mixed Up do You Feel?</title>
+		<exercise>
+			<statement>
+				<p>
+					Alberti practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Alberti practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Alberti practice deciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Pigpen practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Pigpen practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Pigpen practice deciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Autokey practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Autokey practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Autokey practice deciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Falconer practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Falconer practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Falconer practice deciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Jefferson practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Jefferson practice enciphering
+				</p>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Jefferson practice deciphering
+				</p>
+			</statement>
+		</exercise>
+	</exercises>
 
 
 </chapter>

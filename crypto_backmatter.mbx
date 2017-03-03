@@ -34,7 +34,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<!-- Sage Cell Appendix -->
 
-		<xi:include href="sage_cell_appendix.mbx" />
+		<xi:include href="analysis_cell_appendix.mbx" />
+
+		<xi:include href="cipher_cell_appendix.mbx" />
 
 		<xi:include href="chart_appendix.mbx" />
 
