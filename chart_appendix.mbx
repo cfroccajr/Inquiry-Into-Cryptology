@@ -257,7 +257,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-	<figure xml:id="appendix_figure_Vigenere_table_new">
+	<figure xml:id="appendix_figure_vigenere_new">
 		<caption>Updated Vigen&#x00E8;re Tableau</caption>
 		<image width="90%" archive="svg png pdf">
 			<description> Updated Vigen&#x00E8;re Tableau </description>

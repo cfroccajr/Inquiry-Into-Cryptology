@@ -863,7 +863,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p><em><alert>Vigenere Cipher Cell:</alert></em></p>
 				<sage copy="sage_vigenere_cell" />
 			</introduction>
-		</exercisegroup>
 			<exercise>
 				<statement>
 					<p>
@@ -901,12 +900,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						Use the modern Vigenere Square 
 						<xref ref="appendix_figure_vigenere_new" autoname="yes"/>
 						to decipher the following message which was enciphered using a key word of <em>STATE</em>.
+						<!-- There are no secrets to success. It is the result of preparation, hard work, and learning from failure. Colin Powell-->
+					
 					</p>
-						<pre>
-							LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
-							XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
-							JXCHP AGPHA WEL
-						</pre>
+							<pre>
+								LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
+								XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
+								JXCHP AGPHA WEL
+							</pre>
 				</statement>
 			</exercise>
 			<exercise>
@@ -947,13 +948,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						Use the modern Vigenere Square 
 						<xref ref="appendix_figure_vigenere_new" autoname="yes"/>
 						to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
+						<!-- Donuts. Is there anything they can't do? Matt Groening -->
 					</p>
-						<pre>
-							ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
-						</pre>
+					<pre>
+						ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
+					</pre>
 				</statement>
 			</exercise>
-<!-- 			<exercise>
+<!--			<exercise>
 				<statement>
 					<p>
 						Jefferson practice enciphering
@@ -973,7 +975,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						Jefferson practice deciphering
 					</p>
 				</statement>
-			</exercise> -->
+			</exercise>
+-->
+		</exercisegroup>
 		<exercisegroup>
 			<introduction>
 				<p>
@@ -983,7 +987,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>Falconer's Tabular Cipher:</p>
 				<sage copy="sage_falconer_cell" />
 			</introduction>
-		</exercisegroup>
 			<exercise>
 				<statement>
 					<p>
@@ -1023,12 +1026,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						a key of <em>{ABC,BCA,BCA,ACB}</em>.
 						<xref ref="appendix_trans_table" autoname='yes'/>
 					</p>
-						<pre>
-							ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI	
-							ES IHNLH TLBEK EOTWS HDUSE
-						</pre>
+					<pre>
+						ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI	
+						ES IHNLH TLBEK EOTWS HDUSE
+					</pre>
 				</statement>
 			</exercise>
+		</exercisegroup>
 	</exercises>
 
 
