@@ -63,7 +63,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</ul>
 		</objectives>
 		<subsection>
-			<title>Prime Factors</title>
+			<title>The Power of Prime Factors</title>
 			<p>
 				The strength of Falconer's keyed columnar  transposition cipher is the almost astronomical 
 				number of combinations of keys that can be used.  As we have seen previously with just three 
@@ -270,7 +270,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</tabular>
 					</table>						
 				</sidebyside>
-				<sidebyside>
+				<sidebyside valign="bottom">
 					<table>
 						<tabular left="minor" right="minor" halign="left">
 							<row>
@@ -291,7 +291,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							</row>					
 						</tabular>
 					</table>
-					<p><xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
+					<p>- John Falconer <xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
 				</sidebyside>				
 			</sbsgroup>
 			<p>
@@ -361,6 +361,61 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</p>
 				</hint>
 			</exercise>
+		</subsection>
+		<subsection>
+			<title>But Really There's an Easier Way (sort of)</title>
+			<p>
+				After walking us through a careful exposition of how to find all the factors of a number and 
+				encouraging us to use this in order to find out the number of letters used for our key, Falconer 
+				lets us know that there is effectively an easier way to attack his own cipher.
+			</p>
+			<blockquote>
+				<p>
+					<q>
+						or rather for dispatch, take out the seeming words, and write them down in [columns] beginning 
+						at the first, and then proceed to the second, third, fourth, fifth, etc., until you have gone 
+						through them 
+					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="p.47 (75)" /> 
+				</p>
+			</blockquote>
+			<p>
+				Let's follow Falconer's advice using the message we used when we introduced his cipher in 
+				<xref ref="section_falconer_cipher" autoname="yes" />:
+			</p>
+			<blockquote>
+				<p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
+			</blockquote>
+			<p>
+				Which transforms to the following when we rewrite it following Falconer's directions:
+			</p>
+			<table>
+				<tabular halign="right">
+					<row bottom="minor">
+						<cell right="minor"></cell>
+						<cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+						<cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell>
+						<cell>11</cell><cell>12</cell><cell>13</cell><cell>14</cell><cell>15</cell>
+					</row>
+					<row>
+						<cell right="minor">1</cell>
+						<cell>E</cell><cell>H</cell><cell>T</cell><cell>U</cell><cell>I</cell>
+						<cell>Q</cell><cell>C</cell><cell>B</cell><cell>K</cell><cell>W</cell>
+						<cell>R</cell><cell>O</cell><cell>F</cell><cell>N</cell><cell>O</cell>
+					</row>
+					<row>
+						<cell right="minor">2</cell>
+						<cell>U</cell><cell>J</cell><cell>X</cell><cell>P</cell><cell>S</cell>
+						<cell>M</cell><cell>T</cell><cell>E</cell><cell>V</cell><cell>H</cell>
+						<cell>R</cell><cell>12</cell><cell>L</cell><cell>E</cell><cell>A</cell>
+					</row>
+					<row>
+						<cell right="minor">3</cell>
+						<cell>S</cell><cell>Y</cell><cell>Z</cell><cell>E</cell><cell>E</cell>
+						<cell>L</cell><cell>P</cell><cell>N</cell><cell>I</cell><cell>O</cell>
+						<cell>G</cell><cell>D</cell><cell><m>\cdot</m></cell><cell>G</cell><cell><m>\cdot</m></cell>
+					</row>
+				</tabular>
+			</table>			
 		</subsection>
 	</section>
 
