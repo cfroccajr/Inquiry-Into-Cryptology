@@ -90,6 +90,213 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
+		<subsection xml:id="falconer_polyalphabetics">
+			<title>Falconer's Attack on Polyalphabetics</title>
+			<blockquote>
+				<p>
+					<q>
+						There is an invention of secrecy much insisted on (though none of the swiftest) by the author of the 
+						<em>Secret and Swift Messenger</em>, and others, beyond any yet mentioned, for intricacy, wherein 
+						each particular line, word, or letter, is written by a new alphabet: but the cited author himself 
+						acknowledges it too tedious for a current correspondence;
+					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="p.17 (45)" />
+				</p>
+			</blockquote>
+			<p>
+				So begins John Falconer's discussion of using the polyalphabetic cipher.  As with other cryptographers 
+				of his time he agrees that the cipher, while secure, is to slow an cumbersome and so not worth the 
+				trouble of using.  However, for the sake of giving a complete account of the current state of the 
+				science of cryptography in his time, Falconer goes on to discuss in detail 
+				how to encipher and decipher messages with this type of cipher.  What is interesting and more 
+				significant is that he makes a solid attempt at cracking this cipher, possibly the first real attack since 
+				its invention<xref ref="cr_crypt_kahn" detail="p.155"/>.
+			</p>
+			<p>
+				For his first example of how to attack a polyalphabetic cipher Falconer assumes each line is enciphered by a separate 
+				cipher alphabet. <xref ref="cr_crypt_falconer" detail="pp.20-23 (48-51)" />
+			</p>
+			<p>I. Example in the Lines</p>
+			<sidebyside widths="48% 48%" margins="auto" >
+				<pre>
+					Y pb vdgrts id ztte ixt Hdafytgh
+					idcb wofr rihm obr rihm rxfh
+					dfaawi fd ze espi gtww cpfzwe ez
+					cqn Nwuxg bynnmrtg. qibc.
+				</pre>
+				<pre>
+					I am forced to keep the Soldiers
+					upon hard duty and hard diet:
+					Supply us, or they will revolt to
+					the enemy speedily. Hast. 
+				</pre>
+			</sidebyside>
+			<blockquote>
+				<p>
+					<q>
+						1. When there is only one alphabet used for a line, the writing might be discovered an in 
+						plain cipher, if you make a new operation for each line.  But there may be other ways to 
+						decypher any such writing: for,
+					</q>
+				</p>
+				<p>
+					<q>
+						2. If you find out but one letter in a line, (and that may certainly be done by a few suppositions) 
+						it will of itself give an alphabet for the whole line, as you may perceive by the 
+						<em>counter-table</em>, which follows: ... you need only to search for <em>i</em> in the upper line of it, 
+						and try in what line <em>Y</em> is opposite to it; and those two lines give you an alphabet.
+					</q>
+				</p>
+				<p>
+					<q>
+						Having found one alphabet for the first line, you have likewise by this means the first letter of the key. e.g. 
+						In the fifteenth line of the table, <em>Y</em> standing against <em>i</em>, and <em>P</em> beginning 
+						that line (as you may perceive) <em>P</em> must be the first letter of the key;
+					</q>
+				</p>
+				<p>
+					<q>
+						... you may proceed to find the alphabet of the second, third, or any other line, as you did the first;
+					</q>
+				</p>
+			</blockquote>
+			<figure xml:id="figure_falconer_teble">
+				<caption>Falconer's Counter-Table</caption>
+				<image width="90%" archive="svg png pdf">
+					<description>Falconer's Counter-Table</description>
+					<latex-image-code>
+					    \begin{tikzpicture}
+
+						\filldraw[fill=gray!30!white, draw=white, fill opacity=0.7] (4.82,0.25) rectangle (5.32,-11.75);
+
+						\filldraw[fill=gray!30!white, draw=white, fill opacity=0.7] (-0.25,-7.25) rectangle (14.15,-6.75);
+
+					    \foreach \y  in {0,1,...,23}{
+		    			    \foreach \x/\ctext in 
+					    	{0/a,1/b,2/c,3/d,4/e,5/f,6/g,7/h,8/i,9/k,10/l,11/m,12/n,
+								13/o,14/p,15/q,16/r,17/s,18/t,19/u,20/w,21/x,22/y,23/z}
+		    			    { 
+					    	\pgfmathtruncatemacro{\n}{mod(\x-\y+23,24)};
+		    				\draw (1.25+0.55*\n,-0.5*\y) node {$\ctext$};
+		    				}
+						}
+		    			\foreach \x/\ctext in 
+						{0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/K,10/L,11/M,12/N,
+								13/O,14/P,15/Q,16/R,17/S,18/T,19/V,20/W,21/X,22/Y,23/Z}
+						{
+							\pgfmathtruncatemacro{\l}{\x+1}
+							\draw (0.25,-0.5*\x) node {\l\ $\ctext$};
+							
+						}
+
+						\draw (-0.25,0.25)--(14.15,0.25);
+						\draw (0.8,0.25)--(0.8,-11.75);
+
+					    \end{tikzpicture}
+					</latex-image-code>
+				</image>
+			</figure>
+			<p>
+				<ul>
+					<li>
+						Looking at Falconer's cipher text, why would you assume that the <em>Y</em> represented <em>i</em>? 
+						What other letter might it represent?
+					</li>
+					<li>
+						How did He decide that line 15, which starts with <em>P</em>, was the one that was used to encipher 
+						the first line of the cipher text?
+					</li>
+					<li>
+						Verify that the fifteenth line is the correct one to use for the first line by deciphering the rest of the 
+						line.
+					</li>
+					<li>
+						Looking at the next three lines of the cipher text try, without looking at the accompanying plain text, 
+						to decide which row of the <em>counter-table</em> was used to encipher them.  What can you look at to try 
+						and help you decide?
+					</li>
+					<li>
+						Finally, what is the keyword of phrase that was used to encipher this message?
+					</li>
+				</ul>
+			</p>
+			<p>
+				In the next section of his text Falconer tackles the problem of deciphering a message in which we switch alphabet with each 
+				new word.  It is here that he makes a significant observation that can help us find the length of the keyword.
+			</p>
+			<blockquote>
+				<p>
+					<q>
+						1. Having found an alphabet for the first, second, or indeed any word near the beginning of the epistle, go through 
+						all the immediate following words, until you find another that is decyphered by the same alphabet.
+					</q>
+				</p>
+				<p>
+					<q>
+						2. From the last found word count the like number, and you have a new word decypherable by the found-alphabet: and thus 
+						you may go on until you have once gone through the whole writing, marking the whole series with some particular mark: 
+						And then,
+					</q>
+				</p>
+				<p>
+					<q>
+						3. Begin the epistle again at some word immediately before or after that which was first found, and count forwards 
+						as before, until you come to the end of the epistle. 
+						[Repeat this process until each word is marked as part of a series.]
+					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="pp.24-25 (52-53)" />
+				</p>
+			</blockquote>
+			<p>
+				Let's try to see if we can make sense of Falconer's advice and decipher the message below.
+			</p>
+			<p>
+				<ul>
+					<li>
+						Start by trying to find some repeated pieces of text. Falconer seems to imply that these are 
+						enciphered using the same alphabet from his counter-table; thinking about how we use the 
+						Vigenere cipher normally why could we end up getting theses repetitions? 
+					</li>
+					<li>
+						How far apart are the repeated strings?  What factors do they have in common?
+					</li>
+					<li>
+						Follow Falconer's advice and break the message into groups of strings which 
+						were enciphered (hopefully) with the same shift.
+					</li>
+					<li>
+						Now use what we learned about frequency analysis to figure out the words in each group.  Keep 
+						in mind that each shift corresponds to a row in Falconer's counter-table and that the row markers 
+						should spell out a keyword.
+					</li>
+					<li>
+						What does our message say? What was the keyword?
+					</li>
+					<li>
+						How did finding the length of the keyword help reduce this problem to one we had already solved?
+					</li>
+				</ul>
+			</p>
+			<pre>
+				MX EIB WKG LOCD SK GWZRF, 
+				BM ZEW CQN YQTUW YP YNQIX, 
+				WG OSL XLH IPN QH FSCNYW, 
+				NY INF MAX EKH XO HQQNLUKPGUU, 
+				SD AEX GUR XHGUA RI KNTRNO,
+				LW FKC YMI RCBPU GY MQFUHGYOMXB,
+				RC YCU DRO XIEXSR BS DBZAM,
+				MX EIB WKG COKCYX SK QNEXARFF,
+				BM ZEW CQN URTLPI YP MSTI,
+				WG OSL XLH ERWCNA QH NOCZKSB, 
+				AI UNQ XNXKQMABFY FHIRUH DB,
+				YG TKN RSYMNRL ORSBER NL,
+				ZH ENAN CNN QYSXQ HNWIGY GB AXNXF,
+				ZH ENAN CNN QYSXQ HNNIGY GUR GMAXK ZDB -
+				RW UKQTW, DRO TIWNSH INF LG IDU TRSN WKG ZBOCOXD TIWNSH, GUNG LGEX 
+				RI RCB PQLULGUW KEDRYBSDSOC NRXNXYIH BA BML EHWQK ANLNRDNM, HQT QYYN
+				SW SBE XNBD, MQ CQN UXRGTNCWLXG NOQBOO SK PBZCNEWFBA GFDQ
+			</pre>
+
+		</subsection>
+
 	</section>
 
 

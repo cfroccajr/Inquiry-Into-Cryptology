@@ -84,26 +84,6 @@ def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=5
         </sage>
 
 
-    	<p>Shift Cipher Cell</p>
-    	<sage xml:id="sage_shift_cell">
-        	<input>
-
-<!-- Python/Sage Function -->
-@interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),shift=[0..25]):
-    S = ShiftCryptosystem(AlphabeticStrings())
-    e = S(shift)
-    clean_text = S.encoding(str(m.encode('ascii','replace')))
-    cipher_text = e(clean_text)
-    print "Your shift enciphering text is\n"
-    for i in xrange(0,len(cipher_text),5):
-        print cipher_text[i:i+5],
-        if (i+5)%50 == 0: print "\n"
-
-    		</input>
-    		<output></output>
-    	</sage>
-
     	<p>Affine Cipher Cell</p>
     	<sage xml:id="sage_affine_cell">
         	<input>
@@ -129,24 +109,42 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
         	<input>
 
 <!-- Python/Sage Function -->
+import re
+import textwrap
 @interact
 def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
-		key=input_box('sage', label="Enter your key", height=1, width=20, type=str)):
-    cipher_key=str(key)
-    S = VigenereCryptosystem(AlphabeticStrings(),len(cipher_key))
-    K = S.encoding(cipher_key)
-    e = S(K)
-    clean_text = S.encoding(str(m.encode('ascii','replace')))
-    cipher_text = e(clean_text)
-    print "Your Vigenere enciphering text is\n"
-    for i in xrange(0,len(cipher_text),5):
-        print cipher_text[i:i+5],
-        if (i+5)%50 == 0: print "\n"
-
+        key=input_box('sage', label="Enter your key", height=1, width=20, type=str),
+        mode = selector(['encipher','decipher'], buttons=True),
+        spaces = selector(['yes','no'], buttons=True)):
+    plain_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    clean_message = str(m.encode('ascii','replace')).upper()
+    if spaces == 'no':
+        clean_message = re.sub('[^A-Z]','',clean_message)
+    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace')).upper())
+    key_list = [plain_alpha.index(ch) for ch in cipher_key]
+    if mode == 'decipher':
+        key_list = [-1*k for k in key_list] 
+    cipher_text = ""
+    key_counter = 0
+    for ch in clean_message:
+        try:
+            tmp_pos = plain_alpha.index(ch)
+            cipher_pos = (tmp_pos+key_list[key_counter])%26
+            cipher_text += plain_alpha[cipher_pos]
+            key_counter = (key_counter+1)%len(key_list)
+        except:
+            if spaces == 'yes':
+                cipher_text += ch
+    print "\nHere is your output:\n"
+    if spaces == 'yes':
+        print textwrap.fill(cipher_text, 50)
+    else:
+        for i in xrange(0,len(cipher_text),5):
+            print cipher_text[i:i+5],
+            if (i+5)%50 == 0: print "\n"
     		</input>
     		<output></output>
     	</sage>
-
 
 
         <p>Falconer Cipher Cell</p>
