@@ -62,6 +62,306 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
+		<subsection>
+			<title>Prime Factors</title>
+			<p>
+				The strength of Falconer's keyed columnar  transposition cipher is the almost astronomical 
+				number of combinations of keys that can be used.  As we have seen previously with just three 
+				characters we have six row keys which, depending on how many of them we use and how we arrange 
+				them, can give us one thousand nine hundred fifty six subtly different ciphers.  If we 
+				increase the number of characters to four or five then that number goes up to 
+				<md>  
+					<mrow>1,686,553,615,927,922,354,187,744</mrow>
+				</md> 
+				and 
+				<md>
+					<mrow>18,183,954,211,052,603,322,452,474,095,140,831,\ldots</mrow>
+					<mrow>738,614,446,765,249,926,715,439,301,461,074,500,\ldots</mrow>
+					<mrow>732,116,312,180,273,095,148,765,061,059,468,326,\ldots</mrow>
+					<mrow>378,636,312,510,693,233,993,926,141,650,787,502,\ldots</mrow>
+					<mrow>931,879,726,557,669,253,713,958,681,131,266,045,\ldots</mrow>
+					<mrow>931,864,486,980,283,708,000</mrow>
+				</md>
+				respectively.  This would seem to offer security in the extreme, but as we will see, Falconer himself 
+				gives us two relatively simple ways to crack this cipher.  We begin with the more mathematical approach.
+				
+			</p>
+			<sbsgroup widths="48% 48%" margins="auto">
+				<sidebyside>
+					<p>
+						... take the number of partitions of the seeming words in the epistle, and find out their 
+						several divisors, which may be performed by the following rules.
+					</p>
+					<p>
+						The first line contains the first divided, and the respective quotients; the lowest line 
+						is the several prime divisors.
+					</p>
+				</sidebyside>
+				<sidebyside>
+					<paragraphs>
+						<p>
+							<em>How to find out the equal divisors of any number.</em>
+						</p>
+						<p>
+							1. Divide the number given by some <term>prime number</term> 
+							 (i.e.) such a number that cannot be divided,
+							but by it self, or unity; and the <em>quotient by some or other prime number</em>, and 
+							the <em>last quotient again by a prime number</em>; and so go on until the <em>last 
+							quotient of all be one</em>; and thus you shall find a certain number of 
+							<em>prime divisors</em>.<index><main>prime number</main></index><index><main>prime divisors</main></index>
+						</p>
+						<p>
+							2. Make a rectangular table that shall consist of as many columns as you have prime divisors, 
+							which you must place one after another at the tops of the columns; ...
+						</p>
+						<p>
+							By multiplying the first prime divisor towards the left hand of the table by the second, and 
+							writing the product under the second. 
+						</p>
+					</paragraphs>
+					<paragraphs>
+						<p>
+							Now 450, the number given, being divided by 2, a prime divisor, the quotient is 225, 
+							which being divided by 3, you have 75 for a new quotient; and again divided by 3, you 
+							have 25 for another quotient. This last divided by 5, gives 5, which being a prime 
+							number, you have 1, or unity in the last quotient of all: so that your prime divisors 
+							are, 2, 3, 3, 5, 5, all which set down in the tops of the columns [of a new table], 
+							and multiplying them according to the [second] rule given, the operation will stand thus.
+						</p>
+						<p>
+							All the divisors of 450, are 2, 3, 5, 6, 9, 10, 15, 18, 25, 30, 45, 50, 75, 90, 150, 225; 
+							and one of them (supposing the epistle to have consisted of 450 seeming words) should have 
+							been the number of letters combined for the key: ...
+						</p>
+					</paragraphs>
+				</sidebyside>
+				<sidebyside>
+					<paragraphs>
+						<p>
+							Next, by the third prime divisor, multiplying all the 
+							figures in the table towards the left hand, setting the several products in the third 
+							column: and so forth, throughout all the prime divisors; ...
+						</p>
+						<p>
+							<em>Example to find out all the divisors of 450</em>
+						</p>
+					</paragraphs>
+					<table>
+						<tabular halign="right">
+							<row left="minor" >
+								<cell right="minor" >
+									2
+								</cell>
+								<cell right="minor" >
+									3
+								</cell>
+								<cell right="minor" >
+									3
+								</cell>
+								<cell  right="minor" >
+									5
+								</cell>
+								<cell right="minor" >
+									5
+								</cell>
+							</row>
+							<row>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									6
+								</cell>
+								<cell right="minor" >
+									9
+								</cell>
+								<cell right="minor" >
+									10
+								</cell>
+								<cell right="minor" >
+									25
+								</cell>
+							</row>
+							<row>
+								<cell>
+									
+								</cell>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									18
+								</cell>
+								<cell right="minor" >
+									15
+								</cell>
+								<cell right="minor" >
+									50
+								</cell>
+							</row>
+							<row>
+								<cell>
+									
+								</cell>
+								<cell>
+									
+								</cell>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									30
+								</cell>
+								<cell right="minor" >
+									75
+								</cell>
+							</row>
+							<row>
+								<cell>
+									
+								</cell>
+								<cell>
+									
+								</cell>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									45
+								</cell>
+								<cell right="minor" >
+									150
+								</cell>
+							</row>
+							<row>
+								<cell>
+									
+								</cell>
+								<cell>
+									
+								</cell>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									90
+								</cell>
+								<cell right="minor" >
+									225
+								</cell>
+							</row>
+							<row>
+								<cell>
+									
+								</cell>
+								<cell>
+									
+								</cell>
+								<cell>
+									
+								</cell>
+								<cell right="minor" >
+									
+								</cell>
+								<cell right="minor" >
+									450
+								</cell>
+							</row>
+						</tabular>
+					</table>						
+				</sidebyside>
+				<sidebyside>
+					<table>
+						<tabular left="minor" right="minor" halign="left">
+							<row>
+								<cell>450</cell>
+								<cell>225</cell>
+								<cell>75</cell>
+								<cell>25</cell>
+								<cell>5</cell>
+								<cell>1</cell>
+							</row>
+							<row>
+								<cell>2</cell>
+								<cell>3</cell>
+								<cell>3</cell>
+								<cell>5</cell>
+								<cell>5</cell>
+								<cell> </cell>
+							</row>					
+						</tabular>
+					</table>
+					<p><xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
+				</sidebyside>				
+			</sbsgroup>
+			<p>
+				<ul>
+					<li>
+						What are <em>prime numbers</em> and what are the <em>prime divisors</em> of a number?
+					</li>
+					<li>
+						How did Falconer decide to start dividing by 2?
+					</li>
+					<li>
+						Have you ever learned a rule that may have told you that 225 and 75 were divisible by 3?
+					</li>
+					<li>
+						Looking at the second table in the above quote, 
+						where do we get the numbers in the top row?
+					</li>
+					<li>
+						In the second column of the second table there is a 6 under the 3, how did Falconer 
+						come up with that?
+					</li>
+					<li>
+						In the third column how did he get the 9 and the 18?
+					</li>
+					<li>
+						What about the other columns, where did those numbers come from?
+					</li>
+					<li>
+						In the last paragraph Falconer tells us that if 450 were the number of blocks 
+						of text in the enciphered message then one of the factors of 450 
+						is the number of key letters in the message.  Looking back at how Falconer's 
+						transposition cipher works why is this the case?
+					</li>
+				</ul>
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						Test your understanding of what Falconer has described by factoring 980 into prime factors and then writing out 
+						all the different divisors
+					</p>
+				</statement>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Look at the text enciphered below using Falconer's transposition cipher.  Using the 
+						techniques described above, how many key letters may have been used to 
+						encipher this message?
+					</p>
+					<pre>
+						NILOEOTHIETTSGTN HCITRTSRNIAEOIOC TATEUOOOETURHVFS 
+						LNEURRHYMSIHHIHQ EELHEFETTMRDUNRO NEAMTDPLHYETLOAS 
+						TTEPEEYTPEOESTTA THMOIITESHTEUPUE ETDSEBASETFEONOU 
+						OEKEBDAFASNHDSRT NSECLSEREWHHEICM EMTWKRIEBRNTAYTK 
+						TUEEFUWEREIAPTHA IYWAEUHBIFTWDRUD WHSLSNTOPLFNTEMN 
+						GRVEDCGTEPTDATIM RMSIIYLDEEECRBOE AEEBEINOTPNLEOAR 
+						SEOTLWLAIHTOTEOW RRMHLHINTAEULNFO DHLTAAAROREANLOH 
+						ETAUHHOEFEMEIETT HOTYTPNTRTSTGFBI AURSUPTHOHRHTWEN 
+						GEIATHLHNIIDVSRS FSRSNHFTNOUTIDHR EIUASTSREHGFLETI 
+						DDSEISTOTTIIELAE DEAREEAEENFOELEH NBETSIHENAEDHIDE
+					</pre>
+				</statement>
+				<hint>
+					<p>
+						Start by counting the number of blocks of letters.
+					</p>
+				</hint>
+			</exercise>
+		</subsection>
 	</section>
 
 
@@ -294,7 +594,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				RI RCB PQLULGUW KEDRYBSDSOC NRXNXYIH BA BML EHWQK ANLNRDNM, HQT QYYN
 				SW SBE XNBD, MQ CQN UXRGTNCWLXG NOQBOO SK PBZCNEWFBA GFDQ
 			</pre>
-
+			<p>
+				Exactly one hundred years after Vigenere published his work Falconer pointed us toward toward cracking the   
+				polyalphabetic substitution cipher. First, he pointed out that whether we encipher 
+				each new line, word, or letter by a different alphabet if we can group elements of the message which were 
+				enciphered the same way together then we can treat each group as a monoalphabetic substitution cipher.  
+				Additionally, if we can identify the length of the key then we can use that to figure out how to group 
+				the strings or characters together.  However, Falconer was still very much tied down to the use of word 
+				spacings, without them his descriptions and attacks would not work.  It would be another century and a 
+				half before Charles Babbage
+				<index><main>Babbage, Charles</main></index>
+				 and Friedrich Kasiski 
+				<index><main>Kasiski, Friedrich</main></index>
+				 would recognize how to expand these ideas into a 
+				general system of attack.
+			</p>
 		</subsection>
 
 	</section>
