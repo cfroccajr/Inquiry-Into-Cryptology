@@ -388,7 +388,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				Which transforms to the following when we rewrite it following Falconer's directions:
 			</p>
-			<table>
+			<table xml:id="falconer_transposed_message">
+				<caption>Transpose Table for a Falconer Cipher</caption>
 				<tabular halign="right">
 					<row bottom="minor">
 						<cell right="minor"></cell>
@@ -415,9 +416,184 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<cell>G</cell><cell>D</cell><cell><m>\cdot</m></cell><cell>G</cell><cell><m>\cdot</m></cell>
 					</row>
 				</tabular>
-			</table>			
+			</table>
+			<blockquote>
+				<p>
+					<q>1. Search in the several lines for some of the particles [(words or n-grams)] of that language you shall suppose 
+					the epistle to have been writ in. If in English, make suppositions, e.g. for such little words as 
+					<em>the, that, for, of, to, and, etc.</em> and the like, without some of which no man can well express 
+					business of any moment.</q>
+				</p>
+				<p>
+					<q>2. Having supposed in any of the lines; for some one of those mentioned, or the like particles, 
+					you may prove the truth of your supposition, by taking out the opposite letters of all the lines: 
+					And if they do not make words, or syllables, or produce such letters as can probably follow one 
+					another in that order, your first supposition is false, and you must suppose anew.</q> 
+				</p>
+				<p>
+					<q>3. Having by fresh suppositions found some useful word: And the letters of the other lines 
+					(in the same order) agreeing, the words or syllables arising from them, will direct you to 
+					some new [column] that goes before or after in the true order: And thus you may proceed till you 
+					have found out the whole writing, which by this time will be no great difficulty.</q>
+					- John Falconer <xref ref="cr_crypt_falconer" detail="pp.48-49 (76-77)" /> 
+				</p> 
+			</blockquote>
+			<p>
+				Taking Falconer's advice from step one look at each line of 
+				<xref ref="falconer_transposed_message" autoname="yes" /> 
+				we created above as you consider the following.
+			</p>
+			<p>
+				<ul>
+					<li>
+						Are there three letters in line one which we would expect to go together assuming this is written in English?
+					</li>
+					<li>
+						There is a <em>Q</em> in row one column six, what needs to come after that?  What column is it in?
+					</li>
+					<li>
+						Looking now at line two what three letters do we again see that should go together?
+					</li>
+					<li>
+						In line three are there three letters you could put together to get a common English ending? 
+						Are there other letters you could arrange with them in order to get an entire word?
+					</li>
+					<li>
+						Finally, columns thirteen and fourteen only have two characters in them each, where do you think 
+						they belong if we were to rearrange the lines?
+					</li>
+				</ul>
+			</p>
+			<p>
+				Use the observations you just made in order to rearrange the columns in the table, you should make a copy of 
+				this table to help you.
+			</p>
+			<table xml:id="blank_transpose_table">
+				<caption>Blank Transpose Table for a Falconer Cipher</caption>
+				<tabular halign="right">
+					<row bottom="minor">
+						<cell right="minor">Col's</cell>
+						<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+						<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+						<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+					</row>
+					<row>
+						<cell right="minor">1</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+					</row>
+					<row>
+						<cell right="minor">2</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+					</row>
+					<row>
+						<cell right="minor">3</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+					</row>
+				</tabular>
+			</table>
+			<p>
+				Test your understanding by working on the following exercises of increasing size, be patient they are 
+				finicky and time consuming. As a hint, all of the 
+				quotes contain the word <em>WINTER</em>.
+			</p>
+			<exercise>
+				<statement>
+					<p>
+						Try to use this new method to decipher this quote.
+					</p>
+					<pre>
+						IRPL WPDL FSNE INIH NIEE 
+						RBY  OFY  TNRY CEB  EGC 
+						MAS  SBH  ERS  CEE  AHS
+					</pre>
+				</statement>
+				<hint>
+					<p>
+						<ul>
+							<li>Transpose each block, you will end up with a table of four lines and fifteen columns.</li>
+							<li>Can you find common or even not so common words or combinations in any lines?</li>
+							<li>When you rearrange the columns do you see more words?</li>
+							<li>Stay organized, if you don't keep things lined up this will never work</li>
+						</ul>
+					</p>
+				</hint>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Try to use this new method to decipher this quote.
+					</p>
+					<pre>
+						UIA ARM LDU GVN EWC RIE TSA HEF INV HRT 
+						STI TEC NMU EFO SRR UOH AE  TTG TH  HHO
+					</pre>
+				</statement>
+				<hint>
+					<p>
+						<ul>
+							<li>Transpose each block, you will end up with a table of three lines and twenty columns.</li>
+							<li>Can you find common or even not so common words or combinations in any lines?</li>
+							<li>When you rearrange the columns do you see more words?</li>
+							<li>Stay organized, if you don't keep things lined up this will never work</li>
+						</ul>
+					</p>
+				</hint>
+			</exercise>
+			<exercise>
+				<statement>
+					<p>
+						Try to use this new method to decipher this quote.
+					</p>
+					<pre>
+						WYTWIA TAODLH IDHLES ASAHGD NETIAH ENHTNA OHDNTC
+						SWNEHE OTEIDR HSNUNS FHWSWL TEISIE MHORIK OUDMTD
+						SNBMEI ESLERC CECTHS AIWINE HSOHE  RNSNTN
+					</pre>
+				</statement>
+				<hint>
+					<p>
+						<ul>
+							<li>Transpose each block, you will end up with a table of six lines and twenty columns.</li>
+							<li>Can you find common or even not so common words or combinations in any lines?</li>
+							<li>When you rearrange the columns do you see more words?</li>
+							<li>Stay organized, if you don't keep things lined up this will never work</li>
+						</ul>
+					</p>
+				</hint>
+			</exercise>
+			<p>
+				A few closing observations:
+			</p>
+			<p>
+				<ul>
+					<li>
+						Look carefully at how the blocks of characters (columns in the tables) are grouped after they are deciphered, 
+						i.e. did you ever get column one next to column thirteen or fourteen?  
+					</li>
+					<li>
+						Why do you think this happened? How might it be related to the number of key letters?
+					</li>
+					<li>
+						Given your answers to the previous questions, how can we make use of Falconer's strategies for 
+						finding divisors and the number of key letters?
+					</li>
+				</ul>
+			</p>
 		</subsection>
 	</section>
+
 
 
 
@@ -650,8 +826,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				SW SBE XNBD, MQ CQN UXRGTNCWLXG NOQBOO SK PBZCNEWFBA GFDQ
 			</pre>
 			<p>
-				Exactly one hundred years after Vigenere published his work Falconer pointed us toward toward cracking the   
-				polyalphabetic substitution cipher. First, he pointed out that whether we encipher 
+				Exactly one hundred years after Vigenere published his work Falconer lead us in the right direction to 
+				crack the  polyalphabetic substitution cipher. First, he pointed out that whether we encipher 
 				each new line, word, or letter by a different alphabet if we can group elements of the message which were 
 				enciphered the same way together then we can treat each group as a monoalphabetic substitution cipher.  
 				Additionally, if we can identify the length of the key then we can use that to figure out how to group 
@@ -661,8 +837,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<index><main>Babbage, Charles</main></index>
 				 and Friedrich Kasiski 
 				<index><main>Kasiski, Friedrich</main></index>
-				 would recognize how to expand these ideas into a 
-				general system of attack.
+				 would recognize how to expand these ideas into a general plan of attack.
 			</p>
 		</subsection>
 
