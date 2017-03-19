@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+
+
+<appendix xml:id="glossary">
+	<title>Glossary</title>
+
+
+
+
+
+	<p>
+		<dl>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<li>
+				<title>Affine Cipher</title>
+				<p>
+					An <em>affine cipher</em> ...
+					<index><main>affine cipher</main></index>
+				</p>
+			</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<li>
+				<title>Block Cipher</title>
+				<p>
+					A <em>block cipher</em> repeatedly uses a single key in order to encipher successive pieces of 
+					plaintext.
+					<index><main>block cipher</main></index>
+				</p>
+			</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  C   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+			<li>
+				<title>Cipher</title>
+				<p>
+					A <em>cipher</em> is a system by which a letter or block of letters in a message 
+					is replaced by another letter or block of letters in a systematic way.
+					<index><main>cipher</main></index>
+				</p>
+			</li>
+
+			<li>
+				<title>Ciphertext</title>
+				<p>
+					The <em>ciphertext</em> is the message you wish to transmit after it has been rewritten in order to 
+					hide its meaning.
+					<index><main>ciphertext</main></index>
+				</p>
+			</li>
+
+			<li>
+				<title>Code</title>
+				<p>
+					A <em>code</em> is a system by which words or phrses in a message
+					are replaced by other words, phrases, or symbols in a systematic way.
+					<index><main>code</main></index>
+				</p>
+			</li>
+
+			<li>
+				<title>Cryptoanalysis</title>
+				<p>
+					<em>Cryptoanalysis</em> is an attempt to compute the key or determine the meaning of a message from the ciphertext.
+					<index><main>cryptoanalysis</main></index>
+				</p>
+			</li>
+
+			<li>
+				<title>Cryptography</title>
+				<p>
+					<em>Cryptography</em> focuses on concealing the meaning of a message.
+					<index><main>cryptography</main></index>
+				</p>
+			</li>
+
+			<li>
+				<title>Cryptology</title>
+				<p>
+					<em>Cryptology</em> is the science of maintaining secrets by either hiding the meaning or the existence of messages.
+					<index><main>cryptology</main></index>
+				</p>
+			</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+			<li> 
+				<title>Decipher:</title>
+				<p>
+					<em>Deciphering</em> is the process by which blocks of ciphertext are replaced by plaintext.
+					<index><main>decipher</main></index>
+				</p>
+			</li>
+
+		<li> 
+				<title>Decrypt:</title>
+				<index><main>decrypt</main></index>
+			<p>
+				<em>Decrypting</em> is the process by we discover the meaning of a ciphertext without the aid of a cipher key.
+			</p>
+		</li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li> 
+				<title>Encipher:</title>
+				<index><main>encipher</main></index>
+			<p>
+				<em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
+			</p>
+		</li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li> 
+				<title>Factorial:</title>
+				<index><main>factorial</main></index>
+			<p>
+				Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+				<me>
+					n!=n(n-1)(n-2)\cdots 2 \cdot 1
+				</me>
+				Note that for a variety of reasons <m>0!=1</m>.
+			</p>
+		</li>
+
+		<li>
+				<title>Frequency Analysis</title>
+				<index><main>frequency analysis</main></index>
+			<p>
+				<em>Frequency analysis</em> is the process of counting the characters, blocks of characters, or words in a text 
+				in order to determine how many of each there are relative to the entire length of the text.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+		<li>
+				<title>Homophonic Cipher:</title>
+				<index><main>homophonic cipher</main></index>
+			<p>
+
+				A <em>homophonic cipher</em> is a cipher in which a single plaintext letter may be replaced 
+				by multiple different ciphertext letters throughout a message.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Monoalphabetic Substitution Cipher:</title>
+				<index><main>monoalphabetic substitution cipher</main></index>
+			<p>
+
+				A <em>monoalphabetic substitution cipher</em> is a cipher in which there is a one-to-one correspondence 
+				between plaintext letters and the cipher text so that a single plaintext letter is always replaced by the same letter, 
+				group of letters, or symbol and every letter, group of letters, or symbol in the ciphertext represents the 
+				same plaintext letter.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+		<li>
+				<title>N-Gram</title>
+				<index><main>n-gram</main></index>
+			<p>
+				An <em>n-gram</em> is a block of <m>n</m> consecutive characters.
+			</p>
+		</li>
+
+		<li>
+				<title>Nomenclator:</title>
+				<index><main>nomenclator</main></index>
+			<p>
+
+				A <em>nomenclator</em> is a system for disguising the meaning of a message which uses both cipher alphabets 
+				and a set of code words.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Plaintext:</title>
+				<index><main>plaintext</main></index>
+			<p>
+
+				The <em>plaintext</em> is the message you wish to transmit written in a readable form.
+			</p>
+		</li>
+
+		<li>
+				<title>Polyalphabetic Substitution Cipher:</title>
+				<index><main>polyalphabetic substitution cipher</main></index>
+			<p>
+
+				A <em>polyalphabetic substitution cipher</em> is a cipher in which a single plaintext letter maybe replaced by 
+				several differnt ciphertext letters, groups of letters, or symbols and every letter, group of letters, or 
+				symbol in the ciphertext may represent more than one plain text letter.
+			</p>
+		</li>
+
+		<li>
+				<title>Polyphonic Cipher:</title>
+				<index><main>polyphonic cipher</main></index>
+			<p>
+
+				A <em>polyphonic cipher</em> is a cipher in which a single ciphertext letter may be represent 
+				multiple different plaintext letters throughout a message.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Steganography</title>
+				<index><main>steganography</main></index>
+			<p>
+				<em>Steganography</em> focuses on concealing the existence of a message.
+			</p>
+		</li>
+
+		<li>
+				<title>Stream Cipher</title>
+				<index><main>stream cipher</main></index>
+			<p>
+				A <em>stream cipher</em> uses a sequence (or stream) of different keys in order to encipher successive pieces of 
+				plaintext.
+			</p>
+		</li>
+
+		<li>
+				<title>Substitution Cipher</title>
+				<index><main>substitution cipher</main></index>
+			<p>
+				A <em>substitution cipher</em> changes individual characters or groups of characters, but does not change their position.
+			</p>
+		</li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Transposition Cipher</title>
+				<index><main>transposition cipher</main></index>
+			<p>
+				A <em>transposition cipher</em> rearranges the positions of characters, but does not change the characters themselves.
+			</p>
+		</li>
+
+
+		</dl>
+	</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</appendix>

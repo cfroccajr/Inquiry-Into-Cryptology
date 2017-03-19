@@ -478,7 +478,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
 					</row>
 					<row>
-						<cell right="minor">1</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell right="minor">1</cell>
+						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
 						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
 						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
 						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>

@@ -40,6 +40,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<xi:include href="chart_appendix.mbx" />
 
+	<!-- GFDL License text -->
+
+	    <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
+
+
 	    <appendix>
 	        <title>Notation</title>
 
@@ -48,15 +53,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        <!-- <notation-list /> -->
 	    </appendix>
 
+
 		<!--<appendix>
 	        <title>Hints and Solutions to Selected Exercises</title>
 	        <solution-list />
 	    </appendix> -->
 
+    <!-- glossary -->
 
-	<!-- GFDL License text -->
+    	<xi:include href="glossary.mbx" />
 
-	    <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
 
 	<!-- references -->
 
@@ -67,9 +73,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        <index-list />
 	    </index-part>
 
-	    <colophon>
+<!-- 	    <colophon>
 	        <p>This book was authored in MathBook XML.</p>
-	    </colophon>
+	    </colophon> -->
 
           
 
