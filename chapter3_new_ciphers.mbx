@@ -863,6 +863,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p><em><alert>Vigenere Cipher Cell:</alert></em></p>
 				<sage copy="sage_vigenere_cell" />
 			</introduction>
+		</exercisegroup>
 			<exercise>
 				<statement>
 					<p>
@@ -973,7 +974,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</p>
 				</statement>
 			</exercise> -->
-		</exercisegroup>
+<!-- 		</exercisegroup> -->
 
 		<exercisegroup>
 			<introduction>
@@ -984,6 +985,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>Falconer's Tabular Cipher:</p>
 				<sage copy="sage_falconer_cell" />
 			</introduction>
+		</exercisegroup>
 			<exercise>
 				<statement>
 					<p>
@@ -1029,7 +1031,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</pre>
 				</statement>
 			</exercise>
-		</exercisegroup>
+<!-- 		</exercisegroup> -->
 	</exercises>
 	
 

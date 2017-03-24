@@ -72,6 +72,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Scribner, New York, <year>1996</year>.
 			</biblio>
 
+			<biblio type="raw" xml:id="cr_crypt_kasiski">
+				Friedrich W. Kasiski [R.W. Pettengill trans.],
+				<title>
+					Secret writing and the art of deciphering with special consideration of the german and french languages.
+				</title>
+				Privately Published, Washington D.C., 
+				<year>1954</year>. (Original work published Berlin 1863)
+				<note> 
+					<p>
+						Thanks to Rene Stein at the National Cryptologic Museum for assistance in obtaining a copy of this work.
+					</p>
+				</note>
+			</biblio>
+
 			<biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
 				Charles J. Mendelsohn
 				<title>

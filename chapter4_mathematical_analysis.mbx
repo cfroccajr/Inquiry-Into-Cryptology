@@ -604,21 +604,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     	Attacks on Polyalphabetics: Falconer, Babbage, Friedman 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-	<section xml:id="section_polyalphabetic_attack">
-		<title> Breaking the Impossible </title>
+	<section xml:id="section_polyalphabetic_attack1">
+		<title>A Seventeenth Century Idea</title>
 		<objectives>
 			<ul>
 				<li>
 					Falconer's Attack
-				</li>
-				<li>
-					Babbage's Attack
-				</li>
-				<li>
-					Friedman and the Index of Coincidence
-				</li>
-				<li>
-					Attacking Autokey Ciphers (Polyalphabetics Big Brother)
 				</li>
 			</ul>
 		</objectives>
@@ -691,7 +682,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</q>
 				</p>
 			</blockquote>
-			<figure xml:id="figure_falconer_teble">
+			<figure xml:id="figure_falconer_table">
 				<caption>Falconer's Counter-Table</caption>
 				<image width="90%" archive="svg png pdf">
 					<description>Falconer's Counter-Table</description>
@@ -844,6 +835,376 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	</section>
 
+
+
+
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    	Babbage/Kasiski 
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+	<section xml:id="section_polyalphabetic_attack2" >
+		<title>A Nineteenth Century Revolution</title>
+		<objectives>
+			<ul>
+				<li>
+					Babbage/Kasiski's Attack
+				</li>
+			</ul>
+		</objectives>
+		<subsection xml:id="kasiski_attack">
+			<title>Kasiski's Attack</title>
+			<subsubsection>
+				<title>Initial Observations</title>
+				<p>
+					What follows are excerpts from Friedrich Kasiski's 1863 text on cryptography 
+					<em>Die Geheimschriften und die Dechiffrir-Kunst</em>, 
+					which was translated into English and privately published 
+					by R. W. Pettengill in 1954 as <em>Secret Writings and the Art of Deciphering</em><xref ref="cr_crypt_kasiski"/>.  
+					For brevity we will only examine a few of Kasiski's key points and we will use a long English rather than 
+					a short German quote in order to make his points.  While these adjustments have been made to aid in understanding 
+					whenever possible we will remain faithful to the original.
+				</p>
+				<p>
+					For this section we will use the following quote for our analysis.  It is enciphered using a Vigenere cipher with 
+					the keyword <c>BERLIN</c>.
+				</p>
+				<sidebyside widths="35% 55%" margins="auto" xml:id="example_kasiski" valigns="top top">
+					<caption>Sample Vigenere Cipher Text</caption>
+					<figure>
+						<caption>Plain Text</caption>
+						<p>
+							<q>
+								Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, 
+								and the French, the English, and the Americans on the western front which is currently all quiet.
+							</q>
+							<fn>
+								Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
+							</fn>
+						</p>
+					</figure>
+					<figure>
+						<caption>Cipher Text</caption>
+						<pre>
+							     123456  123456  123456  123456
+							Key: BERLIN  BERLIN  BERLIN  BERLIN
+
+							 (1) UICWBU  FKVYME  BPIPUN  SULPBU  
+
+							 (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  
+
+							 (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF 
+
+							 (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  
+
+							 (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  
+
+							 (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH 
+
+							 (7) SVVYBY  ZECWYH  JIK
+						</pre>
+					</figure>
+				</sidebyside>
+				<blockquote>
+					<p>
+						VI. The Actual Art of Decipherment [Cryptanalysis].
+					</p>
+					<p>
+						A. General Remarks.
+					</p>
+					<p>
+						72. The actual art of deciphering consists in deciphering any unknown cipher text without 
+						previous knowledge of the meaning of the ciphers and without the key.
+					</p>
+					<p>  ... </p>
+					<p>
+						It is impossible to discover the key from a few words of cipher text ... . Consequently we must 
+						have available at least four to six rows of cipher text if we are to be able to recover the key.
+					</p>
+					<p> ... </p>
+					<p>
+						75. The influence of the key finds expression in the fact that at intervals of as many 
+						ciphers as the key contains letters repetition of single ciphers or of several ciphers can occur, 
+						which can only be due to the fact that, when the same letters of the key were united with a 
+						repetition of the plain text to form ciphers. If we have a relatively long cipher text which 
+						is enciphered with the key <q><c>Berlin</c>,</q> and if we divide it off into rows of six ciphers and number 
+						the ciphers of each row from one to six, we shall find that among the ciphers numbered 1 of each 
+						row the cipher <c>U</c> occurs most frequently, among the ciphers numbered 2 <c>I</c> is most frequent, the most 
+						frequent among the ciphers numbered 3 is <c>V</c>, among the ciphers numbered 4 <c>Y</c>, among the ciphers 
+						numbered 5 <c>B</c>, and among the ciphers numbered 6 <c>F</c>. 
+						This is because the ciphers <c>U, I, V, Y, B</c> and <c>F</c> have 
+						[likely] arisen by combination of the letters
+						<c>b, e, r, l, i, n</c> of the key with the letter <c>e</c> of the text; 
+						since according to [previous observations] the letter e occurs most frequently in the text, 
+						naturally the above ciphers must occur most frequently under the numbers mentioned.
+					</p>
+					<p>
+						Next most frequent in this cipher text are the ciphers <c>S</c> in column one, <c>E</c> in column two, 
+						<c>K</c> in column three, <c>P</c> in column four, <c>W</c> in column 
+						five and <c>V</c> in column six because these 
+						ciphers <c>S, E, K, P, W</c> and <c>V</c> result from a combination of the letters <c>b, e, r, l, i, n</c> of the 
+						key with the letter <c>t</c> of the text and t is the next most common letter letter after e.
+						<xref ref="cr_crypt_kasiski" detail="pp.29-30 (34-35)" />
+					</p>
+				</blockquote>
+				<p>
+					Reading Questions:
+				</p>
+				<p>
+					<ul>
+						<li>
+							In section (75) Kasiski writes about letters of the <em>key</em> 
+							uniting with repetitions of <em>plain text</em>, how does this compare 
+							to Falconer's observations in 
+							<xref ref="section_polyalphabetic_attack1" autoname="yes"/>?
+						</li>
+						<li>
+							We know that the Vigenere cipher can encipher many different plain text letters 
+							as the same cipher text letter, so why is it reasonable for Kasiski to believe that 
+							all the <c>U</c>'s in column 1 should represent <c>e</c> or that all the 
+							<c>P</c>'s in column 5 might represent <c>t</c>?  (Answer in terms 
+							of how we know the Vigenere cipher works.)
+						</li>
+						<li xml:id="kasiski_example_by_hand">
+							Break the plain text message in <xref ref="example_kasiski" autoname="yes" /> into blocks of six 
+							then use the key <c>BERLIN</c> and the modern Vigenere table 
+							<xref ref="appendix_figure_vigenere_new" autoname="yes" /> 
+							to encipher it, you should get the same cipher text as that 
+							which is in the figure.
+						</li>
+						<li>
+							Is Kasiski right about his guesses, that is do the <c>U</c> and <c>I</c> in the first and second 
+							columns represent <c>e</c>, or do the <c>E</c> and <c>K</c> in the second and third columns 
+							represent <c>t</c>?  How do your answers to this question relate to Kasiski's comments in 
+							section (72)?
+						</li>
+					</ul>
+				</p>
+				<p>
+					Further observations by Kasiski:
+				</p>
+				<blockquote>
+					<p>
+						76. ... where repetitions of two or more ciphers are found in the cipher text one can conclude 
+						that these are due to the fact that, in enciphering, repetitions in the plain text were 
+						repeatedly combined with the same letters or the key.
+					</p>
+					<p>
+						If we encipher with the key <q><c>Berlin</c></q> as above, we shall frequently find in the 
+						cipher text in columns 1 and 2 the ciphers <c>UL</c>, in 2 and 3 <c>XY</c>, in 3 and 4 <c>KS</c>, 
+						in 4 and 5 <c>EP</c>, and in 5 and 6 <c>BU</c> because these ciphers 
+						<c>UL, XY, KS, EP</c> and <c>BU</c> have arisen by combining 
+						the letters <c>BE, ER, RL, LI</c> and <c>IN</c> in the key with the 
+						[repetitions of] <c>th</c> in the text. <xref ref="cr_crypt_kasiski" detail="pp.30-31 (35-36)" />
+					</p>
+				</blockquote>
+				<p>
+					Reading Questions: (For these it will be helpful for you to look at the work you did in the  
+					above <xref ref="kasiski_example_by_hand">questions</xref>.)
+				</p>
+				<p>
+					<ul>
+						<li>
+							Look carefully at the cipher text in <xref ref="example_kasiski" autoname="yes" />, 
+							how often do you find the bi-grams <c>UL, XY, KS, EP</c> and <c>BU</c>?  
+							Do they always line up with the cipher key so that they give <c>th</c> when you 
+							decipher them?
+						</li>
+						<li>
+							For this observation Kasiski enciphered <c>th</c> using each of the pairs of letters 
+							<c>BE, ER, RL, LI</c> and <c>IN</c> from <c>BERLIN</c>, but he didn't consider 
+							enciphering it with <c>NB</c> (i.e. wrapping around from column 6 back to 1).  Encipher 
+							the bi-gram <c>th</c> using the rows <c>NB</c> in the Vigenere table 
+							<xref ref="appendix_figure_vigenere_new" autoname="yes" />, what cipher bi-gram do 
+							you get?  How often to you find that bi-gram in the cipher text in 
+							<xref ref="example_kasiski" autoname="yes" />? (Remember that you need to look 
+							from columns 6 to 1.)
+						</li>
+						<li>
+							Can you find other repeated bi-grams?  Can you find longer repeated n-grams?
+						</li>
+					</ul>
+				</p>
+			</subsubsection>
+			<subsubsection>
+				<title>Determining the Key</title>
+				<p>
+					First we find the key length:
+				</p>
+				<blockquote>
+					<p>
+						78. ... In a simple cipher text repetitions are more frequent and are merely accidental, 
+						that is to say, rarely occur at regular intervals, whereas in the composite cipher text 
+						[i.e. Vigenere cipher]
+						these repetitions occur less often but usually at intervals such that the number of 
+						letters between them is divisible by a number which gives the number of letters in the key.
+					</p>
+					<p> ... </p>
+					<p>
+						80. ... We now try to determine the number or letters in the key.  For this purpose we look for all repetitions of two or more ciphers in the enciphered text, then count the interval from one another 
+						of like repetitions; write these out beneath the enciphered text with numbers indicating the intervals, 
+						and endeavor to break this number up into its factors.
+					</p>
+					<p>
+						For instance, we find 16 letters between two repeated ciphers <c>UL</c>, 
+						we add two ciphers to the number 16 and get 18 as the interval for the repetition 
+						<c>UL</c>.
+					</p>
+					<p>
+						We write <c>UL</c> <m>= 18 = 2\cdot 9 = 3\cdot 6</m>. 
+					</p>
+					<p>
+						According to section (76) we can infer from this that the key contains either 
+						two, nine, three, or six letters.
+					</p>
+					<p>
+						Since the number of letters in the key is still uncertain and ...
+						the repetition of the ciphers <c>UL</c> might be purely accidental,            
+						we write out one by one all the repetitions of several ciphers, noting the
+						number representing their intervals, and break these numbers down into their factors.
+					</p>
+					<p>
+						Those factors which are found most frequent indicate the number or letters in the key.
+						<xref ref="cr_crypt_kasiski" detail="pp.31-32 (36-37)" />
+					</p>
+				</blockquote>
+				<p>
+					Reading Questions:
+				</p>
+				<p>
+					<ul>
+						<li>
+							Why did Kasiski add two to the number of characters between the 
+							two repeated copies of <c>UL</c>?
+						</li>
+						<li>
+							The three letter cipher <c>ULV</c> is also appears more than once, 
+							after counting the number of characters from one to the next how many 
+							letters should you add to that count before factoring it?  What about for the 
+							repeated cipher <c>UIIY</c>?
+						</li>
+						<li>
+							Go through the entire cipher text in <xref ref="example_kasiski" autoname="yes" />, 
+							look for all the repeated ciphers which are at least two characters long, then 
+							for each one write down the distance between them and the factors of those 
+							distances.  What number(s) pop up most often?  Why does this make sense? 
+						</li>
+					</ul>
+				</p>
+				<p>
+					Finally we find the key: In what follows Kasiski makes use of what he calls <em>the key table</em> which is 
+					a rearranged Vigenere table with plain text letters on the left, cipher letters along the top and the 
+					possible key letters on the interior.
+				</p>
+				<table>
+					<caption>Kasiski's Key Table</caption>
+					<tabular>
+						<row>
+							<cell colspan="28" halign="center">Cipher Letters</cell>
+						</row>
+						<row  bottom="minor" >
+							<cell colspan="2" halign="right" right="minor">N</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">e</cell>
+							<cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">t</cell>
+							<cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell>
+						</row>						
+						<row>
+							<cell>freq.</cell><cell right="minor">a</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">o</cell>
+							<cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">i</cell>
+							<cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">n</cell>
+							<cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell>
+						</row>
+						<row>
+							<cell>freq.</cell><cell right="minor">s</cell>
+							<cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell>
+						</row>
+					</tabular>
+				</table>
+				<blockquote>
+					<p>
+						85. ... If we have determined according to section 80, the number of letters
+						in the key, we divide the cipher text into rows containing as many ciphers
+						as the key contains letters and number the several columns. In theory those 
+						ciphers which occur most frequently in a given column should signify the 
+						letter e in the text;
+					</p>
+					<p> ... </p>
+					<p>
+						86. After we have divided the cipher text into rows according to the number
+						of letters in the key and have numbered the several columns, we take out all 
+						ciphers from column 1 and note the number o£ occurrences, then we do the same 
+						for columns, 2, 3, etc.
+					</p>
+				</blockquote>
+			</subsubsection>
+
+		</subsection>
+
+
+
+	</section>
 
 
 

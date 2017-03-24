@@ -137,11 +137,11 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
                 cipher_text += ch
     print "\nHere is your output:\n"
     if spaces == 'yes':
-        print textwrap.fill(cipher_text, 50)
+        print textwrap.fill(cipher_text, 42)
     else:
-        for i in xrange(0,len(cipher_text),5):
-            print cipher_text[i:i+5],
-            if (i+5)%50 == 0: print "\n"
+        for i in xrange(0,len(cipher_text),6):
+            print cipher_text[i:i+6],
+            if (i+6)%42 == 0: print "\n"
     		</input>
     		<output></output>
     	</sage>

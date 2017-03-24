@@ -78,7 +78,7 @@ def word_count_simple(
 <!-- Python/Sage Function -->
 import re
 @interact
-def word_count_simple(
+def string_count_simple(
                     text=input_box('Place the text that you would like to analyze here!!!', 
                     label="Enter your message", height=3, width=50, type=str),
                     key=input_box('sage', label="String to search", height=1, width=20, type=str)):
