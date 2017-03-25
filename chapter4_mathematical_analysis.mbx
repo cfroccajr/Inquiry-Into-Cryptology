@@ -1095,9 +1095,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Finally we find the key: In what follows Kasiski makes use of what he calls <em>the key table</em> which is 
 					a rearranged Vigenere table with plain text letters on the left, cipher letters along the top and the 
-					possible key letters on the interior.
+					possible key letters on the interior. So it tells us that if we have a cipher letter <c>J</c> which we 
+					believe represents a plain text letter <em>i</em> then looking in the table we can see the corresponding 
+					key letter was a <c>B</c>.
 				</p>
-				<table>
+				<table xml:id="kasiski_key_table">
 					<caption>Kasiski's Key Table</caption>
 					<tabular>
 						<row>
@@ -1113,7 +1115,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">e</cell>
+							<cell>12.22%</cell><cell right="minor">e</cell>
 							<cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
@@ -1123,7 +1125,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>U</cell><cell>V</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">t</cell>
+							<cell>9.28%</cell><cell right="minor">t</cell>
 							<cell>H</cell><cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
@@ -1131,9 +1133,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
 							<cell>F</cell><cell>G</cell>
-						</row>						
+						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">a</cell>
+							<cell>8.06%</cell><cell right="minor">a</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
 							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
@@ -1142,7 +1144,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">o</cell>
+							<cell>7.62%</cell><cell right="minor">o</cell>
 							<cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
@@ -1152,7 +1154,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>K</cell><cell>L</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">i</cell>
+							<cell>7.10%</cell><cell right="minor">i</cell>
 							<cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
@@ -1162,7 +1164,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>P</cell><cell>Q</cell><cell>R</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">n</cell>
+							<cell>6.82%</cell><cell right="minor">n</cell>
 							<cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
@@ -1172,7 +1174,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>K</cell><cell>L</cell><cell>M</cell>
 						</row>
 						<row>
-							<cell>freq.</cell><cell right="minor">s</cell>
+							<cell>6.45%</cell><cell right="minor">s</cell>
 							<cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
@@ -1180,8 +1182,67 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
 							<cell>F</cell><cell>G</cell><cell>H</cell>
 						</row>
+						<row>
+							<cell>5.91%</cell><cell right="minor">r</cell>
+							<cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell>
+						</row>
+						<row>
+							<cell>5.76%</cell><cell right="minor">h</cell>
+							<cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell>
+						</row>				
+						<row>
+							<cell>4.19%</cell><cell right="minor">l</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+						</row>
+						<row>
+							<cell>3.93%</cell><cell right="minor">d</cell>
+							<cell>X</cell><cell>Y</cell>
+							<cell>Z</cell>
+							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+							<cell>U</cell><cell>V</cell><cell>W</cell>						</row>
 					</tabular>
 				</table>
+				<p>
+					<ul>
+						<li>
+							Check that you understand the <em>key table</em> by trying to find the key for this message 
+							based on the given plain text and cipher text.
+							<pre>
+								plain: 	winter is at a close
+								CIPHER: OXEBRX AH RB N IDDJM
+							</pre>
+						</li>
+						<li>
+							Why do you think that Kasiski ordered the plain text characters the way he did?
+						</li>
+						<li>
+							Why do you think that he didn't include all the possible plain text letters?
+						</li>
+					</ul>
+				</p>
+				<p>
+					Finding the key:
+				</p>
 				<blockquote>
 					<p>
 						85. ... If we have determined according to section 80, the number of letters
@@ -1195,9 +1256,103 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						86. After we have divided the cipher text into rows according to the number
 						of letters in the key and have numbered the several columns, we take out all 
 						ciphers from column 1 and note the number o£ occurrences, then we do the same 
-						for columns, 2, 3, etc.
+						for columns, 2, 3, etc. [See <xref ref="example_kasiski" autoname="yes"/>]
+					</p>
+					<p>
+						If we have found in this way the cipher <c>U</c>, let us say, occurs seven times, cipher 
+						<c>S</c> three times and cipher <c>F</c> three times in column 1, we copy from the key table 
+						letters beneath the ciphers <c>U, S</c> and <c>F</c> on a separate sheet of paper as follows:
+					</p>
+					<pre>
+						7 U - Q B U G M H C D N J
+						3 S - O Z S E K F A B L H
+						3 F - B M F R X S N O Y U
+					</pre>
+					<p>
+						Among these letters must be found the first letter of the key.  The letter <c>B</c> occurs as 
+						second letter under cipher <c>U</c>, as eighth under cipher <c>S</c>, and as first under cipher 
+						<c>F</c>.  Hence <c>B</c> is combined seven times with <em>t</em> to form <c>U</c>, three times 
+						with <em>r</em> to form <c>S</c>, and three times with <em>e</em> to form <c>F</c>. From this we 
+						must conclude that <c>B</c> is the first letter of the key.  The letter <c>M</c> also has a 
+						more remote probability of being the first letter of the key since it occurs as fifth under 
+						<c>U</c>, and as second under <c>F</c> ... . In the same way we just found the first letter 
+						of the key, we now look for the other letters.
 					</p>
 				</blockquote>
+				<p>
+					Reading Questions:
+				</p>
+				<p>
+					<ul>
+						<li>
+							In the columns labeled 2 in the example we have been working with three most common 
+							ciphers are <c>I, E,</c> and <c>L</c> appearing 6, 5, and 4 times respectively.  From 
+							this Kasiski would have us write down the following from the columns of the 
+							key table:
+							<pre>
+								6 I - E P I U A V Q R B X F
+								5 E - A L E Q W R M N X T B
+								4 L - H S L X D Y T U E A I
+							</pre>
+							Which two possible key letters appear in all three rows?
+						</li>
+						<li>
+							In the columns labeled 3 in the example we have been working with three most common 
+							ciphers are <c>V, K,</c> and <c>I</c> appearing 5, 4, and 4 times respectively.  
+							Follow Kasiski's lead and write down the corresponding columns from the key table:
+							<pre>
+								6 V - 
+								5 K - 
+								4 I - 
+							</pre>
+							Which possible key letters appear in all three rows?
+						</li>
+						<li> 
+							In the columns labeled 4 in the example we have been working with three most common 
+							ciphers are <c>Y, P,</c> and <c>W</c> appearing 4, 4, and 3 times respectively.  
+							Repeat the steps from the previous two questions to try and find the fourth key 
+							letter.
+						</li>
+						<li> 
+							In the columns labeled 5 in the example we have been working with three most common 
+							ciphers are <c>B, W,</c> and <c>M</c> appearing 4, 3, and 3 times respectively.  
+							Repeat the steps from the previous two questions to try and find the fourth key 
+							letter.
+						</li>
+						<li> 
+							In the columns labeled 6 in the example we have been working with three most common 
+							ciphers are <c>F, V,</c> and <c>U</c> appearing 5, 3, and 3 times respectively.  
+							Repeat the steps from the previous two questions to try and find the fourth key 
+							letter.
+						</li>
+						<li>
+							Put together all the possible key letters we get for all the columns of the message, 
+							do they (or at least can they) spell <q><c>BERLIN</c></q> as we expect them to?
+						</li>
+					</ul>
+				</p>
+				<exercise>
+					<statement>
+						<p>
+							Practice exercise with a known key. Use <xref ref="kasiski_key_table" autoname="yes"/>.
+						</p>
+					</statement>
+				</exercise>
+				<exercise>
+					<statement>
+						<p>
+							Practice exercise without a known key. <xref ref="kasiski_key_table" autoname="yes"/>.
+						</p>
+					</statement>
+				</exercise>
+				<p>
+					Sage cell for calculating subsets of letters in a message:
+				</p>
+				<sage copy="sage_subset_cell" />
+				<p>
+					Sage cell for enciphering and deciphering the Vigenere Cipher:
+				</p>
+				<sage copy="sage_vigenere_cell" />
 			</subsubsection>
 
 		</subsection>
