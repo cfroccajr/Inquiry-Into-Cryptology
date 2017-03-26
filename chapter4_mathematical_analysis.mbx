@@ -86,19 +86,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				gives us two relatively simple ways to crack this cipher.  We begin with the more mathematical approach.
 				
 			</p>
-			<sbsgroup widths="48% 48%" margins="auto">
-				<sidebyside>
-					<p>
-						... take the number of partitions of the seeming words in the epistle, and find out their 
-						several divisors, which may be performed by the following rules.
-					</p>
-					<p>
-						The first line contains the first divided, and the respective quotients; the lowest line 
-						is the several prime divisors.
-					</p>
-				</sidebyside>
-				<sidebyside>
+			<assemblage>
+				<sidebyside widths="48% 48%" margins="auto">
 					<paragraphs>
+						<p>
+							... take the number of partitions of the seeming words in the epistle, and find out their 
+							several divisors, which may be performed by the following rules.
+						</p>
 						<p>
 							<em>How to find out the equal divisors of any number.</em>
 						</p>
@@ -118,8 +112,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							By multiplying the first prime divisor towards the left hand of the table by the second, and 
 							writing the product under the second. 
 						</p>
+						<p>
+							Next, by the third prime divisor, multiplying all the 
+							figures in the table towards the left hand, setting the several products in the third 
+							column: and so forth, throughout all the prime divisors; ...
+						</p>
 					</paragraphs>
 					<paragraphs>
+						<p>
+							<em>Example to find out all the divisors of 450</em>
+							(see <xref ref="prime_factors_table" autoname="yes"/> below)
+						</p>
+						<p>
+							The first line contains the first divided, and the respective quotients; the lowest line 
+							is the several prime divisors.
+						</p>
 						<p>
 							Now 450, the number given, being divided by 2, a prime divisor, the quotient is 225, 
 							which being divided by 3, you have 75 for a new quotient; and again divided by 3, you 
@@ -127,26 +134,40 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							number, you have 1, or unity in the last quotient of all: so that your prime divisors 
 							are, 2, 3, 3, 5, 5, all which set down in the tops of the columns [of a new table], 
 							and multiplying them according to the [second] rule given, the operation will stand thus.
+							(see <xref ref="factors_table" autoname="yes" /> below)
 						</p>
 						<p>
 							All the divisors of 450, are 2, 3, 5, 6, 9, 10, 15, 18, 25, 30, 45, 50, 75, 90, 150, 225; 
 							and one of them (supposing the epistle to have consisted of 450 seeming words) should have 
 							been the number of letters combined for the key: ...
 						</p>
+						<p>- John Falconer <xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
 					</paragraphs>
 				</sidebyside>
-				<sidebyside>
-					<paragraphs>
-						<p>
-							Next, by the third prime divisor, multiplying all the 
-							figures in the table towards the left hand, setting the several products in the third 
-							column: and so forth, throughout all the prime divisors; ...
-						</p>
-						<p>
-							<em>Example to find out all the divisors of 450</em>
-						</p>
-					</paragraphs>
-					<table>
+				<sidebyside widths="48% 48%" margins="auto">
+					<table xml:id="prime_factors_table">
+						<caption>Prime Factors Table</caption>
+						<tabular left="minor" right="minor" halign="left">
+							<row>
+								<cell>450</cell>
+								<cell>225</cell>
+								<cell>75</cell>
+								<cell>25</cell>
+								<cell>5</cell>
+								<cell>1</cell>
+							</row>
+							<row>
+								<cell>2</cell>
+								<cell>3</cell>
+								<cell>3</cell>
+								<cell>5</cell>
+								<cell>5</cell>
+								<cell> </cell>
+							</row>					
+						</tabular>
+					</table>
+					<table xml:id="factors_table">
+						<caption>Factors Table</caption>
 						<tabular halign="right">
 							<row left="minor" >
 								<cell right="minor" >
@@ -268,32 +289,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								</cell>
 							</row>
 						</tabular>
-					</table>						
-				</sidebyside>
-				<sidebyside valign="bottom">
-					<table>
-						<tabular left="minor" right="minor" halign="left">
-							<row>
-								<cell>450</cell>
-								<cell>225</cell>
-								<cell>75</cell>
-								<cell>25</cell>
-								<cell>5</cell>
-								<cell>1</cell>
-							</row>
-							<row>
-								<cell>2</cell>
-								<cell>3</cell>
-								<cell>3</cell>
-								<cell>5</cell>
-								<cell>5</cell>
-								<cell> </cell>
-							</row>					
-						</tabular>
 					</table>
-					<p>- John Falconer <xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
 				</sidebyside>				
-			</sbsgroup>
+			</assemblage>
 			<p>
 				<ul>
 					<li>
@@ -369,7 +367,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				encouraging us to use this in order to find out the number of letters used for our key, Falconer 
 				lets us know that there is effectively an easier way to attack his own cipher.
 			</p>
-			<blockquote>
+			<assemblage>
 				<p>
 					<q>
 						or rather for dispatch, take out the seeming words, and write them down in [columns] beginning 
@@ -377,7 +375,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						through them 
 					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="p.47 (75)" /> 
 				</p>
-			</blockquote>
+			</assemblage>
 			<p>
 				Let's follow Falconer's advice using the message we used when we introduced his cipher in 
 				<xref ref="section_falconer_cipher" autoname="yes" />:
@@ -417,7 +415,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</row>
 				</tabular>
 			</table>
-			<blockquote>
+			<assemblage>
 				<p>
 					<q>1. Search in the several lines for some of the particles [(words or n-grams)] of that language you shall suppose 
 					the epistle to have been writ in. If in English, make suppositions, e.g. for such little words as 
@@ -437,7 +435,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					have found out the whole writing, which by this time will be no great difficulty.</q>
 					- John Falconer <xref ref="cr_crypt_falconer" detail="pp.48-49 (76-77)" /> 
 				</p> 
-			</blockquote>
+			</assemblage>
 			<p>
 				Taking Falconer's advice from step one look at each line of 
 				<xref ref="falconer_transposed_message" autoname="yes" /> 
@@ -615,7 +613,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</objectives>
 		<subsection xml:id="falconer_polyalphabetics">
 			<title>Falconer's Attack on Polyalphabetics</title>
-			<blockquote>
+			<assemblage>
 				<p>
 					<q>
 						There is an invention of secrecy much insisted on (though none of the swiftest) by the author of the 
@@ -624,7 +622,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						acknowledges it too tedious for a current correspondence;
 					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="p.17 (45)" />
 				</p>
-			</blockquote>
+			</assemblage>
 			<p>
 				So begins John Falconer's discussion of using the polyalphabetic cipher.  As with other cryptographers 
 				of his time he agrees that the cipher, while secure, is to slow an cumbersome and so not worth the 
@@ -638,22 +636,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				For his first example of how to attack a polyalphabetic cipher Falconer assumes each line is enciphered by a separate 
 				cipher alphabet. <xref ref="cr_crypt_falconer" detail="pp.20-23 (48-51)" />
 			</p>
-			<p>I. Example in the Lines</p>
-			<sidebyside widths="48% 48%" margins="auto" >
-				<pre>
-					Y pb vdgrts id ztte ixt Hdafytgh
-					idcb wofr rihm obr rihm rxfh
-					dfaawi fd ze espi gtww cpfzwe ez
-					cqn Nwuxg bynnmrtg. qibc.
-				</pre>
-				<pre>
-					I am forced to keep the Soldiers
-					upon hard duty and hard diet:
-					Supply us, or they will revolt to
-					the enemy speedily. Hast. 
-				</pre>
-			</sidebyside>
-			<blockquote>
+			<assemblage>
+				<p>I. Example in the Lines</p>
+				<sidebyside widths="50% 50%" margins="auto" >
+					<pre>
+						Y pb vdgrts id ztte ixt Hdafytgh
+						idcb wofr rihm obr rihm rxfh
+						dfaawi fd ze espi gtww cpfzwe ez
+						cqn Nwuxg bynnmrtg. qibc.
+					</pre>
+					<pre>
+						I am forced to keep the Soldiers
+						upon hard duty and hard diet:
+						Supply us, or they will revolt to
+						the enemy speedily. Hast. 
+					</pre>
+				</sidebyside>
 				<p>
 					<q>
 						1. When there is only one alphabet used for a line, the writing might be discovered an in 
@@ -681,7 +679,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						... you may proceed to find the alphabet of the second, third, or any other line, as you did the first;
 					</q>
 				</p>
-			</blockquote>
+			</assemblage>
 			<figure xml:id="figure_falconer_table">
 				<caption>Falconer's Counter-Table</caption>
 				<image width="90%" archive="svg png pdf">
@@ -746,7 +744,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				In the next section of his text Falconer tackles the problem of deciphering a message in which we switch alphabet with each 
 				new word.  It is here that he makes a significant observation that can help us find the length of the keyword.
 			</p>
-			<blockquote>
+			<assemblage>
 				<p>
 					<q>
 						1. Having found an alphabet for the first, second, or indeed any word near the beginning of the epistle, go through 
@@ -767,7 +765,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						[Repeat this process until each word is marked as part of a series.]
 					</q> - John Falconer <xref ref="cr_crypt_falconer" detail="pp.24-25 (52-53)" />
 				</p>
-			</blockquote>
+			</assemblage>
 			<p>
 				Let's try to see if we can make sense of Falconer's advice and decipher the message below.
 			</p>
@@ -845,7 +843,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
 	<section xml:id="section_polyalphabetic_attack2" >
-		<title>A Nineteenth Century Revolution</title>
+		<title>Nineteenth Century Revelations</title>
 		<objectives>
 			<ul>
 				<li>
@@ -870,7 +868,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					For this section we will use the following quote for our analysis.  It is enciphered using a Vigenere cipher with 
 					the keyword <c>BERLIN</c>.
 				</p>
-				<sidebyside widths="35% 55%" margins="auto" xml:id="example_kasiski" valigns="top top">
+				<sidebyside widths="40% 55%" margins="auto" xml:id="example_kasiski" valigns="middle top">
 					<caption>Sample Vigenere Cipher Text</caption>
 					<figure>
 						<caption>Plain Text</caption>
@@ -886,27 +884,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</figure>
 					<figure>
 						<caption>Cipher Text</caption>
-						<pre>
-							     123456  123456  123456  123456
-							Key: BERLIN  BERLIN  BERLIN  BERLIN
-
-							 (1) UICWBU  FKVYME  BPIPUN  SULPBU  
-
-							 (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  
-
-							 (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF 
-
-							 (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  
-
-							 (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  
-
-							 (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH 
-
-							 (7) SVVYBY  ZECWYH  JIK
-						</pre>
+						<p>
+							<cd>
+								<cline>     123456  123456  123456  123456</cline>
+								<cline>Key: BERLIN  BERLIN  BERLIN  BERLIN</cline>
+								<cline></cline>
+								<cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
+								<cline></cline>
+								<cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
+								<cline></cline>
+								<cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
+								<cline></cline>
+								<cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
+								<cline></cline>
+								<cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
+								<cline></cline>
+								<cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
+								<cline></cline>
+								<cline> (7) SVVYBY  ZECWYH  JIK</cline>
+							</cd>
+						</p>
 					</figure>
 				</sidebyside>
-				<blockquote>
+				<assemblage>
 					<p>
 						VI. The Actual Art of Decipherment [Cryptanalysis].
 					</p>
@@ -947,7 +947,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						key with the letter <c>t</c> of the text and t is the next most common letter letter after e.
 						<xref ref="cr_crypt_kasiski" detail="pp.29-30 (34-35)" />
 					</p>
-				</blockquote>
+				</assemblage>
 				<p>
 					Reading Questions:
 				</p>
@@ -984,7 +984,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Further observations by Kasiski:
 				</p>
-				<blockquote>
+				<assemblage>
 					<p>
 						76. ... where repetitions of two or more ciphers are found in the cipher text one can conclude 
 						that these are due to the fact that, in enciphering, repetitions in the plain text were 
@@ -998,7 +998,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						the letters <c>BE, ER, RL, LI</c> and <c>IN</c> in the key with the 
 						[repetitions of] <c>th</c> in the text. <xref ref="cr_crypt_kasiski" detail="pp.30-31 (35-36)" />
 					</p>
-				</blockquote>
+				</assemblage>
 				<p>
 					Reading Questions: (For these it will be helpful for you to look at the work you did in the  
 					above <xref ref="kasiski_example_by_hand">questions</xref>.)
@@ -1032,7 +1032,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					First we find the key length:
 				</p>
-				<blockquote>
+				<assemblage>
 					<p>
 						78. ... In a simple cipher text repetitions are more frequent and are merely accidental, 
 						that is to say, rarely occur at regular intervals, whereas in the composite cipher text 
@@ -1068,7 +1068,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						Those factors which are found most frequent indicate the number or letters in the key.
 						<xref ref="cr_crypt_kasiski" detail="pp.31-32 (36-37)" />
 					</p>
-				</blockquote>
+				</assemblage>
 				<p>
 					Reading Questions:
 				</p>
@@ -1115,7 +1115,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell>
 						</row>
 						<row>
-							<cell>12.22%</cell><cell right="minor">e</cell>
+							<cell>12.22<percent /></cell><cell right="minor">e</cell>
 							<cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
@@ -1125,7 +1125,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>U</cell><cell>V</cell>
 						</row>
 						<row>
-							<cell>9.28%</cell><cell right="minor">t</cell>
+							<cell>9.28<percent /></cell><cell right="minor">t</cell>
 							<cell>H</cell><cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
@@ -1135,7 +1135,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>F</cell><cell>G</cell>
 						</row>
 						<row>
-							<cell>8.06%</cell><cell right="minor">a</cell>
+							<cell>8.06<percent /></cell><cell right="minor">a</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
 							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
@@ -1144,7 +1144,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>Z</cell>
 						</row>
 						<row>
-							<cell>7.62%</cell><cell right="minor">o</cell>
+							<cell>7.62<percent /></cell><cell right="minor">o</cell>
 							<cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
@@ -1154,7 +1154,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>K</cell><cell>L</cell>
 						</row>
 						<row>
-							<cell>7.10%</cell><cell right="minor">i</cell>
+							<cell>7.10<percent /></cell><cell right="minor">i</cell>
 							<cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
@@ -1164,7 +1164,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>P</cell><cell>Q</cell><cell>R</cell>
 						</row>
 						<row>
-							<cell>6.82%</cell><cell right="minor">n</cell>
+							<cell>6.82<percent /></cell><cell right="minor">n</cell>
 							<cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
@@ -1174,7 +1174,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>K</cell><cell>L</cell><cell>M</cell>
 						</row>
 						<row>
-							<cell>6.45%</cell><cell right="minor">s</cell>
+							<cell>6.45<percent /></cell><cell right="minor">s</cell>
 							<cell>I</cell><cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
@@ -1183,7 +1183,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>F</cell><cell>G</cell><cell>H</cell>
 						</row>
 						<row>
-							<cell>5.91%</cell><cell right="minor">r</cell>
+							<cell>5.91<percent /></cell><cell right="minor">r</cell>
 							<cell>J</cell>
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
@@ -1193,7 +1193,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell>
 						</row>
 						<row>
-							<cell>5.76%</cell><cell right="minor">h</cell>
+							<cell>5.76<percent /></cell><cell right="minor">h</cell>
 							<cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
@@ -1203,7 +1203,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell>
 						</row>				
 						<row>
-							<cell>4.19%</cell><cell right="minor">l</cell>
+							<cell>4.19<percent /></cell><cell right="minor">l</cell>
 							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
 							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
@@ -1212,7 +1212,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
 						</row>
 						<row>
-							<cell>3.93%</cell><cell right="minor">d</cell>
+							<cell>3.93<percent /></cell><cell right="minor">d</cell>
 							<cell>X</cell><cell>Y</cell>
 							<cell>Z</cell>
 							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
@@ -1227,10 +1227,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<li>
 							Check that you understand the <em>key table</em> by trying to find the key for this message 
 							based on the given plain text and cipher text.
-							<pre>
-								plain: 	winter is at a close
-								CIPHER: OXEBRX AH RB N IDDJM
-							</pre>
+							<cd>
+								<cline>plain:  winter is at a close</cline>
+								<cline>CIPHER: OXEBRX AH RB N IDDJM</cline>
+							</cd>
 						</li>
 						<li>
 							Why do you think that Kasiski ordered the plain text characters the way he did?
@@ -1243,7 +1243,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Finding the key:
 				</p>
-				<blockquote>
+				<assemblage >
 					<p>
 						85. ... If we have determined according to section 80, the number of letters
 						in the key, we divide the cipher text into rows containing as many ciphers
@@ -1263,11 +1263,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<c>S</c> three times and cipher <c>F</c> three times in column 1, we copy from the key table 
 						letters beneath the ciphers <c>U, S</c> and <c>F</c> on a separate sheet of paper as follows:
 					</p>
-					<pre>
-						7 U - Q B U G M H C D N J
-						3 S - O Z S E K F A B L H
-						3 F - B M F R X S N O Y U
-					</pre>
+					<p>
+						<cd>
+							<cline>7 U - Q B U G M H C D N J</cline>
+							<cline>3 S - O Z S E K F A B L H</cline>
+							<cline>3 F - B M F R X S N O Y U</cline>
+						</cd>
+					</p>
 					<p>
 						Among these letters must be found the first letter of the key.  The letter <c>B</c> occurs as 
 						second letter under cipher <c>U</c>, as eighth under cipher <c>S</c>, and as first under cipher 
@@ -1276,9 +1278,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						must conclude that <c>B</c> is the first letter of the key.  The letter <c>M</c> also has a 
 						more remote probability of being the first letter of the key since it occurs as fifth under 
 						<c>U</c>, and as second under <c>F</c> ... . In the same way we just found the first letter 
-						of the key, we now look for the other letters.
+						of the key, we now look for the other letters. <xref ref="cr_crypt_kasiski" detail="pp.34-35 (39-40)" />
 					</p>
-				</blockquote>
+				</assemblage>
 				<p>
 					Reading Questions:
 				</p>
@@ -1289,22 +1291,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							ciphers are <c>I, E,</c> and <c>L</c> appearing 6, 5, and 4 times respectively.  From 
 							this Kasiski would have us write down the following from the columns of the 
 							key table:
-							<pre>
-								6 I - E P I U A V Q R B X F
-								5 E - A L E Q W R M N X T B
-								4 L - H S L X D Y T U E A I
-							</pre>
+							<cd>
+								<cline>6 I - E P I U A V Q R B X F</cline>
+								<cline>5 E - A L E Q W R M N X T B</cline>
+								<cline>4 L - H S L X D Y T U E A I</cline>
+							</cd>
 							Which two possible key letters appear in all three rows?
 						</li>
 						<li>
 							In the columns labeled 3 in the example we have been working with three most common 
 							ciphers are <c>V, K,</c> and <c>I</c> appearing 5, 4, and 4 times respectively.  
 							Follow Kasiski's lead and write down the corresponding columns from the key table:
-							<pre>
-								6 V - 
-								5 K - 
-								4 I - 
-							</pre>
+							<cd>
+								<cline>6 V - </cline>
+								<cline>5 K - </cline>
+								<cline>4 I - </cline>
+							</cd>
 							Which possible key letters appear in all three rows?
 						</li>
 						<li> 
@@ -1334,16 +1336,137 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<exercise>
 					<statement>
 						<p>
-							Practice exercise with a known key. Use <xref ref="kasiski_key_table" autoname="yes"/>.
+							The following text was enciphered using a key of <c>CIPHER</c>. 
+							Follow Kasiski's steps to see if you could have found this for 
+							your self.
+						</p>
+						<p>
+							<cd>
+								<cline> (1) UQCJIR TIBPWJ UQCNYC CZIYEE UNDYQR VQDUME VWPJSE </cline>
+
+								<cline> (2) HMHZSI QNIOIF TLTYFR KATTIR WFLHWE QTDUKV TBWLWR </cline>
+
+								<cline> (3) OMBHRL RBDALR VXTYMF FBWLTC CKTDLZ EPPYED KAWHHY </cline>
+
+								<cline> (4) GTSPRK JMLVVK JGVVZV TVDYWV UBXTEK KWCDEJ VPPASW </cline>
+
+								<cline> (5) CXGLPR VMLOSD JMGLWG GKILHR PLPMVZ GVSASN JWBOIF </cline>
+
+								<cline> (6) YMSHHV DBDMKI CBXAYU GJJARF YPTMIC VPXTWV NNPUME </cline>
+
+								<cline> (7) HMGPSI CVSALR VIGHQZ UEPZLZ UUPZXV TPTOMD UMAMPZ </cline>
+
+								<cline> (8) IPILHR NICAII PAJTQF PMSHXL TVZLCR PLHHMU TMIBVE </cline>
+
+								<cline> (9) KVVASR TIBPWZ CUPACF WZDYHV TABVRJ GQVUIL TIGHQZ </cline>
+
+								<cline>(10) UUTYIC AVDKHV FPXZLV CLPZQL EPPZXF UINCII AODVHR </cline>
+
+								<cline>(11) PLHPKE GLIVLZ OEXALY KAWHRU VWALEU VPTDEP</cline>
+							</cd>
 						</p>
 					</statement>
+					<hint>
+						<p>
+							<ol>
+								<li>
+									Look for repeated strings.
+								</li>
+								<li>
+									For each pair of repeated strings write them down and 
+									next to them write down the number of characters 
+									from the start of one to the start of the next 
+									and the factors of that number.
+								</li>
+								<li>
+									Assuming that the most common factor is 6, which we know it should be, 
+									use the subset cell to find the most common letters in each column.
+								</li>
+								<li>
+									Use these letters and the key table 
+									(<xref ref="kasiski_key_table" autoname="yes"/>) 
+									to try and find the key, which 
+									should be <c>CIPHER</c>.
+								</li>
+							</ol>
+						</p>
+					</hint>
 				</exercise>
-				<exercise>
+				<exercise><!-- ironmask -->
 					<statement>
 						<p>
-							Practice exercise without a known key. <xref ref="kasiski_key_table" autoname="yes"/>.
+							Follow Kasiski's steps to find the key for this message.  Then use 
+							the Vigenere cipher cell to decipher it.
+						</p>
+						<p>
+							<cd>
+								<cline> (1) IERSDO EDPRHZ AMWXBU OEFAYX IEOPOO EWWUOG UNYRQJ </cline>
+
+								<cline> (2) OPFIGX BFHUQP SMMFTG TEZYZJ SYUKWK BIIROE FDILFT </cline>
+
+								<cline> (3) MVWEXY WFFHGE OYHFFO FYBYWA STZKBZ GGASSI BFSIQR </cline>
+
+								<cline> (4) QDPZBT TESCSV RUUMKO TWKUKT ZOSZBT TAVCME HSARZS </cline>
+
+								<cline> (5) USOPWW ZIBYSV DOFWIJ YUMDLR ZFKAFH WCQCJR DPDKBV </cline>
+
+								<cline> (6) OGFHWP MVHBRR SYCCOF FOLRMW WEETKE JASPFT ZOZVDY </cline>
+
+								<cline> (7) KWSCVV UNFINO PVYAQW JSOYHJ QLDDPR HGTECS VXGPML </cline>
+
+								<cline> (8) DSVXVV YWSCNI CZZEUO AJWGKH WCBZZY RUJDPV FXZEOD </cline>
+
+								<cline> (9) PRHYAU ACFZJZ GSLOFG SEUEFM MRBVYP WBQFIF PEKSZV </cline>
+
+								<cline>(10) TBDAHB QMOGQC GXDVFF MTAYVN WGTOFO EYCZFH WZWJGR </cline>
+
+								<cline>(11) ESAYVF TFGCZK AVQEQT HVITSQ ANSVMM SYIILR BYSUUG </cline>
+
+								<cline>(12) ZOAKDB IEJCWW HUQKAX OUCZNU LKAKCF MYAXOV LNOTDI </cline>
+
+								<cline>(13) EYOGFH WUQEUF IIKRER GQMRLK OEOARO MXLYWZ EEDPKF </cline>
+
+								<cline>(14) ACXELO TPOGML GCAKVR YUKUMK SRDHSN VFRBGB LCMZHU </cline>
+
+								<cline>(15) QRMZWE HUQRWK AFBJTI URPRRH DGWNBY SHZFGB BLBNFE </cline>
+
+								<cline>(16) HRQCWC BELYZV JRMLZS ATVNDA UDMIOA PBABBY DUULAZ </cline>
+
+								<cline>(17) XVPHDI WNNFFR HEJLME SNFHSW IJYBRS LOMCSK ULWNBF </cline>
+
+								<cline>(18) OPAUFD ZPKUQR WDPVAR ZSWOUV RYUTLV MDCEQT ZKVJZN </cline>
+
+								<cline>(19) HEKYNK VRQLWW MEHFBH AVQGDR PEHBQM SQQVWX WWHUQS </cline>
+
+								<cline>(20) GMQVHL AFVKZK OTZAFG PFVNPL GKLVRU UMOSBY VBZOJC </cline>
+							</cd>
 						</p>
 					</statement>
+					<hint>
+						<p>
+							<ol>
+								<li>
+									Look for repeated strings.
+								</li>
+								<li>
+									For each pair of repeated strings write them down and 
+									next to them write down the number of characters 
+									from the start of one to the start of the next 
+									and the factors of that number.
+								</li>
+								<li> 
+									Use the subset cell to find the most common letters in each <q>column</q> 
+									as if you had split up the cipher according to the length you found 
+									in the previous step.
+								</li>
+								<li>
+									Use these letters and the key table 
+									(<xref ref="kasiski_key_table" autoname="yes"/>) 
+									to try and find the key.
+								</li>
+							</ol>
+						</p>
+					</hint>
 				</exercise>
 				<p>
 					Sage cell for calculating subsets of letters in a message:
@@ -1354,9 +1477,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</p>
 				<sage copy="sage_vigenere_cell" />
 			</subsubsection>
-
 		</subsection>
-
+		<subsection>
+			<title> (*)Babbage's Contributions </title>
+			<p>
+				Insert Information on Babbage's Cryptologic Work ...
+			</p>
+		</subsection>
 
 
 	</section>

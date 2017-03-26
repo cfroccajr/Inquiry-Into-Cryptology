@@ -350,6 +350,136 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</tabular>
 	</table>
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	Kasiski Key Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+	<table xml:id="appendix_kasiski_key_table">
+		<caption>Kasiski's Key Table</caption>
+		<tabular>
+			<row>
+				<cell colspan="28" halign="center">Cipher Letters</cell>
+			</row>
+			<row  bottom="minor" >
+				<cell colspan="2" halign="right" right="minor">N</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+			</row>
+			<row>
+				<cell>12.22<percent /></cell><cell right="minor">e</cell>
+				<cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell>
+			</row>
+			<row>
+				<cell>9.28<percent /></cell><cell right="minor">t</cell>
+				<cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell>
+			</row>
+			<row>
+				<cell>8.06<percent /></cell><cell right="minor">a</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+			</row>
+			<row>
+				<cell>7.62<percent /></cell><cell right="minor">o</cell>
+				<cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell>
+			</row>
+			<row>
+				<cell>7.10<percent /></cell><cell right="minor">i</cell>
+				<cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell>
+			</row>
+			<row>
+				<cell>6.82<percent /></cell><cell right="minor">n</cell>
+				<cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell>
+			</row>
+			<row>
+				<cell>6.45<percent /></cell><cell right="minor">s</cell>
+				<cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell>
+			</row>
+			<row>
+				<cell>5.91<percent /></cell><cell right="minor">r</cell>
+				<cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell>
+			</row>
+			<row>
+				<cell>5.76<percent /></cell><cell right="minor">h</cell>
+				<cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell>
+			</row>				
+			<row>
+				<cell>4.19<percent /></cell><cell right="minor">l</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+			</row>
+			<row>
+				<cell>3.93<percent /></cell><cell right="minor">d</cell>
+				<cell>X</cell><cell>Y</cell>
+				<cell>Z</cell>
+				<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
+				<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
+				<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
+				<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
+				<cell>U</cell><cell>V</cell><cell>W</cell>						</row>
+		</tabular>
+	</table>
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
