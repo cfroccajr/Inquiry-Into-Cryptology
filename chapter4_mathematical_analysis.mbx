@@ -886,21 +886,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<caption>Cipher Text</caption>
 						<p>
 							<cd>
-								<cline>     123456  123456  123456  123456</cline>
-								<cline>Key: BERLIN  BERLIN  BERLIN  BERLIN</cline>
-								<cline></cline>
+								<cline>     123456  123456  123456  123456 </cline>
+								<cline> </cline>
+								<cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
+								<cline> </cline>
 								<cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
-								<cline></cline>
+								<cline> </cline>
 								<cline> (7) SVVYBY  ZECWYH  JIK</cline>
 							</cd>
 						</p>
@@ -1099,129 +1100,51 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					believe represents a plain text letter <em>i</em> then looking in the table we can see the corresponding 
 					key letter was a <c>B</c>.
 				</p>
-				<table xml:id="kasiski_key_table">
-					<caption>Kasiski's Key Table</caption>
-					<tabular>
-						<row>
-							<cell colspan="28" halign="center">Cipher Letters</cell>
-						</row>
-						<row  bottom="minor" >
-							<cell colspan="2" halign="right" right="minor">N</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-						</row>
-						<row>
-							<cell>12.22<percent /></cell><cell right="minor">e</cell>
-							<cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell>
-						</row>
-						<row>
-							<cell>9.28<percent /></cell><cell right="minor">t</cell>
-							<cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell>
-						</row>
-						<row>
-							<cell>8.06<percent /></cell><cell right="minor">a</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-						</row>
-						<row>
-							<cell>7.62<percent /></cell><cell right="minor">o</cell>
-							<cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell>
-						</row>
-						<row>
-							<cell>7.10<percent /></cell><cell right="minor">i</cell>
-							<cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell>
-						</row>
-						<row>
-							<cell>6.82<percent /></cell><cell right="minor">n</cell>
-							<cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell>
-						</row>
-						<row>
-							<cell>6.45<percent /></cell><cell right="minor">s</cell>
-							<cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell><cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell>
-						</row>
-						<row>
-							<cell>5.91<percent /></cell><cell right="minor">r</cell>
-							<cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell>
-						</row>
-						<row>
-							<cell>5.76<percent /></cell><cell right="minor">h</cell>
-							<cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell>
-						</row>				
-						<row>
-							<cell>4.19<percent /></cell><cell right="minor">l</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell><cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-						</row>
-						<row>
-							<cell>3.93<percent /></cell><cell right="minor">d</cell>
-							<cell>X</cell><cell>Y</cell>
-							<cell>Z</cell>
-							<cell>A</cell><cell>B</cell><cell>C</cell><cell>D</cell><cell>E</cell>
-							<cell>F</cell><cell>G</cell><cell>H</cell><cell>I</cell><cell>J</cell>
-							<cell>K</cell><cell>L</cell><cell>M</cell><cell>N</cell><cell>O</cell>
-							<cell>P</cell><cell>Q</cell><cell>R</cell><cell>S</cell><cell>T</cell>
-							<cell>U</cell><cell>V</cell><cell>W</cell>						</row>
-					</tabular>
-				</table>
+				<figure xml:id="kasiski_key_table">
+					<caption>Kasiski Key Table</caption>
+					<image width="90%" archive="svg png pdf">
+						<description>Kasiski Key Table</description>
+						<latex-image-code>
+						    \begin{tikzpicture}
+						    \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
+						    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
+								\filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.25,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+			    			    \foreach \x/\ctext in 
+						    	{0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+									13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+			    			    {
+						    	\pgfmathtruncatemacro{\n}{mod(\x+\shift+26,26)};
+			    				\draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+			    				}
+							}
+			    			\foreach \x/\ctext in 
+							{
+								0/12.22\%\ \ e,
+								1/9.28\%\ \ \ \ t,
+								2/8.06\%\ \ \ \ a,
+								3/7.62\%\ \ \ \ o,
+								4/7.10\%\ \ \ \ i,
+								5/6.82\%\ \ \ \ n,
+								6/6.45\%\ \ \ \ s,
+								7/5.91\%\ \ \ \ r,
+								8/5.76\%\ \ \ \ h,
+								9/4.19\%\ \ \ \ l,
+								10/3.93\%\ \ \ \ d
+							}
+							{
+								\draw (-0.25,-0.5*\x) node {$\ctext$};
+							}
+			    			\foreach \x/\ctext in 
+							{0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+							{
+								\draw (1+0.55*\x,0.5) node {$\ctext$};
+							}
+							\draw (-1.25,0.25)--(15,0.25);
+							\draw (0.75,1)--(0.75,-5.5);
+						    \end{tikzpicture}
+						</latex-image-code>
+					</image>
+				</figure>
 				<p>
 					<ul>
 						<li>
