@@ -88,6 +88,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</li>
 
 			<li>
+				<title>Crib</title>
+				<p>
+					In cryptology a <em>crib</em> is a known piece of plaintext which may be compared to as sample 
+					ciphertext in order to aid cryptanalysis.
+					<index><main>crib</main></index>
+				</p>
+			</li>
+
+			<li>
 				<title>Cryptoanalysis</title>
 				<p>
 					<em>Cryptoanalysis</em> is an attempt to compute the key or determine the meaning of a message from the ciphertext.
@@ -176,6 +185,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 		</li>
 
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	I   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+		<li>
+				<title>Index of Coincidence:</title>
+				<index><main>index of coincidence</main></index>
+			<p>
+				The <em>index of coincidence</em> for a block of text is the probability that two characters 
+				chosen at random are the same.
+			</p>
+		</li>
+
+
+
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 		<li>
@@ -213,6 +237,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
+		<li>
+				<title>Pangrams</title>
+				<index><main>pangrams</main></index>
+			<p>
+				<em>Pangrams</em> are words or sentences containing every letter of the alphabet at least once.
+			</p>
+		</li>
 		<li>
 				<title>Plaintext:</title>
 				<index><main>plaintext</main></index>

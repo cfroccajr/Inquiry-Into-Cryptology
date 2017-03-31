@@ -774,7 +774,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<li>
 						Start by trying to find some repeated pieces of text. Falconer seems to imply that these are 
 						enciphered using the same alphabet from his counter-table; thinking about how we use the 
-						Vigenere cipher normally why could we end up getting theses repetitions? 
+						Vigen&#x00E8;re cipher normally why could we end up getting theses repetitions? 
 					</li>
 					<li>
 						How far apart are the repeated strings?  What factors do they have in common?
@@ -816,7 +816,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				SW SBE XNBD, MQ CQN UXRGTNCWLXG NOQBOO SK PBZCNEWFBA GFDQ
 			</pre>
 			<p>
-				Exactly one hundred years after Vigenere published his work Falconer lead us in the right direction to 
+				Exactly one hundred years after Vigen&#x00E8;re published his work Falconer lead us in the right direction to 
 				crack the  polyalphabetic substitution cipher. First, he pointed out that whether we encipher 
 				each new line, word, or letter by a different alphabet if we can group elements of the message which were 
 				enciphered the same way together then we can treat each group as a monoalphabetic substitution cipher.  
@@ -865,48 +865,48 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					whenever possible we will remain faithful to the original.
 				</p>
 				<p>
-					For this section we will use the following quote for our analysis.  It is enciphered using a Vigenere cipher with 
+					For this section we will use the following quote for our analysis.  It is enciphered using a Vigen&#x00E8;re cipher with 
 					the keyword <c>BERLIN</c>.
 				</p>
-				<sidebyside widths="40% 55%" margins="auto" xml:id="example_kasiski" valigns="middle top">
-					<caption>Sample Vigenere Cipher Text</caption>
-					<figure>
-						<caption>Plain Text</caption>
-						<p>
-							<q>
-								Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, 
-								and the French, the English, and the Americans on the western front which is currently all quiet.
-							</q>
-							<fn>
-								Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
-							</fn>
-						</p>
-					</figure>
-					<figure>
-						<caption>Cipher Text</caption>
-						<p>
-							<cd>
-								<cline>     123456  123456  123456  123456 </cline>
-								<cline> </cline>
-								<cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
-								<cline> </cline>
-								<cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
-								<cline> </cline>
-								<cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
-								<cline> </cline>
-								<cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
-								<cline> </cline>
-								<cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
-								<cline> </cline>
-								<cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
-								<cline> </cline>
-								<cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
-								<cline> </cline>
-								<cline> (7) SVVYBY  ZECWYH  JIK</cline>
-							</cd>
-						</p>
-					</figure>
-				</sidebyside>
+				<figure xml:id="example_kasiski">
+					<caption>Sample  Vigen&#x00E8;re Enciphering</caption>
+					<p>
+						Plain Text:
+					</p>
+					<p>
+						<q>
+							Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, 
+							and the French, the English, and the Americans on the western front which is currently all quiet.
+						</q>
+						<fn>
+							Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
+						</fn>
+					</p>
+					<p>
+						Cipher Text:
+					</p>
+					<p>
+						<cd>
+							<cline>     123456  123456  123456  123456 </cline>
+							<cline> </cline>
+							<cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
+							<cline> </cline>
+							<cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
+							<cline> </cline>
+							<cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
+							<cline> </cline>
+							<cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
+							<cline> </cline>
+							<cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
+							<cline> </cline>
+							<cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
+							<cline> </cline>
+							<cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
+							<cline> </cline>
+							<cline> (7) SVVYBY  ZECWYH  JIK</cline>
+						</cd>
+					</p>
+				</figure>
 				<assemblage>
 					<p>
 						VI. The Actual Art of Decipherment [Cryptanalysis].
@@ -961,15 +961,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<xref ref="section_polyalphabetic_attack1" autoname="yes"/>?
 						</li>
 						<li>
-							We know that the Vigenere cipher can encipher many different plain text letters 
+							We know that the Vigen&#x00E8;re cipher can encipher many different plain text letters 
 							as the same cipher text letter, so why is it reasonable for Kasiski to believe that 
 							all the <c>U</c>'s in column 1 should represent <c>e</c> or that all the 
 							<c>P</c>'s in column 5 might represent <c>t</c>?  (Answer in terms 
-							of how we know the Vigenere cipher works.)
+							of how we know the Vigen&#x00E8;re cipher works.)
 						</li>
 						<li xml:id="kasiski_example_by_hand">
 							Break the plain text message in <xref ref="example_kasiski" autoname="yes" /> into blocks of six 
-							then use the key <c>BERLIN</c> and the modern Vigenere table 
+							then use the key <c>BERLIN</c> and the modern Vigen&#x00E8;re table 
 							<xref ref="appendix_figure_vigenere_new" autoname="yes" /> 
 							to encipher it, you should get the same cipher text as that 
 							which is in the figure.
@@ -1016,7 +1016,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							For this observation Kasiski enciphered <c>th</c> using each of the pairs of letters 
 							<c>BE, ER, RL, LI</c> and <c>IN</c> from <c>BERLIN</c>, but he didn't consider 
 							enciphering it with <c>NB</c> (i.e. wrapping around from column 6 back to 1).  Encipher 
-							the bi-gram <c>th</c> using the rows <c>NB</c> in the Vigenere table 
+							the bi-gram <c>th</c> using the rows <c>NB</c> in the Vigen&#x00E8;re table 
 							<xref ref="appendix_figure_vigenere_new" autoname="yes" />, what cipher bi-gram do 
 							you get?  How often to you find that bi-gram in the cipher text in 
 							<xref ref="example_kasiski" autoname="yes" />? (Remember that you need to look 
@@ -1037,7 +1037,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						78. ... In a simple cipher text repetitions are more frequent and are merely accidental, 
 						that is to say, rarely occur at regular intervals, whereas in the composite cipher text 
-						[i.e. Vigenere cipher]
+						[i.e. Vigen&#x00E8;re cipher]
 						these repetitions occur less often but usually at intervals such that the number of 
 						letters between them is divisible by a number which gives the number of letters in the key.
 					</p>
@@ -1095,7 +1095,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</p>
 				<p>
 					Finally we find the key: In what follows Kasiski makes use of what he calls <em>the key table</em> which is 
-					a rearranged Vigenere table with plain text letters on the left, cipher letters along the top and the 
+					a rearranged Vigen&#x00E8;re table with plain text letters on the left, cipher letters along the top and the 
 					possible key letters on the interior. So it tells us that if we have a cipher letter <c>J</c> which we 
 					believe represents a plain text letter <em>i</em> then looking in the table we can see the corresponding 
 					key letter was a <c>B</c>.
@@ -1319,7 +1319,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<statement>
 						<p>
 							Follow Kasiski's steps to find the key for this message.  Then use 
-							the Vigenere cipher cell to decipher it.
+							the Vigen&#x00E8;re cipher cell to decipher it.
 						</p>
 						<p>
 							<cd>
@@ -1391,12 +1391,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</p>
 					</hint>
 				</exercise>
+				<figure xml:id="suzuki_kasiski_video">
+					<caption>Modern look at Kasiski</caption>
+					<video youtube="TxClRjnRNJw" width="80%" />
+				</figure>
 				<p>
 					Sage cell for calculating subsets of letters in a message:
 				</p>
 				<sage copy="sage_subset_cell" />
 				<p>
-					Sage cell for enciphering and deciphering the Vigenere Cipher:
+					Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
 				</p>
 				<sage copy="sage_vigenere_cell" />
 			</subsubsection>
@@ -1407,7 +1411,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Insert Information on Babbage's Cryptologic Work ...
 			</p>
 		</subsection>
-
 
 	</section>
 
@@ -1420,7 +1423,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 	<section xml:id="section_statisticsl_attack">
-		<title> A Statistical Approach </title>
+		<title> (*)A Statistical Approach </title>
 		<objectives>
 			<ul>
 				<li>
@@ -1431,8 +1434,203 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
+		<figure xml:id="suzuki_coincisence_video">
+			<caption>Incidence (or Index) of Coincidence</caption>
+			<video youtube="raNO806R4yc" width="80%" />
+		</figure>
 	</section>
+	<exercises>
+		<title>Do You Feel Logical?</title>
+		<exercise>
+			<statement>
+				<p>
+					Encipher this message by hand using Falconer's transposition cipher and a key of 
+					<c>{ACB, BCA, CBA, BAC}</c>
+				</p>
+				<blockquote>
+					<p>
+						<q>A quick movement of the enemy will jeopardize six gunboats.</q>
+					</p>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this transposition cipher with crib <c>WEATHER</c>:
+				</p>
+				<pre>
+					HIPYEN TAUTCI WSDWPF ETTEEA ARONRN ENPMNC RTEPTH
+					RERHR  EMTCA  PPHHI  OREOL  FAIEL  TETCA  RNRNF OSIAN
+					MYWRR  RTNIU  CEDNN  ASIAO  RLSFA  IITHU  TDENA HASOD
+					HYAEQ  RNTUA  FETRE  TTENR  RITDO  YHNDT  IMOER
+				</pre>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this transposition cipher with crib <c>AFGHANISTAN</c>:
+				</p>
+				<pre>
+					HATSNNI OLHHHIV WLAOINE AYSUMA OPNADA RGTLCF
+					ERRDRG  YIEHEH  ENHLYS  SGFYOT UPGRIN HITDTI IYRAHN
+					DHWVAI  CAHEVP  AMOHUA  IIIEEE DWHVEC RDCIBR ONIGEE
+				</pre>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this transposition cipher:
+				</p>
+				<pre>
+					IQAY ASHE PECV FIIR NUJA UCND
+					LKX OYD  ZLE  ITA  MWG  BAR
+				</pre>
 
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Encipher this message by hand with a Vigen&#x00E8;re and key of <c>DUNGEON</c>
+				</p>
+				<blockquote>
+					<p>
+						<q>The wizard quickly jinxed the gnomes before they vaporized.</q>
+					</p>
+				</blockquote>
+			</statement>
+		</exercise>	
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+					techniques you learned from Falconer and Kasiski.
+				</p>
+				<pre>
+					HS OOE BGHE RCI LG JO SOF KCFCXRSF, KYR
+					KXDDGMESF DSS TYZAU KE BQ. DHC-VGPBVI ZBG
+					L, MOMOC GVBPSV, YQ KJSNV JO SOF CACMOY OV
+					YFF OOPHKXR. HJOJ QQXDWUDPR QP L QQEAZG YQ
+					QQWQCTDLPNO MSF-BZCOC LBF K DWPQWS NKCUG
+					KTFA CTHVSYU-TYZA, ERPSTPFZNI QITXTGJOO,
+					OPN TZNEXWPKESF LJ HYY MFQKO KKXOCYC. DC
+					FODWTKMZG SY SXOCM YKJ KGBP HJO
+					LDCBEAGXEG, CXO GQ WZRGBLHG NTR VRP HGBXG
+					UOPA YRPB FSGWFOO PGDHSGX FG, VRLH VRP
+					PCBROKX HOU MZBEVFRGN FDQX EVG CACV, KYR
+					YO LH QXNS GXESTOO WPDZ DQCDSUCTCP. DSOV
+					FPFA OGSPSYU K WZJGN XM VRTBIC CCWXO TTYX
+					HJO SCVOW, OPN ZB VRP TQVWCYSYU OYCBKXR
+					GJOCZQMV VQVXSU PZZNYHSF WP KKDS GGFPFCV
+					MCZOD OPN ACTDXOPDPOWC. QCT K OOA YC HYY
+					HS YOCS DEDWNI PARVZMGN TB WXAOEUTBI KYR
+					NKJWPQ ZIV YFF RBZDGBEM VY EVG LPGV
+					KOJCXEOIO. EVCD OCPO, HS IBLRWKWZA LPUCX
+					EC UOEHNO OCYX LBF DZ OEMZAOYOOVO
+					ZITCPZXOD HQ YFF POH GWBCCWXOWPQD.
+				</pre>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+					techniques you learned from Falconer and Kasiski.
+				</p>
+				<pre>
+					NUTZSK BLYBAU JWUONX BWZFXG OCTUCS BWEXCZ IUSSQO 
+					MFOBGR FAXBHJ IYCBMU GUTBHI JYTUBA HOKOIZ GUSJFE 
+					BHJIUJ PHIFVK FHCFUR UBECOZ BMKSCK TILNCY GIXUOT 
+					FMNBXX FXADYJ ICSUIC BHZUIG WIOENN FGUSNO GCIBNO 
+					PHIPHY FKAFHZ VJUOBO TXOTUY UYXTBK MYLUHK XIXMYG 
+					OMZIYI JNEPZN JMLPLK GUZIYX TUTENU PEAQBO TLKTCJ 
+					FHIFUZ TORMCB BHYJMR BHJOYG SWNBLR FMZPHY POZIWG 
+					SIRJHG UBOTCY MUTECY BPKSSY JHMVFG SITFCZ DITTCY 
+					UMUGFO UNRFYR TYZIUT UBKTYG TUTEUT ECYBVU VNZILK 
+					FGOMYY MITHCZ TVXFUJ UBGUHU QIOONK YWKFXY BKABLZ 
+					FLUGUS JFKJNO TMKQUX BNKEZX PGZIYS BCTMUT EVEBMI 
+					BLIFFE QYXDYV UCHMYI SYKLIU ACTHCZ TQGZNN SIAHBG 
+					XCREYX OYYTIL SYKEMG OXYMCS FULBPU SCZFLK TIXUIL 
+					UBKNUX TBNFHZ IYBFAK UUZJIT BMSJAN UVKTOV QIYFXO 
+					TMIBHZ PLGUFK BMZEQG SZOTBT PNXFYY PZGOSS BATJNA 
+					EYGSYZ PVKTYK OHKBLZ IYCFMZ FLTFRZ SYSJNE XBKSYL 
+					PLZNIA MNXJYY UUTEMG OXCIYX FUXFMU NYSJMK SUHMYL 
+					SUSFVA JFJJHM TNKOUT UYJEOX JHMTOS NYXCSZ IYLVAO 
+					UCBFML SISDBG SFKTNU OXATNG OXLFPK SGGZVK GIAOXO 
+					OXKFXZ IYHSCY UFEQUR NYZUIH VNZIYC IIRFCY MUTEQO 
+					UBZIYK YWKQNO PHUGNN JMCFMZ FLTQIO ONGOXG MCTFIL 
+					IUXEQN JNKCYG DBUONN FMKBWU BMZJMI PPKSYJ XCZIUJ 
+					FHYFOT EYXHLU XNNPZZ IYYXYK UGESNR FMUNOI IJXJTK 
+					EVEUBK IIXUCI VFZVLO TNYPZK OARBHJ UBKTBX VVNFLK 
+					PZZFHG UNGJHY UBKIYO HBZPZL JZZFYT PLZXYT USLFYZ 
+					BHJGIX NMGOUR NIYUCS QYTFNX BVRFWU QJODYH VLZIYT 
+					JHMUBK BCXXCZ ICZTZX BAXBHI F
+				</pre>
+			</statement>
+		</exercise>		
+		<exercise>
+			<statement>
+				<p>
+					Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+					techniques you learned from Falconer and Kasiski.
+				</p>
+				<pre>
+					REZIAK VVISWB KSHYAL VISJMM CLTSHM QCKVHO OIDZBE 
+					ARQHPF ROHQQQ CMOEDP TTMKHQ GUFVZT TPVVZZ RTPLZX 
+					CEODVM MXTUDV LTJNYT BYEOTT TZVEYI ZVWWXC EETKII 
+					OWDXBZ RBWAJT UFZTTT NZVNTE IMGXJT TTIKXV IZBMEX 
+					JFYNEZ WCEEGM XEMDUC ODEMJA GGZXRO GALYEQ ENTMEW 
+					ORMCOV XCEDTN FVZIRX PRHIOF UQIWOA FIMDTO EPIPVQ 
+					ZTTDLN LDCTHP VLVDTT ZJIGFE JOXINT QSBYIM EPJKZR 
+					BTTTJR GJNUPV TMKHQG BFMOSX DEVWOE XTUVRO SRDZDE 
+					IYTDCI WDLMQW LVZDMI BYMNWA GSRRYF UCICPT WTTVZL 
+					VDDTLL GZDFWM SEXOZX IEJDVQ HGDFJL EIWKLM EQXNVP 
+					OTTPBZ LVDMRK FQKLUH PVHVLX IPRXRA EEWJWD BXTQEX 
+					CAFLIP ACEZXP RHVRDX DVHVTF WQJVZS GABRRY HMSBVW 
+					OEPXBJ EXCGGI TCDNID ZBMIGU UMCXDN MEWJMO IACBFI 
+					SPQGQD IITIXB YQTNQL SESRLQ SOVSIT TTWCHI UYQMIG 
+					DPTTZW MMSFXE ISOEAJ BDCHEF WWUSAR QSCTXD OZPARW 
+					JRFDNR HYEZSC DXJTTT XRTZRI WQTLDH MSXIIK ADTLWS 
+					MMMGRF VTTTTV ZQVDQP SVCOOO XXYIMA ZSWEIO OPTKZT 
+					CEDQGK LDSFXU VXCEZX OYXRAE LMCPJN MCLKLZ GDTGFJ 
+					ZADAGD SMNUCO NENBQV QERDNS IWJXZA XXVSCO HQTLXI 
+					NORIPV FGIZSA ZAVSZD BJPZEB NPFAZV QGQNEN TADULG 
+					CEJRQK IYTAIP ZRFORH TVIKFA GBYINO XKQEKJ FFWMGV 
+					JBXTUJ IZMQSI CQJSFL QKLDNY NOIENP QMKZXZ DFDIJX 
+					VTQLPZ GCAXBW JXARUV PKIIEP BMSCDT EXVKII SUIGZK 
+					JTDTIU CHYODX PSATTT VLQWED RQGLZR MCLDCI EIAGGV 
+					ZPMGMU OZYIXB YEIERU WIXRHU RPKSJK YTICPH YDTAFP 
+					PTUDVZ AZNFDV JXZAPX TPAMIF XVXMOS BGWGIM LQIBVV 
+					PNPTZV EXHODU SMIAFX WEADTT DCKSIC QAWFOD NSQITO 
+					AODXSE IRTTPB VZZNEW WLPYSA BMFJOH QAMKXZ REQMDM 
+					NPXPKV HDNFWM BITTTT KYEICQ DNIIXO SCQJMI GFWMIM 
+					BHFDVV WROGAL SIGADV MCCDNO GMRWZD NNAVID NSPKFR 
+					NIPTZR FGEZJU SIMORA MKXZRE IWXIOH QGBYII ISAIEG 
+					ZDAKMI XCEIWW CIVNPU WLRYTT PBDEIY AUBYIN YYQWCW 
+					HAPTCG PZTFTZ JADTTH CTLVBM HQJXJW AGSFRO HQGMJX 
+					RAEDVC CGANDC IEAEII MEXVTU KMVJAO DIARRY ITPLTS 
+					MRQRBV HOHQZM PXJASG MVQZNF LQKLNO YTWWXC EODUSM 
+					IAFXWE WDNFWM TMKHQG
+				</pre>
+			</statement>
+		</exercise>
+		<conclusion>
+			<p>
+				These will be helpful in completing these problems.
+			</p>
+			<p>
+				Sage cell for calculating subsets of letters in a message:
+			</p>
+			<sage copy="sage_subset_cell" />
+			<p>
+				Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
+			</p>
+			<sage copy="sage_vigenere_cell" />
+		</conclusion>
+	</exercises>
 
 
 

@@ -31,8 +31,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <chapter xml:id="early_20_century">
 	<title> (*) An Industrial Revolution </title>
-	<p>
-		In this chapter discuss the use of ciphers from the early <m>20^{th}</m> century:
+	<objectives>
 		<ul>
 			<li> Telegraph Codes and Ciphers?</li> 
 				<!-- 
@@ -46,5 +45,61 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<li> Also included Stinson episode, use Friedman article</li>
 			<li> Turing Papers?</li><!-- see talk on wednesday at 9:30 on turing -->
 		</ul>
-	</p>
+	</objectives>
+	<section xml:id="wwi_section">
+		<title>World War I</title>
+		<objectives>
+			<ul>
+				<li>
+					ADFGVX
+				</li>
+				<li>
+					George Zimmermann
+				</li>
+				<li>
+					American Cipher Chamber
+				</li>
+			</ul>
+		</objectives>
+
+	</section>
+	<section xml:id="between_wars_section">
+		<title>Between the Wars</title>
+		<objectives>
+			<ul>
+				<li>
+					Vernam One-Time Pad and Perfect Secrecy
+					<!-- Frank Miller: Inventor of the One-Time Pad, Cryptologia 7/12/2011)
+							Vernam Patent US1310719 A
+					-->
+				</li>
+				<li>
+					Henry L. Stinson, <q>Gentleman's Mail</q>
+				</li>
+				<li>
+					Rise of Enigma
+				</li>
+				<li>
+					Polish Cipher Bureau 
+				</li>
+			</ul>
+		</objectives>
+	</section>
+	<section xml:id="wwii_section">
+		<title>World War II</title>
+		<objectives>
+			<ul>
+				<li>
+					Bletchley Park and Enigma
+				</li>
+				<li>
+					Lorenz Cipher, Colossus, Electronic Computing
+				</li>
+				<li>
+					Japanese Ciphers
+				</li>
+			</ul>
+		</objectives>		
+	</section>
+
 </chapter>
