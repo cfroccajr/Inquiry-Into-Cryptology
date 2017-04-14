@@ -172,6 +172,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 		</li>
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	G   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+
+		<li>
+				<title>Greatest Common Divisor</title>
+				<index><main>greatest common divisor</main></index>
+			<p>
+				The <em>greatest common divisor</em> of two integers is the largest positive integer which divides both.  For a variety of reasons it is important to know that it is also defined as the least positive linear combination of the two integers, i.e. 5 is the <m>gcd(15,35)</m> because not larger positive integer divides both 15 and 35 and because <m>5=1\cdot (35) - 2\cdot(15)</m> is the smallest possible positive combination of 15 and 35.  
+			</p>
+		</li>
+
+
+
+
+
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
@@ -201,6 +217,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Modular Equivalence</title>
+				<index><main>modular equivalence</main></index>
+			<p>
+				Given a positive integer <m>n</m> two integers are <em>equivalent modulo <m>n</m></em> 
+				if they have the same remainder when you divide them by <m>n</m>.  Equivalently, two integers 
+				<m>a</m> and <m>b</m> are equivalent modulo <m>n</m> if <m>a-b</m> is divisible by <m>n</m>.  When 
+				this is the case we write <m>a\equiv b\ \pmod{n}</m>
+			</p>
+		</li>
 
 		<li>
 				<title>Monoalphabetic Substitution Cipher:</title>
@@ -273,6 +300,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				multiple different plaintext letters throughout a message.
 			</p>
 		</li>
+
+		<li>
+				<title>Prime Number</title>
+				<index><main>prime number</main></index>
+			<p>
+				A positive integer is <em>prime</em> if it has precisely two divisors, one and its self.
+			</p>
+		</li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+		<li>
+				<title>Reciprocal</title>
+				<index><main>reciprocal</main></index>
+				<index><main>multiplicative inverse</main></index>
+			<p>
+				The <em>reciprocal</em> (or <em>multiplicative inverse</em>) of a number <m>x</m> is some 
+				number <m>y</m> such that <m>x\cdot y=1</m>.
+			</p>
+		</li>
+
+		<li>
+				<title>Relatively Prime Numbers</title>
+				<index><main>relatively prime</main></index>
+			<p>
+				Two integers are <em>relatively prime</em> if there greatest common divisor is one.  In this 
+				case we may say that one of the integers is <em>prime</em> to the other.
+			</p>
+		</li>
+
+
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 

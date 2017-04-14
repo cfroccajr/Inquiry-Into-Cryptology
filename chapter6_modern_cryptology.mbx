@@ -53,10 +53,362 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Hill's Cipher
 				</li>
 			</ul>
-		</objectives>		
+		</objectives>
+		<subsection xml:id="hill_biography">
+			<title>Lester S. Hill</title>
+			<p> Insert bio here ...</p>
+
+		</subsection>
+		<subsection xml:id="matrices_and_moduli">
+			<title>Matrices and Moduli</title>
+			<p>
+				The cipher we will focus on here, Hill's Cipher, is an early example of a cipher based purely in the mathematics of 
+				number theory and algebra; the areas of mathematics which now dominate all of modern 
+				cryptography.  Number theory has a long and rich history with many fundamental results dating all the way back to Euclid in 300 BCE, and with results found across the globe in different cultures.  Number theory as we understand and use it today is due in large part to Carl Friedrich Gauss and his text 
+				<em>Disquisitiones Arithmeticae</em> published in 1801 (when Gauss was 24).  Algebra (or more properly linear and abstract algebra) as it is going to be used here is much younger tracing its roots back only a couple hundred years to the early nineteenth century; here too much is owed to Gauss.
+			</p>
+			<p> 
+				As with previous topics we will begin by looking at an original source text and trying to understand what it is saying.  However, given the importance of this material to the rest of what we will be discussing in subsequent chapters, we will look at the material from a more modern perspective.
+			</p>
+			<assemblage>
+				<title>Cryptography in an Algebraic Alphabet</title>
+				<p>
+					By Lester S. Hill, Hunter College
+				</p>
+				<p>
+					1. <em>The Bi-Operational Alphabet</em>
+				</p>
+				<p>
+					Let <m>a_0,\ a_1,\ \ldots,\ a_{25}</m> denote any permutation of the letters of the English alphabet; and let us associate the letter <m>a_i</m> with the integer <m>i</m>.  We define operations of 
+					<em>modular addition</em> and <em>multiplication</em> (modulo 26) over the alphabet as follows: 
+					<md>
+						<mrow>a_i+a_j=a_r,</mrow>
+						<mrow>a_i\, a_j=a_t,</mrow>
+					</md>
+					where <m>r</m> is the remainder obtained upon dividing the integer <m>i+j</m> by the integer 26 and <m>t</m> is the reaminder obtained on dividing <m>ij</m> by 26. The integers <m>i</m> and <m>j</m> may be the same or different.
+				</p>
+				<p>
+					It is easy to verify the following salient propositions concerning the bi-operational alphabet thus set up:
+				</p>
+				<p>
+					(1) If <m>\alpha,\ \beta,\ \gamma</m> are letters of the alphabet, 
+					<ul>
+						<li>
+							<m>\alpha+\beta=\beta+\alpha</m> and <m>\alpha\beta=\beta\alpha</m> [commutative law]
+						</li>
+						<li>
+							<m>\alpha+(\beta+\gamma)=(\alpha+\beta)+\gamma</m> 
+							and <m>\alpha(\beta\gamma)=(\alpha\beta)\gamma</m> [associative law]
+						</li>
+						<li>
+							<m>\alpha(\beta+\gamma)=\alpha\beta+\alpha\gamma</m> [distributive law]
+						</li>
+					</ul>
+				</p>
+				<p>
+					(2) There is exactly one <q>zero</q> letter, namely <m>a_0</m>, characterized by the fact that the equation 
+					<m>\alpha+a_0=\alpha</m> is satisfied whatever the letter denoted by <m>alpha</m>.
+				</p>
+				<p>
+					(3) Given any letter <m>\alpha</m>, we can find exactly one letter <m>\beta</m>, dependent on <m>\alpha</m>, such that <m>\alpha+\beta=a_0</m>. We call <m>\beta</m> the <q>negative</q> of <m>\alpha</m>, and we write: 
+					<m>\beta=-\alpha</m>.
+				</p>
+				<p>
+					(4) Given any letters <m>\alpha,\ \beta</m> we can find exactly on letter <m>\gamma</m> such that 
+					<m>\alpha+\gamma=\beta</m> [i.e. <m>\gamma=\beta-\alpha</m> is unique].
+				</p>
+				<p>
+					(5) Distinguishing the twelve letters, 
+					<md>
+						<mrow>
+							a_1,\ a_3,\ a_5,\ a_7,\ a_9,\ a_{11},\ a_{15},\ a_{17},\ a_{19},\ a_{21},\ a_{23},\ a_{25},
+						</mrow> 
+					</md>
+					with subscripts prime to 26, as <q>primary</q> letters, we make the assertion, easily proved: If <m>\alpha</m> is any primary letter and <m>\beta</m> is any letter, there is exactly one letter <m>\gamma</m> for which 
+					<m>\alpha\gamma=\beta</m>.
+				</p>
+				<p>
+					(6) In any algebraic sum of terms, we may clearly omit terms of which the letter <m>a_0</m> is a factor; and we 
+					need not write the letter <m>a_1</m> explicitly as a factor in any product.
+				</p>
+				<p>
+					2. An Illustration
+				</p>
+				<p>
+					Let the letters of the alphabet be associated with the integers as follows:
+				</p>
+				<table xml:id="hill_alpha_numeric_corespondence">
+					<tabular halign="right">
+						<row> 
+							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+							<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+							<cell>k</cell><cell>l</cell><cell>m</cell>
+
+						</row>
+						<row> 
+							<cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
+							<cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
+							<cell>0</cell><cell>16</cell><cell>13</cell>
+						</row>
+						<row> 
+							<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+							<cell>x</cell><cell>y</cell><cell>z</cell>
+						</row>
+						<row> 
+							<cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
+							<cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
+							<cell>22</cell><cell>11</cell><cell>9</cell>
+						</row>
+					</tabular>
+				</table>
+				<p>
+					or, in another convenient formulation:
+				</p>
+				<table xml:id="hill_numeric_alpha_corespondence">
+					<tabular halign="right">
+						<row> 
+							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+							<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+							<cell>10</cell><cell>11</cell><cell>12</cell>
+
+						</row>
+						<row> 
+							<cell>k</cell><cell>p</cell><cell>c</cell><cell>o</cell><cell>h</cell>
+							<cell>a</cell><cell>r</cell><cell>n</cell><cell>g</cell><cell>z</cell>
+							<cell>e</cell><cell>y</cell><cell>s</cell>
+						</row>
+						<row> 
+							<cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell><cell>17</cell>
+							<cell>18</cell><cell>19</cell><cell>20</cell><cell>21</cell><cell>22</cell>
+							<cell>23</cell><cell>24</cell><cell>25</cell>
+						</row>
+						<row> 
+							<cell>m</cell><cell>w</cell><cell>f</cell><cell>l</cell><cell>v</cell>
+							<cell>i</cell><cell>q</cell><cell>d</cell><cell>u</cell><cell>x</cell>
+							<cell>b</cell><cell>t</cell><cell>j</cell>
+						</row>
+					</tabular>
+				</table>
+				<p>
+					It will be seen that
+					<md>
+						<mrow>c+x=t,\ j+w=m,\ f+y=k,\ -f=y,\ -y=f,\ etc.</mrow>
+						<mrow>an=z,\ hm=k,\ cr=s,\ etc.</mrow>
+					</md>
+				</p>
+				<p>
+					The zero letter is <m>k</m>, and the unit letter is <m>p</m>.  The primary letters are: 
+					<m>a</m> <m>b</m> <m>f</m> <m>j</m> <m>n</m> <m>o</m> <m>p</m> <m>q</m> <m>u</m> <m>v</m> <m>y</m> <m>z</m>.
+				</p>
+				<p>
+					Since this particular alphabet will be used several times, in illustration of further developments, we append the following table of negatives and reciprocals:
+				</p>
+				<table xml:id="hill_alpha_inverses">
+					<tabular halign="left">
+						<row>
+							<cell>Letter</cell><cell>:</cell>
+							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+							<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+							<cell>k</cell><cell>l</cell><cell>m</cell>							
+							<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+							<cell>x</cell><cell>y</cell><cell>z</cell>
+						</row>
+						<row>
+							<cell>Neg.</cell><cell>:</cell>
+							<cell>u</cell><cell>o</cell><cell>t</cell><cell>r</cell><cell>l</cell>
+							<cell>y</cell><cell>i</cell><cell>x</cell><cell>g</cell><cell>p</cell>
+							<cell>k</cell><cell>e</cell><cell>m</cell>							
+							<cell>q</cell><cell>b</cell><cell>j</cell><cell>n</cell><cell>d</cell>
+							<cell>w</cell><cell>c</cell><cell>a</cell><cell>z</cell><cell>s</cell>
+							<cell>h</cell><cell>f</cell><cell>v</cell>
+						</row>
+						<row>
+							<cell>Rec.</cell><cell>:</cell>
+							<cell>u</cell><cell>v</cell><cell></cell><cell></cell><cell></cell>
+							<cell>n</cell><cell></cell><cell></cell><cell></cell><cell>j</cell>
+							<cell></cell><cell></cell><cell></cell>							
+							<cell>f</cell><cell>z</cell><cell>p</cell><cell>y</cell><cell></cell>
+							<cell></cell><cell></cell><cell>a</cell><cell>b</cell><cell></cell>
+							<cell></cell><cell>q</cell><cell>o</cell>
+						</row>
+					</tabular>
+				</table>
+				<p>
+					The solution to the equation <m>z+\alpha=t</m> is <m>\alpha=t-z</m> or 
+					<m>\alpha=t+(-z)=t+v=f</m>.
+				</p>
+				<p>
+					The system of linear equations: <m>o\, \alpha+u\, \beta = x</m>, 
+					<m>n\, \alpha+i\, \beta = q</m> has solution <m>\alpha = u</m>, <m>\beta=o</m>, which may be 
+					obtained by the familiar method of elimination or by formula. 
+					<xref ref="cr_crypt_hill_1929" detail="pp.306-308" />
+				</p>
+			</assemblage>
+			<p>
+				Reading Questions:
+				<ul>
+					<li>
+						Hill starts by describing how we will add and multiply with the alphabet, looking at his 
+						description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
+						(see <xref ref="hill_alpha_numeric_corespondence" autoname="yes"/>) come 
+						out to be <m>m</m> which is 13?
+					</li>
+					<li>
+						In his illustration he also says <m>hm</m> which should be 4 times 13, or 52, is 
+						<m>k</m> which is 0, why is this the case?
+					</li>
+					<li>
+						Along the same lines, why does <m>f+y</m> equal <m>k</m> and why does <m>an</m> (<m>a</m> times <m>n</m>) 
+						equal <m>z</m>?
+					</li>
+					<li>
+						Thinking about your previous answers, what are the values of the following: <m>j+z</m>, 
+						<m>nf</m>, <m>au+j</m>, and <m>bv+jw</m>.
+					</li>
+				</ul>
+			</p>
+			<p>
+				In this section of text Hill has introduced us to the idea of modular arithmetic and modular equivalence, in 
+				particular the idea of equivalence modulo 26.  This is a concept which will be central to most 
+				everything else we do so we need to spend a little more time trying to precisely understand modular 
+				equivalence.
+			</p>			
+			<definition xml:id="def_modular_equivalence">
+				<title>Modular Equivalence</title>
+				<statement>
+					<p>
+						If <m>n</m> is a positive integer then we say that two other integers <m>a</m> and <m>b</m> 
+						are <term>equivalent modulo n</term><index><main>modular equivalence</main></index> if and 
+						only if they have the same remainder when divided by <m>n</m>, or equivalently if and only if 
+						<m>a-b</m> is divisible by <m>n</m>, when this is the case we write 
+						<md>
+							<mrow>a\equiv b \pmod{n}.</mrow>
+						</md>
+					</p>
+				</statement>
+			</definition>
+			<example>
+				<p>
+					Suppose that <m>n=14</m>, then <m>36\equiv 8\pmod{n}</m> because <m>36=2\cdot 14 + 8</m> and 
+					<m>8=0\cdot (14) + 8</m> so we get the same remainder when we divide by <m>n=14</m>.  Alternately,
+					we can observe that <m>36-8=28</m> and <m>28=2\cdot(14)</m> is divisible by <m>n=14</m>.
+				</p>
+				<p>
+					Using the same value for <m>n</m> we get that <m>3\cdot 5\equiv 1\pmod{n}</m> because 
+					<m>15=1\cdot (14) +1</m>, so the remainder when <m>3\cdot 5</m> is divided by <m>n</m> is 1.
+				</p>
+				<p>
+					Test your understanding by filling in the rest of this multiplication table:
+				</p>
+				<table xml:id="mod_fourteen_table">
+					<tabular>
+						<row bottom="minor">
+							<cell right="minor" ><m>\times_{14}</m></cell>
+							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+							<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+							<cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+						</row>
+						<row>
+							<cell right="minor" >0</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >1</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >2</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >3</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >4</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >5</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >6</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >7</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >8</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >9</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >10</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >11</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >12</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+						<row>
+							<cell right="minor" >13</cell>
+							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+							<cell></cell>
+						</row>
+					</tabular>
+				</table>
+			</example>
+
+
+		</subsection>
+
+		<subsection xml:id="hill_cipher">
+			<title>Hill's Cipher</title>
+
+		</subsection>
+
 	</section>	
 	<section xml:id="d_h_section">
-		<title>Goiing Public</title>
+		<title>Going Public</title>
 		<objectives>
 			<ul>
 				<li>

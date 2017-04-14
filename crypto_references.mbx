@@ -41,7 +41,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</title>
 				<year>Coloniae, 1533</year>.
 				<note>
-					<p>
+					<p> 
+						URL:
 						<url href="https://lccn.loc.gov/20007812">
 							https://lccn.loc.gov/20007812
 						</url>
@@ -57,8 +58,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Daniel Brown, London, <year>1685</year>.
 				<note>
 					<p>
+						URL:
 						<url href="https://archive.org/details/cryptomenysispat00falc">
 							https://archive.org/details/cryptomenysispat00falc
+						</url>
+					</p>
+				</note>
+			</biblio>
+
+
+			<biblio xml:id="cr_crypt_hill_1929">
+				Lester S. Hill,
+				<title>
+					Cryptography in an algebraic alphabet.
+				</title>
+				The American Mathematical Monthly, Vol. 36, No. 6 (Jun. - Jul., 1929), pp. 306-312.
+				<note>
+					<p>
+						Stable URL:
+						<url href="http://www.jstor.org/stable/2298294">
+							http://www.jstor.org/stable/2298294
 						</url>
 					</p>
 				</note>
@@ -138,6 +157,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<year>1586</year>.
 				<note>
 					<p>
+						URL: 
 						<url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
 							 http://gallica.bnf.fr/ark:/12148/bpt6k73371g
 						</url>
