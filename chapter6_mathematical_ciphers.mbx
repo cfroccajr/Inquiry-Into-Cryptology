@@ -1708,22 +1708,64 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</exercise>
 		<exercise>
 			<statement>
-				encipher with hill
+				<p>
+					Encipher <c>order more pizza</c> using Hill's cipher and the matrix,
+					<md>
+						<mrow>
+							m=\begin{pmatrix}1 &amp; 5 \\ 7 &amp; 10\end{pmatrix},
+						</mrow>
+					</md>
+					be sure to how your work.
+				</p>
+			</statement>
+			<answer>
+				<p>
+					<c>VIXJZ FVIBW DUZT</c>
+				</p>
+			</answer>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher <c>we need soda too</c> using Hill's cipher and the matrix,
+					<md>
+						<mrow>
+							m=\begin{pmatrix}9 &amp; 6 \\ 13 &amp; 7\end{pmatrix},
+						</mrow>
+					</md>
+					be sure to how your work.
+				</p>
 			</statement>
 		</exercise>
 		<exercise>
 			<statement>
-				encipher with hill
+				<p>
+					Decipher <c>ZEMUM KJDIK NEWSX XHM</c> which was enciphered using Hill's cipher and the matrix,
+					<md>
+						<mrow>
+							m=\begin{pmatrix}13 &amp; 19 \\ 1 &amp; 6\end{pmatrix},
+						</mrow>
+					</md>
+					be sure to how your work.
+				</p>
 			</statement>
+			<answer>
+				<p>
+					<c>spicy chicken wings</c>
+				</p>
+			</answer>
 		</exercise>
 		<exercise>
 			<statement>
-				decipher with hill
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				decipher with hill
+				<p>
+					Decipher <c>MRUKD QFDWI DHNL</c> which was enciphered using Hill's cipher and the matrix,
+					<md>
+						<mrow>
+							m=\begin{pmatrix}7 &amp; 17 \\ 2 &amp; 5\end{pmatrix},
+						</mrow>
+					</md>
+					be sure to how your work.
+				</p>
 			</statement>
 		</exercise>
 		<exercise>
