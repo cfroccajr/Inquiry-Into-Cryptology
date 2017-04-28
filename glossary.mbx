@@ -40,14 +40,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<p>
 		<dl>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-			<li>
+<!-- 			<li>
 				<title>Affine Cipher</title>
 				<p>
 					An <em>affine cipher</em> ...
 					<index><main>affine cipher</main></index>
 				</p>
 			</li>
-
+ -->
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 			<li>
 				<title>Block Cipher</title>
@@ -122,7 +122,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 			<li> 
-				<title>Decipher:</title>
+				<title>Decipher</title>
+
 				<p>
 					<em>Deciphering</em> is the process by which blocks of ciphertext are replaced by plaintext.
 					<index><main>decipher</main></index>
@@ -130,7 +131,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</li>
 
 		<li> 
-				<title>Decrypt:</title>
+				<title>Decrypt</title>
 				<index><main>decrypt</main></index>
 			<p>
 				<em>Decrypting</em> is the process by we discover the meaning of a ciphertext without the aid of a cipher key.
@@ -141,7 +142,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 		<li> 
-				<title>Encipher:</title>
+				<title>Encipher</title>
 				<index><main>encipher</main></index>
 			<p>
 				<em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
@@ -152,7 +153,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 		<li> 
-				<title>Factorial:</title>
+				<title>Factorial</title>
 				<index><main>factorial</main></index>
 			<p>
 				Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
@@ -192,7 +193,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 		<li>
-				<title>Homophonic Cipher:</title>
+				<title>Homophonic Cipher</title>
 				<index><main>homophonic cipher</main></index>
 			<p>
 
@@ -206,7 +207,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 		<li>
-				<title>Index of Coincidence:</title>
+				<title>Index of Coincidence</title>
 				<index><main>index of coincidence</main></index>
 			<p>
 				The <em>index of coincidence</em> for a block of text is the probability that two characters 
@@ -230,7 +231,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</li>
 
 		<li>
-				<title>Monoalphabetic Substitution Cipher:</title>
+				<title>Monoalphabetic Substitution Cipher</title>
 				<index><main>monoalphabetic substitution cipher</main></index>
 			<p>
 
@@ -238,6 +239,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				between plaintext letters and the cipher text so that a single plaintext letter is always replaced by the same letter, 
 				group of letters, or symbol and every letter, group of letters, or symbol in the ciphertext represents the 
 				same plaintext letter.
+			</p>
+		</li>
+
+		<li>
+				<title>Multiplicative Identity</title>
+				<index><main>multiplicative identity</main></index>
+			<p>
+				A number <m>a</m> is the <em>multiplicative identity</em> if for all numbers <m>b</m>, 
+				<me>a\cdot b=b\cdot a = b.</me>
+			</p>
+		</li>
+
+		<li>
+				<title>Multiplicative Inverse</title>
+				<index><main>multiplicative inverse</main></index>
+			<p>
+				See Reciprocal
 			</p>
 		</li>
 
@@ -253,7 +271,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</li>
 
 		<li>
-				<title>Nomenclator:</title>
+				<title>Nomenclator</title>
 				<index><main>nomenclator</main></index>
 			<p>
 
@@ -272,7 +290,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 		</li>
 		<li>
-				<title>Plaintext:</title>
+				<title>Plaintext</title>
 				<index><main>plaintext</main></index>
 			<p>
 
@@ -281,7 +299,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</li>
 
 		<li>
-				<title>Polyalphabetic Substitution Cipher:</title>
+				<title>Polyalphabetic Substitution Cipher</title>
 				<index><main>polyalphabetic substitution cipher</main></index>
 			<p>
 
@@ -292,7 +310,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</li>
 
 		<li>
-				<title>Polyphonic Cipher:</title>
+				<title>Polygraphic Cipher</title>
+				<index><main>polygraphic cipher</main></index>
+			<p>
+
+				A <em>polygraphic cipher</em> is a cipher in which multiple plaintext characters are 
+				enciphered at a time so that how a character is enciphered depends on which other letters 
+				it is beside.
+			</p>
+		</li>
+
+		<li>
+				<title>Polyphonic Cipher</title>
 				<index><main>polyphonic cipher</main></index>
 			<p>
 

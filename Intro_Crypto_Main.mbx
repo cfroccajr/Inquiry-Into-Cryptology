@@ -67,8 +67,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 	<!-- Chapter 6 Content -->
 
-		<xi:include href="chapter6_modern_cryptology.mbx" />
+		<xi:include href="chapter6_mathematical_ciphers.mbx" />
 
+	<!-- Chapter 7 Content -->
+
+		<xi:include href="chapter7_modern_cryptology.mbx" />
 
 	<!-- Backmatter Content -->
 
