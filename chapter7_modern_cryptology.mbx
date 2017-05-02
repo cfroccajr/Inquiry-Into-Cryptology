@@ -29,7 +29,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <chapter xml:id="ModernCrypto">
-	<title> The Modern Age </title>
+	<title> (*) The Modern Age </title>
 	<objectives>
 		<ul>
 			<li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>

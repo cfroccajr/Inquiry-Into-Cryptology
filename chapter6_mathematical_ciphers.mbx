@@ -1770,12 +1770,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</exercise>
 		<exercise>
 			<statement>
-				decrypt with hill
+				<p>
+					Decrypt this quote about <q>Chuck Norris</q> which was enciphered using Hill's cipher:
+					<c>FYQAB YTAHX XYERO MQMFP NNBXN ARJFK HLSNK QVVME IFDUJ AVOUT ZYLA</c><!-- 17,7,5,2 -->
+				</p>
 			</statement>
+			<answer>
+				<p>
+					<q>Chuck Norris threw a grenade and killed 50 zombies, then it exploded.</q>
+				</p>
+			</answer>
 		</exercise>
 		<exercise>
 			<statement>
-				decrypt with hill
+				<p>
+					Decrypt this quote about <q>Molly Weasley</q> which was enciphered using Hill's cipher:
+					<c>CQFUM OEAZH YUMAW MYGCV GEQDD MKCEA BIKCU ZSMGN VUGC</c><!-- 14,3,13,3 -->
+				</p>
 			</statement>
 		</exercise>
 		<conclusion>
