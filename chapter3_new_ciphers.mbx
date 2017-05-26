@@ -574,7 +574,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</subsection>
 		<subsection xml:id="falconer_transposition">
 			<title>Transposition</title>
-			<blockquote>
+			<assemblage>
 				<p><em>A New Method How to Write Secretly by the Art of Combinations</em></p>
 				<p>
 					<ol>
@@ -611,15 +611,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</li>
 					</ol>
 				</p>
-			</blockquote>
+			</assemblage>
 			<p>
-				Let's see if you can follow Falconer's directions.  Below I set up a table according to his description in steps (5) and (6) and used it to encipher: 
 			</p>
-			<blockquote>
-				<p>
-					<em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
-				</p>
-			</blockquote>
+			<p>
+				Let's see if you can follow Falconer's directions.  Below I set up <xref ref="falconer_trans_table_1" autoname="yes"/> according to his description in steps (5) and (6) and used it to encipher the pangram<index><main>pangram</main></index> <em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
+			</p>
+
 			<table xml:id="falconer_trans_table_1">
 				<caption> Falconer's Transposition Table Initial Setup</caption>
 				<tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
@@ -700,25 +698,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</blockquote>
 			</paragraphs>
 			<p>
+				Refection Questions:
 				<ul>
 					<li>
-						Looking at <xref ref="falconer_trans_table_2" autoname="yes"/> why did the <em>the</em> from the beginning of the sentence 
-						get written backwards? (Be sure to look carefully at the letters to the left of the row when answering.)
+						Looking at <xref ref="falconer_trans_table_2" autoname="yes"/> why is <em>the</em> 
+						from the beginning of the sentence written backwards? (Be sure to look carefully at the 
+						letters to the left of the row when answering.)
 					</li>
 					<li> 
-						In the second row of the same table why is the <em>qui</em> form <em>quick</em> written in the order it is written? 
+						In the second row of the same table why is <em>qui</em> from <em>quick</em> 
+						written in the order it is written? 
 						(Again, be sure to look carefully at the letters to the left of the row when answering.)
 					</li>
 					<li>
-						In the last row we put down the <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the 
+						In the last row we put down <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the 
 						order they are in and looking at the next table (<xref ref="falconer_trans_table_3" autoname="yes" />) where do we put 
 						the <em>x</em> from <em>fox</em> and why?
 					</li>
 					<li>
-						How do we finish off writing the rest of the message into the boxes in the table?
+						How do we finish writing the rest of the message into the boxes in the table?
 					</li>
 					<li>
-						Finally, looking at the final message why is there a little triangle at the start of the message and why 
+						Refection Questions:
+						Looking at the final message why is there a little triangle at the start of the message and why 
 						were the blocks of letters written in the order they were written?
 					</li>
 					<li>
