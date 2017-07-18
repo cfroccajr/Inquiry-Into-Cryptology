@@ -150,6 +150,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Anchor Books, New York, <year>2000</year>.
 			</biblio>
 
+			<biblio type="raw" xml:id="cr_crypt_1901lives">
+				Suetonius,
+				<title>
+					The lives of the twelve caesars. 
+				</title>
+				Bohn's Classical Library, G. Bell, 
+				<year>
+					1901.
+				</year>
+				<note>
+					<p>
+						URL:
+						<url href="http://books.google.com/books?id=pjcbAAAAYAAJ">
+							http://books.google.com/books?id=pjcbAAAAYAAJ
+						</url>
+					</p>
+				</note>
+
+			</biblio>
+
 			<biblio type="raw" xml:id="cr_crypt_vigenere">
 				Blaise de Vigen&#x00E8;re,
 				<title>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire,</title>

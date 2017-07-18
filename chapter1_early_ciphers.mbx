@@ -64,28 +64,34 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</statement>
 		</definition>
 
-		
+		<p>
+			One of the earliest types of cipher (sometimes spelled cypher in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
+		</p>
 
-		<!-- %%%%%%%%%% Here is the beginning of plain text which will enciphered in the final product %%%%%%%%%%
-		One of the earliest types of cipher (sometimes spelled cypher in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
-
-		%%%%%%%%%
-		There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.
-		%%%%%%%%%
-
-		Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
-
-		%%%%%%%%%%%%%%%%
-		When he had occasion to write in cypher he put b for a c for b so forth and instead of z, aa.
-		%%%%%%%%%%%%%%%%
-
-		Neither of these offer much security, nor do they take full advantage of the number of possible substitutions that can be made.
-
-		\hfill\cite[pages 37,134]{CR:Crypt:1901lives}
-
-		%%%%%%%%%%%%%%%%% -->
+		<assemblage>
+			<p>		
+				There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.
+			</p>
+		</assemblage>
 
 		<p>
+			Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
+		</p>
+
+		<assemblage>
+			<p>
+				When he had occasion to write in cypher he put b for a c for b so forth and instead of z, aa.
+			</p>
+		</assemblage>
+
+		<p>
+			Neither of these offer much security, nor do they take full advantage of the number of possible substitutions that can be made.
+		</p>
+
+		<!-- \hfill\cite[pages 37,134]{CR:Crypt:1901lives} -->
+
+
+	<!-- 	<p>
 			Try to figure out the message in the passage below which has been <term>enciphered</term><index><main>encipher</main></index>.
 		</p>
 		<exercise> 
@@ -93,7 +99,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Cipher Text:
 				</p>
-				<pre>
+				<cd>
 					RQH RI WKH HDUOLHVW WBSHV RI FLSKHU (VRPHWLPHV VSHOOHG FBSKHU 
 					LQ ROGHU GRFXPHQWV) WKDW ZH KDYH D UHFRUG RI ZDV WKH FDHVDU 
 					VKLIW FLSKHU XVHG EB MXOLXV FDHVDU DURXQG 100 EFH. KHUH LW LV 
@@ -117,7 +123,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					QHLWKHU RI WKHVH RIIHU PXFK VHFXULWB, QRU GR WKHB WDNH IXOO 
 					DGYDQWDJH RI WKH QXPEHU RI SRVVLEOH VXEVWLWXWLRQV WKDW FDQ EH 
 					PDGH.
-				</pre>
+				</cd>
 			</statement>
 			<hint>
 				<p>
@@ -130,7 +136,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</ul>
 				</p>
 			</hint>
-		</exercise>
+		</exercise> -->
 
 		<p>
 			Were you able to <term>decrypt</term><index><main>decrypt</main></index> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
