@@ -41,8 +41,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<section xml:id="section_arab_analysis">
 		<title> Arabic Analysis of the Alphabet</title>
 		<p> 
-			The following is from <em>al-Kindi's</em><index><main>al-Kindi</main></index> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
-			<index><main>cryptanalysis</main></index>
+			The following is from <em>al-Kindi's</em><idx>al-Kindi</idx> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions which follow it.
+			<idx>cryptanalysis</idx>
 		</p>
 		<blockquote>
 			<p>
@@ -82,10 +82,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title>Frequency Analysis</title>
 			<statement>
 				<p>
-					Basic <term><alert>Frequency Analysis</alert></term><index><main>frequency analysis</main></index> is the 
+					Basic <term><alert>Frequency Analysis</alert></term><idx>frequency analysis</idx> is the 
 					process of counting the characters in a text in order to determine how many of each character there are 
 					relative to the entire length of the text.  This is typically the first step in the 
-					<term>cryptanalysis</term><index><main>cryptanalysis</main></index>, the process of breaking an unknown cipher or code.
+					<term>cryptanalysis</term><idx>cryptanalysis</idx>, the process of breaking an unknown cipher or code.
 				</p>
 			</statement>
 		</definition>
@@ -126,7 +126,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<section xml:id="section_falconer_analysis">
 		<title> Falconer's Approach</title>
 		<introduction>
-			<p> Text from John Falconer will go here.<index><main>Falconer, John</main></index></p>
+			<p> Text from John Falconer will go here.<idx>Falconer, John</idx></p>
 		</introduction>
 
 		<subsection xml:id="subsection_falconer_step_one">
@@ -381,7 +381,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<li> 
 							frequencies for at least the top 20 <term>bi-grams</term> (two letter combinations) and 
 							<term>tri-grams</term> (three letter combinations)
-							<index><main>bi-gram</main></index><index><main>tri-gram</main></index>
+							<idx>bi-gram</idx><idx>tri-gram</idx>
 						</li>
 						<li>
 							a list of the top 20 most common words,

@@ -55,10 +55,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title> Cipher </title>
 			<statement>
 				<p>
-					A <term> cipher </term><index><main>cipher</main> </index> is a system by which a letter or block of letters 
+					A <term> cipher </term><idx>cipher</idx> is a system by which a letter or block of letters 
 					in a message is replaced by another letter or block of letters in a systematic way.  In this chapter we will 
 					mostly focus on <term>monoalphabetic substitution ciphers</term>
-					<index><main>monoalphabetic substitution cipher</main></index> in which the substitution is always 
+					<idx>monoalphabetic substitution cipher</idx> in which the substitution is always 
 					carried out in the same way with one-to-one correspondence between letters.
 				</p>
 			</statement>
@@ -92,7 +92,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 	<!-- 	<p>
-			Try to figure out the message in the passage below which has been <term>enciphered</term><index><main>encipher</main></index>.
+			Try to figure out the message in the passage below which has been <term>enciphered</term><idx><main>encipher</main></idx>.
 		</p>
 		<exercise> 
 			<statement>
@@ -139,7 +139,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</exercise> -->
 
 		<p>
-			Were you able to <term>decrypt</term><index><main>decrypt</main></index> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
+			Were you able to <term>decrypt</term><idx>decrypt</idx> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
 
 			<ul>
 				<li> How does the new method compare to those which we have previously considered, what does it do to make the message more secure?</li>
@@ -236,7 +236,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
 			</ul>
 
-			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  <em>John Falconer</em><index><main>Falconer, John</main></index> in the seventeenth century described this as follows:
+			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  <em>John Falconer</em><idx>Falconer, John</idx> in the seventeenth century described this as follows:
 		</p>
 		<blockquote>
 			<p>
@@ -254,6 +254,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</cell>
 				</row>
 			</tabular>
+			<caption></caption>
 		</table>
 
 		<p>
@@ -263,7 +264,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<title> Factorial </title>
 			<statement> 
 				<p>
-					Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+					Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
 					<men>
 						n!=n(n-1)(n-2)\cdots 2 \cdot 1
 					</men>
@@ -333,6 +334,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
 						</row>
 					</tabular>
+					<caption></caption>
 				</table>			
 			</statement>
 		</exercise>
@@ -345,10 +347,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	<section xml:id="arab_ciphers">
 		<title>Arabic Numerical Ciphers</title>
 		<p>
-			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><index><main>Arabic scholar</main></index><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
+			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><idx>Arabic scholar</idx><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
 		</p>
 		<p>
-			In this section we want to introduce some other work performed by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  Here we will look at some methods of enciphering text via changing the text to numbers, some of these today we would call variations on an <term>affine cipher</term><index><main>affine cipher</main></index>.
+			In this section we want to introduce some other work performed by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  Here we will look at some methods of enciphering text via changing the text to numbers, some of these today we would call variations on an <term>affine cipher</term><idx>affine cipher</idx>.
 		</p>
 		<p>
 			They began by associating each letter of the alphabet with a number in a manner similar to the following:
@@ -389,7 +391,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</tabular>
 		</table>
 		<p> 
-			Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><index><main>ibn ad-Durayhim</main></index> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
+			Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><idx>ibn ad-Durayhim</idx> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
 		</p>
 		<blockquote>
 			<p>
@@ -596,8 +598,8 @@ khayyam: 20-8-1-700-700-1-40
 			<statement>
 				<p>
 					Another type of monoalphabetic substitution cipher
-					<index><main>monoalphabetic substitution cipher</main></index> is called <term>atabash</term>
-					<index><main>atabash</main></index> and first appeared in the bible.  To encipher a message in 
+					<idx>monoalphabetic substitution cipher</idx> is called <term>atabash</term>
+					<idx>atabash</idx> and first appeared in the bible.  To encipher a message in 
 					atabash you replace <em>a</em> with <em>z</em>, <em>b</em> with <em>y</em>, <em>c</em> with <em>x</em>, 
 					and so on.  Try to encipher the following message with atabash.
 				</p>
@@ -669,12 +671,13 @@ khayyam: 20-8-1-700-700-1-40
 			<statement>
 				<p>
 					Another type of monoalphabetic substitution cipher is called a <term>key word cipher</term>.  
-					<index><main>key word cipher</main></index>The key for this cipher consists of two pieces, a 
+					<idx>key word cipher</idx>The key for this cipher consists of two pieces, a 
 					<em>key word</em> and a <em>key letter</em>.  You write the key word in the cipher alphabet starting 
 					underneath the key letter and then write the remaining letters of the alphabet in order after that.  So, if 
 					the key word is <em>ZEBRA</em> with key letter <em>F</em> we start as follows:
 				</p>
 				<table xml:id="cipher_zebra">
+					<caption></caption>
 					<tabular top="minor" left="minor" right="minor" halign="center">
 						<row>
 							<cell>plain</cell>

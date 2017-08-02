@@ -102,7 +102,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							but by it self, or unity; and the <em>quotient by some or other prime number</em>, and 
 							the <em>last quotient again by a prime number</em>; and so go on until the <em>last 
 							quotient of all be one</em>; and thus you shall find a certain number of 
-							<em>prime divisors</em>.<index><main>prime number</main></index><index><main>prime divisors</main></index>
+							<em>prime divisors</em>.<idx>prime number</idx><idx>prime divisors</idx>
 						</p>
 						<p>
 							2. Make a rectangular table that shall consist of as many columns as you have prime divisors, 
@@ -824,9 +824,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				the strings or characters together.  However, Falconer was still very much tied down to the use of word 
 				spacings, without them his descriptions and attacks would not work.  It would be another century and a 
 				half before Charles Babbage
-				<index><main>Babbage, Charles</main></index>
+				<idx>Babbage, Charles</idx>
 				 and Friedrich Kasiski 
-				<index><main>Kasiski, Friedrich</main></index>
+				<idx>Kasiski, Friedrich</idx>
 				 would recognize how to expand these ideas into a general plan of attack.
 			</p>
 		</subsection>

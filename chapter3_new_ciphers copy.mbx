@@ -72,7 +72,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				For now see his biography on the MacTutor History of Mathematics Site: 
 				<url href="http://www-groups.dcs.st-and.ac.uk/history/Biographies/Alberti.html">
-				Leon Battista Alberti</url><index><main>Alberti, Leon Battista</main></index>
+				Leon Battista Alberti</url><idx>Alberti, Leon Battista</idx>
 			</p>
 		</subsection>
 
@@ -85,7 +85,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				worked well enough but they were never sufficiently different to make them immune to 
 				the sorts of attacks we have studied before.   Alberti made something truly different
 				he invented a <term>polyalphabetic substitution cipher</term>
-			 	<index><main>polyalphabetic substitution cipher</main></index>.  This was a cipher
+			 	<idx>polyalphabetic substitution cipher</idx>.  This was a cipher
 			 	that did not just replace the plain text alphabet with a single separate alphabet but 
 			 	instead used multiple enciphering alphabets to create greater confusion and security.
 			</p>
@@ -93,7 +93,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<paragraphs>
 					<p>
 						The key to Alberti's new system was a device he called a <term><q>formula</q></term>
-						<index><main>formula (Alberti)</main></index>.  This was a cipher disk consisting of 
+						<idx>formula (Alberti)</idx>.  This was a cipher disk consisting of 
 						a fixed outer disk and a mobile inner disk.  In his basic description of his new 
 						cipher he would use the outer ring of upper case letters for his plain text and 
 						the inner mobile ring of lower case letters for his cipher text.
@@ -194,7 +194,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				In spite of the fact that Alberti invented the polyalphabetic cipher his is not the 
 				name associated with it, instead that honor goes to the Frenchmen 
 				<em><alert>Blaise de Vigen&#x00E8;re</alert></em>
-				<index><main>Vigen&#x00E8;re, Blaise de</main></index>.
+				<idx>Vigen&#x00E8;re, Blaise de</idx>.
 				Vigen&#x00E8;re made a careful study of the cryptographers who had come before him and 
 				in 1586 he published the culmination of his work 
 				<em>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire</em><xref ref="cr_crypt_vigenere" />.  
@@ -299,13 +299,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<subsection xml:id="agripa_bio">
 			<title> Biography of Heinrich Cornelius Agripa</title>
 			<p>
-				Insert Bio Here When Available ... <index><main>Agripa, Heinrich Cornelius</main></index>
+				Insert Bio Here When Available ... <idx>Agripa, Heinrich Cornelius</idx>
 			</p>
 		</subsection>
 		<subsection xml:id="pigpen_cipher">
 			<title> Pigpen Cipher </title>
 			<p>
-				<index><main>pigpen cipher</main></index>In his treatise on cryptology <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> 
+				<idx>pigpen cipher</idx>In his treatise on cryptology <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> 
 				Vigen&#x00E8;re describes a cipher that he found in Agripa's <em>De Occulta Philosophia</em>
 				<xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/> in chapter 30 which discusses traditional ciphers 
 				used by cabals.
@@ -432,7 +432,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<subsection xml:id="autokey_cipher">
 			<title>The Autokey Cipher</title>
 			<p>
-				<index><main>autokey</main></index>
+				<idx>autokey</idx>
 				Description of Alberti's autokey from Kahn ... </p>
 			<p>
 				Below is a description of Vigen&#x00E8;re's more secure variations on an autokey cipher.

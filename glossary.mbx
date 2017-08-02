@@ -44,7 +44,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>Affine Cipher</title>
 				<p>
 					An <em>affine cipher</em> ...
-					<index><main>affine cipher</main></index>
+					<idx>affine cipher</idx>
 				</p>
 			</li>
  -->
@@ -54,7 +54,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					A <em>block cipher</em> repeatedly uses a single key in order to encipher successive pieces of 
 					plaintext.
-					<index><main>block cipher</main></index>
+					<idx>block cipher</idx>
 				</p>
 			</li>
 
@@ -65,7 +65,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					A <em>cipher</em> is a system by which a letter or block of letters in a message 
 					is replaced by another letter or block of letters in a systematic way.
-					<index><main>cipher</main></index>
+					<idx>cipher</idx>
 				</p>
 			</li>
 
@@ -74,7 +74,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					The <em>ciphertext</em> is the message you wish to transmit after it has been rewritten in order to 
 					hide its meaning.
-					<index><main>ciphertext</main></index>
+					<idx>ciphertext</idx>
 				</p>
 			</li>
 
@@ -83,7 +83,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					A <em>code</em> is a system by which words or phrses in a message
 					are replaced by other words, phrases, or symbols in a systematic way.
-					<index><main>code</main></index>
+					<idx>code</idx>
 				</p>
 			</li>
 
@@ -92,7 +92,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					In cryptology a <em>crib</em> is a known piece of plaintext which may be compared to as sample 
 					ciphertext in order to aid cryptanalysis.
-					<index><main>crib</main></index>
+					<idx>crib</idx>
 				</p>
 			</li>
 
@@ -100,7 +100,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>Cryptoanalysis</title>
 				<p>
 					<em>Cryptoanalysis</em> is an attempt to compute the key or determine the meaning of a message from the ciphertext.
-					<index><main>cryptoanalysis</main></index>
+					<idx>cryptoanalysis</idx>
 				</p>
 			</li>
 
@@ -108,7 +108,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>Cryptography</title>
 				<p>
 					<em>Cryptography</em> focuses on concealing the meaning of a message.
-					<index><main>cryptography</main></index>
+					<idx>cryptography</idx>
 				</p>
 			</li>
 
@@ -116,7 +116,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<title>Cryptology</title>
 				<p>
 					<em>Cryptology</em> is the science of maintaining secrets by either hiding the meaning or the existence of messages.
-					<index><main>cryptology</main></index>
+					<idx>cryptology</idx>
 				</p>
 			</li>
 
@@ -126,13 +126,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 				<p>
 					<em>Deciphering</em> is the process by which blocks of ciphertext are replaced by plaintext.
-					<index><main>decipher</main></index>
+					<idx>decipher</idx>
 				</p>
 			</li>
 
 		<li> 
 				<title>Decrypt</title>
-				<index><main>decrypt</main></index>
+				<idx>decrypt</idx>
 			<p>
 				<em>Decrypting</em> is the process by we discover the meaning of a ciphertext without the aid of a cipher key.
 			</p>
@@ -143,7 +143,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li> 
 				<title>Encipher</title>
-				<index><main>encipher</main></index>
+				<idx>encipher</idx>
 			<p>
 				<em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
 			</p>
@@ -154,9 +154,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li> 
 				<title>Factorial</title>
-				<index><main>factorial</main></index>
+				<idx>factorial</idx>
 			<p>
-				Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><index><main>factorial</main></index> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+				Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
 				<me>
 					n!=n(n-1)(n-2)\cdots 2 \cdot 1
 				</me>
@@ -166,7 +166,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Frequency Analysis</title>
-				<index><main>frequency analysis</main></index>
+				<idx>frequency analysis</idx>
 			<p>
 				<em>Frequency analysis</em> is the process of counting the characters, blocks of characters, or words in a text 
 				in order to determine how many of each there are relative to the entire length of the text.
@@ -179,7 +179,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Greatest Common Divisor</title>
-				<index><main>greatest common divisor</main></index>
+				<idx>greatest common divisor</idx>
 			<p>
 				The <em>greatest common divisor</em> of two integers is the largest positive integer which divides both.  For a variety of reasons it is important to know that it is also defined as the least positive linear combination of the two integers, i.e. 5 is the <m>gcd(15,35)</m> because not larger positive integer divides both 15 and 35 and because <m>5=1\cdot (35) - 2\cdot(15)</m> is the smallest possible positive combination of 15 and 35.  
 			</p>
@@ -194,7 +194,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Homophonic Cipher</title>
-				<index><main>homophonic cipher</main></index>
+				<idx>homophonic cipher</idx>
 			<p>
 
 				A <em>homophonic cipher</em> is a cipher in which a single plaintext letter may be replaced 
@@ -208,7 +208,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Index of Coincidence</title>
-				<index><main>index of coincidence</main></index>
+				<idx>index of coincidence</idx>
 			<p>
 				The <em>index of coincidence</em> for a block of text is the probability that two characters 
 				chosen at random are the same.
@@ -221,7 +221,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Modular Equivalence</title>
-				<index><main>modular equivalence</main></index>
+				<idx>modular equivalence</idx>
 			<p>
 				Given a positive integer <m>n</m> two integers are <em>equivalent modulo <m>n</m></em> 
 				if they have the same remainder when you divide them by <m>n</m>.  Equivalently, two integers 
@@ -232,7 +232,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Monoalphabetic Substitution Cipher</title>
-				<index><main>monoalphabetic substitution cipher</main></index>
+				<idx>monoalphabetic substitution cipher</idx>
 			<p>
 
 				A <em>monoalphabetic substitution cipher</em> is a cipher in which there is a one-to-one correspondence 
@@ -244,7 +244,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Multiplicative Identity</title>
-				<index><main>multiplicative identity</main></index>
+				<idx>multiplicative identity</idx>
 			<p>
 				A number <m>a</m> is the <em>multiplicative identity</em> if for all numbers <m>b</m>, 
 				<me>a\cdot b=b\cdot a = b.</me>
@@ -253,7 +253,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Multiplicative Inverse</title>
-				<index><main>multiplicative inverse</main></index>
+				<idx>multiplicative inverse</idx>
 			<p>
 				See Reciprocal
 			</p>
@@ -264,7 +264,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>N-Gram</title>
-				<index><main>n-gram</main></index>
+				<idx>n-gram</idx>
 			<p>
 				An <em>n-gram</em> is a block of <m>n</m> consecutive characters.
 			</p>
@@ -272,7 +272,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Nomenclator</title>
-				<index><main>nomenclator</main></index>
+				<idx>nomenclator</idx>
 			<p>
 
 				A <em>nomenclator</em> is a system for disguising the meaning of a message which uses both cipher alphabets 
@@ -284,14 +284,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Pangrams</title>
-				<index><main>pangrams</main></index>
+				<idx>pangrams</idx>
 			<p>
 				<em>Pangrams</em> are words or sentences containing every letter of the alphabet at least once.
 			</p>
 		</li>
 		<li>
 				<title>Plaintext</title>
-				<index><main>plaintext</main></index>
+				<idx>plaintext</idx>
 			<p>
 
 				The <em>plaintext</em> is the message you wish to transmit written in a readable form.
@@ -300,7 +300,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Polyalphabetic Substitution Cipher</title>
-				<index><main>polyalphabetic substitution cipher</main></index>
+				<idx>polyalphabetic substitution cipher</idx>
 			<p>
 
 				A <em>polyalphabetic substitution cipher</em> is a cipher in which a single plaintext letter maybe replaced by 
@@ -311,7 +311,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Polygraphic Cipher</title>
-				<index><main>polygraphic cipher</main></index>
+				<idx>polygraphic cipher</idx>
 			<p>
 
 				A <em>polygraphic cipher</em> is a cipher in which multiple plaintext characters are 
@@ -322,7 +322,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Polyphonic Cipher</title>
-				<index><main>polyphonic cipher</main></index>
+				<idx>polyphonic cipher</idx>
 			<p>
 
 				A <em>polyphonic cipher</em> is a cipher in which a single ciphertext letter may be represent 
@@ -332,7 +332,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Prime Number</title>
-				<index><main>prime number</main></index>
+				<idx>prime number</idx>
 			<p>
 				A positive integer is <em>prime</em> if it has precisely two divisors, one and its self.
 			</p>
@@ -343,8 +343,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Reciprocal</title>
-				<index><main>reciprocal</main></index>
-				<index><main>multiplicative inverse</main></index>
+				<idx>reciprocal</idx>
+				<idx>multiplicative inverse</idx>
 			<p>
 				The <em>reciprocal</em> (or <em>multiplicative inverse</em>) of a number <m>x</m> is some 
 				number <m>y</m> such that <m>x\cdot y=1</m>.
@@ -353,7 +353,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Relatively Prime Numbers</title>
-				<index><main>relatively prime</main></index>
+				<idx>relatively prime</idx>
 			<p>
 				Two integers are <em>relatively prime</em> if there greatest common divisor is one.  In this 
 				case we may say that one of the integers is <em>prime</em> to the other.
@@ -367,7 +367,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Steganography</title>
-				<index><main>steganography</main></index>
+				<idx>steganography</idx>
 			<p>
 				<em>Steganography</em> focuses on concealing the existence of a message.
 			</p>
@@ -375,7 +375,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Stream Cipher</title>
-				<index><main>stream cipher</main></index>
+				<idx>stream cipher</idx>
 			<p>
 				A <em>stream cipher</em> uses a sequence (or stream) of different keys in order to encipher successive pieces of 
 				plaintext.
@@ -384,7 +384,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Substitution Cipher</title>
-				<index><main>substitution cipher</main></index>
+				<idx>substitution cipher</idx>
 			<p>
 				A <em>substitution cipher</em> changes individual characters or groups of characters, but does not change their position.
 			</p>
@@ -394,7 +394,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		<li>
 				<title>Transposition Cipher</title>
-				<index><main>transposition cipher</main></index>
+				<idx>transposition cipher</idx>
 			<p>
 				A <em>transposition cipher</em> rearranges the positions of characters, but does not change the characters themselves.
 			</p>
