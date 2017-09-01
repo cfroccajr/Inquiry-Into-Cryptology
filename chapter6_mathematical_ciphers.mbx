@@ -269,7 +269,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<li>
 						Hill starts by describing how we will add and multiply with the alphabet, looking at his 
 						description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
-						(see <xref ref="hill_alpha_numeric_corespondence" autoname="yes"/>) come 
+						(see <xref ref="hill_alpha_numeric_corespondence" text="type-global"/>) come 
 						out to be <m>m</m> which is 13?
 					</li>
 					<li>
@@ -564,7 +564,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<exercise>
 				<statement>
 					<p>
-						Look back at <xref ref="mod_14_example" autoname="yes"/> and write down the pairs of 
+						Look back at <xref ref="mod_14_example" text="type-global"/> and write down the pairs of 
 						additive and multiplicative inverses.  Do all the numbers modulo 14 have additive inverses?  
 						Do all of them have multiplicative inverses?
 					</p>
@@ -574,7 +574,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Write down another multiplication and addition table as  you did in 
-						<xref ref="mod_14_example" autoname="yes"/> but with a modulus of 
+						<xref ref="mod_14_example" text="type-global"/> but with a modulus of 
 						<m>n=10</m>, so when you multiply and add you will always divide 
 						by 10 afterwards and write down the remainder.  After you write down 
 						the tables write down the pairs of multiplicative and additive inverses.  
@@ -641,7 +641,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Which numbers less than 26 are <em>relatively prime</em> to 26?  How do these compare to the 
-						list of numbers which have <em>multiplicative inverses</em>? (You will want to use <xref ref="appendix_figure_mod26" autoname="yes" />.)
+						list of numbers which have <em>multiplicative inverses</em>? (You will want to use <xref ref="appendix_figure_mod26" text="type-global" />.)
 					</p>
 				</statement>
 			</exercise>
@@ -683,7 +683,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						cipher <c>K</c>.  The plain <c>l</c> corresponds to 11 and 
 						<me>5\cdot 11+16\equiv 19\pmod{26}</me>, which is <c>T</c>, that is plain <c>l</c> is 
 						replaced by cipher <c>T</c>.  Try to encipher the rest of the message on your own, 
-						you will want to use <xref ref="appendix_figure_mod26" autoname="yes" /> to help you 
+						you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> to help you 
 						with the multiplication modulo 26.
 					</p>
 				</statement>
@@ -741,7 +741,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 			<p>
 				To <em>decrypt</em>, as opposed to just decipher, an affine cipher you can use the techniques we learned in 
-				<xref ref="chapter_basic_analysis" autoname="yes"/> since they are a type of 
+				<xref ref="chapter_basic_analysis" text="type-global"/> since they are a type of 
 				monoalphabetic substitution cipher.  However, we can also take advantage of the fact that it is an 
 				affine cipher.
 			</p>
@@ -864,7 +864,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				You can use this Sage Cell to encipher and decipher messages that used an <em>affine cipher</em>.  
 				To decipher you will need to use the second formula listed in 
-				<xref ref="definition_affine" autoname="yes"/>.  Also, be sure you understand how to encipher and 
+				<xref ref="definition_affine" text="type-global"/>.  Also, be sure you understand how to encipher and 
 				decipher by hand.
 			</p>
 			<sage copy="sage_affine_cell" />
@@ -1009,7 +1009,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 			<p>
 				Before moving on to see how Hill used these ideas to create a cipher practice your arithmetic with 
-				matrices and vectors, you will want to use <xref ref="appendix_figure_mod26" autoname="yes" /> 
+				matrices and vectors, you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> 
 				so that the multiplication is not so tedious.
 			</p>
 

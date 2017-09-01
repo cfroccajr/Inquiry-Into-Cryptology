@@ -121,7 +121,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<paragraphs>
 						<p>
 							<em>Example to find out all the divisors of 450</em>
-							(see <xref ref="prime_factors_table" autoname="yes"/> below)
+							(see <xref ref="prime_factors_table" text="type-global"/> below)
 						</p>
 						<p>
 							The first line contains the first divided, and the respective quotients; the lowest line 
@@ -134,7 +134,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							number, you have 1, or unity in the last quotient of all: so that your prime divisors 
 							are, 2, 3, 3, 5, 5, all which set down in the tops of the columns [of a new table], 
 							and multiplying them according to the [second] rule given, the operation will stand thus.
-							(see <xref ref="factors_table" autoname="yes" /> below)
+							(see <xref ref="factors_table" text="type-global" /> below)
 						</p>
 						<p>
 							All the divisors of 450, are 2, 3, 5, 6, 9, 10, 15, 18, 25, 30, 45, 50, 75, 90, 150, 225; 
@@ -378,7 +378,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</assemblage>
 			<p>
 				Let's follow Falconer's advice using the message we used when we introduced his cipher in 
-				<xref ref="section_falconer_cipher" autoname="yes" />:
+				<xref ref="section_falconer_cipher" text="type-global" />:
 			</p>
 			<blockquote>
 				<p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
@@ -438,7 +438,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</assemblage>
 			<p>
 				Taking Falconer's advice from step one look at each line of 
-				<xref ref="falconer_transposed_message" autoname="yes" /> 
+				<xref ref="falconer_transposed_message" text="type-global" /> 
 				we created above as you consider the following.
 			</p>
 			<p>
@@ -958,7 +958,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							In section (75) Kasiski writes about letters of the <em>key</em> 
 							uniting with repetitions of <em>plain text</em>, how does this compare 
 							to Falconer's observations in 
-							<xref ref="section_polyalphabetic_attack1" autoname="yes"/>?
+							<xref ref="section_polyalphabetic_attack1" text="type-global"/>?
 						</li>
 						<li>
 							We know that the Vigen&#x00E8;re cipher can encipher many different plain text letters 
@@ -968,9 +968,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							of how we know the Vigen&#x00E8;re cipher works.)
 						</li>
 						<li xml:id="kasiski_example_by_hand">
-							Break the plain text message in <xref ref="example_kasiski" autoname="yes" /> into blocks of six 
+							Break the plain text message in <xref ref="example_kasiski" text="type-global" /> into blocks of six 
 							then use the key <c>BERLIN</c> and the modern Vigen&#x00E8;re table 
-							<xref ref="appendix_figure_vigenere_new" autoname="yes" /> 
+							<xref ref="appendix_figure_vigenere_new" text="type-global" /> 
 							to encipher it, you should get the same cipher text as that 
 							which is in the figure.
 						</li>
@@ -1007,7 +1007,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					<ul>
 						<li>
-							Look carefully at the cipher text in <xref ref="example_kasiski" autoname="yes" />, 
+							Look carefully at the cipher text in <xref ref="example_kasiski" text="type-global" />, 
 							how often do you find the bi-grams <c>UL, XY, KS, EP</c> and <c>BU</c>?  
 							Do they always line up with the cipher key so that they give <c>th</c> when you 
 							decipher them?
@@ -1017,9 +1017,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<c>BE, ER, RL, LI</c> and <c>IN</c> from <c>BERLIN</c>, but he didn't consider 
 							enciphering it with <c>NB</c> (i.e. wrapping around from column 6 back to 1).  Encipher 
 							the bi-gram <c>th</c> using the rows <c>NB</c> in the Vigen&#x00E8;re table 
-							<xref ref="appendix_figure_vigenere_new" autoname="yes" />, what cipher bi-gram do 
+							<xref ref="appendix_figure_vigenere_new" text="type-global" />, what cipher bi-gram do 
 							you get?  How often to you find that bi-gram in the cipher text in 
-							<xref ref="example_kasiski" autoname="yes" />? (Remember that you need to look 
+							<xref ref="example_kasiski" text="type-global" />? (Remember that you need to look 
 							from columns 6 to 1.)
 						</li>
 						<li>
@@ -1086,7 +1086,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							repeated cipher <c>UIIY</c>?
 						</li>
 						<li>
-							Go through the entire cipher text in <xref ref="example_kasiski" autoname="yes" />, 
+							Go through the entire cipher text in <xref ref="example_kasiski" text="type-global" />, 
 							look for all the repeated ciphers which are at least two characters long, then 
 							for each one write down the distance between them and the factors of those 
 							distances.  What number(s) pop up most often?  Why does this make sense? 
@@ -1179,7 +1179,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						86. After we have divided the cipher text into rows according to the number
 						of letters in the key and have numbered the several columns, we take out all 
 						ciphers from column 1 and note the number o£ occurrences, then we do the same 
-						for columns, 2, 3, etc. [See <xref ref="example_kasiski" autoname="yes"/>]
+						for columns, 2, 3, etc. [See <xref ref="example_kasiski" text="type-global"/>]
 					</p>
 					<p>
 						If we have found in this way the cipher <c>U</c>, let us say, occurs seven times, cipher 
@@ -1307,7 +1307,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								</li>
 								<li>
 									Use these letters and the key table 
-									(<xref ref="kasiski_key_table" autoname="yes"/>) 
+									(<xref ref="kasiski_key_table" text="type-global"/>) 
 									to try and find the key, which 
 									should be <c>CIPHER</c>.
 								</li>
@@ -1384,7 +1384,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								</li>
 								<li>
 									Use these letters and the key table 
-									(<xref ref="kasiski_key_table" autoname="yes"/>) 
+									(<xref ref="kasiski_key_table" text="type-global"/>) 
 									to try and find the key.
 								</li>
 							</ol>

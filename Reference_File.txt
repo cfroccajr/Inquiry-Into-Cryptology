@@ -24,6 +24,7 @@ Bibliography Refs:
 	<biblio type="raw" xml:id="cr_crypt_singh">
 	<biblio type="raw" xml:id="cr_crypt_vigenere">
 	<biblio type="raw" xml:id="cr_crypt_alberti">
+	<biblio type="raw" xml:id="cr_crypt_1901lives">
 
 
 
@@ -35,3 +36,6 @@ xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Int
 ~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.mbx
 ~/Applications/Git/mathbook/script/mbx -vv -c youtube -d images ../src/Intro_Crypto_Main.mbx
 xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx
+
+
+java -classpath /Users/cfroccajr/Applications/GIT/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar /Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng ../src/Intro_Crypto_Main.mbx

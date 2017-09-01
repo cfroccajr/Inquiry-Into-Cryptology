@@ -28,13 +28,18 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
+<!-- Set  "docinfo/cross-references/@text"  to  "global"  to restore old behavior 
+    
+-->
+
+
 <docinfo>
 
     <!-- the other option is "long" which will produce an -->
     <!-- entire front matter section with more headings   -->
     <!-- <author-biographies length="short" /> -->
-
-    <brandlogo  />
+    <cross-references text="type-global" />
+    <!-- <brandlogo  /> -->
 
     <!-- Prefix to enhance Sage notebook contents -->
     <!-- <initialism>AATA</initialism> -->

@@ -100,7 +100,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</p>
 					<p>
 						For the following it will be helpful to have a working copy of Alberti's formula
-						[<xref ref="figure_alberti_disk" autoname="yes"/>], there is a larger version in the 
+						[<xref ref="figure_alberti_disk" text="type-global"/>], there is a larger version in the 
 						appendices [<xref ref="appendix_figure_alberti" />].
 					</p>
 				</paragraphs>
@@ -116,7 +116,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<q>
 						Say for example we mutually establish <em>k</em> as the index of the mobile circle.  
 						Writing, the formulae are positioned at will, say such <em>k</em> lies under the 
-						uppercase <em>B</em> [<xref ref="figure_alberti_disk" autoname="yes"/>]
+						uppercase <em>B</em> [<xref ref="figure_alberti_disk" text="type-global"/>]
 						and the next letter corresponds to the letter that comes next.  
 						In writing to you, I will first put the uppercase <em>B</em> under which lies the 
 						index <em>k</em> in the formula; this is to signal you far away, wanting to read what 
@@ -203,7 +203,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</p>
 			<p>
 				One of the key advances that Vigen&#x00E8;re made was to replace the disk 
-				with a table [<xref ref="figure_vigenere_table" autoname="yes"/>, 
+				with a table [<xref ref="figure_vigenere_table" text="type-global"/>, 
 				<xref ref="cr_crypt_vigenere" detail="p. 102 (50b)"/>
 				<fn>In the page designation <q>p. 102 (50b)</q> the 102 is the page in the pdf document 
 				while the 50b is the page in the manuscript.</fn>].  This made 
@@ -226,7 +226,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</paragraphs>
 				<figure xml:id="figure_vigenere_table">
 					<caption>
-						Vigen&#x00E8;re's Tableau [see also <xref ref="appendix_figure_vigenere_table" autoname="yes"/>]
+						Vigen&#x00E8;re's Tableau [see also <xref ref="appendix_figure_vigenere_table" text="type-global"/>]
 					</caption>
 					<image width="100%" source="images/vigenere_table.png">
 						<description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
@@ -265,7 +265,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</exercise>
 			<p> 
 				Today when we use the Vigen&#x00E8;re Cipher we use a table 
-				<xref ref="appendix_figure_vigenere_new" autoname="yes" /> 
+				<xref ref="appendix_figure_vigenere_new" text="type-global" /> 
 				which is technically simpler, but as we shall see in the next chapter it is not really significantly easier to crack.
 				You will play with the modern version in the exercises, but for now let's look at another way that cryptographers tried 
 				to make their secrets more secure.
@@ -340,7 +340,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        </p>
 	        <p>
 	        	The pigpen cipher as we use it today has evolved and standardized to use the key in 
-	        	<xref ref="figure_modern_pig" autoname="yes"/> which includes all twenty six letters of modern English.  
+	        	<xref ref="figure_modern_pig" text="type-global"/> which includes all twenty six letters of modern English.  
 	        	It has the advantages that it is quick to learn and it is easy to recreate the cipher key. Also, for each 
 	        	shape you never add more than a single dot so that there is less opportunity for confusion.
 
@@ -354,7 +354,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        <exercise>
 	        	<statement>
 	        		<p>
-	        			Use the key in <xref ref="figure_modern_pig" autoname="yes"/> to decipher the message 
+	        			Use the key in <xref ref="figure_modern_pig" text="type-global"/> to decipher the message 
 	        			below.
 	        		</p>
 <!-- 	        		"I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals." ― Winston S. Churchill -->
@@ -448,7 +448,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<xref ref="cr_crypt_vigenere" detail="pp. 99-100 (49-49b)"/>.
 				</fn> 
 				Read carefully through the passage above, you will need to 
-				use <xref ref="vigenere_auto_table" autoname="yes" /> 
+				use <xref ref="vigenere_auto_table" text="type-global" /> 
 				in order to follow along.
 			</p>
 			<blockquote>
@@ -498,7 +498,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</li>
 					<li>
 						If you had to describe these methods in terms of the Vigen&#x00E8;re cipher we discussed in 
-						<xref ref="vigenere_cipher" autoname="yes"/>, where we discussed what is now called 
+						<xref ref="vigenere_cipher" text="type-global"/>, where we discussed what is now called 
 						Vigen&#x00E8;re's Cipher, what could you say about the key used?
 					</li>
 					<li>
@@ -608,7 +608,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</li>
 						<li>
 							And lastly, they take the letters out of the table according to their partitions, as so many barbarous words, upon paper apart and send it to the confidant. 
-							- John Falconer <xref ref="cr_crypt_falconer" autoname="yes" detail="pp. 68-72 (40-43)"/>
+							- John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 68-72 (40-43)"/>
 						</li>
 					</ol>
 				</p>
@@ -616,7 +616,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 			</p>
 			<p>
-				Let's see if you can follow Falconer's directions.  Below I set up <xref ref="falconer_trans_table_1" autoname="yes"/> according to his description in steps (5) and (6) and used it to encipher the pangram<idx>pangram</idx> <em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
+				Let's see if you can follow Falconer's directions.  Below I set up <xref ref="falconer_trans_table_1" text="type-global"/> according to his description in steps (5) and (6) and used it to encipher the pangram<idx>pangram</idx> <em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
 			</p>
 
 			<table xml:id="falconer_trans_table_1">
@@ -702,7 +702,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				Refection Questions:
 				<ul>
 					<li>
-						Looking at <xref ref="falconer_trans_table_2" autoname="yes"/> why is <em>the</em> 
+						Looking at <xref ref="falconer_trans_table_2" text="type-global"/> why is <em>the</em> 
 						from the beginning of the sentence written backwards? (Be sure to look carefully at the 
 						letters to the left of the row when answering.)
 					</li>
@@ -713,7 +713,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</li>
 					<li>
 						In the last row we put down <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the 
-						order they are in and looking at the next table (<xref ref="falconer_trans_table_3" autoname="yes" />) where do we put 
+						order they are in and looking at the next table (<xref ref="falconer_trans_table_3" text="type-global" />) where do we put 
 						the <em>x</em> from <em>fox</em> and why?
 					</li>
 					<li>
@@ -734,7 +734,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Decipher the following message which used the same key as the one represented in 
-						<xref ref="falconer_trans_table_1" autoname="yes"/>:
+						<xref ref="falconer_trans_table_1" text="type-global"/>:
 					</p>
 					<blockquote>
 						<p>
@@ -747,7 +747,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Encipher the following message using the same key as the one represented in 
-						<xref ref="falconer_trans_table_1" autoname="yes"/>:
+						<xref ref="falconer_trans_table_1" text="type-global"/>:
 					</p>
 					<blockquote>
 						<p>
@@ -761,7 +761,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Encipher the following message using the three letters as before, but with the row keys 
-						<c>ACB - CAB - BAC - ABC</c>, <xref ref="appendix_trans_table" autoname="yes"/> is a blank table you 
+						<c>ACB - CAB - BAC - ABC</c>, <xref ref="appendix_trans_table" text="type-global"/> is a blank table you 
 						can copy if you need to:
 					</p>
 					<blockquote>
@@ -831,7 +831,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<statement>
 				<p>
 					Encipher this message using a <em>Pigpen Cipher</em>. 
-					<xref ref="appendix_figure_pigpen" autoname='yes' />
+					<xref ref="appendix_figure_pigpen" text="type-global" />
 				</p>
 				<blockquote>
 					<p>
@@ -844,7 +844,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<statement>
 				<p>
 					Decipher this message written using a <em>Pigpen Cipher</em>.
-					<xref ref="appendix_figure_pigpen" autoname='yes' />
+					<xref ref="appendix_figure_pigpen" text="type-global" />
 				</p>
 				<figure>
         			<caption>Cipher Text</caption>
@@ -876,7 +876,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Encipher the following message with Alberti's polyalphabetic cipher, 
-						<xref ref="appendix_figure_alberti" autoname="yes"/>, use and index letter of <em>s</em> and key 
+						<xref ref="appendix_figure_alberti" text="type-global"/>, use and index letter of <em>s</em> and key 
 						letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
 					</p>
 					<blockquote>
@@ -892,7 +892,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Encipher the following message using the modern version of the Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" autoname="yes"/> and a keyword of <em>FRANCE</em>.
+						<xref ref="appendix_figure_vigenere_new" text="type-global"/> and a keyword of <em>FRANCE</em>.
 					</p>
 					<blockquote>
 						<p>
@@ -907,7 +907,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Use the modern Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" autoname="yes"/>
+						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
 						to decipher the following message which was enciphered using a key word of <em>STATE</em>.
 					</p>
 						<pre>
@@ -922,7 +922,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>F</em>, 
 						use Vigenere's original table for this one.
-						<xref ref="appendix_figure_vigenere_auto_table" autoname='yes'/>
+						<xref ref="appendix_figure_vigenere_auto_table" text="type-global"/>
 					</p>
 					<blockquote>
 						<p>
@@ -938,7 +938,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>J</em>, 
 						use the modern Vigenere Square for this one.
-						<xref ref="appendix_figure_vigenere_new" autoname='yes'/>
+						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
 					</p>
 					<blockquote>
 						<p>
@@ -953,7 +953,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<statement>
 					<p>
 						Use the modern Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" autoname="yes"/>
+						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
 						to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
 					</p>
 						<pre>
@@ -999,7 +999,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						Encipher the following message using Falconers Columnar Transposition with 
 						a key of <em>{ACB,BCA,CAB,ABC}</em>.
-						<xref ref="appendix_trans_table" autoname='yes'/>
+						<xref ref="appendix_trans_table" text="type-global"/>
 					</p>
 					<blockquote>
 						<p>
@@ -1015,7 +1015,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						Encipher the following message using Falconers Columnar Transposition with 
 						a key of <em>{CBA,ABC,BCA,CAB,ACB,BAC}</em>.
-						<xref ref="appendix_trans_table" autoname='yes'/>
+						<xref ref="appendix_trans_table" text="type-global"/>
 					</p>
 					<blockquote>
 						<p>
@@ -1031,7 +1031,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<p>
 						Decipher the following message using Falconers Columnar Transposition with 
 						a key of <em>{ABC,BCA,BCA,ACB}</em>.
-						<xref ref="appendix_trans_table" autoname='yes'/>
+						<xref ref="appendix_trans_table" text="type-global"/>
 					</p>
 						<pre>
 							ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI	
