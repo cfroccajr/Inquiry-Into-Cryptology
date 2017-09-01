@@ -51,6 +51,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>		
+		<todo>
+			Fill In Missing Material
+		</todo>
 	</section>	
 	<section xml:id="asymetric_section">
 		<title>Asymmetric Ciphers</title>
@@ -69,7 +72,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					Diffie-Hellman Key Exchange
 				</li>
 			</ul>
-		</objectives>		
+		</objectives>
+		<todo>
+			Fill In Missing Material
+		</todo>		
 	</section>	
 	<section xml:id="symetric_section">
 		<title>Symmetric Ciphers</title>
@@ -86,5 +92,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>		
+		<todo>
+			Fill In Missing Material
+		</todo>
 	</section>	
 </chapter>

@@ -858,109 +858,95 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 	        	</figure>			
 	        </statement>
 		</exercise>
-		<exercisegroup>
-			<introduction>
+		<exercise>
+			<statement>
 				<p>
-					Each of the following ciphers is a variation on a <em>Polyalphabetic Substitution Cipher</em>.  
-					You should be able to do all of these by hand, but you can also use, 
-					if you understand how the ciphers work, these Sage Cell Utilities to help you with some.
-					<!-- <xref ref="sage_sub_cell"/> and <xref ref="sage_vigenere_cell"/>.-->
+					Encipher the following message with Alberti's polyalphabetic cipher, 
+					<xref ref="appendix_figure_alberti" text="type-global"/>, use and index letter of <em>s</em> and key 
+					letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
 				</p>
-				<p><alert>Substitution Cipher Cell:</alert></p>
-				<sage copy="sage_sub_cell" />
-				<p><em><alert>Vigenere Cipher Cell:</alert></em></p>
-				<sage copy="sage_vigenere_cell" />
-			</introduction>
-		</exercisegroup>
-			<exercise>
-				<statement>
+				<blockquote>
 					<p>
-						Encipher the following message with Alberti's polyalphabetic cipher, 
-						<xref ref="appendix_figure_alberti" text="type-global"/>, use and index letter of <em>s</em> and key 
-						letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
+						<q>
+							Men can do all things if they will.
+						</q> - Leon Battista Alberti
 					</p>
-					<blockquote>
-						<p>
-							<q>
-								Men can do all things if they will.
-							</q> - Leon Battista Alberti
-						</p>
-					</blockquote>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher the following message using the modern version of the Vigenere Square 
+					<xref ref="appendix_figure_vigenere_new" text="type-global"/> and a keyword of <em>FRANCE</em>.
+				</p>
+				<blockquote>
 					<p>
-						Encipher the following message using the modern version of the Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" text="type-global"/> and a keyword of <em>FRANCE</em>.
+						<q>
+							Hope is a good breakfast, but it is a bad supper.
+						</q> -  Francis Bacon
 					</p>
-					<blockquote>
-						<p>
-							<q>
-								Hope is a good breakfast, but it is a bad supper.
-							</q> -  Francis Bacon
-						</p>
-					</blockquote>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Use the modern Vigenere Square 
+					<xref ref="appendix_figure_vigenere_new" text="type-global"/>
+					to decipher the following message which was enciphered using a key word of <em>STATE</em>.
+				</p>
+					<pre>
+						LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
+						XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
+						JXCHP AGPHA WEL
+					</pre>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>F</em>, 
+					use Vigenere's original table for this one.
+					<xref ref="appendix_figure_vigenere_auto_table" text="type-global"/>
+				</p>
+				<blockquote>
 					<p>
-						Use the modern Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
-						to decipher the following message which was enciphered using a key word of <em>STATE</em>.
+						<q>
+							Obstacles are those frightful things you see when you take your eyes off your goal.
+						</q> - Henry Ford
 					</p>
-						<pre>
-							LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
-							XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
-							JXCHP AGPHA WEL
-						</pre>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>J</em>, 
+					use the modern Vigenere Square for this one.
+					<xref ref="appendix_figure_vigenere_new" text="type-global"/>
+				</p>
+				<blockquote>
 					<p>
-						Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>F</em>, 
-						use Vigenere's original table for this one.
-						<xref ref="appendix_figure_vigenere_auto_table" text="type-global"/>
+						<q>
+							Success is not final, failure is not fatal: it is the courage to continue that counts. 
+						</q> - Winston Churchill
 					</p>
-					<blockquote>
-						<p>
-							<q>
-								Obstacles are those frightful things you see when you take your eyes off your goal.
-							</q> - Henry Ford
-						</p>
-					</blockquote>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>J</em>, 
-						use the modern Vigenere Square for this one.
-						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
-					</p>
-					<blockquote>
-						<p>
-							<q>
-								Success is not final, failure is not fatal: it is the courage to continue that counts. 
-							</q> - Winston Churchill
-						</p>
-					</blockquote>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Use the modern Vigenere Square 
-						<xref ref="appendix_figure_vigenere_new" text="type-global"/>
-						to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
-					</p>
-						<pre>
-							ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
-						</pre>
-				</statement>
-			</exercise>
+				</blockquote>
+			</statement>
+		</exercise>
+		<exercise>
+			<statement>
+				<p>
+					Use the modern Vigenere Square 
+					<xref ref="appendix_figure_vigenere_new" text="type-global"/>
+					to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
+				</p>
+					<pre>
+						ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
+					</pre>
+			</statement>
+		</exercise>
 <!-- 			<exercise>
 				<statement>
 					<p>
@@ -982,18 +968,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</p>
 				</statement>
 			</exercise> -->
-<!-- 		</exercisegroup> -->
-
-		<exercisegroup>
-			<introduction>
-				<p>
-					For these ciphers you can use this Sage Cell Utility, but you need to be 
-					able to encipher and decipher them by hand as well.
-				</p>
-				<p>Falconer's Tabular Cipher:</p>
-				<sage copy="sage_falconer_cell" />
-			</introduction>
-		</exercisegroup>
 			<exercise>
 				<statement>
 					<p>
@@ -1039,7 +1013,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</pre>
 				</statement>
 			</exercise>
-<!-- 		</exercisegroup> -->
+			<conclusion>
+				<p><alert>Substitution Cipher Cell:</alert></p>
+				<sage copy="sage_sub_cell" />
+				<p><em><alert>Vigenere Cipher Cell:</alert></em></p>
+				<sage copy="sage_vigenere_cell" />
+				<p>Falconer's Tabular Cipher:</p>
+				<sage copy="sage_falconer_cell" />
+			</conclusion>
 	</exercises>
 	
 

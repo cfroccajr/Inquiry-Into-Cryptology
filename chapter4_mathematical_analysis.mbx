@@ -477,28 +477,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</row>
 					<row>
 						<cell right="minor">1</cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 					</row>
 					<row>
-						<cell right="minor">2</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell right="minor">2</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 					</row>
 					<row>
-						<cell right="minor">3</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-						<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+						<cell right="minor">3</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+						<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 					</row>
 				</tabular>
 			</table>
@@ -868,8 +868,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					For this section we will use the following quote for our analysis.  It is enciphered using a Vigen&#x00E8;re cipher with 
 					the keyword <c>BERLIN</c>.
 				</p>
-				<figure xml:id="example_kasiski">
-					<caption>Sample  Vigen&#x00E8;re Enciphering</caption>
+				<example xml:id="example_kasiski">
+					<title>Sample  Vigen&#x00E8;re Enciphering</title>
 					<p>
 						Plain Text:
 					</p>
@@ -906,7 +906,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cline> (7) SVVYBY  ZECWYH  JIK</cline>
 						</cd>
 					</p>
-				</figure>
+				</example>
 				<assemblage>
 					<p>
 						VI. The Actual Art of Decipherment [Cryptanalysis].
@@ -967,7 +967,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<c>P</c>'s in column 5 might represent <c>t</c>?  (Answer in terms 
 							of how we know the Vigen&#x00E8;re cipher works.)
 						</li>
-						<li xml:id="kasiski_example_by_hand">
+						<li>
 							Break the plain text message in <xref ref="example_kasiski" text="type-global" /> into blocks of six 
 							then use the key <c>BERLIN</c> and the modern Vigen&#x00E8;re table 
 							<xref ref="appendix_figure_vigenere_new" text="type-global" /> 
@@ -1002,7 +1002,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</assemblage>
 				<p>
 					Reading Questions: (For these it will be helpful for you to look at the work you did in the  
-					above <xref ref="kasiski_example_by_hand">questions</xref>.)
+					above questions.)
 				</p>
 				<p>
 					<ul>

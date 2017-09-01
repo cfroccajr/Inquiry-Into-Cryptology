@@ -57,9 +57,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</row>
 			<row>
 				<cell>CIPHER</cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 			</row>
 			<row>
 				<cell>plain</cell>
@@ -69,9 +69,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</row>
 			<row>
 				<cell>CIPHER</cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 			</row>
 			<row>
 				<cell>plain</cell>
@@ -81,9 +81,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</row>
 			<row bottom="minor">
 				<cell>CIPHER</cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-				<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+				<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 			</row>
 		</tabular>
 	</table>

@@ -61,7 +61,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
-
+		<todo>
+			Fill In Missing Material
+		</todo>
 	</section>
 	<section xml:id="between_wars_section">
 		<title>Between the Wars</title>
@@ -84,6 +86,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>
+		<todo>
+			Fill In Missing Material
+		</todo>
 	</section>
 	<section xml:id="wwii_section">
 		<title>World War II</title>
@@ -100,6 +105,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				</li>
 			</ul>
 		</objectives>		
+		<todo>
+			Fill In Missing Material
+		</todo>
 	</section>
 
 </chapter>

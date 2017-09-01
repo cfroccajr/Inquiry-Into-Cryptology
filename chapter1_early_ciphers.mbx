@@ -247,6 +247,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 		<table>
+			<caption></caption>
 			<tabular halign="center">
 				<row>
 					<cell>
@@ -254,7 +255,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</cell>
 				</row>
 			</tabular>
-			<caption></caption>
 		</table>
 
 		<p>
@@ -296,6 +296,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					ZLR BJGLD SM GS SFPMTDF SFGBI ZLR SFGL." - IZSFJAAL LMPPGQ
 				</pre>
 				<table xml:id="blank_key_table">
+					<caption></caption>
 					<tabular top="minor" left="minor" right="minor" halign="center">
 						<row>
 							<cell>plain</cell>
@@ -305,9 +306,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</row>
 						<row>
 							<cell>CIPHER</cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 						</row>
 						<row>
 							<cell>plain</cell>
@@ -317,9 +318,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</row>
 						<row>
 							<cell>CIPHER</cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 						</row>
 						<row>
 							<cell>plain</cell>
@@ -329,12 +330,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						</row>
 						<row bottom="minor">
 							<cell>CIPHER</cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 						</row>
 					</tabular>
-					<caption></caption>
 				</table>			
 			</statement>
 		</exercise>
@@ -687,8 +687,8 @@ khayyam: 20-8-1-700-700-1-40
 						</row>
 						<row>
 							<cell>CIPHER</cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell>Z</cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell>Z</cell>
 							<cell>E</cell><cell>B</cell><cell>R</cell>
 						</row>
 						<row>
@@ -699,9 +699,9 @@ khayyam: 20-8-1-700-700-1-40
 						</row>
 						<row>
 							<cell>CIPHER</cell>
-							<cell>A</cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell>A</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 						</row>
 						<row>
 							<cell>plain</cell>
@@ -711,9 +711,9 @@ khayyam: 20-8-1-700-700-1-40
 						</row>
 						<row bottom="minor">
 							<cell>CIPHER</cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
-							<cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell><cell><fillin characters="3.5"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
 						</row>
 					</tabular>
 				</table>
