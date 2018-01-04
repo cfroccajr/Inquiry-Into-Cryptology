@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="New_Ciphers">
+<chapter xml:id="New_Ciphers" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title> Mixing Things Up </title>
 	<introduction>
 		<p>
@@ -361,7 +361,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<figure>
 						<caption>Cipher Text</caption>
 		        		<image>
-		        			<latex-image-code>
+		        			<latex-image>
 		        				\begin{tikzpicture}
 		        					\draw (0,-0.5) \ppi ++(5pt,0pt) \ppa\ppm ++(5pt,0pt) \ppf\ppo\ppn\ppd ++(5pt,0pt) \ppo\ppf ++(5pt,0pt) \ppp\ppi\ppg\pps;
 		        					
@@ -375,7 +375,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 		        					\draw (0,-3) \ppw\ppi\ppn\pps\ppt\ppo\ppn ++(5pt,0pt) \pps ++(5pt,0pt) \ppc\pph\ppu\ppr\ppc\pph\ppi\ppl\ppl;
 		        				\end{tikzpicture}
-		        			</latex-image-code>
+		        			</latex-image>
 		        		</image>
 		        	</figure>
 	        	</statement>
@@ -692,12 +692,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					</row>
 				</tabular>
 			</table>
-			<paragraphs>
-				<p>Final Message:</p>
-				<blockquote>
-					<p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
-				</blockquote>
-			</paragraphs>
+			<p>Final Message:</p>
+			<blockquote>
+				<p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
+			</blockquote>
 			<p>
 				Refection Questions:
 				<ul>
@@ -849,11 +847,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<figure>
         			<caption>Cipher Text</caption>
 	        		<image>
-	        			<latex-image-code>
+	        			<latex-image>
 	        				\begin{tikzpicture}<!-- THAT'S ALL FOLKS -->
 	        					\draw (0,-0.5) \ppt\pph\ppa\ppt\pps ++(5pt,0pt) \ppa\ppl\ppl ++(5pt,0pt) \ppf\ppo\ppl\ppk\pps;
 	        				\end{tikzpicture}
-	        			</latex-image-code>
+	        			</latex-image>
 	        		</image>
 	        	</figure>			
 	        </statement>
@@ -1015,11 +1013,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</exercise>
 			<conclusion>
 				<p><alert>Substitution Cipher Cell:</alert></p>
-				<sage copy="sage_sub_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/subst_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 				<p><em><alert>Vigenere Cipher Cell:</alert></em></p>
-				<sage copy="sage_vigenere_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/vigenere_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 				<p>Falconer's Tabular Cipher:</p>
-				<sage copy="sage_falconer_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/falconer_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 			</conclusion>
 	</exercises>
 	

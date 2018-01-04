@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="MathematicalCrypto">
+<chapter xml:id="MathematicalCrypto" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title> Mathematics to the Rescue </title>
 	<objectives>
 		<ul>
@@ -151,61 +151,65 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Let the letters of the alphabet be associated with the integers as follows:
 				</p>
-				<table xml:id="hill_alpha_numeric_corespondence">
-					<caption></caption>
-					<tabular halign="right">
-						<row> 
-							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
-							<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
-							<cell>k</cell><cell>l</cell><cell>m</cell>
+				<p>
+					<table xml:id="hill_alpha_numeric_corespondence">
+						<caption></caption>
+						<tabular halign="right">
+							<row> 
+								<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+								<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+								<cell>k</cell><cell>l</cell><cell>m</cell>
 
-						</row>
-						<row> 
-							<cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
-							<cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
-							<cell>0</cell><cell>16</cell><cell>13</cell>
-						</row>
-						<row> 
-							<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
-							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
-							<cell>x</cell><cell>y</cell><cell>z</cell>
-						</row>
-						<row> 
-							<cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
-							<cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
-							<cell>22</cell><cell>11</cell><cell>9</cell>
-						</row>
-					</tabular>
-				</table>
+							</row>
+							<row> 
+								<cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
+								<cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
+								<cell>0</cell><cell>16</cell><cell>13</cell>
+							</row>
+							<row> 
+								<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+								<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+								<cell>x</cell><cell>y</cell><cell>z</cell>
+							</row>
+							<row> 
+								<cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
+								<cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
+								<cell>22</cell><cell>11</cell><cell>9</cell>
+							</row>
+						</tabular>
+					</table>
+				</p>
 				<p>
 					or, in another convenient formulation:
 				</p>
-				<table xml:id="hill_numeric_alpha_corespondence">
-					<caption></caption>
-					<tabular halign="right">
-						<row> 
-							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
-							<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
-							<cell>10</cell><cell>11</cell><cell>12</cell>
+				<p>
+					<table xml:id="hill_numeric_alpha_corespondence">
+						<caption></caption>
+						<tabular halign="right">
+							<row> 
+								<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+								<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+								<cell>10</cell><cell>11</cell><cell>12</cell>
 
-						</row>
-						<row> 
-							<cell>k</cell><cell>p</cell><cell>c</cell><cell>o</cell><cell>h</cell>
-							<cell>a</cell><cell>r</cell><cell>n</cell><cell>g</cell><cell>z</cell>
-							<cell>e</cell><cell>y</cell><cell>s</cell>
-						</row>
-						<row> 
-							<cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell><cell>17</cell>
-							<cell>18</cell><cell>19</cell><cell>20</cell><cell>21</cell><cell>22</cell>
-							<cell>23</cell><cell>24</cell><cell>25</cell>
-						</row>
-						<row> 
-							<cell>m</cell><cell>w</cell><cell>f</cell><cell>l</cell><cell>v</cell>
-							<cell>i</cell><cell>q</cell><cell>d</cell><cell>u</cell><cell>x</cell>
-							<cell>b</cell><cell>t</cell><cell>j</cell>
-						</row>
-					</tabular>
-				</table>
+							</row>
+							<row> 
+								<cell>k</cell><cell>p</cell><cell>c</cell><cell>o</cell><cell>h</cell>
+								<cell>a</cell><cell>r</cell><cell>n</cell><cell>g</cell><cell>z</cell>
+								<cell>e</cell><cell>y</cell><cell>s</cell>
+							</row>
+							<row> 
+								<cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell><cell>17</cell>
+								<cell>18</cell><cell>19</cell><cell>20</cell><cell>21</cell><cell>22</cell>
+								<cell>23</cell><cell>24</cell><cell>25</cell>
+							</row>
+							<row> 
+								<cell>m</cell><cell>w</cell><cell>f</cell><cell>l</cell><cell>v</cell>
+								<cell>i</cell><cell>q</cell><cell>d</cell><cell>u</cell><cell>x</cell>
+								<cell>b</cell><cell>t</cell><cell>j</cell>
+							</row>
+						</tabular>
+					</table>
+				</p>
 				<p>
 					It will be seen that
 					<md>
@@ -856,7 +860,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p> 
 				Sage N-Gram Cell:
 			</p>
-			<sage copy="sage_ngram_cell" />
+
+			<sage>
+				<input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+				<output></output>
+			</sage>
 
 			<p>
 				Affine Cipher Cell:
@@ -867,7 +875,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<xref ref="definition_affine" text="type-global"/>.  Also, be sure you understand how to encipher and 
 				decipher by hand.
 			</p>
-			<sage copy="sage_affine_cell" />
+			<sage>
+				<input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
+				<output></output>
+			</sage>
 
 		</subsection>
 
@@ -1802,13 +1813,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				This SAGE cell can help you check your work when you encipher and decipher with a affine cipher, 
 				but you should be able to do the basic calculations your self.
 			</p>
-			<sage copy="sage_affine_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 			<p>Hill's Cipher Cell:</p>
 			<p>
 				This SAGE cell can help you check your work when you encipher and decipher with a basic Hill's cipher, 
 				but you should be able to do the basic calculations your self.
 			</p>
-			<sage copy="sage_hill_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/hills_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
 		</conclusion>
 	</exercises>
 	

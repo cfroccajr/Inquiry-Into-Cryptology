@@ -157,7 +157,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<caption>Modern Cipher Disk or <q>Formula</q></caption>
 		<image width="65%" archive="svg png pdf">
 			<description> This is an image of modern version of Alberti's Cipher Disk. </description>
-			<latex-image-code>
+			<latex-image>
 			    <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
                 <![CDATA[\begin{tikzpicture}[scale=4,cap=round,>=latex]
 			        % draw the circles
@@ -236,7 +236,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			        \draw (-\x:1.15cm) node[fill=white, rotate=270-\x] {\Large$\mathit{\ptext}$};
 
 			    \end{tikzpicture}]]>
-			</latex-image-code>
+			</latex-image>
 		</image>
 	</figure>
 
@@ -261,7 +261,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<caption>Updated Vigen&#x00E8;re Tableau</caption>
 		<image width="90%" archive="svg png pdf">
 			<description> Updated Vigen&#x00E8;re Tableau </description>
-			<latex-image-code>
+			<latex-image>
 			    \begin{tikzpicture}
 			    \foreach \y  in {0,1,...,25}{
 			    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
@@ -284,7 +284,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				\draw (0.75,1)--(0.75,-12.75);
 
 			    \end{tikzpicture}
-			</latex-image-code>
+			</latex-image>
 		</image>
 	</figure>
 
@@ -361,7 +361,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<caption>Kasiski Key Table</caption>
 		<image width="90%" archive="svg png pdf">
 			<description>Kasiski Key Table</description>
-			<latex-image-code>
+			<latex-image>
 			    \begin{tikzpicture}
 			    \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
 			    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
@@ -399,7 +399,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				\draw (-1.25,0.25)--(15,0.25);
 				\draw (0.75,1)--(0.75,-5.5);
 			    \end{tikzpicture}
-			</latex-image-code>
+			</latex-image>
 		</image>
 	</figure>
 
@@ -414,7 +414,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<caption>Multiplication table modulo 26</caption>
 		<image width="90%" archive="svg png pdf">
 			<description>Multiplication table modulo 26</description>
-			<latex-image-code>
+			<latex-image>
 			    \begin{tikzpicture}
 			    \foreach \y in {0,1,...,25}{
 			    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
@@ -437,7 +437,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				\draw (-0.25,0.75)--(-0.25,-12.75);
 				\draw (-0.55,0.5) node {$\times_{26}$};
 			    \end{tikzpicture}
-			</latex-image-code>
+			</latex-image>
 		</image>
 	</figure>
 
@@ -454,7 +454,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		<caption>A Highly Simplified two step DES</caption>
         <image width="100%" archive="svg png pdf">
         	<description> This is a highly simplified example of the Data Encryption Standard </description>
-	        <latex-image-code>
+	        <latex-image>
 	        	\scalebox{0.75}{
 				\begin{picture}(600,500)(0,-75)
 					%\put(0,-75){\framebox(600,500){}}
@@ -523,7 +523,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					\put(110,-13){\makebox(0,0){$C$}}
 				\end{picture}
 				}
-	        </latex-image-code>
+	        </latex-image>
 	    </image>
 	</figure>
 

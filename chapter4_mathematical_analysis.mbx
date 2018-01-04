@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="Mathematical_Analysis">
+<chapter xml:id="Mathematical_Analysis" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title> Triumphs of Logic and Statistics </title>
 	<introduction>
 		<p>
@@ -87,8 +87,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				
 			</p>
 			<assemblage>
-				<sidebyside widths="48% 48%" margins="auto">
-					<paragraphs>
 						<p>
 							... take the number of partitions of the seeming words in the epistle, and find out their 
 							several divisors, which may be performed by the following rules.
@@ -117,11 +115,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							figures in the table towards the left hand, setting the several products in the third 
 							column: and so forth, throughout all the prime divisors; ...
 						</p>
-					</paragraphs>
-					<paragraphs>
 						<p>
 							<em>Example to find out all the divisors of 450</em>
-							(see <xref ref="prime_factors_table" text="type-global"/> below)
+						</p>
+						<p>
+							<tabular left="minor" right="minor" halign="left">
+								<row>
+									<cell>450</cell>
+									<cell>225</cell>
+									<cell>75</cell>
+									<cell>25</cell>
+									<cell>5</cell>
+									<cell>1</cell>
+								</row>
+								<row>
+									<cell>2</cell>
+									<cell>3</cell>
+									<cell>3</cell>
+									<cell>5</cell>
+									<cell>5</cell>
+									<cell> </cell>
+								</row>					
+							</tabular>
 						</p>
 						<p>
 							The first line contains the first divided, and the respective quotients; the lowest line 
@@ -134,7 +149,129 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							number, you have 1, or unity in the last quotient of all: so that your prime divisors 
 							are, 2, 3, 3, 5, 5, all which set down in the tops of the columns [of a new table], 
 							and multiplying them according to the [second] rule given, the operation will stand thus.
-							(see <xref ref="factors_table" text="type-global" /> below)
+						</p>
+						<p>
+							<tabular halign="right">
+								<row left="minor" >
+									<cell right="minor" >
+										2
+									</cell>
+									<cell right="minor" >
+										3
+									</cell>
+									<cell right="minor" >
+										3
+									</cell>
+									<cell  right="minor" >
+										5
+									</cell>
+									<cell right="minor" >
+										5
+									</cell>
+								</row>
+								<row>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										6
+									</cell>
+									<cell right="minor" >
+										9
+									</cell>
+									<cell right="minor" >
+										10
+									</cell>
+									<cell right="minor" >
+										25
+									</cell>
+								</row>
+								<row>
+									<cell>
+										
+									</cell>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										18
+									</cell>
+									<cell right="minor" >
+										15
+									</cell>
+									<cell right="minor" >
+										50
+									</cell>
+								</row>
+								<row>
+									<cell>
+										
+									</cell>
+									<cell>
+										
+									</cell>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										30
+									</cell>
+									<cell right="minor" >
+										75
+									</cell>
+								</row>
+								<row>
+									<cell>
+										
+									</cell>
+									<cell>
+										
+									</cell>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										45
+									</cell>
+									<cell right="minor" >
+										150
+									</cell>
+								</row>
+								<row>
+									<cell>
+										
+									</cell>
+									<cell>
+										
+									</cell>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										90
+									</cell>
+									<cell right="minor" >
+										225
+									</cell>
+								</row>
+								<row>
+									<cell>
+										
+									</cell>
+									<cell>
+										
+									</cell>
+									<cell>
+										
+									</cell>
+									<cell right="minor" >
+										
+									</cell>
+									<cell right="minor" >
+										450
+									</cell>
+								</row>
+							</tabular>
 						</p>
 						<p>
 							All the divisors of 450, are 2, 3, 5, 6, 9, 10, 15, 18, 25, 30, 45, 50, 75, 90, 150, 225; 
@@ -142,11 +279,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							been the number of letters combined for the key: ...
 						</p>
 						<p>- John Falconer <xref ref="cr_crypt_falconer" detail="pp. 44-47 (72-75)"/></p>
-					</paragraphs>
-				</sidebyside>
-				<sidebyside widths="48% 48%" margins="auto">
-					<table xml:id="prime_factors_table">
-						<caption>Prime Factors Table</caption>
+<!-- 				<sidebyside widths="48% 48%" margins="auto">
+
 						<tabular left="minor" right="minor" halign="left">
 							<row>
 								<cell>450</cell>
@@ -165,9 +299,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								<cell> </cell>
 							</row>					
 						</tabular>
-					</table>
-					<table xml:id="factors_table">
-						<caption>Factors Table</caption>
+
 						<tabular halign="right">
 							<row left="minor" >
 								<cell right="minor" >
@@ -289,8 +421,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								</cell>
 							</row>
 						</tabular>
-					</table>
-				</sidebyside>				
+
+				</sidebyside> -->				
 			</assemblage>
 			<p>
 				<ul>
@@ -684,7 +816,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<caption>Falconer's Counter-Table</caption>
 				<image width="90%" archive="svg png pdf">
 					<description>Falconer's Counter-Table</description>
-					<latex-image-code>
+					<latex-image>
 					    \begin{tikzpicture}
 
 						\filldraw[fill=gray!30!white, draw=white, fill opacity=0.7] (4.82,0.25) rectangle (5.32,-11.75);
@@ -713,7 +845,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						\draw (0.8,0.25)--(0.8,-11.75);
 
 					    \end{tikzpicture}
-					</latex-image-code>
+					</latex-image>
 				</image>
 			</figure>
 			<p>
@@ -1104,7 +1236,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<caption>Kasiski Key Table</caption>
 					<image width="90%" archive="svg png pdf">
 						<description>Kasiski Key Table</description>
-						<latex-image-code>
+						<latex-image>
 						    \begin{tikzpicture}
 						    \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
 						    	\pgfmathtruncatemacro{\o}{mod(\y,2)};
@@ -1142,7 +1274,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							\draw (-1.25,0.25)--(15,0.25);
 							\draw (0.75,1)--(0.75,-5.5);
 						    \end{tikzpicture}
-						</latex-image-code>
+						</latex-image>
 					</image>
 				</figure>
 				<p>
@@ -1398,11 +1530,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Sage cell for calculating subsets of letters in a message:
 				</p>
-				<sage copy="sage_subset_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/subset_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 				<p>
 					Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
 				</p>
-				<sage copy="sage_vigenere_cell" />
+				<sage>
+					<input><xi:include href="sage_code/vigenere_cipher.sage" parse="text"/></input>
+					<output></output>
+				</sage>
 			</subsubsection>
 		</subsection>
 		<subsection>
@@ -1624,11 +1764,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			<p>
 				Sage cell for calculating subsets of letters in a message:
 			</p>
-			<sage copy="sage_subset_cell" />
+
+			<sage>
+				<input><xi:include href="sage_code/subset_analysis.sage" parse="text"/></input>
+				<output></output>
+			</sage>
+
 			<p>
 				Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
 			</p>
-			<sage copy="sage_vigenere_cell" />
+			<sage>
+				<input><xi:include href="sage_code/vigenere_cipher.sage" parse="text"/></input>
+				<output></output>
+			</sage>		
 		</conclusion>
 	</exercises>
 

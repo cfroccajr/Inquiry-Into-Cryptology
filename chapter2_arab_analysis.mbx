@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="chapter_basic_analysis">
+<chapter xml:id="chapter_basic_analysis" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<title> Attacking the Alphabet </title>
 	<introduction>
 		<p>In this chapter look at the contributions of Arabic speaking scholars and others mostly to analysis:
@@ -104,7 +104,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     		To use the n-gram counter press the <em>Evaluate Sage Code</em> button, copy and paste the text you wish to analyze into the 
     		input box, and select 1 for <em>N</em> since we are analyzing single letters.
     	</p>
-       	<sage copy="sage_ngram_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
 
 		<exercise>
 			<statement>
@@ -178,9 +182,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 			</exercise>
 
 			<p><alert>N-Gram Counter:</alert></p>
-			<sage copy="sage_ngram_cell" />
+			
+				<sage>
+					<input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 			<p><em><alert>Word Counter:</alert></em></p>
-			<sage copy="sage_word_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 		</subsection>
 		<subsection xml:id="subsection_falconer_step_two">
 			<title><em>Secondly, Distinguish the Vowels from Themselves.</em></title>
@@ -505,9 +519,19 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 		</exercise>
 		<conclusion>
 			<p><alert>N-Gram Counter:</alert></p>
-				<sage copy="sage_ngram_cell" />
+			
+				<sage>
+					<input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 			<p><em><alert>Word Counter:</alert></em></p>
-				<sage copy="sage_word_cell" />
+
+				<sage>
+					<input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
+					<output></output>
+				</sage>
+
 		</conclusion>
 	</exercises>
 </chapter>
