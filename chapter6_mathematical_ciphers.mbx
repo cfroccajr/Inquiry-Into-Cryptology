@@ -151,9 +151,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Let the letters of the alphabet be associated with the integers as follows:
 				</p>
-				<p>
-					<table xml:id="hill_alpha_numeric_corespondence">
-						<caption></caption>
+				<p xml:id="hill_alpha_numeric_corespondence">
+				<sidebyside width="30%" margins="auto">
 						<tabular halign="right">
 							<row> 
 								<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
@@ -177,14 +176,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								<cell>22</cell><cell>11</cell><cell>9</cell>
 							</row>
 						</tabular>
-					</table>
+				</sidebyside>
 				</p>
 				<p>
 					or, in another convenient formulation:
 				</p>
-				<p>
-					<table xml:id="hill_numeric_alpha_corespondence">
-						<caption></caption>
+				<sidebyside width="30%" margins="auto">
 						<tabular halign="right">
 							<row> 
 								<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
@@ -208,8 +205,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 								<cell>b</cell><cell>t</cell><cell>j</cell>
 							</row>
 						</tabular>
-					</table>
-				</p>
+				</sidebyside>
 				<p>
 					It will be seen that
 					<md>
@@ -224,8 +220,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 				<p>
 					Since this particular alphabet will be used several times, in illustration of further developments, we append the following table of negatives and reciprocals:
 				</p>
-				<table xml:id="hill_alpha_inverses">
-					<caption></caption>
+				<sidebyside width="30%" margins="auto">
 					<tabular halign="left">
 						<row>
 							<cell>Letter</cell><cell>:</cell>
@@ -255,7 +250,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							<cell></cell><cell>q</cell><cell>o</cell>
 						</row>
 					</tabular>
-				</table>
+				</sidebyside>
 				<p>
 					The solution to the equation <m>z+\alpha=t</m> is <m>\alpha=t-z</m> or 
 					<m>\alpha=t+(-z)=t+v=f</m>.
@@ -273,7 +268,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 					<li>
 						Hill starts by describing how we will add and multiply with the alphabet, looking at his 
 						description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
-						(see <xref ref="hill_alpha_numeric_corespondence" text="type-global"/>) come 
+						(see <xref ref="hill_alpha_numeric_corespondence">Hill's Correspondence</xref>) come 
 						out to be <m>m</m> which is 13?
 					</li>
 					<li>

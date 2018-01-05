@@ -118,7 +118,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 						<p>
 							<em>Example to find out all the divisors of 450</em>
 						</p>
-						<p>
+						<sidebyside width="30%" margins="auto">
 							<tabular left="minor" right="minor" halign="left">
 								<row>
 									<cell>450</cell>
@@ -137,7 +137,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 									<cell> </cell>
 								</row>					
 							</tabular>
-						</p>
+						</sidebyside>
 						<p>
 							The first line contains the first divided, and the respective quotients; the lowest line 
 							is the several prime divisors.
@@ -150,7 +150,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 							are, 2, 3, 3, 5, 5, all which set down in the tops of the columns [of a new table], 
 							and multiplying them according to the [second] rule given, the operation will stand thus.
 						</p>
-						<p>
+						<sidebyside width="30%" margins="auto">
 							<tabular halign="right">
 								<row left="minor" >
 									<cell right="minor" >
@@ -272,7 +272,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 									</cell>
 								</row>
 							</tabular>
-						</p>
+						</sidebyside>
 						<p>
 							All the divisors of 450, are 2, 3, 5, 6, 9, 10, 15, 18, 25, 30, 45, 50, 75, 90, 150, 225; 
 							and one of them (supposing the epistle to have consisted of 450 seeming words) should have 
