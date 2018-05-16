@@ -28,445 +28,419 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="chapter_early_riphers">
-	<title>Caesar's Shifty Idea </title>
+<chapter xml:id="chapter_early_riphers" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Caesar's Shifty Idea </title>
 
 <!-- Introduction -->
 
-	<introduction>
-		<p>
-			In this chapter discuss ancient encryption systems:
-			<ul>
-				<li> Caesar's Shift</li>
-				<li> Skytle</li>
-				<li> Others?</li>
-				<li> Slight improvements: Nomenclatures, Nulls, etc.</li>
-			</ul>
-		</p>
-		<todo> Add specific sections on atabash and keyword.  Also, intoduce more vocabulary in an official manner.</todo>
-	</introduction>
+    <introduction>
+        <p>
+            In this chapter discuss ancient encryption systems:
+            <ul>
+                <li> Caesar's Shift</li>
+                <li> Skytle</li>
+                <li> Others?</li>
+                <li> Slight improvements: Nomenclatures, Nulls, etc.</li>
+            </ul>
+        </p>
+        <todo> Add specific sections on atabash and keyword.  Also, intoduce more vocabulary in an official manner.</todo>
+    </introduction>
 
 <!-- Early simple ciphers Section -->
 
-	<section xml:id="section_ancient_ciphers">
-		<title>Simple Early Ciphers (and a little math)</title>
+    <section xml:id="section_ancient_ciphers">
+        <title>Simple Early Ciphers (and a little math)</title>
 
-		<definition xml:id="Def_Ciphers">
-			<title> Cipher </title>
-			<statement>
-				<p>
-					A <term> cipher </term><idx>cipher</idx> is a system by which a letter or block of letters 
-					in a message is replaced by another letter or block of letters in a systematic way.  In this chapter we will 
-					mostly focus on <term>monoalphabetic substitution ciphers</term>
-					<idx>monoalphabetic substitution cipher</idx> in which the substitution is always 
-					carried out in the same way with one-to-one correspondence between letters.
-				</p>
-			</statement>
-		</definition>
+        <definition xml:id="Def_Ciphers">
+            <title> Cipher </title>
+            <statement>
+                <p>
+                    A <term>cipher</term><idx>cipher</idx> is a system by which a letter or block of letters in a message is replaced by another letter or block of letters in a systematic way.  In this chapter we will focus on <term>monoalphabetic substitution ciphers</term>
+                    <idx>monoalphabetic substitution cipher</idx> in which the substitution is always carried out in the same way with one-to-one correspondence between letters.
+                </p>
+            </statement>
+        </definition>
 
-		<p>
-			One of the earliest types of cipher (sometimes spelled cypher in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
-		</p>
+        <p>
+            One of the earliest types of cipher (sometimes spelled <em>cypher</em> in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
+        </p>
 
-		<assemblage>
-			<p>		
-				There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.
-			</p>
-		</assemblage>
+        <assemblage>
+            <blockquote>
+                <p>
+                    <q>There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.</q>
+                    <xref ref="cr_crypt_1901lives" detail="p. 37"/>
+                </p>
+            </blockquote>
+        </assemblage>
 
-		<p>
-			Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
-		</p>
+        <p>
+            Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
+        </p>
 
-		<assemblage>
-			<p>
-				When he had occasion to write in cypher he put b for a c for b so forth and instead of z, aa.
-			</p>
-		</assemblage>
+        <assemblage>
+            <blockquote>
+                <p>
+                    <q>When he had occasion to write in cypher he put b for a, c for b [and] so forth and instead of z, aa.</q> <xref ref="cr_crypt_1901lives" detail="p. 134"/>
+                </p>
+            </blockquote>
+        </assemblage>
 
-		<p>
-			Neither of these offer much security, nor do they take full advantage of the number of possible substitutions that can be made.
-		</p>
-
-		<!-- \hfill\cite[pages 37,134]{CR:Crypt:1901lives} -->
-
-
-	<!-- 	<p>
-			Try to figure out the message in the passage below which has been <term>enciphered</term><idx><main>encipher</main></idx>.
-		</p>
-		<exercise> 
-			<statement>
-				<p>
-					Cipher Text:
-				</p>
-				<cd>
-					RQH RI WKH HDUOLHVW WBSHV RI FLSKHU (VRPHWLPHV VSHOOHG FBSKHU 
-					LQ ROGHU GRFXPHQWV) WKDW ZH KDYH D UHFRUG RI ZDV WKH FDHVDU 
-					VKLIW FLSKHU XVHG EB MXOLXV FDHVDU DURXQG 100 EFH. KHUH LW LV 
-					DV GHVFULEHG EB VXHWRQLXV ZKR OLYHG DERXW 150 WR 200 BHDUV 
-					DIWHU MXOLXV FDHVDU.
-
-					"WKHUH DUH HAWDQW OLNHZLVH VRPH OHWWHUV IURP KLP WR FLFHUR 
-					DQG RWKHUV WR KLV IULHQGV FRQFHUQLQJ KLV GRPHVWLF DIIDLUV 
-					LQ ZKLFK LI WKHUH ZDV RFFDVLRQ IRU VHFUHFB KH ZURWH LQ 
-					FBSKHUV, WKDW LV KH XVHG WKH DOSKDEHW LQ VXFK D PDQQHU WKDW 
-					QRW D VLQJOH ZDUG FRXOG EH PDGH RXW. WKH ZDB WR GHFLSKHU WKRVH 
-					HSLVWOHV ZDV WR VXEVWLWXWH WKH IRXUWK IRU WKH ILUVW OHWWHU DV 
-					G IRU D DQG VR IRU WKH RWKHU OHWWHUV UHVSHFWLYHOB."
-					
-					DXJXVWXV FDHVDU D VKRUW WLPH ODWHU DOVR HPSORBHG D VKLIW 
-					FLSKHU, WKRXJK DUJXDEOB D PXFK OHVV HIIHFWLYH RQH:
-
-					"ZKHQ KH KDG RFFDVLRQ WR ZULWH LQ FBSKHU KH SXW E IRU D F 
-					IRU E VR IRUWK DQG LQVWHDG RI C, DD."
-
-					QHLWKHU RI WKHVH RIIHU PXFK VHFXULWB, QRU GR WKHB WDNH IXOO 
-					DGYDQWDJH RI WKH QXPEHU RI SRVVLEOH VXEVWLWXWLRQV WKDW FDQ EH 
-					PDGH.
-				</cd>
-			</statement>
-			<hint>
-				<p>
-					<ul>
-						<li> Which letters stand alone, i.e. are one letter words?  Can this tell you something about which letters they represent?</li>
-						<li> What about two or three letter words?  What might they be?</li>
-						<li> Do some of the letters appear more often than others?</li>
-						<li> Can you think of other properties of words and letters that could help us understand what a message says?</li>
-						<li> Do you see the general pattern that was used?</li>
-					</ul>
-				</p>
-			</hint>
-		</exercise> -->
-
-		<p>
-			Were you able to <term>decrypt</term><idx>decrypt</idx> the message?  Whet about just the quotes?  You should hopefully notice that the first quote describes the way in which the message was enciphered.  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
-
-			<ul>
-				<li> How does the new method compare to those which we have previously considered, what does it do to make the message more secure?</li>
-				<li> Each time we change the method in which messages are enciphered what doesn't change?  </li>
-				<li> Are there any properties that can not change?  That is, are there rules about how English is put together that we can make use of?</li>
-				<li> If you have suspicions about what a message, or part of a message, might say how can you use this to help you?</li>
-				<li> What sort of data might we keep track of or how can we organize our thoughts to help us solve these puzzles?</li>
-			</ul>
-		</p>
-
-			<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% About Enciphering Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-			\begin{comment}
-
-			One of the easiest ways to try an foil the sort of analysis we used on the first message is to not leave in the word spacings.  
-			Consider the following two passages one of which was enciphered with the word spacings intact and the second with them removed.
-
-			%\begin{quote}
-			``Be copy now to men of grosser blood, 
-			And teach them how to war. And you, good yeoman, 
-			Whose limbs were made in England, show us here 
-			The mettle of your pasture; let us swear 
-			That you are worth your breeding; which I doubt not; 
-			For there is none of you so mean and base, 
-			That hath not noble lustre in your eyes. 
-			I see you stand like greyhounds in the slips, 
-			Straining upon the start. The game's afoot: 
-			Follow your spirit, and upon this charge 
-			Cry 'God for Harry, England, and Saint George!'' - Henry V, William Shakespeare
-			%\end{quote}
-
-			And now for a similar quote with them removed:
-
-			%\begin{quote}
-			``We few, we happy few, we band of brothers;
-			For he to-day that sheds his blood with me 
-			Shall be my brother; be he ne'er so vile, 
-			This day shall gentle his condition: 
-			And gentlemen in England now a-bed 
-			Shall think themselves accursed they were not here,
-			And hold their manhoods cheap whiles any speaks 
-			That fought with us upon Saint Crispin's day.'' - Henry V, by William Shakespeare
-			%\end{quote}
+        <p>
+            Comprehension Check:
+            <ol>
+                <li>In Julius Caesar's cipher what letter was substituted for a? What about in Augustus' cipher, what letter was substituted for a?</li>
+                <li>In Julius Caesar's cipher what letters would replace b, c, and d?  What letter should replace n?</li>
+                <li>In Julius Caesar's cipher how would you need to handle the letters x, y, and z?</li>
+                <li>
+                    For each <term>plaintext</term><idx>plaintext</idx> letter write in the corresponding <term>CIPHERTEXT</term><idx>ciphertext</idx> letter using Julius Caesar's cipher system. (We will generally follow the convention that plaintext is lowercase and ciphertext will be uppercase.)
+                </li>
+            </ol>
+        </p>
+        <xi:include href="table_code/mono_key_table.ptx"/>
+        <p>
+            Now use the table you filled in to check you understanding.
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    Use your table to convert this to CIPHERTEXT: <q>hello world</q>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    <c>KHOOR ZRUOG</c>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use your table to convert this to plaintext: <c>WKLV LV D WHVW</c>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    this is a test
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use your table to convert this to plaintext: <c>CRPELHV OLNH CHEUDV</c>
+                </p>
+            </statement>
+            <solution>
+                <p>
+                    zombies like zebras
+                </p>
+            </solution>
+        </exercise>
 
 
-			\end{comment}
+        <p>
+            Both of the ciphers described above are called <term>shift ciphers</term><idx>shift ciphers</idx> because of how they move letters along in the alphabet, but do not change their order.
+        </p>
+        <p>
+            Try to figure out the message in the passage below which has been <term>enciphered</term><idx>encipher</idx> using a different shift.
+        </p>
+        <exercise>
+            <statement>
+                <pre>
+                    OLYL PZ H SVUNLY TLZZHNL MVY FVB AV WYHJAPJL VU.
+                    AOL ZOPMA MVY AOPZ TLZZHNL DHZ IF H MHJAVY VM
+                    ZLCLU, ZV AOL H NVLZ AV AOL O.  AOPZ KVLZU'A
+                    YLHSSF VMMLY TBJO TVYL ZLJBYPAF, LZWLJPHSSF ZPUJL
+                    AOLYL HYL VUSF ADLUAF ZPE WVZZPISL ZOPMA JPWOLYZ
+                    HUK VUL VM AOVZL KVLZU'A JOHUNL HUFAOPUN.  DOPSL
+                    FVB DLYL KLJPWOLYPUN AOPZ DOHA WHAALYUZ KPK FVB
+                    UVAPJL? DOHA DVYKZ ZAVVK VBA?  OVD JVBSK DL THRL
+                    AOPZ H TVYL ZLJBYL (OHYKLY AV JYHJR) JPWOLY?
+                    AOLZL HYL HSS XBLZAPVUZ AOHA DL DPSS PUCLZAPNHAL
+                    PU TVYL KLAHPS AOYVBNOVBA AOL ALEA.
+                </pre>
+            </statement>
+            <hint>
+                <p>
+                    <ul>
+                        <li> Which letters stand alone, i.e. are one letter words?  Can this tell you something about which letters they represent?</li>
+                        <li> What about two or three letter words?  What might they be?</li>
+                        <li> Do some of the letters appear more often than others?</li>
+                        <li> Can you think of other properties of words and letters that could help us understand what a message says?</li>
+                    </ul>
+                </p>
+            </hint>
+            <solution>
+                <p>
+                    Here is a longer message for you to practice on.  The shift for this message was by a factor of seven, so the a goes to the h.  This doesn't really offer much more security, especially since there are only twenty six possible shift ciphers and one of those doesn't change anything.  While you were deciphering this what patterns did you notice? What words stood out?  How could we make this a more secure (harder to crack) cipher?  These are all questions that we will investigate in more detail throughout the text.
+                </p>
+            </solution>
+        </exercise>
 
-			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Plain Text About Ciphers Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-		<exercise>
-			<statement>
-				<p>
-					Cipher Text:
-				</p>
-				<pre>
-					IL JVWF UVD AV TLU VM NYVZZLY ISVVK, HUK ALHJO AOLT 
-					OVD AV DHY. HUK FVB, NVVK FLVTHU, DOVZL SPTIZ DLYL 
-					THKL PU LUNSHUK, ZOVD BZ OLYL AOL TLAASL VM FVBY 
-					WHZABYL; SLA BZ ZDLHY AOHA FVB HYL DVYAO FVBY 
-					IYLLKPUN; DOPJO P KVBIA UVA; MVY AOLYL PZ UVUL VM 
-					FVB ZV TLHU HUK IHZL, AOHA OHAO UVA UVISL SBZAYL 
-					PU FVBY LFLZ. P ZLL FVB ZAHUK SPRL NYLFOVBUKZ PU 
-					AOL ZSPWZ, ZAYHPUPUN BWVU AOL ZAHYA. AOL NHTL'Z 
-					HMVVA: MVSSVD FVBY ZWPYPA, HUK BWVU AOPZ JOHYNL JYF 
-					'NVK MVY OHYYF, LUNSHUK, HUK ZHPUA NLVYNL! - OLUYF 
-					C, DPSSPHT ZOHRLZWLHYL
-				</pre>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Cipher Text:
-				</p>
-				<pre>
-					BJKJB BJMFU UDKJB BJGFS ITKGW TYMJW XKTWM JYTIF DYMFY 
-					XMJIX MNXGQ TTIBN YMRJX MFQQG JRDGW TYMJW GJMJS JJWXT 
-					ANQJY MNXIF DXMFQ QLJSY QJMNX HTSIN YNTSF SILJS YQJRJ 
-					SNSJS LQFSI STBFG JIXMF QQYMN SPYMJ RXJQA JXFHH ZWXJI 
-					YMJDB JWJST YMJWJ FSIMT QIYMJ NWRFS MTTIX HMJFU BMNQJ 
-					XFSDX UJFPX YMFYK TZLMY BNYMZ XZUTS XFNSY HWNXU NSXIF 
-					DMJSW DAGDB NQQNF RXMFP JXUJF WJ
-				</pre>
-			</statement>
-		</exercise>
+        <p>
+            Were you able to <term>decrypt</term><idx>decrypt</idx> the message?  Throughout this text we will present material through increasingly more difficult ciphers and codes.  Now, take some time to try and hone your skills on the next few passages that demonstrate ways in which ciphers may be made more secure.  As you go through each be sure to consider the following questions:
 
-		<p>
-			Each of the previous messages used a simple shift cipher of which, in English, there are only twenty five.  However if we look at all the 
-			possible ways that we can rearrange twenty six letters we really have a lot more options. 
-			<ul>
-				<li> Assuming 26 letters in the alphabet, how many letters can you use to replace <c>a</c>? (For simplicity assume you could choose to replace <c>a</c> with its self if you were so inclined.)</li>
-				<li> Once you have chosen a letter to use in place of <c>a</c>, how many choices for <c>b</c>?</li>
-				<li> What about <c>c</c>?</li>
-				<li> Going in order how many choices do you have for all the remaining orders?</li>
-				<li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
-			</ul>
+            <ul>
+                <li> How does the new method compare to those which we have previously considered, what does it do to make the message more secure?</li>
+                <li> Each time we change the method in which messages are enciphered what doesn't change?  </li>
+                <li> Are there any properties that can not change?  That is, are there rules about how English is put together that we can make use of?</li>
+                <li> If you have suspicions about what a message, or part of a message, might say how can you use this to help you?</li>
+                <li> What sort of data might we keep track of or how can we organize our thoughts to help us solve these puzzles?</li>
+            </ul>
+        </p>
 
-			The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  <em>John Falconer</em><idx>Falconer, John</idx> in the seventeenth century described this as follows:
-		</p>
-		<blockquote>
-			<p>
-				<em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348484017332394393600000.</me> 
-				From "Cryptomenysis Patefacta" by John Falconer, 1685. <xref ref="cr_crypt_falconer" detail="pages 5-6" />
-			</p>
-		</blockquote>
+            <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% About Enciphering Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+           %\begin{quote}
+            ``Be copy now to men of grosser blood, 
+            And teach them how to war. And you, good yeoman, 
+            Whose limbs were made in England, show us here 
+            The mettle of your pasture; let us swear 
+            That you are worth your breeding; which I doubt not; 
+            For there is none of you so mean and base, 
+            That hath not noble lustre in your eyes. 
+            I see you stand like greyhounds in the slips, 
+            Straining upon the start. The game's afoot: 
+            Follow your spirit, and upon this charge 
+            Cry 'God for Harry, England, and Saint George!'' - Henry V, William Shakespeare
+            %\end{quote}
 
+            %\begin{quote}
+            ``We few, we happy few, we band of brothers;
+            For he to-day that sheds his blood with me 
+            Shall be my brother; be he ne'er so vile, 
+            This day shall gentle his condition: 
+            And gentlemen in England now a-bed 
+            Shall think themselves accursed they were not here,
+            And hold their manhoods cheap whiles any speaks 
+            That fought with us upon Saint Crispin's day.'' - Henry V, by William Shakespeare
+            %\end{quote}
 
-		<table>
-			<caption></caption>
-			<tabular halign="center">
-				<row>
-					<cell>
-						<alert> Warning!  -- Modern Mathematics Ahead -- Warning!</alert>
-					</cell>
-				</row>
-			</tabular>
-		</table>
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Plain Text About Ciphers Without Spaces %%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+        <exercise>
+            <statement>
+                <p>
+                    Cipher Text:
+                </p>
+                <pre>
+                    IL JVWF UVD AV TLU VM NYVZZLY ISVVK, HUK ALHJO AOLT
+                    OVD AV DHY. HUK FVB, NVVK FLVTHU, DOVZL SPTIZ DLYL
+                    THKL PU LUNSHUK, ZOVD BZ OLYL AOL TLAASL VM FVBY
+                    WHZABYL; SLA BZ ZDLHY AOHA FVB HYL DVYAO FVBY
+                    IYLLKPUN; DOPJO P KVBIA UVA; MVY AOLYL PZ UVUL VM
+                    FVB ZV TLHU HUK IHZL, AOHA OHAO UVA UVISL SBZAYL
+                    PU FVBY LFLZ. P ZLL FVB ZAHUK SPRL NYLFOVBUKZ PU
+                    AOL ZSPWZ, ZAYHPUPUN BWVU AOL ZAHYA. AOL NHTL'Z
+                    HMVVA: MVSSVD FVBY ZWPYPA, HUK BWVU AOPZ JOHYNL JYF
+                    'NVK MVY OHYYF, LUNSHUK, HUK ZHPUA NLVYNL! - OLUYF
+                    C, DPSSPHT ZOHRLZWLHYL
+                </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Cipher Text:
+                </p>
+                <pre>
+                    BJKJB BJMFU UDKJB BJGFS ITKGW TYMJW XKTWM JYTIF DYMFY
+                    XMJIX MNXGQ TTIBN YMRJX MFQQG JRDGW TYMJW GJMJS JJWXT
+                    ANQJY MNXIF DXMFQ QLJSY QJMNX HTSIN YNTSF SILJS YQJRJ
+                    SNSJS LQFSI STBFG JIXMF QQYMN SPYMJ RXJQA JXFHH ZWXJI
+                    YMJDB JWJST YMJWJ FSIMT QIYMJ NWRFS MTTIX HMJFU BMNQJ
+                    XFSDX UJFPX YMFYK TZLMY BNYMZ XZUTS XFNSY HWNXU NSXIF
+                    DMJSW DAGDB NQQNF RXMFP JXUJF WJ
+                </pre>
+            </statement>
+        </exercise>
 
-		<p>
-			Today we would call the huge number we calculated above <m>26!</m>, which is read "26 factorial," and certainly takes up a lot less room.
-		</p>
-		<definition xml:id="definition_factorial">
-			<title> Factorial </title>
-			<statement> 
-				<p>
-					Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
-					<men>
-						n!=n(n-1)(n-2)\cdots 2 \cdot 1
-					</men>
-					Note that for a variety of reasons <m>0!=1</m>.
-				</p>
-			</statement>
-		</definition>
-		<p>
-			Thus we can make a message harder to decipher simply by using a more inventive method of encipherment.
-		</p>
+        <p>
+            Each of the previous messages used a simple shift cipher of which, in English, there are only twenty five (twenty six if you allow a shift of 0).  However if we look at all the possible ways that we can rearrange twenty six letters we really have a lot more options.
+            <ul>
+                <li> Assuming 26 letters in the alphabet, how many letters can you use to replace <c>a</c>? (For simplicity assume you could choose to replace <c>a</c> with itself if you were so inclined.)</li>
+                <li> Once you have chosen a letter to use in place of <c>a</c>, how many choices for <c>b</c>?</li>
+                <li> What about <c>c</c>?</li>
+                <li> Going in order how many choices do you have for all the remaining orders?</li>
+                <li> What happens if you multiply all these numbers of options together in order to get the total number of choices?</li>
+            </ul>
 
-		<!-- ``Before you begin a thing, remind yourself that difficulties and delays quite impossible to foresee are ahead. If you could see them clearly, naturally you could do a great deal to get rid of them but you can't. You can only see one thing clearly and that is your goal. Form a mental vision of that and cling to it through thick and thin.'' - Kathleen Norris
+            The number you should have come up with is 403 septillion 291 sextillion 461 quintillion 126 quadrillion 605 trillion 635 billion 584 million.  John Falconer<idx>Falconer, John</idx> in the seventeenth century described this as follows:
+        </p>
+        <assemblage>
+            <blockquote>
+                <p>
+                    <em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348484017332394393600000.</me>
+                    From "Cryptomenysis Patefacta" by John Falconer, 1685. <xref ref="cr_crypt_falconer" detail="pages 5-6" />
+                </p>
+            </blockquote>
+        </assemblage>
+        <p>
+            Today we would call the huge number we calculated above <m>26!</m>, which is read "26 factorial," and certainly takes up a lot less room.
+        </p>
+        <definition xml:id="definition_factorial">
+            <title> Factorial </title>
+            <statement>
+                <p>
+                    Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects, we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, which we write:
+                    <men>
+                        n!=n(n-1)(n-2)\cdots 2 \cdot 1
+                    </men>
+                    Note that for a variety of reasons <m>0!=1</m>.
+                </p>
+            </statement>
+        </definition>
+        <p>
+            Thus we can make a message harder to decipher simply by using a more inventive method of encipherment.
+        </p>
 
-		This particular passage was enciphered using what is called a keyword cipher.  Try lining up the plain text and cipher text alphabets to see how this works. -->
-		<p>
-			The last exercise in this section was enciphered with a slightly trickier cipher than the previous ciphers so I put the spaces and punctuation back in. Also, while it is a harder cipher it is not completely random, there is a pattern to how the key was generated; so in the table below the message try filling in the cipher alphabet below the plain alphabet and see if you can spot a pattern.
-		</p>
-		<exercise>
-			<statement>
-				<p>
-					Cipher Text:
-				</p>
-				<pre>
-					"EACMPA XMT EADGL Z SFGLD, PAKGLR XMTPQAJC SFZS RGCCGBTJSGAQ 
-					ZLR RAJZXQ OTGSA GKNMQQGEJA SM CMPAQAA ZPA ZFAZR. GC XMT 
-					BMTJR QAA SFAK BJAZPJX, LZSTPZJJX XMT BMTJR RM Z DPAZS RAZJ 
-					SM DAS PGR MC SFAK ETS XMT BZL'S. XMT BZL MLJX QAA MLA SFGLD 
-					BJAZPJX ZLR SFZS GQ XMTP DMZJ. CMPK Z KALSZJ UGQGML MC SFZS 
-					ZLR BJGLD SM GS SFPMTDF SFGBI ZLR SFGL." - IZSFJAAL LMPPGQ
-				</pre>
-				<table xml:id="blank_key_table">
-					<caption></caption>
-					<tabular top="minor" left="minor" right="minor" halign="center">
-						<row>
-							<cell>plain</cell>
-							<cell>a</cell><cell>b</cell><cell>c</cell>
-							<cell>d</cell><cell>e</cell><cell>f</cell>
-							<cell>g</cell><cell>h</cell><cell>i</cell>
-						</row>
-						<row>
-							<cell>CIPHER</cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-						</row>
-						<row>
-							<cell>plain</cell>
-							<cell>j</cell><cell>k</cell><cell>l</cell>
-							<cell>m</cell><cell>n</cell><cell>o</cell>
-							<cell>p</cell><cell>q</cell><cell>r</cell>
-						</row>
-						<row>
-							<cell>CIPHER</cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-						</row>
-						<row>
-							<cell>plain</cell>
-							<cell>s</cell><cell>t</cell><cell>u</cell>
-							<cell>v</cell><cell>w</cell><cell>x</cell>
-							<cell>y</cell><cell>z</cell><cell></cell>
-						</row>
-						<row bottom="minor">
-							<cell>CIPHER</cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-						</row>
-					</tabular>
-				</table>			
-			</statement>
-		</exercise>
-	</section>
+        <!-- ``Before you begin a thing, remind yourself that difficulties and delays quite impossible to foresee are ahead. If you could see them clearly, naturally you could do a great deal to get rid of them but you can't. You can only see one thing clearly and that is your goal. Form a mental vision of that and cling to it through thick and thin.'' - Kathleen Norris
+
+        This particular passage was enciphered using what is called a keyword cipher.  Try lining up the plain text and cipher text alphabets to see how this works. -->
+        <p>
+            The last exercise in this section was enciphered with a slightly trickier cipher than the previous ciphers so I put the spaces and punctuation back in. Also, while it is a harder cipher it is not completely random, there is a pattern to how the key was generated; so in the table below the message try filling in the cipher alphabet below the plain alphabet and see if you can spot a pattern.
+        </p>
+        <exercise>
+            <statement>
+                <pre>
+                    "EACMPA XMT EADGL Z SFGLD, PAKGLR XMTPQAJC SFZS RGCCGBTJSGAQ 
+                    ZLR RAJZXQ OTGSA GKNMQQGEJA SM CMPAQAA ZPA ZFAZR. GC XMT 
+                    BMTJR QAA SFAK BJAZPJX, LZSTPZJJX XMT BMTJR RM Z DPAZS RAZJ 
+                    SM DAS PGR MC SFAK ETS XMT BZL'S. XMT BZL MLJX QAA MLA SFGLD 
+                    BJAZPJX ZLR SFZS GQ XMTP DMZJ. CMPK Z KALSZJ UGQGML MC SFZS 
+                    ZLR BJGLD SM GS SFPMTDF SFGBI ZLR SFGL." - IZSFJAAL LMPPGQ
+                </pre>
+                <xi:include href="table_code/mono_key_table.ptx"/>
+            </statement>
+        </exercise>
+    </section>
 
 
 <!-- Arabic Encryption Section -->
 
 
-	<section xml:id="arab_ciphers">
-		<title>Arabic Numerical Ciphers</title>
-		<p>
-			Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><idx>Arabic scholar</idx><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
-		</p>
-		<p>
-			In this section we want to introduce some other work performed by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  Here we will look at some methods of enciphering text via changing the text to numbers, some of these today we would call variations on an <term>affine cipher</term><idx>affine cipher</idx>.
-		</p>
-		<p>
-			They began by associating each letter of the alphabet with a number in a manner similar to the following:
-		</p>
-		<table xml:id="table_numeric_alpha">
-			<caption> A Numerical Alphabet</caption>
-			<tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
-				<row> 
-					<cell> 1 </cell> <cell> 2 </cell> <cell> 3 </cell>
-					<cell> 4 </cell> <cell> 5 </cell> <cell> 6 </cell>
-					<cell> 7 </cell> <cell> 8 </cell> <cell> 9 </cell> 
-				</row>
-				<row> 
-							<cell>a</cell><cell>b</cell><cell>c</cell>
-							<cell>d</cell><cell>e</cell><cell>f</cell>
-							<cell>g</cell><cell>h</cell><cell>i</cell>
-				</row>
-				<row> 
-					<cell> 10 </cell> <cell> 20 </cell> <cell> 30 </cell>
-					<cell> 40 </cell> <cell> 50 </cell> <cell> 60 </cell>
-					<cell> 70 </cell> <cell> 80 </cell> <cell> 90 </cell> 
-				</row>
-				<row> 
-							<cell>j</cell><cell>k</cell><cell>l</cell>
-							<cell>m</cell><cell>n</cell><cell>o</cell>
-							<cell>p</cell><cell>q</cell><cell>r</cell> 
-				</row>
-				<row> 
-					<cell> 100 </cell> <cell> 200 </cell> <cell> 300 </cell>
-					<cell> 400 </cell> <cell> 500 </cell> <cell> 600 </cell>
-					<cell> 700 </cell> <cell> 800 </cell> <cell> 900 </cell> 
-				</row>
-				<row> 
-							<cell>s</cell><cell>t</cell><cell>u</cell>
-							<cell>v</cell><cell>w</cell><cell>x</cell>
-							<cell>y</cell><cell>z</cell><cell></cell> 
-				</row>
-			</tabular>
-		</table>
-		<p> 
-			Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><idx>ibn ad-Durayhim</idx> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
-		</p>
-		<blockquote>
-			<p>
-				"<alert>5. On the replacement of letters using the decimally-weighted numerical alphabet:</alert>
-				<ul>
-					<li>
-						By substituting decimal numerical alphabet for letters in four different ways:
-						by writing the numbers in words as pronounced; or by finger-bending, using the fingers to communicate the message visually to a recipient; or by writing the numbers as numerals such as writing <em>(mhmd: forty, eight, forty, four)</em>; or by giving the cryptogram a semblance of a page of a financial register.
-					</li>
-					<li>
-						By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter, 
-						e.g. <em>(ali: <m>\overline{dig\ fad}</m>, <m>\overline{cab\ ab}</m>)</em>, 
-						in which case a line is to be drawn over two words to denote that they represent one letter. 
-					</li>
-					<li>
-						By multiplying the number representing the letter by two, and so write <em>(mhmd: q, jf, q, h)</em> and <em>(ali: ob, jh)</em>, etc; or multiply it by three, thus writing <em>(mhmd: sk, kd, sk, jb)</em> and <em>(ali: rc, kg)</em>. Numbers can also be multiplied by four or five."
-						<fn xml:id="arabic_fn">
-							The examples here are very loosely based on the Arabic examples in the translation. The "mhmd" is Mohamed since Arabic is written without vowels, and for "ali" the a and l together are treated as a single letter.
-						</fn>
-						<xref ref="cr_crypt_arabic" detail="vol. 3, pp. 69-70" />
-					</li>
-				</ul>
-			</p>
-		</blockquote>
-		<p>After carefully reading through the passage above consider the following questions and try the exercises below.
-			<ul>
-				<li>
-					In the second paragraph above, how did the author derive <em>jl</em> from <em>m</em> 
-					or <em><m>\overline{cab\ ab}</m></em> from <em>i</em><m>\ </m>?
-				</li>
-				<li>
-					When converting letters to words <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
-				</li>
-				<li>
-					What letter(s) would be easier to translate into a variety of words?  Which letters would be harder to change into words?
-				</li>
-				<li>
-					In the third paragraph why is the <em>m</em> enciphered as a single <em>q</em> in the first example, but requires two letters, <em>sk</em> in the second?
-				</li>
-			</ul>
-		</p>
-		<exercise>
-			<statement>
-				<p>
-					Demonstrate your understanding of the systems above by enciphering <em>"ibex"</em> using each of the methods described above.
-					<ol>
-						<li>
-							By writing the numbers as numerals.
-						</li>
-						<li>
-							By writing letters in combinations of two or more letters.
-						</li>
-						<li>
-							By forming delusive words.
-						</li>
-						<li>
-							By tripling the values of the letters.
-						</li>
-					</ol>
-				</p>
-			</statement>
-			<hint>
-				<p>
-					For all of these the first step is to use table <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
-				</p>
-			</hint>
-		</exercise>
+    <section xml:id="arab_ciphers">
+        <title>Arabic Numerical Ciphers</title>
+        <p>
+            Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><idx>Arabic scholar</idx><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
+        </p>
+        <p>
+            In this section we want to introduce some other work performed by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  Here we will look at some methods of enciphering text via changing the text to numbers, some of these today we would call variations on an <term>affine cipher</term><idx>affine cipher</idx>.
+        </p>
+        <p>
+            They began by associating each letter of the alphabet with a number in a manner similar to the following:
+        </p>
+        <table xml:id="table_numeric_alpha">
+            <caption> A Numerical Alphabet</caption>
+            <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                <row> 
+                    <cell> 1 </cell> <cell> 2 </cell> <cell> 3 </cell>
+                    <cell> 4 </cell> <cell> 5 </cell> <cell> 6 </cell>
+                    <cell> 7 </cell> <cell> 8 </cell> <cell> 9 </cell> 
+                </row>
+                <row> 
+                            <cell>a</cell><cell>b</cell><cell>c</cell>
+                            <cell>d</cell><cell>e</cell><cell>f</cell>
+                            <cell>g</cell><cell>h</cell><cell>i</cell>
+                </row>
+                <row> 
+                    <cell> 10 </cell> <cell> 20 </cell> <cell> 30 </cell>
+                    <cell> 40 </cell> <cell> 50 </cell> <cell> 60 </cell>
+                    <cell> 70 </cell> <cell> 80 </cell> <cell> 90 </cell> 
+                </row>
+                <row> 
+                            <cell>j</cell><cell>k</cell><cell>l</cell>
+                            <cell>m</cell><cell>n</cell><cell>o</cell>
+                            <cell>p</cell><cell>q</cell><cell>r</cell> 
+                </row>
+                <row> 
+                    <cell> 100 </cell> <cell> 200 </cell> <cell> 300 </cell>
+                    <cell> 400 </cell> <cell> 500 </cell> <cell> 600 </cell>
+                    <cell> 700 </cell> <cell> 800 </cell> <cell> 900 </cell> 
+                </row>
+                <row> 
+                            <cell>s</cell><cell>t</cell><cell>u</cell>
+                            <cell>v</cell><cell>w</cell><cell>x</cell>
+                            <cell>y</cell><cell>z</cell><cell></cell> 
+                </row>
+            </tabular>
+        </table>
+        <p> 
+            Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><idx>ibn ad-Durayhim</idx> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
+        </p>
+        <blockquote>
+            <p>
+                "<alert>5. On the replacement of letters using the decimally-weighted numerical alphabet:</alert>
+                <ul>
+                    <li>
+                        By substituting decimal numerical alphabet for letters in four different ways:
+                        by writing the numbers in words as pronounced; or by finger-bending, using the fingers to communicate the message visually to a recipient; or by writing the numbers as numerals such as writing <em>(mhmd: forty, eight, forty, four)</em>; or by giving the cryptogram a semblance of a page of a financial register.
+                    </li>
+                    <li>
+                        By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter, 
+                        e.g. <em>(ali: <m>\overline{dig\ fad}</m>, <m>\overline{cab\ ab}</m>)</em>, 
+                        in which case a line is to be drawn over two words to denote that they represent one letter. 
+                    </li>
+                    <li>
+                        By multiplying the number representing the letter by two, and so write <em>(mhmd: q, jf, q, h)</em> and <em>(ali: ob, jh)</em>, etc; or multiply it by three, thus writing <em>(mhmd: sk, kd, sk, jb)</em> and <em>(ali: rc, kg)</em>. Numbers can also be multiplied by four or five."
+                        <fn xml:id="arabic_fn">
+                            The examples here are very loosely based on the Arabic examples in the translation. The "mhmd" is Mohamed since Arabic is written without vowels, and for "ali" the a and l together are treated as a single letter.
+                        </fn>
+                        <xref ref="cr_crypt_arabic" detail="vol. 3, pp. 69-70" />
+                    </li>
+                </ul>
+            </p>
+        </blockquote>
+        <p>After carefully reading through the passage above consider the following questions and try the exercises below.
+            <ul>
+                <li>
+                    In the second paragraph above, how did the author derive <em>jl</em> from <em>m</em> 
+                    or <em><m>\overline{cab\ ab}</m></em> from <em>i</em><m>\ </m>?
+                </li>
+                <li>
+                    When converting letters to words <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
+                </li>
+                <li>
+                    What letter(s) would be easier to translate into a variety of words?  Which letters would be harder to change into words?
+                </li>
+                <li>
+                    In the third paragraph why is the <em>m</em> enciphered as a single <em>q</em> in the first example, but requires two letters, <em>sk</em> in the second?
+                </li>
+            </ul>
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    Demonstrate your understanding of the systems above by enciphering <em>"ibex"</em> using each of the methods described above.
+                    <ol>
+                        <li>
+                            By writing the numbers as numerals.
+                        </li>
+                        <li>
+                            By writing letters in combinations of two or more letters.
+                        </li>
+                        <li>
+                            By forming delusive words.
+                        </li>
+                        <li>
+                            By tripling the values of the letters.
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    For all of these the first step is to use table <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
+                </p>
+            </hint>
+        </exercise>
 
-		<exercise>
-			<statement>
-				<p>
-					Encipher the word <em>"tan"</em> by doubling the values of the letters.  In how many ways do you think you can encipher each letter if you are allowed to use up to four letters to represent each letter? (For example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em>, though the last one is kind of silly.)
-				</p>
-			</statement>
-		</exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the word <em>"tan"</em> by doubling the values of the letters.  In how many ways do you think you can encipher each letter if you are allowed to use up to four letters to represent each letter? (For example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em>, though the last one is kind of silly.)
+                </p>
+            </statement>
+        </exercise>
 
 <!--  Plain text for the next exercise 
 
@@ -498,242 +472,242 @@ khayyam: 20-8-1-700-700-1-40
 
 -->
 
-		<exercise>
-			<statement>
-				<p>
-					The following cipher text was enciphered using one of the above ciphers.
-				</p>
-				<pre>
-					JH ZT B J V V SK X S H J SQ T V B S H YU IG B SU GAJ 
-					T JF B SM QO FD S JH OM JD UT KS EC B ZX OO SLN V QS 
-					XVUS RJU SK EC J DB HJ H J YU JF B QKU UY JH O MK FJ 
-					B XZ YVU J MO SU KS Q SQ RPK MQ XV HJ O SK NP M D B 
-					F M NP Q B SQ M JF B VZT WXU B Q
-				</pre>
-			</statement>
-			<hint>
-				<p>
-					<ul>
-						<li>The message is a quote from a famous Arabic poet and mathematician.</li>
-						<li>There is at least one letter substitution which by necessity is always the same.</li>
-						<li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
-					</ul>
-				</p>
-			</hint>
-		</exercise>
-		<p>
-			Looking back at the exercises you have completed try to comment on the following questions:
-			<ul>
-				<li>
-					Looking at the number of different ways you could encipher some letters, like <em>t</em>, what advantage might these new ciphers have over the simpler ones we looked at previously?
-				</li>
-				<li>
-					Why might having a large number of different ways to encipher a single letter be a disadvantage?
-				</li>
-				<li>
-					Which of the methods described above do you think has the potential to be the most useful and why?
-				</li>
-				<li>
-					Do you think these methods are more or less secure than the methods we looked at in the previous section? Or, are they about the same?
-				</li>
-				<li>
-					In what way do you think you might be able to tweak one of the above methods in order to make it more effective? (Be sure to justify your suggestion.)
-				</li>
-			</ul>
-		</p>
-	</section>
-	<exercises xml:id="exercises_monoenciphering">
-		<title>How Shifty are You?</title>
-		<introduction><p>
-			For each exercise where you need to encipher or decipher a message do enough work to demonstrate that 
-			you clearly understand how to do the job; say at least 10 characters or write down the plain text 
-			and corresponding cipher text alphabet. 
-		</p></introduction>
-		<exercise>
-			<statement>
-				<p>Encipher the following using a shift cipher with a key of 9:</p>
-				<blockquote>
-					<p>
-						<q>We’ve all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the internet, we know this is not true.</q> - Professor Robert Silensky
-					</p>
-				</blockquote>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
-					<xref ref="table_numeric_alpha" />, 
-					multiplying by 5, and finally converting the numbers back to letters.
-				</p>
-				<blockquote>
-					<p>
-						zoologist 
-					</p>
-				</blockquote>
-				<p>
-					Did you run into any particular problem enciphering this message?  Is there only one unique way to do it? 
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
-					<xref ref="table_numeric_alpha" />, 
-					and then split those numeral up so as to form <em>delusive words</em>.
-				</p>
-				<blockquote>
-					<p>
-						pizza
-					</p>
-				</blockquote>
-				<p>
-					Did you run into any particular problem enciphering this message?  Are there some 
-					letters that couldn't be changed?  Is there only one unique way to do it? 
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Another type of monoalphabetic substitution cipher
-					<idx>monoalphabetic substitution cipher</idx> is called <term>atabash</term>
-					<idx>atabash</idx> and first appeared in the bible.  To encipher a message in 
-					atabash you replace <em>a</em> with <em>z</em>, <em>b</em> with <em>y</em>, <em>c</em> with <em>x</em>, 
-					and so on.  Try to encipher the following message with atabash.
-				</p>
-				<blockquote>
-					<p>
-						<q>Mistakes are a part of being human. Appreciate your mistakes for what they are: precious life lessons that can only be learned the hard way. Unless it’s a fatal mistake, which, at least, others can learn from.</q> - Al Franken, <q>Oh, the Things I Know</q>, 2002
-					</p>
-				</blockquote>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher the message that was enciphered with a shift of 10.
-<!-- 					”Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.” - Jerry Seinfeld -->
-				</p>
-				<pre>
-					XYGDR OICRY GIYER YGNOD OBQOX DCDKU OYEDL VYYNC DKSXC KZBOD 
+        <exercise>
+            <statement>
+                <p>
+                    The following cipher text was enciphered using one of the above ciphers.
+                </p>
+                <pre>
+                    JH ZT B J V V SK X S H J SQ T V B S H YU IG B SU GAJ 
+                    T JF B SM QO FD S JH OM JD UT KS EC B ZX OO SLN V QS 
+                    XVUS RJU SK EC J DB HJ H J YU JF B QKU UY JH O MK FJ 
+                    B XZ YVU J MO SU KS Q SQ RPK MQ XV HJ O SK NP M D B 
+                    F M NP Q B SQ M JF B VZT WXU B Q
+                </pre>
+            </statement>
+            <hint>
+                <p>
+                    <ul>
+                        <li>The message is a quote from a famous Arabic poet and mathematician.</li>
+                        <li>There is at least one letter substitution which by necessity is always the same.</li>
+                        <li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
+                    </ul>
+                </p>
+            </hint>
+        </exercise>
+        <p>
+            Looking back at the exercises you have completed try to comment on the following questions:
+            <ul>
+                <li>
+                    Looking at the number of different ways you could encipher some letters, like <em>t</em>, what advantage might these new ciphers have over the simpler ones we looked at previously?
+                </li>
+                <li>
+                    Why might having a large number of different ways to encipher a single letter be a disadvantage?
+                </li>
+                <li>
+                    Which of the methods described above do you think has the potential to be the most useful and why?
+                </li>
+                <li>
+                    Do you think these methods are more or less secure than the methods we looked at in the previous section? Or, are they about the same?
+                </li>
+                <li>
+                    In what way do you think you might be able to tweak one of the above methods in order to make it more effective? (Be sure to justify your suggestion.)
+                </li>
+            </ul>
+        </p>
+    </section>
+    <exercises xml:id="exercises_monoenciphering">
+        <title>How Shifty are You?</title>
+        <introduction><p>
+            For each exercise where you need to encipher or decipher a message do enough work to demonstrate that 
+            you clearly understand how to do the job; say at least 10 characters or write down the plain text 
+            and corresponding cipher text alphabet. 
+        </p></introduction>
+        <exercise>
+            <statement>
+                <p>Encipher the following using a shift cipher with a key of 9:</p>
+                <blockquote>
+                    <p>
+                        <q>We’ve all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the internet, we know this is not true.</q> - Professor Robert Silensky
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
+                    <xref ref="table_numeric_alpha" />, 
+                    multiplying by 5, and finally converting the numbers back to letters.
+                </p>
+                <blockquote>
+                    <p>
+                        zoologist 
+                    </p>
+                </blockquote>
+                <p>
+                    Did you run into any particular problem enciphering this message?  Is there only one unique way to do it? 
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em> 
+                    <xref ref="table_numeric_alpha" />, 
+                    and then split those numeral up so as to form <em>delusive words</em>.
+                </p>
+                <blockquote>
+                    <p>
+                        pizza
+                    </p>
+                </blockquote>
+                <p>
+                    Did you run into any particular problem enciphering this message?  Are there some 
+                    letters that couldn't be changed?  Is there only one unique way to do it? 
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Another type of monoalphabetic substitution cipher
+                    <idx>monoalphabetic substitution cipher</idx> is called <term>atabash</term>
+                    <idx>atabash</idx> and first appeared in the bible.  To encipher a message in 
+                    atabash you replace <em>a</em> with <em>z</em>, <em>b</em> with <em>y</em>, <em>c</em> with <em>x</em>, 
+                    and so on.  Try to encipher the following message with atabash.
+                </p>
+                <blockquote>
+                    <p>
+                        <q>Mistakes are a part of being human. Appreciate your mistakes for what they are: precious life lessons that can only be learned the hard way. Unless it’s a fatal mistake, which, at least, others can learn from.</q> - Al Franken, <q>Oh, the Things I Know</q>, 2002
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher the message that was enciphered with a shift of 10.
+<!--                    ”Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.” - Jerry Seinfeld -->
+                </p>
+                <pre>
+                    XYGDR OICRY GIYER YGNOD OBQOX DCDKU OYEDL VYYNC DKSXC KZBOD 
 
-					DIFSY VOXDS WKQOD ROBOS DRSXU SPIYE FOQYD KDCRS BDGSD RKLVY 
+                    DIFSY VOXDS WKQOD ROBOS DRSXU SPIYE FOQYD KDCRS BDGSD RKLVY 
 
-					YNCDK SXKVV YFOBS DWKIL OVKEX NBISC XDIYE BLSQQ OCDZB YLVOW 
+                    YNCDK SXKVV YFOBS DWKIL OVKEX NBISC XDIYE BLSQQ OCDZB YLVOW 
 
-					WKILO IYECR YEVNQ ODBSN YPDRO LYNIL OPYBO IYENY DROGK CRTOB 
+                    WKILO IYECR YEVNQ ODBSN YPDRO LYNIL OPYBO IYENY DROGK CRTOB 
 
-					BICOS XPOVN
-				</pre>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher this message that was enciphered using a shift of 25.
-<!-- 					”One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.” - Albert Einstein -->
-				</p>
-				<pre>
-					NMDRG NTKCF TZQCZ FZHMR SOQDZ BGHMF SNXNT MFODN OKDRT BBDRR 
+                    BICOS XPOVN
+                </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher this message that was enciphered using a shift of 25.
+<!--                    ”One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.” - Albert Einstein -->
+                </p>
+                <pre>
+                    NMDRG NTKCF TZQCZ FZHMR SOQDZ BGHMF SNXNT MFODN OKDRT BBDRR 
 
-					HMSGD BTRSN LZQXE NQLZR SGDLZ HMZHL HMKHE DSGDL NRSHL ONQSZ 
+                    HMSGD BTRSN LZQXE NQLZR SGDLZ HMZHL HMKHE DSGDL NRSHL ONQSZ 
 
-					MSLNS HUDEN QVNQJ HMRBG NNKZM CHMKH EDHRO KDZRT QDHMV NQJOK 
+                    MSLNS HUDEN QVNQJ HMRBG NNKZM CHMKH EDHRO KDZRT QDHMV NQJOK 
 
-					DZRTQ DHMHS RQDRT KSZMC SGDJM NVKDC FDNES GDUZK TDNES GDQDR 
+                    DZRTQ DHMHS RQDRT KSZMC SGDJM NVKDC FDNES GDUZK TDNES GDQDR 
 
-					TKSSN SGDBN LLTMH SXZKA DQSDH MRSDH M
-				</pre>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher this message which was enciphered using atabash.
-<!-- 					”In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.” - Lee Iacocca -->
-				</p>
-				<pre>
-					RMZXL NKOVG VOBIZ GRLMZ OHLXR VGBGS VYVHG LUFHD LFOWY VGVZX 
+                    TKSSN SGDBN LLTMH SXZKA DQSDH MRSDH M
+                </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher this message which was enciphered using atabash.
+<!--                    ”In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.” - Lee Iacocca -->
+                </p>
+                <pre>
+                    RMZXL NKOVG VOBIZ GRLMZ OHLXR VGBGS VYVHG LUFHD LFOWY VGVZX 
 
-					SVIHZ MWGSV IVHGL UFHDL FOWSZ EVGLH VGGOV ULIHL NVGSR MTOVH 
+                    SVIHZ MWGSV IVHGL UFHDL FOWSZ EVGLH VGGOV ULIHL NVGSR MTOVH 
 
-					HYVXZ FHVKZ HHRMT XRERO RAZGR LMZOL MTUIL NLMVT VMVIZ GRLMG 
+                    HYVXZ FHVKZ HHRMT XRERO RAZGR LMZOL MTUIL NLMVT VMVIZ GRLMG 
 
-					LGSVM VCGLF TSGGL YVGSV SRTSV HGSLM LIZMW GSVSR TSVHG IVHKL 
+                    LGSVM VCGLF TSGGL YVGSV SRTSV HGSLM LIZMW GSVSR TSVHG IVHKL 
 
-					MHRYR ORGBZ MBLMV XLFOW SZEVO VVRZX LXXZ
-				</pre>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Another type of monoalphabetic substitution cipher is called a <term>key word cipher</term>.  
-					<idx>key word cipher</idx>The key for this cipher consists of two pieces, a 
-					<em>key word</em> and a <em>key letter</em>.  You write the key word in the cipher alphabet starting 
-					underneath the key letter and then write the remaining letters of the alphabet in order after that.  So, if 
-					the key word is <em>ZEBRA</em> with key letter <em>F</em> we start as follows:
-				</p>
-				<table xml:id="cipher_zebra">
-					<caption></caption>
-					<tabular top="minor" left="minor" right="minor" halign="center">
-						<row>
-							<cell>plain</cell>
-							<cell>a</cell><cell>b</cell><cell>c</cell>
-							<cell>d</cell><cell>e</cell><cell>f</cell>
-							<cell>g</cell><cell>h</cell><cell>i</cell>
-						</row>
-						<row>
-							<cell>CIPHER</cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell>Z</cell>
-							<cell>E</cell><cell>B</cell><cell>R</cell>
-						</row>
-						<row>
-							<cell>plain</cell>
-							<cell>j</cell><cell>k</cell><cell>l</cell>
-							<cell>m</cell><cell>n</cell><cell>o</cell>
-							<cell>p</cell><cell>q</cell><cell>r</cell>
-						</row>
-						<row>
-							<cell>CIPHER</cell>
-							<cell>A</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-						</row>
-						<row>
-							<cell>plain</cell>
-							<cell>s</cell><cell>t</cell><cell>u</cell>
-							<cell>v</cell><cell>w</cell><cell>x</cell>
-							<cell>y</cell><cell>z</cell><cell></cell>
-						</row>
-						<row bottom="minor">
-							<cell>CIPHER</cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-							<cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-						</row>
-					</tabular>
-				</table>
-				<p>
-					Fill in the rest of the alphabet and then use it to decipher this message.
-<!-- 					”The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.” - St. Augustine -->
-				</p>
-				<pre>
-					MBYEH HXWBK RLMRU GLBHN DXVYP UKYHZ FUMBY FUMRW RUGLU GXUDD 
+                    MHRYR ORGBZ MBLMV XLFOW SZEVO VVRZX LXXZ
+                </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Another type of monoalphabetic substitution cipher is called a <term>key word cipher</term>.  
+                    <idx>key word cipher</idx>The key for this cipher consists of two pieces, a 
+                    <em>key word</em> and a <em>key letter</em>.  You write the key word in the cipher alphabet starting 
+                    underneath the key letter and then write the remaining letters of the alphabet in order after that.  So, if 
+                    the key word is <em>ZEBRA</em> with key letter <em>F</em> we start as follows:
+                </p>
+                <table xml:id="cipher_zebra">
+                    <caption></caption>
+                    <tabular top="minor" left="minor" right="minor" halign="center">
+                        <row>
+                            <cell>plain</cell>
+                            <cell>a</cell><cell>b</cell><cell>c</cell>
+                            <cell>d</cell><cell>e</cell><cell>f</cell>
+                            <cell>g</cell><cell>h</cell><cell>i</cell>
+                        </row>
+                        <row>
+                            <cell>CIPHER</cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell>Z</cell>
+                            <cell>E</cell><cell>B</cell><cell>R</cell>
+                        </row>
+                        <row>
+                            <cell>plain</cell>
+                            <cell>j</cell><cell>k</cell><cell>l</cell>
+                            <cell>m</cell><cell>n</cell><cell>o</cell>
+                            <cell>p</cell><cell>q</cell><cell>r</cell>
+                        </row>
+                        <row>
+                            <cell>CIPHER</cell>
+                            <cell>A</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        </row>
+                        <row>
+                            <cell>plain</cell>
+                            <cell>s</cell><cell>t</cell><cell>u</cell>
+                            <cell>v</cell><cell>w</cell><cell>x</cell>
+                            <cell>y</cell><cell>z</cell><cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell>CIPHER</cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>
+                    Fill in the rest of the alphabet and then use it to decipher this message.
+<!--                    ”The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.” - St. Augustine -->
+                </p>
+                <pre>
+                    MBYEH HXWBK RLMRU GLBHN DXVYP UKYHZ FUMBY FUMRW RUGLU GXUDD 
 
-					MBHLY PBHFU CYYFI MSIKH IBYWR YLMBY XUGEY KUDKY UXSYQ RLMLM 
+                    MBHLY PBHFU CYYFI MSIKH IBYWR YLMBY XUGEY KUDKY UXSYQ RLMLM 
 
-					BUMFU MBYFU MRWRU GLBUO YFUXY UWHOY GUGMP RMBMB YXYOR DMHXU 
+                    BUMFU MBYFU MRWRU GLBUO YFUXY UWHOY GUGMP RMBMB YXYOR DMHXU 
 
-					KCYGM BYLIR KRMUG XWHGZ RGYFU GRGMB YVHGX LHZBY DDLMU NENLM 
+                    KCYGM BYLIR KRMUG XWHGZ RGYFU GRGMB YVHGX LHZBY DDLMU NENLM 
 
-					RGY
-				</pre>
-			</statement>
-		</exercise>
-	</exercises>
+                    RGY
+                </pre>
+            </statement>
+        </exercise>
+    </exercises>
 </chapter>
 

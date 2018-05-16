@@ -1,0 +1,41 @@
+<table xml:id="blank_key_table">
+    <caption>Monoalphabetic Substitution Table</caption>
+    <tabular top="minor" left="minor" right="minor" halign="center">
+        <row>
+            <cell>plain</cell>
+            <cell>a</cell><cell>b</cell><cell>c</cell>
+            <cell>d</cell><cell>e</cell><cell>f</cell>
+            <cell>g</cell><cell>h</cell><cell>i</cell>
+        </row>
+        <row>
+            <cell>CIPHER</cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+        </row>
+        <row>
+            <cell>plain</cell>
+            <cell>j</cell><cell>k</cell><cell>l</cell>
+            <cell>m</cell><cell>n</cell><cell>o</cell>
+            <cell>p</cell><cell>q</cell><cell>r</cell>
+        </row>
+        <row>
+            <cell>CIPHER</cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+        </row>
+        <row>
+            <cell>plain</cell>
+            <cell>s</cell><cell>t</cell><cell>u</cell>
+            <cell>v</cell><cell>w</cell><cell>x</cell>
+            <cell>y</cell><cell>z</cell><cell></cell>
+        </row>
+        <row bottom="minor">
+            <cell>CIPHER</cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+        </row>
+    </tabular>
+</table>

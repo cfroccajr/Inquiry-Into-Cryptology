@@ -30,14 +30,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <appendix xml:id="sage_cipher_cells">
-	<title>Sage Cell Cipher Utilities</title>
+    <title>Sage Cell Cipher Utilities</title>
 
 
 
 
-    	<p>Substitution Cipher Cell</p>
-    	<sage xml:id="sage_sub_cell">
-        	<input>
+        <p>Substitution Cipher Cell</p>
+        <sage xml:id="sage_sub_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 import textwrap
@@ -84,9 +84,9 @@ def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=5
         </sage>
 
 
-    	<p>Affine Cipher Cell</p>
-    	<sage xml:id="sage_affine_cell">
-        	<input>
+        <p>Affine Cipher Cell</p>
+        <sage xml:id="sage_affine_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 @interact
@@ -103,13 +103,13 @@ def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=
     except:
         print "error, likely in your key"
         cipher_text = clean_text
-    		</input>
-    		<output></output>
-    	</sage>
+            </input>
+            <output></output>
+        </sage>
 
-    	<p>Vigenere Cipher Cell</p>
-    	<sage xml:id="sage_vigenere_cell">
-        	<input>
+        <p>Vigenere Cipher Cell</p>
+        <sage xml:id="sage_vigenere_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 import re
@@ -145,9 +145,9 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
         for i in xrange(0,len(cipher_text),6):
             print cipher_text[i:i+6],
             if (i+6)%42 == 0: print "\n"
-    		</input>
-    		<output></output>
-    	</sage>
+            </input>
+            <output></output>
+        </sage>
 
 
         <p>Falconer Cipher Cell</p>
@@ -195,9 +195,9 @@ def falconer(message=input_box("The quick brown fox jumps over the lazy sleeping
         </sage>
 
 
-    	<p>Hill Cipher Cell</p>
-    	<sage xml:id="sage_hill_cell">
-        	<input>
+        <p>Hill Cipher Cell</p>
+        <sage xml:id="sage_hill_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 @interact
@@ -215,9 +215,9 @@ def _(m=input_box('sage', label="Enter your message", height=3,
     for i in xrange(0,len(cipher_text),5):
         print cipher_text[i:i+5],
         if (i+5)%50 == 0: print "\n"
-    		</input>
-    		<output></output>
-    	</sage>
+            </input>
+            <output></output>
+        </sage>
 
 </appendix>
 

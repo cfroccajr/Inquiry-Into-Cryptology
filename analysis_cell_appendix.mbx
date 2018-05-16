@@ -30,11 +30,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <appendix xml:id="sage_analysis_cells">
-	<title>Sage Cell Analysis Utilities</title>
+    <title>Sage Cell Analysis Utilities</title>
 
-    	<p>Word Count Cell</p>
-    	<sage xml:id="sage_word_cell">
-        	<input>
+        <p>Word Count Cell</p>
+        <sage xml:id="sage_word_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 import re
@@ -67,13 +67,13 @@ def word_count_simple(
         else:
             tab="\t\t"
         print c[1],tab,c[0],"\t\t %.4G" % (c[0]/words*100.0)
-    		</input>
-    		<output></output>
-    	</sage>
+            </input>
+            <output></output>
+        </sage>
 
-    	<p>String Count Cell</p>
-    	<sage xml:id="sage_string_cell">
-        	<input>
+        <p>String Count Cell</p>
+        <sage xml:id="sage_string_cell">
+            <input>
 
 <!-- Python/Sage Function -->
 import re
@@ -91,11 +91,11 @@ def string_count_simple(
         c = message[i:i+N]
         if c == K: count += 1
     print "Your string appears ",str(count)," times."
-    		</input>
-    		<output></output>
-    	</sage>    
-    
-    
+            </input>
+            <output></output>
+        </sage>
+
+
             <p>N-Gram Analysis Cell</p>
             <sage xml:id="sage_ngram_cell">
                 <input>

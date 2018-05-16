@@ -1,0 +1,41 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% refs in the text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Charts and tables appendix:
+
+	<appendix xml:id="charts_tables">
+	<table xml:id="appendix_key_table">
+	<table xml:id="appendix_figure_number_table">
+	<figure xml:id="appendix_figure_alberti">
+	<figure xml:id="appendix_figure_modern"> %%% Modern Alberti Disc
+	<figure xml:id="appendix_figure_vigenere_table">
+	<figure xml:id="appendix_figure_Vigenee_table_new">
+	<table xml:id="appendix_trans_table">	
+	<figure xml:id="appendix_figure_rSDES">
+
+
+Bibliography Refs:
+
+	<references xml:id="crypto_ref">
+	<biblio type="raw" xml:id="cr_crypt_agripa">
+	<biblio type="raw" xml:id="cr_crypt_falconer">
+	<biblio type="raw" xml:id="cr_crypt_kahn">
+	<biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
+	<biblio type="raw" xml:id="cr_crypt_arabic">
+	<biblio type="raw" xml:id="cr_crypt_singh">
+	<biblio type="raw" xml:id="cr_crypt_vigenere">
+	<biblio type="raw" xml:id="cr_crypt_alberti">
+	<biblio type="raw" xml:id="cr_crypt_1901lives">
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% compiling commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+xmllint --xinclude --postvalid --noout --dtdvalid ~/applications/git/mathbook/schema/dtd/mathbook.dtd ../src/Intro_Crypto_Main.mbx
+xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Intro_Crypto_Main.mbx
+~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.mbx
+~/Applications/Git/mathbook/script/mbx -vv -c youtube -d images ../src/Intro_Crypto_Main.mbx
+xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx
+
+
+java -classpath /Users/cfroccajr/Applications/GIT/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar /Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng ../src/Intro_Crypto_Main.mbx

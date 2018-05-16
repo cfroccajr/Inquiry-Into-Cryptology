@@ -1,0 +1,30 @@
+{
+	"selector": "source.mbx",
+	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$file_name"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+	"working_dir": "$file_path/../tmp",
+
+	"variants": [
+		{"name": "Check Schema",
+			"cmd": ["java", "-classpath", "/Users/cfroccajr/Applications/GIT/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar", "/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng", "../src/$file_name"]
+		},
+
+		{"name": "Build TeX File",
+			"cmd": ["xsltproc", "--xinclude", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$file_name"]
+		},
+
+		{"name": "Build SVG Images",
+			"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-vv", "-clatex-image", "-fsvg", "-dimages", "../src/$file_name"]
+		},
+
+		{"name": "Build PNG Images",
+			"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-vv", "-clatex-image", "-fpng", "-dimages", "../src/$file_name"]
+		},
+
+		{"name": "Build PDF Images",
+			"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-vv", "-clatex-image", "-fpdf", "-dimages", "../src/$file_name"]
+		}
+	]
+}
+
+
