@@ -29,53 +29,53 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
-	    <title>Back Matter</title> <!-- mostly for HTML sectioning -->
+    <backmatter xml:id="backmatter" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Back Matter</title> <!-- mostly for HTML sectioning -->
 
-	<!-- Sage Cell Appendix -->
+    <!-- Sage Cell Appendix -->
 
-		<xi:include href="analysis_cell_appendix.mbx" />
+        <xi:include href="analysis_cell_appendix.mbx" />
 
-		<xi:include href="cipher_cell_appendix.mbx" />
+        <xi:include href="cipher_cell_appendix.mbx" />
 
-		<xi:include href="chart_appendix.mbx" />
+        <xi:include href="chart_appendix.mbx" />
 
-	<!-- GFDL License text -->
+    <!-- GFDL License text -->
 
-	    <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
-
-
-	    <appendix>
-	        <title>Notation</title>
-
-	        <p>The following table defines the notation used in this book. Page numbers or references refer to the first appearance of each symbol.</p>
-
-	        <!-- <notation-list /> -->
-	    </appendix>
+        <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
 
 
-		<!--<appendix>
-	        <title>Hints and Solutions to Selected Exercises</title>
-	        <solution-list />
-	    </appendix> -->
+        <appendix>
+            <title>Notation</title>
+
+            <p>The following table defines the notation used in this book. Page numbers or references refer to the first appearance of each symbol.</p>
+
+            <!-- <notation-list /> -->
+        </appendix>
+
+
+        <appendix>
+            <title>Hints and Solutions to Selected Exercises</title>
+            <solution-list />
+        </appendix> 
 
     <!-- glossary -->
 
-    	<xi:include href="glossary.mbx" />
+        <xi:include href="glossary.mbx" />
 
 
-	<!-- references -->
+    <!-- references -->
 
-	    <xi:include href="crypto_references.mbx" />
+        <xi:include href="crypto_references.mbx" />
 
-	<!-- Index follows appendices, preceded only colophon -->
-	    <index>
-	        <index-list />
-	    </index>
+    <!-- Index follows appendices, preceded only colophon -->
+        <index>
+            <index-list />
+        </index>
 
-<!-- 	    <colophon>
-	        <p>This book was authored in MathBook XML.</p>
-	    </colophon> -->
+<!--        <colophon>
+            <p>This book was authored in MathBook XML.</p>
+        </colophon> -->
 
           
 
@@ -83,4 +83,4 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-	</backmatter>
+    </backmatter>

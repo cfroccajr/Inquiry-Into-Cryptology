@@ -34,7 +34,9 @@ Bibliography Refs:
 xmllint --xinclude --postvalid --noout --dtdvalid ~/applications/git/mathbook/schema/dtd/mathbook.dtd ../src/Intro_Crypto_Main.mbx
 xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Intro_Crypto_Main.mbx
 ~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.mbx
+
 ~/Applications/Git/mathbook/script/mbx -vv -c youtube -d images ../src/Intro_Crypto_Main.mbx
+
 xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx
 
 
