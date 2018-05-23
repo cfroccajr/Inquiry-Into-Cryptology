@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--********************************************************************
+Copyright 2017 Charles F. Rocca Jr
+
+This file is part of a MathBook XML project.
+
+This project is focused on creating a brief inquiry based text for 
+use in a introductory course in cryptology for non-technical students.  
+The material is presented, whenever possible, in a historically honest 
+manner.
+
+Copyright 2015 Robert A. Beezer
+
+This file is part of MathBook XML.
+
+MathBook XML is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 or version 3 of the
+License (at your option).
+
+MathBook XML is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
+*********************************************************************-->
+
+
+
+<appendix xml:id="charts_tables">
+    <title> Blank Tables, Charts, and Images </title>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Blank Cipher Text Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<!--    <figure xml:id="appendix_figure_key_table">
+        <caption> Blank <em>plain text - CIPHER TEXT</em> table</caption>
+        <image width="70%" source="images/blank_cipher_chart.png" archive="png pdf">
+            <description>Blank plain text to cipher text cipher chart.</description> 
+        </image>
+    </figure> -->
+
+    <table xml:id="appendix_key_table">
+        <caption> Blank <em>plain text - CIPHER TEXT</em> table</caption>
+        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+            <row>
+                <cell>plain</cell>
+                <cell>a</cell><cell>b</cell><cell>c</cell>
+                <cell>d</cell><cell>e</cell><cell>f</cell>
+                <cell>g</cell><cell>h</cell><cell>i</cell>
+            </row>
+            <row>
+                <cell>CIPHER</cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            </row>
+            <row>
+                <cell>plain</cell>
+                <cell>j</cell><cell>k</cell><cell>l</cell>
+                <cell>m</cell><cell>n</cell><cell>o</cell>
+                <cell>p</cell><cell>q</cell><cell>r</cell>
+            </row>
+            <row>
+                <cell>CIPHER</cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            </row>
+            <row>
+                <cell>plain</cell>
+                <cell>s</cell><cell>t</cell><cell>u</cell>
+                <cell>v</cell><cell>w</cell><cell>x</cell>
+                <cell>y</cell><cell>z</cell><cell></cell>
+            </row>
+            <row bottom="minor">
+                <cell>CIPHER</cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+            </row>
+        </tabular>
+    </table>
+
+
+<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Alpha to Numerical Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <table xml:id="appendix_figure_number_table">
+        <caption>Anglicized Arabic Alpha-Numeric Table</caption>
+        <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+            <row>
+                <cell> 1 </cell> <cell> 2 </cell> <cell> 3 </cell>
+                <cell> 4 </cell> <cell> 5 </cell> <cell> 6 </cell>
+                <cell> 7 </cell> <cell> 8 </cell> <cell> 9 </cell> 
+            </row>
+            <row>
+                        <cell>a</cell><cell>b</cell><cell>c</cell>
+                        <cell>d</cell><cell>e</cell><cell>f</cell>
+                        <cell>g</cell><cell>h</cell><cell>i</cell>
+            </row>
+            <row>
+                <cell> 10 </cell> <cell> 20 </cell> <cell> 30 </cell>
+                <cell> 40 </cell> <cell> 50 </cell> <cell> 60 </cell>
+                <cell> 70 </cell> <cell> 80 </cell> <cell> 90 </cell> 
+            </row>
+            <row>
+                        <cell>j</cell><cell>k</cell><cell>l</cell>
+                        <cell>m</cell><cell>n</cell><cell>o</cell>
+                        <cell>p</cell><cell>q</cell><cell>r</cell> 
+            </row>
+            <row>
+                <cell> 100 </cell> <cell> 200 </cell> <cell> 300 </cell>
+                <cell> 400 </cell> <cell> 500 </cell> <cell> 600 </cell>
+                <cell> 700 </cell> <cell> 800 </cell> <cell> 900 </cell> 
+            </row>
+            <row>
+                        <cell>s</cell><cell>t</cell><cell>u</cell>
+                        <cell>v</cell><cell>w</cell><cell>x</cell>
+                        <cell>y</cell><cell>z</cell><cell></cell> 
+            </row>
+        </tabular>
+    </table>
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Alberti's Disk
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <figure xml:id="appendix_figure_alberti">
+        <caption>Alberti's Cipher Disk or <q>Formula</q></caption>
+        <image width="60%" source="images/Alberti_cipher_disk.png" > <!-- archive="svg png pdf" -->
+            <description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
+        </image>
+    </figure>
+
+
+<!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Modern English Disk
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <figure xml:id="appendix_figure_modern">
+        <caption>Modern Cipher Disk or <q>Formula</q></caption>
+        <image width="65%" archive="svg png pdf">
+            <description> This is an image of modern version of Alberti's Cipher Disk. </description>
+            <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\begin{tikzpicture}[scale=4,cap=round,>=latex]
+                    % draw the circles
+                    \draw[thick] (0cm,0cm) circle(0.98cm);
+                    \draw[thick] (0cm,0cm) circle(1cm);
+                    \draw[thick] (0cm,0cm) circle(1.3cm);
+                    \draw[thick] (0cm,0cm) circle(0.7cm);
+                    \draw[thick] (0cm,0cm) circle(0.68cm);
+
+                    
+                    \foreach \x in {6.925,20.775,...,360} {
+                            % lines from center to point
+                            \draw[gray] (0cm,0cm) -- (\x:1.3cm);
+                    }
+
+                    % add the inner mobile ring
+                    \foreach \x/\ctext in {
+                        0.00000/a,
+                        13.850/c,
+                        27.700/e,
+                        41.550/g,
+                        55.400/k,
+                        69.250/l,
+                        83.100/n,
+                        96.950/p,
+                        110.80/r,
+                        124.65/t,
+                        138.50/v,
+                        152.35/z,
+                        166.20/\&,
+                        180.05/x,
+                        193.90/y,
+                        207.75/s,
+                        221.60/o,
+                        235.45/m,
+                        249.30/q,
+                        263.15/i,
+                        277.00/h,
+                        290.85/f,
+                        304.70/d,
+                        318.55/b,
+                        332.40/w,
+                        346.25/j
+                    }
+                    \draw (-\x:0.85cm) node[fill=white, rotate=270-\x] {\large$\mathit{\ctext}$};
+
+                    % add outer fixed ring
+                    \foreach \x/\ptext in {
+                        0.00000/2,
+                        13.850/3,
+                        27.700/4,
+                        41.550/A,
+                        55.400/B,
+                        69.250/C,
+                        83.100/D,
+                        96.950/E,
+                        110.80/F,
+                        124.65/G,
+                        138.50/H,
+                        152.35/I,
+                        166.20/K,
+                        180.05/L,
+                        193.90/M,
+                        207.75/N,
+                        221.60/O,
+                        235.45/P,
+                        249.30/R,
+                        263.15/S,
+                        277.00/T,
+                        290.85/U,
+                        304.70/V,
+                        318.55/W,
+                        332.40/Y,
+                        346.25/1
+                    }
+                    \draw (-\x:1.15cm) node[fill=white, rotate=270-\x] {\Large$\mathit{\ptext}$};
+
+                \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </figure>
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Vigen&#x00E8;re Tableau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <figure xml:id="appendix_figure_vigenere_table">
+        <caption>Vigen&#x00E8;re's Tableau</caption>
+        <image width="80%" source="images/vigenere_table.png" archive="svg png pdf">
+            <description> This is a copy of Vigen&#x00E8;re's Table.</description>
+        </image>
+    </figure>
+
+
+
+    <figure xml:id="appendix_figure_vigenere_new">
+        <caption>Updated Vigen&#x00E8;re Tableau</caption>
+        <image width="90%" archive="svg png pdf">
+            <description> Updated Vigen&#x00E8;re Tableau </description>
+            <latex-image>
+                \begin{tikzpicture}
+                \foreach \y  in {0,1,...,25}{
+                    \pgfmathtruncatemacro{\o}{mod(\y,2)};
+                    \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (0,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+                    \foreach \x/\ctext in 
+                    {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+                        13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                    { 
+                    \pgfmathtruncatemacro{\n}{mod(\x-\y+26,26)};
+                    \draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+                    }
+                }
+                \foreach \x/\ctext in 
+                {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                {
+                    \draw (0.5,-0.5*\x) node {$\ctext$};
+                    \draw (1+0.55*\x,0.5) node {$\ctext$};
+                }
+                \draw (0,0.25)--(15,0.25);
+                \draw (0.75,1)--(0.75,-12.75);
+
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Vigen&#x00E8;re Autokey Tableau
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+<figure xml:id="appendix_figure_vigenere_auto_table">
+        <caption>Vigen&#x00E8;re's Autokey Tableau</caption>
+        <image width="80%" source="images/vigenere_auto_table.png" archive="svg png pdf">
+            <description> This is a copy of Vigen&#x00E8;re's Auotkey Table.</description>
+        </image>
+    </figure>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Pigpen Key
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <figure xml:id="appendix_figure_pigpen">
+        <caption>Pigpen Cipher Key</caption>
+        <image width="40%" source="images/Pigpen.png" archive="svg png pdf">
+            <description> Cipher Key for the Pigpen Cipher </description>
+        </image>
+    </figure>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Transposition Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+
+    <table xml:id="appendix_trans_table">
+        <caption> Falconer's Transposition Table</caption>
+        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+            <row>
+                <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+            </row>
+            <row>
+                <cell>1</cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+            <row>
+                <cell>2</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+            <row>
+                <cell>3</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+            <row>
+                <cell>4</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+            <row>
+                <cell>5</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+            <row>
+                <cell>6</cell><cell> </cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell><cell><m>\phantom{WWWWW}</m></cell>
+            </row>
+        </tabular>
+    </table>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Kasiski Key Table
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+
+    <figure xml:id="appendix_figure_kasiski">
+        <caption>Kasiski Key Table</caption>
+        <image width="90%" archive="svg png pdf">
+            <description>Kasiski Key Table</description>
+            <latex-image>
+                \begin{tikzpicture}
+                \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
+                    \pgfmathtruncatemacro{\o}{mod(\y,2)};
+                    \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.25,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+                    \foreach \x/\ctext in 
+                    {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+                        13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                    {
+                    \pgfmathtruncatemacro{\n}{mod(\x+\shift+26,26)};
+                    \draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+                    }
+                }
+                \foreach \x/\ctext in 
+                {
+                    0/12.22\%\ \ e,
+                    1/9.28\%\ \ \ \ t,
+                    2/8.06\%\ \ \ \ a,
+                    3/7.62\%\ \ \ \ o,
+                    4/7.10\%\ \ \ \ i,
+                    5/6.82\%\ \ \ \ n,
+                    6/6.45\%\ \ \ \ s,
+                    7/5.91\%\ \ \ \ r,
+                    8/5.76\%\ \ \ \ h,
+                    9/4.19\%\ \ \ \ l,
+                    10/3.93\%\ \ \ \ d
+                }
+                {
+                    \draw (-0.25,-0.5*\x) node {$\ctext$};
+                }
+                \foreach \x/\ctext in 
+                {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                {
+                    \draw (1+0.55*\x,0.5) node {$\ctext$};
+                }
+                \draw (-1.25,0.25)--(15,0.25);
+                \draw (0.75,1)--(0.75,-5.5);
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    Multiplication Table Modulo 26
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+
+    <figure xml:id="appendix_figure_mod26">
+        <caption>Multiplication table modulo 26</caption>
+        <image width="90%" archive="svg png pdf">
+            <description>Multiplication table modulo 26</description>
+            <latex-image>
+                \begin{tikzpicture}
+                \foreach \y in {0,1,...,25}{
+                    \pgfmathtruncatemacro{\o}{mod(\y,2)};
+                    \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.5,-0.25-0.5*\y) rectangle (14,0.25-0.5*\y);
+                    \foreach \x in {0,1,...,25}
+                    {
+                    \pgfmathtruncatemacro{\n}{mod(\x*\y,26)};
+                    \draw (0.55*\x,-0.5*\y) node {\n};
+                    }
+                }
+                \foreach \y/\text in 
+                    {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+                        13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                {
+                    \draw (-1.25,-0.5*\y) node {$\text$};
+                    \draw (-0.55,-0.5*\y) node {\y};
+                    \draw (0.55*\y,0.5) node {\y};
+                }
+                \draw (-1.5,0.275)--(14,0.275);
+                \draw (-0.25,0.75)--(-0.25,-12.75);
+                \draw (-0.55,0.5) node {$\times_{26}$};
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </figure>
+
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    rSDES Diagram
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
+
+    <figure xml:id="appendix_figure_rSDES">
+        <caption>A Highly Simplified two step DES</caption>
+        <image width="100%" archive="svg png pdf">
+            <description> This is a highly simplified example of the Data Encryption Standard </description>
+            <latex-image>
+                \scalebox{0.75}{
+                \begin{picture}(600,500)(0,-75)
+                    %\put(0,-75){\framebox(600,500){}}
+                    \put(300,410){\makebox(0,0)[b]{Two Round rSDES (really Simple DES)}}
+                    \put(110,375){\makebox(0,0)[b]{$M$}}
+                    \put(110,373){\vector(0,-1){50}}
+                    \put(110,310){\makebox(0,0)[b]{$IP=[2,6,3,1,4,8,5,7]$}}
+                    \put(110,308){\vector(-1,-1){50}}
+                    \put(110,308){\vector(1,-1){50}}
+                    \put(60,245){\makebox(0,0)[b]{$L_0$}}
+                    \put(160,245){\makebox(0,0)[b]{$R_0$}}
+                    \put(160,243){\vector(-2,-1){100}}
+                    \put(60,243){\line(2,-1){45}}
+                    \put(115,215.5){\vector(2,-1){45}} 
+                    \put(60,180){\makebox(0,0)[b]{$L_1=R_0$}}
+                    \put(160,180){\makebox(0,0)[b]{$R_1=L_0\oplus f(R_0\, ,K_0)$}}
+                    
+                    \qbezier(220,186)(260,186)(260,266)
+                    \qbezier(260,266)(260,330)(280,330)
+                    \put(280,330){\vector(1,0){10}}
+                    \put(292,330){\makebox(0,0)[l]{Round Function}}
+                    \put(328,310){\makebox(0,0)[b]{$R_i$}}
+                    \put(328,308){\vector(0,-1){50}}
+                    \put(328,245){\makebox(0,0)[b]{$E=[4,1,2,3,2,3,4,1]$}}
+                    \put(328,243){\vector(0,-1){50}}
+                    \put(328,180){\makebox(0,0)[b]{$\oplus K_i$}}
+                    
+                    \qbezier(340,186)(400,186)(400,266)
+                    \qbezier(400,266)(400,330)(464,330)
+                    \put(462,330){\vector(1,0){10}}
+                    \put(474,330){\makebox(0,0)[l]{Key Schedule}}
+                    \put(510,310){\makebox(0,0)[b]{$K=[1001101100]$}}
+                    \put(510,288){\makebox(0,0)[b]{$K_0=[10011011]$}}
+                    \put(510,266){\makebox(0,0)[b]{$K_1=[00110110]$}}
+                    
+                    \put(328,178){\vector(1,-1){50}}
+                    \put(328,178){\vector(-1,-1){50}}
+                    \put(278,117){\makebox(0,0)[b]{$S_1$}}
+                    \put(378,117){\makebox(0,0)[b]{$S_2$}}
+                    
+                    \qbezier(385,123)(400,123)(400,153)
+                    \qbezier(400,153)(400,180)(464,180)
+                    \put(464,180){\vector(1,0){10}}
+                    \put(474,180){\makebox(0,0)[l]{S-Boxes}}
+                    \put(484,84){\makebox(0,0)[b]{$S_1=\sboxOne$}}
+                    \put(484,-16){\makebox(0,0)[b]{$S_2=\sboxTwo$}}
+                    
+                    
+                    \put(278,115){\vector(1,-1){50}}
+                    \put(378,115){\vector(-1,-1){50}}
+                    \put(328,52){\makebox(0,0)[b]{$P_4=[2,4,3,1]$}}
+                    \put(328,50){\vector(0,-1){50}}
+                    \put(328,-13){\makebox(0,0){$f(R_i\, ,K_i)$}}
+                    \qbezier(304,-7)(260,-7)(260,80)
+                    \qbezier(260,80)(260,180)(230,180)
+                    \put(230,180){\vector(-1,0){10}}
+                    
+                    \put(60,180){\vector(0,-1){50}}
+                    \put(160,180){\vector(0,-1){50}}
+                    \put(160,117){\makebox(0,0)[b]{$R_2=R_1$}}
+                    \put(60,117){\makebox(0,0)[b]{$L_2=L_1\oplus f(R_1\, ,K_1)$}}
+                    \put(60,115){\vector(1,-1){50}}
+                    \put(160,115){\vector(-1,-1){50}}
+                    \put(110,52){\makebox(0,0)[b]{$IP^{-1}=[4,1,3,5,7,2,8,6]$}}
+                    \put(110,50){\vector(0,-1){50}}
+                    \put(110,-13){\makebox(0,0){$C$}}
+                \end{picture}
+                }
+            </latex-image>
+        </image>
+    </figure>
+
+</appendix>

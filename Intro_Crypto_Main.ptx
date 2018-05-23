@@ -12,7 +12,6 @@ The material is presented, whenever possible, in a historically honest
 manner.
 
 Copyright 2015 Robert A. Beezer
-
 This file is part of MathBook XML.
 
 MathBook XML is free software: you can redistribute it and/or modify
@@ -35,47 +34,47 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- author, brand, latex macros, etc. -->
 
-        <xi:include href="crypto_bookinfo.mbx" />
+        <xi:include href="crypto_bookinfo.ptx" />
 
     <book xml:id="IntroToCrypto">
         <title>Cryptology Through History and Inquiry</title>
 
     <!-- Frontmatter Content -->
 
-        <xi:include href="crypto_frontmatter.mbx" />
+        <xi:include href="crypto_frontmatter.ptx" />
 
     <!-- Chapter 1 Content -->
 
-        <xi:include href="chapter1_early_ciphers.mbx" />
+        <xi:include href="chapter1_early_ciphers.ptx" />
 
     <!-- Chapter 2 Content -->
 
 
-        <xi:include href="chapter2_arab_analysis.mbx" />
+        <xi:include href="chapter2_arab_analysis.ptx" />
 
     <!-- Chapter 3 Content -->
 
-        <xi:include href="chapter3_new_ciphers.mbx" />
+        <xi:include href="chapter3_new_ciphers.ptx" />
 
     <!-- Chapter 4 Content -->
 
-        <xi:include href="chapter4_mathematical_analysis.mbx" />
+        <xi:include href="chapter4_mathematical_analysis.ptx" />
 
     <!-- Chapter 5 Content -->
 
-        <xi:include href="chapter5_mechanical_ciphers.mbx" />
+        <xi:include href="chapter5_mechanical_ciphers.ptx" />
 
     <!-- Chapter 6 Content -->
 
-        <xi:include href="chapter6_mathematical_ciphers.mbx" />
+        <xi:include href="chapter6_mathematical_ciphers.ptx" />
 
     <!-- Chapter 7 Content -->
 
-        <xi:include href="chapter7_modern_cryptology.mbx" />
+        <xi:include href="chapter7_modern_cryptology.ptx" />
 
     <!-- Backmatter Content -->
 
-        <xi:include href="crypto_backmatter.mbx" />
+        <xi:include href="crypto_backmatter.ptx" />
 
     </book>
 </mathbook>

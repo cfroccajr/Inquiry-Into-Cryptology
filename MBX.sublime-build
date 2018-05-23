@@ -1,5 +1,5 @@
 {
-	"selector": "source.mbx",
+	"selector": "source.ptx",
 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$file_name"],
 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 	"working_dir": "$file_path/../tmp",

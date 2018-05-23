@@ -1,0 +1,13 @@
+    <figure xml:id="figure_some_image">
+        <caption>Some Sort of Image</caption>
+        <image width="65%" archive="svg png pdf">
+            <description> This is an image. </description>
+            <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\begin{tikzpicture}[scale=4,cap=round,>=latex]
+
+
+                \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </figure>

@@ -394,7 +394,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </blockquote>
         </assemblage>
         <p>
-            <alert>Comprehension Check:</alert>
+            <alert>Comprehension Check:</alert> (Be sure to reference <xref ref="table_numeric_alpha"/> as you try to answer these questions.)
             <ul>
                 <li>
                     In the first paragraph how did <em>mhmd</em> become <em>forty, eight, forty, four</em>?
@@ -404,7 +404,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     or <em><m>\overline{cab\ ab}</m></em> from <em>i</em><m>\ </m>?
                 </li>
                 <li>
-                    When converting letters to words <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
+                    When converting letters to <em>delusive words</em>, <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
                 </li>
                 <li>
                     What letter(s) would be easier to translate into a variety of words?  Which letters would be harder to change into words?
@@ -436,7 +436,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <hint>
                 <p>
-                    For all of these the first step is to use table <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
+                    For all of these the first step is to use <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method.
                 </p>
             </hint>
         </exercise>
@@ -449,7 +449,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </statement>
             <hint>
                 <p>
-                    As an example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em> (though the last one is kind of silly). Also, remember that you will need to use table <xref ref="table_numeric_alpha"/>.
+                    As an example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em> (though the last one is kind of silly). Also, remember that you will need to use <xref ref="table_numeric_alpha"/>.
                 </p>
             </hint>
         </exercise>
@@ -503,7 +503,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <li>The message is a quote from a famous Arabic poet and mathematician.</li>
                         <li>There is at least one letter substitution which by necessity is always the same.</li>
                         <li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
-                        <li>As before you will need table <xref ref="table_numeric_alpha"/>.</li>
+                        <li>As before you will need <xref ref="table_numeric_alpha"/>.</li>
                     </ul>
                 </p>
             </hint>
@@ -520,7 +520,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Looking at the number of different ways you could encipher some letters, like <em>t</em>, what advantage might these new ciphers have over the simpler ones we looked at previously?
                 </li>
                 <li>
-                    Why might having a large number of different ways to encipher a single letter be a disadvantage?
+                    Why might having a large number of different ways to encipher a single letter be a disadvantage? (Note: A cipher in which a single character or block of characters may be enciphered in multiple ways in the same message is called <term>homophonic</term><idx>homophonic</idx>.)
                 </li>
                 <li>
                     Which of the methods described above do you think has the potential to be the most useful and why?
@@ -544,7 +544,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 For each exercise where you need to encipher or decipher a message do enough work to demonstrate that
                 you clearly understand how to do the job; say at encipher or decipher least 10 characters or write down the plain text
-                and corresponding cipher text alphabet.
+                alphabet and corresponding cipher text alphabet.
             </p>
         </introduction>
         <exercise>
@@ -561,8 +561,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <statement>
                 <p>
                     Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em>
-                    <xref ref="table_numeric_alpha" />,
-                    multiplying by 5, and finally converting the numbers back to letters.
+                    (<xref ref="table_numeric_alpha" />),
+                    multiplying by 5, and finally converting those numerals back to letters.
                 </p>
                 <blockquote>
                     <p>
@@ -578,7 +578,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <statement>
                 <p>
                     Encipher the following by converting it to numerals with the <em>Numerical Alphabet Table</em>
-                    <xref ref="table_numeric_alpha" />,
+                    (<xref ref="table_numeric_alpha" />),
                     and then split those numeral up so as to form <em>delusive words</em>.
                 </p>
                 <blockquote>
@@ -731,6 +731,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
                     RGY
                 </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Setup a table like <xref ref="cipher_zebra"/> with a plaintext and ciphertext alphabet for a keyword cipher with key letter <em>d</em> and keyword <em>ARNOLD</em>.  Then use it to encipher this quote:
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.
+                        </q> - Arnold Schwarzenegger
+                    </p>
+                </blockquote>
             </statement>
         </exercise>
     </exercises>

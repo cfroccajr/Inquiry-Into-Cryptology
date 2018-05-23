@@ -1,0 +1,20 @@
+    <figure xml:id="figure_freq_axes">
+        <caption>Axes for Mapping Letter Frequencies</caption>
+        <image width="65%" archive="svg png pdf">
+            <description> This is a blank set of axes which we can use to map frequencies when performing frequency analysis. </description>
+            <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\begin{tikzpicture}[scale=2,cap=round,>=latex]
+
+                            \draw[thick] (0cm,2cm) -- (0cm,0cm) -- (6cm,0cm);
+                            \node[anchor = north] at (3cm,-0.5cm) {\Large Letters};
+                            \node[rotate=90] at (-0.8cm,1cm) {\Large Frequencies};
+                            \foreach [count=\x] \xtext in {a,b,...,z}:
+                                \draw (\x/4.5,0cm) -- (\x/4.5,-0.2cm) node[anchor=north] {$\xtext$};
+                            \foreach \x in {2,4,...,16}:
+                                \draw (6cm,\x/8) -- (-0.2cm,\x/8) node[anchor=east] {\x\%};
+
+                        \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </figure>

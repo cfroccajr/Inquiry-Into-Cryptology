@@ -1,0 +1,80 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/CryptoText"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/CryptoText/tmp"
+		},
+		{
+			"path": "/Users/cfroccajr/Applications/GIT/CryptoText/html_tmp"
+		}
+	],
+
+	"settings":
+	[
+		{
+			"detect_indentation": false,
+			"draw_indent_guides": false,
+			"draw_white_space": "selection"
+
+		}
+	],
+
+	"build_systems":
+	[
+		{
+			"name": "Main PTX Build",
+			"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+			"working_dir": "$file_path/../tmp",
+
+			"variants": [
+//				{"name": "Echo Stuff",
+//					"cmd":["echo","$project_base_name.ptx"]
+//				},
+				{"name":"to HTML Folder",
+					"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+					"working_dir": "$file_path/../html"
+				},
+				
+				{"name": "Check Schema",
+					"cmd": ["java", "-classpath", "/Users/cfroccajr/Applications/GIT/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar", "/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"]
+				},
+
+				{"name": "Build TeX File",
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
+				},
+
+				{"name": "Xelatex the .tex file",
+					"cmd": ["xelatex","$project_base_name.tex"]
+				},
+
+				{"name": "Open the .pdf file",
+					"cmd": ["open","$project_base_name.pdf"]
+				},
+
+				{"name": "Build latex-image to all Images",
+					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				},
+
+				{"name": "Build sageplot to svg Images",
+					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fsvg", "-dimages", "../src/$project_base_name.ptx"]
+				},
+
+				{"name": "Build sageplot to pdf Images",
+					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fpdf", "-dimages", "../src/$project_base_name.ptx"]
+				},
+
+				{"name": "Build youtube to all Images",
+					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-cyoutube", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				}
+			]
+		}
+	]
+}

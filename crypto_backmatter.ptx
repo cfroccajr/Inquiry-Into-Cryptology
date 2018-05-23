@@ -34,11 +34,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Sage Cell Appendix -->
 
-        <xi:include href="analysis_cell_appendix.mbx" />
+        <xi:include href="analysis_cell_appendix.ptx" />
 
-        <xi:include href="cipher_cell_appendix.mbx" />
+        <xi:include href="cipher_cell_appendix.ptx" />
 
-        <xi:include href="chart_appendix.mbx" />
+        <xi:include href="chart_appendix.ptx" />
 
     <!-- GFDL License text -->
 
@@ -61,12 +61,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- glossary -->
 
-        <xi:include href="glossary.mbx" />
+        <xi:include href="glossary.ptx" />
 
 
     <!-- references -->
 
-        <xi:include href="crypto_references.mbx" />
+        <xi:include href="crypto_references.ptx" />
 
     <!-- Index follows appendices, preceded only colophon -->
         <index>

@@ -1,0 +1,1193 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"table",
+				"table_numeric_alpha"
+			],
+			[
+				"ata",
+				"atabash_intro"
+			],
+			[
+				"sub",
+				"subsection"
+			],
+			[
+				"q",
+				"quote"
+			],
+			[
+				"e",
+				"example\texample"
+			],
+			[
+				"te",
+				"term"
+			],
+			[
+				"exp",
+				"exploration"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"em",
+				"em"
+			],
+			[
+				"ex",
+				"example\texample"
+			],
+			[
+				"al",
+				"align"
+			],
+			[
+				"an",
+				"answers"
+			],
+			[
+				"pre",
+				"pre"
+			],
+			[
+				"ass",
+				"assemblage"
+			],
+			[
+				"auto",
+				"autoname"
+			],
+			[
+				"kasis",
+				"example_kasiski"
+			],
+			[
+				"exmple",
+				"example_kasiski"
+			],
+			[
+				"cr",
+				"cr_crypt_kasiski"
+			],
+			[
+				"state",
+				"statement"
+			],
+			[
+				"falconer",
+				"falconer_divisors"
+			],
+			[
+				"cr_",
+				"cr_crypt_falconer"
+			],
+			[
+				"sta",
+				"statement"
+			],
+			[
+				"p",
+				"paragraphs"
+			],
+			[
+				"ma",
+				"main"
+			],
+			[
+				"exer",
+				"exercise"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"row",
+				"row"
+			],
+			[
+				"sec",
+				"section"
+			],
+			[
+				"block",
+				"blockquote"
+			],
+			[
+				"t",
+				"term"
+			],
+			[
+				"xsl",
+				"xsltproc"
+			],
+			[
+				"fo",
+				"forward"
+			],
+			[
+				"c",
+				"chapter"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Intro_Crypto_Main.sublime-project",
+			"settings":
+			{
+				"buffer_size": 2682,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build SVG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PNG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PDF Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build Latex to ALL Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PNG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PDF Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build Latex to ALL Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build Latex to ALL Images"
+				],
+				[
+					"Main PTX Build",
+					"Build Sage Plots to SVG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PDF Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build Sage Plots to SVG Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build Latex to ALL Images"
+				],
+				[
+					"Main PTX Build",
+					"Build Sage Plots to SVG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build You Tube to ALL Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build You Tube to ALL Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build SVG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PNG Images"
+				],
+				[
+					"Main PTX Build",
+					"Build PDF Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Xelatex the .tex file"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Echo Stuff"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"PdfLaTeX"
+			]
+		],
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				]
+			],
+			[
+				"Packages/PreTeXtual/PreTeXt.sublime-build",
+				"Process PreTeXt to HTML (beta)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/PreTeXtual/PreTeXt.sublime-build",
+				"Process PreTeXt to HTML (beta)"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/MBX.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Check DTD"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build TeX File"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build Images"
+				]
+			],
+			[
+				"Packages/User/MBX.sublime-build",
+				"Build Images"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/MBX.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Check DTD"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build TeX File"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build SVG Images"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build PNG Images"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build PDF Images"
+				]
+			],
+			[
+				"Packages/User/MBX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/MBX.sublime-build",
+					""
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Check Schema"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build TeX File"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build SVG Images"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build PNG Images"
+				],
+				[
+					"Packages/User/MBX.sublime-build",
+					"Build PDF Images"
+				]
+			],
+			[
+				"Packages/User/MBX.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Templ",
+				"Create file from Template"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"mbx",
+				"Set Syntax: MathBook XML"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 55.0,
+		"history":
+		[
+			"xsltproc --xinclude --stringparam whitespace flexible /Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx",
+			"xsltproc --xinclude --stringparam \"whitespace flexible\" /Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx",
+			"xsltproc --xinclude --stringparam whitespace flexible /Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT 467 & 528 - Number Theory/Number Theory Comp/2010 Fall Number Theory Final Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/Brookfield Pres.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT467 Proposals",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_systems.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Reference_File.txt",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-project",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-workspace",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_backmatter.ptx",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeXTools (Advanced).sublime-settings",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeXTools.sublime-settings",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.ptx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.ptx.mbx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.mbx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/README.md",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/guesstimates.tex",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/coding_student_blocks.py",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Games Unit 2 Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/FT of Algebra.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/ProbabilityStuffSheet.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Sample_Odds.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/ProbabilityNotes.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Math of Games Unit-1-Exam.tex",
+		"/Users/cfroccajr/Downloads/Abstract_Algebra.bibtex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Venezia_Board.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/paper_size_test.tex",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter1_Vectors.mbx",
+		"/Users/cfroccajr/Dropbox/WCSU/Elmore_File.tex",
+		"/Users/cfroccajr/Applications/GIT/git_play/testing/dangermouse.txt",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/gfdl-mathbook.xml",
+		"/Users/cfroccajr/Downloads/Latex_A_Document_Preparation_System_2_E.bibtex",
+		"/Users/cfroccajr/Downloads/Math essay Wayne .docx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_frontmatter.mbx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.mbx",
+		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx.xml",
+		"/Users/cfroccajr/Documents/CryptoText/src/Intro_Crypto_Main.mbx",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Number Theory Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fal MAT 110 Beyond Counting.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall Geometry Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Historical_Persons.tex",
+		"/Users/cfroccajr/Dropbox/Apps/texmf/tex/latex/Historical_Persons.tex",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/Historical_Persons.tex",
+		"/Users/cfroccajr/Dropbox/WCSU/2012 Spring Make Ups/Historical_Persons.tex",
+		"/Users/cfroccajr/Dropbox/WCSU/MATH 363/Historical_Persons.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 5 Exam.tex",
+		"/Users/cfroccajr/Library/texmf/tex/latex/Historical_Persons.tex",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Complex Numbers and Visuals.tex",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex",
+		"/Users/cfroccajr/Documents/Temp/books.csv",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall Indirect Proofs Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring 272 Chapter 4-5 Test.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Practice Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring Chapter 2-3 Test.tex",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/SphereDistance.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall History of Algebra Exam.tex",
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT 113/2015 Fall Geometry Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Text Review/Text Review Rubric and Report.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Spring 2009 Chapter 4 Test.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Mesopotamian_Review.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 141 - Discrete Mathematics/2017 Fall Unit II Exam.tex",
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Exam 2.tex",
+		"/Users/cfroccajr/Documents/CryptoText/src/Reference_File.txt",
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_bookinfo.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_frontmatter.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter5_mechanical_ciphers.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chart_appendix.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter7_modern_cryptology.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter4_mathematical_analysis.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers copy.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter1_early_ciphers.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_mathematical_ciphers.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/tmp/junk.ptx",
+		"/Users/cfroccajr/Documents/CryptoText/tmp/Junk2.ptx",
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/glossary.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/copySample/sample-article.xml",
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample",
+		"/Users/cfroccajr/Documents/CryptoText/src/analysis_cell_appendix.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/cipher_cell_appendix.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_modern_cryptology.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/src/Refernce_File.txt",
+		"/Users/cfroccajr/Documents/CryptoText/tmp/IntroToCrypto.tex",
+		"/Users/cfroccajr/Documents/CryptoText/latex_tmp/IntroToCrypto.tex",
+		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-article/sample-article.xml",
+		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX.sublime-build",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/xelatex.sublime-build",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX Build.sublime-build",
+		"/Users/cfroccajr/Documents/CryptoText/tmp_src/Intro_Crypto_Main.mbx",
+		"/Users/cfroccajr/Documents/CryptoText/tmp/cipher.py",
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.xml",
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/gfdl-mathbook.xml",
+		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/bookinfo.xml",
+		"/Users/cfroccajr/Applications/GIT/mathbook/examples/humanities/poetry.xml",
+		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/sets.xml",
+		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/frontmatter.xml",
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/chapter2_arab_analysis.mbx",
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/chapter1_early_ciphers.xml",
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/Intro_Crypto_Main.mbx",
+		"/Users/cfroccajr/Documents/WCSU/CryptologyText/quickstart.mbx"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Intro_Crypto_Main.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2682,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 217.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 240.0
+	},
+	"pinned_build_system": "Packages/PreTeXtual/PreTeXt.sublime-build",
+	"project": "Intro_Crypto_Main.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 338.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C spaces"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 333.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
