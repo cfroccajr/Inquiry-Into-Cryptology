@@ -107,11 +107,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Use your table to convert this to CIPHERTEXT: <q>hello world</q>
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
                     <c>KHOOR ZRUOG</c>
                 </p>
-            </solution>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -119,11 +119,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Use your table to convert this to plaintext: <c>WKLV LV D WHVW</c>
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
                     this is a test
                 </p>
-            </solution>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -131,11 +131,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Use your table to convert this to plaintext: <c>CRPELHV OLNH CHEUDV</c>
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
                     zombies like zebras
                 </p>
-            </solution>
+            </answer>
         </exercise>
 
 
@@ -172,11 +172,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </ul>
                 </p>
             </hint>
-            <solution>
+            <answer>
                 <p>
                     Here is a longer message for you to practice on.  The shift for this message was by a factor of seven, so the a goes to the h.  This doesn't really offer much more security, especially since there are only twenty six possible shift ciphers and one of those doesn't change anything.  While you were deciphering this what patterns did you notice? What words stood out?  How could we make this a more secure (harder to crack) cipher?  These are all questions that we will investigate in more detail throughout the text.
                 </p>
-            </solution>
+            </answer>
         </exercise>
 
         <p>
@@ -290,11 +290,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Imagine that instead of men writing out the cipher alphabets it was a computer.  Suppose that a computer can produce one new cipher alphabet every 0.1 seconds (so 10 alphabets a second), how many seconds would it take for the alphabet to write out all <m>403,291,461,126,605,635,584,000,000</m> alphabets?  How many hours is that? How many years? (Assume, like Falconer, that there are 366 days in a year.)
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
                     40,329,146,112,660,563,558,400,000 seconds, 11,202,540,586,850,156,544,000 hours, or 1,275,334,766,262,540,590 and 10/61 years
                 </p>
-            </solution>
+            </answer>
         </exercise>
         <p>
             Today we would call the huge number we calculated above <m>26!</m>, which is read "26 factorial," and certainly takes up a lot less room.
@@ -317,7 +317,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Use the definition above to calculate 4!, 7!, and 10!.
                 </p>
             </statement>
-            <solution>
+            <answer>
                 <p>
                     <ul>
                         <li>4!=24</li>
@@ -325,7 +325,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <li>10!=3628800</li>
                     </ul>
                 </p>
-            </solution>
+            </answer>
         </exercise>
         <p>
             We can make a message harder to decipher simply by using a more inventive method of encipherment than just a shift.  The last exercise in this section was enciphered with a slightly trickier cipher than the previous ciphers so I put the spaces and punctuation back in. Also, while it is a harder cipher it is not completely random, there is a pattern to how the key was generated; so in the table below the message try filling in the cipher alphabet below the plain alphabet as you work, and see if you can spot a pattern.
@@ -507,11 +507,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </ul>
                 </p>
             </hint>
-            <solution>
+            <answer>
                 <p>
                     <q>When I want to understand what is happening today or try to decide what will happen tomorrow, I look back.</q> - Omar Khayyam
                 </p>
-            </solution>
+            </answer>
         </exercise>
         <p>
             <alert>Reflection:</alert> Looking back at the exercises you have completed try to comment on the following questions:

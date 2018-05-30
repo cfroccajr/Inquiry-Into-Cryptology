@@ -36,7 +36,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="crypto_bookinfo.ptx" />
 
-    <book xml:id="IntroToCrypto">
+    <book xml:id="Intro_Crypto_Main">
         <title>Cryptology Through History and Inquiry</title>
 
     <!-- Frontmatter Content -->

@@ -41,3 +41,13 @@ xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook
 
 
 java -classpath /Users/cfroccajr/Applications/GIT/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar /Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng ../src/Intro_Crypto_Main.ptx
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc. Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In sublime had to install the package "Fix Mac Path" in order to get the project to build properly.
+
+To look for string parameters to change look in the *.xsl files
+
+

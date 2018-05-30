@@ -21,7 +21,6 @@
 			"detect_indentation": false,
 			"draw_indent_guides": false,
 			"draw_white_space": "selection"
-
 		}
 	],
 
@@ -29,16 +28,19 @@
 	[
 		{
 			"name": "Main PTX Build",
-			"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+			"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 			"working_dir": "$file_path/../tmp",
 
 			"variants": [
-//				{"name": "Echo Stuff",
-//					"cmd":["echo","$project_base_name.ptx"]
-//				},
+				// {"name": "Echo Stuff",
+				// 	"cmd":["echo","$project_base_name.ptx"]
+				// },
+				// {"name": "PWD",
+				// 	"cmd":"pwd"
+				// },
 				{"name":"to HTML Folder",
-					"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$file_path/../html"
 				},
@@ -48,11 +50,11 @@
 				},
 
 				{"name": "Build TeX File",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "--stringparam", "exercise.backmatter.solution", "yes", "--stringparam", "exercise.inline.answer", "no", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
 				},
 
 				{"name": "Xelatex the .tex file",
-					"cmd": ["xelatex","$project_base_name.tex"]
+					"cmd": ["xelatex","$project_base_name.tex"],
 				},
 
 				{"name": "Open the .pdf file",
@@ -60,7 +62,7 @@
 				},
 
 				{"name": "Build latex-image to all Images",
-					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+					"cmd": ["/Users/cfroccajr/Applications/GIT/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
 				},
 
 				{"name": "Build sageplot to svg Images",

@@ -29,172 +29,187 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-	<!-- Refernces -->
-		<references xml:id="crypto_ref">
-			<title>References</title>
+    <!-- Refernces -->
+        <references xml:id="crypto_ref">
+            <title>References</title>
 
-			
-			<biblio type="raw" xml:id="cr_crypt_agripa">
-				Heinrich Cornelius Agrippa (1486?-1535),
-				<title>
-					De occulta philosophia.
-				</title>
-				<year>Coloniae, 1533</year>.
-				<note>
-					<p> 
-						URL:
-						<url href="https://lccn.loc.gov/20007812">
-							https://lccn.loc.gov/20007812
-						</url>
-					</p>
-				</note>
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_agripa">
+                Heinrich Cornelius Agrippa (1486?-1535),
+                <title>
+                    De occulta philosophia.
+                </title>
+                <year>Coloniae, 1533</year>.
+                <note>
+                    <p>
+                        URL:
+                        <url href="https://lccn.loc.gov/20007812">
+                            https://lccn.loc.gov/20007812
+                        </url>
+                    </p>
+                </note>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_falconer">
-				John Falconer, 
-				<title> 
-					Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering.
-				</title>
-				Daniel Brown, London, <year>1685</year>.
-				<note>
-					<p>
-						URL:
-						<url href="https://archive.org/details/cryptomenysispat00falc">
-							https://archive.org/details/cryptomenysispat00falc
-						</url>
-					</p>
-				</note>
-			</biblio>
+            <biblio type="raw" xml:id="cr_doyle_sis">
+                Arthur Conan Doyle,
+                <title>
+                    A study in scarlet.
+                </title>
+                Project Gutenberg, <year>2016</year>
+                <note>
+                    <p>
+                        URL:
+                        <url href="http://www.gutenberg.org/files/244/244-0.txt">
+                            http://www.gutenberg.org/files/244/244-0.txt
+                        </url>
+                    </p>
+                </note>
+            </biblio>
+
+            <biblio type="raw" xml:id="cr_crypt_falconer">
+                John Falconer,
+                <title>
+                    Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering.
+                </title>
+                Daniel Brown, London, <year>1685</year>.
+                <note>
+                    <p>
+                        URL:
+                        <url href="https://archive.org/details/cryptomenysispat00falc">
+                            https://archive.org/details/cryptomenysispat00falc
+                        </url>
+                    </p>
+                </note>
+            </biblio>
 
 
-			<biblio xml:id="cr_crypt_hill_1929">
-				Lester S. Hill,
-				<title>
-					Cryptography in an algebraic alphabet.
-				</title>
-				The American Mathematical Monthly, Vol. 36, No. 6 (Jun. - Jul., 1929), pp. 306-312.
-				<note>
-					<p>
-						Stable URL:
-						<url href="http://www.jstor.org/stable/2298294">
-							http://www.jstor.org/stable/2298294
-						</url>
-					</p>
-				</note>
-			</biblio>
+            <biblio xml:id="cr_crypt_hill_1929">
+                Lester S. Hill,
+                <title>
+                    Cryptography in an algebraic alphabet.
+                </title>
+                The American Mathematical Monthly, Vol. 36, No. 6 (Jun. - Jul., 1929), pp. 306-312.
+                <note>
+                    <p>
+                        Stable URL:
+                        <url href="http://www.jstor.org/stable/2298294">
+                            http://www.jstor.org/stable/2298294
+                        </url>
+                    </p>
+                </note>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_kahn">
-				David Kahn, 
-				<title>
-					The codebreakers: the story of secret writing.
-				</title> 
-				Scribner, New York, <year>1996</year>.
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_kahn">
+                David Kahn,
+                <title>
+                    The codebreakers: the story of secret writing.
+                </title>
+                Scribner, New York, <year>1996</year>.
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_kasiski">
-				Friedrich W. Kasiski [R.W. Pettengill trans.],
-				<title>
-					Secret writing and the art of deciphering with special consideration of the german and french languages.
-				</title>
-				Privately Published, Washington D.C., 
-				<year>1954</year>. (Original work published Berlin 1863)
-				<note> 
-					<p>
-						Thanks to Rene Stein at the National Cryptologic Museum for assistance in obtaining a copy of this work.
-					</p>
-				</note>
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_kasiski">
+                Friedrich W. Kasiski [R.W. Pettengill trans.],
+                <title>
+                    Secret writing and the art of deciphering with special consideration of the german and french languages.
+                </title>
+                Privately Published, Washington D.C.,
+                <year>1954</year>. (Original work published Berlin 1863)
+                <note>
+                    <p>
+                        Thanks to Rene Stein at the National Cryptologic Museum for assistance in obtaining a copy of this work.
+                    </p>
+                </note>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
-				Charles J. Mendelsohn
-				<title>
-					Blaise de Vigenère and the <q>Chiffre Carré</q>.
-				</title>
-				Proceedings of the American Philosophical Society, Vol. 82, No. 2 (Mar. 22, 1940), pp. 103-129.
-				<note>
-					<p>Stable URL:
-						<url href="http://www.jstor.org/stable/985011">
-							http://www.jstor.org/stable/985011
-						</url>
-					</p>
-				</note>
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
+                Charles J. Mendelsohn
+                <title>
+                    Blaise de Vigenère and the <q>Chiffre Carré</q>.
+                </title>
+                Proceedings of the American Philosophical Society, Vol. 82, No. 2 (Mar. 22, 1940), pp. 103-129.
+                <note>
+                    <p>Stable URL:
+                        <url href="http://www.jstor.org/stable/985011">
+                            http://www.jstor.org/stable/985011
+                        </url>
+                    </p>
+                </note>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_arabic">
-				M. Mrayati, Y. Meer Alam, and M.H. at Tayyan (eds.),
-				<title>
-					Series on arabic origins of cryptology in six volumes.
-				</title>
-<!-- 				<volume>
-					3
-				</volume> -->
-				KFCRIS and KACST, Riyadh,
-				<year>
-					2003
-				</year>.
-<!-- 				<note>
-					<p>
-						Avalable at: 
-						<url href="http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf">
-							<c>http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf</c>
-						</url>
-					</p>
-				</note> -->
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_arabic">
+                M. Mrayati, Y. Meer Alam, and M.H. at Tayyan (eds.),
+                <title>
+                    Series on arabic origins of cryptology in six volumes.
+                </title>
+<!--                <volume>
+                    3
+                </volume> -->
+                KFCRIS and KACST, Riyadh,
+                <year>
+                    2003
+                </year>.
+<!--                <note>
+                    <p>
+                        Avalable at: 
+                        <url href="http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf">
+                            <c>http://www.kacst.edu.sa/en/about/publications/Books/Arabic_Origins_of_Cryptology3.pdf</c>
+                        </url>
+                    </p>
+                </note> -->
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_singh">
-				Simon Singh,
-				<title> 
-					The code book: the science of secrecy from ancient egypt to quantum cryptography.
-				</title> 
-				Anchor Books, New York, <year>2000</year>.
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_singh">
+                Simon Singh,
+                <title>
+                    The code book: the science of secrecy from ancient egypt to quantum cryptography.
+                </title>
+                Anchor Books, New York, <year>2000</year>.
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_1901lives">
-				Suetonius,
-				<title>
-					The lives of the twelve caesars. 
-				</title>
-				Bohn's Classical Library, G. Bell, 
-				<year>
-					1901.
-				</year>
-				<note>
-					<p>
-						URL:
-						<url href="http://books.google.com/books?id=pjcbAAAAYAAJ">
-							http://books.google.com/books?id=pjcbAAAAYAAJ
-						</url>
-					</p>
-				</note>
+            <biblio type="raw" xml:id="cr_crypt_1901lives">
+                Suetonius,
+                <title>
+                    The lives of the twelve caesars.
+                </title>
+                Bohn's Classical Library, G. Bell,
+                <year>
+                    1901.
+                </year>
+                <note>
+                    <p>
+                        URL:
+                        <url href="http://books.google.com/books?id=pjcbAAAAYAAJ">
+                            http://books.google.com/books?id=pjcbAAAAYAAJ
+                        </url>
+                    </p>
+                </note>
 
-			</biblio>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_vigenere">
-				Blaise de Vigen&#x00E8;re,
-				<title>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire,</title>
-				Chez Abel L’Angelier, Paris, 
-				<year>1586</year>.
-				<note>
-					<p>
-						URL: 
-						<url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
-							 http://gallica.bnf.fr/ark:/12148/bpt6k73371g
-						</url>
-					</p>
-				</note>
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_vigenere">
+                Blaise de Vigen&#x00E8;re,
+                <title>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire,</title>
+                Chez Abel L’Angelier, Paris,
+                <year>1586</year>.
+                <note>
+                    <p>
+                        URL:
+                        <url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
+                             http://gallica.bnf.fr/ark:/12148/bpt6k73371g
+                        </url>
+                    </p>
+                </note>
+            </biblio>
 
-			<biblio type="raw" xml:id="cr_crypt_alberti">
-				K. Williams, L. March, and S. Wassell (eds.),
-				<title>
-					The mathematical works of leon battista alberti
-				</title>
-				Birkhäuser, Basel
-				<year>
-					2010
-				</year>.
-			</biblio>
+            <biblio type="raw" xml:id="cr_crypt_alberti">
+                K. Williams, L. March, and S. Wassell (eds.),
+                <title>
+                    The mathematical works of leon battista alberti
+                </title>
+                Birkhäuser, Basel
+                <year>
+                    2010
+                </year>.
+            </biblio>
 
-		</references>
+        </references>
 
