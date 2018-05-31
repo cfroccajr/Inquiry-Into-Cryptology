@@ -28,7 +28,7 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="chapter_early_riphers" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="chapter_early_ciphers" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Caesar's Shifty Idea </title>
 
 <!-- Introduction -->
@@ -65,6 +65,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             One of the earliest types of cipher (sometimes spelled <em>cypher</em> in older documents) that we have a record of was the Caesar shift cipher used by Julius Caesar around 100 BCE. Here it is as described by Suetonius who lived about 150 to 200 years after Julius Caesar.
         </p>
 
+        <xi:include href="quote_code/julius_shift.ptx" />
         <assemblage>
             <blockquote>
                 <p>
