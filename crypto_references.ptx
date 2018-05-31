@@ -82,7 +82,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </biblio>
 
 
-            <biblio xml:id="cr_crypt_hill_1929">
+            <biblio type="raw" xml:id="cr_crypt_hill_1929">
                 Lester S. Hill,
                 <title>
                     Cryptography in an algebraic alphabet.
@@ -121,7 +121,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </biblio>
 
             <biblio type="raw" xml:id="cr_crypt_mendelsohn_vigenere" >
-                Charles J. Mendelsohn
+                Charles J. Mendelsohn,
                 <title>
                     Blaise de Vigenère and the <q>Chiffre Carré</q>.
                 </title>
@@ -155,6 +155,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </url>
                     </p>
                 </note> -->
+            </biblio>
+
+            <biblio type="raw" xml:id="cr_crypt_rocca_falconer">
+                Charles Rocca,
+                <title>
+                    <q>Falconer's cryptology</q>,
+                </title>
+                 in Research in History and Philosophy of Mathematics, The CSHPM 2014 Annual Meeting in St. Catharines, Ontario, edited by Maria Zack and Elaine Landry, pp.1-13.
+                Birkhäuser, Basel, <year>2015</year>.
             </biblio>
 
             <biblio type="raw" xml:id="cr_crypt_singh">

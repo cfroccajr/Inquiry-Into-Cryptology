@@ -1,0 +1,25 @@
+<assemblage>
+    <blockquote>
+        <p>
+            "<alert>5. On the replacement of letters using the decimally-weighted numerical alphabet:</alert>
+            <ul>
+                <li>
+                    By substituting decimal numerical alphabet for letters in four different ways:
+                    by writing the numbers in words as pronounced; or by finger-bending, using the fingers to communicate the message visually to a recipient; or by writing the numbers as numerals such as writing <em>(mhmd: forty, eight, forty, four)</em>; or by giving the cryptogram a semblance of a page of a financial register.
+                </li>
+                <li>
+                    By recovering the cryptogram numeral into a number of letters - a method of encipherment which involves more sophistication. There are many combinations that can be used in this method; for example in <em>(mhmd: jl, fb, jl, ca)</em> or <em>(kk, ga, kk, bb)</em> . One can even form delusive words such as <em>(mhmd: lead, cad, deal, baa)</em>, or substitute two words for a letter,
+                    e.g. <em>(ali: <m>\overline{dig\ fad}</m>, <m>\overline{cab\ ab}</m>)</em>,
+                    in which case a line is to be drawn over two words to denote that they represent one letter.
+                </li>
+                <li>
+                    By multiplying the number representing the letter by two, and so write <em>(mhmd: q, jf, q, h)</em> and <em>(ali: ob, jh)</em>, etc; or multiply it by three, thus writing <em>(mhmd: sk, kd, sk, jb)</em> and <em>(ali: rc, kg)</em>. Numbers can also be multiplied by four or five."
+                    <fn xml:id="arabic_fn">
+                        The examples here are very loosely based on the Arabic examples in the translation. The "mhmd" is Mohamed since Arabic is written without vowels, and for "ali" the a and l together are treated as a single letter.
+                    </fn>
+                    <xref ref="cr_crypt_arabic" detail="vol. 3, pp. 69-70" />
+                </li>
+            </ul>
+        </p>
+    </blockquote>
+</assemblage>

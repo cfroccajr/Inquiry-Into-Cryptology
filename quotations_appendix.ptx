@@ -31,14 +31,33 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <appendix xml:id="text_quotes" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Quotations Appendix</title>
-    <p><alert>Julius Caesar Shift:</alert></p>
-    <xi:include href="quote_code/julius_shift.ptx" />
 
-    <p><alert>Augustus Caesar Shift:</alert></p>
-    <xi:include href="quote_code/augustus_shift.ptx" />
+    <section>
+        <title>Chapter 1 Quotes:</title>
+        <p><alert>Julius Caesar Shift:</alert></p>
+        <xi:include href="quote_code/julius_shift.ptx" />
 
-    <p><alert>Falconer on 26!:</alert></p>
-    <xi:include href="quote_code/falconer_on_26_factorial.ptx" />
+        <p><alert>Augustus Caesar Shift:</alert></p>
+        <xi:include href="quote_code/augustus_shift.ptx" />
 
+        <p><alert>Falconer on 26!:</alert></p>
+        <xi:include href="quote_code/falconer_on_26_factorial.ptx" />
+
+        <p><alert>Ibn ad-Durayhim on Numerical Ciphers:</alert></p>
+        <xi:include href="quote_code/adDurayhim_numerical_ciphers.ptx" />
+    </section>
+
+    <section>
+        <title>Chapter 2 Quotes:</title>
+        <p><alert>Al-Kindi on Frequency Analysis:</alert></p>
+        <xi:include href="quote_code/alkindi_frequencies.ptx" />
+
+        <p><alert>Falconer's Analysis Step 1-4:</alert></p>
+        <xi:include href="quote_code/falconer_vowel_v_consonant.ptx" />
+        <xi:include href="quote_code/falconer_vowel_v_vowel.ptx" />
+        <xi:include href="quote_code/falconer_consonant_v_consonant.ptx" />
+        <xi:include href="quote_code/falconer_additional.ptx" />
+
+    </section>
 
 </appendix>

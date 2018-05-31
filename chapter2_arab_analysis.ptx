@@ -52,28 +52,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             The first place math was employed in the science of cryptology was in the analysis of languages.  The following is from <em>al-Kindi's</em><idx>al-Kindi</idx> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions that follow it.
             <idx>cryptanalysis</idx>
         </p>
-        <assemblage>
-            <blockquote>
-                <p>
-                    "<alert>Algorithms of Cryptanalysis</alert>
-                </p>
-                <p>
-                    So we say, the enciphered letters are either in numerical proportions, that is poetry -because poetic meter, ipso facto, sets measures to the number of letters in each line-, or they are not. Non- poetry can be cryptanalyzed using either quantitative or qualitative expedients.
-                </p>
-                <p>
-                    The <alert>quantitative</alert> expedients include determining the most frequently occurring letters in the language in which cryptograms are to be cryptanalyzed. If vowels functioned as the material from which any language is made, and non-vowels functioned as the shape of any language, and since many shapes can be made from the same material, then the number of vowels in any language would be greater than non- vowels. For instance, gold is the material of many shapes of finery and vessels; it may cover crowns, bangles, cups, etc.. The gold in these realizations is more than the shapes made of it. Similarly, the vowels which are the material of any kind of text are more than the non- vowels in any language. I mean by vowels the letters: (a), (y or i or e) and (o or u). Therefore the vowels in any language, inevitably, exceed in number the non-vowels in a text of that language. It happens that in certain languages some vowels are greater in number than some other vowels, while non-vowels may be frequent or scarce according to their usage in each language, such as the letter (s), of which frequency of occurrence is high in Latin.
-                </p>
-                <p>
-                    Among the expedients we use in cryptanalyzing a cryptogram if the language is already known, is to acquire a fairly long plaintext in that language, and count the number of each of its letters. We mark the most frequent letter "first", the second most frequent "second", and the following one "third", and so forth until we have covered all its letters. Then we go back to the message we want to cryptanalyze, and classify the different symbols, searching for the most frequent symbol of the cryptogram and we regard it as being the same letter we have marked "first" -in the plaintext-; then we go to the second frequent letter and consider it as being the same letter we have termed "second", and the following one "third", and so on until we exhaust all the symbols used in this cryptogram sought for cryptanalysis.
-                </p>
-                <p>
-                    It could happen sometimes that short cryptograms are encountered, too short to contain all the symbols of the alphabet, and where the order of letter frequency cannot be applied. Indeed the order of letter frequency can normally be applied in long texts, where the scarcity of letters in one part of the text is compensated for by their abundance in another part.
-                </p>
-                <p>
-                    Consequently, if the cryptogram was short, then the correlation between the order of letter frequency in it and in that of the language would no longer be reliable, and thereupon you should use another, <alert>qualitative</alert> expedient in cryptanalyzing the letters. It is to detect in the language in which cryptograms are enciphered the associable letters and the dissociable ones. When you discern two of them using the letter order of frequency, you see whether they are associable in that language. If so, you seek each of them elsewhere in the cryptogram, comparing it with the preceding and following dissociable letters by educing from the order of frequency of letters, so as to see whether they are combinable or non-combinable. If you find that all these letters are combinable with that letter, you look for letters combinable with the second letter. If found really combinable, so they are the expected letters suggested by the combination and non-combination of letters, and also by their order of frequency. Those expected letters are correlated with words that make sense. The same procedure is repeated elsewhere in the ciphertext until the whole message is cryptanalyzed." <xref ref="cr_crypt_arabic" detail="vol. 1, pp. 121-123" />
-                </p>
-            </blockquote>
-        </assemblage>
+        <xi:include href="quote_code/alkindi_frequencies.ptx"/>
         <p>
             <alert>Comprehension Check:</alert>
             <ul>
@@ -230,53 +209,51 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section xml:id="section_falconer_analysis">
         <title> Falconer's Approach</title>
         <introduction>
-            <p> Text from John Falconer will go here.<idx>Falconer, John</idx></p>
+            <p>
+                In 1685 John Falconer<idx>Falconer, John</idx>, who we met briefly in <xref ref="section_ancient_ciphers"/>, wrote the second ever published text in English on the subject of cryptology; it has the rather lengthy title <em>Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering</em>.  Beyond this work little is known about him for certain. A descendant of his writing in the nineteenth century claimed that John was the personal cipher keeper for King James II and followed the king into exile in France where he died.  In slim support of this the book is dedicated to the king and addresses it to King James II's secretary of state.  However, no readily available documented evidence exists to independently corroborate his descendant's claims, and in fact there are some tax records for John and his wife, Mary Dalmahoy, in Edinburgh Scotland, from 1695, over six years after James fled to France. <xref ref="cr_crypt_rocca_falconer"/>
+            </p>
+            <p>
+                In his text John Falconer presents a wide variety of ciphers and for most of them suggestions for how we might attack them.  In this section we will focus on his suggestions for how we may attack what we now call monoalphabetic substitution ciphers.
+            </p>
         </introduction>
 
         <subsection xml:id="subsection_falconer_step_one">
-            <title><em>First, Distinguish the Vowels from the Consonants.</em></title>
-            <blockquote>
-                <p>
-                    <ol>
-                        <li>
-                            And first, the vowels generally discover themselves by their frequency; for because they are but few in number, and no word made up without some of them, they must frequently be used in any writing.
-                        </li>
-                        <li>
-                            Where you find any character or letter standing by it self, it must be a vowel.
-                        </li>
-                        <li>
-                            If you find any character doubled in the beginning of a word, in any language it is a vowel, as <em>Aaron, Eel, Jilt, Oogala, Vulture, etc.</em>, except for some English proper names, as Llandaff or Lloyd.
-                        </li>
-                        <li>
-                            In monosyllables of two letters you may distinguish it from the consonant joined with it by its frequency.
-                        </li>
-                        <li>
-                            In a word of three letters beginning and ending in the same letter the vowel is probably included.
-                        </li>
-                        <li>
-                            When you find a character doubled in the middle of a word of four letters, `tis probably the vowel <em>e</em> or <em>o</em>.
-                        </li>
-                        <li>
-                            In Polysyllables, where a character is double in the middle of the word, it is for the most part a consonant; and if so, the precedent letter is always a vowel, and very often the following.<xref ref="cr_crypt_falconer" detail="pp. 8-9" />
-                        </li>
-                    </ol>
-                </p>
-            </blockquote>
+            <title>Step 1:</title>
+            <xi:include href="quote_code/falconer_vowel_v_consonant.ptx" />
             <p>
+                <alert>Comprehension Check:</alert>
                 <ul>
-                    <li>Do some of these sound familiar from what we have studied previously?</li>
+                    <li>Do some of these sound familiar from what you read in <xref ref="section_arab_analysis"/>?</li>
                     <li>Which of these are new? Do any of those seem strange to you?</li>
-                    <li>Try to find out why Falconer says <em><q>Jilt</q></em> and <em><q>Vulture</q></em> begin with 
+                    <li>In what ways does Falconer say that one, two, and three letter words can help us?</li>
+                    <li>According to Falconer when might we expect a double letter to be a vowel and when might it be a consonant?</li>
+                    <li>Try to find out why Falconer says <em><q>Jilt</q></em> and <em><q>Vulture</q></em> begin with
                     a double vowel.</li>
                 </ul>
+            </p>
+            <p>
+                For the following <em>Checkpoints</em> find a large sample of normal English text (you can use the one you found for the chekpoints in <xref ref="section_arab_analysis" />, but something bigger may be better).  You will also want to use the n-gram counting and word counting tools below.
             </p>
             <exercise xml:id="exercise_falconer_one">
                 <statement>
                     <p>
-                        Find a large sample of fairly normal English text (you can just reuse the text you used for the exercises 
-                        in section <xref ref="section_arab_analysis" />).  Go through the text carefully and see if you agree with 
-                        Falconer's observations. You should make use of the <em>n-gram counter</em> to help you, in order to find 
-                        strings of length greater than one try changing the value of <em>N</em>. There is also a separate word counter to count distinct words in your text.
+                        In your text, what letters are most common?  How many vowels are there? How many consonants are there?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        What are the one, two, and three letter words in the text you found to analyze?  Do they follow the pattern that Falconer described? Are any of them more common than others?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Look at your text for words with double letters, do they behave the way that Falconer says they should?
                     </p>
                 </statement>
             </exercise>
@@ -297,37 +274,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         </subsection>
         <subsection xml:id="subsection_falconer_step_two">
-            <title><em>Secondly, Distinguish the Vowels from Themselves.</em></title>
-            <blockquote>
-                <p>
-                    <ol>
-                        <li>
-                            Compare their frequency, and <em>e</em>, as we observed before, is generally the most used in 
-                            the English tongue, next <em>o</em>, then <em>a</em> and <em>i</em>; but <em>u</em> and <em>y</em> 
-                            are not so frequently used as some of the consonants.
-                        </li>
-                        <li>
-                            It is remarkable that amongst the vowels, <em>e</em> and <em>o</em> are often doubled, the rest seldom 
-                            or never.
-                        </li>
-                        <li>
-                            <em>e</em> is very often a terminal letter, and <em>y</em> terminates words, but they are 
-                            distinguishable, because there is no proportion to their frequency: <em>o</em> is not often 
-                            in the end of words, except in monosyllables.
-                        </li>
-                        <li>
-                            <em>e</em> is the only vowel that can be doubled in the end of an English word, except 
-                            <em>o</em> in <em>too</em>, etc.
-                        </li>
-                        <li>
-                            You may consider which of the vowels, in any language, can stand alone, as <em>a</em>, <em>i</em>, 
-                            and sometimes <em>o</em> in English, <em>a</em>, <em>e</em>, <em>o</em>, in Latin or <em>i</em> 
-                            the imperative of <em>eo</em>.<xref ref="cr_crypt_falconer" detail="pp. 9-10" />
-                        </li>
-                    </ol>
-                </p>
-            </blockquote>
+            <title>Step 2:</title>
+            <xi:include href="quote_code/falconer_vowel_v_vowel.ptx" />
             <p>
+                <alert>Comprehension Check:</alert>
                 <ul>
                     <li>Do you agree with his comments about <em>e, o</em> and the other vowels?  Why or why not?</li>
                     <li>Can you think of examples of or exceptions to his third and fourth comments above?</li>
@@ -337,98 +287,59 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise xml:id="exercise_falconer_two">
                 <statement>
                     <p>
-                        Test out Falconer's observations about vowels using the same sample of text that 
-                        you analyzed in exercise <xref ref="exercise_falconer_one" />.  Do his statements 
+                        Test out Falconer's observations about vowels using the same sample of text that
+                        you analyzed in exercise <xref ref="exercise_falconer_one" />.  Do his statements
                         hold true or has the language changed since 1685?
                     </p>
                 </statement>
             </exercise>
         </subsection>
         <subsection xml:id="subsection_falconer_step_three">
-            <title><em>Distinguish the Consonants Amongst Themselves.</em></title>
-            <blockquote>
-                <p>
-                    <ol>
-                        <li>
-                            As before observe their frequency.  Those of most use in 
-                            English are <em>d, h, n, r, s, t</em>, and next to those may be reckoned 
-                            <em> c, f, g, l, m, w</em>, in third rank may be placed 
-                            <em>b, k, p</em>, and lastly <em>q, x, z</em>...
-                        </li>
-                        <li>
-                            You may consider which consonants may be doubled in the middle or end of 
-                            words.
-                        </li>
-                        <li>
-                            What are terminal letters, etc.
-                        </li>
-                        <li>
-                            The number and nature of consonants and vowels that fall together, or 
-                            do usually fall together.<xref ref="cr_crypt_falconer" detail="p. 10" />
-                        </li>
-                    </ol>
-                </p>
-            </blockquote>
+            <title>Step 3:</title>
+            <xi:include href="quote_code/falconer_consonant_v_consonant.ptx" />
             <exercise>
                 <statement>
                     <p>
-                        Falconer's first three pieces of advice are similar to what we have looked at before; 
-                        his fourth comment is something a little new.  Using the same text which you analyzed before 
-                        set the <em>n-gram counter</em> to count two letter combinations in your text (<m>N=2</m>). Once you have 
-                        the count take note of which combinations appear most often and for each vowel which two or 
+                        Consider statement two above and look at the same text you used previously, which consonants are commonly doubled in the middle and at the end of words?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        In your sample of text which consonants do you commonly see at the end of words?  Are there some that, when they do show up, are almost always at the end of a word?  Are there any that are almost never at the end of a word?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Falconer's first three pieces of advice are similar to what we have looked at before;
+                        his fourth comment is something a little new.  Using the same text which you analyzed before
+                        set the <em>n-gram counter</em> to count two letter combinations in your text (<m>N=2</m>). Once you have
+                        the count take note of which combinations of letters appear most often and for each vowel which two or
                         three consonants it is most often paired with.
                     </p>
                 </statement>
             </exercise>
         </subsection>
         <subsection xml:id="subsection_falconer_step_four">
-            <title><em>Additional Observations</em></title>
-            <blockquote>        
-                <p>
-                    <ol>
-                        <li>
-                            A word of three letters, beginning and ending with the same, may be supposed <em>did</em> 
-                        </li>
-                        <li>
-                            A word consisting of four characters, with the same letter in the beginning and 
-                            end, is probably <em>that</em> or <em>hath</em>
-                        </li>
-                        <li>
-                            A word consisting of five letters, when the second and last are the same, 
-                            is commonly <em>which</em>, though it may be otherways, as in <em>known</em>, 
-                            <em>serve</em>, etc. And you may judge of the truth of such suppositions by the 
-                            frequency of the letters in the word supposed.
-                        </li>
-                    </ol>
-                </p>
-                <p>
-                    Next you may compare words one with another, as <em>on</em> and <em>no</em>, each being 
-                    the other reversed; so <em>of</em> and <em>for</em>, the last being the first reversed 
-                    with the addition of a letter; for and from will discover each other, etc.
-                </p>
-                <p>
-                    You may also likewise observe some of the usual propositions and terminations of 
-                    words, such as <em>com, con, ing, ed</em>, etc. Note that <em>t</em> and <em>h</em> 
-                    are often joined in the beginning and end of English words, and sometimes in the 
-                    middle.<xref ref="cr_crypt_falconer" detail="pp. 11-12" />
-                </p>
-            </blockquote>
+            <title>Step 4:</title>
+            <xi:include href="quote_code/falconer_additional.ptx" />
             <p>
+                <alert>Comprehension Check:</alert>
                 <ul>
                     <li>
-                        Can you think of more examples of three or four letter words beginning and 
-                        ending with the same letter?
-                    </li>
-                    <li> 
-                        What about five little words in which the second and last letters are the same? 
-                    </li>
-                    <li> 
-                        How many words like <em>on</em> and <em>no</em> or <em>of</em> and <em>for</em> 
-                        can you think of?
+                        Can you think of more examples of three or four letter words beginning and ending with the same letter?
                     </li>
                     <li>
-                        Compared with other suggestions we have looked at, how practical do these seem?  
-                        Do they seem a little to subtle?
+                        What about five little words in which the second and last letters are the same?
+                    </li>
+                    <li>
+                        How many words like <em>on</em> and <em>no</em> or <em>of</em> and <em>for</em> can you think of?
+                    </li>
+                    <li>
+                        Compared with other suggestions we have looked at, how practical do these seem?  Do they seem a little too subtle?
                     </li>
                 </ul>
             </p>
@@ -443,6 +354,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </exercise>
         </subsection>
     </section>
+
     <exercises xml:id="exercises_analysis">
         <title> Bringing it all Together</title>
         <exercisegroup>
