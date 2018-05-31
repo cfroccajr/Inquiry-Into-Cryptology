@@ -66,26 +66,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
 
         <xi:include href="quote_code/julius_shift.ptx" />
-        <assemblage>
-            <blockquote>
-                <p>
-                    <q>There are extant likewise some letters from him to Cicero and others to his friends concerning his domestic affairs in which if there was occasion for secrecy he wrote in cyphers, that is he used the alphabet in such a manner that not a single ward could be made out. The way to decipher those epistles was to substitute the fourth for the first letter as d for a and so for the other letters respectively.</q>
-                    <xref ref="cr_crypt_1901lives" detail="p. 37"/>
-                </p>
-            </blockquote>
-        </assemblage>
 
         <p>
             Augustus Caesar a short time later also employed a shift cipher, though arguably a much less effective one:
         </p>
 
-        <assemblage>
-            <blockquote>
-                <p>
-                    <q>When he had occasion to write in cypher he put b for a, c for b [and] so forth and instead of z, aa.</q> <xref ref="cr_crypt_1901lives" detail="p. 134"/>
-                </p>
-            </blockquote>
-        </assemblage>
+        <xi:include href="quote_code/augustus_shift.ptx" />
 
         <p>
             <alert>Comprehension Check:</alert>
@@ -268,14 +254,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <me>403,291,461,126,605,635,584,000,000.</me>
             John Falconer<idx>Falconer, John</idx> in the seventeenth century described this as follows:
         </p>
-        <assemblage>
-            <blockquote>
-                <p>
-                    <em>Schottus</em> demonstrates, (though the calculation in his book be not exact) that a thousand million of men in as many years could not write down all those different transpositions of the alphabet, granting every one should complete forty pages a day, and every page contain forty several positions: For if one writer in one day write forty pages, everyone containing forty combinations, 40 multiplied by 40, gives 1,600, the number he completes in one day, which multiplied by 366, the number (and more) of days in a year; a writer in one year shall compass 585,600 distinct rows.  Therefore in a thousand million of years he could write <me>585,600,000,000,000,</me> which being multiplied by 1,000,000,000, the number of writers supposed, the product will be <me>585,600,000,000,000,000,000,000,</me> which wants of the number of combinations no less than <me>348,484,017,332,394,393,600,000.</me>
-                    <xref ref="cr_crypt_falconer" detail="pages 5-6" />
-                </p>
-            </blockquote>
-        </assemblage>
+        <xi:include href="quote_code/falconer_on_26_factorial.ptx" />
+
         <p>
             <alert>Comprehension Check:</alert>
             <ul>

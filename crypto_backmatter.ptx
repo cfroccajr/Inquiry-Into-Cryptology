@@ -40,18 +40,23 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="chart_appendix.ptx" />
 
+
+    <!-- Quotations Appendix -->
+
+        <xi:include href="quotations_appendix.ptx" />
+
     <!-- GFDL License text -->
 
         <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
 
 
-        <appendix>
+<!--         <appendix>
             <title>Notation</title>
 
             <p>The following table defines the notation used in this book. Page numbers or references refer to the first appearance of each symbol.</p>
 
-            <!-- <notation-list /> -->
-        </appendix>
+            <notation-list />
+        </appendix> -->
 
 
     <appendix>
