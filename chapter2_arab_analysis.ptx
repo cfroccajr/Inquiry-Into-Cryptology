@@ -300,6 +300,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
+                        What consonnts does Falconer say are most common?  In the text you have been analyzing which are most common?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
                         Consider statement two above and look at the same text you used previously, which consonants are commonly doubled in the middle and at the end of words?
                     </p>
                 </statement>
@@ -360,12 +367,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercisegroup>
             <introduction>
                 <p>
-                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> 
-                    you will review the ideas we have explored in this chapter.  
-                    When you are done you should have generated for yourself a guide which you can use when you are 
-                    attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical 
-                    English text which is at least 1000 characters long.  You will use the <em>sage cells</em> to 
-                    examine this text in the following exercises.
+                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you will use the <em>sage cells</em> to examine this text for the following information:
                 </p>
             </introduction>
             <exercise xml:id="exercise_freq_count">
@@ -395,28 +397,27 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         prefixes and suffixes
                     </p>
                 </statement>
-            </exercise>         
+            </exercise>
             <conclusion>
                 <p>
-                    Put together all the information you have just gathered into a neat one page analysis guide.  You 
-                    should type this up neatly, in a reasonably sized font.  It should include:
+                    Now, finally, put together all the information you have just gathered into a neat one page analysis guide.  You should type this up neatly, in a reasonably sized font. If you want you can print out a copy of <xref ref="charts_image" /> and use it to help organize the information. It should include:
                     <ul>
-                        <li> 
-                            a list of frequencies for all the letters in the alphabet, 
+                        <li>
+                            A list of frequencies for all the individual letters in the alphabet.
                         </li>
-                        <li> 
-                            frequencies for at least the top 20 <term>bi-grams</term> (two letter combinations) and 
-                            <term>tri-grams</term> (three letter combinations)
+                        <li>
+                            The frequencies for at least the top 25 <term>bi-grams</term> (two letter combinations) and
+                            <term>tri-grams</term> (three letter combinations).
                             <idx>bi-gram</idx><idx>tri-gram</idx>
                         </li>
                         <li>
-                            a list of the top 20 most common words,
+                            A list of the top 25 most common words.
                         </li>
                         <li>
-                            a list of your top 20 most common prefixes and suffixes, and
+                            A list of your top 25 most common prefixes and suffixes.
                         </li>
                         <li>
-                            any other types of information you think might be useful which you have looked at in this chapter.
+                            And, any other types of information you think might be useful which you have looked at in this chapter.
                         </li>
                     </ul>
                 </p>
@@ -425,16 +426,33 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise>
             <statement>
                 <p>
-                    Use the skills we have been practicing in class together with the cheat sheet you just put 
-                    together in order to crack this cipher.
+                    Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
                 </p>
                 <pre>
-                    LU ZOO GSZG RH TLLW, HFYORNRGB RH HFKIVNV. HFXXVVWRMT RH GSV 
-                    XLNRMT GLTVGSVI LU ZOO GSZG RH YVZFGRUFO. UFIGSVIZMXV RH GSV 
-                    ZTIVVNVMG LU ZOO GSZG RH QFHG. KVIHVEVIZMXV RH GSV ULFMWZGRLM 
+                    LU ZOO GSZG RH TLLW, HFYORNRGB RH HFKIVNV. HFXXVVWRMT RH GSV
+                    XLNRMT GLTVGSVI LU ZOO GSZG RH YVZFGRUFO. UFIGSVIZMXV RH GSV
+                    ZTIVVNVMG LU ZOO GSZG RH QFHG. KVIHVEVIZMXV RH GSV ULFMWZGRLM
                     LU ZOO ZXGRLMH. - OZL GAF
                 </pre>
             </statement>
+            <hint>
+                <p>
+                    Be sure to look at repeated common words.  Also, as you uncover cipher letters try writing them down in <xref ref="blank_key_table" /> and looking for a pattern.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    of all that is good, sublimity is supreme. succeeding is the coming together of all that is beautiful. furtherance is the agreement of all that is just. perseverance is the foundation of all actions. - lao tzu
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common followed by <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c> and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.  Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently with <c>GS</c> is the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, or that <c>O</c> is <c>l</c>.
+                </p>
+                <p>
+                    At this point we can start writing down the letters we have in the monoalphabetic substitution table.  When you do that you will hopefully notice that the cipher letters are in reverse alphabetic order, so this was likely enciphered with atabash which we learned about in <xref ref="atabash_intro" />.
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -517,7 +535,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     your classmates can try to decipher using your cheat sheet.
                 </p>
             </statement>
-        </exercise>     
+        </exercise>
         <exercise>
             <statement>
                 <p>
@@ -531,7 +549,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </exercise>
         <conclusion>
             <p><alert>N-Gram Counter:</alert></p>
-            
+
                 <sage>
                     <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
                     <output></output>
