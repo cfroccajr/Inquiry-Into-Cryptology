@@ -457,28 +457,55 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise>
             <statement>
                 <p>
-                    Use the skills we have been practicing in class together with the cheat sheet you just put 
+                    Use the skills we have been practicing in class together with the cheat sheet you just put
                     together in order to crack this cipher.
                 </p>
                 <pre>
-                    SNE ORGGRE VF VG GB QNER ZVTUGL GUVATF, GB JVA TYBEVBHF GEVHZCUF, 
-                    RIRA GUBHTU PURPXRERQ OL SNVYHER ... GUNA GB ENAX JVGU GUBFR CBBE 
-                    FCVEVGF JUB ARVGURE RAWBL ABE FHSSRE ZHPU, ORPNHFR GURL YVIR VA N 
-                    TENL GJVYVTUG GUNG XABJF ABG IVPGBEL ABE QRSRNG. - GURBQBER 
+                    SNE ORGGRE VF VG GB QNER ZVTUGL GUVATF, GB JVA TYBEVBHF GEVHZCUF,
+                    RIRA GUBHTU PURPXRERQ OL SNVYHER ... GUNA GB ENAX JVGU GUBFR CBBE
+                    FCVEVGF JUB ARVGURE RAWBL ABE FHSSRE ZHPU, ORPNHFR GURL YVIR VA N
+                    TENL GJVYVTUG GUNG XABJF ABG IVPGBEL ABE QRSRNG. - GURBQBER
                     EBBFRIRYG
                 </pre>
+                    <!-- far better is it to dare mighty things, to win
+                    glorious triumphs,  even though checkered by
+                    failure ... than to rank with those poor  spirits
+                    who neither enjoy nor suffer much, because they
+                    live in a  gray twilight that knows not victory
+                    nor defeat. - theodore  roosevelt 
+                    shift a to N -->
+
             </statement>
             <hint>
                 <p>
                     Be patient, the letter frequencies are ... abnormal.
                 </p>
             </hint>
+            <answer>
+                <p>
+                    Shift <c>a</c> to <c>N</c>
+                </p>
+                <p>
+                    <q>
+                            far better is it to dare mighty things, to win
+                        glorious triumphs,  even though checkered by
+                        failure ... than to rank with those poor  spirits
+                        who neither enjoy nor suffer much, because they
+                        live in a  gray twilight that knows not victory
+                        nor defeat. - theodore  roosevelt
+                    </q>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.  Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.  When we start writing down the ciphertext we have worked out under the plaintext alphabet we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct.
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    Use the skills we have been practicing in class together with the cheat sheet you just put 
-                    together in order to crack this cipher.
+                    Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
                 </p>
                 <pre>
                     WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR 
@@ -512,10 +539,30 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     FFYSQ TURYD IQESP FLTQK LPFJE BKJFG LQ
                 </pre>
             </statement>
-            <hint><p>
-                This is a quote from a famous fictional nineteenth century detective and makes use of a keyword cipher.
-            </p></hint>
-        </exercise>     
+            <!-- keyword SHERLOCKED key letter a 
+                what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically. Study in Scarlet Sherlock Holmes 
+            -->
+            <hint>
+                <p>
+                    This is a quote from a famous fictional nineteenth century detective and makes use of a keyword cipher.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    KEYWORD: SHERLOCKED, key letter: a
+                </p>
+                <p>
+                    <q>
+                        ... what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically. Study in Scarlet, Sherlock Holmes
+                    </q>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.  Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet and look for patterns.  Continuing in this way we can finally arrive at the solution.
+                </p>
+            </solution>
+        </exercise>
         <exercise>
             <statement>
                 <p>Consider the following comment from John Falconer:</p>
