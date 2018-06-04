@@ -53,6 +53,10 @@
 					"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "--stringparam", "exercise.backmatter.solution", "yes", "--stringparam", "exercise.inline.answer", "no", "--stringparam", "exercise.divisional.answer", "no", "--stringparam", "exercise.divisional.solution", "no", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
 				},
 
+				{"name": "Build TeX File Rocca Version",
+					"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/applications/git/mathbook/user/mathbook-latex-rocca.xsl", "../src/$project_base_name.ptx"]
+				},
+
 				{"name": "Xelatex the .tex file",
 					"cmd": ["xelatex","$project_base_name.tex"],
 				},
