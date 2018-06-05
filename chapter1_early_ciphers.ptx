@@ -224,6 +224,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     C, DPSSPHT ZOHRLZWLHYL
                 </pre>
             </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>Be copy now to men of grosser blood, And teach them how to war. And you, good yeoman, Whose limbs were made in England, show us here The mettle of your pasture; let us swear That you are worth your breeding; which I doubt not; For there is none of you so mean and base, That hath not noble lustre in your eyes. I see you stand like greyhounds in the slips, Straining upon the start. The game's afoot: Follow your spirit, and upon this charge Cry 'God for Harry, England, and Saint George!</q> - Henry V, William Shakespeare
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -240,6 +247,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     DMJSW DAGDB NQQNF RXMFP JXUJF WJ
                 </pre>
             </statement>
+            <hint>
+                <p>
+                    <ul>
+                        <li>This is a quote by the same author as the previous cipher.</li>
+                        <li>The most common letters in the cipher text are <c>J</c>, <c>M</c>, and <c>X</c>.</li>
+                    </ul>
+                </p>
+            </hint>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>We few, we happy few, we band of brothers; For he to-day that sheds his blood with me Shall be my brother; be he ne'er so vile, This day shall gentle his condition: And gentlemen in England now a-bed Shall think themselves accursed they were not here, And hold their manhoods cheap whiles any speaks That fought with us upon Saint Crispin's day.</q> - Henry V, by William Shakespeare
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <p>
             Each of the previous messages used a simple shift cipher of which, in English, there are only twenty five (twenty six if you allow a shift of 0).  However if we look at all the possible ways that we can rearrange twenty six letters we really have a lot more options.
@@ -324,9 +346,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </pre>
                 <xi:include href="table_code/mono_key_table.ptx"/>
             </statement>
+            <hint>
+                <p>
+                    <ul>
+                        <li>What letters are on their own in the cipher?  Which letters can be on their own in plain English?</li>
+                        <li>The cipher letter <c>A</c> is most common, what does that tell you? Likewise, <c>S</c> is second most common so what might that mean?</li>
+                        <li>The word <c>QAA</c> appears twice on its own and once as the end of another word, what three letter plaintext words might look like this?</li>
+                        <li>After you have spent some time looking at the message and trying to identify some of the ciphertext start to fill in the copy of substitution table and see if you notice any patterns.</li>
+                    </ul>
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <q>Before you begin a thing, remind yourself that difficulties and delays quite impossible to foresee are ahead. If you could see them clearly, naturally you could do a great deal to get rid of them but you can't. You can only see one thing clearly and that is your goal. Form a mental vision of that and cling to it through thick and thin.'' - Kathleen Norris</q>
+                </p>
+            </answer>
         <!-- ``Before you begin a thing, remind yourself that difficulties and delays quite impossible to foresee are ahead. If you could see them clearly, naturally you could do a great deal to get rid of them but you can't. You can only see one thing clearly and that is your goal. Form a mental vision of that and cling to it through thick and thin.'' - Kathleen Norris
 
-        This particular passage was enciphered using what is called a keyword cipher.  Try lining up the plain text and cipher text alphabets to see how this works. -->
+        This particular passage was enciphered using what is called a keyword cipher, keyword=ZEBRA, key letter=a.  Try lining up the plain text and cipher text alphabets to see how this works. -->
         </exercise>
     </section>
 
@@ -459,6 +496,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <ul>
                         <li>The message is a quote from a famous Arabic poet and mathematician.</li>
                         <li>There is at least one letter substitution which by necessity is always the same.</li>
+                        <li>Each pair or triple of letters represents only a single plaintext letter.</li>
                         <li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
                         <li>As before you will need <xref ref="table_numeric_alpha"/>.</li>
                     </ul>
@@ -513,6 +551,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    ``FN'EN JUU QNJAM CQJC J VRUURXW VXWTNHB KJWPRWP XW
+                    J VRUURXW CHYNFARCNAB FRUU NENWCDJUUH ANYAXMDLN
+                    CQN NWCRAN FXATB XO BQJTNBYNJAN. WXF, CQJWTB CX
+                    CQN RWCNAWNC, FN TWXF CQRB RB WXC CADN.'' -
+                    YAXONBBXA AXKNAC BRUNWBTH
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -523,13 +570,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </p>
                 <blockquote>
                     <p>
-                        zoologist 
+                        zoologist
                     </p>
                 </blockquote>
                 <p>
                     Did you run into any particular problem enciphering this message?  Is there only one unique way to do it?
                 </p>
             </statement>
+            <answer>
+                <p>
+                    There are in fact multiple answers to this, one of them would be:
+                </p>
+                <pre>
+                    STUVVWXYZ TRJ ST SN U LC\E ME VS VX
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -565,6 +620,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    NRHGZPVH ZIV Z KZIG LU YVRMT SFNZM. ZKKIVXRZGV
+                    BLFI NRHGZPVH ULI DSZG GSVB ZIV: KIVXRLFH ORUV
+                    OVHHLMH GSZG XZM LMOB YV OVZIMVW GSV SZIW DZB.
+                    FMOVHH RG?H Z UZGZO NRHGZPV, DSRXS, ZG OVZHG,
+                    LGSVIH XZM OVZIM UILN. - ZO UIZMPVM, LS, GSV
+                    GSRMTH R PMLD, 2002
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -584,6 +649,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     BICOS XPOVN
                 </pre>
             </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.</q> - Jerry Seinfeld
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -603,6 +675,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     TKSSN SGDBN LLTMH SXZKA DQSDH MRSDH M
                 </pre>
             </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.</q> - Albert Einstein
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -622,6 +701,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     MHRYR ORGBZ MBLMV XLFOW SZEVO VVRZX LXXZ
                 </pre>
             </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.</q> - Lee Iacocca
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -689,6 +775,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     RGY
                 </pre>
             </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.</q> - St. Augustine
+                    </p>
+                </blockquote>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -703,6 +796,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    MPKRGOPL AHRM GHP ZHFR NKHF TDGGDGO. VHQK
+                    MPKQOOERM ARSREHI VHQK MPKRGOPLM. TLRG VHQ OH
+                    PLKHQOL LXKAMLDIM XGA ARZDAR GHP PH MQKKRGARK,
+                    PLXP DM MPKRGOPL. - XKGHEA MZLTXKWRGROORK
+                </pre>
+            </answer>
         </exercise>
     </exercises>
 
