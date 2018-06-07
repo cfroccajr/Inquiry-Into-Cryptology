@@ -143,7 +143,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise>
             <statement>
                 <p>
-                    Now take the English text you used in <xref ref="student_english_one"/> and encipher it with a shift cipher.  Now take that ciphertext and analyze it as you did in <xref ref="english_freq_second_look" />.  Again, how did the plot change?  In what ways did the plot not change?
+                    Take the English text you used in <xref ref="student_english_one"/> and encipher it with a shift cipher.  Analyze the ciphertext as you did in <xref ref="english_freq_second_look" />.  How did the plot change?  In what ways did the plot not change?
                 </p>
                  <xi:include href="image_code/freq_axes_image.ptx" />
              </statement>
@@ -164,7 +164,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </pre>
                     <!-- This i a block of relatively normal English text.  Hopefully when you analyze this you will see that even when this is enciphered the letter frequencies stay the same, as long as the cipher is monoalphabetic.  In particular for a shift cipher the letter frequencies even maintain the same relative position to each other, just slid along like the letters; this makes such a cipher very easy to spot and crack. -->
                 <p>
-                    As before, plot the frequencies you found using <xref ref="figure_freq_axes"/>. If you compare the shape of the chart you just made to the chart for normal English which you made previously in <xref ref="english_freq_first_look"/> do you notice any similarities? Can you use this to try and decrypt this message?
+                    Plot the frequencies you found using <xref ref="figure_freq_axes"/>. If you compare the shape of the chart you just made to the chart for normal English which you made previously in <xref ref="english_freq_first_look"/> do you notice any similarities? Can you use this to try and decrypt this message?
                 </p>
             </statement>
         </exercise>
@@ -213,7 +213,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 In 1685 John Falconer<idx>Falconer, John</idx>, who we met briefly in <xref ref="section_ancient_ciphers"/>, wrote the second ever published text in English on the subject of cryptology; it has the rather lengthy title <em>Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering</em>.  Beyond this work little is known about him for certain. A descendant of his writing in the nineteenth century claimed that John was the personal cipher keeper for King James II and followed the king into exile in France where he died.  In slim support of this the book is dedicated to the king and addresses it to King James II's secretary of state.  However, no readily available documented evidence exists to independently corroborate his descendant's claims, and in fact there are some tax records for John and his wife, Mary Dalmahoy, in Edinburgh Scotland, from 1695, over six years after James fled to France. <xref ref="cr_crypt_rocca_falconer"/>
             </p>
             <p>
-                In his text John Falconer presents a wide variety of ciphers and for most of them suggestions for how we might attack them.  In this section we will focus on his suggestions for how we may attack what we now call monoalphabetic substitution ciphers.
+                In his text John Falconer presents a wide variety of ciphers and for most of them suggestions for how we might attack them.  In this section we will focus on his directions for how to break, or attempt to break, what we now call monoalphabetic substitution ciphers.
             </p>
         </introduction>
 
@@ -367,7 +367,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercisegroup>
             <introduction>
                 <p>
-                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you will use the <em>sage cells</em> to examine this text for the following information:
+                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you will use the <em>n-gram counter</em>  and <em>word counter</em> to examine the text for the following information:
                 </p>
             </introduction>
             <exercise xml:id="exercise_freq_count">
@@ -380,7 +380,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        bi-grams and tri-grams frequencies
+                        <term>bi-gram</term> (two letter combination) and <term>tri-gram</term> (three letter combination). <idx>bi-gram</idx><idx>tri-gram</idx> frequencies
                     </p>
                 </statement>
             </exercise>
@@ -406,9 +406,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             A list of frequencies for all the individual letters in the alphabet.
                         </li>
                         <li>
-                            The frequencies for at least the top 25 <term>bi-grams</term> (two letter combinations) and
-                            <term>tri-grams</term> (three letter combinations).
-                            <idx>bi-gram</idx><idx>tri-gram</idx>
+                            The frequencies for at least the top 25 bi-grams and tri-grams.
                         </li>
                         <li>
                             A list of the top 25 most common words.
@@ -442,15 +440,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    of all that is good, sublimity is supreme. succeeding is the coming together of all that is beautiful. furtherance is the agreement of all that is just. perseverance is the foundation of all actions. - lao tzu
+                    <q>of all that is good, sublimity is supreme. succeeding is the coming together of all that is beautiful. furtherance is the agreement of all that is just. perseverance is the foundation of all actions.</q> - lao tzu
                 </p>
             </answer>
             <solution>
                 <p>
-                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common followed by <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c> and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.  Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently with <c>GS</c> is the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, or that <c>O</c> is <c>l</c>.
+                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common, next most common are <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c>, and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.  Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently with <c>GS</c> the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, so that <c>O</c> is <c>l</c>.
                 </p>
                 <p>
-                    At this point we can start writing down the letters we have in the monoalphabetic substitution table.  When you do that you will hopefully notice that the cipher letters are in reverse alphabetic order, so this was likely enciphered with atabash which we learned about in <xref ref="atabash_intro" />.
+                    At this point we can start writing down the letters we have in the monoalphabetic substitution table (<xref ref="blank_key_table" />).  When you do that you will hopefully notice that the cipher letters are in reverse alphabetic order, so this was likely enciphered with atabash which we learned about in <xref ref="atabash_intro" />.
                 </p>
             </solution>
         </exercise>
@@ -483,22 +481,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    Shift <c>a</c> to <c>N</c>
-                </p>
-                <p>
-                    <q>
-                            far better is it to dare mighty things, to win
-                        glorious triumphs,  even though checkered by
-                        failure ... than to rank with those poor  spirits
-                        who neither enjoy nor suffer much, because they
-                        live in a  gray twilight that knows not victory
-                        nor defeat. - theodore  roosevelt
-                    </q>
+                    <q> far better is it to dare mighty things, to win
+                    glorious triumphs,  even though checkered by
+                    failure ... than to rank with those poor  spirits
+                    who neither enjoy nor suffer much, because they
+                    live in a  gray twilight that knows not victory
+                    nor defeat.</q> - theodore  roosevelt
                 </p>
             </answer>
             <solution>
                 <p>
-                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.  Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.  When we start writing down the ciphertext we have worked out under the plaintext alphabet we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct.
+                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.  Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.  When we start writing down the ciphertext we have worked out under the plaintext alphabet (use <xref ref="blank_key_table" />) we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct and that <c>a</c> was shifted to <c>N</c>.
                 </p>
             </solution>
         </exercise>
@@ -508,33 +501,33 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
                 </p>
                 <pre>
-                    WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR 
+                    WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR
 
-                    PSIEL DIQJF VDICS MPJHF LGJOT KDQQJ PTTKL CPSIR TKDIC DQTJH 
+                    PSIEL DIQJF VDICS MPJHF LGJOT KDQQJ PTTKL CPSIR TKDIC DQTJH
 
-                    LSHFL TJPLS QJIHS EBWSP RTKST DQSVL PYUQL OUFSE EJGMF DQKGL 
+                    LSHFL TJPLS QJIHS EBWSP RTKST DQSVL PYUQL OUFSE EJGMF DQKGL
 
-                    ITSIR SVLPY LSQYJ ILHUT MLJMF LRJIJ TMPSE TDELD TGUEK DITKL 
+                    ITSIR SVLPY LSQYJ ILHUT MLJMF LRJIJ TMPSE TDELD TGUEK DITKL
 
-                    LVLPY RSYSO OSDPQ JOFDO LDTDQ GJPLU QLOUF TJPLS QJIOJ PWSPR 
+                    LVLPY RSYSO OSDPQ JOFDO LDTDQ GJPLU QLOUF TJPLS QJIOJ PWSPR
 
-                    SIRQJ TKLJT KLPEJ GLQTJ HLILC FLETL RTKLP LSPLO DOTYW KJESI 
+                    SIRQJ TKLJT KLPEJ GLQTJ HLILC FLETL RTKLP LSPLO DOTYW KJESI
 
-                    PLSQJ IQYIT KLTDE SFFYO JPJIL WKJES IPLSQ JISIS FYTDE SFFYG 
+                    PLSQJ IQYIT KLTDE SFFYO JPJIL WKJES IPLSQ JISIS FYTDE SFFYG
 
-                    JQTML JMFLD OYJUR LQEPD HLSTP SDIJO LVLIT QTJTK LGWDF FTLFF 
+                    JQTML JMFLD OYJUR LQEPD HLSTP SDIJO LVLIT QTJTK LGWDF FTLFF
 
-                    YJUWK STTKL PLQUF TWJUF RHLTK LYESI MUTTK JQLLV LITQT JCLTK 
+                    YJUWK STTKL PLQUF TWJUF RHLTK LYESI MUTTK JQLLV LITQT JCLTK
 
-                    LPDIT KLDPG DIRQS IRSPC ULOPJ GTKLG TKSTQ JGLTK DICWD FFEJG 
+                    LPDIT KLDPG DIRQS IRSPC ULOPJ GTKLG TKSTQ JGLTK DICWD FFEJG
 
-                    LTJMS QQTKL PLSPL OLWML JMFLK JWLVL PWKJD OYJUT JFRTK LGSPL 
+                    LTJMS QQTKL PLSPL OLWML JMFLK JWLVL PWKJD OYJUT JFRTK LGSPL
 
-                    QUFTW JUFRH LSHFL TJLVJ FVLOP JGTKL DPJWI DIILP EJIQE DJUQI 
+                    QUFTW JUFRH LSHFL TJLVJ FVLOP JGTKL DPJWI DIILP EJIQE DJUQI
 
-                    LQQWK STTKL QTLMQ WLPLW KDEKF LRUMT JTKST PLQUF TTKDQ MJWLP 
+                    LQQWK STTKL QTLMQ WLPLW KDEKF LRUMT JTKST PLQUF TTKDQ MJWLP
 
-                    DQWKS TDGLS IWKLI DTSFB JOPLS QJIDI CHSEB WSPRJ PSISF YTDES 
+                    DQWKS TDGLS IWKLI DTSFB JOPLS QJIDI CHSEB WSPRJ PSISF YTDES
 
                     FFYSQ TURYD IQESP FLTQK LPFJE BKJFG LQ
                 </pre>
@@ -549,17 +542,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </hint>
             <answer>
                 <p>
-                    KEYWORD: SHERLOCKED, key letter: a
-                </p>
-                <p>
-                    <q>
-                        ... what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically. Study in Scarlet, Sherlock Holmes
-                    </q>
+                    <q>... what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically.</q> - Sherlock Holmes in Study in Scarlet by Sir Arthur Conan Doyle
                 </p>
             </answer>
             <solution>
                 <p>
-                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.  Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet and look for patterns.  Continuing in this way we can finally arrive at the solution.
+                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.  Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet (<xref ref="blank_key_table" />) and look for patterns.  Continuing in this way we can finally arrive at the solution and the key is KEYWORD: SHERLOCKED, key letter: a.
                 </p>
             </solution>
         </exercise>
@@ -568,29 +556,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>Consider the following comment from John Falconer:</p>
                 <blockquote>
                     <p>
-                        I have not meddled here with any language but English; ... However, by a little practice of 
-                        decyphering in one language, you may decipher an epistle in any, even tho the plain speech 
-                        itself be a mystery to you, if you first observe the frequency of the letters, the terminal 
-                        letters, what letters can be doubled in the beginning, middle, and end of words; and such 
-                        general rules.<xref ref="cr_crypt_falconer" detail="p. 12" />
+                        I have not meddled here with any language but English; ... However, by a little practice of decyphering in one language, you may decipher an epistle in any, even tho the plain speech itself be a mystery to you, if you first observe the frequency of the letters, the terminal letters, what letters can be doubled in the beginning, middle, and end of words; and such general rules.<xref ref="cr_crypt_falconer" detail="p. 12" />
                     </p>
                 </blockquote>
                 <p>
-                    Find a large piece of typical text written in a language other than English.  Perform an 
-                    analysis of this text and then create a cheat sheet just like you did for English. 
-                    Finally, encipher a message written in this new language which 
-                    your classmates can try to decipher using your cheat sheet.
+                    Find a large piece of typical text written in a language other than English.  Perform an analysis of this text and then create a cheat sheet just like you did for English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />). Finally, encipher a message written in this new language which your classmates can try to decipher using your cheat sheet.
                 </p>
             </statement>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    A lot of the general advice that Falconer gave us was good, but his specifics didn't match 
-                    what we expect to see when we read a more modern text.  Find a typical piece of text or 
-                    literature from seventeenth century England (or better yet Scotland) and analyze this text 
-                    to create a cheat sheet like the one you did for modern English.  How do your findings match 
-                    what Falconer told us to expect?
+                    A lot of the general advice that Falconer gave us was good, but his specifics didn't match what we expect to see when we read a more modern text.  Find a typical piece of text or literature from seventeenth century England (or better yet Scotland) and analyze this text to create a cheat sheet like the one you did for modern English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />).  How do your findings match what Falconer told us to expect?
                 </p>
             </statement>
         </exercise>

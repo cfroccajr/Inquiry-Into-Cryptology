@@ -60,4 +60,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     </section>
 
+    <section>
+        <title>Chapter 3 Quotes:</title>
+        <p><alert>Alberti's Polyalphabetic Cipher:</alert></p>
+        <xi:include href="quote_code/alberti_polyalpha.ptx" />
+    </section>
+
+    <section>
+        <title>Chapter 6 Quotes:</title>
+        <p><alert>Hill's Cryptography in an Algebraic Alphabet:</alert></p>
+        <xi:include href="quote_code/hill_crypto_alpha.ptx" />
+    </section>
+
 </appendix>

@@ -29,1802 +29,1803 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 <chapter xml:id="MathematicalCrypto" xmlns:xi="http://www.w3.org/2001/XInclude">
-	<title> Mathematics to the Rescue </title>
-	<objectives>
-		<ul>
-			<li>Modular Arithmetic</li>
-			<li>Affine</li>
-			<li>Matrices</li>
-			<li> Hill? </li>
-		</ul>
-	</objectives>
+    <title> Mathematics to the Rescue </title>
+    <objectives>
+        <ul>
+            <li>Modular Arithmetic</li>
+            <li>Affine</li>
+            <li>Matrices</li>
+            <li> Hill? </li>
+        </ul>
+    </objectives>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-	Affine Materials
+    Affine Materials
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
-	<section xml:id="affine_section">
-		<title>Affine Ciphers</title>
-		<objectives>
-			<ul>
-				<li>
-					Biography of Lester Hill
-				</li>
-				<li>
-					Modulus
-				</li>
-				<li>
-					Affine Cipher
-				</li>
-			</ul>
-		</objectives>
+    <section xml:id="affine_section">
+        <title>Affine Ciphers</title>
+        <objectives>
+            <ul>
+                <li>
+                    Biography of Lester Hill
+                </li>
+                <li>
+                    Modulus
+                </li>
+                <li>
+                    Affine Cipher
+                </li>
+            </ul>
+        </objectives>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-		<subsection xml:id="hill_biography">
-			<title>Lester S. Hill</title>
-			<p> Insert bio here ...</p>
+        <subsection xml:id="hill_biography">
+            <title>Lester S. Hill</title>
+            <p> Insert bio here ...</p>
 
-		</subsection>
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<subsection xml:id="moduli">
-			<title>Moduli</title>
-			<p>
-				The cipher we will focus on here, Hill's Cipher, is an early example of a cipher based purely in the mathematics of 
-				number theory and algebra; the areas of mathematics which now dominate all of modern 
-				cryptography.  Number theory has a long and rich history with many fundamental results dating all the way back to Euclid in 300 BCE, and with results found across the globe in different cultures.  Number theory as we understand and use it today is due in large part to Carl Friedrich Gauss and his text 
-				<em>Disquisitiones Arithmeticae</em> published in 1801 (when Gauss was 24).  Algebra (or more properly linear and abstract algebra) as it is going to be used here is much younger tracing its roots back only a couple hundred years to the early nineteenth century; here too much is owed to Gauss.
-			</p>
-			<p> 
-				As with previous topics we will begin by looking at an original source text and trying to understand what it is saying.  However, given the importance of this material to the rest of what we will be discussing in subsequent chapters, we will look at the material from a more modern perspective.
-			</p>
-			<assemblage>
-				<title>Cryptography in an Algebraic Alphabet</title>
-				<p>
-					By Lester S. Hill, Hunter College
-				</p>
-				<p>
-					1. <em>The Bi-Operational Alphabet</em>
-				</p>
-				<p>
-					Let <m>a_0,\ a_1,\ \ldots,\ a_{25}</m> denote any permutation of the letters of the English alphabet; and let us associate the letter <m>a_i</m> with the integer <m>i</m>.  We define operations of 
-					<em>modular addition</em> and <em>multiplication</em> (modulo 26) over the alphabet as follows: 
-					<md>
-						<mrow>a_i+a_j=a_r,</mrow>
-						<mrow>a_i\, a_j=a_t,</mrow>
-					</md>
-					where <m>r</m> is the remainder obtained upon dividing the integer <m>i+j</m> by the integer 26 and <m>t</m> is the reaminder obtained on dividing <m>ij</m> by 26. The integers <m>i</m> and <m>j</m> may be the same or different.
-				</p>
-				<p>
-					It is easy to verify the following salient propositions concerning the bi-operational alphabet thus set up:
-				</p>
-				<p>
-					(1) If <m>\alpha,\ \beta,\ \gamma</m> are letters of the alphabet, 
-					<ul>
-						<li>
-							<m>\alpha+\beta=\beta+\alpha</m> and <m>\alpha\beta=\beta\alpha</m> [commutative law]
-						</li>
-						<li>
-							<m>\alpha+(\beta+\gamma)=(\alpha+\beta)+\gamma</m> 
-							and <m>\alpha(\beta\gamma)=(\alpha\beta)\gamma</m> [associative law]
-						</li>
-						<li>
-							<m>\alpha(\beta+\gamma)=\alpha\beta+\alpha\gamma</m> [distributive law]
-						</li>
-					</ul>
-				</p>
-				<p>
-					(2) There is exactly one <q>zero</q> letter, namely <m>a_0</m>, characterized by the fact that the equation 
-					<m>\alpha+a_0=\alpha</m> is satisfied whatever the letter denoted by <m>alpha</m>.
-				</p>
-				<p>
-					(3) Given any letter <m>\alpha</m>, we can find exactly one letter <m>\beta</m>, dependent on <m>\alpha</m>, such that <m>\alpha+\beta=a_0</m>. We call <m>\beta</m> the <q>negative</q> of <m>\alpha</m>, and we write: 
-					<m>\beta=-\alpha</m>.
-				</p>
-				<p>
-					(4) Given any letters <m>\alpha,\ \beta</m> we can find exactly on letter <m>\gamma</m> such that 
-					<m>\alpha+\gamma=\beta</m> [i.e. <m>\gamma=\beta-\alpha</m> is unique].
-				</p>
-				<p>
-					(5) Distinguishing the twelve letters, 
-					<md>
-						<mrow>
-							a_1,\ a_3,\ a_5,\ a_7,\ a_9,\ a_{11},\ a_{15},\ a_{17},\ a_{19},\ a_{21},\ a_{23},\ a_{25},
-						</mrow> 
-					</md>
-					with subscripts prime to 26, as <q>primary</q> letters, we make the assertion, easily proved: If <m>\alpha</m> is any primary letter and <m>\beta</m> is any letter, there is exactly one letter <m>\gamma</m> for which 
-					<m>\alpha\gamma=\beta</m>.
-				</p>
-				<p>
-					(6) In any algebraic sum of terms, we may clearly omit terms of which the letter <m>a_0</m> is a factor; and we 
-					need not write the letter <m>a_1</m> explicitly as a factor in any product.
-				</p>
-				<p>
-					2. An Illustration
-				</p>
-				<p>
-					Let the letters of the alphabet be associated with the integers as follows:
-				</p>
-				<p xml:id="hill_alpha_numeric_corespondence">
-				<sidebyside width="30%" margins="auto">
-						<tabular halign="right">
-							<row> 
-								<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
-								<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
-								<cell>k</cell><cell>l</cell><cell>m</cell>
-
-							</row>
-							<row> 
-								<cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
-								<cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
-								<cell>0</cell><cell>16</cell><cell>13</cell>
-							</row>
-							<row> 
-								<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
-								<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
-								<cell>x</cell><cell>y</cell><cell>z</cell>
-							</row>
-							<row> 
-								<cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
-								<cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
-								<cell>22</cell><cell>11</cell><cell>9</cell>
-							</row>
-						</tabular>
-				</sidebyside>
-				</p>
-				<p>
-					or, in another convenient formulation:
-				</p>
-				<sidebyside width="30%" margins="auto">
-						<tabular halign="right">
-							<row> 
-								<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
-								<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
-								<cell>10</cell><cell>11</cell><cell>12</cell>
-
-							</row>
-							<row> 
-								<cell>k</cell><cell>p</cell><cell>c</cell><cell>o</cell><cell>h</cell>
-								<cell>a</cell><cell>r</cell><cell>n</cell><cell>g</cell><cell>z</cell>
-								<cell>e</cell><cell>y</cell><cell>s</cell>
-							</row>
-							<row> 
-								<cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell><cell>17</cell>
-								<cell>18</cell><cell>19</cell><cell>20</cell><cell>21</cell><cell>22</cell>
-								<cell>23</cell><cell>24</cell><cell>25</cell>
-							</row>
-							<row> 
-								<cell>m</cell><cell>w</cell><cell>f</cell><cell>l</cell><cell>v</cell>
-								<cell>i</cell><cell>q</cell><cell>d</cell><cell>u</cell><cell>x</cell>
-								<cell>b</cell><cell>t</cell><cell>j</cell>
-							</row>
-						</tabular>
-				</sidebyside>
-				<p>
-					It will be seen that
-					<md>
-						<mrow>c+x=t,\ j+w=m,\ f+y=k,\ -f=y,\ -y=f,\ etc.</mrow>
-						<mrow>an=z,\ hm=k,\ cr=s,\ etc.</mrow>
-					</md>
-				</p>
-				<p>
-					The zero letter is <m>k</m>, and the unit letter is <m>p</m>.  The primary letters are: 
-					<m>a</m> <m>b</m> <m>f</m> <m>j</m> <m>n</m> <m>o</m> <m>p</m> <m>q</m> <m>u</m> <m>v</m> <m>y</m> <m>z</m>.
-				</p>
-				<p>
-					Since this particular alphabet will be used several times, in illustration of further developments, we append the following table of negatives and reciprocals:
-				</p>
-				<sidebyside width="30%" margins="auto">
-					<tabular halign="left">
-						<row>
-							<cell>Letter</cell><cell>:</cell>
-							<cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
-							<cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
-							<cell>k</cell><cell>l</cell><cell>m</cell>							
-							<cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
-							<cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
-							<cell>x</cell><cell>y</cell><cell>z</cell>
-						</row>
-						<row>
-							<cell>Neg.</cell><cell>:</cell>
-							<cell>u</cell><cell>o</cell><cell>t</cell><cell>r</cell><cell>l</cell>
-							<cell>y</cell><cell>i</cell><cell>x</cell><cell>g</cell><cell>p</cell>
-							<cell>k</cell><cell>e</cell><cell>m</cell>							
-							<cell>q</cell><cell>b</cell><cell>j</cell><cell>n</cell><cell>d</cell>
-							<cell>w</cell><cell>c</cell><cell>a</cell><cell>z</cell><cell>s</cell>
-							<cell>h</cell><cell>f</cell><cell>v</cell>
-						</row>
-						<row>
-							<cell>Rec.</cell><cell>:</cell>
-							<cell>u</cell><cell>v</cell><cell></cell><cell></cell><cell></cell>
-							<cell>n</cell><cell></cell><cell></cell><cell></cell><cell>j</cell>
-							<cell></cell><cell></cell><cell></cell>							
-							<cell>f</cell><cell>z</cell><cell>p</cell><cell>y</cell><cell></cell>
-							<cell></cell><cell></cell><cell>a</cell><cell>b</cell><cell></cell>
-							<cell></cell><cell>q</cell><cell>o</cell>
-						</row>
-					</tabular>
-				</sidebyside>
-				<p>
-					The solution to the equation <m>z+\alpha=t</m> is <m>\alpha=t-z</m> or 
-					<m>\alpha=t+(-z)=t+v=f</m>.
-				</p>
-				<p>
-					The system of linear equations: <m>o\, \alpha+u\, \beta = x</m>, 
-					<m>n\, \alpha+i\, \beta = q</m> has solution <m>\alpha = u</m>, <m>\beta=o</m>, which may be 
-					obtained by the familiar method of elimination or by formula. 
-					<xref ref="cr_crypt_hill_1929" detail="pp.306-308" />
-				</p>
-			</assemblage>
-			<p>
-				Reading Questions:
-				<ul>
-					<li>
-						Hill starts by describing how we will add and multiply with the alphabet, looking at his 
-						description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
-						(see <xref ref="hill_alpha_numeric_corespondence">Hill's Correspondence</xref>) come 
-						out to be <m>m</m> which is 13?
-					</li>
-					<li>
-						In his illustration he also says <m>hm</m> which should be 4 times 13, or 52, is 
-						<m>k</m> which is 0, why is this the case?
-					</li>
-					<li>
-						Along the same lines, why does <m>f+y</m> equal <m>k</m> and why does <m>an</m> (<m>a</m> times <m>n</m>) 
-						equal <m>z</m>?
-					</li>
-					<li>
-						Thinking about your previous answers, what are the values of the following: <m>j+z</m>, 
-						<m>nf</m>, <m>au+j</m>, and <m>bv+jw</m>.
-					</li>
-				</ul>
-			</p>
-			<p>
-				In this section of text Hill has introduced us to the idea of modular arithmetic and modular equivalence, in 
-				particular the idea of equivalence modulo 26.  This is a concept which will be central to most 
-				everything else we do so we need to spend a little more time trying to precisely understand modular 
-				equivalence.
-			</p>			
-			<definition xml:id="def_modular_equivalence">
-				<title>Modular Equivalence</title>
-				<statement>
-					<p>
-						If <m>n</m> is a positive integer then we say that two other integers <m>a</m> and <m>b</m> 
-						are <term>equivalent modulo n</term><idx>modular equivalence</idx> if and 
-						only if they have the same remainder when divided by <m>n</m>, or equivalently if and only if 
-						<m>a-b</m> is divisible by <m>n</m>, when this is the case we write 
-						<md>
-							<mrow>a\equiv b \pmod{n}.</mrow>
-						</md>
-						The number <m>n</m> is called the <em>modulus</em>.
-					</p>
-				</statement>
-			</definition>
-			<example xml:id="mod_14_example">
-				<p>
-					Suppose that <m>n=14</m>, then <m>36\equiv 8\pmod{n}</m> because <m>36=2\cdot 14 + 8</m> and 
-					<m>8=0\cdot (14) + 8</m> so we get the same remainder when we divide by <m>n=14</m>.  Alternately,
-					we can observe that <m>36-8=28</m> and <m>28=2\cdot(14)</m> is divisible by <m>n=14</m>.
-				</p>
-				<p>
-					Using the same value for <m>n</m> we get that <m>3\cdot 5\equiv 1\pmod{n}</m> because 
-					<m>15=1\cdot (14) +1</m>, so the remainder when <m>3\cdot 5</m> is divided by <m>n</m> is 1.
-				</p>
-				<p>
-					Test your understanding by filling in the rest of this multiplication table:
-				</p>
-				<table xml:id="mod_fourteen_table">
-					<caption>Multiplication Modulo 14</caption>
-					<tabular halign="right">
-						<row bottom="minor">
-							<cell right="minor" ><m>\times_{14}</m></cell>
-							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
-							<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
-							<cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
-						</row>
-						<row>
-							<cell right="minor" >0</cell>
-							<cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
-							<cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
-							<cell>0</cell><cell>0</cell>
-						</row>
-						<row>
-							<cell right="minor" >1</cell>
-							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
-							<cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
-							<cell>12</cell><cell>13</cell>
-						</row>
-						<row>
-							<cell right="minor" >2</cell>
-							<cell>0</cell><cell>2</cell><cell>4</cell><cell>6</cell><cell>8</cell><cell>10</cell>
-							<cell>12</cell><cell>0</cell><cell>2</cell><cell>4</cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >3</cell>
-							<cell>0</cell><cell>3</cell><cell>6</cell><cell>9</cell><cell>12</cell><cell>1</cell>
-							<cell>4</cell><cell>7</cell><cell>10</cell><cell>13</cell><cell>2</cell><cell>5</cell>
-							<cell>8</cell><cell>11</cell>
-						</row>
-						<row>
-							<cell right="minor" >4</cell>
-							<cell>0</cell><cell>4</cell><cell>8</cell><cell>12</cell><cell></cell><cell>6</cell>
-							<cell></cell><cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >5</cell>
-							<cell>0</cell><cell>5</cell><cell>10</cell><cell>1</cell><cell>6</cell><cell>11</cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >6</cell>
-							<cell>0</cell><cell>6</cell><cell>12</cell><cell>4</cell><cell>10</cell><cell>0</cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >7</cell>
-							<cell>0</cell><cell>7</cell><cell>0</cell><cell>7</cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >8</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >9</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >10</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >11</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >12</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >13</cell>
-							<cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-					</tabular>
-				</table>
-				<p>
-					<ul>
-						<li>
-							What is strange or different about the row for 7?  Why do you think all the remainders 
-							come out this way?
-						</li>
-						<li>
-							What is the difference between the even and odd rows (excluding row 7)?
-						</li>
-					</ul>
-				</p>
-				<p>
-					Finally, fill in this addition table for addition modulo 14.
-				</p>
-				<table xml:id="mod_fourteen_table_addition">
-					<caption>Addition Modulo 14</caption>
-					<tabular halign="right">
-						<row bottom="minor">
-							<cell right="minor" ><m>+_{14}</m></cell>
-							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
-							<cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
-							<cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
-						</row>
-						<row>
-							<cell right="minor" >0</cell>
-							<cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
-							<cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
-							<cell>12</cell><cell>13</cell>
-						</row>
-						<row>
-							<cell right="minor" >1</cell>
-							<cell>1</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >2</cell>
-							<cell>2</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >3</cell>
-							<cell>3</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >4</cell>
-							<cell>4</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >5</cell>
-							<cell>5</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >6</cell>
-							<cell>6</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >7</cell>
-							<cell>7</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >8</cell>
-							<cell>8</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >9</cell>
-							<cell>9</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >10</cell>
-							<cell>10</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >11</cell>
-							<cell>11</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >12</cell>
-							<cell>12</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-						<row>
-							<cell right="minor" >13</cell>
-							<cell>13</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
-							<cell></cell>
-						</row>
-					</tabular>
-				</table>				
-			</example>
-			<definition>
-				<title>Additive Identity</title><idx>additive identity</idx>
-				<statement>
-					<p>
-						We call 0 the <em>additive identity</em> because for all <m>a</m> and all possible moduli 
-						<m>n</m> we get <me>a+0\equiv a\pmod{n}</me>.
-					</p>
-				</statement>
-			</definition>
-			<definition>
-				<title>Additive Inverse</title><idx>additive inverse</idx>
-				<statement>
-					<p>
-						We say that <m>a</m> and <m>b</m> are <em>additive inverses</em> modulo <m>n</m> 
-						if <me>a+ b\equiv 0 \pmod{n},</me> and we write <m>b=-a</m>.
-					</p>
-				</statement>
-			</definition>
-			<definition>
-				<title>Multiplicative Identity</title><idx>multiplicative identity</idx>
-				<statement>
-					<p>
-						We call 1 the <em>multiplicative identity</em> because for all <m>a</m> and all possible moduli 
-						<m>n</m> we get <me>a\cdot 1\equiv a\pmod{n}</me>.
-					</p>
-				</statement>
-			</definition>
-			<definition>
-				<title>Multiplicative Inverse</title><idx>multiplicative inverse</idx>
-				<statement>
-					<p>
-						We say that <m>a</m> and <m>b</m> are <em>multiplicative inverses</em> modulo <m>n</m> 
-						if <me>a\cdot b\equiv 1 \pmod{n},</me> and we write <m>b=a^{-1}</m>.
-					</p>
-				</statement>
-			</definition>
-			<exercise>
-				<statement>
-					<p>
-						Look back at <xref ref="mod_14_example" text="type-global"/> and write down the pairs of 
-						additive and multiplicative inverses.  Do all the numbers modulo 14 have additive inverses?  
-						Do all of them have multiplicative inverses?
-					</p>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Write down another multiplication and addition table as  you did in 
-						<xref ref="mod_14_example" text="type-global"/> but with a modulus of 
-						<m>n=10</m>, so when you multiply and add you will always divide 
-						by 10 afterwards and write down the remainder.  After you write down 
-						the tables write down the pairs of multiplicative and additive inverses.  
-						Do all the numbers modulo 10 have additive inverses?  Do all of them have 
-						multiplicative inverses?
-					</p>
-				</statement>
-			</exercise>
-			<p>
-				Reflection Questions: Look back at what Hill had to say and at the examples you have worked through 
-				when you used moduli of <m>n=14</m> and <m>n=10</m> as you think about the following questions.
-			</p>
-			<p>
-				<ul>
-					<li>
-						No matter which modulus you use, do all the numbers have additive inverses, i.e. numbers you can 
-						add to them in order to get 0?
-					</li>
-					<li>
-						No matter which modulus you use, do all the numbers have multiplicative inverses, i.e. numbers you 
-						can multiply them by in order to get 1?
-					</li>
-					<li>
-						If you look at the numbers which do have multiplicative inverses how do they 
-						relate to those which Hill described as prime to 26?
-					</li>
-				</ul>
-			</p>
-			<definition>
-				<title>Relatively Prime</title><idx>relatively prime</idx>
-				<statement>
-					<p>
-						We say that two integers are <em>relatively prime</em> if the largest positive 
-						integers which divided them both, their <em>greatest common divisor</em>, is 1.  
-						For example the greatest common divisor of 7 and 36 is 1 so they are relatively prime, 
-						however the greatest common divisor of 30 and 36 is 6 so they are not relatively prime.
-					</p>
-				</statement>
-			</definition>
-			<exercise>
-				<statement>
-					<p>
-						Which numbers, other than 7, that are less than 36 are <em>relatively prime</em> to 36?
-					</p>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Which numbers less than 14 are <em>relatively prime</em> to 14?  How do these compare to the 
-						list of numbers which have <em>multiplicative inverses</em>?
-					</p>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Which numbers less than 10 are <em>relatively prime</em> to 10?  How do these compare to the 
-						list of numbers which have <em>multiplicative inverses</em>?
-					</p>
-				</statement>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Which numbers less than 26 are <em>relatively prime</em> to 26?  How do these compare to the 
-						list of numbers which have <em>multiplicative inverses</em>? (You will want to use <xref ref="appendix_figure_mod26" text="type-global" />.)
-					</p>
-				</statement>
-			</exercise>
-		</subsection>
+        </subsection>
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-		<subsection xml:id="affine_cipher">
-			<title>Affine Cipher</title>
+        <subsection xml:id="moduli">
+            <title>Moduli</title>
+            <p>
+                The cipher we will focus on here, Hill's Cipher, is an early example of a cipher based purely in the mathematics of 
+                number theory and algebra; the areas of mathematics which now dominate all of modern 
+                cryptography.  Number theory has a long and rich history with many fundamental results dating all the way back to Euclid in 300 BCE, and with results found across the globe in different cultures.  Number theory as we understand and use it today is due in large part to Carl Friedrich Gauss and his text 
+                <em>Disquisitiones Arithmeticae</em> published in 1801 (when Gauss was 24).  Algebra (or more properly linear and abstract algebra) as it is going to be used here is much younger tracing its roots back only a couple hundred years to the early nineteenth century; here too much is owed to Gauss.
+            </p>
+            <p> 
+                As with previous topics we will begin by looking at an original source text and trying to understand what it is saying.  However, given the importance of this material to the rest of what we will be discussing in subsequent chapters, we will look at the material from a more modern perspective.
+            </p>
+            <xi:include href="quote_code/hill_crypto_alpha.ptx" />
+<!--             <assemblage>
+                <title>Cryptography in an Algebraic Alphabet</title>
+                <p>
+                    By Lester S. Hill, Hunter College
+                </p>
+                <p>
+                    1. <em>The Bi-Operational Alphabet</em>
+                </p>
+                <p>
+                    Let <m>a_0,\ a_1,\ \ldots,\ a_{25}</m> denote any permutation of the letters of the English alphabet; and let us associate the letter <m>a_i</m> with the integer <m>i</m>.  We define operations of 
+                    <em>modular addition</em> and <em>multiplication</em> (modulo 26) over the alphabet as follows: 
+                    <md>
+                        <mrow>a_i+a_j=a_r,</mrow>
+                        <mrow>a_i\, a_j=a_t,</mrow>
+                    </md>
+                    where <m>r</m> is the remainder obtained upon dividing the integer <m>i+j</m> by the integer 26 and <m>t</m> is the reaminder obtained on dividing <m>ij</m> by 26. The integers <m>i</m> and <m>j</m> may be the same or different.
+                </p>
+                <p>
+                    It is easy to verify the following salient propositions concerning the bi-operational alphabet thus set up:
+                </p>
+                <p>
+                    (1) If <m>\alpha,\ \beta,\ \gamma</m> are letters of the alphabet, 
+                    <ul>
+                        <li>
+                            <m>\alpha+\beta=\beta+\alpha</m> and <m>\alpha\beta=\beta\alpha</m> [commutative law]
+                        </li>
+                        <li>
+                            <m>\alpha+(\beta+\gamma)=(\alpha+\beta)+\gamma</m> 
+                            and <m>\alpha(\beta\gamma)=(\alpha\beta)\gamma</m> [associative law]
+                        </li>
+                        <li>
+                            <m>\alpha(\beta+\gamma)=\alpha\beta+\alpha\gamma</m> [distributive law]
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    (2) There is exactly one <q>zero</q> letter, namely <m>a_0</m>, characterized by the fact that the equation 
+                    <m>\alpha+a_0=\alpha</m> is satisfied whatever the letter denoted by <m>alpha</m>.
+                </p>
+                <p>
+                    (3) Given any letter <m>\alpha</m>, we can find exactly one letter <m>\beta</m>, dependent on <m>\alpha</m>, such that <m>\alpha+\beta=a_0</m>. We call <m>\beta</m> the <q>negative</q> of <m>\alpha</m>, and we write: 
+                    <m>\beta=-\alpha</m>.
+                </p>
+                <p>
+                    (4) Given any letters <m>\alpha,\ \beta</m> we can find exactly on letter <m>\gamma</m> such that 
+                    <m>\alpha+\gamma=\beta</m> [i.e. <m>\gamma=\beta-\alpha</m> is unique].
+                </p>
+                <p>
+                    (5) Distinguishing the twelve letters, 
+                    <md>
+                        <mrow>
+                            a_1,\ a_3,\ a_5,\ a_7,\ a_9,\ a_{11},\ a_{15},\ a_{17},\ a_{19},\ a_{21},\ a_{23},\ a_{25},
+                        </mrow> 
+                    </md>
+                    with subscripts prime to 26, as <q>primary</q> letters, we make the assertion, easily proved: If <m>\alpha</m> is any primary letter and <m>\beta</m> is any letter, there is exactly one letter <m>\gamma</m> for which 
+                    <m>\alpha\gamma=\beta</m>.
+                </p>
+                <p>
+                    (6) In any algebraic sum of terms, we may clearly omit terms of which the letter <m>a_0</m> is a factor; and we 
+                    need not write the letter <m>a_1</m> explicitly as a factor in any product.
+                </p>
+                <p>
+                    2. An Illustration
+                </p>
+                <p>
+                    Let the letters of the alphabet be associated with the integers as follows:
+                </p>
+                <p xml:id="hill_alpha_numeric_corespondence">
+                <sidebyside width="30%" margins="auto">
+                        <tabular halign="right">
+                            <row> 
+                                <cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+                                <cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+                                <cell>k</cell><cell>l</cell><cell>m</cell>
 
-			<definition xml:id="definition_affine" >
-				<title>Affine Cipher</title><idx>affine cipher</idx>
-				<statement>
-					<p>
-						An <em>affine cipher</em> is a cipher with a two part key, a multiplier <m>m</m> and a shift 
-						<m>s</m> and calculations are carried out using modular arithmetic; typically the modulus is 
-						<m>n=26</m>.  Characters of the plain text are enciphered with the formula
-						<me>CIPHER\,\equiv\, m(plain)+s\pmod{26},</me>
-						and characters of the cipher text are deciphered with the formula
-						<me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
-						or
-						<me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
-						Note that the multiplier <m>m</m> must be relatively prime to the modulus so that it has a 
-						multiplicative inverse.
-					</p>
-				</statement>
-			</definition>
-			<exercise>
-				<statement>
-					<p>
-						Let's encipher the message <q><c>hello world</c></q> with an affine cipher and a key of 
-						<m>m=5</m> and <m>s=16</m>; assume that we match up the alphabet with the integers from 
-						0 to 25 in the usual way so that <c>a</c> is 0, <c>b</c> is 1, <c>c</c> is 2, etc..  In this 
-						way the letter <c>h</c> is replaced by the number 7 and when we encipher it we get
-						<me>5\cdot 7+16\equiv 25\pmod{26}</me> and 25 is <c>Z</c>, so plain <c>h</c> becomes 
-						cipher <c>Z</c>.  Next <c>e</c> is replaced by 4 and we get
-						<me>5\cdot 4+16\equiv 10\pmod{26}</me> and 10 is <c>K</c>, so plain <c>e</c> becomes 
-						cipher <c>K</c>.  The plain <c>l</c> corresponds to 11 and 
-						<me>5\cdot 11+16\equiv 19\pmod{26}</me>, which is <c>T</c>, that is plain <c>l</c> is 
-						replaced by cipher <c>T</c>.  Try to encipher the rest of the message on your own, 
-						you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> to help you 
-						with the multiplication modulo 26.
-					</p>
-				</statement>
-				<answer>
-					<p>
-						<c>ZKTTI WIXTF</c>
-					</p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Now let's decipher the message <c>AJINF CVCSI JCAKU</c> which was enciphered using 
-						an affine cipher and a key of <m>m=11</m> and <m>s=4</m>.  Note that 
-						<m>m^{-1}\equiv 19\pmod{26}</m> and <m>-s\equiv 22\pmod{26}</m>. Take the <c>A</c> and 
-						replace it by 0 and then using the formula above we get
-						<me>19(0+22)\equiv 2\pmod{26}</me> so we replace cipher <c>A</c> with plain text <c>c</c>.  
-						The <c>J</c> is replaced by 9 and 
-						<me>19(9+22)\equiv 17\pmod{26}</me> therefore cipher <c>J</c> becomes plain <c>r</c>.  
-						To use the other formula for deciphering we need <m>m^{-1}s\equiv 2\pmod{26}</m>.  Then 
-						converting the cipher <c>I</c> to 8 we get 
-						<me>19(8)+2\equiv 24\pmod{26}</me> which is plain <c>y</c> or with the next letter <c>N</c> 
-						we get <me>19(13)+2\equiv 15\pmod{26}</me> which is <c>p</c>.  Try to decipher the remaining 
-						characters in the message on your own.
-					</p>
-				</statement>
-				<answer>
-					<p><c>cryptology rocks</c></p>
-				</answer>
-			</exercise>
+                            </row>
+                            <row> 
+                                <cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
+                                <cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
+                                <cell>0</cell><cell>16</cell><cell>13</cell>
+                            </row>
+                            <row> 
+                                <cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+                                <cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+                                <cell>x</cell><cell>y</cell><cell>z</cell>
+                            </row>
+                            <row> 
+                                <cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
+                                <cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
+                                <cell>22</cell><cell>11</cell><cell>9</cell>
+                            </row>
+                        </tabular>
+                </sidebyside>
+                </p>
+                <p>
+                    or, in another convenient formulation:
+                </p>
+                <sidebyside width="30%" margins="auto">
+                        <tabular halign="right">
+                            <row> 
+                                <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                                <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                                <cell>10</cell><cell>11</cell><cell>12</cell>
 
-			<exercise>
-				<statement>
-					<p>
-						Encipher the message <q><c>a fine affine cipher</c></q> using the key  
-						<m>m=17</m> and <m>s=12</m>.
-					</p>
-				</statement>
-				<answer>
-					<p><c>MTSZC MTTSZ CUSHB CP</c></p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Decipher the message <c>RXGTM CHUHJ CFWM</c> which was enciphered using the key 
-						<m>m=3</m> and <m>s=7</m>.
-					</p>
-				</statement>
-				<answer>
-					<p><c>more than a shift</c></p>
-				</answer>
-			</exercise>
+                            </row>
+                            <row> 
+                                <cell>k</cell><cell>p</cell><cell>c</cell><cell>o</cell><cell>h</cell>
+                                <cell>a</cell><cell>r</cell><cell>n</cell><cell>g</cell><cell>z</cell>
+                                <cell>e</cell><cell>y</cell><cell>s</cell>
+                            </row>
+                            <row> 
+                                <cell>13</cell><cell>14</cell><cell>15</cell><cell>16</cell><cell>17</cell>
+                                <cell>18</cell><cell>19</cell><cell>20</cell><cell>21</cell><cell>22</cell>
+                                <cell>23</cell><cell>24</cell><cell>25</cell>
+                            </row>
+                            <row> 
+                                <cell>m</cell><cell>w</cell><cell>f</cell><cell>l</cell><cell>v</cell>
+                                <cell>i</cell><cell>q</cell><cell>d</cell><cell>u</cell><cell>x</cell>
+                                <cell>b</cell><cell>t</cell><cell>j</cell>
+                            </row>
+                        </tabular>
+                </sidebyside>
+                <p>
+                    It will be seen that
+                    <md>
+                        <mrow>c+x=t,\ j+w=m,\ f+y=k,\ -f=y,\ -y=f,\ etc.</mrow>
+                        <mrow>an=z,\ hm=k,\ cr=s,\ etc.</mrow>
+                    </md>
+                </p>
+                <p>
+                    The zero letter is <m>k</m>, and the unit letter is <m>p</m>.  The primary letters are: 
+                    <m>a</m> <m>b</m> <m>f</m> <m>j</m> <m>n</m> <m>o</m> <m>p</m> <m>q</m> <m>u</m> <m>v</m> <m>y</m> <m>z</m>.
+                </p>
+                <p>
+                    Since this particular alphabet will be used several times, in illustration of further developments, we append the following table of negatives and reciprocals:
+                </p>
+                <sidebyside width="30%" margins="auto">
+                    <tabular halign="left">
+                        <row>
+                            <cell>Letter</cell><cell>:</cell>
+                            <cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+                            <cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+                            <cell>k</cell><cell>l</cell><cell>m</cell>                          
+                            <cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+                            <cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+                            <cell>x</cell><cell>y</cell><cell>z</cell>
+                        </row>
+                        <row>
+                            <cell>Neg.</cell><cell>:</cell>
+                            <cell>u</cell><cell>o</cell><cell>t</cell><cell>r</cell><cell>l</cell>
+                            <cell>y</cell><cell>i</cell><cell>x</cell><cell>g</cell><cell>p</cell>
+                            <cell>k</cell><cell>e</cell><cell>m</cell>                          
+                            <cell>q</cell><cell>b</cell><cell>j</cell><cell>n</cell><cell>d</cell>
+                            <cell>w</cell><cell>c</cell><cell>a</cell><cell>z</cell><cell>s</cell>
+                            <cell>h</cell><cell>f</cell><cell>v</cell>
+                        </row>
+                        <row>
+                            <cell>Rec.</cell><cell>:</cell>
+                            <cell>u</cell><cell>v</cell><cell></cell><cell></cell><cell></cell>
+                            <cell>n</cell><cell></cell><cell></cell><cell></cell><cell>j</cell>
+                            <cell></cell><cell></cell><cell></cell>                         
+                            <cell>f</cell><cell>z</cell><cell>p</cell><cell>y</cell><cell></cell>
+                            <cell></cell><cell></cell><cell>a</cell><cell>b</cell><cell></cell>
+                            <cell></cell><cell>q</cell><cell>o</cell>
+                        </row>
+                    </tabular>
+                </sidebyside>
+                <p>
+                    The solution to the equation <m>z+\alpha=t</m> is <m>\alpha=t-z</m> or 
+                    <m>\alpha=t+(-z)=t+v=f</m>.
+                </p>
+                <p>
+                    The system of linear equations: <m>o\, \alpha+u\, \beta = x</m>, 
+                    <m>n\, \alpha+i\, \beta = q</m> has solution <m>\alpha = u</m>, <m>\beta=o</m>, which may be 
+                    obtained by the familiar method of elimination or by formula. 
+                    <xref ref="cr_crypt_hill_1929" detail="pp.306-308" />
+                </p>
+            </assemblage> -->
+            <p>
+                Reading Questions:
+                <ul>
+                    <li>
+                        Hill starts by describing how we will add and multiply with the alphabet, looking at his 
+                        description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
+                        (see <xref ref="hill_alpha_numeric_corespondence">Hill's Correspondence</xref>) come 
+                        out to be <m>m</m> which is 13?
+                    </li>
+                    <li>
+                        In his illustration he also says <m>hm</m> which should be 4 times 13, or 52, is 
+                        <m>k</m> which is 0, why is this the case?
+                    </li>
+                    <li>
+                        Along the same lines, why does <m>f+y</m> equal <m>k</m> and why does <m>an</m> (<m>a</m> times <m>n</m>) 
+                        equal <m>z</m>?
+                    </li>
+                    <li>
+                        Thinking about your previous answers, what are the values of the following: <m>j+z</m>, 
+                        <m>nf</m>, <m>au+j</m>, and <m>bv+jw</m>.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                In this section of text Hill has introduced us to the idea of modular arithmetic and modular equivalence, in 
+                particular the idea of equivalence modulo 26.  This is a concept which will be central to most 
+                everything else we do so we need to spend a little more time trying to precisely understand modular 
+                equivalence.
+            </p>            
+            <definition xml:id="def_modular_equivalence">
+                <title>Modular Equivalence</title>
+                <statement>
+                    <p>
+                        If <m>n</m> is a positive integer then we say that two other integers <m>a</m> and <m>b</m> 
+                        are <term>equivalent modulo n</term><idx>modular equivalence</idx> if and 
+                        only if they have the same remainder when divided by <m>n</m>, or equivalently if and only if 
+                        <m>a-b</m> is divisible by <m>n</m>, when this is the case we write 
+                        <md>
+                            <mrow>a\equiv b \pmod{n}.</mrow>
+                        </md>
+                        The number <m>n</m> is called the <em>modulus</em>.
+                    </p>
+                </statement>
+            </definition>
+            <example xml:id="mod_14_example">
+                <p>
+                    Suppose that <m>n=14</m>, then <m>36\equiv 8\pmod{n}</m> because <m>36=2\cdot 14 + 8</m> and 
+                    <m>8=0\cdot (14) + 8</m> so we get the same remainder when we divide by <m>n=14</m>.  Alternately,
+                    we can observe that <m>36-8=28</m> and <m>28=2\cdot(14)</m> is divisible by <m>n=14</m>.
+                </p>
+                <p>
+                    Using the same value for <m>n</m> we get that <m>3\cdot 5\equiv 1\pmod{n}</m> because 
+                    <m>15=1\cdot (14) +1</m>, so the remainder when <m>3\cdot 5</m> is divided by <m>n</m> is 1.
+                </p>
+                <p>
+                    Test your understanding by filling in the rest of this multiplication table:
+                </p>
+                <table xml:id="mod_fourteen_table">
+                    <caption>Multiplication Modulo 14</caption>
+                    <tabular halign="right">
+                        <row bottom="minor">
+                            <cell right="minor" ><m>\times_{14}</m></cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                            <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                            <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >0</cell>
+                            <cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
+                            <cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
+                            <cell>0</cell><cell>0</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >1</cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                            <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+                            <cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >2</cell>
+                            <cell>0</cell><cell>2</cell><cell>4</cell><cell>6</cell><cell>8</cell><cell>10</cell>
+                            <cell>12</cell><cell>0</cell><cell>2</cell><cell>4</cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >3</cell>
+                            <cell>0</cell><cell>3</cell><cell>6</cell><cell>9</cell><cell>12</cell><cell>1</cell>
+                            <cell>4</cell><cell>7</cell><cell>10</cell><cell>13</cell><cell>2</cell><cell>5</cell>
+                            <cell>8</cell><cell>11</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >4</cell>
+                            <cell>0</cell><cell>4</cell><cell>8</cell><cell>12</cell><cell></cell><cell>6</cell>
+                            <cell></cell><cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >5</cell>
+                            <cell>0</cell><cell>5</cell><cell>10</cell><cell>1</cell><cell>6</cell><cell>11</cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >6</cell>
+                            <cell>0</cell><cell>6</cell><cell>12</cell><cell>4</cell><cell>10</cell><cell>0</cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >7</cell>
+                            <cell>0</cell><cell>7</cell><cell>0</cell><cell>7</cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >8</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >9</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >10</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >11</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >12</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >13</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>
+                    <ul>
+                        <li>
+                            What is strange or different about the row for 7?  Why do you think all the remainders 
+                            come out this way?
+                        </li>
+                        <li>
+                            What is the difference between the even and odd rows (excluding row 7)?
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Finally, fill in this addition table for addition modulo 14.
+                </p>
+                <table xml:id="mod_fourteen_table_addition">
+                    <caption>Addition Modulo 14</caption>
+                    <tabular halign="right">
+                        <row bottom="minor">
+                            <cell right="minor" ><m>+_{14}</m></cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                            <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                            <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >0</cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                            <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+                            <cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >1</cell>
+                            <cell>1</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >2</cell>
+                            <cell>2</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >3</cell>
+                            <cell>3</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >4</cell>
+                            <cell>4</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >5</cell>
+                            <cell>5</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >6</cell>
+                            <cell>6</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >7</cell>
+                            <cell>7</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >8</cell>
+                            <cell>8</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >9</cell>
+                            <cell>9</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >10</cell>
+                            <cell>10</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >11</cell>
+                            <cell>11</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >12</cell>
+                            <cell>12</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >13</cell>
+                            <cell>13</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                    </tabular>
+                </table>                
+            </example>
+            <definition>
+                <title>Additive Identity</title><idx>additive identity</idx>
+                <statement>
+                    <p>
+                        We call 0 the <em>additive identity</em> because for all <m>a</m> and all possible moduli 
+                        <m>n</m> we get <me>a+0\equiv a\pmod{n}</me>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Additive Inverse</title><idx>additive inverse</idx>
+                <statement>
+                    <p>
+                        We say that <m>a</m> and <m>b</m> are <em>additive inverses</em> modulo <m>n</m> 
+                        if <me>a+ b\equiv 0 \pmod{n},</me> and we write <m>b=-a</m>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Multiplicative Identity</title><idx>multiplicative identity</idx>
+                <statement>
+                    <p>
+                        We call 1 the <em>multiplicative identity</em> because for all <m>a</m> and all possible moduli 
+                        <m>n</m> we get <me>a\cdot 1\equiv a\pmod{n}</me>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Multiplicative Inverse</title><idx>multiplicative inverse</idx>
+                <statement>
+                    <p>
+                        We say that <m>a</m> and <m>b</m> are <em>multiplicative inverses</em> modulo <m>n</m> 
+                        if <me>a\cdot b\equiv 1 \pmod{n},</me> and we write <m>b=a^{-1}</m>.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Look back at <xref ref="mod_14_example" text="type-global"/> and write down the pairs of 
+                        additive and multiplicative inverses.  Do all the numbers modulo 14 have additive inverses?  
+                        Do all of them have multiplicative inverses?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Write down another multiplication and addition table as  you did in 
+                        <xref ref="mod_14_example" text="type-global"/> but with a modulus of 
+                        <m>n=10</m>, so when you multiply and add you will always divide 
+                        by 10 afterwards and write down the remainder.  After you write down 
+                        the tables write down the pairs of multiplicative and additive inverses.  
+                        Do all the numbers modulo 10 have additive inverses?  Do all of them have 
+                        multiplicative inverses?
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Reflection Questions: Look back at what Hill had to say and at the examples you have worked through 
+                when you used moduli of <m>n=14</m> and <m>n=10</m> as you think about the following questions.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        No matter which modulus you use, do all the numbers have additive inverses, i.e. numbers you can 
+                        add to them in order to get 0?
+                    </li>
+                    <li>
+                        No matter which modulus you use, do all the numbers have multiplicative inverses, i.e. numbers you 
+                        can multiply them by in order to get 1?
+                    </li>
+                    <li>
+                        If you look at the numbers which do have multiplicative inverses how do they 
+                        relate to those which Hill described as prime to 26?
+                    </li>
+                </ul>
+            </p>
+            <definition>
+                <title>Relatively Prime</title><idx>relatively prime</idx>
+                <statement>
+                    <p>
+                        We say that two integers are <em>relatively prime</em> if the largest positive 
+                        integers which divided them both, their <em>greatest common divisor</em>, is 1.  
+                        For example the greatest common divisor of 7 and 36 is 1 so they are relatively prime, 
+                        however the greatest common divisor of 30 and 36 is 6 so they are not relatively prime.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers, other than 7, that are less than 36 are <em>relatively prime</em> to 36?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 14 are <em>relatively prime</em> to 14?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 10 are <em>relatively prime</em> to 10?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 26 are <em>relatively prime</em> to 26?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>? (You will want to use <xref ref="appendix_figure_mod26" text="type-global" />.)
+                    </p>
+                </statement>
+            </exercise>
+        </subsection>
 
 
-			<p>
-				To <em>decrypt</em>, as opposed to just decipher, an affine cipher you can use the techniques we learned in 
-				<xref ref="chapter_basic_analysis" text="type-global"/> since they are a type of 
-				monoalphabetic substitution cipher.  However, we can also take advantage of the fact that it is an 
-				affine cipher.
-			</p>
-			<p>
-				<cd>
-					<cline>DZIUI UDZYH ILUDO HHIBY GITZY LSYUU OQYDZ ODEYE IJJPY GLWTD </cline>
-					<cline>IDEOU YBGIT ZYLYP EIDZO AYWKH BIBYH KLDZY SMJDI TJIYL OBPHK </cline>
-					<cline>MLDYY BHKLD ZYUZI HDUIB GYIDI UOSKB KOJTZ OXYDI GEYGO BODDO </cline>
-					<cline>GAIDE IDZXO UIGHL YCMYB GWOBO JWUIU XMDEY GOBOJ UKMUY DZODO </cline>
-					<cline>BOJWU IUDKL YGKVY LDZYK LIQIB OJAYW UKDZO DEYGO BPYGI TZYLD </cline>
-					<cline>ZYSYU UOQY</cline>
-				</cd>
-			</p>
-			<p>
-				Analyzing this we get that the most common characters are <c>Y</c>, <c>D</c>, <c>I</c>, <c>O</c> 
-				and <c>U</c>; the most common bigrams are <c>DZ</c>, <c>ZY</c>, <c>YG</c>, and <c>OB</c>; the 
-				most common trigrams are <c>DZY</c>, <c>OBO</c>, <c>LDZ</c>, and <c>DZO</c>.  Therefore it is 
-				reasonable to assume that <c>DZY</c> is <c>the</c>, <c>Y</c>  is <c>e</c>, and <c>D</c> 
-				is <c>t</c>.  So when this was enciphered we have to of had 
-				<md>
-					<mrow>24\equiv m\cdot 4+s \pmod{26}</mrow>
-					<mrow>3 \equiv m\cdot 19+s \pmod{26}</mrow>
-				</md>
-				Subtracting the second expression from the first we get
-				<md>
-					<mrow>21\equiv m\cdot -15 \pmod{26}</mrow>
-				</md>
-				or
-				<md>
-					<mrow>21\equiv m\cdot 11 \pmod{26}.</mrow>
-				</md>
-				Looking at the multiplication table modulo 26 we can see that <m>m=9</m> since 
-				<m>9\cdot 11\equiv 21\pmod{26}</m>.  Substituting <m>m=9</m> into the first equation above 
-				we get 
-				<md>
-					<mrow>24\equiv 9\cdot 4+s \pmod{26}</mrow>
-				</md>
-				which simplifies to
-				<md>
-					<mrow>24-10\equiv s \pmod{26}</mrow>
-				</md>
-				so that <m>s=14</m>.  We can then get the inverse keys <m>m^{-1}\equiv 3\pmod{26}</m> and 
-				<m>-m^{-1}s\equiv 10\pmod{26}</m>.  Using these with the affine cipher cell we get the 
-				deciphered message:
-				<cd>
-					<cline>thisi sthef irsta ffine ciphe rmess ageth atwew illde crypt </cline>
-					<cline>itwas encip hered witha keyof ninef orthe multi plier andfo </cline>
-					<cline>urtee nfort heshi ftsin ceiti samon oalph abeti cweca natta </cline>
-					<cline>ckitw ithba sicfr equen cyana lysis butwe canal souse thata </cline>
-					<cline>nalys istor ecove rtheo rigin alkey sotha tweca ndeci phert </cline>
-					<cline>hemes sage</cline>
-				</cd>
-				Or, in a more readable form
-			</p>
-			<blockquote>
-				<p>
-					<q>
-						this is the first affine cipher message that we will decrypt ...
-					</q>
-				</p>
-			</blockquote>
-			<exercise>
-				<statement>
-					<p>
-						Try to decrypt this message which was enciphered using an affine cipher.
-						<!-- m=19, s=2 -->
-						<cd>
-							<cline>IPAGS WWANP YMFZC TAEWI PZFGC TZANW QWCNN YCMAY ECGGA CZAHV </cline>
-							<cline>QWQIE PFACN ZFGWI KYPMC DCGZB YBACP HPIHH YPMIL ANCPI LADTI </cline>
-							<cline>NWQHC QGEIN KFCHV AAPCP AXFCS GZYPM IPAWQ EYTAF CHCDN ACHQM </cline>
-							<cline>IPASB GZCYN GCPHZ FAGIS PHITZ FADIO KYPMI TZFAF CDDHI INGIW </cline>
-							<cline>AZYWA VATIN AZIDH WAZFC ZZFAG ANLCP ZGFCH CDGIN AZYNA HYFCH </cline>
-							<cline>NYGAP TNIWW QGACZ CPHEC GKPIO KYPMI SZZFA CGFAG ITWQB YBAEF </cline>
-							<cline>APYGS HHAPD QFACN HZFAO DCPMI TZFAV ADDYD IIKAH CZZFA ODIOK </cline>
-							<cline>YZECG CUSCN ZANZI ZEADL AZFYG OISDH PIZVA CLYGY ZINCZ GIDCZ </cline>
-							<cline>ACPFI SNCBC ZYAPZ ALYHA PZDQC PHBIG GYVDQ CPCDD PYMFZ GYZZY </cline>
-							<cline>PMEYZ FCENQ TCOAY EAPZI SZYPZ IZFAF CDDCP HIBAP AHZFA HIINZ </cline>
-							<cline>IWQCG ZIPYG FWAPZ YZECG GFAND IOKFI DWAGE FIGZI IHSBI PWQGZ </cline>
-							<cline>AB</cline>
-						</cd>
-					</p>
-				</statement>
-				<hint>
-					<p>
-						<ul>
-							<li>
-								First use frequency analysis to identify at least two of the letters in the message.
-							</li>
-							<li>
-								With your two letters set up two equations like this:
-								<me>CIPHER\equiv m(plain)+s\pmod{26}.</me>
-							</li>
-							<li>
-								Subtract the second equation from the first and try to find <m>m</m>.
-							</li>
-							<li>
-								Substitute your value for <m>m</m> into the first equation and use it to find 
-								<m>s</m>.
-							</li>
-							<li>
-								Now that you have the key you should be able to decipher the message as you had previously.
-							</li>
-						</ul>
-					</p>
-				</hint>
-				<answer>
-					<p>
-						The message begins with <q>One summer night, a few months after my ...</q>
-					</p>
-				</answer>
-			</exercise>
-			<p> 
-				Sage N-Gram Cell:
-			</p>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-			<sage>
-				<input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
-				<output></output>
-			</sage>
+        <subsection xml:id="affine_cipher">
+            <title>Affine Cipher</title>
 
-			<p>
-				Affine Cipher Cell:
-			</p>
-			<p>
-				You can use this Sage Cell to encipher and decipher messages that used an <em>affine cipher</em>.  
-				To decipher you will need to use the second formula listed in 
-				<xref ref="definition_affine" text="type-global"/>.  Also, be sure you understand how to encipher and 
-				decipher by hand.
-			</p>
-			<sage>
-				<input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
-				<output></output>
-			</sage>
+            <definition xml:id="definition_affine" >
+                <title>Affine Cipher</title><idx>affine cipher</idx>
+                <statement>
+                    <p>
+                        An <em>affine cipher</em> is a cipher with a two part key, a multiplier <m>m</m> and a shift 
+                        <m>s</m> and calculations are carried out using modular arithmetic; typically the modulus is 
+                        <m>n=26</m>.  Characters of the plain text are enciphered with the formula
+                        <me>CIPHER\,\equiv\, m(plain)+s\pmod{26},</me>
+                        and characters of the cipher text are deciphered with the formula
+                        <me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
+                        or
+                        <me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
+                        Note that the multiplier <m>m</m> must be relatively prime to the modulus so that it has a 
+                        multiplicative inverse.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Let's encipher the message <q><c>hello world</c></q> with an affine cipher and a key of 
+                        <m>m=5</m> and <m>s=16</m>; assume that we match up the alphabet with the integers from 
+                        0 to 25 in the usual way so that <c>a</c> is 0, <c>b</c> is 1, <c>c</c> is 2, etc..  In this 
+                        way the letter <c>h</c> is replaced by the number 7 and when we encipher it we get
+                        <me>5\cdot 7+16\equiv 25\pmod{26}</me> and 25 is <c>Z</c>, so plain <c>h</c> becomes 
+                        cipher <c>Z</c>.  Next <c>e</c> is replaced by 4 and we get
+                        <me>5\cdot 4+16\equiv 10\pmod{26}</me> and 10 is <c>K</c>, so plain <c>e</c> becomes 
+                        cipher <c>K</c>.  The plain <c>l</c> corresponds to 11 and 
+                        <me>5\cdot 11+16\equiv 19\pmod{26}</me>, which is <c>T</c>, that is plain <c>l</c> is 
+                        replaced by cipher <c>T</c>.  Try to encipher the rest of the message on your own, 
+                        you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> to help you 
+                        with the multiplication modulo 26.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <c>ZKTTI WIXTF</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Now let's decipher the message <c>AJINF CVCSI JCAKU</c> which was enciphered using 
+                        an affine cipher and a key of <m>m=11</m> and <m>s=4</m>.  Note that 
+                        <m>m^{-1}\equiv 19\pmod{26}</m> and <m>-s\equiv 22\pmod{26}</m>. Take the <c>A</c> and 
+                        replace it by 0 and then using the formula above we get
+                        <me>19(0+22)\equiv 2\pmod{26}</me> so we replace cipher <c>A</c> with plain text <c>c</c>.  
+                        The <c>J</c> is replaced by 9 and 
+                        <me>19(9+22)\equiv 17\pmod{26}</me> therefore cipher <c>J</c> becomes plain <c>r</c>.  
+                        To use the other formula for deciphering we need <m>m^{-1}s\equiv 2\pmod{26}</m>.  Then 
+                        converting the cipher <c>I</c> to 8 we get 
+                        <me>19(8)+2\equiv 24\pmod{26}</me> which is plain <c>y</c> or with the next letter <c>N</c> 
+                        we get <me>19(13)+2\equiv 15\pmod{26}</me> which is <c>p</c>.  Try to decipher the remaining 
+                        characters in the message on your own.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>cryptology rocks</c></p>
+                </answer>
+            </exercise>
 
-		</subsection>
+            <exercise>
+                <statement>
+                    <p>
+                        Encipher the message <q><c>a fine affine cipher</c></q> using the key  
+                        <m>m=17</m> and <m>s=12</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>MTSZC MTTSZ CUSHB CP</c></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Decipher the message <c>RXGTM CHUHJ CFWM</c> which was enciphered using the key 
+                        <m>m=3</m> and <m>s=7</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>more than a shift</c></p>
+                </answer>
+            </exercise>
 
 
-	</section>
+            <p>
+                To <em>decrypt</em>, as opposed to just decipher, an affine cipher you can use the techniques we learned in 
+                <xref ref="chapter_basic_analysis" text="type-global"/> since they are a type of 
+                monoalphabetic substitution cipher.  However, we can also take advantage of the fact that it is an 
+                affine cipher.
+            </p>
+            <p>
+                <cd>
+                    <cline>DZIUI UDZYH ILUDO HHIBY GITZY LSYUU OQYDZ ODEYE IJJPY GLWTD </cline>
+                    <cline>IDEOU YBGIT ZYLYP EIDZO AYWKH BIBYH KLDZY SMJDI TJIYL OBPHK </cline>
+                    <cline>MLDYY BHKLD ZYUZI HDUIB GYIDI UOSKB KOJTZ OXYDI GEYGO BODDO </cline>
+                    <cline>GAIDE IDZXO UIGHL YCMYB GWOBO JWUIU XMDEY GOBOJ UKMUY DZODO </cline>
+                    <cline>BOJWU IUDKL YGKVY LDZYK LIQIB OJAYW UKDZO DEYGO BPYGI TZYLD </cline>
+                    <cline>ZYSYU UOQY</cline>
+                </cd>
+            </p>
+            <p>
+                Analyzing this we get that the most common characters are <c>Y</c>, <c>D</c>, <c>I</c>, <c>O</c> 
+                and <c>U</c>; the most common bigrams are <c>DZ</c>, <c>ZY</c>, <c>YG</c>, and <c>OB</c>; the 
+                most common trigrams are <c>DZY</c>, <c>OBO</c>, <c>LDZ</c>, and <c>DZO</c>.  Therefore it is 
+                reasonable to assume that <c>DZY</c> is <c>the</c>, <c>Y</c>  is <c>e</c>, and <c>D</c> 
+                is <c>t</c>.  So when this was enciphered we have to of had 
+                <md>
+                    <mrow>24\equiv m\cdot 4+s \pmod{26}</mrow>
+                    <mrow>3 \equiv m\cdot 19+s \pmod{26}</mrow>
+                </md>
+                Subtracting the second expression from the first we get
+                <md>
+                    <mrow>21\equiv m\cdot -15 \pmod{26}</mrow>
+                </md>
+                or
+                <md>
+                    <mrow>21\equiv m\cdot 11 \pmod{26}.</mrow>
+                </md>
+                Looking at the multiplication table modulo 26 we can see that <m>m=9</m> since 
+                <m>9\cdot 11\equiv 21\pmod{26}</m>.  Substituting <m>m=9</m> into the first equation above 
+                we get 
+                <md>
+                    <mrow>24\equiv 9\cdot 4+s \pmod{26}</mrow>
+                </md>
+                which simplifies to
+                <md>
+                    <mrow>24-10\equiv s \pmod{26}</mrow>
+                </md>
+                so that <m>s=14</m>.  We can then get the inverse keys <m>m^{-1}\equiv 3\pmod{26}</m> and 
+                <m>-m^{-1}s\equiv 10\pmod{26}</m>.  Using these with the affine cipher cell we get the 
+                deciphered message:
+                <cd>
+                    <cline>thisi sthef irsta ffine ciphe rmess ageth atwew illde crypt </cline>
+                    <cline>itwas encip hered witha keyof ninef orthe multi plier andfo </cline>
+                    <cline>urtee nfort heshi ftsin ceiti samon oalph abeti cweca natta </cline>
+                    <cline>ckitw ithba sicfr equen cyana lysis butwe canal souse thata </cline>
+                    <cline>nalys istor ecove rtheo rigin alkey sotha tweca ndeci phert </cline>
+                    <cline>hemes sage</cline>
+                </cd>
+                Or, in a more readable form
+            </p>
+            <blockquote>
+                <p>
+                    <q>
+                        this is the first affine cipher message that we will decrypt ...
+                    </q>
+                </p>
+            </blockquote>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to decrypt this message which was enciphered using an affine cipher.
+                        <!-- m=19, s=2 -->
+                        <cd>
+                            <cline>IPAGS WWANP YMFZC TAEWI PZFGC TZANW QWCNN YCMAY ECGGA CZAHV </cline>
+                            <cline>QWQIE PFACN ZFGWI KYPMC DCGZB YBACP HPIHH YPMIL ANCPI LADTI </cline>
+                            <cline>NWQHC QGEIN KFCHV AAPCP AXFCS GZYPM IPAWQ EYTAF CHCDN ACHQM </cline>
+                            <cline>IPASB GZCYN GCPHZ FAGIS PHITZ FADIO KYPMI TZFAF CDDHI INGIW </cline>
+                            <cline>AZYWA VATIN AZIDH WAZFC ZZFAG ANLCP ZGFCH CDGIN AZYNA HYFCH </cline>
+                            <cline>NYGAP TNIWW QGACZ CPHEC GKPIO KYPMI SZZFA CGFAG ITWQB YBAEF </cline>
+                            <cline>APYGS HHAPD QFACN HZFAO DCPMI TZFAV ADDYD IIKAH CZZFA ODIOK </cline>
+                            <cline>YZECG CUSCN ZANZI ZEADL AZFYG OISDH PIZVA CLYGY ZINCZ GIDCZ </cline>
+                            <cline>ACPFI SNCBC ZYAPZ ALYHA PZDQC PHBIG GYVDQ CPCDD PYMFZ GYZZY </cline>
+                            <cline>PMEYZ FCENQ TCOAY EAPZI SZYPZ IZFAF CDDCP HIBAP AHZFA HIINZ </cline>
+                            <cline>IWQCG ZIPYG FWAPZ YZECG GFAND IOKFI DWAGE FIGZI IHSBI PWQGZ </cline>
+                            <cline>AB</cline>
+                        </cd>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>
+                                First use frequency analysis to identify at least two of the letters in the message.
+                            </li>
+                            <li>
+                                With your two letters set up two equations like this:
+                                <me>CIPHER\equiv m(plain)+s\pmod{26}.</me>
+                            </li>
+                            <li>
+                                Subtract the second equation from the first and try to find <m>m</m>.
+                            </li>
+                            <li>
+                                Substitute your value for <m>m</m> into the first equation and use it to find 
+                                <m>s</m>.
+                            </li>
+                            <li>
+                                Now that you have the key you should be able to decipher the message as you had previously.
+                            </li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        The message begins with <q>One summer night, a few months after my ...</q>
+                    </p>
+                </answer>
+            </exercise>
+            <p> 
+                Sage N-Gram Cell:
+            </p>
+
+            <sage>
+                <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+            <p>
+                Affine Cipher Cell:
+            </p>
+            <p>
+                You can use this Sage Cell to encipher and decipher messages that used an <em>affine cipher</em>.  
+                To decipher you will need to use the second formula listed in 
+                <xref ref="definition_affine" text="type-global"/>.  Also, be sure you understand how to encipher and 
+                decipher by hand.
+            </p>
+            <sage>
+                <input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+        </subsection>
+
+
+    </section>
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	Hill's Cipher
+    Hill's Cipher
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
 
-	<section xml:id="hill_section">
-		<title>Hill's Cipher</title>
-		<objectives>
-			<ul>
-				<li>
-					Matrices
-				</li>
-				<li>
-					Hill's Cipher
-				</li>
-			</ul>
-		</objectives>
+    <section xml:id="hill_section">
+        <title>Hill's Cipher</title>
+        <objectives>
+            <ul>
+                <li>
+                    Matrices
+                </li>
+                <li>
+                    Hill's Cipher
+                </li>
+            </ul>
+        </objectives>
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-		<subsection xml:id="matrices">
-			<title>Matrices</title>
-			<definition>
-				<title>Matrix</title>
-				<idx>matrix</idx>
-				<statement>
-					<p>
-						A <em>matrix</em> is a rectangular array of numbers such as 
-						<md>
-                    		<mrow>\begin{pmatrix}0 &amp; 1 &amp; 2 \\ 3 &amp; 4 &amp; 5\end{pmatrix}</mrow>
-                		</md>
-                		which, in this setting, we will use to represent a transformation for enciphering and 
-                		deciphering.
-					</p>
-				</statement>
-			</definition>
-			<p>
-				The cipher we will look at in this section, <em>Hill's Cipher</em> will work much like an affine cipher but will 
-				use matrices for the multiplier and shift and not just numbers.  All the matrices we will use will be either square 
-				like this 
-				<md>
-                	<mrow>\begin{pmatrix}1 &amp; 7 \\ 0 &amp; 5\end{pmatrix}</mrow>
+        <subsection xml:id="matrices">
+            <title>Matrices</title>
+            <definition>
+                <title>Matrix</title>
+                <idx>matrix</idx>
+                <statement>
+                    <p>
+                        A <em>matrix</em> is a rectangular array of numbers such as 
+                        <md>
+                            <mrow>\begin{pmatrix}0 &amp; 1 &amp; 2 \\ 3 &amp; 4 &amp; 5\end{pmatrix}</mrow>
+                        </md>
+                        which, in this setting, we will use to represent a transformation for enciphering and 
+                        deciphering.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                The cipher we will look at in this section, <em>Hill's Cipher</em> will work much like an affine cipher but will 
+                use matrices for the multiplier and shift and not just numbers.  All the matrices we will use will be either square 
+                like this 
+                <md>
+                    <mrow>\begin{pmatrix}1 &amp; 7 \\ 0 &amp; 5\end{pmatrix}</mrow>
                 </md>
                 so that it has the same number of rows and columns or will be a special type of matrix called a 
                 <term>vector</term><idx>vector</idx> which has 
                 only one column like this
                 <md>
-                	<mrow>\begin{pmatrix} 18 \\ 7 \end{pmatrix}.</mrow>
+                    <mrow>\begin{pmatrix} 18 \\ 7 \end{pmatrix}.</mrow>
                 </md> 
                 Finally, all operations will be done using arithmetic modulo 26.
-			</p>
-			<p> 
-				We can add and multiply matrices with one another or with vectors as long as the dimensions match.
-			</p>
-			<p>
-				Two <m>2\times 2</m> square matrices can be added like so
-				<md>
-					<mrow>
-						\begin{pmatrix}23 &amp; 3 \\ 0 &amp; 15 \end{pmatrix} +
-						\begin{pmatrix}9 &amp; 2 \\ 5 &amp; 19 \end{pmatrix} =
-						\begin{pmatrix}23+9 &amp; 3+2 \\ 0+5 &amp; 15+19\end{pmatrix} 
-					</mrow>
-				</md>
-				where the corresponding entries are added together. Then completing the addition and reducing 
-				modulo 26 we get
-				<md>
-					<mrow>
-						\begin{pmatrix}32 &amp; 5 \\ 5 &amp; 34\end{pmatrix} \equiv 
-						\begin{pmatrix}6 &amp; 5 \\ 5 &amp; 8\end{pmatrix} \pmod{26}.
-					</mrow>
-				</md>
-				Likewise we can add two vectors
-				<md>
-					<mrow>
-						\begin{pmatrix}17 \\ 12 \end{pmatrix} +
-						\begin{pmatrix}14 \\ 8 \end{pmatrix} \equiv 
-						\begin{pmatrix}5 \\ 20\end{pmatrix} \pmod{26}.
-					</mrow>
-				</md>
-				But, we cannot add a matrix to a vector since they are not the same size. 
-			</p>
-			<p>
-				In order to multiply a matrix with a vector or a matrix with another matrix we need to 
-				multiply rows by columns like so
-				<md>
-					<mrow>
-						\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3 \end{pmatrix} \cdot
-						\begin{pmatrix}1 \\ 10 \end{pmatrix} =
-						\begin{pmatrix}8\cdot 1+1\cdot 10 \\ 5\cdot 1 + 3\cdot 10\end{pmatrix}. 
-					</mrow>
-				</md>
-				Breaking that down a little more, the first entry on top is
-				<md>
-					<mrow>
-						\begin{pmatrix}8 &amp; 1 \end{pmatrix} \cdot
-						\begin{pmatrix}1 \\ 10 \end{pmatrix} =
-						\begin{pmatrix}8\cdot 1+1\cdot 10 \end{pmatrix} 
-					</mrow>
-				</md> 
-				and the second entry on bottom is
-				<md>
-					<mrow>
-						\begin{pmatrix}5 &amp; 3 \end{pmatrix} \cdot
-						\begin{pmatrix}1 \\ 10 \end{pmatrix} =
-						\begin{pmatrix}5\cdot 1 + 3\cdot 10\end{pmatrix}. 
-					</mrow>
-				</md>
-				When we simplify the result modulo 26 we get
-				<md>
-					<mrow>
-						\begin{pmatrix}8\cdot 1+1\cdot 10 \\ 5\cdot 1 + 3\cdot 10\end{pmatrix}\equiv
-						\begin{pmatrix}18 \\ 9 \end{pmatrix}\pmod{26}.
-					</mrow>
-				</md>
-				Similarly we can multiply two matrices together
-				<md alignment="align">
-					<mrow>
-						\begin{pmatrix}3 &amp; 8 \\ 5 &amp; 15 \end{pmatrix} \cdot
-						\begin{pmatrix}1 &amp; 7\\ 13 &amp; 16 \end{pmatrix} &amp;=
-						\begin{pmatrix}3\cdot 1+8\cdot 13 &amp; 3\cdot 7 + 8\cdot 16 \\ 
-							5\cdot 1+15\cdot 13 &amp; 5\cdot 7 + 15\cdot 16\end{pmatrix} 
-					</mrow>
-					<mrow>
-						&amp;\equiv \begin{pmatrix}3 &amp; 19 \\ 
-							18 &amp; 15\end{pmatrix} \pmod{26}.
-					</mrow>
-				</md>
-			</p>
-			<p>
-				Before moving on to see how Hill used these ideas to create a cipher practice your arithmetic with 
-				matrices and vectors, you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> 
-				so that the multiplication is not so tedious.
-			</p>
+            </p>
+            <p> 
+                We can add and multiply matrices with one another or with vectors as long as the dimensions match.
+            </p>
+            <p>
+                Two <m>2\times 2</m> square matrices can be added like so
+                <md>
+                    <mrow>
+                        \begin{pmatrix}23 &amp; 3 \\ 0 &amp; 15 \end{pmatrix} +
+                        \begin{pmatrix}9 &amp; 2 \\ 5 &amp; 19 \end{pmatrix} =
+                        \begin{pmatrix}23+9 &amp; 3+2 \\ 0+5 &amp; 15+19\end{pmatrix} 
+                    </mrow>
+                </md>
+                where the corresponding entries are added together. Then completing the addition and reducing 
+                modulo 26 we get
+                <md>
+                    <mrow>
+                        \begin{pmatrix}32 &amp; 5 \\ 5 &amp; 34\end{pmatrix} \equiv 
+                        \begin{pmatrix}6 &amp; 5 \\ 5 &amp; 8\end{pmatrix} \pmod{26}.
+                    </mrow>
+                </md>
+                Likewise we can add two vectors
+                <md>
+                    <mrow>
+                        \begin{pmatrix}17 \\ 12 \end{pmatrix} +
+                        \begin{pmatrix}14 \\ 8 \end{pmatrix} \equiv 
+                        \begin{pmatrix}5 \\ 20\end{pmatrix} \pmod{26}.
+                    </mrow>
+                </md>
+                But, we cannot add a matrix to a vector since they are not the same size. 
+            </p>
+            <p>
+                In order to multiply a matrix with a vector or a matrix with another matrix we need to 
+                multiply rows by columns like so
+                <md>
+                    <mrow>
+                        \begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3 \end{pmatrix} \cdot
+                        \begin{pmatrix}1 \\ 10 \end{pmatrix} =
+                        \begin{pmatrix}8\cdot 1+1\cdot 10 \\ 5\cdot 1 + 3\cdot 10\end{pmatrix}. 
+                    </mrow>
+                </md>
+                Breaking that down a little more, the first entry on top is
+                <md>
+                    <mrow>
+                        \begin{pmatrix}8 &amp; 1 \end{pmatrix} \cdot
+                        \begin{pmatrix}1 \\ 10 \end{pmatrix} =
+                        \begin{pmatrix}8\cdot 1+1\cdot 10 \end{pmatrix} 
+                    </mrow>
+                </md> 
+                and the second entry on bottom is
+                <md>
+                    <mrow>
+                        \begin{pmatrix}5 &amp; 3 \end{pmatrix} \cdot
+                        \begin{pmatrix}1 \\ 10 \end{pmatrix} =
+                        \begin{pmatrix}5\cdot 1 + 3\cdot 10\end{pmatrix}. 
+                    </mrow>
+                </md>
+                When we simplify the result modulo 26 we get
+                <md>
+                    <mrow>
+                        \begin{pmatrix}8\cdot 1+1\cdot 10 \\ 5\cdot 1 + 3\cdot 10\end{pmatrix}\equiv
+                        \begin{pmatrix}18 \\ 9 \end{pmatrix}\pmod{26}.
+                    </mrow>
+                </md>
+                Similarly we can multiply two matrices together
+                <md alignment="align">
+                    <mrow>
+                        \begin{pmatrix}3 &amp; 8 \\ 5 &amp; 15 \end{pmatrix} \cdot
+                        \begin{pmatrix}1 &amp; 7\\ 13 &amp; 16 \end{pmatrix} &amp;=
+                        \begin{pmatrix}3\cdot 1+8\cdot 13 &amp; 3\cdot 7 + 8\cdot 16 \\ 
+                            5\cdot 1+15\cdot 13 &amp; 5\cdot 7 + 15\cdot 16\end{pmatrix} 
+                    </mrow>
+                    <mrow>
+                        &amp;\equiv \begin{pmatrix}3 &amp; 19 \\ 
+                            18 &amp; 15\end{pmatrix} \pmod{26}.
+                    </mrow>
+                </md>
+            </p>
+            <p>
+                Before moving on to see how Hill used these ideas to create a cipher practice your arithmetic with 
+                matrices and vectors, you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> 
+                so that the multiplication is not so tedious.
+            </p>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		
-			Matrix Practice Exercises 
+        
+            Matrix Practice Exercises 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-			<exercise>
-				<statement>
-					<p>
-						Carry out the arithmetic operations and simplify the results modulo 26.
-						<md>
-							<mrow>
-								\begin{pmatrix}17 \\ 5 \end{pmatrix} +
-								\begin{pmatrix}13 \\ 9 \end{pmatrix}
-							</mrow>
-						</md>
-					</p>
-				</statement>
-				<answer>
-					<p>
-						<md>
-							<mrow>
-								\begin{pmatrix}4\\14\end{pmatrix} \pmod{26}
-							</mrow>
-						</md>
-					</p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Carry out the arithmetic operations and simplify the results modulo 26.
-						<md>
-							<mrow>
-								\begin{pmatrix}3 &amp; 11 \\ 17 &amp; 5 \end{pmatrix} +
-								\begin{pmatrix}9 &amp; 25 \\ 1 &amp; 4 \end{pmatrix}
-							</mrow>
-						</md>
-					</p>
-				</statement>
-				<answer>
-					<p>
-						<md>
-							<mrow>
-								\begin{pmatrix}12 &amp; 10 \\ 18 &amp; 9 \end{pmatrix} \pmod{26} 
-							</mrow>
-						</md>
-					</p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Carry out the arithmetic operations and simplify the results modulo 26.
-						<md>
-							<mrow>
-								\begin{pmatrix}4 &amp; 19 \\ 15 &amp; 22 \end{pmatrix} \cdot
-								\begin{pmatrix}19 \\ 4 \end{pmatrix}
-							</mrow>
-						</md>
-					</p>
-				</statement>
-				<answer>
-					<p>
-						<md>
-							<mrow>
-								\begin{pmatrix}22\\9\end{pmatrix} \pmod{26} 
-							</mrow>
-						</md>
-					</p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Carry out the arithmetic operations and simplify the results modulo 26.
-						<md>
-							<mrow>
-								\begin{pmatrix}21 &amp; 17 \\ 0 &amp; 11 \end{pmatrix} \cdot
-								\begin{pmatrix}14 \\ 5 \end{pmatrix}
-							</mrow>
-						</md>
-					</p>
-				</statement>
-				<answer>
-					<p>
-						<md>
-							<mrow>
-								\begin{pmatrix}15\\3\end{pmatrix} \pmod{26} 
-							</mrow>
-						</md>
-					</p>
-				</answer>
-			</exercise>
-			<exercise>
-				<statement>
-					<p>
-						Carry out the arithmetic operations and simplify the results modulo 26.
-						<md>
-							<mrow>
-								\begin{pmatrix}16 &amp; 3 \\ 7 &amp; 1 \end{pmatrix} \cdot
-								\begin{pmatrix}4 \\ 17 \end{pmatrix} +
-								\begin{pmatrix}2 \\ 7 \end{pmatrix}
-							</mrow>
-						</md>
-					</p>
-				</statement>
-				<hint>
-					<p>
-						Order of operations is the same for matrices and vectors as it is for numbers, so first 
-						multiply and then add.
-					</p>
-				</hint>
-				<answer>
-					<p>
-						<md>
-							<mrow>
-								\begin{pmatrix}13\\0\end{pmatrix} \pmod{26}
-							</mrow>
-						</md>
-					</p>
-				</answer>
-			</exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Carry out the arithmetic operations and simplify the results modulo 26.
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}17 \\ 5 \end{pmatrix} +
+                                \begin{pmatrix}13 \\ 9 \end{pmatrix}
+                            </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}4\\14\end{pmatrix} \pmod{26}
+                            </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Carry out the arithmetic operations and simplify the results modulo 26.
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}3 &amp; 11 \\ 17 &amp; 5 \end{pmatrix} +
+                                \begin{pmatrix}9 &amp; 25 \\ 1 &amp; 4 \end{pmatrix}
+                            </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}12 &amp; 10 \\ 18 &amp; 9 \end{pmatrix} \pmod{26} 
+                            </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Carry out the arithmetic operations and simplify the results modulo 26.
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}4 &amp; 19 \\ 15 &amp; 22 \end{pmatrix} \cdot
+                                \begin{pmatrix}19 \\ 4 \end{pmatrix}
+                            </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}22\\9\end{pmatrix} \pmod{26} 
+                            </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Carry out the arithmetic operations and simplify the results modulo 26.
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}21 &amp; 17 \\ 0 &amp; 11 \end{pmatrix} \cdot
+                                \begin{pmatrix}14 \\ 5 \end{pmatrix}
+                            </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}15\\3\end{pmatrix} \pmod{26} 
+                            </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Carry out the arithmetic operations and simplify the results modulo 26.
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}16 &amp; 3 \\ 7 &amp; 1 \end{pmatrix} \cdot
+                                \begin{pmatrix}4 \\ 17 \end{pmatrix} +
+                                \begin{pmatrix}2 \\ 7 \end{pmatrix}
+                            </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Order of operations is the same for matrices and vectors as it is for numbers, so first 
+                        multiply and then add.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>
+                                \begin{pmatrix}13\\0\end{pmatrix} \pmod{26}
+                            </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
 
 
-		</subsection>
+        </subsection>
 
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-		<subsection xml:id="hill_cipher">
-			<title>Hill's Cipher</title>
-			<subsubsection>
-				<title>Enciphering with Matrices</title>
-				<p>
-					Let's see how we can encipher <c>hill cipher</c> using a key matrix 
-					<md>
-						<mrow>
-							m=\begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}.
-						</mrow>
-					</md>
-					Since it is a <m>2\times 2</m> matrix we will first break the message into groups of two letters
-					<cd>
-						<cline>(hi) (ll) (ci) (ph) (er)</cline>
-					</cd>
-					then to encipher each block we will convert each of these to a vector using 
-					<m>a=0,\, b=1,\, c=2,\, \ldots\, etc. </m> and multiply it by the matrix <m>m</m>. That is 
-					<c>(hi)</c> becomes 
-					<md alignment="align">
-						<mrow>
-							m\begin{pmatrix}h\\ i\end{pmatrix}&amp;=
-								\begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}7\\8\end{pmatrix}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}15\\19\end{pmatrix} \pmod{26}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}P\\ T\end{pmatrix}.
-						</mrow>
-					</md>
-					Similarly we can encipher the <c>(ll)</c>:
-					<md alignment="align">
-						<mrow>
-							m\begin{pmatrix}l\\ l\end{pmatrix}&amp;=
-								\begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}11\\ 11\end{pmatrix}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}1 \\ 14\end{pmatrix} \pmod{26}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}B\\ O\end{pmatrix}.
-						</mrow>
-					</md>
-					And for <c>(ci)</c> we get:
-					<md alignment="align">
-						<mrow>
-							m\begin{pmatrix}c\\ i\end{pmatrix}&amp;=
-								\begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}2\\ 8\end{pmatrix}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}6 \\ 4\end{pmatrix} \pmod{26}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}G\\ E\end{pmatrix}.
-						</mrow>
-					</md>
-				</p>
-				<exercise>
-					<statement>
-						<p>
-							Finish enciphering <c>hill cipher</c> by enciphering the <c>(ph)</c> and the 
-							<c>(er)</c> just as we enciphered the other bi-grams.
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<ol>
-								<li>
-									Change each pair of letters into a pair of numbers, this is a vector.
-								</li>
-								<li>
-									Multiply the vector by the matrix <m>m</m>.
-								</li>
-								<li>
-									Reduce the result modulo 26 and change back to letters, this is your cipher text.
-								</li>
-							</ol>
-						</p>
-					</hint>
-					<answer>
-						<p>
-							<c>(ph)</c><m>\equiv</m><c>HO</c> and <c>(er)</c><m>\equiv</m><c>YL</c>
-						</p>
-					</answer>
-				</exercise>
-				<exercise>
-					<statement>
-						<p>
-							Try to encipher the message <c>linear madness</c> using the matrix
-							<md>
-								<mrow>
-									m=\begin{pmatrix}15 &amp; 0 \\ 17 &amp; 7\end{pmatrix},
-								</mrow>
-							</md>
-							note that since the message has odd length you will need to tack on an extra null letter, like a z.
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<ol>
-								<li>
-									Change each pair of consecutive letters into a pair of numbers, this is a vector.
-								</li>
-								<li>
-									Multiply the vector by the matrix <m>m</m>.
-								</li>
-								<li>
-									Reduce the result modulo 26 and change back to letters, this is your cipher text.
-								</li>
-							</ol>
-						</p>
-					</hint>
-					<answer>
-						<p>
-							Your enciphered message should be something like <c>JJNPA PYWTM IMKN</c>.
-						</p>
-					</answer>					
-				</exercise>
-				<exercise>
-					<statement>
-						<p>
-							For a variation to Hill's Cipher you can both multiply by a matrix and add a shift, 
-							this make Hill's behave very much like an affine cipher.  Try to encipher the word 
-							<c>shifty</c> by first multiplying by the matrix
-							<md>
-								<mrow>
-									m=\begin{pmatrix}23 &amp; 14 \\ 7 &amp; 9\end{pmatrix},
-								</mrow>
-							</md>
-							and then adding the vector
-							<md>
-								<mrow>
-									s=\begin{pmatrix}10 \\ 3\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</statement>
-					<answer>
-						<p>
-							<c>CKEADO</c>
-						</p>
-					</answer>
-				</exercise>
-			</subsubsection>
-			<subsubsection>
-				<title>Matrix Inverses and Deciphering</title>
-				<p>
-					We will be able to decipher messages which used Hill's cipher in exactly the 
-					same way we enciphered them once we can find <term>inverse matrices</term>.
-				</p>
-				<definition>
-					<title>Inverse Matrix</title><idx>inverse matrix</idx>
-					<statement>
-						<p>
-							Given a matrix <m>m</m> the <em>inverse matrix</em> <m>m^{-1}</m> is the 
-							unique matrix such that 
-							<md>
-								<mrow>
-									m\cdot m^{-1}=m^{-1}\cdot m = I
-								</mrow>
-							</md>
-							where <m>I</m> is the <em>identity matrix</em> <idx>identity matrix</idx>
-							(i.e. <m>I\cdot m= m\cdot I = m</m> for all matrices <m>m</m>). 
-						</p>
-					</statement>
-				</definition>
-				<p>
-					Consider the matrix 
-					<md>
-						<mrow>
-							m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
-						</mrow>
-					</md>
-					the inverse for this will be 
-					<md>
-						<mrow>
-							m^{-1}=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix},
-						</mrow>
-					</md>
-					and if we multiply them together we get 
-					<md alignment="align">
-						<mrow>
-							m\cdot m^{-1} = \begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix} \cdot
-								\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix} 
-								&amp;=\begin{pmatrix}8\cdot 7 + 1\cdot 23 &amp; 8\cdot 15 + 1\cdot 10 
-									\\ 5\cdot 7 + 3\cdot 23 &amp; 5\cdot 15 + 3\cdot 10\end{pmatrix}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}4 + 23 &amp; 16 + 10 
-									\\ 9 + 17 &amp; 23 + 4\end{pmatrix} &amp;\pmod{26}
-						</mrow>
-						<mrow>
-								&amp;\equiv \begin{pmatrix}1 &amp; 0 
-									\\ 0 &amp; 1\end{pmatrix} &amp;\pmod{26}
-						</mrow>						
-					</md>
-					which is the identity matrix since 
-					<md>
-						<mrow>
-							 \begin{pmatrix}1 &amp; 0 \\ 0 &amp; 1\end{pmatrix}\cdot
-							 	\begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix} = 
-							 	\begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}
-						</mrow>
-					</md>
-					for any values of <m>a,\, b,\, c,</m> and <m>d</m>.  The matrix inverses and the identity matrix 
-					work just like the multiplicative inverses and multiplicative identities we discussed when we 
-					learned about affine ciphers and modular arithmetic; just as in that case, not all matrices will 
-					have a multiplicative inverse.
-				</p>
-				<definition>
-					<title>Determinant</title><idx>determinant</idx>
-					<statement>
-						<p>
-							The <em>determinant</em> of a <m>2\times 2</m> matrix 
-							<md>
-								<mrow>
-									m=\begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}
-								</mrow>
-							</md>
-							is equal to 
-							<md>
-								<mrow>
-									det(m)=ad-bc.
-								</mrow>
-							</md>
-						</p>
-					</statement>
-				</definition>
-				<p>
-					The matrix <m>m</m> will have a multiplicative inverse <m>m^{-1}</m> if and only if 
-					<m>det(m)</m> has a multiplicative inverse, in which case we get 
-					<md>
-						<mrow>
-							m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
-						</mrow>
-					</md>
-					Going back to our previous example of
-					<md>
-						<mrow>
-							m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
-						</mrow>
-					</md>
-					we calculate the inverse as follows
-					<md alignment="align">
-						<mrow>
-							m^{-1}&amp;=(8\cdot 3- 5\cdot 1)^{-1}\begin{pmatrix}3 &amp; -1 \\ -5 &amp; 8\end{pmatrix}
-						</mrow>
-						<mrow>
-							&amp;\equiv 19^{-1}\begin{pmatrix}3 &amp; 25 \\ 21 &amp; 8\end{pmatrix} &amp;\pmod{26}
-						</mrow>
-						<mrow>
-							&amp;\equiv 11\cdot\begin{pmatrix}3 &amp; 25 \\ 21 &amp; 8\end{pmatrix} &amp;\pmod{26}
-						</mrow>
-						<mrow>
-							&amp;\equiv \begin{pmatrix}11\cdot 3 &amp; 11\cdot 25 \\ 11\cdot 21 &amp; 11\cdot 8\end{pmatrix}
-							 &amp;\pmod{26}
-						</mrow>	
-						<mrow>
-							&amp;\equiv \begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix} &amp;\pmod{26}
-						</mrow>
-					</md>
-					which is what we had before.
-				</p>
-				<exercise>
-					<statement>
-						<p>
-							Check your understanding by finding the inverse of 
-							<md>
-								<mrow>
-									m=\begin{pmatrix}17 &amp; 21 \\ 15 &amp; 8\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<md>
-								<mrow>
-									det(m)=ad-bc.
-								</mrow>
-							</md>
-							and							
-							<md>
-								<mrow>
-									m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</hint>
-					<answer>
-						<p>
-							<md>
-								<mrow>
-									m^{-1}=\begin{pmatrix}20 &amp; 19 \\ 21 &amp; 23\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</answer>
-				</exercise>
-				<p>
-					We are now, finally, ready to decipher a message.  Suppose the message <c>NDGUF SJV</c> 
-					had been enciphered using Hill's cipher with multiplier
-					<md>
-						<mrow>
-							m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
-						</mrow>
-					</md>
-					to decipher we split the message into pairs and multiply those pairs by
-					<md>
-						<mrow>
-							m^{-1}=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}.
-						</mrow>
-					</md>
-					So for the first two letters we get 
-					<md>
-						<mrow>
-							m^{-1}\begin{pmatrix}N \\ D\end{pmatrix}
-							=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}\begin{pmatrix}13 \\ 3\end{pmatrix}
-							\equiv\begin{pmatrix}6 \\ 17\end{pmatrix}\pmod{26}
-							\equiv\begin{pmatrix}g \\ r\end{pmatrix}.
-						</mrow>
-					</md>
-					And, for the next two letters of cipher text 
-					<md>
-						<mrow>
-							m^{-1}\begin{pmatrix}G \\ U\end{pmatrix}
-							=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}\begin{pmatrix}6 \\ 20\end{pmatrix}
-							\equiv\begin{pmatrix}4 \\ 0\end{pmatrix}\pmod{26}
-							\equiv\begin{pmatrix}e \\ a\end{pmatrix}.
-						</mrow>
-					</md>
-				</p>
-				<exercise>
-					<statement>
-						<p>
-							Finish deciphering the message <c>NDGUF SJV</c>.
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<ol>
-								<li>
-									Change each pair of consecutive letters into a pair of numbers, this is a vector.
-								</li>
-								<li>
-									Multiply the vector by the matrix <m>m^{-1}</m>.
-								</li>
-								<li>
-									Reduce the result modulo 26 and change back to letters, this is your plain text.
-								</li>
-							</ol>
-						</p>
-					</hint>
-					<answer>
-						<p><c>great job</c></p>
-					</answer>
-				</exercise>
-				<exercise>
-					<statement>
-						<p>
-							Decipher the message <c>TYEMC QDE</c> which was enciphered with the matrix
-							<md>
-								<mrow>
-									m=\begin{pmatrix}7 &amp; 4 \\ 0 &amp; 3\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<ol>
-								<li>
-									Find the inverse matrix <m>m^{-1}</m>.
-								</li>
-								<li>
-									Change each pair of consecutive letters into a pair of numbers, this is a vector.
-								</li>
-								<li>
-									Multiply the vector by the matrix <m>m^{-1}</m>.
-								</li>
-								<li>
-									Reduce the result modulo 26 and change back to letters, this is your plain text.
-								</li>
-							</ol>
-						</p>
-					</hint>
-					<answer>
-						<p><c>nice work</c></p>
-					</answer>
-				</exercise>
-				<exercise>
-					<statement>
-						<p>
-							Decipher the message <c>URYMB FXFLS</c> which was enciphered by multiplying the plain text by
-							<md>
-								<mrow>
-									m=\begin{pmatrix}7 &amp; 4 \\ 0 &amp; 3\end{pmatrix},
-								</mrow>
-							</md>
-							and then adding the vector
-							<md>
-								<mrow>
-									s=\begin{pmatrix}7 \\ 5\end{pmatrix}.
-								</mrow>
-							</md>
-						</p>
-					</statement>
-					<hint>
-						<p>
-							<ol>
-								<li>
-									Find the inverse matrix <m>m^{-1}</m>.
-								</li>
-								<li>
-									Change each pair of consecutive letters into a pair of numbers, this is a vector.
-								</li>
-								<li>
-									Subtract the vector <m>s</m> from this vector.
-								</li>
-								<li>
-									Multiply the new vector by the matrix <m>m^{-1}</m>.
-								</li>
-								<li>
-									Reduce the result modulo 26 and change back to letters, this is your plain text.
-								</li>
-							</ol>
-						</p>
-					</hint>
-					<answer>
-						<p><c>hello again</c></p>
-					</answer>
-				</exercise>
-				<p>
-					In conclusion we can give Hill's cipher the following general definition.
-				</p>
-				<definition xml:id="definition_hill" >
-					<title>Hill's Cipher</title><idx>Hill's cipher</idx>
-					<statement>
-						<p>
-							<em>Hill's cipher</em> is a cipher with a two part key, a multiplier <m>m</m> 
-							which is a square <m>n\times n</m> matrix and a shift 
-							<m>s</m> which is a vector with <m>n</m> entries; typically all the arithmetic 
-							is done modulo 26. 
-							Characters of the plain text are enciphered <m>n</m> at a time with the formula
-							<me>CIPHER\,\equiv\, m(plain)+s\pmod{26},</me> where <m>plain</m> is a vector of 
-							<m>n</m> characters.
-							Likewise, characters of the cipher text are deciphered <m>n</m> at a time with the formula
-							<me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
-							or
-							<me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
-							Note that the multiplier <m>m</m> must have a multiplicative inverse.
-						</p>
-					</statement>
-				</definition>
-				<p>
-					We end with two important observations.  First, modern explanations of Hill's cipher focus on the 
-					simplest case when the matrix has dimension <m>2\times 2</m> and there is no shift.  Second, 
-					you should be able to see that Hill's cipher is a variation on a affine cipher which enciphers 
-					multiple characters at a time in order to mix up the frequencies, this means it is a type of 
-					<term>polygraphic cipher</term><idx>polygraphic cipher</idx>.
-				</p>
-			</subsubsection>
-			<subsubsection>
-				<title>Alternate Explanation</title>
-				<figure xml:id="suzuki_hill_video1">
-					<caption>Modern look at Hill's Cipher</caption>
-					<video youtube="4RhLNDqcjpA" width="80%"/>
-				</figure>
-			</subsubsection>
-		</subsection>
-	</section>
+        <subsection xml:id="hill_cipher">
+            <title>Hill's Cipher</title>
+            <subsubsection>
+                <title>Enciphering with Matrices</title>
+                <p>
+                    Let's see how we can encipher <c>hill cipher</c> using a key matrix 
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}.
+                        </mrow>
+                    </md>
+                    Since it is a <m>2\times 2</m> matrix we will first break the message into groups of two letters
+                    <cd>
+                        <cline>(hi) (ll) (ci) (ph) (er)</cline>
+                    </cd>
+                    then to encipher each block we will convert each of these to a vector using 
+                    <m>a=0,\, b=1,\, c=2,\, \ldots\, etc. </m> and multiply it by the matrix <m>m</m>. That is 
+                    <c>(hi)</c> becomes 
+                    <md alignment="align">
+                        <mrow>
+                            m\begin{pmatrix}h\\ i\end{pmatrix}&amp;=
+                                \begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}7\\8\end{pmatrix}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}15\\19\end{pmatrix} \pmod{26}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}P\\ T\end{pmatrix}.
+                        </mrow>
+                    </md>
+                    Similarly we can encipher the <c>(ll)</c>:
+                    <md alignment="align">
+                        <mrow>
+                            m\begin{pmatrix}l\\ l\end{pmatrix}&amp;=
+                                \begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}11\\ 11\end{pmatrix}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}1 \\ 14\end{pmatrix} \pmod{26}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}B\\ O\end{pmatrix}.
+                        </mrow>
+                    </md>
+                    And for <c>(ci)</c> we get:
+                    <md alignment="align">
+                        <mrow>
+                            m\begin{pmatrix}c\\ i\end{pmatrix}&amp;=
+                                \begin{pmatrix}7 &amp; 12\\ 3 &amp; 3 \end{pmatrix}\begin{pmatrix}2\\ 8\end{pmatrix}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}6 \\ 4\end{pmatrix} \pmod{26}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}G\\ E\end{pmatrix}.
+                        </mrow>
+                    </md>
+                </p>
+                <exercise>
+                    <statement>
+                        <p>
+                            Finish enciphering <c>hill cipher</c> by enciphering the <c>(ph)</c> and the 
+                            <c>(er)</c> just as we enciphered the other bi-grams.
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Change each pair of letters into a pair of numbers, this is a vector.
+                                </li>
+                                <li>
+                                    Multiply the vector by the matrix <m>m</m>.
+                                </li>
+                                <li>
+                                    Reduce the result modulo 26 and change back to letters, this is your cipher text.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            <c>(ph)</c><m>\equiv</m><c>HO</c> and <c>(er)</c><m>\equiv</m><c>YL</c>
+                        </p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            Try to encipher the message <c>linear madness</c> using the matrix
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}15 &amp; 0 \\ 17 &amp; 7\end{pmatrix},
+                                </mrow>
+                            </md>
+                            note that since the message has odd length you will need to tack on an extra null letter, like a z.
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Change each pair of consecutive letters into a pair of numbers, this is a vector.
+                                </li>
+                                <li>
+                                    Multiply the vector by the matrix <m>m</m>.
+                                </li>
+                                <li>
+                                    Reduce the result modulo 26 and change back to letters, this is your cipher text.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            Your enciphered message should be something like <c>JJNPA PYWTM IMKN</c>.
+                        </p>
+                    </answer>                   
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            For a variation to Hill's Cipher you can both multiply by a matrix and add a shift, 
+                            this make Hill's behave very much like an affine cipher.  Try to encipher the word 
+                            <c>shifty</c> by first multiplying by the matrix
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}23 &amp; 14 \\ 7 &amp; 9\end{pmatrix},
+                                </mrow>
+                            </md>
+                            and then adding the vector
+                            <md>
+                                <mrow>
+                                    s=\begin{pmatrix}10 \\ 3\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <c>CKEADO</c>
+                        </p>
+                    </answer>
+                </exercise>
+            </subsubsection>
+            <subsubsection>
+                <title>Matrix Inverses and Deciphering</title>
+                <p>
+                    We will be able to decipher messages which used Hill's cipher in exactly the 
+                    same way we enciphered them once we can find <term>inverse matrices</term>.
+                </p>
+                <definition>
+                    <title>Inverse Matrix</title><idx>inverse matrix</idx>
+                    <statement>
+                        <p>
+                            Given a matrix <m>m</m> the <em>inverse matrix</em> <m>m^{-1}</m> is the 
+                            unique matrix such that 
+                            <md>
+                                <mrow>
+                                    m\cdot m^{-1}=m^{-1}\cdot m = I
+                                </mrow>
+                            </md>
+                            where <m>I</m> is the <em>identity matrix</em> <idx>identity matrix</idx>
+                            (i.e. <m>I\cdot m= m\cdot I = m</m> for all matrices <m>m</m>). 
+                        </p>
+                    </statement>
+                </definition>
+                <p>
+                    Consider the matrix 
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
+                        </mrow>
+                    </md>
+                    the inverse for this will be 
+                    <md>
+                        <mrow>
+                            m^{-1}=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix},
+                        </mrow>
+                    </md>
+                    and if we multiply them together we get 
+                    <md alignment="align">
+                        <mrow>
+                            m\cdot m^{-1} = \begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix} \cdot
+                                \begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix} 
+                                &amp;=\begin{pmatrix}8\cdot 7 + 1\cdot 23 &amp; 8\cdot 15 + 1\cdot 10 
+                                    \\ 5\cdot 7 + 3\cdot 23 &amp; 5\cdot 15 + 3\cdot 10\end{pmatrix}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}4 + 23 &amp; 16 + 10 
+                                    \\ 9 + 17 &amp; 23 + 4\end{pmatrix} &amp;\pmod{26}
+                        </mrow>
+                        <mrow>
+                                &amp;\equiv \begin{pmatrix}1 &amp; 0 
+                                    \\ 0 &amp; 1\end{pmatrix} &amp;\pmod{26}
+                        </mrow>                     
+                    </md>
+                    which is the identity matrix since 
+                    <md>
+                        <mrow>
+                             \begin{pmatrix}1 &amp; 0 \\ 0 &amp; 1\end{pmatrix}\cdot
+                                \begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix} = 
+                                \begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}
+                        </mrow>
+                    </md>
+                    for any values of <m>a,\, b,\, c,</m> and <m>d</m>.  The matrix inverses and the identity matrix 
+                    work just like the multiplicative inverses and multiplicative identities we discussed when we 
+                    learned about affine ciphers and modular arithmetic; just as in that case, not all matrices will 
+                    have a multiplicative inverse.
+                </p>
+                <definition>
+                    <title>Determinant</title><idx>determinant</idx>
+                    <statement>
+                        <p>
+                            The <em>determinant</em> of a <m>2\times 2</m> matrix 
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}a &amp; b \\ c &amp; d\end{pmatrix}
+                                </mrow>
+                            </md>
+                            is equal to 
+                            <md>
+                                <mrow>
+                                    det(m)=ad-bc.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                </definition>
+                <p>
+                    The matrix <m>m</m> will have a multiplicative inverse <m>m^{-1}</m> if and only if 
+                    <m>det(m)</m> has a multiplicative inverse, in which case we get 
+                    <md>
+                        <mrow>
+                            m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
+                        </mrow>
+                    </md>
+                    Going back to our previous example of
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
+                        </mrow>
+                    </md>
+                    we calculate the inverse as follows
+                    <md alignment="align">
+                        <mrow>
+                            m^{-1}&amp;=(8\cdot 3- 5\cdot 1)^{-1}\begin{pmatrix}3 &amp; -1 \\ -5 &amp; 8\end{pmatrix}
+                        </mrow>
+                        <mrow>
+                            &amp;\equiv 19^{-1}\begin{pmatrix}3 &amp; 25 \\ 21 &amp; 8\end{pmatrix} &amp;\pmod{26}
+                        </mrow>
+                        <mrow>
+                            &amp;\equiv 11\cdot\begin{pmatrix}3 &amp; 25 \\ 21 &amp; 8\end{pmatrix} &amp;\pmod{26}
+                        </mrow>
+                        <mrow>
+                            &amp;\equiv \begin{pmatrix}11\cdot 3 &amp; 11\cdot 25 \\ 11\cdot 21 &amp; 11\cdot 8\end{pmatrix}
+                             &amp;\pmod{26}
+                        </mrow> 
+                        <mrow>
+                            &amp;\equiv \begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix} &amp;\pmod{26}
+                        </mrow>
+                    </md>
+                    which is what we had before.
+                </p>
+                <exercise>
+                    <statement>
+                        <p>
+                            Check your understanding by finding the inverse of 
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}17 &amp; 21 \\ 15 &amp; 8\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <md>
+                                <mrow>
+                                    det(m)=ad-bc.
+                                </mrow>
+                            </md>
+                            and                         
+                            <md>
+                                <mrow>
+                                    m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            <md>
+                                <mrow>
+                                    m^{-1}=\begin{pmatrix}20 &amp; 19 \\ 21 &amp; 23\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </answer>
+                </exercise>
+                <p>
+                    We are now, finally, ready to decipher a message.  Suppose the message <c>NDGUF SJV</c> 
+                    had been enciphered using Hill's cipher with multiplier
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}8 &amp; 1 \\ 5 &amp; 3\end{pmatrix},
+                        </mrow>
+                    </md>
+                    to decipher we split the message into pairs and multiply those pairs by
+                    <md>
+                        <mrow>
+                            m^{-1}=\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}.
+                        </mrow>
+                    </md>
+                    So for the first two letters we get 
+                    <md>
+                        <mrow>
+                            m^{-1}\begin{pmatrix}N \\ D\end{pmatrix}
+                            =\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}\begin{pmatrix}13 \\ 3\end{pmatrix}
+                            \equiv\begin{pmatrix}6 \\ 17\end{pmatrix}\pmod{26}
+                            \equiv\begin{pmatrix}g \\ r\end{pmatrix}.
+                        </mrow>
+                    </md>
+                    And, for the next two letters of cipher text 
+                    <md>
+                        <mrow>
+                            m^{-1}\begin{pmatrix}G \\ U\end{pmatrix}
+                            =\begin{pmatrix}7 &amp; 15 \\ 23 &amp; 10\end{pmatrix}\begin{pmatrix}6 \\ 20\end{pmatrix}
+                            \equiv\begin{pmatrix}4 \\ 0\end{pmatrix}\pmod{26}
+                            \equiv\begin{pmatrix}e \\ a\end{pmatrix}.
+                        </mrow>
+                    </md>
+                </p>
+                <exercise>
+                    <statement>
+                        <p>
+                            Finish deciphering the message <c>NDGUF SJV</c>.
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Change each pair of consecutive letters into a pair of numbers, this is a vector.
+                                </li>
+                                <li>
+                                    Multiply the vector by the matrix <m>m^{-1}</m>.
+                                </li>
+                                <li>
+                                    Reduce the result modulo 26 and change back to letters, this is your plain text.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p><c>great job</c></p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            Decipher the message <c>TYEMC QDE</c> which was enciphered with the matrix
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}7 &amp; 4 \\ 0 &amp; 3\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Find the inverse matrix <m>m^{-1}</m>.
+                                </li>
+                                <li>
+                                    Change each pair of consecutive letters into a pair of numbers, this is a vector.
+                                </li>
+                                <li>
+                                    Multiply the vector by the matrix <m>m^{-1}</m>.
+                                </li>
+                                <li>
+                                    Reduce the result modulo 26 and change back to letters, this is your plain text.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p><c>nice work</c></p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            Decipher the message <c>URYMB FXFLS</c> which was enciphered by multiplying the plain text by
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}7 &amp; 4 \\ 0 &amp; 3\end{pmatrix},
+                                </mrow>
+                            </md>
+                            and then adding the vector
+                            <md>
+                                <mrow>
+                                    s=\begin{pmatrix}7 \\ 5\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Find the inverse matrix <m>m^{-1}</m>.
+                                </li>
+                                <li>
+                                    Change each pair of consecutive letters into a pair of numbers, this is a vector.
+                                </li>
+                                <li>
+                                    Subtract the vector <m>s</m> from this vector.
+                                </li>
+                                <li>
+                                    Multiply the new vector by the matrix <m>m^{-1}</m>.
+                                </li>
+                                <li>
+                                    Reduce the result modulo 26 and change back to letters, this is your plain text.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p><c>hello again</c></p>
+                    </answer>
+                </exercise>
+                <p>
+                    In conclusion we can give Hill's cipher the following general definition.
+                </p>
+                <definition xml:id="definition_hill" >
+                    <title>Hill's Cipher</title><idx>Hill's cipher</idx>
+                    <statement>
+                        <p>
+                            <em>Hill's cipher</em> is a cipher with a two part key, a multiplier <m>m</m> 
+                            which is a square <m>n\times n</m> matrix and a shift 
+                            <m>s</m> which is a vector with <m>n</m> entries; typically all the arithmetic 
+                            is done modulo 26. 
+                            Characters of the plain text are enciphered <m>n</m> at a time with the formula
+                            <me>CIPHER\,\equiv\, m(plain)+s\pmod{26},</me> where <m>plain</m> is a vector of 
+                            <m>n</m> characters.
+                            Likewise, characters of the cipher text are deciphered <m>n</m> at a time with the formula
+                            <me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
+                            or
+                            <me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
+                            Note that the multiplier <m>m</m> must have a multiplicative inverse.
+                        </p>
+                    </statement>
+                </definition>
+                <p>
+                    We end with two important observations.  First, modern explanations of Hill's cipher focus on the 
+                    simplest case when the matrix has dimension <m>2\times 2</m> and there is no shift.  Second, 
+                    you should be able to see that Hill's cipher is a variation on a affine cipher which enciphers 
+                    multiple characters at a time in order to mix up the frequencies, this means it is a type of 
+                    <term>polygraphic cipher</term><idx>polygraphic cipher</idx>.
+                </p>
+            </subsubsection>
+            <subsubsection>
+                <title>Alternate Explanation</title>
+                <figure xml:id="suzuki_hill_video1">
+                    <caption>Modern look at Hill's Cipher</caption>
+                    <video youtube="4RhLNDqcjpA" width="80%"/>
+                </figure>
+            </subsubsection>
+        </subsection>
+    </section>
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-						Chapter Exercises
+                        Chapter Exercises
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
-	<exercises xml:id="modular_hill_exercises">
-		<title>Up Hill struggle?</title>
-		<exercise>
-			<statement>
-				<p>
-					Construct an addition and multiplication table modulo 6.  Which pairs of numbers are additive inverses? 
-					Which pairs are multiplicative inverses, and how do they relate to 6?
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Construct an addition and multiplication table modulo 13.  Which pairs of numbers are additive inverses? 
-					Which pairs are multiplicative inverses, and how do they relate to 13?
-				</p>
-			</statement>
-		</exercise>		
-		<exercise>
-			<statement>
-				<p>
-					Encipher <c>zygomorphic</c> using an affine cipher with key <m>m=7</m> and <m>s=12</m>. 
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Encipher <c>quaquaversal</c> using an affine cipher with key <m>m=17</m> and <m>s=3</m>.
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher <c>TWWFS NLVBY FVNBX GPNWY XWZVN BKLVM FSHFA FKWT</c> which was enciphered using an 
-					affine cipher with key <m>m=15</m> and <m>s=23</m>.
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher <c>YTGXZ GHACB HQGBN XABFU ZAGXN TJJ</c> which was enciphered using an 
-					affine cipher with key <m>m=3</m> and <m>s=7</m>.
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decrypt this message which was enciphered using an affine cipher:
-					<cd>
-						<cline>EHWQC CIYKH EYKVK PIXKH ZKZKQ THZIP YGPXE KDFYX CZKXT IAOZI </cline>
-						<cline>TYKCX KAIRK XKFPX IYHZK CHXQE DAQMC KFVGZ ECEYY KDCKK BKXHE </cline>
-						<cline>IDCED HZKCN XEDUI PHZKW ZITKS MKCHE IDIPH ZKDKH ZKXTQ DFCMY </cline>
-						<cline>QHXQA IYNQD GQDFI PHZKA ITICC QTCAZ KYKCI PVQXI DYQMN KXHME </cline>
-						<cline>CQXKH IIXKA KDHED HZKYE DFCIP HZKNM VTEAQ DFQXK HIIED HEYQH </cline>
-						<cline>KTGAI DAKXD KFWEH ZNITE HEACQ DFPED QDAKH IVKPE HHEDU CMVJK </cline>
-						<cline>AHCPI XHZEC CKXEK CIPCO KHAZK CHZKG TKFZI WKRKX EDQDE DFEXK </cline>
-						<cline>AHPQC ZEIDH IQCED UMTQX QDFAI YNTKB NXIVT KYWZE AZUQR KYGPX </cline>
-						<cline>EKDFQ DINNI XHMDE HGIPF KYIDC HXQHE DUHZK RQTMK IPQPX KCZWK </cline>
-						<cline>QNIDQ YIDUH ZKYQD GWEHZ WZEAZ ZKWQU KFZEC TEPKT IDUVQ HHTKQ </cline>
-						<cline>UQEDC HAXEY K </cline>
-					</cd>
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decrypt this message which was enciphered using an affine cipher:
-					<cd>
-						<cline>ZTWFB JOJLT ZZZTW XVAJO KOJWZ MHOLJ KTHWT WKHJF HWMBZ ZHOHM </cline>
-						<cline>KIBHO QBOUJ TZBLB JVCRJ ZWHAH WXBOK IBZJL BLJWV SKHKI JKSBO </cline>
-						<cline>THQKI BSAJF BRITF IJOJL TZIJQ IBAQT WKIBR HOKIN XHGBO WHOZB </cline>
-						<cline>ZKTLJ KTHWR JZKIJ KHMJS OBAJK BRIHL IBOBZ SBFKB QJWQJ MOTBW </cline>
-						<cline>QKHRI HLIBH RBQJQ BUKHM XOJKT KVQBU VKWHR IBMBA KITLZ BAMJW </cline>
-						<cline>TWMBO THOJW QKIJK JOJLT ZRJZI TZLJZ KBOIB ITLZB AMATX IKBQJ </cline>
-						<cline>AJWKB OWZVL LHWBQ JKVOW PBNJW QZJTQ OBKVO WTWXK HJOJL TZTJL </cline>
-						<cline>JKNHV OHOQB OZLHW ZBTXW BVOJO JLTZL BOBAN WHQQB QITZI BJQJZ </cline>
-						<cline>LVFIJ ZKHZJ NGBON XHHQJ WQZTX WBQKH ITLRT KIITZ IJWQK HABJQ </cline>
-						<cline>KIBRJ N</cline>
-					</cd>
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Encipher <c>order more pizza</c> using Hill's cipher and the matrix,
-					<md>
-						<mrow>
-							m=\begin{pmatrix}1 &amp; 5 \\ 7 &amp; 10\end{pmatrix},
-						</mrow>
-					</md>
-					be sure to how your work.
-				</p>
-			</statement>
-			<answer>
-				<p>
-					<c>VIXJZ FVIBW DUZT</c>
-				</p>
-			</answer>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Encipher <c>we need soda too</c> using Hill's cipher and the matrix,
-					<md>
-						<mrow>
-							m=\begin{pmatrix}9 &amp; 6 \\ 13 &amp; 7\end{pmatrix},
-						</mrow>
-					</md>
-					be sure to how your work.
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher <c>ZEMUM KJDIK NEWSX XHM</c> which was enciphered using Hill's cipher and the matrix,
-					<md>
-						<mrow>
-							m=\begin{pmatrix}13 &amp; 19 \\ 1 &amp; 6\end{pmatrix},
-						</mrow>
-					</md>
-					be sure to how your work.
-				</p>
-			</statement>
-			<answer>
-				<p>
-					<c>spicy chicken wings</c>
-				</p>
-			</answer>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decipher <c>MRUKD QFDWI DHNL</c> which was enciphered using Hill's cipher and the matrix,
-					<md>
-						<mrow>
-							m=\begin{pmatrix}7 &amp; 17 \\ 2 &amp; 5\end{pmatrix},
-						</mrow>
-					</md>
-					be sure to how your work.
-				</p>
-			</statement>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decrypt this quote about <q>Chuck Norris</q> which was enciphered using Hill's cipher:
-					<c>FYQAB YTAHX XYERO MQMFP NNBXN ARJFK HLSNK QVVME IFDUJ AVOUT ZYLA</c><!-- 17,7,5,2 -->
-				</p>
-			</statement>
-			<answer>
-				<p>
-					<q>Chuck Norris threw a grenade and killed 50 zombies, then it exploded.</q>
-				</p>
-			</answer>
-		</exercise>
-		<exercise>
-			<statement>
-				<p>
-					Decrypt this quote about <q>Molly Weasley</q> which was enciphered using Hill's cipher:
-					<c>CQFUM OEAZH YUMAW MYGCV GEQDD MKCEA BIKCU ZSMGN VUGC</c><!-- 14,3,13,3 -->
-				</p>
-			</statement>
-		</exercise>
-		<conclusion>
-			<p>
-				Affine Cipher Cell:
-			</p>
-			<p>
-				This SAGE cell can help you check your work when you encipher and decipher with a affine cipher, 
-				but you should be able to do the basic calculations your self.
-			</p>
+    <exercises xml:id="modular_hill_exercises">
+        <title>Up Hill struggle?</title>
+        <exercise>
+            <statement>
+                <p>
+                    Construct an addition and multiplication table modulo 6.  Which pairs of numbers are additive inverses? 
+                    Which pairs are multiplicative inverses, and how do they relate to 6?
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Construct an addition and multiplication table modulo 13.  Which pairs of numbers are additive inverses? 
+                    Which pairs are multiplicative inverses, and how do they relate to 13?
+                </p>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>zygomorphic</c> using an affine cipher with key <m>m=7</m> and <m>s=12</m>. 
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>quaquaversal</c> using an affine cipher with key <m>m=17</m> and <m>s=3</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>TWWFS NLVBY FVNBX GPNWY XWZVN BKLVM FSHFA FKWT</c> which was enciphered using an 
+                    affine cipher with key <m>m=15</m> and <m>s=23</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>YTGXZ GHACB HQGBN XABFU ZAGXN TJJ</c> which was enciphered using an 
+                    affine cipher with key <m>m=3</m> and <m>s=7</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message which was enciphered using an affine cipher:
+                    <cd>
+                        <cline>EHWQC CIYKH EYKVK PIXKH ZKZKQ THZIP YGPXE KDFYX CZKXT IAOZI </cline>
+                        <cline>TYKCX KAIRK XKFPX IYHZK CHXQE DAQMC KFVGZ ECEYY KDCKK BKXHE </cline>
+                        <cline>IDCED HZKCN XEDUI PHZKW ZITKS MKCHE IDIPH ZKDKH ZKXTQ DFCMY </cline>
+                        <cline>QHXQA IYNQD GQDFI PHZKA ITICC QTCAZ KYKCI PVQXI DYQMN KXHME </cline>
+                        <cline>CQXKH IIXKA KDHED HZKYE DFCIP HZKNM VTEAQ DFQXK HIIED HEYQH </cline>
+                        <cline>KTGAI DAKXD KFWEH ZNITE HEACQ DFPED QDAKH IVKPE HHEDU CMVJK </cline>
+                        <cline>AHCPI XHZEC CKXEK CIPCO KHAZK CHZKG TKFZI WKRKX EDQDE DFEXK </cline>
+                        <cline>AHPQC ZEIDH IQCED UMTQX QDFAI YNTKB NXIVT KYWZE AZUQR KYGPX </cline>
+                        <cline>EKDFQ DINNI XHMDE HGIPF KYIDC HXQHE DUHZK RQTMK IPQPX KCZWK </cline>
+                        <cline>QNIDQ YIDUH ZKYQD GWEHZ WZEAZ ZKWQU KFZEC TEPKT IDUVQ HHTKQ </cline>
+                        <cline>UQEDC HAXEY K </cline>
+                    </cd>
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message which was enciphered using an affine cipher:
+                    <cd>
+                        <cline>ZTWFB JOJLT ZZZTW XVAJO KOJWZ MHOLJ KTHWT WKHJF HWMBZ ZHOHM </cline>
+                        <cline>KIBHO QBOUJ TZBLB JVCRJ ZWHAH WXBOK IBZJL BLJWV SKHKI JKSBO </cline>
+                        <cline>THQKI BSAJF BRITF IJOJL TZIJQ IBAQT WKIBR HOKIN XHGBO WHOZB </cline>
+                        <cline>ZKTLJ KTHWR JZKIJ KHMJS OBAJK BRIHL IBOBZ SBFKB QJWQJ MOTBW </cline>
+                        <cline>QKHRI HLIBH RBQJQ BUKHM XOJKT KVQBU VKWHR IBMBA KITLZ BAMJW </cline>
+                        <cline>TWMBO THOJW QKIJK JOJLT ZRJZI TZLJZ KBOIB ITLZB AMATX IKBQJ </cline>
+                        <cline>AJWKB OWZVL LHWBQ JKVOW PBNJW QZJTQ OBKVO WTWXK HJOJL TZTJL </cline>
+                        <cline>JKNHV OHOQB OZLHW ZBTXW BVOJO JLTZL BOBAN WHQQB QITZI BJQJZ </cline>
+                        <cline>LVFIJ ZKHZJ NGBON XHHQJ WQZTX WBQKH ITLRT KIITZ IJWQK HABJQ </cline>
+                        <cline>KIBRJ N</cline>
+                    </cd>
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>order more pizza</c> using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}1 &amp; 5 \\ 7 &amp; 10\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <c>VIXJZ FVIBW DUZT</c>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>we need soda too</c> using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}9 &amp; 6 \\ 13 &amp; 7\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>ZEMUM KJDIK NEWSX XHM</c> which was enciphered using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}13 &amp; 19 \\ 1 &amp; 6\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <c>spicy chicken wings</c>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>MRUKD QFDWI DHNL</c> which was enciphered using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}7 &amp; 17 \\ 2 &amp; 5\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this quote about <q>Chuck Norris</q> which was enciphered using Hill's cipher:
+                    <c>FYQAB YTAHX XYERO MQMFP NNBXN ARJFK HLSNK QVVME IFDUJ AVOUT ZYLA</c><!-- 17,7,5,2 -->
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <q>Chuck Norris threw a grenade and killed 50 zombies, then it exploded.</q>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this quote about <q>Molly Weasley</q> which was enciphered using Hill's cipher:
+                    <c>CQFUM OEAZH YUMAW MYGCV GEQDD MKCEA BIKCU ZSMGN VUGC</c><!-- 14,3,13,3 -->
+                </p>
+            </statement>
+        </exercise>
+        <conclusion>
+            <p>
+                Affine Cipher Cell:
+            </p>
+            <p>
+                This SAGE cell can help you check your work when you encipher and decipher with a affine cipher, 
+                but you should be able to do the basic calculations your self.
+            </p>
 
-				<sage>
-					<input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
-					<output></output>
-				</sage>
+                <sage>
+                    <input><xi:include href="sage_code/affine_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
 
-			<p>Hill's Cipher Cell:</p>
-			<p>
-				This SAGE cell can help you check your work when you encipher and decipher with a basic Hill's cipher, 
-				but you should be able to do the basic calculations your self.
-			</p>
+            <p>Hill's Cipher Cell:</p>
+            <p>
+                This SAGE cell can help you check your work when you encipher and decipher with a basic Hill's cipher, 
+                but you should be able to do the basic calculations your self.
+            </p>
 
-				<sage>
-					<input><xi:include href="sage_code/hills_cipher.sage" parse="text"/></input>
-					<output></output>
-				</sage>
-		</conclusion>
-	</exercises>
-	
+                <sage>
+                    <input><xi:include href="sage_code/hills_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+        </conclusion>
+    </exercises>
+    
 </chapter>

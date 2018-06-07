@@ -46,48 +46,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </image>
     </figure> -->
 
-    <table xml:id="appendix_key_table">
-        <caption> Blank <em>plain text - CIPHER TEXT</em> table</caption>
-        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
-            <row>
-                <cell>plain</cell>
-                <cell>a</cell><cell>b</cell><cell>c</cell>
-                <cell>d</cell><cell>e</cell><cell>f</cell>
-                <cell>g</cell><cell>h</cell><cell>i</cell>
-            </row>
-            <row>
-                <cell>CIPHER</cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-            </row>
-            <row>
-                <cell>plain</cell>
-                <cell>j</cell><cell>k</cell><cell>l</cell>
-                <cell>m</cell><cell>n</cell><cell>o</cell>
-                <cell>p</cell><cell>q</cell><cell>r</cell>
-            </row>
-            <row>
-                <cell>CIPHER</cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-            </row>
-            <row>
-                <cell>plain</cell>
-                <cell>s</cell><cell>t</cell><cell>u</cell>
-                <cell>v</cell><cell>w</cell><cell>x</cell>
-                <cell>y</cell><cell>z</cell><cell></cell>
-            </row>
-            <row bottom="minor">
-                <cell>CIPHER</cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-                <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
-            </row>
-        </tabular>
-    </table>
-
+    <xi:include href="table_code/mono_key_table.ptx"/>
 
 <!--  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -95,41 +54,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
-    <table xml:id="appendix_figure_number_table">
-        <caption>Anglicized Arabic Alpha-Numeric Table</caption>
-        <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
-            <row>
-                <cell> 1 </cell> <cell> 2 </cell> <cell> 3 </cell>
-                <cell> 4 </cell> <cell> 5 </cell> <cell> 6 </cell>
-                <cell> 7 </cell> <cell> 8 </cell> <cell> 9 </cell> 
-            </row>
-            <row>
-                        <cell>a</cell><cell>b</cell><cell>c</cell>
-                        <cell>d</cell><cell>e</cell><cell>f</cell>
-                        <cell>g</cell><cell>h</cell><cell>i</cell>
-            </row>
-            <row>
-                <cell> 10 </cell> <cell> 20 </cell> <cell> 30 </cell>
-                <cell> 40 </cell> <cell> 50 </cell> <cell> 60 </cell>
-                <cell> 70 </cell> <cell> 80 </cell> <cell> 90 </cell> 
-            </row>
-            <row>
-                        <cell>j</cell><cell>k</cell><cell>l</cell>
-                        <cell>m</cell><cell>n</cell><cell>o</cell>
-                        <cell>p</cell><cell>q</cell><cell>r</cell> 
-            </row>
-            <row>
-                <cell> 100 </cell> <cell> 200 </cell> <cell> 300 </cell>
-                <cell> 400 </cell> <cell> 500 </cell> <cell> 600 </cell>
-                <cell> 700 </cell> <cell> 800 </cell> <cell> 900 </cell> 
-            </row>
-            <row>
-                        <cell>s</cell><cell>t</cell><cell>u</cell>
-                        <cell>v</cell><cell>w</cell><cell>x</cell>
-                        <cell>y</cell><cell>z</cell><cell></cell> 
-            </row>
-        </tabular>
-    </table>
+    <xi:include href="table_code/arabic_alpha_table.ptx" />
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -168,93 +94,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->
 
-    <figure xml:id="appendix_figure_modern">
-        <caption>Modern Cipher Disk or <q>Formula</q></caption>
-        <image width="65%" archive="svg png pdf">
-            <description> This is an image of modern version of Alberti's Cipher Disk. </description>
-            <latex-image>
-                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                <![CDATA[\begin{tikzpicture}[scale=4,cap=round,>=latex]
-                    % draw the circles
-                    \draw[thick] (0cm,0cm) circle(0.98cm);
-                    \draw[thick] (0cm,0cm) circle(1cm);
-                    \draw[thick] (0cm,0cm) circle(1.3cm);
-                    \draw[thick] (0cm,0cm) circle(0.7cm);
-                    \draw[thick] (0cm,0cm) circle(0.68cm);
-
-                    
-                    \foreach \x in {6.925,20.775,...,360} {
-                            % lines from center to point
-                            \draw[gray] (0cm,0cm) -- (\x:1.3cm);
-                    }
-
-                    % add the inner mobile ring
-                    \foreach \x/\ctext in {
-                        0.00000/a,
-                        13.850/c,
-                        27.700/e,
-                        41.550/g,
-                        55.400/k,
-                        69.250/l,
-                        83.100/n,
-                        96.950/p,
-                        110.80/r,
-                        124.65/t,
-                        138.50/v,
-                        152.35/z,
-                        166.20/\&,
-                        180.05/x,
-                        193.90/y,
-                        207.75/s,
-                        221.60/o,
-                        235.45/m,
-                        249.30/q,
-                        263.15/i,
-                        277.00/h,
-                        290.85/f,
-                        304.70/d,
-                        318.55/b,
-                        332.40/w,
-                        346.25/j
-                    }
-                    \draw (-\x:0.85cm) node[fill=white, rotate=270-\x] {\large$\mathit{\ctext}$};
-
-                    % add outer fixed ring
-                    \foreach \x/\ptext in {
-                        0.00000/2,
-                        13.850/3,
-                        27.700/4,
-                        41.550/A,
-                        55.400/B,
-                        69.250/C,
-                        83.100/D,
-                        96.950/E,
-                        110.80/F,
-                        124.65/G,
-                        138.50/H,
-                        152.35/I,
-                        166.20/K,
-                        180.05/L,
-                        193.90/M,
-                        207.75/N,
-                        221.60/O,
-                        235.45/P,
-                        249.30/R,
-                        263.15/S,
-                        277.00/T,
-                        290.85/U,
-                        304.70/V,
-                        318.55/W,
-                        332.40/Y,
-                        346.25/1
-                    }
-                    \draw (-\x:1.15cm) node[fill=white, rotate=270-\x] {\Large$\mathit{\ptext}$};
-
-                \end{tikzpicture}]]>
-            </latex-image>
-        </image>
-    </figure>
-
+    <xi:include href="image_code/modern_disk_image.ptx" />
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -45,10 +45,26 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="quotations_appendix.ptx" />
 
-    <!-- GFDL License text -->
+    <!-- references -->
 
-        <xi:include href="gfdl-mathbook.xml" />  <!-- Copied from Robert A. Beezer's work -->
+        <xi:include href="crypto_references.ptx" />
 
+
+    <!-- solutions -->
+
+    <appendix>
+        <title>Solutions to Selected Exercises</title>
+        <solution-list />
+    </appendix>
+
+    <!-- glossary -->
+
+        <xi:include href="glossary.ptx" />
+
+    <!-- Index follows appendices, preceded only colophon -->
+        <index>
+            <index-list />
+        </index>
 
 <!--         <appendix>
             <title>Notation</title>
@@ -56,33 +72,21 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>The following table defines the notation used in this book. Page numbers or references refer to the first appearance of each symbol.</p>
 
             <notation-list />
-        </appendix> -->
+        </appendix> 
+-->
 
 
-    <appendix>
-        <title>Solutions to Selected Exercises</title>
-        <solution-list />
 
-    </appendix>
+    <!-- GFDL License text -->
 
-    <!-- glossary -->
+    <xi:include href="gfdl-mathbook.xml" />
 
-        <xi:include href="glossary.ptx" />
+    <!-- Copied from Robert A. Beezer's work -->
 
-
-    <!-- references -->
-
-        <xi:include href="crypto_references.ptx" />
-
-    <!-- Index follows appendices, preceded only colophon -->
-        <index>
-            <index-list />
-        </index>
-
-<!--        <colophon>
-            <p>This book was authored in MathBook XML.</p>
-        </colophon> -->
-
+   <!-- colophon -->
+   <colophon>
+        <p>This book was authored in MathBook XML.</p>
+    </colophon>
 
 
 
