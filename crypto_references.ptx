@@ -202,8 +202,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <note>
                     <p>
                         URL:
-                        <url href="http://gallica.bnf.fr/ark:/12148/bpt6k73371g">
-                             http://gallica.bnf.fr/ark:/12148/bpt6k73371g
+                        <url href="http://gallica.bnf.fr/ark:/12148/bpt6k1040608n/f7.image">
+                             http://gallica.bnf.fr/ark:/12148/bpt6k1040608n/f7.image
                         </url>
                     </p>
                 </note>
@@ -221,4 +221,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </biblio>
 
         </references>
+
+
+<!-- Thomas Jefferson to Meriwether Lewis, Cipher. -04-20, 1803. Manuscript/Mixed Material. https://www.loc.gov/item/mtjbib012330/. -->
+<!-- Thomas Jefferson, no date, Cipher Wheel, Notes and Copy. Manuscript/Mixed Material. https://www.loc.gov/item/mtjbib025756/. -->
+
 

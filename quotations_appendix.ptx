@@ -32,6 +32,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <appendix xml:id="text_quotes" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Quotations Appendix</title>
 
+
+
+<!-- 
+
+    Chapter 1 Quotations 
+
+-->
+
     <section>
         <title>Chapter 1 Quotes:</title>
         <p><alert>Julius Caesar Shift:</alert></p>
@@ -47,6 +55,12 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <xi:include href="quote_code/adDurayhim_numerical_ciphers.ptx" />
     </section>
 
+<!-- 
+
+    Chapter 2 Quotations 
+
+-->
+
     <section>
         <title>Chapter 2 Quotes:</title>
         <p><alert>Al-Kindi on Frequency Analysis:</alert></p>
@@ -60,11 +74,35 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     </section>
 
+<!-- 
+
+    Chapter 3 Quotations 
+
+-->
+
     <section>
         <title>Chapter 3 Quotes:</title>
         <p><alert>Alberti's Polyalphabetic Cipher:</alert></p>
         <xi:include href="quote_code/alberti_polyalpha.ptx" />
+        <p><alert>Vigen&#x00E8;re's Polyalphabetic Cipher:</alert></p>
+        <xi:include href="quote_code/vigenere_cipher.ptx" />
+        <figure>
+            <caption>
+                Vigen&#x00E8;re's Tableau
+            </caption>
+            <image width="100%" source="images/vigenere_table.png">
+                <description> This is Vigen&#x00E8;re's tableau as he actually used it in his text.  </description>
+            </image>
+        </figure>
     </section>
+
+
+
+<!-- 
+
+    Chapter 6 Quotations 
+
+-->
 
     <section>
         <title>Chapter 6 Quotes:</title>
