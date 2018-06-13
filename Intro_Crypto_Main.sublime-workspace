@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"figure",
+				"figure_vigenere_table"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
 				"table",
 				"table_numeric_alpha"
 			],
@@ -42,10 +50,6 @@
 			[
 				"ex",
 				"example\texample"
-			],
-			[
-				"al",
-				"align"
 			],
 			[
 				"an",
@@ -140,16 +144,16 @@
 	"buffers":
 	[
 		{
-			"file": "Intro_Crypto_Main.sublime-project",
+			"file": "chapter3_new_ciphers.ptx",
 			"settings":
 			{
-				"buffer_size": 2682,
+				"buffer_size": 53444,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Main PTX Build",
 	"build_system_choices":
 	[
 		[
@@ -446,6 +450,82 @@
 			[
 				"Main PTX Build",
 				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"to HTML Folder"
 			]
 		],
 		[
@@ -841,7 +921,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "to HTML Folder",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -896,9 +976,26 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code"
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/modern_disk_image.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/alberti_polyalpha.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/charts_image.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT 467 & 528 - Number Theory/Number Theory Comp/2010 Fall Number Theory Final Exam.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
@@ -1012,25 +1109,11 @@
 		"/Users/cfroccajr/Documents/CryptoText/latex_tmp/IntroToCrypto.tex",
 		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX.sublime-build",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/xelatex.sublime-build",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX Build.sublime-build",
-		"/Users/cfroccajr/Documents/CryptoText/tmp_src/Intro_Crypto_Main.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/cipher.py",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.xml",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/gfdl-mathbook.xml",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/bookinfo.xml",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/humanities/poetry.xml",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/sets.xml",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-book/frontmatter.xml",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/chapter2_arab_analysis.mbx",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/chapter1_early_ciphers.xml",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/Inquiry-History-Based-Cryptology/Intro_Crypto_Main.mbx",
-		"/Users/cfroccajr/Documents/WCSU/CryptologyText/quickstart.mbx"
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX.sublime-build"
 	],
 	"find":
 	{
-		"height": 24.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -1044,6 +1127,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"xi:include",
+			"Suppose",
+			"suppoe ",
+			"para"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1066,28 +1153,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Intro_Crypto_Main.sublime-project",
+					"file": "chapter3_new_ciphers.ptx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2682,
+						"buffer_size": 53444,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								248,
-								248
+								3144,
+								3144
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"spell_check": true,
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1055.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1139,7 +1227,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "Packages/PreTeXtual/PreTeXt.sublime-build",
+	"pinned_build_system": "",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{

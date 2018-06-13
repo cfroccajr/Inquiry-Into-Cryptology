@@ -78,9 +78,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <subsection>
             <title>Alberti's Polyalphabetic Cipher</title>
+            <definition>
+                <title>Polyalphabetic Substitution Cipher</title>
+                <statement>
+                    <p>
+                        A <term>polyalphabetic substitution cipher</term><idx>polyalphabetic substitution cipher</idx> is a cipher in which a single plaintext letter maybe replaced by several different ciphertext letters, groups of letters, or symbols and every letter, group of letters, or symbol in the ciphertext may represent more than one plain text letter.
+                    </p>
+                </statement>
+            </definition>
             <p>
                 One of Leon Battista Alberti's greatest contributions to cryptology was not his cryptanalysis skills but an entirely new kind of cipher.  Many efforts had been and would be made to shore up monoalphabetic substitution ciphers.  Some of these efforts worked well enough but they were never sufficiently different to make them immune to the sorts of attacks we have studied before.   Alberti made something truly different
-                he invented a <term>polyalphabetic substitution cipher</term><idx>polyalphabetic substitution cipher</idx>.  This was a cipher that did not just replace the plain text alphabet with a single separate alphabet but instead used multiple enciphering alphabets to create greater confusion and security.
+                he invented a <term>polyalphabetic substitution cipher</term>.  This was a cipher that did not just replace the plain text alphabet with a single separate alphabet but instead used multiple enciphering alphabets to create greater confusion and security.
             </p>
             <sidebyside widths="40% 40%" margins="0%">
                 <p>
@@ -181,41 +189,124 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </image>
             </figure>
             <p>
+                <alert>Comprehension Check:</alert>
                 <ul>
                     <li>
-                        Above, we described how to get the first three letters of the cipher text <em>GEORRG PHGOX</em>, 
-                        how do we get the fourth and fifth letters? How are we deciding which columns and rows to use?
+                        How did the <em>a</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>b</em> in the ciphertext <em>bqnsamiconcoal</em>?
                     </li>
                     <li>
-                        What do we do after we have enciphered the first five characters?  How did we get 
-                        <em>G PHGO</em> for the next five characters?
+                        How did the <em>u</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>q</em> in the ciphertext <em>bqnsamiconcoal</em>?
                     </li>
-                    <li>Looking at what we just enciphered how was the first plain text <em>e</em> enciphered?  What about the second one?</li>
-                    <li>Now, looking at the cipher text what does the first <em>R</em> represent?  What about the second <em>R</em>?</li>
+                    <li>
+                        How did the first <em>e</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>i</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        How did the second <em>e</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>o</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        All four <em>e</em>'s in the plaintext were replaced different ciphertexts, why and how did this happen?
+                    </li>
                 </ul>
             </p>
             <exercise>
                 <statement>
                     <p>
-                        To further check your understanding try enciphering the message <q>vive la france</q> using the 
-                        key <q>HELP</q>.
+                        To further check your understanding try enciphering the message <em><q>vive la france</q></em> using the key <em>aider</em> and the black (outer) rows in <xref ref="figure_vigenere_table"/>, since there are more letters in the message than the key you will need restart at the beginning of the key when you get to the end.
                     </p>
                 </statement>
+                <hint>
+                    <p>Try writing the key above the message so that you can keep track of how they correspond, like this:</p>
+                    <pre>
+                        Key:        a i d e r a i d e r a i
+                        Plaintext:  v i v e l a f r a n c e
+                        Ciphertext: Q O
+                    </pre>
+                    <p>
+                        Also, recall that you look up the letters in the message along the top and the key along the side.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Ciphertext: <c>QOTEASLQACVI</c>
+                    </p>
+                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>
-                        To further check your understanding try deciphering the message <q>BIXR VGNG</q> using the 
-                        key <q>DOG</q>.
+                        To further check your understanding try enciphering the message <em><q>escargot</q></em> using the key <em>ail</em>; in <xref ref="figure_vigenere_table"/> use the red (inner) labels for the message and the black (outer) column for the key, since there are more letters in the message than the key you will need restart at the beginning of the key when you get to the end.
                     </p>
                 </statement>
+                <hint>
+                    <p>Try writing the key above the message so that you can keep track of how they correspond, like this:</p>
+                    <pre>
+                        Key:        a i l a i l a i
+                        Plaintext:  e s c a r g o t
+                        Ciphertext:
+                    </pre>
+                    <p>
+                        Also, recall that you look up the letters in the message along the top and the key along the side.
+                    </p>
+                    <p>
+                        Finally, enciphering (and deciphering) goes faster if you do all the characters enciphered with a particular key letter at one time; so first do everything enciphered with <em>a</em>, then <em>i</em>, and then <em>l</em>.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Ciphertext: <c>IIREHXSL</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try deciphering the message <c>NODDTEMDQNHO</c> using the key <em>vilo</em> and the black (outer) labels.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Recall that the plaintext letters run along the top and the key letters are along the left side.</li>
+                            <li>You need to look up the ciphertext letters in the interior of the table.</li>
+                            <li>Line up the ciphertext and the key in the same way you lined up the plaintext and key previously.</li>
+                        </ul>
+                    </p>
+                    <pre>
+                        Key:        v i l o v i l o v i l o
+                        Ciphertext: N O D D T E M D Q N H O
+                        Plaintext:  t o u
+                    </pre>
+                </hint>
+                <answer>
+                    <p>
+                        Plaintext:  <em>tour de france</em>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Try deciphering the message <c>DOLSASXS</c> using the key <em>manger</em> and the red (inner) labels.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Recall that the plaintext letters run along the top and the key letters are along the left side.</li>
+                            <li>You need to look up the ciphertext letters in the interior of the table.</li>
+                            <li>Line up the ciphertext and the key in the same way you lined up the plaintext and key previously.</li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Plaintext: <em>baguette</em>
+                    </p>
+                </answer>
             </exercise>
             <p>
-                Today when we use the Vigen&#x00E8;re Cipher we use a table 
-                <xref ref="appendix_figure_vigenere_new" text="type-global" /> 
-                which is technically simpler, but as we shall see in the next chapter it is not really significantly easier to crack.
-                You will play with the modern version in the exercises, but for now let's look at another way that cryptographers tried 
-                to make their secrets more secure.
+                Today when we use the Vigen&#x00E8;re Cipher we use a table <xref ref="appendix_figure_vigenere_new" text="type-global" /> which is simpler, and makes the resulting cipher a little easier to crack.  The video below explains using the more modern table and you will play with the modern version in the exercises.
             </p>
             <figure xml:id="suzuki_vigenere_video">
                 <caption>Modern look at the Vigenere Cipher</caption>

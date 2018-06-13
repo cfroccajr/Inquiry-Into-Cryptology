@@ -33,6 +33,7 @@ Bibliography Refs:
 
 xmllint --xinclude --postvalid --noout --dtdvalid ~/applications/git/mathbook/schema/dtd/mathbook.dtd ../src/Intro_Crypto_Main.ptx
 xsltproc --xinclude ~/Applications/Git/mathbook/xsl/mathbook-html.xsl ../src/Intro_Crypto_Main.ptx
+
 ~/Applications/Git/mathbook/script/mbx -vv -c latex-image -f svg -d images ../src/Intro_Crypto_Main.ptx
 
 ~/Applications/Git/mathbook/script/mbx -vv -c youtube -d images ../src/Intro_Crypto_Main.ptx
@@ -42,7 +43,7 @@ xsltproc --xinclude -stringparam whitespace flexible ~/Applications/Git/mathbook
 
 java -classpath /Users/cfroccajr/Applications/GIT/jing-trang/build -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -jar /Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar /Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng ../src/Intro_Crypto_Main.ptx
 
-
+pdf2svg converts pdf's to svg's
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Misc. Stuff %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
