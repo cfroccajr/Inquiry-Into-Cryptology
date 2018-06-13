@@ -143,15 +143,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "chapter3_new_ciphers.ptx",
-			"settings":
-			{
-				"buffer_size": 53444,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -525,7 +516,7 @@
 			],
 			[
 				"Main PTX Build",
-				"to HTML Folder"
+				""
 			]
 		],
 		[
@@ -921,7 +912,7 @@
 			]
 		]
 	],
-	"build_varint": "to HTML Folder",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -983,6 +974,7 @@
 	"file_history":
 	[
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
@@ -1108,8 +1100,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/tmp/IntroToCrypto.tex",
 		"/Users/cfroccajr/Documents/CryptoText/latex_tmp/IntroToCrypto.tex",
 		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-article/sample-article.xml",
-		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/MBX.sublime-build"
+		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx"
 	],
 	"find":
 	{
@@ -1148,39 +1139,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "chapter3_new_ciphers.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 53444,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3144,
-								3144
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1055.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
