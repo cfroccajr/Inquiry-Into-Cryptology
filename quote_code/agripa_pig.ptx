@@ -1,0 +1,107 @@
+<assemblage>
+    <p>
+        One may frame nine chambers by the intersection of four parallel lines intersectiong themselves at right angles as expressed in the figure:
+    </p>
+    <sidebyside width="40%">
+        <image>
+            <latex-image>
+            <![CDATA[
+                \begin{tikzpicture}[scale=2,>=latex]
+                    \draw[thick] (0,-15pt) -- (45pt,-15pt);
+                    \draw[thick] (0,-30pt) -- (45pt,-30pt);
+                    \draw[thick] (15pt,0) -- (15pt,-45pt);
+                    \draw[thick] (30pt,0) -- (30pt,-45pt);
+
+                    \node at (7.5pt,-7.5pt) {\footnotesize u l c};
+                    \node at (22.5pt,-7.5pt) {\footnotesize t k b};
+                    \node at (37.5pt,-7.5pt) {\footnotesize s j a};
+
+                    \node at (7.5pt,-22.5pt) {\footnotesize x o f};
+                    \node at (22.5pt,-22.5pt) {\footnotesize w n e};
+                    \node at (37.5pt,-22.5pt) {\footnotesize v m d};
+
+                    \node at (7.5pt,-37.5pt) {\footnotesize \& r i};
+                    \node at (22.5pt,-37.5pt) {\footnotesize z q h};
+                    \node at (37.5pt,-37.5pt) {\footnotesize y p g};
+                \end{tikzpicture}
+            ]]>
+            </latex-image>
+        </image>
+    </sidebyside>
+    <p>
+        Which being dissected into parts generates nine the particular figures:
+    </p>
+    <sidebyside width="75%">
+        <image>
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[thick] (0,0) \ppc ++(5pt,0pt) \ppb ++(5pt,0pt) \ppa ++(5pt,0pt) \ppf ++(5pt,0pt) \ppe ++(5pt,0pt) \ppd ++(5pt,0pt) \ppi ++(5pt,0pt) \pph ++(5pt,0pt) \ppg;
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </sidebyside>
+    <p>
+        from the nine chambers.  Characterize each letter in a chamber by the notation of one point to show the first letter in the chamber; two for the second letter; three for the third letter; so that the characters of Michael may be written in seven characters:
+    </p>
+    <sidebyside width="55%">
+        <image>
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[thick] (0,0)
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot\cdot$} ++(10pt,-12pt)
+                        \ppe ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppc ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \pph ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppg ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppf ++(-10pt,12pt) node {\Large$\cdot\cdot$}
+                    ;
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </sidebyside>
+    <p>
+        Which may be written one after another drawn as three figures:
+    </p>
+    <sidebyside width="47%">
+        <image>
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[thick] (0,0) 
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot\cdot$} ++(5pt,-12pt)
+                        \ppe ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppc ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \pph ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppg ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \ppf ++(-10pt,12pt) node {\Large$\cdot\cdot$}
+                    ;
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </sidebyside>
+    <p>
+        Which written one after another drawn as one figure, omitting the usual marks, gives the characters of Michael as:
+    </p>
+    <sidebyside width="42%">
+        <image>
+            <latex-image>
+                \begin{tikzpicture}
+                    \draw[thick] (0,0)
+                        \ppa ++(-5pt,-10pt)
+                        \ppe ++(-5pt,10pt)
+                        \ppc ++(-5pt,-10pt)
+                        \pph ++(-5pt,10pt)
+                        \ppa ++(-5pt,-10pt)
+                        \ppg ++(-5pt,0pt)
+                        \ppf
+                    ;
+                \end{tikzpicture}
+            </latex-image>
+        </image>
+    </sidebyside>
+    <p>
+        <xref ref="cr_crypt_agripa" detail="Vol. 3, CCLXXV (p.279)"/> <xref ref="cr_crypt_agripa_eng" detail="Vol.3, Chapter XXX"/>
+        <fn>The translation is based, for the most part, on <xref ref="cr_crypt_agripa_eng"/> with reference to the original text.  The example was changed some in order to make the work more accessible.`</fn>
+    </p>
+</assemblage>

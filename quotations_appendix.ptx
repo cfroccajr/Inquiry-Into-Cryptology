@@ -94,6 +94,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <description> This is Vigen&#x00E8;re's tableau as he actually used it in his text.  </description>
             </image>
         </figure>
+        <p><alert>Agripa's Pigpen Cipher</alert></p>
+        <xi:include href="quote_code/agripa_pig.ptx" />
     </section>
 
 

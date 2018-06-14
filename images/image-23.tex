@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
+    \ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
+\fi
+   
+       \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
+       \def\ppb{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+       \def\ppc{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(15pt,-10pt)}
+
+       \def\ppd{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
+       \def\ppe{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+       \def\ppf{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+
+       \def\ppg{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(15pt,-10pt)}
+       \def\pph{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+       \def\ppi{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(15pt,0pt)}
+
+       \def\ppj{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppk{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppl{-- ++(10pt,0pt) ++(-10pt,0pt) -- ++(0pt,10pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+
+       \def\ppm{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppn{-- ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppo{-- ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+
+       \def\ppp{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) ++(5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppq{ ++(10pt,0pt) -- ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppr{ ++(10pt,0pt)  ++(0pt,10pt) -- ++(-10pt,0pt) -- ++(0pt,-10pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+
+       \def\pps{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(5pt,-10pt)}
+       \def\ppt{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(15pt,0pt)}
+       \def\ppu{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(5pt,0pt)}
+       \def\ppv{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(5pt,0pt)}
+
+       \def\ppw{ ++(0pt,10pt) -- ++(5pt,-10pt) -- ++(5pt,10pt) ++(-5pt,-5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppx{ ++(0pt,10pt) -- ++(10pt,-5pt) -- ++(-10pt,-5pt) ++(5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppy{ ++(10pt,10pt) -- ++(-10pt,-5pt) -- ++(10pt,-5pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+       \def\ppz{-- ++(5pt,10pt) -- ++(5pt,-10pt) ++(-5pt,5pt) node {$\cdot$} ++(10pt,-5pt)}
+   
+
+   
+   \newcommand \sboxOne{
+       \mbox{
+           $
+           \begin{array}{|c|c|c|c|c|}\hline
+                   \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+               00 \amp 01 \amp 11 \amp 10 \amp 11 \\       \hline
+               01 \amp 11 \amp 10 \amp 01 \amp 00 \\       \hline
+               10 \amp 00 \amp 10 \amp 01 \amp 11 \\       \hline
+               11 \amp 11 \amp 01 \amp 11 \amp 10 \\       \hline
+           \end{array}
+           $
+       }
+   }
+
+   \newcommand \sboxTwo{
+       \mbox{
+           $
+           \begin{array}{|c|c|c|c|c|}\hline
+                   \amp 00 \amp 01 \amp 10 \amp 11 \\ \hline
+               00 \amp 00 \amp 01 \amp 10 \amp 11 \\       \hline
+               01 \amp 10 \amp 00 \amp 01 \amp 11 \\       \hline
+               10 \amp 11 \amp 00 \amp 01 \amp 00 \\       \hline
+               11 \amp 10 \amp 01 \amp 10 \amp 11 \\       \hline
+           \end{array}
+           $
+       }
+   }
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+\begin{document}
+\pagestyle{empty}
+
+                            \begin{tikzpicture}
+                            \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
+                                \pgfmathtruncatemacro{\o}{mod(\y,2)};
+                                \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.25,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+                                \foreach \x/\ctext in 
+                                {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+                                    13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                                {
+                                \pgfmathtruncatemacro{\n}{mod(\x+\shift+26,26)};
+                                \draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+                                }
+                            }
+                            \foreach \x/\ctext in 
+                            {
+                                0/12.22\%\ \ e,
+                                1/9.28\%\ \ \ \ t,
+                                2/8.06\%\ \ \ \ a,
+                                3/7.62\%\ \ \ \ o,
+                                4/7.10\%\ \ \ \ i,
+                                5/6.82\%\ \ \ \ n,
+                                6/6.45\%\ \ \ \ s,
+                                7/5.91\%\ \ \ \ r,
+                                8/5.76\%\ \ \ \ h,
+                                9/4.19\%\ \ \ \ l,
+                                10/3.93\%\ \ \ \ d
+                            }
+                            {
+                                \draw (-0.25,-0.5*\x) node {$\ctext$};
+                            }
+                            \foreach \x/\ctext in 
+                            {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                            {
+                                \draw (1+0.55*\x,0.5) node {$\ctext$};
+                            }
+                            \draw (-1.25,0.25)--(15,0.25);
+                            \draw (0.75,1)--(0.75,-5.5);
+                            \end{tikzpicture}
+                        \end{document}

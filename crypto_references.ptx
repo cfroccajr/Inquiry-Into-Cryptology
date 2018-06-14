@@ -49,6 +49,22 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </note>
             </biblio>
 
+            <biblio type="raw" xml:id="cr_crypt_agripa_eng">
+                Heinrich Cornelius Agrippa (1486?-1535) [John French trans.],
+                <title>
+                    Three books of occult philosophy written by Henry Cornelius Agrippa of Nettesheim.
+                </title>
+                Text Creation Partnership, Ann Arbor, MI / Oxford (UK), <year>2012</year>
+                <note>
+                    <p>
+                        URL:
+                        <url href="http://name.umdl.umich.edu/A26565.0001.001">
+                            http://name.umdl.umich.edu/A26565.0001.001
+                        </url>, accessed June 2018.
+                    </p>
+                </note>
+            </biblio>
+
             <biblio type="raw" xml:id="cr_doyle_sis">
                 Arthur Conan Doyle,
                 <title>
