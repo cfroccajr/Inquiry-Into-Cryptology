@@ -79,11 +79,6 @@
 
 				{"name": "Build youtube to all Images",
 					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-cyoutube", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-				},
-				{"name": "Windows Main PTX Build",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "--stringparam", "exercise.backmatter.hint", "no", "c:/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
-					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-					"working_dir": "$file_path/../tmp"
 				}
 			]
 		}
