@@ -96,6 +96,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </figure>
         <p><alert>Agripa's Pigpen Cipher</alert></p>
         <xi:include href="quote_code/agripa_pig.ptx" />
+        <p><alert>Vigen&#x00E8;re's Autokey Cipher</alert></p>
+        <xi:include href="quote_code/vigenere_autokey.ptx" />
+        <figure xml:id="vigenere_auto_table">
+            <caption>Table used for Vigen&#x00E8;re's Autokey Cipher</caption>
+            <image width="70%" source="images/vigenere_auto_table.png">
+                <description>This is the table that Vigen&#x00E8;re used for his Autokey Cipher</description>
+            </image>
+        </figure>
     </section>
 
 

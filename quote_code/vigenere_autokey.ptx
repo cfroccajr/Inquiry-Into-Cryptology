@@ -1,0 +1,9 @@
+<assemblage>
+    <blockquote>
+        <p>
+            <q>
+                Each letter may be enciphered by the preceding letter, thus: with the . . . text. . . . <em><q>Au nom de l'eternel</q></em> and the key D, we say, a [the first letter of the text] from D [the key letter] gives x; u [the second letter of the text] from A [the first letter of the text, which now becomes the key] gives i; n from U, a; o from N, h; m from O, g; d from M, u; e from D, p; l from E, t; e from L; m, t from E, l; e from T, s; r from E, h; n from R, i; e from N, x; l from E, t. By which method, taking D for the key, we would arrive at <em>DXIAHGUPTMLSHIXT</em>. The other method, which is more secret, is to encipher each letter of the clear text not by the letter [of that text] which precedes it, but by the letter by which the preceding letter is enciphered. Thus, a from D, which is the key, gives x; u from X [the first letter of the cipher text] h; n from H, e; o from E, e; m from E, c; d from C, o; e from O, u; l from U, m; ... etc.
+            </q> <xref ref="cr_crypt_vigenere" detail="pp. 49-49b"/> <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>
+        </p>
+    </blockquote>
+</assemblage>

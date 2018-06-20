@@ -571,41 +571,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <idx>autokey</idx>
                 Description of Alberti's autokey from Kahn ... </p>
             <p>
-                Below is a description of Vigen&#x00E8;re's more secure variations on an autokey cipher.
+                Below is a description of Vigen&#x00E8;re's more secure variation on an autokey cipher.
                 <fn>
-                    This translation is by Charles Mendelsohn in 
-                    <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>, 
-                    the original description by Vigen&#x00E8;re is in 
-                    <xref ref="cr_crypt_vigenere" detail="pp. 99-100 (49-49b)"/>.
-                </fn> 
-                Read carefully through the passage above, you will need to 
-                use <xref ref="vigenere_auto_table" text="type-global" /> 
-                in order to follow along.
+                    This translation is mostly from Charles Mendelsohn in <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>, I have supplemented with material from the original description by Vigen&#x00E8;re is in <xref ref="cr_crypt_vigenere" detail="pp.49-49b"/>.
+                </fn>
+                Read carefully through the passage above, you will need to use <xref ref="vigenere_auto_table" text="type-global" /> in order to follow along.
             </p>
-            <blockquote>
-                <p>
-                    <q>
-                        Each letter may be enciphered by the preceding letter, thus: with the . . . text. . . . 
-                        Au nom de l'eternel and the key D, we say, a [the first letter of the text] from D 
-                        [the key letter] gives x; u [the second letter of the text] from A [the first letter of 
-                        the text, which now becomes the key] gives i; n from U, a; o from N, h . . . etc. The other 
-                        method, which is more secret, is to encipher each letter of the clear text not by the 
-                        letter [of that text] which precedes it, but by the letter by which the preceding letter is 
-                        enciphered. Thus, a from D, which is the key, gives x; u from X 
-                        [the first letter of the cipher text] h; n from H, e; o from E, e. . . .
-                    </q> <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>
-                </p>
-            </blockquote>
-            <p>
-                Mendelsohn only translates a sample of Vigen&#x00E8;re's work, here is the rest of this
-                first encipherment:
-            </p>
-            <figure xml:id="vigenere_first_auto">
-                <caption>Vigen&#x00E8;re's first autokey method</caption>
-                <image width="80%" source="images/vigenere_autokey.png">
-                    <description>This is a snippet from Vigenere's work showing his first autokey method.</description>
-                </image>
-            </figure>
+            <xi:include href="quote_code/vigenere_autokey.ptx" />
             <figure xml:id="vigenere_auto_table">
                 <caption>Table used for Vigen&#x00E8;re's Autokey Cipher</caption>
                 <image width="70%" source="images/vigenere_auto_table.png">
@@ -613,58 +585,90 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </image>
             </figure>
             <p>
+                <alert>Comprehension Check:</alert> It will be easier to follow what is happening in this passage if we write out the message as follows:
+            </p>
+            <pre>
+                    Plaintext:    a u n o m d e l e t e r n e l
+                    Key Letter:   D A U N O M D E L E T E R N E
+                    Ciphertext: D X I A H G U P T M L S H I X T
+            </pre>
+            <p>
                 <ul>
                     <li>
-                        Vigen&#x00E8;re uses a <em>D</em> as the key to encipher the first letter, in the first 
-                        method described where does he get the subsequent letters for the key? 
+                        Vigen&#x00E8;re uses a <em>D</em> as the key to encipher the first letter, in the first method described where does he get the subsequent letters for the key?
                     </li>
                     <li>
-                        At one point Vigen&#x00E8;re uses a key letter of <em>U</em> but there is no row 
-                        <em>U</em> on his table, looking at how the <em>U</em> enciphers the <em>n</em>, what 
-                        row is he using in place of <em>U</em>?
+                        The letter <c>D</c> enciphers <em>a</em> as <em>X</em>, but the <em>a</em> is not in row <em>D</em> so how do we know that the <em>a</em> should be <em>X</em> ?
                     </li>
                     <li>
-                        In the second method described he again starts with a key of <em>D</em> but then where 
-                        does he get the rest of the key?
+                        At one point Vigen&#x00E8;re uses a key letter of <em>U</em> but there is no row <em>U</em> on his table, looking at how the <em>U</em> enciphers the <em>n</em>, what row is he using in place of <em>U</em>?
                     </li>
                     <li>
-                        If you had to describe these methods in terms of the Vigen&#x00E8;re cipher we discussed in 
-                        <xref ref="vigenere_cipher" text="type-global"/>, where we discussed what is now called 
-                        Vigen&#x00E8;re's Cipher, what could you say about the key used?
+                        The <em>a</em> was enciphered as <em>X</em>, but the first letter of the ciphertext is <em>D</em>, also the ciphertext is one character longer than the plaintext, what is the explanation for both of these?  Where did the leading <em>D</em> come from?
                     </li>
                     <li>
-                        Vigen&#x00E8;re believes his second method is more secure, looking at the <em>key</em> for the second 
-                        method why do you think he believes this?
+                        In the second method described he again starts with a key of <em>D</em> but then where does he get the the next key letter <em>X</em>? What about the key letter <em>H</em>? Try to complete the cipher using the second method.
                     </li>
                     <li>
-                        If you compare the <em>key</em> for his second method to the cipher text he generates why is 
-                        Vigen&#x00E8;re wrong about his second method being more secure?
+                        Vigen&#x00E8;re believes his second method is more secure, looking at the <em>key</em> for the second method why do you think he believes this?
+                    </li>
+                    <li>
+                        If you compare the <em>key</em> for his second method to the cipher text he generates why is Vigen&#x00E8;re wrong about his second method being more secure?
                     </li>
                 </ul>
             </p>
             <exercise>
                 <statement>
                     <p>
-                        Check your understanding by enciphering the message <em>automatic confusion</em> using Vigen&#x00E8;re's 
-                        first and second autokey methods, use <em>Q</em> for the initial key letter. 
+                        Check your understanding by enciphering the message <em><q>automatic confusion</q></em> using Vigen&#x00E8;re's first and second autokey methods, use <em>Q</em> for the initial key letter.
                     </p>
                 </statement>
+                <answer>
+                    <p>
+                        Method 1:
+                    </p>
+                    <pre>
+                        Plaintext:    a u t o m a t i c c o n f u s i o n
+                        Key Letter:   Q A U T O M A T I C C O N F U S I O
+                        Ciphertext: Q P I G A G R H M U N D H M A F M G H
+                    </pre>
+                    <p>
+                        Method 2:
+                    </p>
+                    <pre>
+                        Plaintext:    a u t o m a t i c c o n f u s i o n
+                        Key Letter:   Q P E L G D X G R N T A B R F I Q L
+                        Ciphertext: Q P E L G D X G R N T A B R F I Q L F
+                    </pre>
+                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>
-                        The message <c>HFABH CXNXM GFMRR MDDMR</c> was enciphered using Vigen&#x00E8;re's first autokey method with 
-                        and initial key letter of <em>C</em>, check your understanding of the method by deciphering it. 
+                        The message <c>CHFABH CXNXM GFMRR MDDMR</c> was enciphered using Vigen&#x00E8;re's first autokey method, check your understanding of the method by deciphering it.
                     </p>
                 </statement>
+                <answer>
+                    <pre>
+                        Ciphertext: C H F A B H C X N X M G F M R R M D D M R
+                        Key Letter:   C S T O R M T H E B A S T I L L E N U L
+                        Plaintext:    s t o r m t h e b a s t i l l e n u l l
+                    </pre>
+                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>
-                        The message <c>MPTMG POHGS OOHLR RXUGE</c> was enciphered using Vigen&#x00E8;re's second autokey method with 
-                        and initial key letter of <em>Q</em>, check your understanding of the method by deciphering it. 
+                        The message <c>QMPTM GPOHG SOOHL QXUGC</c> was enciphered using Vigen&#x00E8;re's second autokey method, check your understanding of the method by deciphering it.
                     </p>
                 </statement>
+                <answer>
+                    <pre>
+                        Ciphertext: Q M P T M G P O H G S O O H L Q X U G C
+                        Key Letter:   Q M P T M G P O H G S O O H L Q X U G
+                        Plaintext:    h i d i n g i n p l a i n s i g h t x
+                    </pre>
+                </answer>
             </exercise>
         </subsection>
     </section>
