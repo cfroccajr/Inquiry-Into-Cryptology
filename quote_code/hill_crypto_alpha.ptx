@@ -67,30 +67,30 @@
             Let the letters of the alphabet be associated with the integers as follows:
         </p>
         <p xml:id="hill_alpha_numeric_corespondence">
-        <sidebyside width="30%" margins="auto">
-                <tabular halign="right">
-                    <row>
-                        <cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
-                        <cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
-                        <cell>k</cell><cell>l</cell><cell>m</cell>
-                    </row>
-                    <row>
-                        <cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
-                        <cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
-                        <cell>0</cell><cell>16</cell><cell>13</cell>
-                    </row>
-                    <row>
-                        <cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
-                        <cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
-                        <cell>x</cell><cell>y</cell><cell>z</cell>
-                    </row>
-                    <row>
-                        <cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
-                        <cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
-                        <cell>22</cell><cell>11</cell><cell>9</cell>
-                    </row>
-                </tabular>
-        </sidebyside>
+            <sidebyside width="30%" margins="auto">
+                    <tabular halign="right">
+                        <row>
+                            <cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
+                            <cell>f</cell><cell>g</cell><cell>h</cell><cell>i</cell><cell>j</cell>
+                            <cell>k</cell><cell>l</cell><cell>m</cell>
+                        </row>
+                        <row>
+                            <cell>5</cell><cell>23</cell><cell>2</cell><cell>20</cell><cell>10</cell>
+                            <cell>1</cell><cell>8</cell><cell>4</cell><cell>18</cell><cell>25</cell>
+                            <cell>0</cell><cell>16</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell>n</cell><cell>o</cell><cell>p</cell><cell>q</cell><cell>r</cell>
+                            <cell>s</cell><cell>t</cell><cell>u</cell><cell>v</cell><cell>w</cell>
+                            <cell>x</cell><cell>y</cell><cell>z</cell>
+                        </row>
+                        <row>
+                            <cell>7</cell><cell>3</cell><cell>1</cell><cell>19</cell><cell>6</cell>
+                            <cell>12</cell><cell>24</cell><cell>21</cell><cell>17</cell><cell>14</cell>
+                            <cell>22</cell><cell>11</cell><cell>9</cell>
+                        </row>
+                    </tabular>
+            </sidebyside>
         </p>
         <p>
             or, in another convenient formulation:

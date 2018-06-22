@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"an",
+				"answer"
+			],
+			[
+				"ima",
+				"latex-image"
+			],
+			[
+				"figure_",
+				"figure_agripa_pig"
+			],
+			[
+				"quot",
+				"quote_code"
+			],
+			[
+				"side",
+				"sidebyside"
+			],
+			[
 				"figure",
 				"figure_vigenere_table"
 			],
@@ -50,10 +70,6 @@
 			[
 				"ex",
 				"example\texample"
-			],
-			[
-				"an",
-				"answers"
 			],
 			[
 				"pre",
@@ -490,6 +506,10 @@
 					"Build youtube to all Images"
 				],
 				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
 					"Packages/PreTeXtual/PreTeXt.sublime-build",
 					""
 				],
@@ -516,7 +536,199 @@
 			],
 			[
 				"Main PTX Build",
-				""
+				"Open the .pdf file"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"to HTML Folder"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				],
+				[
+					"Packages/User/xelatex.sublime-build",
+					""
+				]
+			],
+			[
+				"Main PTX Build",
+				"Xelatex the .tex file"
 			]
 		],
 		[
@@ -708,7 +920,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"PdfLaTeX"
+				""
 			]
 		],
 		[
@@ -973,10 +1185,13 @@
 	],
 	"file_history":
 	[
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_autokey.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/agripa_pig.ptx",
+		"/Users/cfroccajr/Downloads/pigpen/texinput/pigpen.tex",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
@@ -1097,10 +1312,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/cipher_cell_appendix.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_modern_cryptology.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/Refernce_File.txt",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/IntroToCrypto.tex",
-		"/Users/cfroccajr/Documents/CryptoText/latex_tmp/IntroToCrypto.tex",
-		"/Users/cfroccajr/Applications/GIT/mathbook/examples/sample-article/sample-article.xml",
-		"/Users/cfroccajr/Documents/CryptoText/src/sage_cell_appendix.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/tmp/IntroToCrypto.tex"
 	],
 	"find":
 	{
@@ -1118,17 +1330,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			" ",
+			"q>",
+			"Compr",
+			"com",
+			"\\small",
 			"xi:include",
 			"Suppose",
 			"suppoe ",
 			"para"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"",
+			"em>",
+			"\\footnotesize"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1191,7 +1411,7 @@
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
-		"height": 44.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

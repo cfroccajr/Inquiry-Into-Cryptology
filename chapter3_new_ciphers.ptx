@@ -704,9 +704,39 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </subsection>
         <subsection xml:id="falconer_permutations">
             <title>Key Permutations</title>
-            <p>
-                Insert permutations here when ready
-            </p>
+            <assemblage>
+                <p>
+                    <alert>Sect. 2: Of Secret Writing by Altering the Places of the Letters, Where the Powers Remain the Same</alert>
+                </p>
+                <p>
+                    <em>Part 1: Of the Combinations of Three or More Letters</em>
+                </p>
+                <p>
+                    The first remarkable improvement I find of this kind of cryptography by altering the places of letters, is by the regular combinations of three, four, or more letters: I had it of a gentleman, who (I am fully satisfied) would put it to no bad use; but since it may fall of bad hands, I have his leave to provide against its harm.  And that we may proceed regularly therein it is necessary, first to inquire, <q>how many several ways any given number of letters may be combined?</q>  (i.e.) How many differnt positions they can regularly admit of.  And for that end I have hereunto subjoined the following table:
+                </p>
+                <sidebyside>
+                    <tabular top="minor" left="minor" right="minor" bottom="minor" halign="right">
+                        <row>
+                            <cell>Letters</cell><cell></cell><cell>Several Ways</cell>
+                        </row>
+                        <row><cell>1</cell><cell></cell><cell>1</cell></row>
+                        <row><cell>2</cell><cell></cell><cell>2</cell></row>
+                        <row><cell>3</cell><cell></cell><cell>6</cell></row>
+                        <row><cell>4</cell><cell></cell><cell>24</cell></row>
+                        <row><cell>5</cell><cell></cell><cell>120</cell></row>
+                        <row><cell>6</cell><cell></cell><cell>720</cell></row>
+                        <row><cell>7</cell><cell></cell><cell>5040</cell></row>
+                        <row><cell>8</cell><cell></cell><cell>40320</cell></row>
+                        <row><cell>9</cell><cell></cell><cell>362880</cell></row>
+                        <row><cell>10</cell><cell></cell><cell>3628800</cell></row>
+                        <row><cell>11</cell><cell></cell><cell>39916800</cell></row>
+                        <row><cell>12</cell><cell></cell><cell>479001600</cell></row>
+                    </tabular>
+                </sidebyside>
+                <p>
+                    <em>Construction of the Table</em>
+                </p>
+            </assemblage>
         </subsection>
         <subsection xml:id="falconer_transposition">
             <title>Transposition</title>
