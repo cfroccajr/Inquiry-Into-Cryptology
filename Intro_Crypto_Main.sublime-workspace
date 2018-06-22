@@ -159,6 +159,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "chapter3_new_ciphers.ptx",
+			"settings":
+			{
+				"buffer_size": 61215,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "quote_code/hill_crypto_alpha.ptx",
+			"settings":
+			{
+				"buffer_size": 9515,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -536,7 +554,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Open the .pdf file"
+				"Check Schema"
 			]
 		],
 		[
@@ -1124,7 +1142,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Check Schema",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1180,11 +1198,13 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/table_code"
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_autokey.ptx",
@@ -1197,12 +1217,10 @@
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/modern_disk_image.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/alberti_polyalpha.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/charts_image.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT 467 & 528 - Number Theory/Number Theory Comp/2010 Fall Number Theory Final Exam.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
@@ -1341,7 +1359,7 @@
 			"para"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -1359,8 +1377,70 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "chapter3_new_ciphers.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39249,
+								39249
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11484.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "quote_code/hill_crypto_alpha.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9515,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3464,
+								3464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 854.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
