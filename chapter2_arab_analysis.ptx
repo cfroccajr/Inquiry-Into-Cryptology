@@ -176,6 +176,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             input box, and select 1 for <em>N</em> since we are analyzing single letters.
         </p>
 
+        <figure>
+            <caption>N-Gram Analysis Tool</caption>
+            <interactive xml:id="interactive-sage-test" platform="sage" width="100%" aspect="4:5">
+                <slate surface="sage">
+                    <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+
         <sage>
             <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
             <output></output>
