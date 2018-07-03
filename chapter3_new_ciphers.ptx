@@ -731,10 +731,24 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <row><cell>10</cell><cell></cell><cell>3628800</cell></row>
                         <row><cell>11</cell><cell></cell><cell>39916800</cell></row>
                         <row><cell>12</cell><cell></cell><cell>479001600</cell></row>
+                        <row><cell><ampersand/>c. </cell><cell></cell><cell></cell></row>
                     </tabular>
                 </sidebyside>
                 <p>
-                    <em>Construction of the Table</em>
+                    ...
+                </p>
+                <sidebyside width="30%">
+                    <p>
+                        <em>Demonstration.</em>
+                    </p>
+                </sidebyside>
+                <p>
+                    <ol>
+                        <li>
+                            It is manifest, that one letter or thing has but one position, and two letters have twice the position of 1, viz. once before and once after it. e.g. <em>AB</em>, <em>BA</em>.
+                        </li>
+                    </ol>
+                    - John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 37-40 (65-68)"/>
                 </p>
             </assemblage>
         </subsection>
@@ -745,15 +759,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     <ol>
                         <li>
-                            To write by the method proposed, a certain number of letters are combined to lock and unlock the epistle.  
-                            The differences of writing down the positions [of the letters] ... may be varied to a vast number; ...
+                            To write by the method proposed, a certain number of letters are combined to lock and unlock the epistle.  The differences of writing down the positions [of the letters] ... may be varied to a vast number; ...
                         </li>
                         <li>
                             The order of rows is agreed upon in parting.
                         </li>
                         <li>
-                            The number of letters combined, which is the key, may be expressed in the epistle by some mathematical 
-                            figure, as <m>\scriptsize\triangle</m> for three letters, <m>\Box</m> for 4, etc. or by some private mark.
+                            The number of letters combined, which is the key, may be expressed in the epistle by some mathematical figure, as <m>\scriptsize\triangle</m> for three letters, <m>\Box</m> for 4, etc. or by some private mark.
                         </li>
                         <li>
                             They [the individuals communicating] frame a rectangular table of as many columns as there are letters combined.
@@ -762,8 +774,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             The letters so combined are placed in their natural order along the top of the table.
                         </li>
                         <li>
-                            Having determined of how many lines the table shall consist, the order of combinations agreed upon is set down in a row 
-                            in the first column towards the left hand; as you may see in the following table.
+                            Having determined of how many lines the table shall consist, the order of combinations agreed upon is set down in a row in the first column towards the left hand; as you may see in the following table.
                         </li>
                         <li>
                             The table being thus prepared for writing, they observe the order of the combinations, and write according to its direction.
@@ -772,8 +783,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             When they have placed one letter of every column of all the lines, they begin a new, and so go on until the writing be finished.
                         </li>
                         <li>
-                            And lastly, they take the letters out of the table according to their partitions, as so many barbarous words, upon paper apart and send it to the confidant. 
-                            - John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 68-72 (40-43)"/>
+                            And lastly, they take the letters out of the table according to their partitions, as so many barbarous words, upon paper apart and send it to the confidant. - John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 68-72 (40-43)"/>
                         </li>
                     </ol>
                 </p>

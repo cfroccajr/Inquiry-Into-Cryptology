@@ -5,13 +5,13 @@ def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=5
             shift=[0..25],
             mode=selector(['encipher','decipher'], buttons=True),
             spaces = selector(['yes','no'], buttons=True),
-            m=input_box('sage', label="Message", height=3, width=50, type=str)):
+            m=input_box('sage', label="Message", height=5, width=50, type=str)):
     P = str(p.encode('ascii','replace')).upper()
     C = str(c.encode('ascii','replace')).upper()
     C = C[shift:]+C[:shift]
     Message = str(m.encode('ascii','replace')).upper()
-    print "\nYour Plain alphabet is:  ", str(P).lower()
-    print "Your Cipher alphabet is: ", str(C)
+    print "\nPlain alphabet: \t", str(P).lower()
+    print "Cipher alphabet:\t", str(C)
     if len(C)!=len(P):
         print "Key lengths do not match."
     else:

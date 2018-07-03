@@ -172,33 +172,44 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <alert>N-Gram Counter:</alert>
         </p>
         <p>
-            To use the n-gram counter press the <em>Evaluate</em> button, copy and paste the text you wish to analyze into the 
+            To use the n-gram counter <!-- press the <em>Evaluate</em> button, --> copy and paste the text you wish to analyze into the
             input box, and select 1 for <em>N</em> since we are analyzing single letters.
         </p>
 
         <figure>
             <caption>N-Gram Analysis Tool</caption>
-            <interactive xml:id="interactive-sage-test" platform="sage" width="100%" aspect="4:5">
+            <interactive xml:id="n-gram_sage_in_arab_chapter" platform="sage" width="100%" aspect="7:10">
                 <slate surface="sage">
                     <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
                 </slate>
             </interactive>
         </figure>
 
-        <sage>
+<!--         <sage>
             <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
             <output></output>
-        </sage>
+        </sage> -->
+
         <p>
             <alert>Substitution Cipher Tool:</alert>
         </p>
         <p>
-            To use the substitution cipher tool first press the <em>Evaluate</em> button, then leave the plain text alone and enter the corresponding ciphertext in the box labeled cipher. For a simple shift cipher you can put the alphabet into the cipher box in the regular order and then use the shift drop down menu to select your desired shift.
+            To use the substitution cipher tool to encipher a message <!-- first press the <em>Evaluate</em> button, then --> leave the plain text alone and enter the corresponding ciphertext in the box labeled cipher. For a simple shift cipher you can put the alphabet into the cipher box in the regular order and then use the shift drop down menu to select your desired shift.
         </p>
-        <sage>
+        <figure>
+            <caption>Substitution Cipher Tool</caption>
+            <interactive xml:id="substitution_cipher_tool_in_arab_chapter" platform="sage" width="100%" aspect="7:7">
+                <slate surface="sage">
+                    <xi:include href="sage_code/subst_cipher.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+
+<!--         <sage>
             <input><xi:include href="sage_code/subst_cipher.sage" parse="text"/></input>
             <output>Test</output>
-        </sage>
+        </sage> -->
+
         <exercise>
             <statement>
                 <p>
@@ -268,18 +279,35 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </exercise>
 
             <p><alert>N-Gram Counter:</alert></p>
+            <figure>
+                <caption>N-Gram Analysis Tool</caption>
+                <interactive platform="sage" width="100%" aspect="7:10">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
 
-                <sage>
-                    <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
-                    <output></output>
-                </sage>
+<!--             <sage>
+                <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage> -->
 
             <p><em><alert>Word Counter:</alert></em></p>
 
-                <sage>
+            <figure>
+                <caption>Word Counter Tool</caption>
+                <interactive platform="sage" width="100%" aspect="7:10">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/word_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+<!--                 <sage>
                     <input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
                     <output></output>
-                </sage>
+                </sage> -->
 
         </subsection>
         <subsection xml:id="subsection_falconer_step_two">
@@ -582,19 +610,35 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </exercise>
         <conclusion>
             <p><alert>N-Gram Counter:</alert></p>
+            <figure>
+                <caption>N-Gram Analysis Tool</caption>
+                <interactive platform="sage" width="100%" aspect="7:10">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
 
-                <sage>
-                    <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
-                    <output></output>
-                </sage>
+<!--             <sage>
+                <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage> -->
 
             <p><em><alert>Word Counter:</alert></em></p>
 
-                <sage>
+            <figure>
+                <caption>Word Counter Tool</caption>
+                <interactive platform="sage" width="100%" aspect="7:10">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/word_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+<!--                 <sage>
                     <input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
                     <output></output>
-                </sage>
-
+                </sage> -->
         </conclusion>
     </exercises>
 </chapter>
