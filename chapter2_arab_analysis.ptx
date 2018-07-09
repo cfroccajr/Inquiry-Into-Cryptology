@@ -178,7 +178,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <figure>
             <caption>N-Gram Analysis Tool</caption>
-            <interactive xml:id="n-gram_sage_in_arab_chapter" platform="sage" width="100%" aspect="7:10">
+            <interactive xml:id="n-gram_sage_in_arab_chapter" platform="sage" width="100%" aspect="1:1">
                 <slate surface="sage">
                     <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
                 </slate>
@@ -198,7 +198,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </p>
         <figure>
             <caption>Substitution Cipher Tool</caption>
-            <interactive xml:id="substitution_cipher_tool_in_arab_chapter" platform="sage" width="100%" aspect="7:7">
+            <interactive xml:id="substitution_cipher_tool_in_arab_chapter" platform="sage" width="100%" aspect="1:1">
                 <slate surface="sage">
                     <xi:include href="sage_code/subst_cipher.sage" parse="text"/>
                 </slate>
@@ -230,10 +230,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <title> Falconer's Approach</title>
         <introduction>
             <p>
-                In 1685 John Falconer<idx>Falconer, John</idx>, who we met briefly in <xref ref="section_ancient_ciphers"/>, wrote the second ever published text in English on the subject of cryptology; it has the rather lengthy title <em>Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering</em>.  Beyond this work little is known about him for certain. A descendant of his writing in the nineteenth century claimed that John was the personal cipher keeper for King James II and followed the king into exile in France where he died.  In slim support of this the book is dedicated to the king and addresses it to King James II's secretary of state.  However, no readily available documented evidence exists to independently corroborate his descendant's claims, and in fact there are some tax records for John and his wife, Mary Dalmahoy, in Edinburgh Scotland, from 1695, over six years after James fled to France. <xref ref="cr_crypt_rocca_falconer"/>
+                In 1685 John Falconer<idx>Falconer, John</idx>, who we met briefly in <xref ref="section_ancient_ciphers"/>, wrote the second ever published text in English on the subject of cryptology; it has the rather lengthy title <em>Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering</em>.  Beyond this work little is known about him for certain. A descendant of his writing in the nineteenth century claimed that John was the personal cipher keeper for King James II and followed the king into exile in France where he died.  In slim support of this the book is dedicated to King James II and addressed to the king's secretary of state.  However, no readily available documented evidence exists to independently corroborate his descendant's claims, and in fact there are some tax records for John and his wife, Mary Dalmahoy, in Edinburgh Scotland, from 1695, over six years after James fled to France. <xref ref="cr_crypt_rocca_falconer"/>
             </p>
             <p>
-                In his text John Falconer presents a wide variety of ciphers and for most of them suggestions for how we might attack them.  In this section we will focus on his directions for how to break, or attempt to break, what we now call monoalphabetic substitution ciphers.
+                In his text John Falconer presents a wide variety of ciphers and, for most of them suggestions, for how we might attack them.  In this section we will focus on his directions for how to break, or attempt to break, what we now call monoalphabetic substitution ciphers.
             </p>
         </introduction>
 
@@ -281,7 +281,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p><alert>N-Gram Counter:</alert></p>
             <figure>
                 <caption>N-Gram Analysis Tool</caption>
-                <interactive platform="sage" width="100%" aspect="7:10">
+                <interactive platform="sage" width="100%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
                     </slate>
@@ -297,7 +297,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <figure>
                 <caption>Word Counter Tool</caption>
-                <interactive platform="sage" width="100%" aspect="7:10">
+                <interactive platform="sage" width="100%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/word_analysis.sage" parse="text"/>
                     </slate>
@@ -404,7 +404,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercisegroup>
             <introduction>
                 <p>
-                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you will use the <em>n-gram counter</em>  and <em>word counter</em> to examine the text for the following information:
+                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you can use the <em>n-gram counter</em>, <em>word counter</em>, and <em>string counter</em> at the bottom of the page to help you examine the text for the following information:
                 </p>
             </introduction>
             <exercise xml:id="exercise_freq_count">
@@ -482,7 +482,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
             <solution>
                 <p>
-                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common, next most common are <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c>, and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.  Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently with <c>GS</c> the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, so that <c>O</c> is <c>l</c>.
+                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common, next most common are <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c>, and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.
+                </p>
+                <p>
+                    Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently, and <c>GS</c> is the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  So that <c>GSV</c> and <c>GSZG</c> represent <c>the</c> and <c>that</c>.
+                </p>
+                <p>
+                    We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, so that <c>O</c> is <c>l</c>.
                 </p>
                 <p>
                     At this point we can start writing down the letters we have in the monoalphabetic substitution table (<xref ref="blank_key_table" />).  When you do that you will hopefully notice that the cipher letters are in reverse alphabetic order, so this was likely enciphered with atabash which we learned about in <xref ref="atabash_intro" />.
@@ -528,7 +534,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
             <solution>
                 <p>
-                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.  Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.  When we start writing down the ciphertext we have worked out under the plaintext alphabet (use <xref ref="blank_key_table" />) we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct and that <c>a</c> was shifted to <c>N</c>.
+                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.
+                </p>
+                <p>
+                    Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.
+                </p>
+                <p>
+                    When we start writing down the ciphertext we have worked out under the plaintext alphabet (use <xref ref="blank_key_table" />) we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct and that <c>a</c> was shifted to <c>N</c>.
                 </p>
             </solution>
         </exercise>
@@ -584,7 +596,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </answer>
             <solution>
                 <p>
-                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.  Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet (<xref ref="blank_key_table" />) and look for patterns.  Continuing in this way we can finally arrive at the solution and the key is KEYWORD: SHERLOCKED, key letter: a.
+                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.
+                </p>
+                <p>
+                    Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet (<xref ref="blank_key_table" />) and look for patterns.  Continuing in this way we can finally arrive at the solution and the key is KEYWORD: SHERLOCKED, key letter: a.
                 </p>
             </solution>
         </exercise>
@@ -597,7 +612,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </blockquote>
                 <p>
-                    Find a large piece of typical text written in a language other than English.  Perform an analysis of this text and then create a cheat sheet just like you did for English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />). Finally, encipher a message written in this new language which your classmates can try to decipher using your cheat sheet.
+                    Find a large piece of typical text written in a language other than English; it needs to be native to that language not a translation from another language.  Perform an analysis of this text and then create a cheat sheet just like you did for English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />). Finally, encipher a message written in this new language which your classmates can try to decipher using your cheat sheet.
                 </p>
             </statement>
         </exercise>
@@ -612,7 +627,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p><alert>N-Gram Counter:</alert></p>
             <figure>
                 <caption>N-Gram Analysis Tool</caption>
-                <interactive platform="sage" width="100%" aspect="7:10">
+                <interactive platform="sage" width="100%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
                     </slate>
@@ -628,7 +643,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             <figure>
                 <caption>Word Counter Tool</caption>
-                <interactive platform="sage" width="100%" aspect="7:10">
+                <interactive platform="sage" width="100%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/word_analysis.sage" parse="text"/>
                     </slate>
@@ -639,6 +654,17 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
                     <output></output>
                 </sage> -->
+
+            <p><em><alert>String Counter Tool:</alert></em> You can use this tool to look for specific combinations of letters in you text rather than gathering gerneral information.  This is helpful for looking for prefixes, suffixes, and double letters.</p>
+
+            <figure>
+                <caption>String Counter Tool</caption>
+                <interactive platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/string_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
         </conclusion>
     </exercises>
 </chapter>

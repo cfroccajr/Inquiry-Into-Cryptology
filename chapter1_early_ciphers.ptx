@@ -152,7 +152,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <hint>
                 <p>
                     <ul>
-                        <li> Which letters stand alone, i.e. are one letter words?  Can this tell you something about which letters they represent?</li>
+                        <li> Which letters stand alone, i.e. are there one letter words?  Can this tell you something about which letters they represent?</li>
                         <li> What about two or three letter words?  What might they be?</li>
                         <li> Do some of the letters appear more often than others?</li>
                         <li> Can you think of other properties of words and letters that could help us understand what a message says?</li>
@@ -627,7 +627,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     Another type of monoalphabetic substitution cipher
                     <idx>monoalphabetic substitution cipher</idx> is called <term>atabash</term>
                     <idx>atabash</idx> and first appeared in the bible.  To encipher a message in
-                    atabash you replace <em>a</em> with <em>z</em>, <em>b</em> with <em>y</em>, <em>c</em> with <em>x</em>,
+                    atabash you replace <em>a</em> with <em>Z</em>, <em>b</em> with <em>Y</em>, <em>c</em> with <em>X</em>,
                     and so on.  Fill in the table below with the appropriate cipher alphabet for atabash. Now, try to use your table to encipher the following message with atabash.
                 </p>
                 <xi:include href="table_code/mono_key_table.ptx"/>
@@ -803,7 +803,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <exercise>
             <statement>
                 <p>
-                    Setup a table like <xref ref="cipher_zebra"/> with a plaintext and ciphertext alphabet for a keyword cipher with key letter <em>d</em> and keyword <em>ARNOLD</em>.  Then use it to encipher this quote:
+                    Setup a the blank monoalphabetic sunstitution table in the same way as <xref ref="cipher_zebra"/> with a plaintext and ciphertext alphabet for a keyword cipher with key letter <em>d</em> and keyword <em>ARNOLD</em>.  Then use it to encipher this quote:
                 </p>
                 <blockquote>
                     <p>
@@ -812,6 +812,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </q> - Arnold Schwarzenegger
                     </p>
                 </blockquote>
+                <xi:include href="table_code/mono_key_table.ptx"/>
             </statement>
             <answer>
                 <pre>

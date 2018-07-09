@@ -129,7 +129,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <hint>
                     <p>
                         <ul>
-                            <li>Remember to line up the index <em>c</em> with the capital letters used of the key, her <em>G</em> and <em>V</em>.</li>
+                            <li>Remember to line up the index <em>c</em> with the capital letters used of the key, here <em>G</em> and <em>V</em>.</li>
                             <li>For Alberti, uppercase letters (the outer ring) are the plaintext and lowercase letters are the ciphertext.</li>
                             <li>Because of what was and was not included on the disk you will need to make some choices.</li>
                         </ul>
@@ -211,7 +211,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        To further check your understanding try enciphering the message <em><q>vive la france</q></em> using the key <em>aider</em> and the black (outer) rows in <xref ref="figure_vigenere_table"/>, since there are more letters in the message than the key you will need restart at the beginning of the key when you get to the end.
+                        To further check your understanding try enciphering the message <em><q>vive la france</q></em> using the key <em>aider</em> and the black (outer) rows in <xref ref="figure_vigenere_table"/>, since there are more letters in the message than the key you will need to restart at the beginning of the key when you get to the end.
                     </p>
                 </statement>
                 <hint>
@@ -234,7 +234,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        To further check your understanding try enciphering the message <em><q>escargot</q></em> using the key <em>ail</em>; in <xref ref="figure_vigenere_table"/> use the red (inner) labels for the message and the black (outer) column for the key, since there are more letters in the message than the key you will need restart at the beginning of the key when you get to the end.
+                        To further check your understanding try enciphering the message <em><q>escargot</q></em> using the key <em>ail</em>; in <xref ref="figure_vigenere_table"/> use the red (inner) labels for the message and the black (outer) column for the key, since there are more letters in the message than the key you will need to restart at the beginning of the key when you get to the end.
                     </p>
                 </statement>
                 <hint>
@@ -371,7 +371,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <alert>Comprehension Check:</alert>
                 <ul>
                     <li>
-                        If you hadn't seen the first step in how the name <em><q>Michael</q></em> was enciphered above, then how might you mis interpret the second enciphering?
+                        If you hadn't seen the first step in how the name <em><q>Michael</q></em> was enciphered above, then how might you misinterpret the second enciphering?
                     </li>
                     <li>
                         Why in the final step do you think some of the symbols must be raised or lowered?
@@ -587,6 +587,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p>
                 <alert>Comprehension Check:</alert> It will be easier to follow what is happening in this passage if we write out the message as follows:
             </p>
+            <p>Text for the first cipher method:</p>
             <pre>
                     Plaintext:    a u n o m d e l e t e r n e l
                     Key Letter:   D A U N O M D E L E T E R N E
@@ -598,7 +599,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         Vigen&#x00E8;re uses a <em>D</em> as the key to encipher the first letter, in the first method described where does he get the subsequent letters for the key?
                     </li>
                     <li>
-                        The letter <c>D</c> enciphers <em>a</em> as <em>X</em>, but the <em>a</em> is not in row <em>D</em> so how do we know that the <em>a</em> should be <em>X</em> ?
+                        The letter <em>D</em> enciphers <em>a</em> as <em>X</em>, but the <em>a</em> is not in row <em>D</em> of <xref ref="vigenere_auto_table"/> so how do we know that the <em>a</em> should be <em>X</em> ?
                     </li>
                     <li>
                         At one point Vigen&#x00E8;re uses a key letter of <em>U</em> but there is no row <em>U</em> on his table, looking at how the <em>U</em> enciphers the <em>n</em>, what row is he using in place of <em>U</em>?
@@ -606,6 +607,16 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <li>
                         The <em>a</em> was enciphered as <em>X</em>, but the first letter of the ciphertext is <em>D</em>, also the ciphertext is one character longer than the plaintext, what is the explanation for both of these?  Where did the leading <em>D</em> come from?
                     </li>
+                </ul>
+            </p>
+            <p>Text for the second cipher method:</p>
+            <pre>
+                    Plaintext:    a u n o m d e l e t e r n e l
+                    Key Letter:   D X H E E C O U ...
+                    Ciphertext: D X H E E C O U M ...
+            </pre>
+            <p>
+                <ul>
                     <li>
                         In the second method described he again starts with a key of <em>D</em> but then where does he get the the next key letter <em>X</em>? What about the key letter <em>H</em>? Try to complete the cipher using the second method.
                     </li>
@@ -670,6 +681,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </pre>
                 </answer>
             </exercise>
+            <p>
+                <em><alert>Reflection:</alert></em> If you go back and look carefully at the preceding couple of exercises you will notice that deciphering a message enciphered using the first autokey method is equivalent to second method and vice versa.  In what way does this weaken the cipher?
+            </p>
         </subsection>
     </section>
 
