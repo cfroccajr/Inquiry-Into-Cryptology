@@ -167,14 +167,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "chart_appendix.ptx",
-			"settings":
-			{
-				"buffer_size": 16205,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -473,6 +465,102 @@
 			[
 				"Main PTX Build",
 				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build"
 			]
 		],
 		[
@@ -1300,7 +1388,7 @@
 			]
 		]
 	],
-	"build_varint": "to HTML Folder",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1355,11 +1443,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/user"
+		"/C/GIT/Inquiry-Into-Cryptology/src"
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/glossary.ptx",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp_Guide.tex",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
@@ -1485,13 +1574,11 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/glossary.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/copySample/sample-article.xml",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PesSample"
+		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/copySample/sample-article.xml"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -1541,45 +1628,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "chart_appendix.ptx",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 16205,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PreTeXtual/PreTeXt.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1417.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 24.0
+		"height": 27.0
 	},
 	"input":
 	{
@@ -1608,6 +1664,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
 	"output.exec":
 	{
 		"height": 217.0
@@ -1665,7 +1725,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":

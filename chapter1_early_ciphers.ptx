@@ -127,7 +127,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
         <p>
-            Both of the ciphers described above are called <term>shift ciphers</term><idx>shift ciphers</idx> because of how they move letters along in the alphabet, but do not change their order.
+            Both of the ciphers described above are called <term>shift ciphers</term><idx><h>shift cipher</h></idx><idx><h>cipher</h><h>shift cipher</h></idx> because of how they move letters along in the alphabet, but do not change their order.
         </p>
         <p>
             Try to figure out the message in the passage below which has been <term>enciphered</term><idx>encipher</idx> using a different shift.

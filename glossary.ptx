@@ -31,378 +31,393 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <appendix xml:id="glossary">
-	<title>Glossary</title>
+    <title>Glossary</title>
 
 
 
 
 
-	<p>
-		<dl>
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 	A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-<!-- 			<li>
-				<title>Affine Cipher</title>
-				<p>
-					An <em>affine cipher</em> ...
-					<idx>affine cipher</idx>
-				</p>
-			</li>
+    <p>
+        <dl>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   A   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!--            <li>
+                <title>Affine Cipher</title>
+                <p>
+                    An <em>affine cipher</em> ...
+                    <idx>affine cipher</idx>
+                </p>
+            </li>
  -->
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-			<li>
-				<title>Block Cipher</title>
-				<p>
-					A <em>block cipher</em> repeatedly uses a single key in order to encipher successive pieces of 
-					plaintext.
-					<idx>block cipher</idx>
-				</p>
-			</li>
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   B   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <li>
+                <title>Block Cipher</title>
+                <p>
+                    A <em>block cipher</em> repeatedly uses a single key in order to encipher successive pieces of 
+                    plaintext.
+                    <idx>block cipher</idx>
+                </p>
+            </li>
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  C   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-			<li>
-				<title>Cipher</title>
-				<p>
-					A <em>cipher</em> is a system by which a letter or block of letters in a message 
-					is replaced by another letter or block of letters in a systematic way.
-					<idx>cipher</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Ciphertext</title>
-				<p>
-					The <em>ciphertext</em> is the message you wish to transmit after it has been rewritten in order to 
-					hide its meaning.
-					<idx>ciphertext</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Code</title>
-				<p>
-					A <em>code</em> is a system by which words or phrses in a message
-					are replaced by other words, phrases, or symbols in a systematic way.
-					<idx>code</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Crib</title>
-				<p>
-					In cryptology a <em>crib</em> is a known piece of plaintext which may be compared to as sample 
-					ciphertext in order to aid cryptanalysis.
-					<idx>crib</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Cryptoanalysis</title>
-				<p>
-					<em>Cryptoanalysis</em> is an attempt to compute the key or determine the meaning of a message from the ciphertext.
-					<idx>cryptoanalysis</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Cryptography</title>
-				<p>
-					<em>Cryptography</em> focuses on concealing the meaning of a message.
-					<idx>cryptography</idx>
-				</p>
-			</li>
-
-			<li>
-				<title>Cryptology</title>
-				<p>
-					<em>Cryptology</em> is the science of maintaining secrets by either hiding the meaning or the existence of messages.
-					<idx>cryptology</idx>
-				</p>
-			</li>
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-			<li> 
-				<title>Decipher</title>
-
-				<p>
-					<em>Deciphering</em> is the process by which blocks of ciphertext are replaced by plaintext.
-					<idx>decipher</idx>
-				</p>
-			</li>
-
-		<li> 
-				<title>Decrypt</title>
-				<idx>decrypt</idx>
-			<p>
-				<em>Decrypting</em> is the process by we discover the meaning of a ciphertext without the aid of a cipher key.
-			</p>
-		</li>
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li> 
-				<title>Encipher</title>
-				<idx>encipher</idx>
-			<p>
-				<em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
-			</p>
-		</li>
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li> 
-				<title>Factorial</title>
-				<idx>factorial</idx>
-			<p>
-				Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
-				<me>
-					n!=n(n-1)(n-2)\cdots 2 \cdot 1
-				</me>
-				Note that for a variety of reasons <m>0!=1</m>.
-			</p>
-		</li>
+            <li>
+                <title>Cipher</title>
+                <p>
+                    A <em>cipher</em> is a system by which a letter or block of letters in a message 
+                    is replaced by another letter or block of letters in a systematic way.
+                    <idx>cipher</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Ciphertext</title>
+                <p>
+                    The <em>ciphertext</em> is the message you wish to transmit after it has been rewritten in order to 
+                    hide its meaning.
+                    <idx>ciphertext</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Code</title>
+                <p>
+                    A <em>code</em> is a system by which words or phrses in a message
+                    are replaced by other words, phrases, or symbols in a systematic way.
+                    <idx>code</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Crib</title>
+                <p>
+                    In cryptology a <em>crib</em> is a known piece of plaintext which may be compared to as sample 
+                    ciphertext in order to aid cryptanalysis.
+                    <idx>crib</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Cryptoanalysis</title>
+                <p>
+                    <em>Cryptoanalysis</em> is an attempt to compute the key or determine the meaning of a message from the ciphertext.
+                    <idx>cryptoanalysis</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Cryptography</title>
+                <p>
+                    <em>Cryptography</em> focuses on concealing the meaning of a message.
+                    <idx>cryptography</idx>
+                </p>
+            </li>
+
+            <li>
+                <title>Cryptology</title>
+                <p>
+                    <em>Cryptology</em> is the science of maintaining secrets by either hiding the meaning or the existence of messages.
+                    <idx>cryptology</idx>
+                </p>
+            </li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   D   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+            <li> 
+                <title>Decipher</title>
+
+                <p>
+                    <em>Deciphering</em> is the process by which blocks of ciphertext are replaced by plaintext.
+                    <idx>decipher</idx>
+                </p>
+            </li>
+
+        <li> 
+                <title>Decrypt</title>
+                <idx>decrypt</idx>
+            <p>
+                <em>Decrypting</em> is the process by we discover the meaning of a ciphertext without the aid of a cipher key.
+            </p>
+        </li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   E   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Encipher</title>
+                <idx>encipher</idx>
+            <p>
+                <em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
+            </p>
+        </li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Factorial</title>
+                <idx>factorial</idx>
+            <p>
+                Given a counting number <m>n</m> we define <term><m>n</m>-factorial</term><idx>factorial</idx> as the number of ways in which we can arrange <m>n</m> objects and we calculate it by taking the product of all the consecutive positive integers from <m>n</m> down to 1, and we write:
+                <me>
+                    n!=n(n-1)(n-2)\cdots 2 \cdot 1
+                </me>
+                Note that for a variety of reasons <m>0!=1</m>.
+            </p>
+        </li>
 
-		<li>
-				<title>Frequency Analysis</title>
-				<idx>frequency analysis</idx>
-			<p>
-				<em>Frequency analysis</em> is the process of counting the characters, blocks of characters, or words in a text 
-				in order to determine how many of each there are relative to the entire length of the text.
-			</p>
-		</li>
+        <li>
+                <title>Frequency Analysis</title>
+                <idx>frequency analysis</idx>
+            <p>
+                <em>Frequency analysis</em> is the process of counting the characters, blocks of characters, or words in a text 
+                in order to determine how many of each there are relative to the entire length of the text.
+            </p>
+        </li>
 
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	G   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   G   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
 
 
-		<li>
-				<title>Greatest Common Divisor</title>
-				<idx>greatest common divisor</idx>
-			<p>
-				The <em>greatest common divisor</em> of two integers is the largest positive integer which divides both.  For a variety of reasons it is important to know that it is also defined as the least positive linear combination of the two integers, i.e. 5 is the <m>gcd(15,35)</m> because not larger positive integer divides both 15 and 35 and because <m>5=1\cdot (35) - 2\cdot(15)</m> is the smallest possible positive combination of 15 and 35.  
-			</p>
-		</li>
-
-
-
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-
-		<li>
-				<title>Homophonic Cipher</title>
-				<idx>homophonic cipher</idx>
-			<p>
-
-				A <em>homophonic cipher</em> is a cipher in which a single plaintext letter may be replaced 
-				by multiple different ciphertext letters throughout a message.
-			</p>
-		</li>
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	I   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-
-		<li>
-				<title>Index of Coincidence</title>
-				<idx>index of coincidence</idx>
-			<p>
-				The <em>index of coincidence</em> for a block of text is the probability that two characters 
-				chosen at random are the same.
-			</p>
-		</li>
-
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li>
-				<title>Modular Equivalence</title>
-				<idx>modular equivalence</idx>
-			<p>
-				Given a positive integer <m>n</m> two integers are <em>equivalent modulo <m>n</m></em> 
-				if they have the same remainder when you divide them by <m>n</m>.  Equivalently, two integers 
-				<m>a</m> and <m>b</m> are equivalent modulo <m>n</m> if <m>a-b</m> is divisible by <m>n</m>.  When 
-				this is the case we write <m>a\equiv b\ \pmod{n}</m>
-			</p>
-		</li>
-
-		<li>
-				<title>Monoalphabetic Substitution Cipher</title>
-				<idx>monoalphabetic substitution cipher</idx>
-			<p>
-
-				A <em>monoalphabetic substitution cipher</em> is a cipher in which there is a one-to-one correspondence 
-				between plaintext letters and the cipher text so that a single plaintext letter is always replaced by the same letter, 
-				group of letters, or symbol and every letter, group of letters, or symbol in the ciphertext represents the 
-				same plaintext letter.
-			</p>
-		</li>
-
-		<li>
-				<title>Multiplicative Identity</title>
-				<idx>multiplicative identity</idx>
-			<p>
-				A number <m>a</m> is the <em>multiplicative identity</em> if for all numbers <m>b</m>, 
-				<me>a\cdot b=b\cdot a = b.</me>
-			</p>
-		</li>
-
-		<li>
-				<title>Multiplicative Inverse</title>
-				<idx>multiplicative inverse</idx>
-			<p>
-				See Reciprocal
-			</p>
-		</li>
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-
-		<li>
-				<title>N-Gram</title>
-				<idx>n-gram</idx>
-			<p>
-				An <em>n-gram</em> is a block of <m>n</m> consecutive characters.
-			</p>
-		</li>
-
-		<li>
-				<title>Nomenclator</title>
-				<idx>nomenclator</idx>
-			<p>
-
-				A <em>nomenclator</em> is a system for disguising the meaning of a message which uses both cipher alphabets 
-				and a set of code words.
-			</p>
-		</li>
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li>
-				<title>Pangrams</title>
-				<idx>pangrams</idx>
-			<p>
-				<em>Pangrams</em> are words or sentences containing every letter of the alphabet at least once.
-			</p>
-		</li>
-		<li>
-				<title>Plaintext</title>
-				<idx>plaintext</idx>
-			<p>
-
-				The <em>plaintext</em> is the message you wish to transmit written in a readable form.
-			</p>
-		</li>
-
-		<li>
-				<title>Polyalphabetic Substitution Cipher</title>
-				<idx>polyalphabetic substitution cipher</idx>
-			<p>
-
-				A <em>polyalphabetic substitution cipher</em> is a cipher in which a single plaintext letter maybe replaced by 
-				several differnt ciphertext letters, groups of letters, or symbols and every letter, group of letters, or 
-				symbol in the ciphertext may represent more than one plain text letter.
-			</p>
-		</li>
-
-		<li>
-				<title>Polygraphic Cipher</title>
-				<idx>polygraphic cipher</idx>
-			<p>
-
-				A <em>polygraphic cipher</em> is a cipher in which multiple plaintext characters are 
-				enciphered at a time so that how a character is enciphered depends on which other letters 
-				it is beside.
-			</p>
-		</li>
-
-		<li>
-				<title>Polyphonic Cipher</title>
-				<idx>polyphonic cipher</idx>
-			<p>
-
-				A <em>polyphonic cipher</em> is a cipher in which a single ciphertext letter may be represent 
-				multiple different plaintext letters throughout a message.
-			</p>
-		</li>
-
-		<li>
-				<title>Prime Number</title>
-				<idx>prime number</idx>
-			<p>
-				A positive integer is <em>prime</em> if it has precisely two divisors, one and its self.
-			</p>
-		</li>
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li>
-				<title>Reciprocal</title>
-				<idx>reciprocal</idx>
-				<idx>multiplicative inverse</idx>
-			<p>
-				The <em>reciprocal</em> (or <em>multiplicative inverse</em>) of a number <m>x</m> is some 
-				number <m>y</m> such that <m>x\cdot y=1</m>.
-			</p>
-		</li>
-
-		<li>
-				<title>Relatively Prime Numbers</title>
-				<idx>relatively prime</idx>
-			<p>
-				Two integers are <em>relatively prime</em> if there greatest common divisor is one.  In this 
-				case we may say that one of the integers is <em>prime</em> to the other.
-			</p>
-		</li>
-
-
-
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li>
-				<title>Steganography</title>
-				<idx>steganography</idx>
-			<p>
-				<em>Steganography</em> focuses on concealing the existence of a message.
-			</p>
-		</li>
-
-		<li>
-				<title>Stream Cipher</title>
-				<idx>stream cipher</idx>
-			<p>
-				A <em>stream cipher</em> uses a sequence (or stream) of different keys in order to encipher successive pieces of 
-				plaintext.
-			</p>
-		</li>
-
-		<li>
-				<title>Substitution Cipher</title>
-				<idx>substitution cipher</idx>
-			<p>
-				A <em>substitution cipher</em> changes individual characters or groups of characters, but does not change their position.
-			</p>
-		</li>
-
-<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
-
-		<li>
-				<title>Transposition Cipher</title>
-				<idx>transposition cipher</idx>
-			<p>
-				A <em>transposition cipher</em> rearranges the positions of characters, but does not change the characters themselves.
-			</p>
-		</li>
-
-
-		</dl>
-	</p>
+        <li>
+                <title>Greatest Common Divisor</title>
+                <idx>greatest common divisor</idx>
+            <p>
+                The <em>greatest common divisor</em> of two integers is the largest positive integer which divides both.  For a variety of reasons it is important to know that it is also defined as the least positive linear combination of the two integers, i.e. 5 is the <m>gcd(15,35)</m> because not larger positive integer divides both 15 and 35 and because <m>5=1\cdot (35) - 2\cdot(15)</m> is the smallest possible positive combination of 15 and 35.
+            </p>
+        </li>
+
+
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   H   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <li>
+                <title>Homophonic Cipher</title>
+                <idx>homophonic cipher</idx>
+            <p>
+
+                A <em>homophonic cipher</em> is a cipher in which a single plaintext letter may be replaced 
+                by multiple different ciphertext letters throughout a message.
+            </p>
+        </li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   I   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <li>
+                <title>Index of Coincidence</title>
+                <idx>index of coincidence</idx>
+            <p>
+                The <em>index of coincidence</em> for a block of text is the probability that two characters 
+                chosen at random are the same.
+            </p>
+        </li>
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   M   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Modular Equivalence</title>
+                <idx>modular equivalence</idx>
+            <p>
+                Given a positive integer <m>n</m> two integers are <em>equivalent modulo <m>n</m></em> 
+                if they have the same remainder when you divide them by <m>n</m>.  Equivalently, two integers 
+                <m>a</m> and <m>b</m> are equivalent modulo <m>n</m> if <m>a-b</m> is divisible by <m>n</m>.  When 
+                this is the case we write <m>a\equiv b\ \pmod{n}</m>
+            </p>
+        </li>
+
+        <li>
+                <title>Monoalphabetic Substitution Cipher</title>
+                <idx>monoalphabetic substitution cipher</idx>
+            <p>
+
+                A <em>monoalphabetic substitution cipher</em> is a cipher in which there is a one-to-one correspondence
+                between plaintext letters and the cipher text so that a single plaintext letter is always replaced by the same letter,
+                group of letters, or symbol and every letter, group of letters, or symbol in the ciphertext represents the
+                same plaintext letter.
+            </p>
+        </li>
+
+        <li>
+                <title>Multiplicative Identity</title>
+                <idx>multiplicative identity</idx>
+            <p>
+                A number <m>a</m> is the <em>multiplicative identity</em> if for all numbers <m>b</m>,
+                <me>a\cdot b=b\cdot a = b.</me>
+            </p>
+        </li>
+
+        <li>
+                <title>Multiplicative Inverse</title>
+                <idx>multiplicative inverse</idx>
+            <p>
+                See Reciprocal
+            </p>
+        </li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   N   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <li>
+                <title>N-Gram</title>
+                <idx>n-gram</idx>
+            <p>
+                An <em>n-gram</em> is a block of <m>n</m> consecutive characters.
+            </p>
+        </li>
+
+        <li>
+                <title>Nomenclator</title>
+                <idx>nomenclator</idx>
+            <p>
+
+                A <em>nomenclator</em> is a system for disguising the meaning of a message which uses both cipher alphabets
+                and a set of code words.
+            </p>
+        </li>
+        <li>
+            <title>Null</title>
+            <idx>null</idx>
+            <p>
+                A <em>null</em> is an extra character added to a cipher text to increase confusion.  It may consist of extra characters added throughout the ciphertext designed to alter frequencies or characters added to the end of message to disguise the length of the message.
+            </p>
+        </li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   P   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Pangrams</title>
+                <idx>pangrams</idx>
+            <p>
+                <em>Pangrams</em> are words or sentences containing every letter of the alphabet at least once.
+            </p>
+        </li>
+        <li>
+                <title>Plaintext</title>
+                <idx>plaintext</idx>
+            <p>
+
+                The <em>plaintext</em> is the message you wish to transmit written in a readable form.
+            </p>
+        </li>
+
+        <li>
+                <title>Polyalphabetic Substitution Cipher</title>
+                <idx>polyalphabetic substitution cipher</idx>
+            <p>
+
+                A <em>polyalphabetic substitution cipher</em> is a cipher in which a single plaintext letter maybe replaced by 
+                several differnt ciphertext letters, groups of letters, or symbols and every letter, group of letters, or 
+                symbol in the ciphertext may represent more than one plain text letter.
+            </p>
+        </li>
+
+        <li>
+                <title>Polygraphic Cipher</title>
+                <idx>polygraphic cipher</idx>
+            <p>
+
+                A <em>polygraphic cipher</em> is a cipher in which multiple plaintext characters are 
+                enciphered at a time so that how a character is enciphered depends on which other letters 
+                it is beside.
+            </p>
+        </li>
+
+        <li>
+                <title>Polyphonic Cipher</title>
+                <idx>polyphonic cipher</idx>
+            <p>
+
+                A <em>polyphonic cipher</em> is a cipher in which a single ciphertext letter may be represent 
+                multiple different plaintext letters throughout a message.
+            </p>
+        </li>
+
+        <li>
+                <title>Prime Number</title>
+                <idx>prime number</idx>
+            <p>
+                A positive integer is <em>prime</em> if it has precisely two divisors, one and its self.
+            </p>
+        </li>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   R   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Reciprocal</title>
+                <idx>reciprocal</idx>
+                <idx>multiplicative inverse</idx>
+            <p>
+                The <em>reciprocal</em> (or <em>multiplicative inverse</em>) of a number <m>x</m> is some 
+                number <m>y</m> such that <m>x\cdot y=1</m>.
+            </p>
+        </li>
+
+        <li>
+                <title>Relatively Prime Numbers</title>
+                <idx>relatively prime</idx>
+            <p>
+                Two integers are <em>relatively prime</em> if there greatest common divisor is one.  In this 
+                case we may say that one of the integers is <em>prime</em> to the other.
+            </p>
+        </li>
+
+
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   S   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+            <title>Shift cipher</title>
+            <idx><h>cipher</h><h>shift cipher</h></idx>
+            <idx><h>shift cipher</h></idx>
+            <p>
+                <em>Shift Cipher</em> generally refers to a monoalphabetic cipher in which the order of letters is not changed in the ciphertext each letter is just replaced with a letter a fixed distance further along in the alphabet.
+            </p>
+        </li>
+        <li>
+                <title>Steganography</title>
+                <idx>steganography</idx>
+            <p>
+                <em>Steganography</em> focuses on concealing the existence of a message.
+            </p>
+        </li>
+
+        <li>
+                <title>Stream Cipher</title>
+                <idx>stream cipher</idx>
+            <p>
+                A <em>stream cipher</em> uses a sequence (or stream) of different keys in order to encipher successive pieces of 
+                plaintext.
+            </p>
+        </li>
+
+        <li>
+                <title>Substitution Cipher</title>
+                <idx>substitution cipher</idx>
+            <p>
+                A <em>substitution cipher</em> changes individual characters or groups of characters, but does not change their position.
+            </p>
+        </li>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   T   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <li>
+                <title>Transposition Cipher</title>
+                <idx>transposition cipher</idx>
+            <p>
+                A <em>transposition cipher</em> rearranges the positions of characters, but does not change the characters themselves.
+            </p>
+        </li>
+
+
+        </dl>
+    </p>
 
 
 
