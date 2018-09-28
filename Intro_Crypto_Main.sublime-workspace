@@ -518,6 +518,102 @@
 					"Windows Main PTX Build"
 				],
 				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
 					"Packages/PreTeXtual/PreTeXt.sublime-build",
 					""
 				],
@@ -1447,6 +1543,11 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/Arabic_cipher_dictionary_shell.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Vocab and Reading Quiz pages 26 to 44.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Basic Ciphers Group Exam - V2.tex",
+		"/C/GIT/Inquiry-Into-Cryptology/src/analysis_cell_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/glossary.ptx",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex",
@@ -1569,12 +1670,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_mathematical_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/junk.ptx",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/Junk2.ptx",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_backmatter.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/glossary.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/PresSample.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/MBXPresentation/copySample/sample-article.xml"
+		"/Users/cfroccajr/Documents/CryptoText/tmp/junk.ptx"
 	],
 	"find":
 	{
