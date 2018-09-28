@@ -1539,10 +1539,13 @@
 	},
 	"expanded_folders":
 	[
-		"/C/GIT/Inquiry-Into-Cryptology/src"
+		"/C/GIT/Inquiry-Into-Cryptology/src",
+		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
+		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/Arabic_cipher_dictionary_shell.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Vocab and Reading Quiz pages 26 to 44.tex",
@@ -1668,9 +1671,7 @@
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers copy.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/chapter1_early_ciphers.mbx",
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter6_mathematical_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/tmp/junk.ptx"
+		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx"
 	],
 	"find":
 	{
@@ -1688,6 +1689,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<slate",
+			"surface=\"sage\"",
+			"<interactive ",
 			"mhmd",
 			"<hint",
 			"<exercises",

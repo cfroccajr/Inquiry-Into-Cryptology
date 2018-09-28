@@ -281,33 +281,33 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <p><alert>N-Gram Counter:</alert></p>
             <figure>
                 <caption>N-Gram Analysis Tool</caption>
-                <interactive platform="sage" width="100%" aspect="1:1">
+                <interactive platform="sage" width="125%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/ngram_analysis.sage" parse="text"/>
                     </slate>
                 </interactive>
             </figure>
 
-<!--             <sage>
-                <input><xi:include href="sage_code/ngram_analysis.sage" parse="text"/></input>
-                <output></output>
-            </sage> -->
+            <p><alert>String Analyzer:</alert></p>
+            <figure>
+                <caption>String Analyzer Tool</caption>
+                <interactive platform="sage" width="125%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/string_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
 
             <p><em><alert>Word Counter:</alert></em></p>
 
             <figure>
                 <caption>Word Counter Tool</caption>
-                <interactive platform="sage" width="100%" aspect="1:1">
+                <interactive platform="sage" width="125%" aspect="1:1">
                     <slate surface="sage">
                         <xi:include href="sage_code/word_analysis.sage" parse="text"/>
                     </slate>
                 </interactive>
             </figure>
-
-<!--                 <sage>
-                    <input><xi:include href="sage_code/word_analysis.sage" parse="text"/></input>
-                    <output></output>
-                </sage> -->
 
         </subsection>
         <subsection xml:id="subsection_falconer_step_two">
@@ -390,8 +390,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Looking one last time at the text which you have been using identify common prefixes 
-                        and suffixes (what Falconer called <em>propositions and terminations</em>) within the text.  
+                        Looking one last time at the text which you have been using identify common prefixes
+                        and suffixes (what Falconer called <em>propositions and terminations</em>) within the text.
                         Are you finding any of the examples which he gave?
                     </p>
                 </statement>
