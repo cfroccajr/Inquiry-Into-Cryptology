@@ -1,0 +1,489 @@
+%!TEX root = Cryptology Workbook.tex
+
+\chapter{Monoalphabetic Substitution Ciphers}\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Mono Page commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand \MonoEncipheringPage [1]{
+    \plaintext\\
+    #1
+    \vfill
+    \alphatable{Plain}{Cipher}\vfill
+    \ciphertext\\\Anslines{10}{6}\vfill\pagebreak}
+
+
+\newcommand \MonoDecipheringPage [1]{
+    \ciphertext\\
+    #1
+    \vfill
+    \alphatable{Plain}{Cipher}\vfill
+    \plaintext\\\Anslines{10}{6}\vfill\pagebreak}
+
+\newcommand \MonoAnalysisPage [1]{
+    \ciphertext\\
+    #1
+    \vfill
+    \plaintext\\\Anslines{10}{6}\vfill\pagebreak\analysispage\pagebreak}
+
+
+\section{Our First Cipher}
+
+\vfill
+
+\texttt{
+\begin{tabular}{llllllllllllllll}
+VGH & THT & CMY & HOG & CRC & BWT & HMF & AJC & UZN & RBY & HOG & CRV & GHT & YHO & GCR \\
+ZNR & JTS & WUD & HRT & VZR & HVH & MFN & WVA & JCU & ZNR & BBC & KCV & HMF & AMU & BWO \\
+KHY & AVC & KCV & VCR & TAM & BVG & CMZ & RHV & HMF & BNZ & MVG & CRC & TVN & DVG & CAK \\
+OGA & SCV & HMN & RBC & RVG & HTA & RRA & MFC & LCM & VND & VGC & AKO & GAS & CVV & GCM \\
+DNR & LTU & NWR & YHO & GCR & AKO & GAS & CVV & GHT & YHO & GCR & AMB & VGC & NVG & CRL \\
+NMN & AKO & GAS & CVH & YYH & OGC & RTZ & CZH & KKT & VWB & UGA & TAT & VRW & YVW & RCV \\
+GAV & ZCY & AMC & QOK & NHV & VNY & RAY & JHV & AMB & DHF & WRC & NWV & VGC & LCT & TAF \\
+CGN & ZCX & CRV & GHT & HTM & NVH & MFC & MCR & AKV & RWC & VGC & RCA & RCV & CYG & MHY \\
+AKK & UVZ & CMV & UTH & QDA & YVN & RHA & KBH & DDC & RCM & VLN & MNA & KOG & ASC & VHY \\
+TWS & TVH & VWV & HNM & YHO & GCR & TAM & BBC & OCM & BHM & FNM & GNZ & VGC & UAR & CWT \\
+CBV & GCU & YNW & KBS & CLA & BCW & MSR & CAJ & ASK & CHM & FCM & CRA & KGN & ZCX & CRL \\
+NMN & AKO & GAS & CVH & YYH & OGC & RTY & AMS & CYR & AYJ & CBZ & HVG & TNL & CTH & LOK \\
+CAM & BXC & RUN & KBV & CYG & MHP & WCT & HMO & ARV & HYW & KAR & ZHV & GVG & CWT & CND \\
+DRC & PWC & MYU & AMA & KUT & HTH & TNW & RDH & RTV & VNN & K \\
+\end{tabular}}
+
+\vfill
+
+This is a narrative outlining the steps we might go through in order
+to solve this first cipher.  It will hopefully give you
+an idea of the sort of work and steps that you may go through in analyzing a cipher.\vsp{10}
+
+We begin with a basic frequency analysis, counting how many times
+each character appears, and find that ``C'', ``V'', and ``H'' are
+most common.  This leads us to guess that \bc C=e, V=t, and H=a\ec
+since ``e'', ``t'', and ``a'' are the three most common letters in
+English.
+
+Next we look for repeated strings of characters.  We find, among
+others, that ``VGC'' appeared very frequently.  Based on what we did
+before this would be ``t\_e'' and so it appears that \bc G=h. \ec
+
+The next step is a digraph analysis, that is we look at two
+letter combinations.  We find that ``CR''=``e\_'' and
+``RC''=``\_e'' are very common and comparing this to the
+table of common digraphs we guess that \bc R=r. \ec  
+
+
+\pagebreak
+
+We also find that ``VH'' which is
+``ta'' was more common than it should be and thus one of our
+previous letter assignments is perhaps wrong.  Going back to our
+repeated strings we find ``VGHT'' in a couple of places and when we
+look at common words starting with ``th'' that could fit in for
+``VGHT'' the only one that really works is ``this.''  Therefore \bc
+H$\neq$a, H=i, and T=s.\ec  Finally, the digraph ``CM''=``e\_'' is
+very frequent so should represent either ``er'' or ``en.''  Since,
+``er''=``CR'' we conclude that \bc M=n \ec
+
+Going back to repeated strings we find that ``HMF''=``in\_'' appears
+in a number of places and so it is likely that \bc F=g. \ec Finally,
+we know ``a'' should be represented by a common letter and the only
+really common cipher letter that is not used is ``A'' so \bc A=a.\ec
+
+At this point we have nine possible substitutions, \bc C=e, V=t,
+G=h, R=r, H=i, T=s, M=n, F=g, and A=a, \ec which we have some
+confidence in. Now we need to write out lines of the message filling
+in what we have and looking for words we can recognize.  As a result
+we find:
+\begin{itemize}
+    \item ZRHVHMG = \_riting so we get Z=w
+    \item AMB = an\_ and is a common trigraph so B=d
+    \item WTHMF = \_sing and BWOKHYAVC = d\_pli\_ate so we get W=u
+    and Y=c
+    \item KCVVCR = \_etter so K=l
+    \item AKOGASCV = al\_ha\_et and YHOGCR = ci\_her so O=p and S=b
+    \item ZNRB = w\_rd so N=o
+    \item ARRAMFCLCMV = arrange\_ent so L=m
+    \item ND = o\_ and DNRLT = \_orms so D=f
+    \item AMU = an\_ and UNWR = \_our and TVWBU = stud\_ so U=y
+    \item JCU = \_ey and YRAYJ = crac\_ and ZNRJ = wor\_ so J=k
+    \item CQOKNHV = e\_ploit so Q=x
+\end{itemize}
+Now the only letters left to figure out are ``P'' and ``X.'' Looking
+for ``P's'' we see that there are only two and they are both
+followed by ``W''=``u,'' so it looks like \bc P=q \ec and this is
+confirmed by \bc DRCPWCMYU = frequency. \ec  Then scanning through
+what we have for a message we see \bc XCRU = \_ery \ec and thus \bc
+X=v \ec fills in our last unknown letter very nicely.\vsp{10}
+
+\vfill
+
+\begin{quote}``This is enciphered using a keyword cipher.  This cipher works buy
+first writing out a key word, deleting any duplicate letters, and
+then writing down the rest of the alphabet in order.  This
+arrangement of the alphabet then forms your cipher alphabet.  This
+cipher and the other monoalphabetic ciphers we will study has a
+structure that we can exploit to crack it and figure out the
+message.  However this is not in general true.  There are
+technically twenty six factorial different monoalphabetic
+substitution ciphers and depending on how they are used they could
+be made unbreakable.  In general however monoalphabetic ciphers can
+be cracked with some simple and very old techniques, in particular
+with the use of frequency analysis is our first tool.''\end{quote}
+
+\vfill
+
+    \pagebreak
+
+    \noindent%
+    Sample Keyword Analysis:
+    \bc\fbox{\includegraphicspdf{5.34in}{6.75in}{SampleMonoP1.jpg}}\ec
+
+
+    \pagebreak
+
+    \noindent%
+    Sample Keyword Analysis:
+
+    \bc\fbox{\includegraphicspdf{4.75in}{6in}{SampleMonoP2.jpg}}\ec
+
+    The tables here are really for the first part of our analysis.  The ``Frequency Analysis'' and ``Repeated Strings'' tables are for keeping track of the count of the letter frequencies and for making notes on which strings we come across most often.  The contact table is used to make an accurate count of repeated digraphs (two letter combinations).  The first letter goes on the right and the second along the top, the number of times the digraph appears is counted in the box where row and column intersect.
+
+    \cleardoublepage
+
+
+
+
+\section{Additive Ciphers}
+
+\subsection{Introduction}
+
+Additive ciphers, sometimes called shift ciphers, are a very old and simple form of encipherment.  
+The idea is to shift the alphabet along a fixed number of spaces to get the cipher alphabet, the 
+alphabet we use to make our message.  So, for example, if we decide to use a shift of 3 a plaintext ``a'' would become a cipher text ``D'', plaintext ``b'' would become a cipher text ``E'', ``c'' becomes ``F'', ``d'' becomes ``G'' and so on.  The complete cipher and plain text alphabets would look like this:\vsp{10}
+    \setlength{\extrarowheight}{5pt}
+    \setvarcolwidth{29}{\textwidth}
+    \setmultvcw{3}
+    \noindent%
+    \begin{tabular}{|C{\MVCW}|*{26}{C{\VCW}|}}\hline
+    Plain & a& b& c& d& e& f& g& h& i& j& k& l& m& n& o& p& q& r& s& t& u& v& w& x& y& z\\\hline
+    Cipher & D& E& F& G& H& I& J& K& L& M& N& O& P& Q& R& S& T& U& V& W& X& Y& Z& A& B& C\\\hline
+    \end{tabular}
+    \setlength{\extrarowheight}{0pt}\vsp{10}
+    
+\noindent%
+So, enciphering ``hello world'' we get ``KHOOR ZRUOG'' and if we decipher ``JRRG MRE'' we get ``good job.''\footnote{Notice that here we are using, and we will continue to use the convention that plain text is written in lower case and cipher text is written in upper case.} 
+
+A mathematical way of looking at this type of cipher is to change each character to a number
+\[a\rightarrow 1,\ b\rightarrow 2,\ c\rightarrow 3,\ \cdots\ y\rightarrow 25,\ z\rightarrow 26\]
+then think of the shift by 3 spaces as adding three to each number to get
+\[a\rightarrow 4,\ b\rightarrow 5,\ c\rightarrow 6,\ \cdots\ y\rightarrow 2,\ z\rightarrow 3\]
+(notice that when you go beyond 26 you must wrap back around to the beginning) and finally change that number into the corresponding letter in the alphabet 
+\[a\rightarrow 4\rightarrow D,\ b\rightarrow 5\rightarrow E,\ c\rightarrow 6\rightarrow F,\ \cdots\ y\rightarrow 2\rightarrow B,\ z\rightarrow 3\rightarrow C\]
+which gives the set of pairs we have above.  Deciphering is done the same way except you subtract 3 instead of adding.
+
+On a final note shift ciphers are can very easy to analyze even with a small amount to information.  This is because once you do a frequency count and have a guess at which cipher text letter represents plain text ``e'' that tells you the shift.  For example if the frequency count tells you that ``e'' is represented by ``J'' then you know the shift is by 5 and then you can write down the alphabets and decipher the message.
+
+\vfill
+
+\pagebreak
+
+\subsection{Enciphering \& Deciphering}
+
+%%%%%%%%%%%%%%%%%%%%%%% Enchipher Additive %%%%%%%%%%%%%%%%%%%%%%%%
+\MonoEncipheringPage{Encipher using a shift of 7.
+\begin{quote}
+``ÓIn a infinite universe everything is possible but most things are unlikely.''
+\end{quote}}
+
+
+\MonoEncipheringPage{Encipher using a shift of 15.
+\begin{quote}
+``Computers are useless, they can only give you answers.Ó''- Pablo Picasso
+\end{quote}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% Decipher Additive %%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoDecipheringPage{Additive Cipher with a shift of 4:%
+\bc \texttt{
+\begin{tabular}{llllllllllllllll}
+LYQ & ERW & EVI & RSX & TVS & YHS & JXL & IMV & ERG & IWX & SVW & ERH & VEV & IPC & MRZ \\
+MXI & XLI & QVS & YRH & JSV & HMR & RIV & HSY & KPE & WEH & EQW \\
+\end{tabular}}\ec}
+
+\MonoDecipheringPage{Additive cipher with a shift of 5:%
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+MJM & FXF & QQY & MJA & NWY & ZJX & NIN & XQN & PJF & SIS & TSJ & TKY & MJA & NHJ & XNF \\
+IRN & WJX & NWB & NSX & YTS & HMZ & WHM & NQQ \\
+\end{tabular}}\ec}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cryptanalysis Additive %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Analysis}
+
+\MonoAnalysisPage{\bc \texttt{
+\begin{tabular}{llllllllllllllll}
+ABC & XQL & QAN & WZM & DMZ & QOV & WZI & VKM & KIV & JMN & QFM & LLW & VEW & WL \\
+\end{tabular}}
+\ec}
+
+\MonoAnalysisPage{\bc \texttt{
+\begin{tabular}{llllllllllllllll}
+QDX & OJM & DJP & NRV & MMD & JMN & RDI & ADM & NOV & IYO & CZI & BJO & JRV & MRC & DGZ \\
+YZA & ZVO & ZYR & VMM & DJM & NBJ & OJR & VMA & DMN & OVI & YOC & ZIN & ZZF & OJR & DIN \\
+PIO & UPW & XOC & ZVM & OJA & RVM & NOM & VOZ & BDX & VNN & ZNN & HZI & ON \\
+\end{tabular}}
+\ec}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+JXU & SBE & DYD & WEV & XKC & QDI & YIE & DCE & IJE & VJX & UBY & IJI & EVJ & XYD & WIJ \\
+EME & HHO & QRE & KJV & HEC & ISY & UDS & UQB & EDW & MYJ & XRU & XQL & YEK & HSE & DJH \\
+EBW & UDU & JYS & UDW & YDU & UHY & DWJ & HQD & IFB & QDJ & UTX & UQT & ISE & CFK & JUH \\
+FEU & JHO & QDT & JXU & KDH & UIJ & HQY & DUT & WHE & MJX & EVF & BQI & JYS & VBE & MUH \\
+IBU & MYI & JXE & CQI \\
+\end{tabular}}
+\ec}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Enciphering Multiplicative %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Multiplicative}
+\pagebreak
+
+\MonoEncipheringPage{Encipher using a multiplier of 15.
+\begin{quote}
+``Only two things are infinite, the universe and human stupidity, and IÕm not sure
+about the former.'' - Albert Einstein
+\end{quote}}
+
+\MonoEncipheringPage{Encipher using a multiplier of 21.
+\begin{quote}
+"Democracy is the process by which the people are free to choose the man who will
+get the blame'' - Laurance J. Peter \end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Deciphering Multiplicative %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoDecipheringPage{Multiplier of 25:\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+KLU & KTF & RUY & VDY & LFY & SUG & KTX & UQL & SVQ & GKH & VUH & NAQ & GFR & YFK & LUQ \\
+GWK & LGF & YLF & NAM & YOQ & LSU & BWQ & FQL & SVQ & GWK & DUH & QUG & YYM & QNL & U \\
+\end{tabular}}
+\ec}
+
+\MonoEncipheringPage{Multiplier of 19:\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+OTO & AQR & OCW & XYC & WTY & YAI & RPY & IWE & SPW & TYY & AXY & UFY & FIW & ROC & WPD \\
+QSP & IWS & WQK & IST & WWO & DUO & FWP & YFE & VID & EVO & TT \\
+\end{tabular}}
+
+\ec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cryptanalysis Multiplicative %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+DLA & KCH & KAX & DGC & HCV & DOC & XAC & XRA & RGT & GHQ & DCQ & ADL & ANV & CND & OAH \\
+DEV & GTA & EAU & NIO & GDL & CYD & LUT & GHQ & UKN & CII & OCN & FIY & QQA & IDI & URU \\
+KWC & VIX & GNG & DCH & RED & CPA & UFM & GNA & FGH & ILA & AXU & RUH & XUD & NGK & WLA \\
+NPA & ND \\
+\end{tabular}}
+
+\ec}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+CDE & PSR & SCV & KMI & FFC & SJC & XOO & EKF & SIX & XEB & CVJ & XTI & XEV & SON & SAC \\
+IDN & SFO & EVQ & EGY & IVX & XEI & VVE & QBE & FXT & SFS & OXE & BQE & GFD & CBS & FCX \\
+IFG & JVS & F \\
+\end{tabular}}\ec}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+RBK & MWV & GXN & YHH & KXK & JQK & TKR & IKK & JWR & BYJ & ERB & WRM & YEB & REG & IXG \\
+JEW & JNW & RBY & JER & BWR & QWJ & JGR & DGU & UYT & PCE & GIX & GJE & YUR & BWR & IBK \\
+JWR & BYJ & ERB & WRQ & WJJ & GRD & GUU & YTP & CEG & IXG & JEE & GKU & IXG & JEY & ROU \\
+OWP & PCR & OXJ & UGO & RRG & TKY & MDG & UUY & TPK & RGE & KRW & RGX & XKD & WYX & NGO \\
+EPW & UWN & WMU \\
+\end{tabular}}
+\ec}
+
+\cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Enciphering Affine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Affine}
+\pagebreak
+
+\MonoEncipheringPage{Encipher using a multiplier of 11 and a shift
+of 13.
+\begin{quote}
+``ÓI like dead lines. I like the whooshing noise they make as they go by.'' - Douglas
+Adams
+\end{quote}}
+
+\MonoEncipheringPage{Encipher using a multiplier of 3 and a shift
+of 19.
+\begin{quote}
+``Men stumble over the truth from time to time, but most pick themselves up and hurry
+off as if nothing happened.'' - Sir Winston Churchill\end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Deciphering Affine %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoDecipheringPage{Multiplier of 7 and the shift of 10.\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+ONS & DUT & KPL & TNS & RSK & RPS & KZD & KFT & NSF & DUF & SPQ & DLT & NQT & UOQ & MQD \\
+QTN & SUM & TQO & KWQ & DUD & TNS & QAL & USD & ESM & TKK & LAR & QDL & MQU & LCS & MXA \\
+TUM & UTT & NSG & KLK & ZTN & SEQ & TNK & PUE & MKF & TNS & GKL & KZT & NSR & FKT & SMT \\
+QDT & MUD & ONK & WCK & ALK & DTX & SPU & SHS & YAS & DTU & DEF & UMR \\
+\end{tabular}}
+
+\ec}
+
+\MonoDecipheringPage{Multiplier of 23 and a shift of 9.\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+VHY & YHP & SDY & PSN & QPG & HVV & PGA & FYH & ALR & KPW & PSA & BSP & RRK & FAA & PWP \\
+RHA & KAK & TVD & TYU & TDP & SFG & FHS & LDX & SWF & LFQ & ATG & SPP & SDX & DFS & TGA \\
+IFS & NTG & HSA & KTD & BL \\
+\end{tabular}}
+\ec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cryptanalysis Affine %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+TOX & YNK & XUT & JBJ & ITQ & QYV & BXM & NRQ & YVD & ORX & UAV & RXU & TJX & YBL & RQD \\
+YBT & UCD & VBK & DUO & DYY & DZU & AXU & UAV & ZIT & UTK & HRV & XKB & XKL & UAT & KHR \\
+VIV & YLQ & VJX & NBV & UDU & AVT & KVS & WVI & UVL & VTU & TBT & KCT & BUT & KHN & TBA \\
+XQY & VOI & DRA & THA & VIR & XUA & VRX & UTJ & BVU & QVY & Y \\
+\end{tabular}}
+\ec}
+
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+MLP & INJ & JTH & PIL & IJQ & IOL & IIO & HPN & RFL & YNL & PIO & JBV & MHJ & PIN & RFL \\
+YHO & LQJ & UJW & PJJ & YHO & LUJ & PHY & XJE & JJY & UHP & HIJ & QEZ & OJW & PHP & IJW \\
+LYQ & YRN & NHP & OIR & NHI & OQW & LNI & OLI & PIL & IJF & JYI & FLW & TIN & LHY \\
+\end{tabular}}\ec}
+
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+DFM & QGG & XIF & ZUO & DUE & ROF & GSN & XTM & WEZ & MGB & CED & FMC & EDU & IUE & ROE \\
+RXE & NND & FGO & MWF & GCE & YMM & CVD & AVZ & GVF & MIU & MOD & FMX & ERQ & MZE & NZM \\
+EXA & MLU & ODO & DFE & DCE & DFM & CED & UIU & ERO & FEH & MCE & XME & IGH & MRE & RDW \\
+UDF & DFM & XMH & UND & GXE & ZYM & RDF & MOV & UZU & DER & XIG & RBU & RMC & ERU & RDF \\
+MTG & RXO & GBF & MNN & ODE & SQS & ODU & RM \\
+\end{tabular}}\ec}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Enciphering Keyword %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Keyword}
+\pagebreak
+
+\MonoEncipheringPage{Encipher using the keyword ``infuse'' and key
+letter ``g''.
+\begin{quote}
+``Men stumble over the truth from time to time, but most pick themselves up and hurry
+off as if nothing happened.'' - Sir Winston Churchill
+\end{quote}}
+
+\MonoEncipheringPage{Encipher using the keyword ``doubt'' and
+key letter ``s''.
+\begin{quote}
+``Common sense is the collection of prejudices acquired by age eighteen.'' - Albert
+Einstein (1879 - 1955), (attributed)
+\end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Deciphering Keyword %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoDecipheringPage{The key word is ``juice'' and the key letter is ``c'':\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+EIK & BRP & HYW & AYS & IBQ & PGB & HBQ & YQB & LKP & ZRQ & PQR & MBU & BQW & BPK & LQQ \\
+ARP & AYK & UBJ & YMM & IUI & GZI & OQA & RZZ & YOU \\
+\end{tabular}}
+\ec}
+
+\MonoDecipheringPage{The key word is ``denar'' and the key letter is ``m'':\\
+\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+WQN & EFI & MEF & FNM & PVW & SHS & WDD & NBF & MZW & FKF & VBN & GUV & DKI & NBY & WIM \\
+EFF & NMP & VWS & HSW & FFV & BNG & UVE & NFQ & KWE & UIN & NQK & MZZ & SE \\
+\end{tabular}}
+
+\ec}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cryptanalysis Keyword %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+QOQ & BYE & HYP & UQV & DQS & FYI & BKX & IEU & BGO & UDQ & FID & YEK & XQF & XUY & EQB \\
+TKX & IEU & TUB & IOY & BQF & IDY & EKX & QFX & UFX & YBP & EIV & XYO & EUH & VFX & UHQ \\
+DWU & DFX & UTU & BIO & YBQ & FID & FXU & EOQ & HHU & DFX & UVD & QSF & YIB & FIH & EFI \\
+M \\
+\end{tabular}}\ec}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+CTC & PWK & ZLG & QQZ & GBR & MFZ & TCF & GQN & CES & JGZ & PZK & XGR & GML & UFC & RFC \\
+PGR & XCR & PSC & MPL & MRG & EZL & QZW & AMP & MLC & RFZ & RGF & ZTC & LMM & RFC & PQM \\
+DPC & ZRZ & QRF & ZRM & AXC & GLD & RPS & JWC & QRC & CKC & BMA & KWA & CJJ & MUK & CLX \\
+WPC & LBC & PGL & DKW & QCJ & AUM & PRF & WMA & RFC & GPC & QRC & CKZ & XPZ & FZK & JGL \\
+EMJ & L \\
+\end{tabular}}\ec}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+ZMJ & XJN & YDZ & MJU & XCE & MNG & MYZ & DZJ & YZM & DZN & KJR & JXD & TCF & UIC & INY \\
+GUR & JXY & JAD & GZQ & CEM & DZZ & MJB & TNR & JXY & JNY & KUX & DTI & EMC & NZN & YMJ \\
+XJN & ZEN & QQN & TYZ & DTZ & QCI & NYD & VVJ & DXD & TIF & JXJ & VQD & GJI & FCY & USJ \\
+ZMN & TLJ & RJT & SUX & JFN & HDX & XJD & TIN & TJA & VQN & GDF & QJZ & MJX & JNY & DTU \\
+ZMJ & XZM & JUX & CEM & NGM & YZD & ZJY & ZMD & ZZM & NYM & DYD & QXJ & DIC & MDV & VJT \\
+JII & UBL & QDY & DID & SY \\
+\end{tabular}}
+\ec}
+
+%\begin{comment}
+
+\MonoAnalysisPage{\bc\texttt{
+\begin{tabular}{llllllllllllllll}
+VGH & THT & CMY & HOG & CRC & BWT & HMF & AJC & UZN & RBY & HOG & CRV & GHT & YHO & GCR \\
+ZNR & JTS & WUD & HRT & VZR & HVH & MFN & WVA & JCU & ZNR & BBC & KCV & HMF & AMU & BWO \\
+KHY & AVC & KCV & VCR & TAM & BVG & CMZ & RHV & HMF & BNZ & MVG & CRC & TVN & DVG & CAK \\
+OGA & SCV & HMN & RBC & RVG & HTA & RRA & MFC & LCM & VND & VGC & AKO & GAS & CVV & GCM \\
+DNR & LTU & NWR & YHO & GCR & AKO & GAS & CVV & GHT & YHO & GCR & AMB & VGC & NVG & CRL \\
+NMN & AKO & GAS & CVH & YYH & OGC & RTZ & CZH & KKT & VWB & UGA & TAT & VRW & YVW & RCV \\
+GAV & ZCY & AMC & QOK & NHV & VNY & RAY & JHV & AMB & DHF & WRC & NWV & VGC & LCT & TAF \\
+CGN & ZCX & CRV & GHT & HTM & NVH & MFC & MCR & AKV & RWC & VGC & RCA & RCV & CYG & MHY \\
+AKK & UVZ & CMV & UTH & QDA & YVN & RHA & KBH & DDC & RCM & VLN & MNA & KOG & ASC & VHY \\
+TWS & TVH & VWV & HNM & YHO & GCR & TAM & BBC & OCM & BHM & FNM & GNZ & VGC & UAR & CWT \\
+CBV & GCU & YNW & KBS & CLA & BCW & MSR & CAJ & ASK & CHM & FCM & CRA & KGN & ZCX & CRL \\
+NMN & AKO & GAS & CVH & YYH & OGC & RTY & AMS & CYR & AYJ & CBZ & HVG & TNL & CTH & LOK \\
+CAM & BXC & RUN & KBV & CYG & MHP & WCT & HMO & ARV & HYW & KAR & ZHV & GVG & CWT & CND \\
+DRC & PWC & MYU & AMA & KUT & HTH & TNW & RDH & RTV & VNN & K \\
+\end{tabular}}
+\ec}
+
+%\end{comment}
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Enciphering Keyword %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\section{Pig Pen}
+
+%\ppa\ppb\ppc\ppd\ppe\ppf\ppg\pph\ppi\ppj\ppk\ppl\ppm\ppn\ppo\ppp\ppq\ppr\pps\ppt\ppu\ppv\ppw\ppx\ppy\ppz

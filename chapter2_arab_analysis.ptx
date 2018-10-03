@@ -396,6 +396,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                 </statement>
             </exercise>
+            <conclusion>
+                <p>
+                    To see how we can pull these ideas together take a look at <xref ref="sample_analysis_appendix" />.
+                </p>
+            </conclusion>
         </subsection>
     </section>
 
@@ -462,6 +467,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <statement>
                 <p>
                     Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
                 </p>
                 <pre>
                     LU ZOO GSZG RH TLLW, HFYORNRGB RH HFKIVNV. HFXXVVWRMT RH GSV
@@ -500,6 +506,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     Use the skills we have been practicing in class together with the cheat sheet you just put
                     together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
                 </p>
                 <pre>
                     SNE ORGGRE VF VG GB QNER ZVTUGL GUVATF, GB JVA TYBEVBHF GEVHZCUF,
@@ -548,6 +555,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <statement>
                 <p>
                     Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
                 </p>
                 <pre>
                     WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR

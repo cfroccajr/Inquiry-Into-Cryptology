@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"sam",
+				"sample_analysis_appendix"
+			],
+			[
+				"con",
+				"conclusion"
+			],
+			[
+				"mono",
+				"mono_analysis_page_two"
+			],
+			[
+				"mo",
+				"mono_analysis_page_one"
+			],
+			[
 				"vig",
 				"vigenere_auto_table"
 			],
@@ -1539,18 +1555,26 @@
 	},
 	"expanded_folders":
 	[
-		"/C/GIT/Inquiry-Into-Cryptology/src",
-		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code"
+		"/C/GIT/Inquiry-Into-Cryptology/src"
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/analysis_cell_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/MonoChapter.tex",
+		"/H/Classes/Math 127/Workbook/MonoChapter.tex",
+		"/H/Classes/Math 127/Workbook/Solution Narrative.tex",
+		"/H/Classes/Math 127/Workbook/WorkbookTest.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/Cracking_Practice.tex",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Cracking_Practice.tex",
 		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/Arabic_cipher_dictionary_shell.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Vocab and Reading Quiz pages 26 to 44.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Basic Ciphers Group Exam - V2.tex",
-		"/C/GIT/Inquiry-Into-Cryptology/src/analysis_cell_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/glossary.ptx",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex",
@@ -1662,16 +1686,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Exam 2.tex",
 		"/Users/cfroccajr/Documents/CryptoText/src/Reference_File.txt",
 		"/Users/cfroccajr/Documents/CryptoText/src/crypto_bookinfo.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_frontmatter.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter5_mechanical_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chart_appendix.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter7_modern_cryptology.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter4_mathematical_analysis.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter3_new_ciphers copy.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter1_early_ciphers.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/crypto_references.mbx",
-		"/Users/cfroccajr/Documents/CryptoText/src/chapter2_arab_analysis.mbx"
+		"/Users/cfroccajr/Documents/CryptoText/src/crypto_frontmatter.mbx"
 	],
 	"find":
 	{
@@ -1689,6 +1704,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"can you think",
+			"figure",
+			"\\\\item(\\s.*)",
+			"\\_",
+			"\\\\vsp{.+}",
+			"\\ec",
+			"\\bc",
+			"''",
+			"``",
+			"\\\\",
+			" & ",
+			"Rank\tN-Gram\tCount\tPercent\\\\",
+			" \t",
+			"\n",
+			" \t",
+			" \t\t",
 			"<slate",
 			"surface=\"sage\"",
 			"<interactive ",
@@ -1715,6 +1746,16 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<li>$1</li>",
+			"_",
+			"",
+			"\"",
+			"",
+			" ",
+			"Rank & N-Gram & Count & Percent\\\\",
+			" & ",
+			"\\\\\n",
+			" & ",
 			"",
 			"em>",
 			"\\footnotesize"
@@ -1784,7 +1825,7 @@
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
