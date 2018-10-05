@@ -696,12 +696,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
     <section xml:id="section_falconer_cipher">
-        <title> Stiring Things Up </title>
+        <title> Stirring Things Up </title>
         <objectives>
             <ul>
-                <li>
-                    Falconer's Biography
-                </li>
                 <li>
                     Falconer's Discussion of Permutations
                 </li>
@@ -710,12 +707,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </li>
             </ul>
         </objectives>
-        <subsection xml:id="falconer_bio">
-            <title>John Falconer's Biography</title>
-            <p>
-                Insert biography here when ready
-            </p>
-        </subsection>
         <subsection xml:id="falconer_permutations">
             <title>Key Permutations</title>
             <assemblage>
@@ -728,7 +719,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     The first remarkable improvement I find of this kind of cryptography by altering the places of letters, is by the regular combinations of three, four, or more letters: I had it of a gentleman, who (I am fully satisfied) would put it to no bad use; but since it may fall of bad hands, I have his leave to provide against its harm.  And that we may proceed regularly therein it is necessary, first to inquire, <q>how many several ways any given number of letters may be combined?</q>  (i.e.) How many differnt positions they can regularly admit of.  And for that end I have hereunto subjoined the following table:
                 </p>
-                <sidebyside>
+                <sidebyside widths="70% 30%">
+                    <stack>
+                        <p>
+                            <em>Construction of the Table.</em>
+                        </p>
+                        <p>
+                            <ol>
+                                <li>
+                                    At the left-hand of your table stands a rank of figures expressing the number of letters to be combined, encreasing in an arithmetical proportion from unity, or 1 and by common excess of 1, or unity.
+                                </li>
+                                <li>
+                                    To the right hand of these stands the number of <em>Combinations,</em><fn>Today we call these permutations.</fn> or several ways they can be combined.
+                                </li>
+                                <li>
+                                    As for 1, being it has but one positions, I set 1 opposite to it in the rank of combinations.
+                                </li>
+                                <li>
+                                    I multiply 1, in the column of combinations, by two, in the column of letters, and set the product, viz. 2, opposite to it, which shows how often two letters or things can be combined, viz. two times.
+                                </li>
+                            </ol>
+                        </p>
+                    </stack>
                     <tabular top="minor" left="minor" right="minor" bottom="minor" halign="right">
                         <row>
                             <cell>Letters</cell><cell></cell><cell>Several Ways</cell>
@@ -748,20 +760,28 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         <row><cell><ampersand/>c. </cell><cell></cell><cell></cell></row>
                     </tabular>
                 </sidebyside>
+
                 <p>
-                    ...
+                    <em>Demonstration.</em>
                 </p>
-                <sidebyside width="30%">
-                    <p>
-                        <em>Demonstration.</em>
-                    </p>
-                </sidebyside>
                 <p>
                     <ol>
                         <li>
                             It is manifest, that one letter or thing has but one position, and two letters have twice the position of 1, viz. once before and once after it. e.g. <em>AB</em>, <em>BA</em>.
                         </li>
+                        <li>
+                            From the combination of two letters we find that of 3, for the new Letter added is three times applicable to the former positions, viz. in the beginning, middle, and end, e.g. the letter C being joyned with AB, the first combination may be CAB, and the second CBA.  Again put C in the middle, and it yields other differences, viz. ACB, BCA.  And when C is put in the lat place, you have a fifth and sixth difference, viz. ABC, BAC.
+                        </li>
+                        <li>
+                            From the combination of three letters arises that of four letters; viz. ABCD: for D can be four several times applied to each of the former six differences; e.g. in the first, second, third, and fourth or last place.
+                        </li>
+                        <li>
+                            From the twenty four combinations arising from four letters, you have that of 5; e.g. if the letter E is added, it is five times applicable to each of the former twenty four regular positions: and so for any other number in infinitum.
+                        </li>
                     </ol>
+                </p>
+                <p>
+                    I have said <em>regular</em> positions, because any number of letters or things may be <em>irregularly</em> varied in their positions very much above this order; for example, AB is capable of these irregular variations, AA, AB, BA, BB; and at this rate, three letters have no less than 27 positions in all, viz. six regual (as above) and twenty one irregular positions.  ...
                     - John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 37-40 (65-68)"/>
                 </p>
             </assemblage>
