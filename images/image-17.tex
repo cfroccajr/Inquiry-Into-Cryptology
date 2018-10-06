@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
 \usepackage{amsmath,amssymb}
-
-    \usepackage{pgfplots}               % loads tikz package
-    \usepackage{smartdiagram}           % for a circular diagram
-    \pgfplotsset{axis x line = middle,
-                 axis y line = middle}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
-    \ifdefined\tikzset
-    \tikzset{ampersand replacement = \amp}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
 \fi
    
        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
@@ -79,18 +81,17 @@
 \newcommand{\amp}{&}
 \begin{document}
 \pagestyle{empty}
+\begin{tikzpicture}
+    \draw (0,-0.5) \ppi ++(5pt,0pt) \ppa\ppm ++(5pt,0pt) \ppf\ppo\ppn\ppd ++(5pt,0pt) \ppo\ppf ++(5pt,0pt) \ppp\ppi\ppg\pps;
+    
+    \draw (0,-1) \ppd\ppo\ppg\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppu\ppp ++(5pt,0pt) \ppt\ppo; 
+    
+    \draw (0,-1.5) \ppu\pps \ppc\ppa\ppt\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppd\ppo\ppw\ppn;
+    
+    \draw (0,-2) \ppo\ppn ++(5pt,0pt) \ppu\pps ++(5pt,0pt) \ppp\ppi\ppg\pps ++(5pt,0pt) \ppt\ppr\ppe\ppa\ppt;
+    
+    \draw (0,-2.5) \ppu\pps ++(5pt,0pt) \ppa\pps ++(5pt,0pt) \ppe\ppq\ppu\ppa\ppl\pps;
 
-                                \begin{tikzpicture}
-                                    \draw (0,-0.5) \ppi ++(5pt,0pt) \ppa\ppm ++(5pt,0pt) \ppf\ppo\ppn\ppd ++(5pt,0pt) \ppo\ppf ++(5pt,0pt) \ppp\ppi\ppg\pps;
-                                    
-                                    \draw (0,-1) \ppd\ppo\ppg\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppu\ppp ++(5pt,0pt) \ppt\ppo; 
-                                    
-                                    \draw (0,-1.5) \ppu\pps \ppc\ppa\ppt\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppd\ppo\ppw\ppn;
-                                    
-                                    \draw (0,-2) \ppo\ppn ++(5pt,0pt) \ppu\pps ++(5pt,0pt) \ppp\ppi\ppg\pps ++(5pt,0pt) \ppt\ppr\ppe\ppa\ppt;
-                                    
-                                    \draw (0,-2.5) \ppu\pps ++(5pt,0pt) \ppa\pps ++(5pt,0pt) \ppe\ppq\ppu\ppa\ppl\pps;
-
-                                    \draw (0,-3) \ppw\ppi\ppn\pps\ppt\ppo\ppn ++(5pt,0pt) \pps ++(5pt,0pt) \ppc\pph\ppu\ppr\ppc\pph\ppi\ppl\ppl;
-                                \end{tikzpicture}
-                            \end{document}
+    \draw (0,-3) \ppw\ppi\ppn\pps\ppt\ppo\ppn ++(5pt,0pt) \pps ++(5pt,0pt) \ppc\pph\ppu\ppr\ppc\pph\ppi\ppl\ppl;
+\end{tikzpicture}
+\end{document}

@@ -81,25 +81,40 @@
 \pagestyle{empty}
 
                 \begin{tikzpicture}
-                \foreach \y in {0,1,...,25}{
+                \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
                     \pgfmathtruncatemacro{\o}{mod(\y,2)};
-                    \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.5,-0.25-0.5*\y) rectangle (14,0.25-0.5*\y);
-                    \foreach \x in {0,1,...,25}
-                    {
-                    \pgfmathtruncatemacro{\n}{mod(\x*\y,26)};
-                    \draw (0.55*\x,-0.5*\y) node {\n};
-                    }
-                }
-                \foreach \y/\text in 
+                    \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.25,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+                    \foreach \x/\ctext in 
                     {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
                         13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
-                {
-                    \draw (-1.25,-0.5*\y) node {$\text$};
-                    \draw (-0.55,-0.5*\y) node {\y};
-                    \draw (0.55*\y,0.5) node {\y};
+                    {
+                    \pgfmathtruncatemacro{\n}{mod(\x+\shift+26,26)};
+                    \draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+                    }
                 }
-                \draw (-1.5,0.275)--(14,0.275);
-                \draw (-0.25,0.75)--(-0.25,-12.75);
-                \draw (-0.55,0.5) node {$\times_{26}$};
+                \foreach \x/\ctext in 
+                {
+                    0/12.22\%\ \ e,
+                    1/9.28\%\ \ \ \ t,
+                    2/8.06\%\ \ \ \ a,
+                    3/7.62\%\ \ \ \ o,
+                    4/7.10\%\ \ \ \ i,
+                    5/6.82\%\ \ \ \ n,
+                    6/6.45\%\ \ \ \ s,
+                    7/5.91\%\ \ \ \ r,
+                    8/5.76\%\ \ \ \ h,
+                    9/4.19\%\ \ \ \ l,
+                    10/3.93\%\ \ \ \ d
+                }
+                {
+                    \draw (-0.25,-0.5*\x) node {$\ctext$};
+                }
+                \foreach \x/\ctext in 
+                {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                {
+                    \draw (1+0.55*\x,0.5) node {$\ctext$};
+                }
+                \draw (-1.25,0.25)--(15,0.25);
+                \draw (0.75,1)--(0.75,-5.5);
                 \end{tikzpicture}
             \end{document}

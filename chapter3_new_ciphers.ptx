@@ -719,48 +719,34 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     The first remarkable improvement I find of this kind of cryptography by altering the places of letters, is by the regular combinations of three, four, or more letters: I had it of a gentleman, who (I am fully satisfied) would put it to no bad use; but since it may fall of bad hands, I have his leave to provide against its harm.  And that we may proceed regularly therein it is necessary, first to inquire, <q>how many several ways any given number of letters may be combined?</q>  (i.e.) How many differnt positions they can regularly admit of.  And for that end I have hereunto subjoined the following table:
                 </p>
-                <sidebyside widths="70% 30%">
-                    <stack>
-                        <p>
-                            <em>Construction of the Table.</em>
-                        </p>
-                        <p>
-                            <ol>
-                                <li>
-                                    At the left-hand of your table stands a rank of figures expressing the number of letters to be combined, encreasing in an arithmetical proportion from unity, or 1 and by common excess of 1, or unity.
-                                </li>
-                                <li>
-                                    To the right hand of these stands the number of <em>Combinations,</em><fn>Today we call these permutations.</fn> or several ways they can be combined.
-                                </li>
-                                <li>
-                                    As for 1, being it has but one positions, I set 1 opposite to it in the rank of combinations.
-                                </li>
-                                <li>
-                                    I multiply 1, in the column of combinations, by two, in the column of letters, and set the product, viz. 2, opposite to it, which shows how often two letters or things can be combined, viz. two times.
-                                </li>
-                            </ol>
-                        </p>
-                    </stack>
-                    <tabular top="minor" left="minor" right="minor" bottom="minor" halign="right">
-                        <row>
-                            <cell>Letters</cell><cell></cell><cell>Several Ways</cell>
-                        </row>
-                        <row><cell>1</cell><cell></cell><cell>1</cell></row>
-                        <row><cell>2</cell><cell></cell><cell>2</cell></row>
-                        <row><cell>3</cell><cell></cell><cell>6</cell></row>
-                        <row><cell>4</cell><cell></cell><cell>24</cell></row>
-                        <row><cell>5</cell><cell></cell><cell>120</cell></row>
-                        <row><cell>6</cell><cell></cell><cell>720</cell></row>
-                        <row><cell>7</cell><cell></cell><cell>5040</cell></row>
-                        <row><cell>8</cell><cell></cell><cell>40320</cell></row>
-                        <row><cell>9</cell><cell></cell><cell>362880</cell></row>
-                        <row><cell>10</cell><cell></cell><cell>3628800</cell></row>
-                        <row><cell>11</cell><cell></cell><cell>39916800</cell></row>
-                        <row><cell>12</cell><cell></cell><cell>479001600</cell></row>
-                        <row><cell><ampersand/>c. </cell><cell></cell><cell></cell></row>
-                    </tabular>
+                <sidebyside width="50%">
+                    <image source="images/falconer_permutations.png" />
                 </sidebyside>
-
+                <p>
+                    <em>Construction of the Table.</em>
+                </p>
+                <p>
+                    <ol>
+                        <li>
+                            At the left-hand of your table stands a rank of figures expressing the number of letters to be combined, encreasing in an arithmetical proportion from unity, or 1 and by common excess of 1, or unity.
+                        </li>
+                        <li>
+                            To the right hand of these stands the number of <em>Combinations,</em><fn>Today we call these permutations.</fn> or several ways they can be combined.
+                        </li>
+                        <li>
+                            As for 1, being it has but one positions, I set 1 opposite to it in the rank of combinations.
+                        </li>
+                        <li>
+                            I multiply 1, in the column of combinations, by two, in the column of letters, and set the product, viz. 2, opposite to it, which shows how often two letters or things can be combined, viz. two times.
+                        </li>
+                        <li>
+                            I multiply the 2 in the row of combinations, by 3 in the column of letters; and over against it I set 6 for the product, which shows that three letters have sixe regular positions or combinations.
+                        </li>
+                        <li>
+                            ...
+                        </li>
+                    </ol>
+                </p>
                 <p>
                     <em>Demonstration.</em>
                 </p>
@@ -781,10 +767,34 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </ol>
                 </p>
                 <p>
-                    I have said <em>regular</em> positions, because any number of letters or things may be <em>irregularly</em> varied in their positions very much above this order; for example, AB is capable of these irregular variations, AA, AB, BA, BB; and at this rate, three letters have no less than 27 positions in all, viz. six regual (as above) and twenty one irregular positions.  ...
+                    I have said <em>regular</em> positions, because any number of letters or things may be <em>irregularly</em> varied in their positions very much above this order; for example, AB is capable of these irregular variations, AA, AB, BA, BB; and at this rate, three letters have no less than 27 positions in all, viz. six regular (as above) and twenty one irregular positions.  ...
                     - John Falconer <xref ref="cr_crypt_falconer" text="type-global" detail="pp. 37-40 (65-68)"/>
                 </p>
             </assemblage>
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>
+                        How many ways does Falconer state that we can rearrange the distinct letters ABCDE?
+                    </li>
+                    <li>
+                        How does Falconer arrive at that number?  What does he mean when we says <em>"if the letter E is added, it is five times applicable to each of the former twenty four regular positions"</em>?
+                    </li>
+                    <li>
+                        Based on what Falconer says above how many ways should we be able to arrange the distinct letters ABCDEF?  How would he explain that?
+                    </li>
+                    <li>
+                        When Falconer speaks of irregular variations in the last paragraph which combinations of A and B is he considering that he hadn't before?
+                    </li>
+                    <li>
+                        Why does he say that there would be 27 positions, how does he get 27 positions from 3 letters?
+                    </li>
+                    <li>
+                        How many positions would there be if you had 4 letters, or 5?
+                    </li>
+                </ul>
+                What Falconer is discussing here are the factorials we learned about earlier. (<xref ref="definition_factorial"/>) Factorials are related to two other ideas permutations and combinations, which we will explore later when we discuss more complicated ciphers.<idx>factorial</idx><idx>permutation</idx><idx>combination</idx> For now, let's see how Falconer uses these combinations of letters.
+            </p>
         </subsection>
         <subsection xml:id="falconer_transposition">
             <title>Transposition</title>
@@ -823,124 +833,126 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </p>
             </assemblage>
             <p>
+                <alert>Comprehension Check:</alert>
             </p>
             <p>
                 Let's see if you can follow Falconer's directions.  Below I set up <xref ref="falconer_trans_table_1" text="type-global"/> according to his description in steps (5) and (6) and used it to encipher the pangram<idx>pangram</idx> <em><q>the quick brown fox jumps over the lazy sleeping dog.</q></em>
             </p>
-
-            <table xml:id="falconer_trans_table_1">
-                <caption> Falconer's Transposition Table Initial Setup</caption>
-                <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
-                    <row>
-                        <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
-                    </row>
-                    <row>
-                        <cell>1</cell><cell>CBA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
-                    </row>
-                    <row>
-                        <cell>2</cell><cell>CAB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
-                    </row>
-                    <row>
-                        <cell>3</cell><cell>ACB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
-                    </row>
-                    <row>
-                        <cell>4</cell><cell>BCA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
-                    </row>
-                    <row>
-                        <cell>5</cell><cell>BAC</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
-                    </row>
-                </tabular>
-            </table>
-            <table xml:id="falconer_trans_table_2">
-                <caption> Falconer's Transposition Table First Pass</caption>
-                <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
-                    <row>
-                        <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
-                    </row>
-                    <row>
-                        <cell>1</cell><cell>CBA</cell><cell>E</cell><cell>H</cell><cell>T</cell>
-                    </row>
-                    <row>
-                        <cell>2</cell><cell>CAB</cell><cell>U</cell><cell>I</cell><cell>Q</cell>
-                    </row>
-                    <row>
-                        <cell>3</cell><cell>ACB</cell><cell>C</cell><cell>B</cell><cell>K</cell>
-                    </row>
-                    <row>
-                        <cell>4</cell><cell>BCA</cell><cell>W</cell><cell>R</cell><cell>O</cell>
-                    </row>
-                    <row>
-                        <cell>5</cell><cell>BAC</cell><cell><m>\phantom{W}</m>F<m>\phantom{W}</m></cell>
-                        <cell><m>\phantom{W}</m>N<m>\phantom{W}</m></cell>
-                        <cell><m>\phantom{W}</m>O<m>\phantom{W}</m></cell>
-                    </row>
-                </tabular>
-            </table>
-            <table xml:id="falconer_trans_table_3">
-                <caption> Falconer's Transposition Table Filled Table</caption>
-                <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
-                    <row>
-                        <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
-                    </row>
-                    <row>
-                        <cell>1</cell><cell>CBA</cell><cell>EUS</cell><cell>HJY</cell><cell>TXZ</cell>
-                    </row>
-                    <row>
-                        <cell>2</cell><cell>CAB</cell><cell>UPE</cell><cell>ISE</cell><cell>QML</cell>
-                    </row>
-                    <row>
-                        <cell>3</cell><cell>ACB</cell><cell>COP</cell><cell>BEN</cell><cell>KVI</cell>
-                    </row>
-                    <row>
-                        <cell>4</cell><cell>BCA</cell><cell>WHO</cell><cell>RRG</cell><cell>OTD</cell>
-                    </row>
-                    <row>
-                        <cell>5</cell><cell>BAC</cell><cell><m>\phantom{I}</m>FL<m>\phantom{I}</m></cell>
-                        <cell><m>\phantom{I}</m>NEG<m>\phantom{I}</m></cell>
-                        <cell><m>\phantom{I}</m>OA<m>\phantom{I}</m></cell>
-                    </row>
-                </tabular>
-            </table>
-            <p>Final Message:</p>
-            <blockquote>
-                <p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
-            </blockquote>
             <p>
-                Refection Questions:
                 <ul>
                     <li>
-                        Looking at <xref ref="falconer_trans_table_2" text="type-global"/> why is <em>the</em> 
-                        from the beginning of the sentence written backwards? (Be sure to look carefully at the 
+                        Looking at <xref ref="falconer_trans_table_2" text="type-global"/> why is the <em>the</em>
+                        from the beginning of the sentence written backwards? (Be sure to look carefully at the
                         letters to the left of the row when answering.)
                     </li>
-                    <li> 
-                        In the second row of the same table why is <em>qui</em> from <em>quick</em> 
-                        written in the order it is written? 
+                    <li>
+                        In the second row of the same table why is the <em>qui</em> from <em>quick</em>
+                        written in the order it is written?
                         (Again, be sure to look carefully at the letters to the left of the row when answering.)
                     </li>
                     <li>
-                        In the last row we put down <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the 
-                        order they are in and looking at the next table (<xref ref="falconer_trans_table_3" text="type-global" />) where do we put 
+                        In the last row we put down the <em>n</em> from <em>brown</em> and the <em>fo</em> from <em>fox</em>, why are they in the
+                        order they are in and looking at the next table (<xref ref="falconer_trans_table_3" text="type-global" />) where do we put
                         the <em>x</em> from <em>fox</em> and why?
                     </li>
                     <li>
                         How do we finish writing the rest of the message into the boxes in the table?
                     </li>
                     <li>
-                        Refection Questions:
-                        Looking at the final message why is there a little triangle at the start of the message and why 
+                        Looking at the final message why is there a little triangle at the start of the message and why
                         were the blocks of letters written in the order they were written?
                     </li>
                     <li>
-                        In what ways is this different from other ciphers we have looked at?  (Hint: in this cipher what does
+                        In what ways is this different from other ciphers we have looked at?  (Hint: In this cipher what does
                         cipher text <em>E</em> represent, or cipher text <em>F</em>?)
                     </li>
                 </ul>
             </p>
+            <sidebyside widths="45% 45%">
+                <table xml:id="falconer_trans_table_1">
+                    <caption> Falconer's Transposition Table Initial Setup</caption>
+                    <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                        <row>
+                            <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell><cell>CBA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+                        </row>
+                        <row>
+                            <cell>2</cell><cell>CAB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+                        </row>
+                        <row>
+                            <cell>3</cell><cell>ACB</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+                        </row>
+                        <row>
+                            <cell>4</cell><cell>BCA</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+                        </row>
+                        <row>
+                            <cell>5</cell><cell>BAC</cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell><cell><m>\phantom{WRW}</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <table xml:id="falconer_trans_table_2">
+                    <caption> Falconer's Transposition Table After the First Pass</caption>
+                    <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                        <row>
+                            <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell><cell>CBA</cell><cell>E</cell><cell>H</cell><cell>T</cell>
+                        </row>
+                        <row>
+                            <cell>2</cell><cell>CAB</cell><cell>U</cell><cell>I</cell><cell>Q</cell>
+                        </row>
+                        <row>
+                            <cell>3</cell><cell>ACB</cell><cell>C</cell><cell>B</cell><cell>K</cell>
+                        </row>
+                        <row>
+                            <cell>4</cell><cell>BCA</cell><cell>W</cell><cell>R</cell><cell>O</cell>
+                        </row>
+                        <row>
+                            <cell>5</cell><cell>BAC</cell><cell><m>\phantom{W}</m>F<m>\phantom{W}</m></cell>
+                            <cell><m>\phantom{W}</m>N<m>\phantom{W}</m></cell>
+                            <cell><m>\phantom{W}</m>O<m>\phantom{W}</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+            </sidebyside>
+            <sidebyside widths="45% 40%">
+                <table xml:id="falconer_trans_table_3">
+                    <caption> Falconer's Transposition Table Fully Filled</caption>
+                    <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                        <row>
+                            <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                        </row>
+                        <row>
+                            <cell>1</cell><cell>CBA</cell><cell>EUS</cell><cell>HJY</cell><cell>TXZ</cell>
+                        </row>
+                        <row>
+                            <cell>2</cell><cell>CAB</cell><cell>UPE</cell><cell>ISE</cell><cell>QML</cell>
+                        </row>
+                        <row>
+                            <cell>3</cell><cell>ACB</cell><cell>COP</cell><cell>BEN</cell><cell>KVI</cell>
+                        </row>
+                        <row>
+                            <cell>4</cell><cell>BCA</cell><cell>WHO</cell><cell>RRG</cell><cell>OTD</cell>
+                        </row>
+                        <row>
+                            <cell>5</cell><cell>BAC</cell><cell><m>\phantom{I}</m>FL<m>\phantom{I}</m></cell>
+                            <cell><m>\phantom{I}</m>NEG<m>\phantom{I}</m></cell>
+                            <cell><m>\phantom{I}</m>OA<m>\phantom{I}</m></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <stack>
+                    <p><alert>Final Message:</alert></p>
+                    <p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
+                </stack>
+            </sidebyside>
             <exercise>
                 <statement>
                     <p>
-                        Decipher the following message which used the same key as the one represented in 
+                        Decipher the following message which used the same key as the one represented in
                         <xref ref="falconer_trans_table_1" text="type-global"/>:
                     </p>
                     <blockquote>
@@ -949,6 +961,45 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </p>
                     </blockquote>
                 </statement>
+                <answer>
+                    <p>Now I'm all turned around.</p>
+                </answer>
+                <solution>
+                    <p>
+                        First put the blocks of text into the table row by row in alphabetical order:
+                    </p>
+                    <table xml:id="falconer_trans_practice_1">
+                        <caption> Falconer's Transposition Practice</caption>
+                        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                            <row>
+                                <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                            </row>
+                            <row>
+                                <cell>1</cell><cell>CBA</cell><cell>WU </cell><cell>OO </cell><cell>NR </cell>
+                            </row>
+                            <row>
+                                <cell>2</cell><cell>CAB</cell><cell>MD </cell><cell>A </cell><cell>IN </cell>
+                            </row>
+                            <row>
+                                <cell>3</cell><cell>ACB</cell><cell>L </cell><cell>T </cell><cell>L </cell>
+                            </row>
+                            <row>
+                                <cell>4</cell><cell>BCA</cell><cell>N </cell><cell>U </cell><cell>R </cell>
+                            </row>
+                            <row>
+                                <cell>5</cell><cell>BAC</cell><cell>D </cell><cell>E </cell><cell>A </cell>
+                            </row>
+                        </tabular>
+                        <p>
+                            Now read the message out character by character according to the combinations at the left:
+                        </p>
+                        <p>nowimallturnedaround</p>
+                        <p>
+                            Finally, we get the original message.
+                        </p>
+                        <p>Now I'm all turned around.</p>
+                </table>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -963,6 +1014,66 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </p>
                     </blockquote>
                 </statement>
+                <answer>
+                    <p>
+                        <m>\scriptsize\triangle</m>LSNDNE SINENM ADIBOS NUNZMB GRGZAR OTIIAL ANWYKO TNRNMK SIEAEO WNOET HGEDIS EAGWS RSNEK ODNRA LPAGE
+                    </p>
+                </answer>
+                <solution>
+<!--                     Chracters in text:  85
+                    Cipher Table:
+                        CBA :   LSNDNE  SINENM  ADIBOS
+                        CAB :   NUNZMB  GRGZAR  OTIIAL
+                        ACB :   ANWYKO  TNRNMK  SIEAEO
+                        BCA :   WNOET   HGEDIS  EAGWS
+                        BAC :   RSNEK   ODNRA   LPAGE
+                    Completed Message:
+                    LSNDNE SINENM ADIBOS NUNZMB GRGZAR OTIIAL ANWYKO
+                    TNRNMK SIEAEO WNOET HGEDIS EAGWS RSNEK ODNRA LPAGE -->
+                    <p>
+                        First we break up the message into blocks of three to make it easier to work with.
+                    </p>
+                    <pre>
+                        ASL ONG AST HEW ORL
+                        DIS TUR NIN GAN DSP
+                        INN ING WER EGO NNA
+                        BED IZZ YAN DWE REG
+                        ONN AMA KEM IST AKE
+                        SME LBR OOK S
+                    </pre>
+                    <p>
+                        Then copy each character into the table using the combination keys at the side to tell us which column to put each character in.
+                    </p>
+                    <table xml:id="falconer_practice_table_2">
+                        <caption> Falconer's Transposition Practice</caption>
+                        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                            <row>
+                                <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                            </row>
+                            <row>
+                                <cell>1</cell><cell>CBA</cell><cell>LSNDNE</cell>  <cell>SINENM</cell>  <cell>ADIBOS</cell>
+                            </row>
+                            <row>
+                                <cell>2</cell><cell>CAB</cell><cell>NUNZMB</cell>  <cell>GRGZAR</cell>  <cell>OTIIAL</cell>
+                            </row>
+                            <row>
+                                <cell>3</cell><cell>ACB</cell><cell>ANWYKO</cell>  <cell>TNRNMK</cell>  <cell>SIEAEO</cell>
+                            </row>
+                            <row>
+                                <cell>4</cell><cell>BCA</cell><cell>WNOET</cell>   <cell>HGEDIS</cell>  <cell>EAGWS</cell>
+                            </row>
+                            <row>
+                                <cell>5</cell><cell>BAC</cell><cell>RSNEK</cell>   <cell>ODNRA</cell>   <cell>LPAGE</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <p>
+                        Finally, we read the message out of the table from left to right and from top to bottom.
+                    </p>
+                    <p>
+                        <m>\scriptsize\triangle</m>LSNDNE SINENM ADIBOS NUNZMB GRGZAR OTIIAL ANWYKO TNRNMK SIEAEO WNOET HGEDIS EAGWS RSNEK ODNRA LPAGE
+                    </p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -977,6 +1088,62 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                         </p>
                     </blockquote>
                 </statement>
+                <answer>
+                    <p>
+                        <m>\scriptsize\triangle</m>AVADAI ERENB PEKALN SAETR ODVHT RMNYE WARNI NEEIE HMTGN OIRNS NSIET ETEWE
+                    </p>
+                </answer>
+                <solution>
+<!--                     Chracters in text:  62
+                    Cipher Table:
+                        ACB :   AVADAI  ERENB   PEKALN
+                        CAB :   SAETR   ODVHT   RMNYE
+                        BAC :   WARNI   NEEIE   HMTGN
+                        ABC :   OIRNS   NSIET   ETEWE
+                    Completed Message:
+                    AVADAI ERENB PEKALN SAETR ODVHT RMNYE WARNI NEEIE
+                    HMTGN OIRNS NSIET ETEWE -->
+                    <p>
+                        First we break up the message into blocks of three to make it easier to work with.
+                    </p>
+                    <pre>
+                        APE RSO NWH ONE
+                        VER MAD EAM IST
+                        AKE NEV ERT RIE
+                        DAN YTH ING NEW
+                        ALB ERT EIN STE
+                        IN
+                    </pre>
+                    <p>
+                        Then copy each character into the table using the combination keys at the side to tell us which column to put each character in.
+                    </p>
+                    <table xml:id="falconer_practice_table_3">
+                        <caption> Falconer's Transposition Practice</caption>
+                        <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
+                            <row>
+                                <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
+                            </row>
+                            <row>
+                                <cell>1</cell><cell>ACB</cell><cell>AVADAI</cell><cell>ERENB </cell> <cell>PEKALN </cell>
+                            </row>
+                            <row>
+                                <cell>2</cell><cell>CAB</cell><cell>SAETR</cell><cell>ODVHT</cell><cell>RMNYE </cell>
+                            </row>
+                            <row>
+                                <cell>3</cell><cell>BAC</cell><cell>WARNI</cell>  <cell>NEEIE</cell>  <cell>HMTGN</cell>
+                            </row>
+                            <row>
+                                <cell>4</cell><cell>ABC</cell><cell>OIRNS</cell>   <cell>NSIET</cell>  <cell>ETEWE</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <p>
+                        Finally, we read the message out of the table from left to right and from top to bottom.
+                    </p>
+                    <p>
+                        <m>\scriptsize\triangle</m>AVADAI ERENB PEKALN SAETR ODVHT RMNYE WARNI NEEIE HMTGN OIRNS NSIET ETEWE
+                    </p>
+                </solution>
             </exercise>
         </subsection>
     </section>
@@ -1031,13 +1198,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         Exercises
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-    
+
     <exercises xml:id="poly_exercises">
         <title> How Mixed Up Do You Feel?</title>
         <exercise>
             <statement>
                 <p>
-                    Encipher this message using a <em>Pigpen Cipher</em>. 
+                    Encipher this message using a <em>Pigpen Cipher</em>.
                     <xref ref="appendix_figure_pigpen" text="type-global" />
                 </p>
                 <blockquote>
@@ -1062,7 +1229,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                             \end{tikzpicture}
                         </latex-image>
                     </image>
-                </figure>           
+                </figure>
             </statement>
         </exercise>
         <exercise>
@@ -1235,7 +1402,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     <output></output>
                 </sage>
 
-                <p>Falconer's Tabular Cipher:</p>
+                <p><alert>Falconer's Tabular Cipher:</alert></p>
 
                 <sage>
                     <input><xi:include href="sage_code/falconer_cipher.sage" parse="text"/></input>
@@ -1244,7 +1411,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
             </conclusion>
     </exercises>
-    
 
 
 </chapter>

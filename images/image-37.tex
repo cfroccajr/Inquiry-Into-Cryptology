@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
 \usepackage{amsmath,amssymb}
-
-    \usepackage{pgfplots}               % loads tikz package
-    \usepackage{smartdiagram}           % for a circular diagram
-    \pgfplotsset{axis x line = middle,
-                 axis y line = middle}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
-    \ifdefined\tikzset
-    \tikzset{ampersand replacement = \amp}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
 \fi
    
        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
@@ -79,8 +81,7 @@
 \newcommand{\amp}{&}
 \begin{document}
 \pagestyle{empty}
-
-                \begin{tikzpicture}
-                    \draw[thick] (0,0) \ppc ++(5pt,0pt) \ppb ++(5pt,0pt) \ppa ++(5pt,0pt) \ppf ++(5pt,0pt) \ppe ++(5pt,0pt) \ppd ++(5pt,0pt) \ppi ++(5pt,0pt) \pph ++(5pt,0pt) \ppg;
-                \end{tikzpicture}
-            \end{document}
+\begin{tikzpicture}
+    \draw[thick] (0,0) \ppc ++(5pt,0pt) \ppb ++(5pt,0pt) \ppa ++(5pt,0pt) \ppf ++(5pt,0pt) \ppe ++(5pt,0pt) \ppd ++(5pt,0pt) \ppi ++(5pt,0pt) \pph ++(5pt,0pt) \ppg;
+\end{tikzpicture}
+\end{document}

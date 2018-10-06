@@ -1,14 +1,16 @@
 \documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{letterpaper,total={408pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
 \usepackage{amsmath,amssymb}
-
-    \usepackage{pgfplots}               % loads tikz package
-    \usepackage{smartdiagram}           % for a circular diagram
-    \pgfplotsset{axis x line = middle,
-                 axis y line = middle}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
-    \ifdefined\tikzset
-    \tikzset{ampersand replacement = \amp}
+\usepackage{pgfplots}               % loads tikz package
+\usepackage{smartdiagram}           % for a circular diagram
+\pgfplotsset{axis x line = middle,
+             axis y line = middle}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\ifdefined\tikzset
+\tikzset{ampersand replacement = \amp}
 \fi
    
        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
@@ -79,8 +81,7 @@
 \newcommand{\amp}{&}
 \begin{document}
 \pagestyle{empty}
-
-                                \begin{tikzpicture}
-                                    \draw (0,-0.5) \ppn\ppe\ppv\ppe\ppr ++(5pt,0pt) \ppw\ppr\ppe\pps\ppt\ppl\ppe ++(5pt,0pt) node {$\cdots$};
-                                \end{tikzpicture}
-                            \end{document}
+\begin{tikzpicture}
+    \draw (0,-0.5) \ppn\ppe\ppv\ppe\ppr ++(5pt,0pt) \ppw\ppr\ppe\pps\ppt\ppl\ppe ++(5pt,0pt) node {$\cdots$};
+\end{tikzpicture}
+\end{document}
