@@ -29,7 +29,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-<appendix xml:id="sage_cipher_cells">
+<appendix xml:id="sage_cipher_cells" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Sage Cell Cipher Utilities</title>
 
 
@@ -103,6 +103,14 @@ def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=
     except:
         print "error, likely in your key"
         cipher_text = clean_text
+            </input>
+            <output></output>
+        </sage>
+
+        <p>Alberti Cipher Formula</p>
+        <sage xml:id="sage_alberti_cell">
+            <input>
+                <xi:include href="sage_code/alberti_disc.sage" parse="text" />
             </input>
             <output></output>
         </sage>

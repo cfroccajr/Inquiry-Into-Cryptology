@@ -137,7 +137,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </hint>
                 <answer>
                     <p>
-                        <c>G vbb ke V xsdba m&amp;bbry</c>
+                        <c>G vbb ke V xsdba m&amp;bbry&amp;</c>
                     </p>
                 </answer>
             </exercise>
@@ -165,10 +165,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Team up with a partner and agree on a lower case index.  Now each of your should try enciphering a short message, only five or six words, be sure to adjust your formula after every couple of words.  Then exchange messages with your partner and decipher each others messages.
+                        Team up with a partner and agree on a lower case index.  Now each of you should try enciphering a short message, only five or six words, be sure to adjust your formula after every couple of words.  Then exchange messages with your partner and decipher each others messages.
                     </p>
                 </statement>
             </exercise>
+            <figure>
+            <caption>Alberti's Formula</caption>
+                <interactive xml:id="alberti_disc" platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="sage_code/alberti_disc.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
         </subsection>
 
         <subsection xml:id="vigenere_cipher">
