@@ -268,7 +268,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Try deciphering the message <c>NODDTEMDQNHO</c> using the key <em>vilo</em> and the black (outer) labels.
+                        Try deciphering the message <c>NSDDTIMDQRHO</c> using the key <em>vilo</em> and the black (outer) labels.
                     </p>
                 </statement>
                 <hint>
@@ -281,7 +281,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                     </p>
                     <pre>
                         Key:        v i l o v i l o v i l o
-                        Ciphertext: N O D D T E M D Q N H O
+                        Ciphertext: N S D D T I M D Q R H O
                         Plaintext:  t o u
                     </pre>
                 </hint>
@@ -295,7 +295,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <exercise>
                 <statement>
                     <p>
-                        Try deciphering the message <c>DOLSASXS</c> using the key <em>manger</em> and the red (inner) labels.
+                        Try deciphering the message <c>DOLSAEXS</c> using the key <em>manger</em> and the red (inner) labels.
                     </p>
                 </statement>
                 <hint>
