@@ -298,7 +298,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     rSDES Diagram
@@ -381,5 +380,18 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </latex-image>
         </image>
     </figure>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    NATO Phonetic Alphabet
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <figure xml:id="phonetic_alphabet" >
+        <caption>NATO Phonetic Alphabet (from Wikimedia Commons)</caption>
+        <image width="70%" source="images/Phonetic.png" />
+    </figure>
+
+
 
 </appendix>
