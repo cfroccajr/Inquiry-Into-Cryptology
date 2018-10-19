@@ -114,6 +114,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 </note>
             </biblio>
 
+            <biblio type="raw" xml:id="jefferson_wheel_letter">
+                Thomas Jefferson
+                <title>Thomas Jefferson, no date, Cipher Wheel, Notes and Copy</title>
+                Manuscript/Mixed Material. Retrieved from the Library of Congress, <url href="http://www.loc.gov/item/mtjbib025756/" /> on 10/19/2018
+            </biblio>
+
+            <biblio type="raw" xml:id="jefferson_lewis_letter">
+                Thomas Jefferson
+                <title>Thomas Jefferson to Meriwether Lewis, Cipher. 04-20, 1803.</title>
+                Manuscript/Mixed Material. Retrieved from the Library of Congress, <url href="http://www.loc.gov/item/mtjbib012330/" /> on 10/19/2018
+            </biblio>
+
+            <biblio type="raw" xml:id="jefferson_papers_vol40">
+                Thomas Jefferson
+                <title>
+                    The Papers of Thomas Jefferson, Volume 40: 4 March to 10 July 1803
+                </title>
+                Princeton University Press, Barbara B. Oberg editor.
+                <year>
+                    2014
+                </year>
+            </biblio>
+
             <biblio type="raw" xml:id="cr_crypt_kahn">
                 David Kahn,
                 <title>

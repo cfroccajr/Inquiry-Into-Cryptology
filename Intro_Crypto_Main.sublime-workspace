@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"line",
+				"line"
+			],
+			[
 				"sam",
 				"sample_analysis_appendix"
 			],
@@ -1559,7 +1563,10 @@
 	],
 	"file_history":
 	[
+		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
+		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
+		"/C/Users/roccac/AppData/Local/Temp/The_Papers_of_Thomas_Jefferson_Volume_40-1.bibtex",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
 		"/C/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
@@ -1576,7 +1583,6 @@
 		"/H/Classes/Math 127/Workbook/WorkbookTest.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/Cracking_Practice.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Cracking_Practice.tex",
-		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/Arabic_cipher_dictionary_shell.tex",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Vocab and Reading Quiz pages 26 to 44.tex",
@@ -1684,9 +1690,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Spring 2009 Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Chapter 4 Test.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam"
 	],
 	"find":
 	{
@@ -1704,6 +1708,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<(/)*line>",
+			"&",
+			"biblio",
+			"a normal line",
+			"line break",
+			"blockquote",
+			"archive",
+			"image",
+			"today when we use the vi",
+			"jefferson",
 			"interact",
 			"& \\d+.\\d+\\s\\\\",
 			"lrrr",
@@ -1748,11 +1762,13 @@
 			"para"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": true,
 		"replace_history":
 		[
+			"<$1p>",
+			"&amp;",
 			"\\\\",
 			"lrl",
 			" \\# & \\% ",
