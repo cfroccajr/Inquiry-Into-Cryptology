@@ -1,16 +1,14 @@
 \documentclass[12pt]{article}
-\usepackage{geometry}
-\geometry{letterpaper,total={408pt,9.0in}}
-%% Custom Page Layout Adjustments (use latex.geometry)
 \usepackage{amsmath,amssymb}
-\usepackage{pgfplots}               % loads tikz package
-\usepackage{smartdiagram}           % for a circular diagram
-\pgfplotsset{axis x line = middle,
-             axis y line = middle}
-\usetikzlibrary{backgrounds}
-\usetikzlibrary{arrows,matrix}
-\ifdefined\tikzset
-\tikzset{ampersand replacement = \amp}
+
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
+    \ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
 \fi
    
        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
@@ -81,15 +79,16 @@
 \newcommand{\amp}{&}
 \begin{document}
 \pagestyle{empty}
-\begin{tikzpicture}
-    \draw[thick] (0,0) 
-        \ppa ++(-10pt,12pt) node {\Large$\cdot\cdot$} ++(5pt,-12pt)
-        \ppe ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
-        \ppc ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
-        \pph ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
-        \ppa ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
-        \ppg ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
-        \ppf ++(-10pt,12pt) node {\Large$\cdot\cdot$}
-    ;
-\end{tikzpicture}
-\end{document}
+
+                \begin{tikzpicture}
+                    \draw[thick] (0,0) 
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot\cdot$} ++(5pt,-12pt)
+                        \ppe ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppc ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \pph ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \ppa ++(-10pt,12pt) node {\Large$\cdot$} ++(10pt,-12pt)
+                        \ppg ++(-10pt,12pt) node {\Large$\cdot$} ++(5pt,-12pt)
+                        \ppf ++(-10pt,12pt) node {\Large$\cdot\cdot$}
+                    ;
+                \end{tikzpicture}
+            \end{document}

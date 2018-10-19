@@ -1,16 +1,14 @@
 \documentclass[12pt]{article}
-\usepackage{geometry}
-\geometry{letterpaper,total={408pt,9.0in}}
-%% Custom Page Layout Adjustments (use latex.geometry)
 \usepackage{amsmath,amssymb}
-\usepackage{pgfplots}               % loads tikz package
-\usepackage{smartdiagram}           % for a circular diagram
-\pgfplotsset{axis x line = middle,
-             axis y line = middle}
-\usetikzlibrary{backgrounds}
-\usetikzlibrary{arrows,matrix}
-\ifdefined\tikzset
-\tikzset{ampersand replacement = \amp}
+
+    \usepackage{pgfplots}               % loads tikz package
+    \usepackage{smartdiagram}           % for a circular diagram
+    \pgfplotsset{axis x line = middle,
+                 axis y line = middle}
+    \usetikzlibrary{backgrounds}
+    \usetikzlibrary{arrows,matrix}
+    \ifdefined\tikzset
+    \tikzset{ampersand replacement = \amp}
 \fi
    
        \def\ppa{-- ++(10pt,0pt)  -- ++(0pt,10pt) ++(5pt,-10pt)}
@@ -81,27 +79,29 @@
 \newcommand{\amp}{&}
 \begin{document}
 \pagestyle{empty}
-\begin{tikzpicture}[scale=1,cap=round,>=latex]
-    \draw[thick] (0,0) rectangle (2,13);
-    \foreach \x in {1,2,...,25}:
-        \draw (-0.5,\x/2) -- (2,\x/2);
-    \foreach [count=\x] \xtext in {Z,Y,...,A}:
-        \node[anchor=south east] at (0cm,\x/2-1/2)  {$\xtext$};
-    \node[anchor=south] at (1,13) {Letter Freq.};
 
-    \foreach \dv in {0,7}{
-        \foreach \dh in {0,4.5}{
-            \draw (2.5+\dh,\dv) rectangle (6.5+\dh,6+\dv);
-            \draw (3.25+\dh,\dv) rectangle (4.5+\dh,6+\dv);
-            \draw (5.25+\dh,\dv) rectangle (6.5+\dh,6+\dv);
-            \foreach \y in {1,2,...,12}{
-                \draw (2.5+\dh,\y/2+\dv) -- (6.5+\dh,\y/2+\dv);
-            }
-        }
-    }
+                
+                \begin{tikzpicture}[scale=1,cap=round,>=latex]
+                    \draw[thick] (0,0) rectangle (2,13);
+                    \foreach \x in {1,2,...,25}:
+                        \draw (-0.5,\x/2) -- (2,\x/2);
+                    \foreach [count=\x] \xtext in {Z,Y,...,A}:
+                        \node[anchor=south east] at (0cm,\x/2-1/2)  {$\xtext$};
+                    \node[anchor=south] at (1,13) {Letter Freq.};
 
-    \foreach \y in {1,2,...,8}{
-        \draw (0,-\y/2) rectangle (11,-4);
-    }
-\end{tikzpicture}
-\end{document}
+                    \foreach \dv in {0,7}{
+                        \foreach \dh in {0,4.5}{
+                            \draw (2.5+\dh,\dv) rectangle (6.5+\dh,6+\dv);
+                            \draw (3.25+\dh,\dv) rectangle (4.5+\dh,6+\dv);
+                            \draw (5.25+\dh,\dv) rectangle (6.5+\dh,6+\dv);
+                            \foreach \y in {1,2,...,12}{
+                                \draw (2.5+\dh,\y/2+\dv) -- (6.5+\dh,\y/2+\dv);
+                            }
+                        }
+                    }
+
+                    \foreach \y in {1,2,...,8}{
+                        \draw (0,-\y/2) rectangle (11,-4);
+                    }
+                \end{tikzpicture}
+            \end{document}
