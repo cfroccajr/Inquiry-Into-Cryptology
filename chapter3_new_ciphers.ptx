@@ -1220,21 +1220,59 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <p>
                     look for <c>t</c> in the <m>1^{st}</m> vertical column &amp; <c>a</c> in the <m>1^{st}</m> horizontal one gives <c>u</c>
                 </p>
-                <p>
-                    . . . . . . . <c>h</c> . . . . . . . . . . . . . . . . . . . . . . . . .<c>n</c> . . . . . . . . . . . . . . . . . . . . . . . . . . .<c>v</c>
-                </p>
-                <p>
-                    . . . . . . . <c>e</c> . . . . . . . . . . . . . . . . . . . . . . . . .<c>t</c> . . . . . . . . . . . . . . . . . . . . . . . . . . .<c>y</c>
-                </p>
-                <p>
-                    . . . . . . . <c>m</c> . . . . . . . . . . . . . . . . . . . . . . . . .<c>i</c> . . . . . . . . . . . . . . . . . . . . . . . . . . .<c>v</c>
-                </p>
-                <p>
-                    . . . . . . . <c>a</c> . . . . . . . . . . . . . . . . . . . . . . . . .<c>p</c> . . . . . . . . . . . . . . . . . . . . . . . . . . .<c>q</c>
-                </p>
-                <p>
-                    . . . . . . . <c>n</c> . . . . . . . . . . . . . . . . . . . . . . . . .<c>o</c> . . . . . . . . . . . . . . . . . . . . . . . . . . .<c>b</c>
-                </p>
+                <sidebyside widths="15% 15% 15%">
+                    <stack>
+                        <p>
+                            <nbsp/>. . . <c>h</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>e</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>m</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>a</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>n</c>
+                        </p>
+                    </stack>
+                    <stack>
+                        <p>
+                            . . . <c>n</c>
+                        </p>
+                        <p>
+                            . . . <c>t</c>
+                        </p>
+                        <p>
+                            . . . <c>i</c>
+                        </p>
+                        <p>
+                            . . . <c>p</c>
+                        </p>
+                        <p>
+                            . . . <c>o</c>
+                        </p>
+                    </stack>
+                    <stack>
+                        <p>
+                            . . . <c>v</c>
+                        </p>
+                        <p>
+                            . . . <c>y</c>
+                        </p>
+                        <p>
+                            . . . <c>v</c>
+                        </p>
+                        <p>
+                            . . . <c>q</c>
+                        </p>
+                        <p>
+                            . . . <c>b</c>
+                        </p>
+                    </stack>
+                </sidebyside>
             </assemblage>
             <p>
                 <alert>Comprehension Check:</alert>

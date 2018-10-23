@@ -1563,8 +1563,9 @@
 	],
 	"file_history":
 	[
-		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/orbits.sage",
+		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
 		"/C/Users/roccac/AppData/Local/Temp/The_Papers_of_Thomas_Jefferson_Volume_40-1.bibtex",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
@@ -1689,8 +1690,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Text Review/Text Review Rubric and Report.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex"
 	],
 	"find":
 	{
@@ -1708,6 +1708,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<(/)*paragraphs>",
 			"<(/)*line>",
 			"&",
 			"biblio",
@@ -1767,6 +1768,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"<$1stack>",
 			"<$1p>",
 			"&amp;",
 			"\\\\",
