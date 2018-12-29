@@ -1,0 +1,177 @@
+    <section xml:id="section_falconer_analysis" xmlns:xi="http://www.w3.org/2001/XInclude" >
+        <title> Falconer's Approach</title>
+        <introduction>
+            <p>
+                In 1685 John Falconer<idx>Falconer, John</idx>, who we met briefly in <xref ref="section_ancient_ciphers"/>, wrote the second ever published text in English on the subject of cryptology; it has the rather lengthy title <em>Cryptomenysis patefacta; or, the art of secret information disclosed without a key. containing plain and demonstrative rule, for decyphering</em>.  Beyond this work little is known about him for certain. A descendant of his writing in the nineteenth century claimed that John was the personal cipher keeper for King James II and followed the king into exile in France where he died.  In slim support of this the book is dedicated to King James II and addressed to the king's secretary of state.  However, no readily available documented evidence exists to independently corroborate his descendant's claims, and in fact there are some tax records for John and his wife, Mary Dalmahoy, in Edinburgh Scotland, from 1695, over six years after James fled to France. <xref ref="cr_crypt_rocca_falconer"/>
+            </p>
+            <p>
+                In his text John Falconer presents a wide variety of ciphers and, for most of them suggestions, for how we might attack them.  In this section we will focus on his directions for how to break, or attempt to break, what we now call monoalphabetic substitution ciphers.
+            </p>
+        </introduction>
+
+        <subsection xml:id="subsection_falconer_step_one">
+            <title>Step 1:</title>
+            <xi:include href="../quote_code/falconer_vowel_v_consonant.ptx" />
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>Do some of these sound familiar from what you read in <xref ref="section_arab_analysis"/>?</li>
+                    <li>Which of these are new? Do any of those seem strange to you?</li>
+                    <li>In what ways does Falconer say that one, two, and three letter words can help us?</li>
+                    <li>According to Falconer when might we expect a double letter to be a vowel and when might it be a consonant?</li>
+                    <li>Try to find out why Falconer says <em><q>Jilt</q></em> and <em><q>Vulture</q></em> begin with
+                    a double vowel.</li>
+                </ul>
+            </p>
+            <p>
+                For the following <em>Checkpoints</em> find a large sample of normal English text (you can use the one you found for the chekpoints in <xref ref="section_arab_analysis" />, but something bigger may be better).  You will also want to use the n-gram counting and word counting tools below.
+            </p>
+            <exercise xml:id="exercise_falconer_one">
+                <statement>
+                    <p>
+                        In your text, what letters are most common?  How many vowels are there? How many consonants are there?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        What are the one, two, and three letter words in the text you found to analyze?  Do they follow the pattern that Falconer described? Are any of them more common than others?
+                    </p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Look at your text for words with double letters, do they behave the way that Falconer says they should?
+                    </p>
+                </statement>
+            </exercise>
+
+            <p><alert>N-Gram Counter:</alert></p>
+            <figure>
+                <caption>N-Gram Analysis Tool</caption>
+                <interactive platform="sage" width="125%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/ngram_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+            <p><alert>String Analyzer:</alert></p>
+            <figure>
+                <caption>String Analyzer Tool</caption>
+                <interactive platform="sage" width="125%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/string_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+            <p><em><alert>Word Counter:</alert></em></p>
+
+            <figure>
+                <caption>Word Counter Tool</caption>
+                <interactive platform="sage" width="125%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/word_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+        </subsection>
+        <subsection xml:id="subsection_falconer_step_two">
+            <title>Step 2:</title>
+            <xi:include href="../quote_code/falconer_vowel_v_vowel.ptx" />
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>Do you agree with his comments about <em>e, o</em> and the other vowels?  Why or why not?</li>
+                    <li>Can you think of examples of or exceptions to his third and fourth comments above?</li>
+                    <li>Can you think of or find an example of <em>o</em> standing alone in English?</li>
+                </ul>
+            </p>
+            <exercise xml:id="exercise_falconer_two">
+                <statement>
+                    <p>
+                        Test out Falconer's observations about vowels using the same sample of text that
+                        you analyzed in exercise <xref ref="exercise_falconer_one" />.  Do his statements
+                        hold true or has the language changed since 1685?
+                    </p>
+                </statement>
+            </exercise>
+        </subsection>
+        <subsection xml:id="subsection_falconer_step_three">
+            <title>Step 3:</title>
+            <xi:include href="../quote_code/falconer_consonant_v_consonant.ptx" />
+            <exercise>
+                <statement>
+                    <p>
+                        What consonnts does Falconer say are most common?  In the text you have been analyzing which are most common?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Consider statement two above and look at the same text you used previously, which consonants are commonly doubled in the middle and at the end of words?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        In your sample of text which consonants do you commonly see at the end of words?  Are there some that, when they do show up, are almost always at the end of a word?  Are there any that are almost never at the end of a word?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Falconer's first three pieces of advice are similar to what we have looked at before;
+                        his fourth comment is something a little new.  Using the same text which you analyzed before
+                        set the <em>n-gram counter</em> to count two letter combinations in your text (<m>N=2</m>). Once you have
+                        the count take note of which combinations of letters appear most often and for each vowel which two or
+                        three consonants it is most often paired with.
+                    </p>
+                </statement>
+            </exercise>
+        </subsection>
+        <subsection xml:id="subsection_falconer_step_four">
+            <title>Step 4:</title>
+            <xi:include href="../quote_code/falconer_additional.ptx" />
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>
+                        Can you think of more examples of three or four letter words beginning and ending with the same letter?
+                    </li>
+                    <li>
+                        What about five little words in which the second and last letters are the same?
+                    </li>
+                    <li>
+                        How many words like <em>on</em> and <em>no</em> or <em>of</em> and <em>for</em> can you think of?
+                    </li>
+                    <li>
+                        Compared with other suggestions we have looked at, how practical do these seem?  Do they seem a little too subtle?
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Looking one last time at the text which you have been using identify common prefixes
+                        and suffixes (what Falconer called <em>propositions and terminations</em>) within the text.
+                        Are you finding any of the examples which he gave?
+                    </p>
+                </statement>
+            </exercise>
+            <conclusion>
+                <p>
+                    To see how we can pull these ideas together take a look at <xref ref="sample_analysis_appendix" />.
+                </p>
+            </conclusion>
+        </subsection>
+    </section>

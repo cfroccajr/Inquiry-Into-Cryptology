@@ -1,0 +1,83 @@
+            <assemblage>
+                <sidebyside width="100%">
+                    <image source="images/jefferson_vigenere.png" archive="png pdf"/>
+                </sidebyside>
+                <p>
+                    Suppose the keyword to be <q>antipodes</q>
+                </p>
+                <sidebyside widths="18% 80%">
+                    <p>
+                        write it thus to be cyphered
+                    </p>
+                    <pre>
+                        a n t i p o d e s a n t i p o d e s a n t i p o d e s
+                        t h e m a n w h o s e m i n d o n v i r t u e b e n t
+                        u v y v q b &amp; m g t s f r e s s s n j e m c u q i t m
+                    </pre>
+                </sidebyside>
+                <p>
+                    then copy out the cyphered line thus, uvyvqb&amp;mgtsfresssnjemcuqitm
+                </p>
+                <p>
+                    numbers are thus, 18 is <c>bv</c> 1798 is thus <c>bubq</c>
+                </p>
+                <p>
+                    the method is this.
+                </p>
+                <p>
+                    look for <c>t</c> in the <m>1^{st}</m> vertical column &amp; <c>a</c> in the <m>1^{st}</m> horizontal one gives <c>u</c>
+                </p>
+                <sidebyside widths="15% 15% 15%">
+                    <stack>
+                        <p>
+                            <nbsp/>. . . <c>h</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>e</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>m</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>a</c>
+                        </p>
+                        <p>
+                            <nbsp/>. . . <c>n</c>
+                        </p>
+                    </stack>
+                    <stack>
+                        <p>
+                            . . . <c>n</c>
+                        </p>
+                        <p>
+                            . . . <c>t</c>
+                        </p>
+                        <p>
+                            . . . <c>i</c>
+                        </p>
+                        <p>
+                            . . . <c>p</c>
+                        </p>
+                        <p>
+                            . . . <c>o</c>
+                        </p>
+                    </stack>
+                    <stack>
+                        <p>
+                            . . . <c>v</c>
+                        </p>
+                        <p>
+                            . . . <c>y</c>
+                        </p>
+                        <p>
+                            . . . <c>v</c>
+                        </p>
+                        <p>
+                            . . . <c>q</c>
+                        </p>
+                        <p>
+                            . . . <c>b</c>
+                        </p>
+                    </stack>
+                </sidebyside>
+            </assemblage>

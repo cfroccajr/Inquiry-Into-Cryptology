@@ -41,10 +41,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <xsl:param name="whitespace" select="'flexible'" />
 
 <!-- Set parameters for exersices in the backmatter -->
-<xsl:param name="exercise.backmatter.statement" select="'no'" />
+<!-- <xsl:param name="exercise.backmatter.statement" select="'no'" />
 <xsl:param name="exercise.backmatter.hint" select="'no'" />
 <xsl:param name="exercise.backmatter.solution" select="'yes'" />
-<xsl:param name="exercise.backmatter.answer" select="'yes'" />
+<xsl:param name="exercise.backmatter.answer" select="'yes'" /> -->
 
 <!-- Set parameters for inline exersices -->
 <xsl:param name="exercise.inline.solution" select="'no'" />

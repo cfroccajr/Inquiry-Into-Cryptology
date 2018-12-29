@@ -1,0 +1,139 @@
+    <section xml:id="section_vigenere" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> An Automatic Hit </title>
+        <objectives>
+            <ul>
+                <li>
+                    Vigen&#x00E8;re's Biography
+                </li>
+                <li>
+                    Vigen&#x00E8;re's Autokey Cipher
+                </li>
+            </ul>
+        </objectives>
+        <subsection xml:id="vigenere_bio">
+            <title>Biography of Blaise de Vigen&#x00E8;re</title>
+            <p>
+                Insert biography when available
+            </p>
+        </subsection>
+        <subsection xml:id="autokey_cipher">
+            <title>The Autokey Cipher</title>
+            <p>
+                <idx>autokey</idx>
+                Description of Alberti's autokey from Kahn ... </p>
+            <p>
+                Below is a description of Vigen&#x00E8;re's more secure variation on an autokey cipher.
+                <fn>
+                    This translation is mostly from Charles Mendelsohn in <xref ref="cr_crypt_mendelsohn_vigenere" detail="p. 128"/>, I have supplemented with material from the original description by Vigen&#x00E8;re is in <xref ref="cr_crypt_vigenere" detail="pp.49-49b"/>.
+                </fn>
+                Read carefully through the passage above, you will need to use <xref ref="vigenere_auto_table" text="type-global" /> in order to follow along.
+            </p>
+            <xi:include href="../quote_code/vigenere_autokey.ptx" />
+            <figure xml:id="vigenere_auto_table">
+                <caption>Table used for Vigen&#x00E8;re's Autokey Cipher</caption>
+                <image width="70%" source="images/vigenere_auto_table.png">
+                    <description>This is the table that Vigen&#x00E8;re used for his Autokey Cipher</description>
+                </image>
+            </figure>
+            <p>
+                <alert>Comprehension Check:</alert> It will be easier to follow what is happening in this passage if we write out the message as follows:
+            </p>
+            <p>Text for the first cipher method:</p>
+            <pre>
+                    Plaintext:    a u n o m d e l e t e r n e l
+                    Key Letter:   D A U N O M D E L E T E R N E
+                    Ciphertext: D X I A H G U P T M L S H I X T
+            </pre>
+            <p>
+                <ul>
+                    <li>
+                        Vigen&#x00E8;re uses a <em>D</em> as the key to encipher the first letter, in the first method described where does he get the subsequent letters for the key?
+                    </li>
+                    <li>
+                        The letter <em>D</em> enciphers <em>a</em> as <em>X</em>, but the <em>a</em> is not in row <em>D</em> of <xref ref="vigenere_auto_table"/> so how do we know that the <em>a</em> should be <em>X</em> ?
+                    </li>
+                    <li>
+                        At one point Vigen&#x00E8;re uses a key letter of <em>U</em> but there is no row <em>U</em> on his table, looking at how the <em>U</em> enciphers the <em>n</em>, what row is he using in place of <em>U</em>?
+                    </li>
+                    <li>
+                        The <em>a</em> was enciphered as <em>X</em>, but the first letter of the ciphertext is <em>D</em>, also the ciphertext is one character longer than the plaintext, what is the explanation for both of these?  Where did the leading <em>D</em> come from?
+                    </li>
+                </ul>
+            </p>
+            <p>Text for the second cipher method:</p>
+            <pre>
+                    Plaintext:    a u n o m d e l e t e r n e l
+                    Key Letter:   D X H E E C O U ...
+                    Ciphertext: D X H E E C O U M ...
+            </pre>
+            <p>
+                <ul>
+                    <li>
+                        In the second method described he again starts with a key of <em>D</em> but then where does he get the the next key letter <em>X</em>? What about the key letter <em>H</em>? Try to complete the cipher using the second method.
+                    </li>
+                    <li>
+                        Vigen&#x00E8;re believes his second method is more secure, looking at the <em>key</em> for the second method why do you think he believes this?
+                    </li>
+                    <li>
+                        If you compare the <em>key</em> for his second method to the cipher text he generates why is Vigen&#x00E8;re wrong about his second method being more secure?
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Check your understanding by enciphering the message <em><q>automatic confusion</q></em> using Vigen&#x00E8;re's first and second autokey methods, use <em>Q</em> for the initial key letter.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        Method 1:
+                    </p>
+                    <pre>
+                        Plaintext:    a u t o m a t i c c o n f u s i o n
+                        Key Letter:   Q A U T O M A T I C C O N F U S I O
+                        Ciphertext: Q P I G A G R H M U N D H M A F M G H
+                    </pre>
+                    <p>
+                        Method 2:
+                    </p>
+                    <pre>
+                        Plaintext:    a u t o m a t i c c o n f u s i o n
+                        Key Letter:   Q P E L G D X G R N T A B R F I Q L
+                        Ciphertext: Q P E L G D X G R R R L F P E I Q L F
+                    </pre>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        The message <c>CHFABH CXNXM GFMRR MDDMR</c> was enciphered using Vigen&#x00E8;re's first autokey method, check your understanding of the method by deciphering it.
+                    </p>
+                </statement>
+                <answer>
+                    <pre>
+                        Ciphertext: C H F A B H C X N X M G F M R R M D D M R
+                        Key Letter:   C S T O R M T H E B A S T I L L E N U L
+                        Plaintext:    s t o r m t h e b a s t i l l e n u l l
+                    </pre>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        The message <c>QMPTM GPOHG SOOHL QXUGC</c> was enciphered using Vigen&#x00E8;re's second autokey method, check your understanding of the method by deciphering it.
+                    </p>
+                </statement>
+                <answer>
+                    <pre>
+                        Ciphertext: Q M P T M G P O H G S O O H L Q X U G C
+                        Key Letter:   Q M P T M G P O H G S O O H L Q X U G
+                        Plaintext:    h i d i n g i n p l a i n s i g h t x
+                    </pre>
+                </answer>
+            </exercise>
+            <p>
+                <em><alert>Reflection:</alert></em> If you go back and look carefully at the preceding couple of exercises you will notice that deciphering a message enciphered using the first autokey method is equivalent to second method and vice versa.  In what way does this weaken the cipher?
+            </p>
+        </subsection>
+    </section>

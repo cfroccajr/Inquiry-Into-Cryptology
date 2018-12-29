@@ -1,0 +1,212 @@
+    <exercises xml:id="poly_exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> How Mixed Up Do You Feel?</title>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher this message using a <em>Pigpen Cipher</em>.
+                    <xref ref="appendix_figure_pigpen" text="type-global" />
+                </p>
+                <blockquote>
+                    <p>
+                        <q>You can put wings on a pig, but you don't make it an eagle.</q> - William J. Clinton
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher this message written using a <em>Pigpen Cipher</em>.
+                    <xref ref="appendix_figure_pigpen" text="type-global" />
+                </p>
+                <figure>
+                    <caption>Cipher Text</caption>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}<!-- THAT'S ALL FOLKS -->
+                                \draw (0,-0.5) \ppt\pph\ppa\ppt\pps ++(5pt,0pt) \ppa\ppl\ppl ++(5pt,0pt) \ppf\ppo\ppl\ppk\pps;
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following message with Alberti's polyalphabetic cipher, 
+                    <xref ref="appendix_figure_alberti" text="type-global"/>, use and index letter of <em>s</em> and key 
+                    letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Men can do all things if they will.
+                        </q> - Leon Battista Alberti
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following message using the modern version of the Vigenere Square 
+                    <xref ref="appendix_figure_vigenere_new" text="type-global"/> and a keyword of <em>FRANCE</em>.
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Hope is a good breakfast, but it is a bad supper.
+                        </q> -  Francis Bacon
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use the modern Vigenere Square 
+                    <xref ref="appendix_figure_vigenere_new" text="type-global"/>
+                    to decipher the following message which was enciphered using a key word of <em>STATE</em>.
+                </p>
+                    <pre>
+                        LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
+                        XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
+                        JXCHP AGPHA WEL
+                    </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>F</em>, 
+                    use Vigenere's original table for this one.
+                    <xref ref="appendix_figure_vigenere_auto_table" text="type-global"/>
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Obstacles are those frightful things you see when you take your eyes off your goal.
+                        </q> - Henry Ford
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher this quote with an <em>Autokey Cipher</em> with a key letter of <em>J</em>, 
+                    use the modern Vigenere Square for this one.
+                    <xref ref="appendix_figure_vigenere_new" text="type-global"/>
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Success is not final, failure is not fatal: it is the courage to continue that counts. 
+                        </q> - Winston Churchill
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use the modern Vigenere Square 
+                    <xref ref="appendix_figure_vigenere_new" text="type-global"/>
+                    to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
+                </p>
+                    <pre>
+                        ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
+                    </pre>
+            </statement>
+        </exercise>
+<!--            <exercise>
+                <statement>
+                    <p>
+                        Jefferson practice enciphering
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Jefferson practice enciphering
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Jefferson practice deciphering
+                    </p>
+                </statement>
+            </exercise> -->
+            <exercise>
+                <statement>
+                    <p>
+                        Encipher the following message using Falconers Columnar Transposition with 
+                        a key of <em>{ACB,BCA,CAB,ABC}</em>.
+                        <xref ref="appendix_trans_table" text="type-global"/>
+                    </p>
+                    <blockquote>
+                        <p>
+                            <q>
+                                Were I not a king, I would be a university man.
+                            </q> -  King James I
+                        </p>
+                    </blockquote>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Encipher the following message using Falconers Columnar Transposition with 
+                        a key of <em>{CBA,ABC,BCA,CAB,ACB,BAC}</em>.
+                        <xref ref="appendix_trans_table" text="type-global"/>
+                    </p>
+                    <blockquote>
+                        <p>
+                            <q>
+                                I have loved justice and hated iniquity: therefore I die in exile. 
+                            </q> -  Pope Gregory VII
+                        </p>
+                    </blockquote>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Decipher the following message using Falconers Columnar Transposition with 
+                        a key of <em>{ABC,BCA,BCA,ACB}</em>.
+                        <xref ref="appendix_trans_table" text="type-global"/>
+                    </p>
+                        <pre>
+                            ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI  
+                            ES IHNLH TLBEK EOTWS HDUSE
+                        </pre>
+                </statement>
+            </exercise>
+            <conclusion>
+                <p><alert>Substitution Cipher Cell:</alert></p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/subst_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+
+                <p><em><alert>Vigenere Cipher Cell:</alert></em></p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/vigenere_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+
+                <p><alert>Falconer's Tabular Cipher:</alert></p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/falconer_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+
+            </conclusion>
+    </exercises>

@@ -1,0 +1,97 @@
+    <section xml:id="section_jefferson_cipher" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Presidential Secrets</title>
+        <objectives>
+            <ul>
+                <li>
+                    Jefferson's Biography
+                </li>
+                <li>
+                    Jefferson's Letter with Vigen&#x00E8;re's Cipher
+                </li>
+                <li>
+                    Jefferson's Wheel Cipher
+                </li>
+            </ul>
+        </objectives>
+        <subsection xml:id="jefferson_bio">
+            <title>Thomas Jefferson's Biography</title>
+            <p>
+                A brief biography of
+                <url href="https://www.monticello.org/site/jefferson/thomas-jefferson-brief-biography">
+                Thomas Jefferson</url>.
+            </p>
+        </subsection>
+        <subsection xml:id="jeferson_vigenere">
+            <title>Thomas Jefferson and Vigen&#x00E8;re's Cipher</title>
+            <p>
+                Among Thomas Jefferson's papers in the library of congress there are atleast 63 distinct items which discuss ciphers.  In one of these, a letter from Jefferson to Meriwether Lewis (<url href="http://hdl.loc.gov/loc.mss/mtj.mtjbib012330">Thomas Jefferson to Meriwether Lewis, April 20, 1803</url>), Jefferson suggests that they use Vigen&#x00E8;re's cipher for their correspondence.
+                <xref ref="appendix_figure_vigenere_new" text="type-global" />
+            </p>
+
+            <xi:include href="../quote_code/jefferson_vigenere.ptx" />
+
+
+            <p>
+                <alert>Comprehension Check:</alert>
+            </p>
+            <p>
+                <ul>
+                    <li>Look carefully at Jefferson's work, can you find his error?</li>
+                    <li>How did Jefferson turn 18 into <c>bv</c>?</li>
+                    <li>How did Jefferson turn 1798 into <c>bubq</c>?</li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <blockquote>
+                        <p>
+                            Below is the rest of the quote from Thomas Blacklock that Jefferson started enciphering.  Try to complete the enciphering.
+                        </p>
+                        <p></p>
+                        <poem>
+                            <stanza>
+                                <line>The man, whose mind on virtue bent,</line>
+                                <line>Pursues some greatly good intent,</line>
+                                <line indent="1">With undiverted aim,</line>
+                                <line>Serene, beholds the angry crowd;</line>
+                                <line>Nor can their clamors, fierce and loud,</line>
+                                <line indent="1">His stubborn honor tame.</line>
+                             </stanza>
+                        </poem>
+                        <!-- The man, whose mind on virtue bent,Pursues some greatly good intent,With undiverted aim,Serene, beholds the angry crowd;Nor can their clamors, fierce and loud His stubborn honor tame. -->
+                    </blockquote>
+                </statement>
+                <answer>
+                    <pre>
+                        UVYVQB &amp;MGTSF RCSSSN JEMCUQ ISLQHK AJTWXG NS&amp;&amp;UP
+
+                        XQQHBH MYBXJF UJBBXI RIAWSK BUSENE TSKNCT FJ&amp;PZX
+
+                        AIWIFF HERLGC &amp;IFPEW JCHLJA SQEJBC VXYJSK LUPRID
+
+                        PHXQYG WYMCPH &amp;CWSSG SGUVU
+                    </pre>
+                </answer>
+            </exercise>
+        </subsection>
+        <subsection xml:id="jefferson_wheel">
+            <title>Thomas Jefferson's Wheel Cipher</title>
+            <p>
+                Here is a brief description of Thomas Jefferson's
+                <url href="https://www.monticello.org/site/research-and-collections/wheel-cipher">
+                wheel cipher</url>, and here is his description <url href="http://hdl.loc.gov/loc.mss/mtj.mtjbib025756"> Jefferson's Wheel Cipher.</url>
+
+                Compare to M-94 Cipher Cylinder
+            </p>
+
+            <xi:include href="../quote_code/jefferson_wheel.ptx" />
+
+            <exercise>
+                <statement>
+                    <p>
+                        Insert Jefferson Exercise Here!!!
+                    </p>
+                </statement>
+            </exercise>
+        </subsection>
+    </section>

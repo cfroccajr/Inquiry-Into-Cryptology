@@ -1,0 +1,182 @@
+    <section xml:id="arab_ciphers" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Arabic Numerical Ciphers</title>
+        <p>
+            Mathematics played no role in the ciphers we examined in the previous section.  In fact math played no role in cryptology at all until <term>Arabic scholars</term><idx>Arabic scholar</idx><fn xml:id="arabic_scholars">When math historians, or historians in general, speak of Arabic scholars it is a reference to the language and not the ethnicity or location of the scholars.</fn> performed basic data analysis on the Arabic language in the 9th century CE.  They quickly realized that their observations could be used to break the basic ciphers we have been considering.  However, that is a topic for the next chapter.
+        </p>
+        <p>
+            In this section we will introduce some other work done by Arabic scholars. <xref ref="cr_crypt_arabic" detail="vol. 3" />  We are going to look at some methods of enciphering text by first changing the text to numbers, some of these methods today would be called <term>affine ciphers</term><idx>affine cipher</idx>.
+        </p>
+        <p>
+            They began by associating each letter of the alphabet with a number in a manner similar to the following:
+        </p>
+            <xi:include href="../table_code/arabic_alpha_table.ptx"/>
+        <p>
+            Once this is done there are then a variety of ways in which we may encipher our message. Carefully read through these passages from <em>ibn ad-Durayhim's</em><idx>ibn ad-Durayhim</idx> treatise written in the <m>12^{th}</m> century CE; try to get an idea of how his encipherments worked before going on.
+        </p>
+        <xi:include href="../quote_code/adDurayhim_numerical_ciphers.ptx" />
+        <p>
+            <alert>Comprehension Check:</alert> (Be sure to reference <xref ref="table_numeric_alpha"/> as you try to answer these questions.)
+            <ul>
+                <li>
+                    In the first paragraph how did <em>mhmd</em> become <em>forty, eight, forty, four</em>?
+                </li>
+                <li>
+                    In the second paragraph above, how did the author derive <em>jl</em> from <em>m</em> 
+                    or <em><m>\overline{cab\ ab}</m></em> from <em>i</em><m>\ </m>?
+                </li>
+                <li>
+                    When converting letters to <em>delusive words</em>, <em>m</em> was enciphered as <em>lead</em> and <em>deal</em>, how did this work?  Can you find another word to encipher it as?
+                </li>
+                <li>
+                    What letter(s) would be easier to translate into a variety of words?  Which letters would be harder to change into words?
+                </li>
+                <li>
+                    In the third paragraph why is the <em>m</em> enciphered as a single <em>q</em> in the first example, but requires two letters, <em>sk</em> in the second?
+                </li>
+            </ul>
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    Demonstrate your understanding of the systems above by enciphering <em>"ibex"</em> using each of the methods described above.
+                    <ol>
+                        <li>
+                            By writing the letters as numerals.
+                        </li>
+                        <li>
+                            By writing letters in combinations of two or more letters.
+                        </li>
+                        <li>
+                            By tripling the values of the letters.
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    For all of these the first step is to use <xref ref="table_numeric_alpha"/> to translate the letters to numbers.  Then you will need to in some way manipulate those numbers and/or translate them back to words and letters using the table.  How specifically this happens depends on the cipher method, also for some methods there will be more than one answer.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <ol>
+                        <li>NINE TWO FIVE SIXHUNDRED</li>
+                        <li>HA AA CB VT</li>
+                        <li>KG DB JE ZXV</li>
+                    </ol>
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the word <em>"tan"</em> by doubling the values of the letters.  In how many ways do you think you can encipher each letter if you are allowed to use up to four letters to represent each letter?
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    As an example <em>b</em> doubled is 4 which we could represent as a <em>D</em> or as <em>AC</em> or as <em>CA</em> or as <em>BB</em> (though the last one is kind of silly). Also, remember that you will need to use <xref ref="table_numeric_alpha"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    There are multiple possible encipherments, a couple are <c>V B S</c> and another is <c>QUK AA JJOK</c>.
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    The following cipher text was enciphered using one of the above ciphers.
+                </p>
+                <pre>
+                    YU II J S JH ZT B J V V SK X S H J SQ T V B S H YU
+                    IG B SU GAJ T JF B SM QO FD S JH OM JD UT KS EC B
+                    ZX OO SLN V QS XVUS RJU SK EC J DB HJ H J YU JF B
+                    QKU UY JH O MK FJ B XZ YVU J MO SU KS Q SQ RPK MQ
+                    XV HJ O SK NP M D B F M NP Q B SQ M JF B VZT WXU B Q
+                </pre>
+            </statement>
+            <hint>
+                <p>
+                    <ul>
+                        <li>The message is a quote from a famous Arabic poet and mathematician.</li>
+                        <li>There is at least one letter substitution which by necessity is always the same.</li>
+                        <li>Each pair or triple of letters represents only a single plaintext letter.</li>
+                        <li>The order of a pair or triple of letters doesn't change which letter it enciphers.</li>
+                        <li>As before you will need <xref ref="table_numeric_alpha"/>.</li>
+                    </ul>
+                </p>
+            </hint>
+            <answer>
+                <!--  Plain text for the next exercise 
+                    When I want to understand what is happening today or try to decide what will happen tomorrow, I look back.
+                    Omar Khayyam 
+
+                    when: 500-8-5-50
+                    I: 9
+                    want: 500-1-5-200
+                    to: 200-60
+                    understand: 300-50-4-5-90-100-200-1-50-4
+                    what: 500-8-1-200
+                    is: 9-100
+                    happening: 8-1-70-70-5-50-9-50-7
+                    today: 200-60-4-1-700
+                    or: 60-90
+                    try: 200-90-700
+                    to: 200-60
+                    decide: 4-5-3-9-4-5
+                    what: 500-8-1-200
+                    will: 500-9-30-30
+                    happen: 8-1-700-700-5-50
+                    tomorrow: 200-60-40-60-90-90-60-500
+                    I: 9
+                    look: 30-60-60-20
+                    back: 2-1-3-20
+                    omar: 60-40-1-90
+                    khayyam: 20-8-1-700-700-1-40
+                -->
+                <p>
+                    <q>When I want to understand what is happening today or try to decide what will happen tomorrow, I look back.</q> - Omar Khayyam
+                </p>
+            </answer>
+        </exercise>
+        <exercise xml:id="delusive_words_exercise1">
+            <statement>
+                <p>
+                    Enciphering by forming <em>delusive words</em> is potentially useful but also can also be very hard.  See if you can convert the word <q>math</q> to delusive words.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Recall that before we could encipher <q>m</q> as either <q>LEAD</q> or <q>DEAL</q> this way.  And, as with all of the ciphers here, you need to use <xref ref="table_numeric_alpha"/>.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                   One possible solution is LEAD A SOM CAD.
+                </p>
+            </answer>
+        </exercise>
+        <p>
+            <alert>Reflection:</alert> Looking back at the exercises you have completed try to comment on the following questions:
+            <ul>
+                <li>
+                    Looking at the number of different ways you could encipher some letters, like <em>t</em>, what advantage might these new ciphers have over the simpler ones we looked at previously?
+                </li>
+                <li>
+                    Why might having a large number of different ways to encipher a single letter be a disadvantage? (Note: A cipher in which a single character or block of characters may be enciphered in multiple ways in the same message is called <term>homophonic</term><idx>homophonic</idx>.)
+                </li>
+                <li>
+                    Which of the methods described above do you think has the potential to be the most useful and why?
+                </li>
+                <li>
+                    Do you think these methods are more or less secure than the methods we looked at in the previous section? Or, are they about the same?
+                </li>
+                <li>
+                    In what way do you think you might be able to tweak one of the above methods in order to make it more effective?
+                </li>
+            </ul>
+        </p>
+    </section>

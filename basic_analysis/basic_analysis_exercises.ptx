@@ -1,0 +1,271 @@
+    <exercises xml:id="exercises_analysis" xmlns:xi="http://www.w3.org/2001/XInclude" >
+        <title> Bringing it all Together</title>
+        <exercisegroup>
+            <introduction>
+                <p>
+                    For exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" /> you will review the ideas we have explored in this chapter.  When you are done you should have generated for yourself a guide which you can use when you are attempting to analyze a piece of cipher text.  To begin find a new piece of relatively typical English text which is at least 1000 characters long.  Then, you can use the <em>n-gram counter</em>, <em>word counter</em>, and <em>string counter</em> at the bottom of the page to help you examine the text for the following information:
+                </p>
+            </introduction>
+            <exercise xml:id="exercise_freq_count">
+                <statement>
+                    <p>
+                        letter frequencies
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        <term>bi-gram</term> (two letter combination) and <term>tri-gram</term> (three letter combination). <idx>bi-gram</idx><idx>tri-gram</idx> frequencies
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Common words
+                    </p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise_prefix">
+                <statement>
+                    <p>
+                        prefixes and suffixes
+                    </p>
+                </statement>
+            </exercise>
+            <conclusion>
+                <p>
+                    Now, finally, put together all the information you have just gathered into a neat one page analysis guide.  You should type this up neatly, in a reasonably sized font. If you want you can print out a copy of <xref ref="charts_image" /> and use it to help organize the information. It should include:
+                    <ul>
+                        <li>
+                            A list of frequencies for all the individual letters in the alphabet.
+                        </li>
+                        <li>
+                            The frequencies for at least the top 25 bi-grams and tri-grams.
+                        </li>
+                        <li>
+                            A list of the top 25 most common words.
+                        </li>
+                        <li>
+                            A list of your top 25 most common prefixes and suffixes.
+                        </li>
+                        <li>
+                            And, any other types of information you think might be useful which you have looked at in this chapter.
+                        </li>
+                    </ul>
+                </p>
+            </conclusion>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>
+                    Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
+                </p>
+                <pre>
+                    LU ZOO GSZG RH TLLW, HFYORNRGB RH HFKIVNV. HFXXVVWRMT RH GSV
+                    XLNRMT GLTVGSVI LU ZOO GSZG RH YVZFGRUFO. UFIGSVIZMXV RH GSV
+                    ZTIVVNVMG LU ZOO GSZG RH QFHG. KVIHVEVIZMXV RH GSV ULFMWZGRLM
+                    LU ZOO ZXGRLMH. - OZL GAF
+                </pre>
+            </statement>
+            <hint>
+                <p>
+                    Be sure to look at repeated common words.  Also, as you uncover cipher letters try writing them down in <xref ref="blank_key_table" /> and looking for a pattern.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <q>of all that is good, sublimity is supreme. succeeding is the coming together of all that is beautiful. furtherance is the agreement of all that is just. perseverance is the foundation of all actions.</q> - lao tzu
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    When you look at the frequencies you see that <c>G</c> and <c>V</c> are most common, next most common are <c>R</c> and <c>Z</c>.  So we know that one of the first two is probably <c>e</c> while the other is <c>t</c>, and one of the latter two is likely <c>a</c>, assuming the frequencies are fairly normal.
+                </p>
+                <p>
+                    Then we see that <c>GSV</c> and <c>GSZG</c> appear frequently, and <c>GS</c> is the most common bi-gram (so that it is likely <c>th</c>).  Putting this together we see that <c>e</c> is <c>V</c>, <c>t</c> is <c>G</c>, <c>a</c> is <c>Z</c>, and <c>h</c> is <c>S</c>.  So that <c>GSV</c> and <c>GSZG</c> represent <c>the</c> and <c>that</c>.
+                </p>
+                <p>
+                    We can also see that <c>ZOO</c> appears four times with <c>Z</c> replaced by <c>a</c> this looks like <c>aOO</c>, the likely candidate is that <c>ZOO</c> is <c>all</c>, so that <c>O</c> is <c>l</c>.
+                </p>
+                <p>
+                    At this point we can start writing down the letters we have in the monoalphabetic substitution table (<xref ref="blank_key_table" />).  When you do that you will hopefully notice that the cipher letters are in reverse alphabetic order, so this was likely enciphered with atabash which we learned about in <xref ref="atabash_intro" />.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use the skills we have been practicing in class together with the cheat sheet you just put
+                    together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
+                </p>
+                <pre>
+                    SNE ORGGRE VF VG GB QNER ZVTUGL GUVATF, GB JVA TYBEVBHF GEVHZCUF,
+                    RIRA GUBHTU PURPXRERQ OL SNVYHER ... GUNA GB ENAX JVGU GUBFR CBBE
+                    FCVEVGF JUB ARVGURE RAWBL ABE FHSSRE ZHPU, ORPNHFR GURL YVIR VA N
+                    TENL GJVYVTUG GUNG XABJF ABG IVPGBEL ABE QRSRNG. - GURBQBER
+                    EBBFRIRYG
+                </pre>
+                    <!-- far better is it to dare mighty things, to win
+                    glorious triumphs,  even though checkered by
+                    failure ... than to rank with those poor  spirits
+                    who neither enjoy nor suffer much, because they
+                    live in a  gray twilight that knows not victory
+                    nor defeat. - theodore  roosevelt 
+                    shift a to N -->
+
+            </statement>
+            <hint>
+                <p>
+                    Be patient, the letter frequencies are ... abnormal.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <q> far better is it to dare mighty things, to win
+                    glorious triumphs,  even though checkered by
+                    failure ... than to rank with those poor  spirits
+                    who neither enjoy nor suffer much, because they
+                    live in a  gray twilight that knows not victory
+                    nor defeat.</q> - theodore  roosevelt
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Looking at a basic frequency analysis we see that the most common single letters are <c>G, R, B, E, V, U, A, F, N, H</c>, the most common bi-gram is <c>GU</c>, and the most common tri-gram is <c>GUR</c>; from this we may conclude that <c>G</c> is <c>t</c>, <c>U</c> is <c>h</c>, and <c>R</c> is <c>e</c>.
+                </p>
+                <p>
+                    Since the word spacing is preserved we also have the two letter words <c>VF</c>, <c>VG</c>, <c>GB</c>, and <c>VA</c>, and the one letter word <c>N</c>, these allow us to deduce the ciphertext-plaintext pairs <c>N - a</c>, <c>B - o</c>, <c>V - i</c>, and <c>F - s</c>.
+                </p>
+                <p>
+                    When we start writing down the ciphertext we have worked out under the plaintext alphabet (use <xref ref="blank_key_table" />) we can see that the letters we have discovered are in the correct order and with the correct spacing so that we appear to have a shift, trying this as a possible solution we see that we are correct and that <c>a</c> was shifted to <c>N</c>.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Use the skills we have been practicing in class together with the cheat sheet you just put together in order to crack this cipher.
+                    (It may also help to take a look at <xref ref="sample_analysis_appendix" />.)
+                </p>
+                <pre>
+                    WKSTD QJUTJ OTKLE JGGJI DQUQU SFFYS CUDRL PSTKL PTKSI SKDIR
+
+                    PSIEL DIQJF VDICS MPJHF LGJOT KDQQJ PTTKL CPSIR TKDIC DQTJH
+
+                    LSHFL TJPLS QJIHS EBWSP RTKST DQSVL PYUQL OUFSE EJGMF DQKGL
+
+                    ITSIR SVLPY LSQYJ ILHUT MLJMF LRJIJ TMPSE TDELD TGUEK DITKL
+
+                    LVLPY RSYSO OSDPQ JOFDO LDTDQ GJPLU QLOUF TJPLS QJIOJ PWSPR
+
+                    SIRQJ TKLJT KLPEJ GLQTJ HLILC FLETL RTKLP LSPLO DOTYW KJESI
+
+                    PLSQJ IQYIT KLTDE SFFYO JPJIL WKJES IPLSQ JISIS FYTDE SFFYG
+
+                    JQTML JMFLD OYJUR LQEPD HLSTP SDIJO LVLIT QTJTK LGWDF FTLFF
+
+                    YJUWK STTKL PLQUF TWJUF RHLTK LYESI MUTTK JQLLV LITQT JCLTK
+
+                    LPDIT KLDPG DIRQS IRSPC ULOPJ GTKLG TKSTQ JGLTK DICWD FFEJG
+
+                    LTJMS QQTKL PLSPL OLWML JMFLK JWLVL PWKJD OYJUT JFRTK LGSPL
+
+                    QUFTW JUFRH LSHFL TJLVJ FVLOP JGTKL DPJWI DIILP EJIQE DJUQI
+
+                    LQQWK STTKL QTLMQ WLPLW KDEKF LRUMT JTKST PLQUF TTKDQ MJWLP
+
+                    DQWKS TDGLS IWKLI DTSFB JOPLS QJIDI CHSEB WSPRJ PSISF YTDES
+
+                    FFYSQ TURYD IQESP FLTQK LPFJE BKJFG LQ
+                </pre>
+            </statement>
+            <!-- keyword SHERLOCKED key letter a 
+                what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically. Study in Scarlet Sherlock Holmes 
+            -->
+            <hint>
+                <p>
+                    This is a quote from a famous fictional nineteenth century detective and makes use of a keyword cipher.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <q>... what is out of the common is usually a guide rather than a hindrance. In solving a problem of this sort, the grand thing is to be able to reason backwards. That is a very useful accomplishment, and a very easy one, but people do not practice it much. In the every-day affairs of life it is more useful to reason forwards, and so the other comes to be neglected. There are fifty who can reason synthetically for one who can reason analytically.</q> - Sherlock Holmes in Study in Scarlet by Sir Arthur Conan Doyle
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    As always you need to start with a basic frequency analysis.  From this you immediately get that the ten most common letters are <c>L, T, J, S, Q, P, I, K, F, D</c>, the most common bi-gram and tri-gram are <c>TK</c> and <c>TKL</c>, <c>L</c> appears frequently before and after other letters (in particular <c>P</c>), and finally <c>TKLPL</c> and <c>TKLDP</c> appear multiple times; from all of this we get the ciphertext-plaintext pairs <c>L - e</c>, <c>T - t</c>, <c>H - k</c>, <c>P - r</c>, and <c>D - i</c>.
+                </p>
+                <p>
+                    Then we can start filling in bits and pieces of the message and looking for more clues, for example <c>LVLPY</c> becomes <c>eVerY</c> which we reasonably assume is <c>every</c>.  Also, with the hint that it is a keyword cipher we can line up the ciphertext letters we have worked out underneath a copy of the plaintext alphabet (<xref ref="blank_key_table" />) and look for patterns.  Continuing in this way we can finally arrive at the solution and the key is KEYWORD: SHERLOCKED, key letter: a.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Consider the following comment from John Falconer:</p>
+                <blockquote>
+                    <p>
+                        I have not meddled here with any language but English; ... However, by a little practice of decyphering in one language, you may decipher an epistle in any, even tho the plain speech itself be a mystery to you, if you first observe the frequency of the letters, the terminal letters, what letters can be doubled in the beginning, middle, and end of words; and such general rules.<xref ref="cr_crypt_falconer" detail="p. 12" />
+                    </p>
+                </blockquote>
+                <p>
+                    Find a large piece of typical text written in a language other than English; it needs to be native to that language not a translation from another language.  Perform an analysis of this text and then create a cheat sheet just like you did for English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />). Finally, encipher a message written in this new language which your classmates can try to decipher using your cheat sheet.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    A lot of the general advice that Falconer gave us was good, but his specifics didn't match what we expect to see when we read a more modern text.  Find a typical piece of text or literature from seventeenth century England (or better yet Scotland) and analyze this text to create a cheat sheet like the one you did for modern English (exercises <xref ref="exercise_freq_count" /> to <xref ref="exercise_prefix" />).  How do your findings match what Falconer told us to expect?
+                </p>
+            </statement>
+        </exercise>
+        <conclusion>
+            <p><alert>N-Gram Counter:</alert></p>
+            <figure>
+                <caption>N-Gram Analysis Tool</caption>
+                <interactive platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/ngram_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+<!--             <sage>
+                <input><xi:include href="../sage_code/ngram_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage> -->
+
+            <p><em><alert>Word Counter:</alert></em></p>
+
+            <figure>
+                <caption>Word Counter Tool</caption>
+                <interactive platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/word_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+
+<!--                 <sage>
+                    <input><xi:include href="../sage_code/word_analysis.sage" parse="text"/></input>
+                    <output></output>
+                </sage> -->
+
+            <p><em><alert>String Counter Tool:</alert></em> You can use this tool to look for specific combinations of letters in you text rather than gathering gerneral information.  This is helpful for looking for prefixes, suffixes, and double letters.</p>
+
+            <figure>
+                <caption>String Counter Tool</caption>
+                <interactive platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/string_analysis.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+        </conclusion>
+    </exercises>

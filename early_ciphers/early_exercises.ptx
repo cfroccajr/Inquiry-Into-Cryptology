@@ -1,0 +1,268 @@
+
+    <exercises xml:id="exercises_monoenciphering" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>How Shifty are You?</title>
+        <introduction>
+            <p>
+                For each exercise where you need to encipher or decipher a message do enough work to demonstrate that
+                you clearly understand how to do the job; say at encipher or decipher least 10 characters or write down the plain text
+                alphabet and corresponding cipher text alphabet.
+            </p>
+        </introduction>
+        <exercise>
+            <statement>
+                <p>Encipher the following using a shift cipher with a key of 9:</p>
+                <blockquote>
+                    <p>
+                        <q>We’ve all heard that a million monkeys banging on a million typewriters will eventually reproduce the entire works of Shakespeare. Now, thanks to the internet, we know this is not true.</q> - Professor Robert Silensky
+                    </p>
+                </blockquote>
+            </statement>
+            <answer>
+                <pre>
+                    ``FN'EN JUU QNJAM CQJC J VRUURXW VXWTNHB KJWPRWP XW
+                    J VRUURXW CHYNFARCNAB FRUU NENWCDJUUH ANYAXMDLN
+                    CQN NWCRAN FXATB XO BQJTNBYNJAN. WXF, CQJWTB CX
+                    CQN RWCNAWNC, FN TWXF CQRB RB WXC CADN.'' -
+                    YAXONBBXA AXKNAC BRUNWBTH
+                </pre>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <q>zoologist</q> by converting it to numerals with the <em>Numerical Alphabet Table</em>
+                    (<xref ref="table_numeric_alpha" />),
+                    multiplying by 5, and finally converting those numerals back to letters.
+                </p>
+                <p>
+                    Did you run into any particular problem enciphering this message?  Is there only one unique way to do it?
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    There are in fact multiple answers to this, one of them would be:
+                </p>
+                <pre>
+                    STUVVWXYZ TRJ ST SN U LE ME VS VX
+                </pre>
+            </answer>
+        </exercise>
+        <exercise xml:id="delusive_words_exercise2">
+            <statement>
+                <p>
+                    Encipher <q>dog</q> by converting it to numerals with the <em>Numerical Alphabet Table</em>
+                    (<xref ref="table_numeric_alpha" />),
+                    and then split those numeral up so as to form <em>delusive words</em>.
+                </p>
+                <p>
+                    Did you run into any particular problem enciphering this message?  Are there some
+                    letters that couldn't be changed?  Is there only one unique way to do it?
+                </p>
+            </statement>
+            <answer>
+                <p>BAA LEEK BAD</p>
+            </answer>
+        </exercise>
+        <exercise xml:id="atabash_intro">
+            <statement>
+                <p>
+                    Another type of monoalphabetic substitution cipher
+                    <idx>monoalphabetic substitution cipher</idx> is called <term>atabash</term>
+                    <idx>atabash</idx> and first appeared in the bible.  To encipher a message in
+                    atabash you replace <em>a</em> with <em>Z</em>, <em>b</em> with <em>Y</em>, <em>c</em> with <em>X</em>,
+                    and so on.  Fill in the table below with the appropriate cipher alphabet for atabash. Now, try to use your table to encipher the following message with atabash.
+                </p>
+                <xi:include href="../table_code/mono_key_table.ptx"/>
+                <blockquote>
+                    <p>
+                        <q>Mistakes are a part of being human. Appreciate your mistakes for what they are: precious life lessons that can only be learned the hard way. Unless it’s a fatal mistake, which, at least, others can learn from.</q> - Al Franken, <q>Oh, the Things I Know</q>, 2002
+                    </p>
+                </blockquote>
+            </statement>
+            <answer>
+                <pre>
+                    NRHGZPVH ZIV Z KZIG LU YVRMT SFNZM. ZKKIVXRZGV
+                    BLFI NRHGZPVH ULI DSZG GSVB ZIV: KIVXRLFH ORUV
+                    OVHHLMH GSZG XZM LMOB YV OVZIMVW GSV SZIW DZB.
+                    FMOVHH RG?H Z UZGZO NRHGZPV, DSRXS, ZG OVZHG,
+                    LGSVIH XZM OVZIM UILN. - ZO UIZMPVM, LS, GSV
+                    GSRMTH R PMLD, 2002
+                </pre>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher the message that was enciphered with a shift of 10.
+<!--                    ”Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.” - Jerry Seinfeld -->
+                </p>
+                <pre>
+                    XYGDR OICRY GIYER YGNOD OBQOX DCDKU OYEDL VYYNC DKSXC KZBOD 
+
+                    DIFSY VOXDS WKQOD ROBOS DRSXU SPIYE FOQYD KDCRS BDGSD RKLVY 
+
+                    YNCDK SXKVV YFOBS DWKIL OVKEX NBISC XDIYE BLSQQ OCDZB YLVOW 
+
+                    WKILO IYECR YEVNQ ODBSN YPDRO LYNIL OPYBO IYENY DROGK CRTOB 
+
+                    BICOS XPOVN
+                </pre>
+            </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>Now they show you how detergents take out bloodstains, a pretty violent image there. I think if you’ve got a T-shirt with a bloodstain all over it, maybe laundry isn’t your biggest problem. Maybe you should get rid of the body before you do the wash.</q> - Jerry Seinfeld
+                    </p>
+                </blockquote>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher this message that was enciphered using a shift of 25.
+<!--                    ”One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.” - Albert Einstein -->
+                </p>
+                <pre>
+                    NMDRG NTKCF TZQCZ FZHMR SOQDZ BGHMF SNXNT MFODN OKDRT BBDRR 
+
+                    HMSGD BTRSN LZQXE NQLZR SGDLZ HMZHL HMKHE DSGDL NRSHL ONQSZ 
+
+                    MSLNS HUDEN QVNQJ HMRBG NNKZM CHMKH EDHRO KDZRT QDHMV NQJOK 
+
+                    DZRTQ DHMHS RQDRT KSZMC SGDJM NVKDC FDNES GDUZK TDNES GDQDR 
+
+                    TKSSN SGDBN LLTMH SXZKA DQSDH MRSDH M
+                </pre>
+            </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>One should guard against preaching to young people success in the customary form as the main aim in life. The most important motive for work in school and in life is pleasure in work, pleasure in its result, and the knowledge of the value of the result to the community.</q> - Albert Einstein
+                    </p>
+                </blockquote>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher this message which was enciphered using atabash (see <xref ref="atabash_intro" />).
+<!--                    ”In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.” - Lee Iacocca -->
+                </p>
+                <pre>
+                    RMZXL NKOVG VOBIZ GRLMZ OHLXR VGBGS VYVHG LUFHD LFOWY VGVZX 
+
+                    SVIHZ MWGSV IVHGL UFHDL FOWSZ EVGLH VGGOV ULIHL NVGSR MTOVH 
+
+                    HYVXZ FHVKZ HHRMT XRERO RAZGR LMZOL MTUIL NLMVT VMVIZ GRLMG 
+
+                    LGSVM VCGLF TSGGL YVGSV SRTSV HGSLM LIZMW GSVSR TSVHG IVHKL 
+
+                    MHRYR ORGBZ MBLMV XLFOW SZEVO VVRZX LXXZ
+                </pre>
+            </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>In a completely rational society, the best of us would be teachers and the rest of us would have to settle for something less, because passing civilization along from one generation to the next ought to be the highest honor and the highest responsibility anyone could have.</q> - Lee Iacocca
+                    </p>
+                </blockquote>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Another type of monoalphabetic substitution cipher is called a <term>keyword cipher</term>.
+                    <idx>keyword cipher</idx>The key for this cipher consists of two pieces, a
+                    <em>key word</em> and a <em>key letter</em>.  You write the key word in the cipher alphabet starting
+                    underneath the key letter and then write the remaining letters of the alphabet in order after that.  So, if
+                    the key word is <em>ZEBRA</em> with key letter <em>f</em> we start as follows:
+                </p>
+                <table xml:id="cipher_zebra">
+                    <caption>Keyword Cipher: Word=<em>ZEBRA</em>, Letter=<em>f</em></caption>
+                    <tabular top="minor" left="minor" right="minor" halign="center">
+                        <row>
+                            <cell>plain</cell>
+                            <cell>a</cell><cell>b</cell><cell>c</cell>
+                            <cell>d</cell><cell>e</cell><cell>f</cell>
+                            <cell>g</cell><cell>h</cell><cell>i</cell>
+                        </row>
+                        <row>
+                            <cell>CIPHER</cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell>Z</cell>
+                            <cell>E</cell><cell>B</cell><cell>R</cell>
+                        </row>
+                        <row>
+                            <cell>plain</cell>
+                            <cell>j</cell><cell>k</cell><cell>l</cell>
+                            <cell>m</cell><cell>n</cell><cell>o</cell>
+                            <cell>p</cell><cell>q</cell><cell>r</cell>
+                        </row>
+                        <row>
+                            <cell>CIPHER</cell>
+                            <cell>A</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        </row>
+                        <row>
+                            <cell>plain</cell>
+                            <cell>s</cell><cell>t</cell><cell>u</cell>
+                            <cell>v</cell><cell>w</cell><cell>x</cell>
+                            <cell>y</cell><cell>z</cell><cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell>CIPHER</cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                            <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>
+                    Fill in the rest of the alphabet and then use it to decipher this message.
+<!--                    ”The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.” - St. Augustine -->
+                </p>
+                <pre>
+                    MBYEH HXWBK RLMRU GLBHN DXVYP UKYHZ FUMBY FUMRW RUGLU GXUDD
+
+                    MBHLY PBHFU CYYFI MSIKH IBYWR YLMBY XUGEY KUDKY UXSYQ RLMLM
+
+                    BUMFU MBYFU MRWRU GLBUO YFUXY UWHOY GUGMP RMBMB YXYOR DMHXU
+
+                    KCYGM BYLIR KRMUG XWHGZ RGYFU GRGMB YVHGX LHZBY DDLMU NENLM
+
+                    RGY
+                </pre>
+            </statement>
+            <answer>
+                <blockquote>
+                    <p>
+                        <q>The good Christian should beware of mathematicians and all those who make empty prophecies. The danger already exists that mathematicians have made a covenant with the devil to darken the spirit and confine man in the bonds of Hell.</q> - St. Augustine
+                    </p>
+                </blockquote>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Setup a the blank monoalphabetic sunstitution table in the same way as <xref ref="cipher_zebra"/> with a plaintext and ciphertext alphabet for a keyword cipher with key letter <em>d</em> and keyword <em>ARNOLD</em>.  Then use it to encipher this quote:
+                </p>
+                <blockquote>
+                    <p>
+                        <q>
+                            Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.
+                        </q> - Arnold Schwarzenegger
+                    </p>
+                </blockquote>
+                <xi:include href="../table_code/mono_key_table.ptx"/>
+            </statement>
+            <answer>
+                <pre>
+                    MPKRGOPL AHRM GHP ZHFR NKHF TDGGDGO. VHQK
+                    MPKQOOERM ARSREHI VHQK MPKRGOPLM. TLRG VHQ OH
+                    PLKHQOL LXKAMLDIM XGA ARZDAR GHP PH MQKKRGARK,
+                    PLXP DM MPKRGOPL. - XKGHEA MZLTXKWRGROORK
+                </pre>
+            </answer>
+        </exercise>
+    </exercises>

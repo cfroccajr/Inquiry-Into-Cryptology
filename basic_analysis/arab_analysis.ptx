@@ -1,0 +1,183 @@
+    <section xml:id="section_arab_analysis" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> Arabic Analysis of the Alphabet</title>
+        <definition>
+            <title>Cryptanalysis</title>
+            <statement>
+                <p>
+                    <term>Cryptanalysis</term><idx>cryptanalysis</idx> is the process by which we try to determine the meaning of a message without the aid of a key.  We will sometimes describe this as <term>decrypting</term><idx>decrypting</idx> a message as opposed to <term>deciphering</term><idx>deciphering</idx> a message which is what we do when we know the key.
+                </p>
+            </statement>
+        </definition>
+        <p>
+            The first place math was employed in the science of cryptology was in the analysis of languages.  The following is from <em>al-Kindi's</em><idx>al-Kindi</idx> treatise on cryptanalysis written around the year 873 CE.  Try to read through it carefully and then consider the questions that follow it.
+            <idx>cryptanalysis</idx>
+        </p>
+        <xi:include href="../quote_code/alkindi_frequencies.ptx"/>
+        <p>
+            <alert>Comprehension Check:</alert>
+            <ul>
+                <li>What do you think the author means when he says <q>vowels function as the material of a language</q>? </li>
+                <li>In what way then do the <q>non-vowels function as the shape</q>?</li>
+                <li>He also says that there are more vowels than non-vowels, how many vowels are in this sentence you are reading right now?  Were there more vowels?  If not then how might his statement still be true?</li>
+                <li>How does the gold in his analogy function like the vowels?</li>
+                <li>Finally, how do the author's comments compare to your experiences in section <xref ref="section_ancient_ciphers" />?</li>
+            </ul>
+        </p>
+        <p>
+            What al-Kindi is describing above is what we now call <term>frequency analysis</term> which is the first step in
+            cryptanalysis.
+        </p>
+        <definition xml:id="definition_freq_analysis">
+            <title>Frequency Analysis</title>
+            <statement>
+                <p>
+                    Basic <term><alert>Frequency Analysis</alert></term><idx>frequency analysis</idx> is the
+                    process of counting the characters in a text in order to determine how many of each character there are
+                    relative to the entire length of the text.  This is typically the first step in the
+                    cryptanalysis, the process of breaking an unknown cipher or code.
+                </p>
+            </statement>
+        </definition>
+
+
+
+        <exercise xml:id="english_freq_first_look">
+            <statement>
+                <p>
+                    Try following al-Kindi's directions in paragraph three above.  Use the <em>n-gram counter</em> below to count the number of times each letter appears in the following paragraph and with what frequency, then plot the frequency of each character on the chart below.
+                </p>
+                <blockquote>
+                    <p>
+                        <q>In the year 1878 I took my degree of Doctor of Medicine of the
+                        University of London, and proceeded to Netley to go through the course
+                        prescribed for surgeons in the army. Having completed my studies there,
+                        I was duly attached to the Fifth Northumberland Fusiliers as Assistant
+                        Surgeon. The regiment was stationed in India at the time, and before
+                        I could join it, the second Afghan war had broken out. On landing at
+                        Bombay, I learned that my corps had advanced through the passes, and
+                        was already deep in the enemy’s country. I followed, however, with many
+                        other officers who were in the same situation as myself, and succeeded
+                        in reaching Candahar in safety, where I found my regiment, and at once
+                        entered upon my new duties.</q> - <em>A Study in Scarlet</em>, Sir Arthur Conan Doyle <xref ref="cr_doyle_sis" />
+                    </p>
+                </blockquote>
+                <xi:include href="../image_code/freq_axes_image.ptx" />
+            </statement>
+        </exercise>
+        <exercise xml:id="english_freq_second_look">
+            <statement>
+                <p>
+                    Below is the same paragraph as in <xref ref="english_freq_first_look"/> only now enciphered with a shift of three.  As above, use the <em>n-gram counter</em> below to count the number of times each letter appears and with what frequency, then plot the frequency of each character on the chart below.
+                </p>
+                <pre>
+                    LQWKH BHDUL WRRNP BGHJU HHRIG RFWRU RIPHG LFLQH RIWKH XQLYH
+                    UVLWB RIORQ GRQDQ GSURF HHGHG WRQHW OHBWR JRWKU RXJKW KHFRX
+                    UVHSU HVFUL EHGIR UVXUJ HRQVL QWKHD UPBKD YLQJF RPSOH WHGPB
+                    VWXGL HVWKH UHLZD VGXOB DWWDF KHGWR WKHIL IWKQR UWKXP EHUOD
+                    QGIXV LOLHU VDVDV VLVWD QWVXU JHRQW KHUHJ LPHQW ZDVVW DWLRQ
+                    HGLQL QGLDD WWKHW LPHDQ GEHIR UHLFR XOGMR LQLWW KHVHF RQGDI
+                    JKDQZ DUKDG EURNH QRXWR QODQG LQJDW ERPED BLOHD UQHGW KDWPB
+                    FRUSV KDGDG YDQFH GWKUR XJKWK HSDVV HVDQG ZDVDO UHDGB GHHSL
+                    QWKHH QHPBV FRXQW UBLIR OORZH GKRZH YHUZL WKPDQ BRWKH URIIL
+                    FHUVZ KRZHU HLQWK HVDPH VLWXD WLRQD VPBVH OIDQG VXFFH HGHGL
+                    QUHDF KLQJF DQGDK DULQV DIHWB ZKHUH LIRXQ GPBUH JLPHQ WDQGD
+                    WRQFH HQWHU HGXSR QPBQH ZGXWL HV
+                </pre>
+                <p>
+                    <em>A Study in Scarlet</em>, Sir Arthur Conan Doyle <xref ref="cr_doyle_sis" />
+                </p>
+                <xi:include href="../image_code/freq_axes_image.ptx" />
+                <p>
+                    How did the plot change?  In what ways did the plot not change?
+                </p>
+            </statement>
+        </exercise>
+        <exercise xml:id="student_english_one">
+            <statement>
+                <p>
+                    Find a large sample of normal English text (at least 500 characters) and repeat what you did in <xref ref="english_freq_first_look" />; that is use the <em>n-gram counter</em> below to count the number of times each letter appears and with what frequency.  Then plot the frequency of each character on the chart below.
+                </p>
+                <xi:include href="../image_code/freq_axes_image.ptx" />
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Take the English text you used in <xref ref="student_english_one"/> and encipher it with a shift cipher.  Analyze the ciphertext as you did in <xref ref="english_freq_second_look" />.  How did the plot change?  In what ways did the plot not change?
+                </p>
+                 <xi:include href="../image_code/freq_axes_image.ptx" />
+             </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Now use the n-gram counter to find the letter frequencies for the letters in this cipher text.
+                </p>
+                <pre>
+                    XLMWM EFPSG OSJVI PEXMZ IPCRS VQEPI RKPMW LXIBX LSTIJ YPPCA
+                    LIRCS YEREP CDIXL MWCSY AMPPW IIXLE XIZIR ALIRX LMWMW IRGMT
+                    LIVIH XLIPI XXIVJ VIUYI RGMIW WXECX LIWEQ IEWPS RKEWX LIGMT
+                    LIVMW QSRSE PTLEF IXMGM RTEVX MGYPE VJSVE WLMJX GMTLI VXLIP
+                    IXXIV JVIUY IRGMI WIZIR QEMRX EMRXL IWEQI VIPEX MZITS WMXMS
+                    RXSIE GLSXL IVNYW XWPMH EPSRK PMOIX LIPIX XIVWX LMWQE OIWWY
+                    GLEGM TLIVZ IVCIE WCXSW TSXER HGVEG O
+                </pre>
+                    <!-- This i a block of relatively normal English text.  Hopefully when you analyze this you will see that even when this is enciphered the letter frequencies stay the same, as long as the cipher is monoalphabetic.  In particular for a shift cipher the letter frequencies even maintain the same relative position to each other, just slid along like the letters; this makes such a cipher very easy to spot and crack. -->
+                <p>
+                    Plot the frequencies you found using <xref ref="figure_freq_axes"/>. If you compare the shape of the chart you just made to the chart for normal English which you made previously in <xref ref="english_freq_first_look"/> do you notice any similarities? Can you use this to try and decrypt this message?
+                </p>
+            </statement>
+        </exercise>
+        <p>
+            <alert>N-Gram Counter:</alert>
+        </p>
+        <p>
+            To use the n-gram counter <!-- press the <em>Evaluate</em> button, --> copy and paste the text you wish to analyze into the
+            input box, and select 1 for <em>N</em> since we are analyzing single letters.
+        </p>
+
+        <figure>
+            <caption>N-Gram Analysis Tool</caption>
+            <interactive xml:id="n-gram_sage_in_arab_chapter" platform="sage" width="100%" aspect="1:1">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/ngram_analysis.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+
+<!--         <sage>
+            <input><xi:include href="../sage_code/ngram_analysis.sage" parse="text"/></input>
+            <output></output>
+        </sage> -->
+
+        <p>
+            <alert>Substitution Cipher Tool:</alert>
+        </p>
+        <p>
+            To use the substitution cipher tool to encipher a message <!-- first press the <em>Evaluate</em> button, then --> leave the plain text alone and enter the corresponding ciphertext in the box labeled cipher. For a simple shift cipher you can put the alphabet into the cipher box in the regular order and then use the shift drop down menu to select your desired shift.
+        </p>
+        <figure>
+            <caption>Substitution Cipher Tool</caption>
+            <interactive xml:id="substitution_cipher_tool_in_arab_chapter" platform="sage" width="100%" aspect="1:1">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/subst_cipher.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+
+<!--         <sage>
+            <input><xi:include href="../sage_code/subst_cipher.sage" parse="text"/></input>
+            <output>Test</output>
+        </sage> -->
+
+        <exercise>
+            <statement>
+                <p>
+                    Repeat what you did before in <xref ref="student_english_one"/> with text from a variety of sources.  Be sure to try both long and short pieces of
+                    text.  Do you agree with the al-Kindi's statements about shorter pieces of text?  Finally, make a table of your results
+                    for future reference.
+                </p>
+            </statement>
+        </exercise>
+
+    </section>

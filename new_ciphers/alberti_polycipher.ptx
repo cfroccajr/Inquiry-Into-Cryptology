@@ -1,0 +1,273 @@
+    <section xml:id="section_alberti" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> Alberti's Great Idea </title>
+        <objectives>
+            <ul>
+                <li>
+                    Alberti's Biography
+                </li>
+                <li>
+                    Alberti's Polyalphabetic
+                </li>
+                <li>
+                    Modern/Vigen&#x00E8;re's Polyalphabetic
+                </li>
+            </ul>
+        </objectives>
+
+        <subsection>
+            <title> Alberti's Biography </title>
+            <p>
+                For now see his biography on the MacTutor History of Mathematics Site: 
+                <url href="http://www-groups.dcs.st-and.ac.uk/history/Biographies/Alberti.html">
+                Leon Battista Alberti</url><idx>Alberti, Leon Battista</idx>
+            </p>
+        </subsection>
+
+        <subsection>
+            <title>Alberti's Polyalphabetic Cipher</title>
+            <definition>
+                <title>Polyalphabetic Substitution Cipher</title>
+                <statement>
+                    <p>
+                        A <term>polyalphabetic substitution cipher</term><idx>polyalphabetic substitution cipher</idx> is a cipher in which a single plaintext letter maybe replaced by several different ciphertext letters, groups of letters, or symbols and every letter, group of letters, or symbol in the ciphertext may represent more than one plain text letter.
+                    </p>
+                </statement>
+            </definition>
+            <p>
+                One of Leon Battista Alberti's greatest contributions to cryptology was not his cryptanalysis skills but an entirely new kind of cipher.  Many efforts had been and would be made to shore up monoalphabetic substitution ciphers.  Some of these efforts worked well enough but they were never sufficiently different to make them immune to the sorts of attacks we have studied before.   Alberti made something truly different
+                he invented a <term>polyalphabetic substitution cipher</term>.  This was a cipher that did not just replace the plain text alphabet with a single separate alphabet but instead used multiple enciphering alphabets to create greater confusion and security.
+            </p>
+            <sidebyside widths="40% 40%" margins="0%">
+                <p>
+                    The key to Alberti's new system was a device he called a <term><q>formula</q></term>
+                    <idx>formula (Alberti)</idx>.  This was a cipher disk consisting of a fixed outer disk and a mobile inner disk.  In his basic description of his new cipher he would use the outer ring of upper case letters for his plain text and the inner mobile ring of lower case letters for his cipher text.
+                </p>
+                <figure xml:id="figure_alberti_disk">
+                    <caption>Alberti's Cipher Disk or <term><q>Formula</q></term></caption>
+                    <image width="100%" source="images/Alberti_cipher_disk.png" archive="svg png pdf">
+                        <description> This is an image of Leon Battista Alberti's Cipher Disk as he described it. </description>
+                    </image>
+                </figure>
+            </sidebyside>
+            <xi:include href="../quote_code/alberti_polyalpha.ptx" />
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>
+                        If you compare the inner and outer rings of the formula (cipher disk) what difference do you notice?  Why do you think Alberti might have made these choices?  (For reference I made an updated version in the appendix where I made similar choices, <xref ref="appendix_figure_modern" />.)
+                    </li>
+                    <li>
+                        What step in the process above stops this from simply being a shift cipher?
+                    </li>
+                    <li>
+                        How does the recipient of a message using Alberti's method know how to set their disk and when they should change it?
+                    </li>
+                    <li>
+                        Is there an obvious weakness in the way that Alberti suggests using his system?
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        If you have not done so already make a copy of Alberti's formula [<xref ref="figure_alberti_disk" />] so that you can use it for enciphering and deciphering.  Now encipher <q>See my first message</q> using an index of <em>c</em> initially underneath the <em>G</em>, but shift it underneath <em>V</em> after the first two words.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Remember to line up the index <em>c</em> with the capital letters used of the key, here <em>G</em> and <em>V</em>.</li>
+                            <li>For Alberti, uppercase letters (the outer ring) are the plaintext and lowercase letters are the ciphertext.</li>
+                            <li>Because of what was and was not included on the disk you will need to make some choices.</li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        <c>G vbb ke V xsdba m&amp;bbry&amp;</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Suppose that <c>B lgiq R yam V ydme</c> was enciphered using an index of <em>k</em> as directed by Alberti, what does it say? <!--cats and dogs-->
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>First identify the three key letters used in this cipher.</li>
+                            <li>Remember to line up the index <em>k</em> with the capital letters used of the key, and to move the index when the key letter changes.</li>
+                            <li>For Alberti, uppercase letters (the outer ring) are the plaintext and lowercase letters are the ciphertext.</li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        cats and dogs
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Team up with a partner and agree on a lower case index.  Now each of you should try enciphering a short message, only five or six words, be sure to adjust your formula after every couple of words.  Then exchange messages with your partner and decipher each others messages.
+                    </p>
+                </statement>
+            </exercise>
+            <figure>
+            <caption>Alberti's Formula</caption>
+                <interactive xml:id="alberti_disc" platform="sage" width="100%" aspect="1:1">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/alberti_disc.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
+        </subsection>
+
+        <subsection xml:id="vigenere_cipher">
+            <title>Vigen&#x00E8;re's Cipher</title>
+            <p>
+                In spite of the fact that Alberti invented the polyalphabetic cipher his is not the name associated with it, instead that honor goes to the Frenchmen <em><alert>Blaise de Vigen&#x00E8;re</alert></em><idx>Vigen&#x00E8;re, Blaise de</idx>.  Vigen&#x00E8;re made a careful study of the cryptographers who had come before him and in 1586 he published the culmination of his work in his <em>Traict&#x00E9; des chiffress, ou secr&#x00E8;tes mani&#x00E8;res d'escrire</em><xref ref="cr_crypt_vigenere" />.  In the Traict&#x00E9; he described a wide variety of older ciphers and his improvements to them.  Among these was his take on Alberti's polyalphabetic cipher.
+            </p>
+            <p>
+                One of the key advances that Vigen&#x00E8;re made was to replace the disk with a table [<xref ref="figure_vigenere_table" text="type-global"/>, <xref ref="cr_crypt_vigenere" detail="p. 50b (102)"/><fn>In the page designation <q>p. 50b (102)</q> the 102 is the page in the pdf document while the 50b is the page in the manuscript.</fn>].  This made it easier to vary between alphabets without having to move inner and outer disks to different positions.
+            </p>
+            <xi:include href="../quote_code/vigenere_cipher.ptx" />
+            <figure xml:id="figure_vigenere_table">
+                <caption>
+                    Vigen&#x00E8;re's Tableau
+                </caption>
+                <image width="100%" source="images/vigenere_table.png">
+                    <description> This is Vigen&#x00E8;re's tableau as he actually used it in his text.  </description>
+                </image>
+            </figure>
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>
+                        How did the <em>a</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>b</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        How did the <em>u</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>q</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        How did the first <em>e</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>i</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        How did the second <em>e</em> in the saying <em><q>au nom de l'eternel</q></em> get replaced with a <em>o</em> in the ciphertext <em>bqnsamiconcoal</em>?
+                    </li>
+                    <li>
+                        All four <em>e</em>'s in the plaintext were replaced different ciphertexts, why and how did this happen?
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        To further check your understanding try enciphering the message <em><q>vive la france</q></em> using the key <em>aider</em> and the black (outer) rows in <xref ref="figure_vigenere_table"/>, since there are more letters in the message than the key you will need to restart at the beginning of the key when you get to the end.
+                    </p>
+                </statement>
+                <hint>
+                    <p>Try writing the key above the message so that you can keep track of how they correspond, like this:</p>
+                    <pre>
+                        Key:        a i d e r a i d e r a i
+                        Plaintext:  v i v e l a f r a n c e
+                        Ciphertext: Q O
+                    </pre>
+                    <p>
+                        Also, recall that you look up the letters in the message along the top and the key along the side.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Ciphertext: <c>QOTEASLQACVI</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        To further check your understanding try enciphering the message <em><q>escargot</q></em> using the key <em>ail</em>; in <xref ref="figure_vigenere_table"/> use the red (inner) labels for the message and the black (outer) column for the key, since there are more letters in the message than the key you will need to restart at the beginning of the key when you get to the end.
+                    </p>
+                </statement>
+                <hint>
+                    <p>Try writing the key above the message so that you can keep track of how they correspond, like this:</p>
+                    <pre>
+                        Key:        a i l a i l a i
+                        Plaintext:  e s c a r g o t
+                        Ciphertext:
+                    </pre>
+                    <p>
+                        Also, recall that you look up the letters in the message along the top and the key along the side.
+                    </p>
+                    <p>
+                        Finally, enciphering (and deciphering) goes faster if you do all the characters enciphered with a particular key letter at one time; so first do everything enciphered with <em>a</em>, then <em>i</em>, and then <em>l</em>.
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Ciphertext: <c>IIREHXSL</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try deciphering the message <c>NSDDTIMDQRHO</c> using the key <em>vilo</em> and the black (outer) labels.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Recall that the plaintext letters run along the top and the key letters are along the left side.</li>
+                            <li>You need to look up the ciphertext letters in the interior of the table.</li>
+                            <li>Line up the ciphertext and the key in the same way you lined up the plaintext and key previously.</li>
+                        </ul>
+                    </p>
+                    <pre>
+                        Key:        v i l o v i l o v i l o
+                        Ciphertext: N S D D T I M D Q R H O
+                        Plaintext:  t o u
+                    </pre>
+                </hint>
+                <answer>
+                    <p>
+                        Plaintext:  <em>tour de france</em>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Try deciphering the message <c>DOLSAEXS</c> using the key <em>manger</em> and the red (inner) labels.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Recall that the plaintext letters run along the top and the key letters are along the left side.</li>
+                            <li>You need to look up the ciphertext letters in the interior of the table.</li>
+                            <li>Line up the ciphertext and the key in the same way you lined up the plaintext and key previously.</li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        Plaintext: <em>baguette</em>
+                    </p>
+                </answer>
+            </exercise>
+            <p>
+                Today when we use the Vigen&#x00E8;re Cipher we use a table <xref ref="appendix_figure_vigenere_new" text="type-global" /> which is simpler, and makes the resulting cipher a little easier to crack.  The video below explains using the more modern table and you will play with the modern version in the exercises.
+            </p>
+            <figure xml:id="suzuki_vigenere_video">
+                <caption>Modern look at the Vigenere Cipher</caption>
+                <video youtube="5ISnCm4_V-Y" width="80%"/>
+            </figure>
+        </subsection>
+
+
+    </section>

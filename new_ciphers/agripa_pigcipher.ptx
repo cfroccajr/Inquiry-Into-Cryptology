@@ -1,0 +1,215 @@
+    <section xml:id="section_agripa" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> Variation on a Theme </title>
+        <objectives>
+            <ul>
+                <li>
+                    Agripa's Biography
+                </li>
+                <li>
+                    Agripa/Vigeners's Pigpen Cipher
+                </li>
+                <li>
+                    Modern Pigpen Cipher
+                </li>
+            </ul>
+        </objectives>
+        <subsection xml:id="agripa_bio">
+            <title> Biography of Heinrich Cornelius Agripa</title>
+            <p>
+                Insert Bio Here When Available ... <idx>Agripa, Heinrich Cornelius</idx>
+            </p>
+        </subsection>
+        <subsection xml:id="pigpen_cipher">
+            <title> Pigpen Cipher </title>
+            <p>
+                <idx>pigpen cipher</idx>In his treatise on cryptology <xref ref="cr_crypt_vigenere" detail="p. 275b (534)"/> 
+                Vigen&#x00E8;re describes a cipher that he found in Agripa's <em>De Occulta Philosophia</em>
+                <xref ref="cr_crypt_agripa" detail="Vol. 3, p. CCLXXV (279)"/> in chapter 30 which discusses traditional ciphers 
+                used by cabals.
+            </p>
+            <sidebyside widths="45% 45%" margins="0%">
+                <figure xml:id="figure_vigenere_pig">
+                    <caption> Vigenere's Variant on the Pigpen Cipher <!-- <xref ref="cr_crypt_vigenere" detail="p. 534 (275b)"/> --></caption>
+                    <image width="100%" source="images/vigenere_p534.png">
+                        <description> Vigenere's Pigpen Variant</description>
+                    </image>
+                </figure>
+                <figure xml:id="figure_agripa_pig">
+                    <caption> Agripa's Variant on the Pigpen Cipher<!--  <xref ref="cr_crypt_agripa" detail="Vol. 3, p. 279 (CCLXXV)"/> --></caption>
+                    <image width="100%" source="images/agripa_p279.png">
+                        <description> Agripa's Pigpen Variant</description>
+                    </image>
+                </figure>
+            </sidebyside>
+            <xi:include href="../quote_code/agripa_pig.ptx" />
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>
+                        If you hadn't seen the first step in how the name <em><q>Michael</q></em> was enciphered above, then how might you misinterpret the second enciphering?
+                    </li>
+                    <li>
+                        Why in the final step do you think some of the symbols must be raised or lowered?
+                    </li>
+                    <li>
+                        In the final step above Agripa eliminates all the marks, why would this cause confusion?  That is, if you follow his directions which letters will be confused with one another?
+                    </li>
+                    <li>
+                        In the translated grid the letters are placed into the grid right to left, this is also the case in Agripa's work <xref ref="figure_agripa_pig"/>, try to find out why.
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Use Agripa's cipher as translated above to encipher the quote: <q>Pigs are smarter than dogs, and both are smarter than Congress</q> - Elayne Boosler
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        Here are the first few words of the message:
+                    </p>
+                    <figure>
+                        <caption>Cipher Text:</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \draw (0,0)
+                                        \ppg ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppe ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppb ++(-10pt,12pt) node {$\cdot$$\cdot$$\cdot$} ++(10pt,-12pt)
+                                        \ppg ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppf ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$$\cdot$$\cdot$} ++(10pt,-12pt)
+                                        \ppe ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppg ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$$\cdot$$\cdot$} ++(10pt,-12pt)
+                                        \ppi ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppg ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppi ++(-10pt,12pt) node {$\cdot\cdot$}
+                                    ;
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Decipher the words enciphered here using Agripa's cipher as presented above.
+                    </p>
+                    <figure>
+                        <caption>
+                            Cipher Text:
+                        </caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \draw (0,0)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$$\cdot$$\cdot$} ++(10pt,-12pt)
+                                        \ppe ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppe ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppa ++(-10pt,12pt) node {$\cdot$} ++(10pt,-12pt)
+                                        \ppc ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppb ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppg ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppd ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                        \ppi ++(-10pt,12pt) node {$\cdot\cdot$} ++(10pt,-12pt)
+                                    ;
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </statement>
+                <answer>
+                    <p>
+                        Plaintext: <q>Pork 'n Beans</q>
+                    </p>
+                </answer>
+            </exercise>
+            <p>
+                The pigpen cipher as we use it today has evolved and standardized to use the key in <xref ref="figure_modern_pig" text="type-global"/> which includes all twenty six letters of modern English.  It has the advantages that it is quick to learn and it is easy to recreate the cipher key. Also, for each shape you never add more than a single dot so that there is less opportunity for confusion.
+
+            </p>
+            <figure xml:id="figure_modern_pig">
+                <caption> Modern key for the Pigpen Cipher</caption>
+                <image width="50%" source="images/Pigpen.png">
+                    <description> Modern Pigpen Cipher</description>
+                </image>
+            </figure>
+            <exercise>
+                <statement>
+                    <p>
+                        Use the key in <xref ref="figure_modern_pig" text="type-global"/> to decipher the message 
+                        below.
+                    </p>
+<!--                    "I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals." ― Winston S. Churchill -->
+                    <figure>
+                        <caption>Cipher Text</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \draw (0,-0.5) \ppi ++(5pt,0pt) \ppa\ppm ++(5pt,0pt) \ppf\ppo\ppn\ppd ++(5pt,0pt) \ppo\ppf ++(5pt,0pt) \ppp\ppi\ppg\pps;
+                                    
+                                    \draw (0,-1) \ppd\ppo\ppg\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppu\ppp ++(5pt,0pt) \ppt\ppo; 
+                                    
+                                    \draw (0,-1.5) \ppu\pps \ppc\ppa\ppt\pps ++(5pt,0pt) \ppl\ppo\ppo\ppk ++(5pt,0pt) \ppd\ppo\ppw\ppn;
+                                    
+                                    \draw (0,-2) \ppo\ppn ++(5pt,0pt) \ppu\pps ++(5pt,0pt) \ppp\ppi\ppg\pps ++(5pt,0pt) \ppt\ppr\ppe\ppa\ppt;
+                                    
+                                    \draw (0,-2.5) \ppu\pps ++(5pt,0pt) \ppa\pps ++(5pt,0pt) \ppe\ppq\ppu\ppa\ppl\pps;
+
+                                    \draw (0,-3) \ppw\ppi\ppn\pps\ppt\ppo\ppn ++(5pt,0pt) \pps ++(5pt,0pt) \ppc\pph\ppu\ppr\ppc\pph\ppi\ppl\ppl;
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </statement>
+                <answer>
+                    <p>
+                        <q>I am fond of pigs. Dogs look up to us. Cats look down on us. Pigs treat us as equals.</q> ― Winston S. Churchill
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to encipher the first few words of this next message using the modern variation on the pigpen cipher (<xref ref="figure_modern_pig" text="type-global"/>).
+                    </p>
+                    <p>
+                        <q>Never wrestle with pigs. You both get dirty and the pig likes it.</q> ― George Bernard Shaw
+                    </p>
+                </statement>
+                <answer>
+                    <figure>
+                        <caption>Cipher Text</caption>
+                        <image>
+                            <latex-image>
+                                \begin{tikzpicture}
+                                    \draw (0,-0.5) \ppn\ppe\ppv\ppe\ppr ++(5pt,0pt) \ppw\ppr\ppe\pps\ppt\ppl\ppe ++(5pt,0pt) node {$\cdots$};
+                                \end{tikzpicture}
+                            </latex-image>
+                        </image>
+                    </figure>
+                </answer>
+            </exercise>
+            <p>
+                <alert>Reflection:</alert>
+                <ul>
+                    <li>
+                        Do you think that the pigpen cipher offers as much security as the Vigen&#x00E8;re cipher?  Why or why not?
+                    </li>
+                    <li>
+                        In how many ways can you encipher each character using the pigpen cipher?  What type of cipher does that make this?
+                    </li>
+                    <li>
+                        If you were confronted with a similar cipher which used symbols in place of letters how could you first rewrite your message so that you could then apply the cryptanalysis techniques we discussed previously?
+                    </li>
+                </ul>
+            </p>
+        </subsection>
+    </section>
