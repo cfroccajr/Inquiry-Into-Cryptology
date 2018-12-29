@@ -1,0 +1,37 @@
+                <assemblage>
+                    <p>
+                        78. ... In a simple cipher text repetitions are more frequent and are merely accidental, 
+                        that is to say, rarely occur at regular intervals, whereas in the composite cipher text 
+                        [i.e. Vigen&#x00E8;re cipher]
+                        these repetitions occur less often but usually at intervals such that the number of 
+                        letters between them is divisible by a number which gives the number of letters in the key.
+                    </p>
+                    <p> ... </p>
+                    <p>
+                        80. ... We now try to determine the number or letters in the key.  For this purpose we look for all repetitions of two or more ciphers in the enciphered text, then count the interval from one another 
+                        of like repetitions; write these out beneath the enciphered text with numbers indicating the intervals, 
+                        and endeavor to break this number up into its factors.
+                    </p>
+                    <p>
+                        For instance, we find 16 letters between two repeated ciphers <c>UL</c>, 
+                        we add two ciphers to the number 16 and get 18 as the interval for the repetition 
+                        <c>UL</c>.
+                    </p>
+                    <p>
+                        We write <c>UL</c> <m>= 18 = 2\cdot 9 = 3\cdot 6</m>. 
+                    </p>
+                    <p>
+                        According to section (76) we can infer from this that the key contains either 
+                        two, nine, three, or six letters.
+                    </p>
+                    <p>
+                        Since the number of letters in the key is still uncertain and ...
+                        the repetition of the ciphers <c>UL</c> might be purely accidental,            
+                        we write out one by one all the repetitions of several ciphers, noting the
+                        number representing their intervals, and break these numbers down into their factors.
+                    </p>
+                    <p>
+                        Those factors which are found most frequent indicate the number or letters in the key.
+                        <xref ref="cr_crypt_kasiski" detail="pp.31-32 (36-37)" />
+                    </p>
+                </assemblage>

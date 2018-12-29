@@ -1,0 +1,200 @@
+    <exercises xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Do You Feel Logical?</title>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher this message by hand using Falconer's transposition cipher and a key of 
+                    <c>{ACB, BCA, CBA, BAC}</c>
+                </p>
+                <blockquote>
+                    <p>
+                        <q>A quick movement of the enemy will jeopardize six gunboats.</q>
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this transposition cipher with crib <c>WEATHER</c>:
+                </p>
+                <pre>
+                    HIPYEN TAUTCI WSDWPF ETTEEA ARONRN ENPMNC RTEPTH
+                    RERHR  EMTCA  PPHHI  OREOL  FAIEL  TETCA  RNRNF OSIAN
+                    MYWRR  RTNIU  CEDNN  ASIAO  RLSFA  IITHU  TDENA HASOD
+                    HYAEQ  RNTUA  FETRE  TTENR  RITDO  YHNDT  IMOER
+                </pre>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this transposition cipher with crib <c>AFGHANISTAN</c>:
+                </p>
+                <pre>
+                    HATSNNI OLHHHIV WLAOINE AYSUMA OPNADA RGTLCF
+                    ERRDRG  YIEHEH  ENHLYS  SGFYOT UPGRIN HITDTI IYRAHN
+                    DHWVAI  CAHEVP  AMOHUA  IIIEEE DWHVEC RDCIBR ONIGEE
+                </pre>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this transposition cipher:
+                </p>
+                <pre>
+                    IQAY ASHE PECV FIIR NUJA UCND
+                    LKX OYD  ZLE  ITA  MWG  BAR
+                </pre>
+
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Encipher this message by hand with a Vigen&#x00E8;re and key of <c>DUNGEON</c>
+                </p>
+                <blockquote>
+                    <p>
+                        <q>The wizard quickly jinxed the gnomes before they vaporized.</q>
+                    </p>
+                </blockquote>
+            </statement>
+        </exercise> 
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+                    techniques you learned from Falconer and Kasiski.
+                </p>
+                <pre>
+                    HS OOE BGHE RCI LG JO SOF KCFCXRSF, KYR
+                    KXDDGMESF DSS TYZAU KE BQ. DHC-VGPBVI ZBG
+                    L, MOMOC GVBPSV, YQ KJSNV JO SOF CACMOY OV
+                    YFF OOPHKXR. HJOJ QQXDWUDPR QP L QQEAZG YQ
+                    QQWQCTDLPNO MSF-BZCOC LBF K DWPQWS NKCUG
+                    KTFA CTHVSYU-TYZA, ERPSTPFZNI QITXTGJOO,
+                    OPN TZNEXWPKESF LJ HYY MFQKO KKXOCYC. DC
+                    FODWTKMZG SY SXOCM YKJ KGBP HJO
+                    LDCBEAGXEG, CXO GQ WZRGBLHG NTR VRP HGBXG
+                    UOPA YRPB FSGWFOO PGDHSGX FG, VRLH VRP
+                    PCBROKX HOU MZBEVFRGN FDQX EVG CACV, KYR
+                    YO LH QXNS GXESTOO WPDZ DQCDSUCTCP. DSOV
+                    FPFA OGSPSYU K WZJGN XM VRTBIC CCWXO TTYX
+                    HJO SCVOW, OPN ZB VRP TQVWCYSYU OYCBKXR
+                    GJOCZQMV VQVXSU PZZNYHSF WP KKDS GGFPFCV
+                    MCZOD OPN ACTDXOPDPOWC. QCT K OOA YC HYY
+                    HS YOCS DEDWNI PARVZMGN TB WXAOEUTBI KYR
+                    NKJWPQ ZIV YFF RBZDGBEM VY EVG LPGV
+                    KOJCXEOIO. EVCD OCPO, HS IBLRWKWZA LPUCX
+                    EC UOEHNO OCYX LBF DZ OEMZAOYOOVO
+                    ZITCPZXOD HQ YFF POH GWBCCWXOWPQD.
+                </pre>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+                    techniques you learned from Falconer and Kasiski.
+                </p>
+                <pre>
+                    NUTZSK BLYBAU JWUONX BWZFXG OCTUCS BWEXCZ IUSSQO 
+                    MFOBGR FAXBHJ IYCBMU GUTBHI JYTUBA HOKOIZ GUSJFE 
+                    BHJIUJ PHIFVK FHCFUR UBECOZ BMKSCK TILNCY GIXUOT 
+                    FMNBXX FXADYJ ICSUIC BHZUIG WIOENN FGUSNO GCIBNO 
+                    PHIPHY FKAFHZ VJUOBO TXOTUY UYXTBK MYLUHK XIXMYG 
+                    OMZIYI JNEPZN JMLPLK GUZIYX TUTENU PEAQBO TLKTCJ 
+                    FHIFUZ TORMCB BHYJMR BHJOYG SWNBLR FMZPHY POZIWG 
+                    SIRJHG UBOTCY MUTECY BPKSSY JHMVFG SITFCZ DITTCY 
+                    UMUGFO UNRFYR TYZIUT UBKTYG TUTEUT ECYBVU VNZILK 
+                    FGOMYY MITHCZ TVXFUJ UBGUHU QIOONK YWKFXY BKABLZ 
+                    FLUGUS JFKJNO TMKQUX BNKEZX PGZIYS BCTMUT EVEBMI 
+                    BLIFFE QYXDYV UCHMYI SYKLIU ACTHCZ TQGZNN SIAHBG 
+                    XCREYX OYYTIL SYKEMG OXYMCS FULBPU SCZFLK TIXUIL 
+                    UBKNUX TBNFHZ IYBFAK UUZJIT BMSJAN UVKTOV QIYFXO 
+                    TMIBHZ PLGUFK BMZEQG SZOTBT PNXFYY PZGOSS BATJNA 
+                    EYGSYZ PVKTYK OHKBLZ IYCFMZ FLTFRZ SYSJNE XBKSYL 
+                    PLZNIA MNXJYY UUTEMG OXCIYX FUXFMU NYSJMK SUHMYL 
+                    SUSFVA JFJJHM TNKOUT UYJEOX JHMTOS NYXCSZ IYLVAO 
+                    UCBFML SISDBG SFKTNU OXATNG OXLFPK SGGZVK GIAOXO 
+                    OXKFXZ IYHSCY UFEQUR NYZUIH VNZIYC IIRFCY MUTEQO 
+                    UBZIYK YWKQNO PHUGNN JMCFMZ FLTQIO ONGOXG MCTFIL 
+                    IUXEQN JNKCYG DBUONN FMKBWU BMZJMI PPKSYJ XCZIUJ 
+                    FHYFOT EYXHLU XNNPZZ IYYXYK UGESNR FMUNOI IJXJTK 
+                    EVEUBK IIXUCI VFZVLO TNYPZK OARBHJ UBKTBX VVNFLK 
+                    PZZFHG UNGJHY UBKIYO HBZPZL JZZFYT PLZXYT USLFYZ 
+                    BHJGIX NMGOUR NIYUCS QYTFNX BVRFWU QJODYH VLZIYT 
+                    JHMUBK BCXXCZ ICZTZX BAXBHI F
+                </pre>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
+                    techniques you learned from Falconer and Kasiski.
+                </p>
+                <pre>
+                    REZIAK VVISWB KSHYAL VISJMM CLTSHM QCKVHO OIDZBE 
+                    ARQHPF ROHQQQ CMOEDP TTMKHQ GUFVZT TPVVZZ RTPLZX 
+                    CEODVM MXTUDV LTJNYT BYEOTT TZVEYI ZVWWXC EETKII 
+                    OWDXBZ RBWAJT UFZTTT NZVNTE IMGXJT TTIKXV IZBMEX 
+                    JFYNEZ WCEEGM XEMDUC ODEMJA GGZXRO GALYEQ ENTMEW 
+                    ORMCOV XCEDTN FVZIRX PRHIOF UQIWOA FIMDTO EPIPVQ 
+                    ZTTDLN LDCTHP VLVDTT ZJIGFE JOXINT QSBYIM EPJKZR 
+                    BTTTJR GJNUPV TMKHQG BFMOSX DEVWOE XTUVRO SRDZDE 
+                    IYTDCI WDLMQW LVZDMI BYMNWA GSRRYF UCICPT WTTVZL 
+                    VDDTLL GZDFWM SEXOZX IEJDVQ HGDFJL EIWKLM EQXNVP 
+                    OTTPBZ LVDMRK FQKLUH PVHVLX IPRXRA EEWJWD BXTQEX 
+                    CAFLIP ACEZXP RHVRDX DVHVTF WQJVZS GABRRY HMSBVW 
+                    OEPXBJ EXCGGI TCDNID ZBMIGU UMCXDN MEWJMO IACBFI 
+                    SPQGQD IITIXB YQTNQL SESRLQ SOVSIT TTWCHI UYQMIG 
+                    DPTTZW MMSFXE ISOEAJ BDCHEF WWUSAR QSCTXD OZPARW 
+                    JRFDNR HYEZSC DXJTTT XRTZRI WQTLDH MSXIIK ADTLWS 
+                    MMMGRF VTTTTV ZQVDQP SVCOOO XXYIMA ZSWEIO OPTKZT 
+                    CEDQGK LDSFXU VXCEZX OYXRAE LMCPJN MCLKLZ GDTGFJ 
+                    ZADAGD SMNUCO NENBQV QERDNS IWJXZA XXVSCO HQTLXI 
+                    NORIPV FGIZSA ZAVSZD BJPZEB NPFAZV QGQNEN TADULG 
+                    CEJRQK IYTAIP ZRFORH TVIKFA GBYINO XKQEKJ FFWMGV 
+                    JBXTUJ IZMQSI CQJSFL QKLDNY NOIENP QMKZXZ DFDIJX 
+                    VTQLPZ GCAXBW JXARUV PKIIEP BMSCDT EXVKII SUIGZK 
+                    JTDTIU CHYODX PSATTT VLQWED RQGLZR MCLDCI EIAGGV 
+                    ZPMGMU OZYIXB YEIERU WIXRHU RPKSJK YTICPH YDTAFP 
+                    PTUDVZ AZNFDV JXZAPX TPAMIF XVXMOS BGWGIM LQIBVV 
+                    PNPTZV EXHODU SMIAFX WEADTT DCKSIC QAWFOD NSQITO 
+                    AODXSE IRTTPB VZZNEW WLPYSA BMFJOH QAMKXZ REQMDM 
+                    NPXPKV HDNFWM BITTTT KYEICQ DNIIXO SCQJMI GFWMIM 
+                    BHFDVV WROGAL SIGADV MCCDNO GMRWZD NNAVID NSPKFR 
+                    NIPTZR FGEZJU SIMORA MKXZRE IWXIOH QGBYII ISAIEG 
+                    ZDAKMI XCEIWW CIVNPU WLRYTT PBDEIY AUBYIN YYQWCW 
+                    HAPTCG PZTFTZ JADTTH CTLVBM HQJXJW AGSFRO HQGMJX 
+                    RAEDVC CGANDC IEAEII MEXVTU KMVJAO DIARRY ITPLTS 
+                    MRQRBV HOHQZM PXJASG MVQZNF LQKLNO YTWWXC EODUSM 
+                    IAFXWE WDNFWM TMKHQG
+                </pre>
+            </statement>
+        </exercise>
+        <conclusion>
+            <p>
+                These will be helpful in completing these problems.
+            </p>
+            <p>
+                Sage cell for calculating subsets of letters in a message:
+            </p>
+
+            <sage>
+                <input><xi:include href="../sage_code/subset_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+            <p>
+                Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
+            </p>
+            <sage>
+                <input><xi:include href="../sage_code/vigenere_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+        </conclusion>
+    </exercises>

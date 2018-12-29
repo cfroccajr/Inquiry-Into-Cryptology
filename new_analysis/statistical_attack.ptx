@@ -1,0 +1,17 @@
+    <section xml:id="section_statisticsl_attack">
+        <title> (*)A Statistical Approach </title>
+        <objectives>
+            <ul>
+                <li>
+                    Friedman's Use of Statistics
+                </li>
+                <li>
+                    Sukhotin's Algorithm
+                </li>
+            </ul>
+        </objectives>
+        <figure xml:id="suzuki_coincisence_video">
+            <caption>Incidence (or Index) of Coincidence</caption>
+            <video youtube="raNO806R4yc" width="80%" />
+        </figure>
+    </section>

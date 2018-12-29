@@ -1,0 +1,38 @@
+                <assemblage >
+                    <p>
+                        85. ... If we have determined according to section 80, the number of letters
+                        in the key, we divide the cipher text into rows containing as many ciphers
+                        as the key contains letters and number the several columns. In theory those 
+                        ciphers which occur most frequently in a given column should signify the 
+                        letter e in the text;
+                    </p>
+                    <p> ... </p>
+                    <p>
+                        86. After we have divided the cipher text into rows according to the number
+                        of letters in the key and have numbered the several columns, we take out all 
+                        ciphers from column 1 and note the number o£ occurrences, then we do the same 
+                        for columns, 2, 3, etc. [See <xref ref="example_kasiski" text="type-global"/>]
+                    </p>
+                    <p>
+                        If we have found in this way the cipher <c>U</c>, let us say, occurs seven times, cipher 
+                        <c>S</c> three times and cipher <c>F</c> three times in column 1, we copy from the key table 
+                        letters beneath the ciphers <c>U, S</c> and <c>F</c> on a separate sheet of paper as follows:
+                    </p>
+                    <p>
+                        <cd>
+                            <cline>7 U - Q B U G M H C D N J</cline>
+                            <cline>3 S - O Z S E K F A B L H</cline>
+                            <cline>3 F - B M F R X S N O Y U</cline>
+                        </cd>
+                    </p>
+                    <p>
+                        Among these letters must be found the first letter of the key.  The letter <c>B</c> occurs as 
+                        second letter under cipher <c>U</c>, as eighth under cipher <c>S</c>, and as first under cipher 
+                        <c>F</c>.  Hence <c>B</c> is combined seven times with <em>t</em> to form <c>U</c>, three times 
+                        with <em>r</em> to form <c>S</c>, and three times with <em>e</em> to form <c>F</c>. From this we 
+                        must conclude that <c>B</c> is the first letter of the key.  The letter <c>M</c> also has a 
+                        more remote probability of being the first letter of the key since it occurs as fifth under 
+                        <c>U</c>, and as second under <c>F</c> ... . In the same way we just found the first letter 
+                        of the key, we now look for the other letters. <xref ref="cr_crypt_kasiski" detail="pp.34-35 (39-40)" />
+                    </p>
+                </assemblage>

@@ -1,0 +1,313 @@
+    <section xml:id="section_falconer_attack" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title> A Simple Solution </title>
+        <objectives>
+            <ul>
+                <li>
+                    Factoring Integers
+                </li>
+                <li>
+                    Falconer's Solution to the Columnar Transposition
+                </li>
+            </ul>
+        </objectives>
+        <subsection>
+            <title>The Power of Prime Factors</title>
+            <p>
+                The strength of Falconer's keyed columnar  transposition cipher is the almost astronomical 
+                number of combinations of keys that can be used.  As we have seen previously with just three 
+                characters we have six row keys which, depending on how many of them we use and how we arrange 
+                them, can give us one thousand nine hundred fifty six subtly different ciphers.  If we 
+                increase the number of characters to four or five then that number goes up to 
+                <md>
+                    <mrow>1,686,553,615,927,922,354,187,744</mrow>
+                </md>
+                and
+                <md>
+                    <mrow>18,183,954,211,052,603,322,452,474,095,140,831,\ldots</mrow>
+                    <mrow>738,614,446,765,249,926,715,439,301,461,074,500,\ldots</mrow>
+                    <mrow>732,116,312,180,273,095,148,765,061,059,468,326,\ldots</mrow>
+                    <mrow>378,636,312,510,693,233,993,926,141,650,787,502,\ldots</mrow>
+                    <mrow>931,879,726,557,669,253,713,958,681,131,266,045,\ldots</mrow>
+                    <mrow>931,864,486,980,283,708,000</mrow>
+                </md>
+                respectively.  This would seem to offer security in the extreme, but as we will see, Falconer himself 
+                gives us two relatively simple ways to crack this cipher.  We begin with the more mathematical approach.
+
+            </p>
+            <xi:include href="../quote_code/falconer_factors.ptx" />
+            <p>
+                <ul>
+                    <li>
+                        What are <em>prime numbers</em> and what are the <em>prime divisors</em> of a number?
+                    </li>
+                    <li>
+                        How did Falconer decide to start dividing by 2?
+                    </li>
+                    <li>
+                        Have you ever learned a rule that may have told you that 225 and 75 were divisible by 3?
+                    </li>
+                    <li>
+                        Looking at the second table in the above quote, 
+                        where do we get the numbers in the top row?
+                    </li>
+                    <li>
+                        In the second column of the second table there is a 6 under the 3, how did Falconer 
+                        come up with that?
+                    </li>
+                    <li>
+                        In the third column how did he get the 9 and the 18?
+                    </li>
+                    <li>
+                        What about the other columns, where did those numbers come from?
+                    </li>
+                    <li>
+                        In the last paragraph Falconer tells us that if 450 were the number of blocks 
+                        of text in the enciphered message then one of the factors of 450 
+                        is the number of key letters in the message.  Looking back at how Falconer's 
+                        transposition cipher works why is this the case?
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Test your understanding of what Falconer has described by factoring 980 into prime factors and then writing out 
+                        all the different divisors
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Look at the text enciphered below using Falconer's transposition cipher.  Using the 
+                        techniques described above, how many key letters may have been used to 
+                        encipher this message?
+                    </p>
+                    <pre>
+                        NILOEOTHIETTSGTN HCITRTSRNIAEOIOC TATEUOOOETURHVFS 
+                        LNEURRHYMSIHHIHQ EELHEFETTMRDUNRO NEAMTDPLHYETLOAS 
+                        TTEPEEYTPEOESTTA THMOIITESHTEUPUE ETDSEBASETFEONOU 
+                        OEKEBDAFASNHDSRT NSECLSEREWHHEICM EMTWKRIEBRNTAYTK 
+                        TUEEFUWEREIAPTHA IYWAEUHBIFTWDRUD WHSLSNTOPLFNTEMN 
+                        GRVEDCGTEPTDATIM RMSIIYLDEEECRBOE AEEBEINOTPNLEOAR 
+                        SEOTLWLAIHTOTEOW RRMHLHINTAEULNFO DHLTAAAROREANLOH 
+                        ETAUHHOEFEMEIETT HOTYTPNTRTSTGFBI AURSUPTHOHRHTWEN 
+                        GEIATHLHNIIDVSRS FSRSNHFTNOUTIDHR EIUASTSREHGFLETI 
+                        DDSEISTOTTIIELAE DEAREEAEENFOELEH NBETSIHENAEDHIDE
+                    </pre>
+                </statement>
+                <hint>
+                    <p>
+                        Start by counting the number of blocks of letters.
+                    </p>
+                </hint>
+            </exercise>
+        </subsection>
+        <subsection>
+            <title>But Really There's an Easier Way (sort of)</title>
+            <p>
+                After walking us through a careful exposition of how to find all the factors of a number and 
+                encouraging us to use this in order to find out the number of letters used for our key, Falconer 
+                lets us know that there is effectively an easier way to attack his own cipher.
+            </p>
+
+            <xi:include href="../quote_code/falconer_simple_sol1.ptx" />
+
+            <p>
+                Let's follow Falconer's advice using the message we used when we introduced his cipher in 
+                <xref ref="section_falconer_cipher" text="type-global" />:
+            </p>
+            <blockquote>
+                <p><q><m>\scriptsize\triangle</m> EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA</q></p>
+            </blockquote>
+            <p>
+                Which transforms to the following when we rewrite it following Falconer's directions:
+            </p>
+            <table xml:id="falconer_transposed_message">
+                <caption>Transpose Table for a Falconer Cipher</caption>
+                <tabular halign="right">
+                    <row bottom="minor">
+                        <cell right="minor"></cell>
+                        <cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                        <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell>
+                        <cell>11</cell><cell>12</cell><cell>13</cell><cell>14</cell><cell>15</cell>
+                    </row>
+                    <row>
+                        <cell right="minor">1</cell>
+                        <cell>E</cell><cell>H</cell><cell>T</cell><cell>U</cell><cell>I</cell>
+                        <cell>Q</cell><cell>C</cell><cell>B</cell><cell>K</cell><cell>W</cell>
+                        <cell>R</cell><cell>O</cell><cell>F</cell><cell>N</cell><cell>O</cell>
+                    </row>
+                    <row>
+                        <cell right="minor">2</cell>
+                        <cell>U</cell><cell>J</cell><cell>X</cell><cell>P</cell><cell>S</cell>
+                        <cell>M</cell><cell>O</cell><cell>E</cell><cell>V</cell><cell>H</cell>
+                        <cell>R</cell><cell>T</cell><cell>L</cell><cell>E</cell><cell>A</cell>
+                    </row>
+                    <row>
+                        <cell right="minor">3</cell>
+                        <cell>S</cell><cell>Y</cell><cell>Z</cell><cell>E</cell><cell>E</cell>
+                        <cell>L</cell><cell>P</cell><cell>N</cell><cell>I</cell><cell>O</cell>
+                        <cell>G</cell><cell>D</cell><cell><m>\cdot</m></cell><cell>G</cell><cell><m>\cdot</m></cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <xi:include href="../quote_code/falconer_simple_sol2.ptx" />
+
+            <p>
+                Taking Falconer's advice from step one look at each line of 
+                <xref ref="falconer_transposed_message" text="type-global" /> 
+                we created above as you consider the following.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        Are there three letters in line one which we would expect to go together assuming this is written in English?
+                    </li>
+                    <li>
+                        There is a <em>Q</em> in row one column six, what needs to come after that?  What column is it in?
+                    </li>
+                    <li>
+                        Looking now at line two what three letters do we again see that should go together?
+                    </li>
+                    <li>
+                        In line three are there three letters you could put together to get a common English ending? 
+                        Are there other letters you could arrange with them in order to get an entire word?
+                    </li>
+                    <li>
+                        Finally, columns thirteen and fourteen only have two characters in them each, where do you think 
+                        they belong if we were to rearrange the lines?
+                    </li>
+                </ul>
+            </p>
+            <p>
+                Use the observations you just made in order to rearrange the columns in the table, you should make a copy of 
+                this table to help you.
+            </p>
+            <table xml:id="blank_transpose_table">
+                <caption>Blank Transpose Table for a Falconer Cipher</caption>
+                <tabular halign="right">
+                    <row bottom="minor">
+                        <cell right="minor">Col's</cell>
+                        <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                        <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                        <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                    </row>
+                    <row>
+                        <cell right="minor">1</cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                    </row>
+                    <row>
+                        <cell right="minor">2</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                    </row>
+                    <row>
+                        <cell right="minor">3</cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                        <cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell><cell><fillin characters="4"/></cell>
+                    </row>
+                </tabular>
+            </table>
+            <p>
+                Test your understanding by working on the following exercises of increasing size, be patient they are 
+                finicky and time consuming. As a hint, all of the 
+                quotes contain the word <em>WINTER</em>.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to use this new method to decipher this quote.
+                    </p>
+                    <pre>
+                        IRPL WPDL FSNE INIH NIEE 
+                        RBY  OFY  TNRY CEB  EGC 
+                        MAS  SBH  ERS  CEE  AHS
+                    </pre>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Transpose each block, you will end up with a table of four lines and fifteen columns.</li>
+                            <li>Can you find common or even not so common words or combinations in any lines?</li>
+                            <li>When you rearrange the columns do you see more words?</li>
+                            <li>Stay organized, if you don't keep things lined up this will never work</li>
+                        </ul>
+                    </p>
+                </hint>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to use this new method to decipher this quote.
+                    </p>
+                    <pre>
+                        UIA ARM LDU GVN EWC RIE TSA HEF INV HRT 
+                        STI TEC NMU EFO SRR UOH AE  TTG TH  HHO
+                    </pre>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Transpose each block, you will end up with a table of three lines and twenty columns.</li>
+                            <li>Can you find common or even not so common words or combinations in any lines?</li>
+                            <li>When you rearrange the columns do you see more words?</li>
+                            <li>Stay organized, if you don't keep things lined up this will never work</li>
+                        </ul>
+                    </p>
+                </hint>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to use this new method to decipher this quote.
+                    </p>
+                    <pre>
+                        WYTWIA TAODLH IDHLES ASAHGD NETIAH ENHTNA OHDNTC
+                        SWNEHE OTEIDR HSNUNS FHWSWL TEISIE MHORIK OUDMTD
+                        SNBMEI ESLERC CECTHS AIWINE HSOHE  RNSNTN
+                    </pre>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>Transpose each block, you will end up with a table of six lines and twenty columns.</li>
+                            <li>Can you find common or even not so common words or combinations in any lines?</li>
+                            <li>When you rearrange the columns do you see more words?</li>
+                            <li>Stay organized, if you don't keep things lined up this will never work</li>
+                        </ul>
+                    </p>
+                </hint>
+            </exercise>
+            <p>
+                A few closing observations:
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        Look carefully at how the blocks of characters (columns in the tables) are grouped after they are deciphered, 
+                        i.e. did you ever get column one next to column thirteen or fourteen?  
+                    </li>
+                    <li>
+                        Why do you think this happened? How might it be related to the number of key letters?
+                    </li>
+                    <li>
+                        Given your answers to the previous questions, how can we make use of Falconer's strategies for 
+                        finding divisors and the number of key letters?
+                    </li>
+                </ul>
+            </p>
+        </subsection>
+    </section>

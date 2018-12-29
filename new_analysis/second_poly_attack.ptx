@@ -1,0 +1,459 @@
+   <section xml:id="section_polyalphabetic_attack2" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Nineteenth Century Revelations</title>
+        <objectives>
+            <ul>
+                <li>
+                    Babbage/Kasiski's Attack
+                </li>
+            </ul>
+        </objectives>
+        <subsection xml:id="kasiski_attack">
+            <title>Kasiski's Attack</title>
+            <subsubsection>
+                <title>Initial Observations</title>
+                <p>
+                    What follows are excerpts from Friedrich Kasiski's 1863 text on cryptography 
+                    <em>Die Geheimschriften und die Dechiffrir-Kunst</em>, 
+                    which was translated into English and privately published 
+                    by R. W. Pettengill in 1954 as <em>Secret Writings and the Art of Deciphering</em><xref ref="cr_crypt_kasiski"/>.  
+                    For brevity we will only examine a few of Kasiski's key points and we will use a long English rather than 
+                    a short German quote in order to make his points.  While these adjustments have been made to aid in understanding 
+                    whenever possible we will remain faithful to the original.
+                </p>
+                <p>
+                    For this section we will use the following quote for our analysis.  It is enciphered using a Vigen&#x00E8;re cipher with 
+                    the keyword <c>BERLIN</c>.
+                </p>
+                <example xml:id="example_kasiski">
+                    <title>Sample  Vigen&#x00E8;re Enciphering</title>
+                    <p>
+                        Plain Text:
+                    </p>
+                    <p>
+                        <q>
+                            Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, 
+                            and the French, the English, and the Americans on the western front which is currently all quiet.
+                        </q>
+                        <fn>
+                            Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
+                        </fn>
+                    </p>
+                    <p>
+                        Cipher Text:
+                    </p>
+                    <p>
+                        <cd>
+                            <cline>     123456  123456  123456  123456 </cline>
+                            <cline> </cline>
+                            <cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
+                            <cline> </cline>
+                            <cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
+                            <cline> </cline>
+                            <cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
+                            <cline> </cline>
+                            <cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
+                            <cline> </cline>
+                            <cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
+                            <cline> </cline>
+                            <cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
+                            <cline> </cline>
+                            <cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
+                            <cline> </cline>
+                            <cline> (7) SVVYBY  ZECWYH  JIK</cline>
+                        </cd>
+                    </p>
+                </example>
+
+                <xi:include href="../quote_code/kasiski_poly1.ptx" />
+
+                <p>
+                    Reading Questions:
+                </p>
+                <p>
+                    <ul>
+                        <li>
+                            In section (75) Kasiski writes about letters of the <em>key</em> 
+                            uniting with repetitions of <em>plain text</em>, how does this compare 
+                            to Falconer's observations in 
+                            <xref ref="section_polyalphabetic_attack1" text="type-global"/>?
+                        </li>
+                        <li>
+                            We know that the Vigen&#x00E8;re cipher can encipher many different plain text letters 
+                            as the same cipher text letter, so why is it reasonable for Kasiski to believe that 
+                            all the <c>U</c>'s in column 1 should represent <c>e</c> or that all the 
+                            <c>P</c>'s in column 5 might represent <c>t</c>?  (Answer in terms 
+                            of how we know the Vigen&#x00E8;re cipher works.)
+                        </li>
+                        <li>
+                            Break the plain text message in <xref ref="example_kasiski" text="type-global" /> into blocks of six 
+                            then use the key <c>BERLIN</c> and the modern Vigen&#x00E8;re table 
+                            <xref ref="appendix_figure_vigenere_new" text="type-global" /> 
+                            to encipher it, you should get the same cipher text as that 
+                            which is in the figure.
+                        </li>
+                        <li>
+                            Is Kasiski right about his guesses, that is do the <c>U</c> and <c>I</c> in the first and second 
+                            columns represent <c>e</c>, or do the <c>E</c> and <c>K</c> in the second and third columns 
+                            represent <c>t</c>?  How do your answers to this question relate to Kasiski's comments in 
+                            section (72)?
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Further observations by Kasiski:
+                </p>
+
+                <xi:include href="../quote_code/kasiski_poly2.ptx" />
+
+                <p>
+                    Reading Questions: (For these it will be helpful for you to look at the work you did in the  
+                    above questions.)
+                </p>
+                <p>
+                    <ul>
+                        <li>
+                            Look carefully at the cipher text in <xref ref="example_kasiski" text="type-global" />, 
+                            how often do you find the bi-grams <c>UL, XY, KS, EP</c> and <c>BU</c>?  
+                            Do they always line up with the cipher key so that they give <c>th</c> when you 
+                            decipher them?
+                        </li>
+                        <li>
+                            For this observation Kasiski enciphered <c>th</c> using each of the pairs of letters 
+                            <c>BE, ER, RL, LI</c> and <c>IN</c> from <c>BERLIN</c>, but he didn't consider 
+                            enciphering it with <c>NB</c> (i.e. wrapping around from column 6 back to 1).  Encipher 
+                            the bi-gram <c>th</c> using the rows <c>NB</c> in the Vigen&#x00E8;re table 
+                            <xref ref="appendix_figure_vigenere_new" text="type-global" />, what cipher bi-gram do 
+                            you get?  How often to you find that bi-gram in the cipher text in 
+                            <xref ref="example_kasiski" text="type-global" />? (Remember that you need to look 
+                            from columns 6 to 1.)
+                        </li>
+                        <li>
+                            Can you find other repeated bi-grams?  Can you find longer repeated n-grams?
+                        </li>
+                    </ul>
+                </p>
+            </subsubsection>
+            <subsubsection>
+                <title>Determining the Key</title>
+                <p>
+                    First we find the key length:
+                </p>
+
+                <xi:include href="../quote_code/kasiski_poly3.ptx" />
+
+                <p>
+                    Reading Questions:
+                </p>
+                <p>
+                    <ul>
+                        <li>
+                            Why did Kasiski add two to the number of characters between the 
+                            two repeated copies of <c>UL</c>?
+                        </li>
+                        <li>
+                            The three letter cipher <c>ULV</c> is also appears more than once, 
+                            after counting the number of characters from one to the next how many 
+                            letters should you add to that count before factoring it?  What about for the 
+                            repeated cipher <c>UIIY</c>?
+                        </li>
+                        <li>
+                            Go through the entire cipher text in <xref ref="example_kasiski" text="type-global" />, 
+                            look for all the repeated ciphers which are at least two characters long, then 
+                            for each one write down the distance between them and the factors of those 
+                            distances.  What number(s) pop up most often?  Why does this make sense? 
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Finally we find the key: In what follows Kasiski makes use of what he calls <em>the key table</em> which is 
+                    a rearranged Vigen&#x00E8;re table with plain text letters on the left, cipher letters along the top and the 
+                    possible key letters on the interior. So it tells us that if we have a cipher letter <c>J</c> which we 
+                    believe represents a plain text letter <em>i</em> then looking in the table we can see the corresponding 
+                    key letter was a <c>B</c>.
+                </p>
+                <figure xml:id="kasiski_key_table">
+                    <caption>Kasiski Key Table</caption>
+                    <image width="90%" archive="svg png pdf">
+                        <description>Kasiski Key Table</description>
+                        <latex-image>
+                            \begin{tikzpicture}
+                            \foreach \y/\shift  in {0/4,1/19,2/0,3/14,4/8,5/13,6/18,7/17,8/7,9/11,10/3}{
+                                \pgfmathtruncatemacro{\o}{mod(\y,2)};
+                                \filldraw[fill=gray!30!white, draw=white, fill opacity=0.7*\o] (-1.25,-0.25-0.5*\y) rectangle (15,0.25-0.5*\y);
+                                \foreach \x/\ctext in 
+                                {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,
+                                    13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                                {
+                                \pgfmathtruncatemacro{\n}{mod(\x+\shift+26,26)};
+                                \draw (1+0.55*\n,-0.5*\y) node {$\ctext$};
+                                }
+                            }
+                            \foreach \x/\ctext in 
+                            {
+                                0/12.22\%\ \ e,
+                                1/9.28\%\ \ \ \ t,
+                                2/8.06\%\ \ \ \ a,
+                                3/7.62\%\ \ \ \ o,
+                                4/7.10\%\ \ \ \ i,
+                                5/6.82\%\ \ \ \ n,
+                                6/6.45\%\ \ \ \ s,
+                                7/5.91\%\ \ \ \ r,
+                                8/5.76\%\ \ \ \ h,
+                                9/4.19\%\ \ \ \ l,
+                                10/3.93\%\ \ \ \ d
+                            }
+                            {
+                                \draw (-0.25,-0.5*\x) node {$\ctext$};
+                            }
+                            \foreach \x/\ctext in 
+                            {0/A,1/B,2/C,3/D,4/E,5/F,6/G,7/H,8/I,9/J,10/K,11/L,12/M,13/N,14/O,15/P,16/Q,17/R,18/S,19/T,20/U,21/V,22/W,23/X,24/Y,25/Z}
+                            {
+                                \draw (1+0.55*\x,0.5) node {$\ctext$};
+                            }
+                            \draw (-1.25,0.25)--(15,0.25);
+                            \draw (0.75,1)--(0.75,-5.5);
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+                <p>
+                    <ul>
+                        <li>
+                            Check that you understand the <em>key table</em> by trying to find the key for this message 
+                            based on the given plain text and cipher text.
+                            <cd>
+                                <cline>plain:  winter is at a close</cline>
+                                <cline>CIPHER: OXEBRX AH RB N IDDJM</cline>
+                            </cd>
+                        </li>
+                        <li>
+                            Why do you think that Kasiski ordered the plain text characters the way he did?
+                        </li>
+                        <li>
+                            Why do you think that he didn't include all the possible plain text letters?
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Finding the key:
+                </p>
+
+                <xi:include href="../quote_code/kasiski_poly4.ptx" />
+
+                <p>
+                    Reading Questions:
+                </p>
+                <p>
+                    <ul>
+                        <li>
+                            In the columns labeled 2 in the example we have been working with three most common 
+                            ciphers are <c>I, E,</c> and <c>L</c> appearing 6, 5, and 4 times respectively.  From 
+                            this Kasiski would have us write down the following from the columns of the 
+                            key table:
+                            <cd>
+                                <cline>6 I - E P I U A V Q R B X F</cline>
+                                <cline>5 E - A L E Q W R M N X T B</cline>
+                                <cline>4 L - H S L X D Y T U E A I</cline>
+                            </cd>
+                            Which two possible key letters appear in all three rows?
+                        </li>
+                        <li>
+                            In the columns labeled 3 in the example we have been working with three most common 
+                            ciphers are <c>V, K,</c> and <c>I</c> appearing 5, 4, and 4 times respectively.  
+                            Follow Kasiski's lead and write down the corresponding columns from the key table:
+                            <cd>
+                                <cline>6 V - </cline>
+                                <cline>5 K - </cline>
+                                <cline>4 I - </cline>
+                            </cd>
+                            Which possible key letters appear in all three rows?
+                        </li>
+                        <li> 
+                            In the columns labeled 4 in the example we have been working with three most common 
+                            ciphers are <c>Y, P,</c> and <c>W</c> appearing 4, 4, and 3 times respectively.  
+                            Repeat the steps from the previous two questions to try and find the fourth key 
+                            letter.
+                        </li>
+                        <li> 
+                            In the columns labeled 5 in the example we have been working with three most common 
+                            ciphers are <c>B, W,</c> and <c>M</c> appearing 4, 3, and 3 times respectively.  
+                            Repeat the steps from the previous two questions to try and find the fourth key 
+                            letter.
+                        </li>
+                        <li> 
+                            In the columns labeled 6 in the example we have been working with three most common 
+                            ciphers are <c>F, V,</c> and <c>U</c> appearing 5, 3, and 3 times respectively.  
+                            Repeat the steps from the previous two questions to try and find the fourth key 
+                            letter.
+                        </li>
+                        <li>
+                            Put together all the possible key letters we get for all the columns of the message, 
+                            do they (or at least can they) spell <q><c>BERLIN</c></q> as we expect them to?
+                        </li>
+                    </ul>
+                </p>
+                <exercise>
+                    <statement>
+                        <p>
+                            The following text was enciphered using a key of <c>CIPHER</c>. 
+                            Follow Kasiski's steps to see if you could have found this for 
+                            your self.
+                        </p>
+                        <p>
+                            <cd>
+                                <cline> (1) UQCJIR TIBPWJ UQCNYC CZIYEE UNDYQR VQDUME VWPJSE </cline>
+
+                                <cline> (2) HMHZSI QNIOIF TLTYFR KATTIR WFLHWE QTDUKV TBWLWR </cline>
+
+                                <cline> (3) OMBHRL RBDALR VXTYMF FBWLTC CKTDLZ EPPYED KAWHHY </cline>
+
+                                <cline> (4) GTSPRK JMLVVK JGVVZV TVDYWV UBXTEK KWCDEJ VPPASW </cline>
+
+                                <cline> (5) CXGLPR VMLOSD JMGLWG GKILHR PLPMVZ GVSASN JWBOIF </cline>
+
+                                <cline> (6) YMSHHV DBDMKI CBXAYU GJJARF YPTMIC VPXTWV NNPUME </cline>
+
+                                <cline> (7) HMGPSI CVSALR VIGHQZ UEPZLZ UUPZXV TPTOMD UMAMPZ </cline>
+
+                                <cline> (8) IPILHR NICAII PAJTQF PMSHXL TVZLCR PLHHMU TMIBVE </cline>
+
+                                <cline> (9) KVVASR TIBPWZ CUPACF WZDYHV TABVRJ GQVUIL TIGHQZ </cline>
+
+                                <cline>(10) UUTYIC AVDKHV FPXZLV CLPZQL EPPZXF UINCII AODVHR </cline>
+
+                                <cline>(11) PLHPKE GLIVLZ OEXALY KAWHRU VWALEU VPTDEP</cline>
+                            </cd>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Look for repeated strings.
+                                </li>
+                                <li>
+                                    For each pair of repeated strings write them down and 
+                                    next to them write down the number of characters 
+                                    from the start of one to the start of the next 
+                                    and the factors of that number.
+                                </li>
+                                <li>
+                                    Assuming that the most common factor is 6, which we know it should be, 
+                                    use the subset cell to find the most common letters in each column.
+                                </li>
+                                <li>
+                                    Use these letters and the key table 
+                                    (<xref ref="kasiski_key_table" text="type-global"/>) 
+                                    to try and find the key, which 
+                                    should be <c>CIPHER</c>.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                </exercise>
+                <exercise><!-- ironmask -->
+                    <statement>
+                        <p>
+                            Follow Kasiski's steps to find the key for this message.  Then use 
+                            the Vigen&#x00E8;re cipher cell to decipher it.
+                        </p>
+                        <p>
+                            <cd>
+                                <cline> (1) IERSDO EDPRHZ AMWXBU OEFAYX IEOPOO EWWUOG UNYRQJ </cline>
+
+                                <cline> (2) OPFIGX BFHUQP SMMFTG TEZYZJ SYUKWK BIIROE FDILFT </cline>
+
+                                <cline> (3) MVWEXY WFFHGE OYHFFO FYBYWA STZKBZ GGASSI BFSIQR </cline>
+
+                                <cline> (4) QDPZBT TESCSV RUUMKO TWKUKT ZOSZBT TAVCME HSARZS </cline>
+
+                                <cline> (5) USOPWW ZIBYSV DOFWIJ YUMDLR ZFKAFH WCQCJR DPDKBV </cline>
+
+                                <cline> (6) OGFHWP MVHBRR SYCCOF FOLRMW WEETKE JASPFT ZOZVDY </cline>
+
+                                <cline> (7) KWSCVV UNFINO PVYAQW JSOYHJ QLDDPR HGTECS VXGPML </cline>
+
+                                <cline> (8) DSVXVV YWSCNI CZZEUO AJWGKH WCBZZY RUJDPV FXZEOD </cline>
+
+                                <cline> (9) PRHYAU ACFZJZ GSLOFG SEUEFM MRBVYP WBQFIF PEKSZV </cline>
+
+                                <cline>(10) TBDAHB QMOGQC GXDVFF MTAYVN WGTOFO EYCZFH WZWJGR </cline>
+
+                                <cline>(11) ESAYVF TFGCZK AVQEQT HVITSQ ANSVMM SYIILR BYSUUG </cline>
+
+                                <cline>(12) ZOAKDB IEJCWW HUQKAX OUCZNU LKAKCF MYAXOV LNOTDI </cline>
+
+                                <cline>(13) EYOGFH WUQEUF IIKRER GQMRLK OEOARO MXLYWZ EEDPKF </cline>
+
+                                <cline>(14) ACXELO TPOGML GCAKVR YUKUMK SRDHSN VFRBGB LCMZHU </cline>
+
+                                <cline>(15) QRMZWE HUQRWK AFBJTI URPRRH DGWNBY SHZFGB BLBNFE </cline>
+
+                                <cline>(16) HRQCWC BELYZV JRMLZS ATVNDA UDMIOA PBABBY DUULAZ </cline>
+
+                                <cline>(17) XVPHDI WNNFFR HEJLME SNFHSW IJYBRS LOMCSK ULWNBF </cline>
+
+                                <cline>(18) OPAUFD ZPKUQR WDPVAR ZSWOUV RYUTLV MDCEQT ZKVJZN </cline>
+
+                                <cline>(19) HEKYNK VRQLWW MEHFBH AVQGDR PEHBQM SQQVWX WWHUQS </cline>
+
+                                <cline>(20) GMQVHL AFVKZK OTZAFG PFVNPL GKLVRU UMOSBY VBZOJC </cline>
+                            </cd>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <ol>
+                                <li>
+                                    Look for repeated strings.
+                                </li>
+                                <li>
+                                    For each pair of repeated strings write them down and 
+                                    next to them write down the number of characters 
+                                    from the start of one to the start of the next 
+                                    and the factors of that number.
+                                </li>
+                                <li> 
+                                    Use the subset cell to find the most common letters in each <q>column</q> 
+                                    as if you had split up the cipher according to the length you found 
+                                    in the previous step.
+                                </li>
+                                <li>
+                                    Use these letters and the key table 
+                                    (<xref ref="kasiski_key_table" text="type-global"/>) 
+                                    to try and find the key.
+                                </li>
+                            </ol>
+                        </p>
+                    </hint>
+                </exercise>
+                <figure xml:id="suzuki_kasiski_video">
+                    <caption>Modern look at Kasiski</caption>
+                    <video youtube="TxClRjnRNJw" width="80%" />
+                </figure>
+                <p>
+                    Sage cell for calculating subsets of letters in a message:
+                </p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/subset_analysis.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+
+                <p>
+                    Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
+                </p>
+                <sage>
+                    <input><xi:include href="../sage_code/vigenere_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+            </subsubsection>
+        </subsection>
+        <subsection>
+            <title> (*)Babbage's Contributions </title>
+            <p>
+                Insert Information on Babbage's Cryptologic Work ...
+            </p>
+        </subsection>
+
+    </section>
