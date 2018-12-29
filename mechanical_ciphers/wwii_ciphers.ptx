@@ -1,0 +1,19 @@
+    <section xml:id="wwii_section">
+        <title>World War II</title>
+        <objectives>
+            <ul>
+                <li>
+                    Bletchley Park and Enigma
+                </li>
+                <li>
+                    Lorenz Cipher, Colossus, Electronic Computing
+                </li>
+                <li>
+                    Japanese Ciphers
+                </li>
+            </ul>
+        </objectives>       
+        <todo>
+            Fill In Missing Material
+        </todo>
+    </section>

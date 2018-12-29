@@ -1,0 +1,196 @@
+    <exercises xml:id="modular_hill_exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Up Hill struggle?</title>
+        <exercise>
+            <statement>
+                <p>
+                    Construct an addition and multiplication table modulo 6.  Which pairs of numbers are additive inverses? 
+                    Which pairs are multiplicative inverses, and how do they relate to 6?
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Construct an addition and multiplication table modulo 13.  Which pairs of numbers are additive inverses? 
+                    Which pairs are multiplicative inverses, and how do they relate to 13?
+                </p>
+            </statement>
+        </exercise>     
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>zygomorphic</c> using an affine cipher with key <m>m=7</m> and <m>s=12</m>. 
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>quaquaversal</c> using an affine cipher with key <m>m=17</m> and <m>s=3</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>TWWFS NLVBY FVNBX GPNWY XWZVN BKLVM FSHFA FKWT</c> which was enciphered using an 
+                    affine cipher with key <m>m=15</m> and <m>s=23</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>YTGXZ GHACB HQGBN XABFU ZAGXN TJJ</c> which was enciphered using an 
+                    affine cipher with key <m>m=3</m> and <m>s=7</m>.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message which was enciphered using an affine cipher:
+                    <cd>
+                        <cline>EHWQC CIYKH EYKVK PIXKH ZKZKQ THZIP YGPXE KDFYX CZKXT IAOZI </cline>
+                        <cline>TYKCX KAIRK XKFPX IYHZK CHXQE DAQMC KFVGZ ECEYY KDCKK BKXHE </cline>
+                        <cline>IDCED HZKCN XEDUI PHZKW ZITKS MKCHE IDIPH ZKDKH ZKXTQ DFCMY </cline>
+                        <cline>QHXQA IYNQD GQDFI PHZKA ITICC QTCAZ KYKCI PVQXI DYQMN KXHME </cline>
+                        <cline>CQXKH IIXKA KDHED HZKYE DFCIP HZKNM VTEAQ DFQXK HIIED HEYQH </cline>
+                        <cline>KTGAI DAKXD KFWEH ZNITE HEACQ DFPED QDAKH IVKPE HHEDU CMVJK </cline>
+                        <cline>AHCPI XHZEC CKXEK CIPCO KHAZK CHZKG TKFZI WKRKX EDQDE DFEXK </cline>
+                        <cline>AHPQC ZEIDH IQCED UMTQX QDFAI YNTKB NXIVT KYWZE AZUQR KYGPX </cline>
+                        <cline>EKDFQ DINNI XHMDE HGIPF KYIDC HXQHE DUHZK RQTMK IPQPX KCZWK </cline>
+                        <cline>QNIDQ YIDUH ZKYQD GWEHZ WZEAZ ZKWQU KFZEC TEPKT IDUVQ HHTKQ </cline>
+                        <cline>UQEDC HAXEY K </cline>
+                    </cd>
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message which was enciphered using an affine cipher:
+                    <cd>
+                        <cline>ZTWFB JOJLT ZZZTW XVAJO KOJWZ MHOLJ KTHWT WKHJF HWMBZ ZHOHM </cline>
+                        <cline>KIBHO QBOUJ TZBLB JVCRJ ZWHAH WXBOK IBZJL BLJWV SKHKI JKSBO </cline>
+                        <cline>THQKI BSAJF BRITF IJOJL TZIJQ IBAQT WKIBR HOKIN XHGBO WHOZB </cline>
+                        <cline>ZKTLJ KTHWR JZKIJ KHMJS OBAJK BRIHL IBOBZ SBFKB QJWQJ MOTBW </cline>
+                        <cline>QKHRI HLIBH RBQJQ BUKHM XOJKT KVQBU VKWHR IBMBA KITLZ BAMJW </cline>
+                        <cline>TWMBO THOJW QKIJK JOJLT ZRJZI TZLJZ KBOIB ITLZB AMATX IKBQJ </cline>
+                        <cline>AJWKB OWZVL LHWBQ JKVOW PBNJW QZJTQ OBKVO WTWXK HJOJL TZTJL </cline>
+                        <cline>JKNHV OHOQB OZLHW ZBTXW BVOJO JLTZL BOBAN WHQQB QITZI BJQJZ </cline>
+                        <cline>LVFIJ ZKHZJ NGBON XHHQJ WQZTX WBQKH ITLRT KIITZ IJWQK HABJQ </cline>
+                        <cline>KIBRJ N</cline>
+                    </cd>
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>order more pizza</c> using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}1 &amp; 5 \\ 7 &amp; 10\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <c>VIXJZ FVIBW DUZT</c>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher <c>we need soda too</c> using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}9 &amp; 6 \\ 13 &amp; 7\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>ZEMUM KJDIK NEWSX XHM</c> which was enciphered using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}13 &amp; 19 \\ 1 &amp; 6\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <c>spicy chicken wings</c>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher <c>MRUKD QFDWI DHNL</c> which was enciphered using Hill's cipher and the matrix,
+                    <md>
+                        <mrow>
+                            m=\begin{pmatrix}7 &amp; 17 \\ 2 &amp; 5\end{pmatrix},
+                        </mrow>
+                    </md>
+                    be sure to how your work.
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this quote about <q>Chuck Norris</q> which was enciphered using Hill's cipher:
+                    <c>FYQAB YTAHX XYERO MQMFP NNBXN ARJFK HLSNK QVVME IFDUJ AVOUT ZYLA</c><!-- 17,7,5,2 -->
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <q>Chuck Norris threw a grenade and killed 50 zombies, then it exploded.</q>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this quote about <q>Molly Weasley</q> which was enciphered using Hill's cipher:
+                    <c>CQFUM OEAZH YUMAW MYGCV GEQDD MKCEA BIKCU ZSMGN VUGC</c><!-- 14,3,13,3 -->
+                </p>
+            </statement>
+        </exercise>
+        <conclusion>
+            <p>
+                Affine Cipher Cell:
+            </p>
+            <p>
+                This SAGE cell can help you check your work when you encipher and decipher with a affine cipher, 
+                but you should be able to do the basic calculations your self.
+            </p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/affine_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+
+            <p>Hill's Cipher Cell:</p>
+            <p>
+                This SAGE cell can help you check your work when you encipher and decipher with a basic Hill's cipher, 
+                but you should be able to do the basic calculations your self.
+            </p>
+
+                <sage>
+                    <input><xi:include href="../sage_code/hills_cipher.sage" parse="text"/></input>
+                    <output></output>
+                </sage>
+        </conclusion>
+    </exercises>

@@ -1,0 +1,25 @@
+    <section xml:id="between_wars_section">
+        <title>Between the Wars</title>
+        <objectives>
+            <ul>
+                <li>
+                    Vernam One-Time Pad and Perfect Secrecy
+                    <!-- Frank Miller: Inventor of the One-Time Pad, Cryptologia 7/12/2011)
+                            Vernam Patent US1310719 A
+                    -->
+                </li>
+                <li>
+                    Henry L. Stinson, <q>Gentleman's Mail</q>
+                </li>
+                <li>
+                    Rise of Enigma
+                </li>
+                <li>
+                    Polish Cipher Bureau 
+                </li>
+            </ul>
+        </objectives>
+        <todo>
+            Fill In Missing Material
+        </todo>
+    </section>

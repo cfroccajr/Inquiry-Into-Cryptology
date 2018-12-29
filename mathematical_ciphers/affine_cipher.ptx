@@ -1,0 +1,657 @@
+    <section xml:id="affine_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Affine Ciphers</title>
+        <objectives>
+            <ul>
+                <li>
+                    Biography of Lester Hill
+                </li>
+                <li>
+                    Modulus
+                </li>
+                <li>
+                    Affine Cipher
+                </li>
+            </ul>
+        </objectives>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <subsection xml:id="hill_biography">
+            <title>Lester S. Hill</title>
+            <p> Insert bio here ...</p>
+
+        </subsection>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <subsection xml:id="moduli">
+            <title>Moduli</title>
+            <p>
+                The cipher we will focus on here, Hill's Cipher, is an early example of a cipher based purely in the mathematics of 
+                number theory and algebra; the areas of mathematics which now dominate all of modern 
+                cryptography.  Number theory has a long and rich history with many fundamental results dating all the way back to Euclid in 300 BCE, and with results found across the globe in different cultures.  Number theory as we understand and use it today is due in large part to Carl Friedrich Gauss and his text 
+                <em>Disquisitiones Arithmeticae</em> published in 1801 (when Gauss was 24).  Algebra (or more properly linear and abstract algebra) as it is going to be used here is much younger tracing its roots back only a couple hundred years to the early nineteenth century; here too much is owed to Gauss.
+            </p>
+            <p> 
+                As with previous topics we will begin by looking at an original source text and trying to understand what it is saying.  However, given the importance of this material to the rest of what we will be discussing in subsequent chapters, we will look at the material from a more modern perspective.
+            </p>
+            <xi:include href="../quote_code/hill_crypto_alpha.ptx" />
+
+            <p>
+                Reading Questions:
+                <ul>
+                    <li>
+                        Hill starts by describing how we will add and multiply with the alphabet, looking at his 
+                        description why in his illustration does <m>j+w</m> which should be <m>25+14=39</m> 
+                        (see <xref ref="hill_alpha_numeric_corespondence">Hill's Correspondence</xref>) come 
+                        out to be <m>m</m> which is 13?
+                    </li>
+                    <li>
+                        In his illustration he also says <m>hm</m> which should be 4 times 13, or 52, is 
+                        <m>k</m> which is 0, why is this the case?
+                    </li>
+                    <li>
+                        Along the same lines, why does <m>f+y</m> equal <m>k</m> and why does <m>an</m> (<m>a</m> times <m>n</m>) 
+                        equal <m>z</m>?
+                    </li>
+                    <li>
+                        Thinking about your previous answers, what are the values of the following: <m>j+z</m>, 
+                        <m>nf</m>, <m>au+j</m>, and <m>bv+jw</m>.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                In this section of text Hill has introduced us to the idea of modular arithmetic and modular equivalence, in 
+                particular the idea of equivalence modulo 26.  This is a concept which will be central to most 
+                everything else we do so we need to spend a little more time trying to precisely understand modular 
+                equivalence.
+            </p>            
+            <definition xml:id="def_modular_equivalence">
+                <title>Modular Equivalence</title>
+                <statement>
+                    <p>
+                        If <m>n</m> is a positive integer then we say that two other integers <m>a</m> and <m>b</m> 
+                        are <term>equivalent modulo n</term><idx>modular equivalence</idx> if and 
+                        only if they have the same remainder when divided by <m>n</m>, or equivalently if and only if 
+                        <m>a-b</m> is divisible by <m>n</m>, when this is the case we write 
+                        <md>
+                            <mrow>a\equiv b \pmod{n}.</mrow>
+                        </md>
+                        The number <m>n</m> is called the <em>modulus</em>.
+                    </p>
+                </statement>
+            </definition>
+            <example xml:id="mod_14_example">
+                <p>
+                    Suppose that <m>n=14</m>, then <m>36\equiv 8\pmod{n}</m> because <m>36=2\cdot 14 + 8</m> and 
+                    <m>8=0\cdot (14) + 8</m> so we get the same remainder when we divide by <m>n=14</m>.  Alternately,
+                    we can observe that <m>36-8=28</m> and <m>28=2\cdot(14)</m> is divisible by <m>n=14</m>.
+                </p>
+                <p>
+                    Using the same value for <m>n</m> we get that <m>3\cdot 5\equiv 1\pmod{n}</m> because 
+                    <m>15=1\cdot (14) +1</m>, so the remainder when <m>3\cdot 5</m> is divided by <m>n</m> is 1.
+                </p>
+                <p>
+                    Test your understanding by filling in the rest of this multiplication table:
+                </p>
+                <table xml:id="mod_fourteen_table">
+                    <caption>Multiplication Modulo 14</caption>
+                    <tabular halign="right">
+                        <row bottom="minor">
+                            <cell right="minor" ><m>\times_{14}</m></cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                            <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                            <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >0</cell>
+                            <cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
+                            <cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell><cell>0</cell>
+                            <cell>0</cell><cell>0</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >1</cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                            <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+                            <cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >2</cell>
+                            <cell>0</cell><cell>2</cell><cell>4</cell><cell>6</cell><cell>8</cell><cell>10</cell>
+                            <cell>12</cell><cell>0</cell><cell>2</cell><cell>4</cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >3</cell>
+                            <cell>0</cell><cell>3</cell><cell>6</cell><cell>9</cell><cell>12</cell><cell>1</cell>
+                            <cell>4</cell><cell>7</cell><cell>10</cell><cell>13</cell><cell>2</cell><cell>5</cell>
+                            <cell>8</cell><cell>11</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >4</cell>
+                            <cell>0</cell><cell>4</cell><cell>8</cell><cell>12</cell><cell></cell><cell>6</cell>
+                            <cell></cell><cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >5</cell>
+                            <cell>0</cell><cell>5</cell><cell>10</cell><cell>1</cell><cell>6</cell><cell>11</cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >6</cell>
+                            <cell>0</cell><cell>6</cell><cell>12</cell><cell>4</cell><cell>10</cell><cell>0</cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >7</cell>
+                            <cell>0</cell><cell>7</cell><cell>0</cell><cell>7</cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >8</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >9</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >10</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >11</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >12</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >13</cell>
+                            <cell>0</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>
+                    <ul>
+                        <li>
+                            What is strange or different about the row for 7?  Why do you think all the remainders 
+                            come out this way?
+                        </li>
+                        <li>
+                            What is the difference between the even and odd rows (excluding row 7)?
+                        </li>
+                    </ul>
+                </p>
+                <p>
+                    Finally, fill in this addition table for addition modulo 14.
+                </p>
+                <table xml:id="mod_fourteen_table_addition">
+                    <caption>Addition Modulo 14</caption>
+                    <tabular halign="right">
+                        <row bottom="minor">
+                            <cell right="minor" ><m>+_{14}</m></cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                            <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                            <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >0</cell>
+                            <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                            <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+                            <cell>12</cell><cell>13</cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >1</cell>
+                            <cell>1</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >2</cell>
+                            <cell>2</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >3</cell>
+                            <cell>3</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >4</cell>
+                            <cell>4</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >5</cell>
+                            <cell>5</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >6</cell>
+                            <cell>6</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >7</cell>
+                            <cell>7</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >8</cell>
+                            <cell>8</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >9</cell>
+                            <cell>9</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >10</cell>
+                            <cell>10</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >11</cell>
+                            <cell>11</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >12</cell>
+                            <cell>12</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell right="minor" >13</cell>
+                            <cell>13</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                            <cell></cell>
+                        </row>
+                    </tabular>
+                </table>                
+            </example>
+            <definition>
+                <title>Additive Identity</title><idx>additive identity</idx>
+                <statement>
+                    <p>
+                        We call 0 the <em>additive identity</em> because for all <m>a</m> and all possible moduli 
+                        <m>n</m> we get <me>a+0\equiv a\pmod{n}</me>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Additive Inverse</title><idx>additive inverse</idx>
+                <statement>
+                    <p>
+                        We say that <m>a</m> and <m>b</m> are <em>additive inverses</em> modulo <m>n</m> 
+                        if <me>a+ b\equiv 0 \pmod{n},</me> and we write <m>b=-a</m>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Multiplicative Identity</title><idx>multiplicative identity</idx>
+                <statement>
+                    <p>
+                        We call 1 the <em>multiplicative identity</em> because for all <m>a</m> and all possible moduli 
+                        <m>n</m> we get <me>a\cdot 1\equiv a\pmod{n}</me>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Multiplicative Inverse</title><idx>multiplicative inverse</idx>
+                <statement>
+                    <p>
+                        We say that <m>a</m> and <m>b</m> are <em>multiplicative inverses</em> modulo <m>n</m> 
+                        if <me>a\cdot b\equiv 1 \pmod{n},</me> and we write <m>b=a^{-1}</m>.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Look back at <xref ref="mod_14_example" text="type-global"/> and write down the pairs of 
+                        additive and multiplicative inverses.  Do all the numbers modulo 14 have additive inverses?  
+                        Do all of them have multiplicative inverses?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Write down another multiplication and addition table as  you did in 
+                        <xref ref="mod_14_example" text="type-global"/> but with a modulus of 
+                        <m>n=10</m>, so when you multiply and add you will always divide 
+                        by 10 afterwards and write down the remainder.  After you write down 
+                        the tables write down the pairs of multiplicative and additive inverses.  
+                        Do all the numbers modulo 10 have additive inverses?  Do all of them have 
+                        multiplicative inverses?
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Reflection Questions: Look back at what Hill had to say and at the examples you have worked through 
+                when you used moduli of <m>n=14</m> and <m>n=10</m> as you think about the following questions.
+            </p>
+            <p>
+                <ul>
+                    <li>
+                        No matter which modulus you use, do all the numbers have additive inverses, i.e. numbers you can 
+                        add to them in order to get 0?
+                    </li>
+                    <li>
+                        No matter which modulus you use, do all the numbers have multiplicative inverses, i.e. numbers you 
+                        can multiply them by in order to get 1?
+                    </li>
+                    <li>
+                        If you look at the numbers which do have multiplicative inverses how do they 
+                        relate to those which Hill described as prime to 26?
+                    </li>
+                </ul>
+            </p>
+            <definition>
+                <title>Relatively Prime</title><idx>relatively prime</idx>
+                <statement>
+                    <p>
+                        We say that two integers are <em>relatively prime</em> if the largest positive 
+                        integers which divided them both, their <em>greatest common divisor</em>, is 1.  
+                        For example the greatest common divisor of 7 and 36 is 1 so they are relatively prime, 
+                        however the greatest common divisor of 30 and 36 is 6 so they are not relatively prime.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers, other than 7, that are less than 36 are <em>relatively prime</em> to 36?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 14 are <em>relatively prime</em> to 14?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 10 are <em>relatively prime</em> to 10?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Which numbers less than 26 are <em>relatively prime</em> to 26?  How do these compare to the 
+                        list of numbers which have <em>multiplicative inverses</em>? (You will want to use <xref ref="appendix_figure_mod26" text="type-global" />.)
+                    </p>
+                </statement>
+            </exercise>
+        </subsection>
+
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <subsection xml:id="affine_cipher">
+            <title>Affine Cipher</title>
+
+            <definition xml:id="definition_affine" >
+                <title>Affine Cipher</title><idx>affine cipher</idx>
+                <statement>
+                    <p>
+                        An <em>affine cipher</em> is a cipher with a two part key, a multiplier <m>m</m> and a shift 
+                        <m>s</m> and calculations are carried out using modular arithmetic; typically the modulus is 
+                        <m>n=26</m>.  Characters of the plain text are enciphered with the formula
+                        <me>CIPHER\,\equiv\, m(plain)+s\pmod{26},</me>
+                        and characters of the cipher text are deciphered with the formula
+                        <me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
+                        or
+                        <me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
+                        Note that the multiplier <m>m</m> must be relatively prime to the modulus so that it has a 
+                        multiplicative inverse.
+                    </p>
+                </statement>
+            </definition>
+            <exercise>
+                <statement>
+                    <p>
+                        Let's encipher the message <q><c>hello world</c></q> with an affine cipher and a key of 
+                        <m>m=5</m> and <m>s=16</m>; assume that we match up the alphabet with the integers from 
+                        0 to 25 in the usual way so that <c>a</c> is 0, <c>b</c> is 1, <c>c</c> is 2, etc..  In this 
+                        way the letter <c>h</c> is replaced by the number 7 and when we encipher it we get
+                        <me>5\cdot 7+16\equiv 25\pmod{26}</me> and 25 is <c>Z</c>, so plain <c>h</c> becomes 
+                        cipher <c>Z</c>.  Next <c>e</c> is replaced by 4 and we get
+                        <me>5\cdot 4+16\equiv 10\pmod{26}</me> and 10 is <c>K</c>, so plain <c>e</c> becomes 
+                        cipher <c>K</c>.  The plain <c>l</c> corresponds to 11 and 
+                        <me>5\cdot 11+16\equiv 19\pmod{26}</me>, which is <c>T</c>, that is plain <c>l</c> is 
+                        replaced by cipher <c>T</c>.  Try to encipher the rest of the message on your own, 
+                        you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> to help you 
+                        with the multiplication modulo 26.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <c>ZKTTI WIXTF</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Now let's decipher the message <c>AJINF CVCSI JCAKU</c> which was enciphered using 
+                        an affine cipher and a key of <m>m=11</m> and <m>s=4</m>.  Note that 
+                        <m>m^{-1}\equiv 19\pmod{26}</m> and <m>-s\equiv 22\pmod{26}</m>. Take the <c>A</c> and 
+                        replace it by 0 and then using the formula above we get
+                        <me>19(0+22)\equiv 2\pmod{26}</me> so we replace cipher <c>A</c> with plain text <c>c</c>.  
+                        The <c>J</c> is replaced by 9 and 
+                        <me>19(9+22)\equiv 17\pmod{26}</me> therefore cipher <c>J</c> becomes plain <c>r</c>.  
+                        To use the other formula for deciphering we need <m>m^{-1}s\equiv 2\pmod{26}</m>.  Then 
+                        converting the cipher <c>I</c> to 8 we get 
+                        <me>19(8)+2\equiv 24\pmod{26}</me> which is plain <c>y</c> or with the next letter <c>N</c> 
+                        we get <me>19(13)+2\equiv 15\pmod{26}</me> which is <c>p</c>.  Try to decipher the remaining 
+                        characters in the message on your own.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>cryptology rocks</c></p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Encipher the message <q><c>a fine affine cipher</c></q> using the key  
+                        <m>m=17</m> and <m>s=12</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>MTSZC MTTSZ CUSHB CP</c></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Decipher the message <c>RXGTM CHUHJ CFWM</c> which was enciphered using the key 
+                        <m>m=3</m> and <m>s=7</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p><c>more than a shift</c></p>
+                </answer>
+            </exercise>
+
+
+            <p>
+                To <em>decrypt</em>, as opposed to just decipher, an affine cipher you can use the techniques we learned in 
+                <xref ref="chapter_basic_analysis" text="type-global"/> since they are a type of 
+                monoalphabetic substitution cipher.  However, we can also take advantage of the fact that it is an 
+                affine cipher.
+            </p>
+            <p>
+                <cd>
+                    <cline>DZIUI UDZYH ILUDO HHIBY GITZY LSYUU OQYDZ ODEYE IJJPY GLWTD </cline>
+                    <cline>IDEOU YBGIT ZYLYP EIDZO AYWKH BIBYH KLDZY SMJDI TJIYL OBPHK </cline>
+                    <cline>MLDYY BHKLD ZYUZI HDUIB GYIDI UOSKB KOJTZ OXYDI GEYGO BODDO </cline>
+                    <cline>GAIDE IDZXO UIGHL YCMYB GWOBO JWUIU XMDEY GOBOJ UKMUY DZODO </cline>
+                    <cline>BOJWU IUDKL YGKVY LDZYK LIQIB OJAYW UKDZO DEYGO BPYGI TZYLD </cline>
+                    <cline>ZYSYU UOQY</cline>
+                </cd>
+            </p>
+            <p>
+                Analyzing this we get that the most common characters are <c>Y</c>, <c>D</c>, <c>I</c>, <c>O</c> 
+                and <c>U</c>; the most common bigrams are <c>DZ</c>, <c>ZY</c>, <c>YG</c>, and <c>OB</c>; the 
+                most common trigrams are <c>DZY</c>, <c>OBO</c>, <c>LDZ</c>, and <c>DZO</c>.  Therefore it is 
+                reasonable to assume that <c>DZY</c> is <c>the</c>, <c>Y</c>  is <c>e</c>, and <c>D</c> 
+                is <c>t</c>.  So when this was enciphered we have to of had 
+                <md>
+                    <mrow>24\equiv m\cdot 4+s \pmod{26}</mrow>
+                    <mrow>3 \equiv m\cdot 19+s \pmod{26}</mrow>
+                </md>
+                Subtracting the second expression from the first we get
+                <md>
+                    <mrow>21\equiv m\cdot -15 \pmod{26}</mrow>
+                </md>
+                or
+                <md>
+                    <mrow>21\equiv m\cdot 11 \pmod{26}.</mrow>
+                </md>
+                Looking at the multiplication table modulo 26 we can see that <m>m=9</m> since 
+                <m>9\cdot 11\equiv 21\pmod{26}</m>.  Substituting <m>m=9</m> into the first equation above 
+                we get 
+                <md>
+                    <mrow>24\equiv 9\cdot 4+s \pmod{26}</mrow>
+                </md>
+                which simplifies to
+                <md>
+                    <mrow>24-10\equiv s \pmod{26}</mrow>
+                </md>
+                so that <m>s=14</m>.  We can then get the inverse keys <m>m^{-1}\equiv 3\pmod{26}</m> and 
+                <m>-m^{-1}s\equiv 10\pmod{26}</m>.  Using these with the affine cipher cell we get the 
+                deciphered message:
+                <cd>
+                    <cline>thisi sthef irsta ffine ciphe rmess ageth atwew illde crypt </cline>
+                    <cline>itwas encip hered witha keyof ninef orthe multi plier andfo </cline>
+                    <cline>urtee nfort heshi ftsin ceiti samon oalph abeti cweca natta </cline>
+                    <cline>ckitw ithba sicfr equen cyana lysis butwe canal souse thata </cline>
+                    <cline>nalys istor ecove rtheo rigin alkey sotha tweca ndeci phert </cline>
+                    <cline>hemes sage</cline>
+                </cd>
+                Or, in a more readable form
+            </p>
+            <blockquote>
+                <p>
+                    <q>
+                        this is the first affine cipher message that we will decrypt ...
+                    </q>
+                </p>
+            </blockquote>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to decrypt this message which was enciphered using an affine cipher.
+                        <!-- m=19, s=2 -->
+                        <cd>
+                            <cline>IPAGS WWANP YMFZC TAEWI PZFGC TZANW QWCNN YCMAY ECGGA CZAHV </cline>
+                            <cline>QWQIE PFACN ZFGWI KYPMC DCGZB YBACP HPIHH YPMIL ANCPI LADTI </cline>
+                            <cline>NWQHC QGEIN KFCHV AAPCP AXFCS GZYPM IPAWQ EYTAF CHCDN ACHQM </cline>
+                            <cline>IPASB GZCYN GCPHZ FAGIS PHITZ FADIO KYPMI TZFAF CDDHI INGIW </cline>
+                            <cline>AZYWA VATIN AZIDH WAZFC ZZFAG ANLCP ZGFCH CDGIN AZYNA HYFCH </cline>
+                            <cline>NYGAP TNIWW QGACZ CPHEC GKPIO KYPMI SZZFA CGFAG ITWQB YBAEF </cline>
+                            <cline>APYGS HHAPD QFACN HZFAO DCPMI TZFAV ADDYD IIKAH CZZFA ODIOK </cline>
+                            <cline>YZECG CUSCN ZANZI ZEADL AZFYG OISDH PIZVA CLYGY ZINCZ GIDCZ </cline>
+                            <cline>ACPFI SNCBC ZYAPZ ALYHA PZDQC PHBIG GYVDQ CPCDD PYMFZ GYZZY </cline>
+                            <cline>PMEYZ FCENQ TCOAY EAPZI SZYPZ IZFAF CDDCP HIBAP AHZFA HIINZ </cline>
+                            <cline>IWQCG ZIPYG FWAPZ YZECG GFAND IOKFI DWAGE FIGZI IHSBI PWQGZ </cline>
+                            <cline>AB</cline>
+                        </cd>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>
+                                First use frequency analysis to identify at least two of the letters in the message.
+                            </li>
+                            <li>
+                                With your two letters set up two equations like this:
+                                <me>CIPHER\equiv m(plain)+s\pmod{26}.</me>
+                            </li>
+                            <li>
+                                Subtract the second equation from the first and try to find <m>m</m>.
+                            </li>
+                            <li>
+                                Substitute your value for <m>m</m> into the first equation and use it to find 
+                                <m>s</m>.
+                            </li>
+                            <li>
+                                Now that you have the key you should be able to decipher the message as you had previously.
+                            </li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        The message begins with <q>One summer night, a few months after my ...</q>
+                    </p>
+                </answer>
+            </exercise>
+            <p> 
+                Sage N-Gram Cell:
+            </p>
+
+            <sage>
+                <input><xi:include href="../sage_code/ngram_analysis.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+            <p>
+                Affine Cipher Cell:
+            </p>
+            <p>
+                You can use this Sage Cell to encipher and decipher messages that used an <em>affine cipher</em>.  
+                To decipher you will need to use the second formula listed in 
+                <xref ref="definition_affine" text="type-global"/>.  Also, be sure you understand how to encipher and 
+                decipher by hand.
+            </p>
+            <sage>
+                <input><xi:include href="../sage_code/affine_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+        </subsection>
+
+
+    </section>

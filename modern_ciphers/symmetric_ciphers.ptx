@@ -1,0 +1,19 @@
+    <section xml:id="symetric_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Symmetric Ciphers</title>
+        <objectives>
+            <ul>
+                <li>
+                    DES and Lucifer
+                </li>
+                <li>
+                    AES
+                </li>
+                <li>
+                    PGP
+                </li>
+            </ul>
+        </objectives>
+        <todo>
+            Fill In Missing Material
+        </todo>
+    </section>

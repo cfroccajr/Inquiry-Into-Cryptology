@@ -28,72 +28,23 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="ModernCrypto">
-	<title> (*) The Modern Age </title>
-	<objectives>
-		<ul>
-			<li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>
-			<li> Asymmetric ciphers (Diffie-Hellman, RSA, El Gamal?, etc.) and the roll of number theory</li>
-			<li> Absolute secrecy</li>
-		</ul>
-	</objectives>
+<chapter xml:id="ModernCrypto" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title> (*) The Modern Age </title>
+    <objectives>
+        <ul>
+            <li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>
+            <li> Asymmetric ciphers (Diffie-Hellman, RSA, El Gamal?, etc.) and the roll of number theory</li>
+            <li> Absolute secrecy</li>
+        </ul>
+    </objectives>
+
+    <xi:include href="modern_ciphers/public_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/assymmetric_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/symmetric_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/quantum_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/lattice_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/elliptic_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/homomorphic_ciphers.ptx"/>
 
 
-	<section xml:id="d_h_section">
-		<title>Going Public</title>
-		<objectives>
-			<ul>
-				<li>
-					Biographies for Diffie and Hellman
-				</li>
-				<li>
-					Public Key Cryptography Overview
-				</li>
-			</ul>
-		</objectives>		
-		<todo>
-			Fill In Missing Material
-		</todo>
-	</section>	
-	<section xml:id="asymetric_section">
-		<title>Asymmetric Ciphers</title>
-		<objectives>
-			<ul>
-				<li>
-					Biographies for Rivest, Shamir, and Adelman
-				</li>
-				<li>
-					A Little More Math
-				</li>
-				<li>
-					RSA - Encryption
-				</li>
-				<li>
-					Diffie-Hellman Key Exchange
-				</li>
-			</ul>
-		</objectives>
-		<todo>
-			Fill In Missing Material
-		</todo>		
-	</section>	
-	<section xml:id="symetric_section">
-		<title>Symmetric Ciphers</title>
-		<objectives>
-			<ul>
-				<li>
-					DES and Lucifer
-				</li>
-				<li>
-					AES
-				</li>
-				<li>
-					PGP
-				</li>
-			</ul>
-		</objectives>		
-		<todo>
-			Fill In Missing Material
-		</todo>
-	</section>	
 </chapter>

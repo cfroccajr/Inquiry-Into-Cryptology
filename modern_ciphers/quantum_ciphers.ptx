@@ -1,0 +1,16 @@
+    <section xml:id="quantum_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>(*)Quantum Ciphers</title>
+        <objectives>
+            <ul>
+                <li>
+                    basic definitions
+                </li>
+                <li>
+                    mini-example
+                </li>
+            </ul>
+        </objectives>
+        <todo>
+            Fill In Missing Material
+        </todo>
+    </section>

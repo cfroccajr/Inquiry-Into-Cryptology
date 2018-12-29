@@ -1,0 +1,16 @@
+    <section xml:id="d_h_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Going Public</title>
+        <objectives>
+            <ul>
+                <li>
+                    Biographies for Diffie and Hellman
+                </li>
+                <li>
+                    Public Key Cryptography Overview
+                </li>
+            </ul>
+        </objectives>
+        <todo>
+            Fill In Missing Material
+        </todo>
+    </section>

@@ -29,85 +29,27 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="early_20_century">
-	<title> (*) An Industrial Revolution </title>
-	<objectives>
-		<ul>
-			<li> Telegraph Codes and Ciphers?</li> 
-				<!-- 
-					look up chris christention enciphered codes wednesday at 10 look for 
-					article in feb. Math Horizons JN25? this was attacked using messages in 
-					depth and differences?	
-				-->
-			<li> Enigma</li>
-			<li> Lorenz?</li>
-			<li> Purple?</li>
-			<li> Also included Stinson episode, use Friedman article</li>
-			<li> Turing Papers?</li><!-- see talk on wednesday at 9:30 on turing -->
-		</ul>
-	</objectives>
-	<section xml:id="wwi_section">
-		<title>World War I</title>
-		<objectives>
-			<ul>
-				<li>
-					ADFGVX
-				</li>
-				<li>
-					George Zimmermann
-				</li>
-				<li>
-					American Cipher Chamber
-				</li>
-			</ul>
-		</objectives>
-		<todo>
-			Fill In Missing Material
-		</todo>
-	</section>
-	<section xml:id="between_wars_section">
-		<title>Between the Wars</title>
-		<objectives>
-			<ul>
-				<li>
-					Vernam One-Time Pad and Perfect Secrecy
-					<!-- Frank Miller: Inventor of the One-Time Pad, Cryptologia 7/12/2011)
-							Vernam Patent US1310719 A
-					-->
-				</li>
-				<li>
-					Henry L. Stinson, <q>Gentleman's Mail</q>
-				</li>
-				<li>
-					Rise of Enigma
-				</li>
-				<li>
-					Polish Cipher Bureau 
-				</li>
-			</ul>
-		</objectives>
-		<todo>
-			Fill In Missing Material
-		</todo>
-	</section>
-	<section xml:id="wwii_section">
-		<title>World War II</title>
-		<objectives>
-			<ul>
-				<li>
-					Bletchley Park and Enigma
-				</li>
-				<li>
-					Lorenz Cipher, Colossus, Electronic Computing
-				</li>
-				<li>
-					Japanese Ciphers
-				</li>
-			</ul>
-		</objectives>		
-		<todo>
-			Fill In Missing Material
-		</todo>
-	</section>
+<chapter xml:id="early_20_century" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title> (*) An Industrial Revolution </title>
+    <objectives>
+        <ul>
+            <li> Telegraph Codes and Ciphers?</li>
+                <!-- 
+                    look up chris christention enciphered codes wednesday at 10 look for 
+                    article in feb. Math Horizons JN25? this was attacked using messages in 
+                    depth and differences?  
+                -->
+            <li> Enigma</li>
+            <li> Lorenz?</li>
+            <li> Purple?</li>
+            <li> Also included Stinson episode, use Friedman article</li>
+            <li> Turing Papers?</li><!-- see talk on wednesday at 9:30 on turing -->
+        </ul>
+    </objectives>
+
+
+    <xi:include href="mechanical_ciphers/wwi_ciphers.ptx"/>
+    <xi:include href="mechanical_ciphers/mech_ciphers.ptx"/>
+    <xi:include href="mechanical_ciphers/wwii_ciphers.ptx"/>
 
 </chapter>
