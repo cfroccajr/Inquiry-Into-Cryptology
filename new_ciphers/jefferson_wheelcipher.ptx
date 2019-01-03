@@ -25,7 +25,6 @@
             <title>Thomas Jefferson and Vigen&#x00E8;re's Cipher</title>
             <p>
                 Among Thomas Jefferson's papers in the library of congress there are atleast 63 distinct items which discuss ciphers.  In one of these, a letter from Jefferson to Meriwether Lewis (<url href="http://hdl.loc.gov/loc.mss/mtj.mtjbib012330">Thomas Jefferson to Meriwether Lewis, April 20, 1803</url>), Jefferson suggests that they use Vigen&#x00E8;re's cipher for their correspondence.
-                <xref ref="appendix_figure_vigenere_new" text="type-global" />
             </p>
 
             <xi:include href="../quote_code/jefferson_vigenere.ptx" />
@@ -112,7 +111,7 @@
                 </ul>
             </p>
             <p>
-                Note that while his cipher was not used while Jefferson was in office a variation of it was employed from about 1920 to 1945 in the form of the M-94 Cipher Cylinder.
+                While his cipher was not used while Jefferson was in office a variation of it was employed from about 1920 to 1945 in the form of the M-94 Cipher Cylinder.
             </p>
             <exercise>
                 <statement>
@@ -121,5 +120,13 @@
                     </p>
                 </statement>
             </exercise>
+            <figure>
+            <caption>Jefferson's Cipher Wheel</caption>
+                <interactive xml:id="jefferson_wheel_interact" platform="sage" width="100%" aspect="1:1.5">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/jefferson_wheels.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
         </subsection>
     </section>

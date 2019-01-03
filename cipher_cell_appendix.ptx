@@ -38,71 +38,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <p>Substitution Cipher Cell</p>
         <sage xml:id="sage_sub_cell">
             <input>
-
-<!-- Python/Sage Function -->
-import textwrap
-@interact
-def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=50,height=1),
-            c = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher', type=str,width=50,height=1),
-            shift=[0..25],
-            mode=selector(['encipher','decipher'], buttons=True),
-            spaces = selector(['yes','no'], buttons=True),
-            m=input_box('sage', label="Message", height=3, width=50, type=str)):
-    P = str(p.encode('ascii','replace')).upper()
-    C = str(c.encode('ascii','replace')).upper()
-    C = C[shift:]+C[:shift]
-    Message = str(m.encode('ascii','replace')).upper()
-    print "\nYour Plain alphabet is:  ", str(P).lower()
-    print "Your Cipher alphabet is: ", str(C)
-    if len(C)!=len(P):
-        print "Key lengths do not match."
-    else:
-        if mode == 'encipher':
-            inText = P
-            outText = C
-        else:
-            inText = C.lower()
-            outText = P.lower()
-            Message = Message.lower()
-        output = ""
-        for char in Message:
-            try:
-                position = inText.index(char)
-                output += outText[position]
-            except:
-                if spaces=='yes': output += char
-                else: pass
-        print "\nHere is your output:\n"
-        if spaces == 'yes':
-            print textwrap.fill(output, 50)
-        else:
-            for i in xrange(0,len(output),5):
-                print output[i:i+5],
-                if (i+5)%50 == 0: print "\n"
+                <xi:include href="sage_code/subst_cipher.sage" parse="text" />
             </input>
             <output></output>
         </sage>
 
-
         <p>Affine Cipher Cell</p>
         <sage xml:id="sage_affine_cell">
             <input>
-
-<!-- Python/Sage Function -->
-@interact
-def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=str),m=[1..25], s=[0..25]):
-    S = AffineCryptosystem(AlphabeticStrings())
-    clean_text = S.encoding(str(me.encode('ascii','replace')))
-    try:
-        e = S(m,s)
-        cipher_text = e(clean_text)
-        print "Your affine enciphering text is\n"
-        for i in xrange(0,len(cipher_text),5):
-            print cipher_text[i:i+5],
-            if (i+5)%50 == 0: print "\n"
-    except:
-        print "error, likely in your key"
-        cipher_text = clean_text
+                <xi:include href="sage_code/affine_cipher.sage" parse="text" />
             </input>
             <output></output>
         </sage>
@@ -118,153 +62,33 @@ def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=
         <p>Vigenere Cipher Cell</p>
         <sage xml:id="sage_vigenere_cell">
             <input>
-
-<!-- Python/Sage Function -->
-import re
-import textwrap
-@interact
-def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
-        key=input_box('sage', label="Enter your key", height=1, width=20, type=str),
-        mode = selector(['encipher','decipher'], buttons=True),
-        spaces = selector(['yes','no'], buttons=True)):
-    plain_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    clean_message = str(m.encode('ascii','replace')).upper()
-    if spaces == 'no':
-        clean_message = re.sub('[^A-Z]','',clean_message)
-    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace')).upper())
-    key_list = [plain_alpha.index(ch) for ch in cipher_key]
-    if mode == 'decipher':
-        key_list = [-1*k for k in key_list] 
-    cipher_text = ""
-    key_counter = 0
-    for ch in clean_message:
-        try:
-            tmp_pos = plain_alpha.index(ch)
-            cipher_pos = (tmp_pos+key_list[key_counter])%26
-            cipher_text += plain_alpha[cipher_pos]
-            key_counter = (key_counter+1)%len(key_list)
-        except:
-            if spaces == 'yes':
-                cipher_text += ch
-    print "\nHere is your output:\n"
-    if spaces == 'yes':
-        print textwrap.fill(cipher_text, 42)
-    else:
-        for i in xrange(0,len(cipher_text),6):
-            print cipher_text[i:i+6],
-            if (i+6)%42 == 0: print "\n"
+                <xi:include href="sage_code/vigenere_cipher.sage" parse="text" />
             </input>
             <output></output>
         </sage>
-
 
         <p>Falconer Cipher Cell</p>
         <sage xml:id="sage_falconer_cell">
             <input>
-
-<!-- Python/Sage Function -->
-import textwrap
-import re
-@interact
-def falconer(message=input_box("The quick brown fox jumps over the lazy sleeping dog.",
-                                  label="Message:", type=str, width=50, height=3),
-             keys=input_grid(1,6,default=["CBA", "CAB", "ACB", "BCA","BAC",""],
-                    label="Keys:", to_value=list, type=str),
-            chars=[3..5]):
-    text = re.sub('[^A-Z]','',str(message.encode('ascii','replace')).upper())
-    columns = "ABCDE"
-    key = keys[0]
-    while "" in key: key.remove("")
-    message_table = [["" for x in range(chars)] for y in range(len(key))]
-    for i in xrange(0,len(text),chars):
-        row = (i/chars)%len(key)
-        for j in range(chars):
-            try:
-                col = columns.index(key[row][j])
-            except:
-                col = chars-1 #pass
-            try:
-                message_table[row][col] += str(text[i+j])
-            except:
-                pass
-    out_message = ""
-    print "Chracters in text: ",len(text)
-    print "Cipher Table:"
-    for k in range(len(key)):
-        print "\t",str(key[k][0:chars]),":\t","\t".join(message_table[k])
-        for i in range(chars):
-            out_message += str(message_table[k][i])+" "
-    print "Completed Message:"
-    #for i in xrange(0,len(out_message),50):
-    #    print "\t",out_message[i:min(i+50,len(out_message))].strip()
-    print textwrap.fill(out_message, 50)
+                <xi:include href="sage_code/falconer_cipher.sage" parse="text" />
             </input>
             <output></output>
         </sage>
 
+        <p>Jefferson's Wheel Cipher</p>
+        <sage xml:id="sage_jefferson_cell">
+            <input>
+                <xi:include href="sage_code/jefferson_wheels.sage" parse="text" />
+            </input>
+            <output></output>
+        </sage>
 
         <p>Hill Cipher Cell</p>
         <sage xml:id="sage_hill_cell">
             <input>
-
-<!-- Python/Sage Function -->
-@interact
-def _(m=input_box('sage', label="Enter your message", height=3, 
-    width=50, type=str),
-    key=input_grid(2,2,default=[[7,12],[3,3]],type=int,width=2)):
-    S = HillCryptosystem(AlphabeticStrings(),2)
-    M = MatrixSpace(IntegerModRing(26),2,2)
-    e = S(M(key).transpose())
-    clean_text = S.encoding(str(m.encode('ascii','replace')))
-    if len(clean_text)%2 == 1:
-        clean_text = S.encoding(str(m)+"Z")
-    cipher_text = e(clean_text)
-    print str("Your Hill enciphering text is\n")
-    for i in xrange(0,len(cipher_text),5):
-        print cipher_text[i:i+5],
-        if (i+5)%50 == 0: print "\n"
+                <xi:include href="sage_code/hills_cipher.sage" parse="text" />
             </input>
             <output></output>
         </sage>
 
 </appendix>
-
-
-<!-- Python/Sage Function -->
-<!--
-@interact
-def _(k = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher Alphabet:', type=str,width=50,height=1),
-            mode=selector(['encipher','decipher'], buttons=True),
-            m=input_box('sage', label="Message", height=3, width=50, type=str)):
-    S = SubstitutionCryptosystem(AlphabeticStrings())
-    K = S.encoding(str(k.encode('ascii','replace')))
-    print "\nYour Plain alphabet is: abcdefghijklmnopqrstuvwxyz"
-    print "Your Cipher alphabet is:", str(K)
-    if len(str(K))!=26:
-        print "\nYOUR CIPHER KEY IS THE WRONG LENGTH!!!\n"
-    else:
-        clean_text = S.encoding(str(m.encode('ascii','replace')))
-        if mode == 'encipher':
-            e = S(K)
-            out_text = str(e(clean_text)).upper()
-        else:
-            try:
-                L = S.inverse_key(K)
-            except:
-                print "\n Could not generate valid inverse key.\n Using enciphering key instead. \n"
-                L = K
-            e = S(L)
-            out_text = str(e(clean_text)).lower()
-        print "\nYour substitution output text is:\n"
-        for i in xrange(0,len(out_text),5):
-            print out_text[i:i+5],
-            if (i+5)%50 == 0: print "\n"
-            </input>
-            <output></output>
-        </sage>
-
-        <p>Substitution Cipher Alternate</p>
-        <sage xml:id="sage_sub_alt">
-            <input>
--->
-

@@ -1,13 +1,13 @@
 # wheels:
-cipher_alphabet0 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet1 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet2 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet3 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet4 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet8 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet7 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet6 = "acegklnprtvz&xysomqihfdb"
-cipher_alphabet5 = "acegklnprtvz&xysomqihfdb"
+cipher_alphabet0 = "abcdefghijkl&mnopqrstuvwxyz"
+cipher_alphabet1 = "qwertyuiopasdfghjklzxcvbnm&"
+cipher_alphabet2 = "qazxswe&dcvfrtgbnhyujmkliop"
+cipher_alphabet3 = "alskdjhfgqwpoeiuyrt&zxmnbvc"
+cipher_alphabet4 = "&alksjhgfdqpoiuytrewmnbvcxz"
+cipher_alphabet8 = "zxcvbnmlkjhgfdsa&qwertyuiop"
+cipher_alphabet7 = "qazwsxedcrfvtgbyhn&ujmikolp"
+cipher_alphabet6 = "qwertyuiopmnbvcxz&laksjdhfg"
+cipher_alphabet5 = "zyxwvutsrqponmlkjihgfedcba&"
 
 
 # cylinder:
@@ -40,16 +40,16 @@ def _(
 	):
     cylinder_settings=[wheel0,wheel1,wheel2,wheel3,wheel4,wheel5,wheel6,wheel7,wheel8]
     text_plot_sum = text("",(0,0))
-    column_index = 0
+    column_index = 3
     for alphabet,character in zip(cylinder,cylinder_settings):
     	temp_wheel = alphabet[alphabet.index(character):]+alphabet[:alphabet.index(character)]
     	row_index=0
     	for i in range(-3,4):
-            text_plot_sum += text(str(column_index),(column_index,1.5),fontsize=16,color="blue")
+            text_plot_sum += text(str(column_index-3),(column_index,1.5),fontsize=16,color="blue")
             if temp_wheel[i]==character:
     	        text_plot_sum += text(temp_wheel[i].upper(),(column_index,-row_index),fontsize=16,color="red",fontweight="heavy")
             else:
                 text_plot_sum += text(temp_wheel[i],(column_index,-row_index),fontsize=16,color="green")
     	    row_index+=1
     	column_index+=1
-    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[3,5])
+    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[4,5])
