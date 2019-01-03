@@ -72,6 +72,23 @@
                         PHXQYG WYMCPH &amp;CWSSG SGUVU
                     </pre>
                 </answer>
+                <solution>
+                    <p>
+                        Start by writing out the plaintext with the key text above it, just as Jefferson did:
+                        <pre>
+                            antipod esan tipodes anti podesa ...
+                            pursues some greatly good intent ...
+
+                        </pre>
+                        Next, using the key letter to tell you the column and the plaintext to tell you the row, look up the cipher letters inside the table:
+                        <pre>
+
+                            antipod esan tipodes anti podesa ...
+                            pursues some greatly good intent ...
+                            QHKAJTW XG ...
+                        </pre>
+                    </p>
+                </solution>
             </exercise>
         </subsection>
         <subsection xml:id="jefferson_wheel">
@@ -79,13 +96,24 @@
             <p>
                 Here is a brief description of Thomas Jefferson's
                 <url href="https://www.monticello.org/site/research-and-collections/wheel-cipher">
-                wheel cipher</url>, and here is his description <url href="http://hdl.loc.gov/loc.mss/mtj.mtjbib025756"> Jefferson's Wheel Cipher.</url>
-
-                Compare to M-94 Cipher Cylinder
+                wheel cipher</url>, and here is his description <url href="http://hdl.loc.gov/loc.mss/mtj.mtjbib025756"> Jefferson's Wheel Cipher,</url> that we examine below.
             </p>
 
             <xi:include href="../quote_code/jefferson_wheel.ptx" />
-
+            <p>
+                <alert>Comprehension Check</alert>
+            </p>
+            <p>
+                <ul>
+                    <li>If the cylinder we start with is 8 inches long, how many discs do we get following Jefferson's directions?</li>
+                    <li>Using factorials (see <xref ref="definition_factorial"/>), in how many ways could you rearrange the number of discs you found in the previous problem?</li>
+                    <li>In his description Jefferson says that we should write the alphabet around the edge of each disk <q>not in their established order, but jumbled &amp; without order so that no two shall be alike</q>, how many ways can we rearrange the letters of the alphabet so that they are not in their usual order?</li>
+                    <li>Jefferson was unfortunately wrong when he said <q>As the others will be jumbled &amp; have no meaning he cannot mistake the true one intended.</q>  Why did he believe this was the case, what did he mean by this?  Can you construct a way to arrange letters on a disk so that you could end up with more than one message?</li>
+                </ul>
+            </p>
+            <p>
+                Note that while his cipher was not used while Jefferson was in office a variation of it was employed from about 1920 to 1945 in the form of the M-94 Cipher Cylinder.
+            </p>
             <exercise>
                 <statement>
                     <p>
