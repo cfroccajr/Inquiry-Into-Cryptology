@@ -168,10 +168,10 @@
                     </p>
                 </statement>
             </exercise>
-            <conclusion>
-                <p>
-                    To see how we can pull these ideas together take a look at <xref ref="sample_analysis_appendix" />.
-                </p>
-            </conclusion>
         </subsection>
+        <conclusion>
+            <p>
+                To see how we can pull these ideas together take a look at <xref ref="sample_analysis_appendix" />.
+            </p>
+        </conclusion>
     </section>

@@ -293,15 +293,15 @@
                                 <cell>5</cell><cell>BAC</cell><cell>D </cell><cell>E </cell><cell>A </cell>
                             </row>
                         </tabular>
-                        <p>
-                            Now read the message out character by character according to the combinations at the left:
-                        </p>
-                        <p>nowimallturnedaround</p>
-                        <p>
-                            Finally, we get the original message.
-                        </p>
-                        <p>Now I'm all turned around.</p>
                     </table>
+                    <p>
+                        Now read the message out character by character according to the combinations at the left:
+                    </p>
+                    <p>nowimallturnedaround</p>
+                    <p>
+                        Finally, we get the original message.
+                    </p>
+                    <p>Now I'm all turned around.</p>
                 </solution>
             </exercise>
             <exercise>

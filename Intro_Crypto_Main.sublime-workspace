@@ -776,7 +776,7 @@
 			],
 			[
 				"Main PTX Build",
-				"to HTML Folder"
+				""
 			]
 		],
 		[
@@ -916,7 +916,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Open the .pdf file"
+				""
 			]
 		],
 		[
@@ -1504,16 +1504,16 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "Package Control: ",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"Package Control: ",
-				"Package Control: List Unmanaged Packages"
+				"Package Control: List Packages"
 			],
 			[
 				"Package Control:",
@@ -1559,10 +1559,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/GIT/Inquiry-Into-Cryptology/src"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers"
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers/falconer_transcipher.ptx",
+		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/orbits.sage",
 		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
@@ -1598,7 +1606,6 @@
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/table_code/mono_key_table.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
@@ -1643,7 +1650,6 @@
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx",
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/README.md",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/guesstimates.tex",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/coding_student_blocks.py",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Games Unit 2 Exam.tex",
@@ -1685,12 +1691,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring Chapter 2-3 Test.tex",
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/SphereDistance.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall History of Algebra Exam.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT 113/2015 Fall Geometry Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/Text Review/Text Review Rubric and Report.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Practice Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall 207 Exam 2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/Chapter 4 Test.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall History of Algebra Exam.tex"
 	],
 	"find":
 	{

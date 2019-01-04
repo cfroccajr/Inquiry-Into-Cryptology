@@ -42,11 +42,9 @@
             </p>
             <exercise>
                 <statement>
-                    <blockquote>
                         <p>
                             Below is the rest of the quote from Thomas Blacklock that Jefferson started enciphering.  Try to complete the enciphering.
                         </p>
-                        <p></p>
                         <poem>
                             <stanza>
                                 <line>The man, whose mind on virtue bent,</line>
@@ -58,7 +56,6 @@
                              </stanza>
                         </poem>
                         <!-- The man, whose mind on virtue bent,Pursues some greatly good intent,With undiverted aim,Serene, beholds the angry crowd;Nor can their clamors, fierce and loud His stubborn honor tame. -->
-                    </blockquote>
                 </statement>
                 <answer>
                     <pre>
@@ -74,19 +71,42 @@
                 <solution>
                     <p>
                         Start by writing out the plaintext with the key text above it, just as Jefferson did:
-                        <pre>
-                            antipod esan tipodes anti podesa ...
-                            pursues some greatly good intent ...
-
-                        </pre>
-                        Next, using the key letter to tell you the column and the plaintext to tell you the row, look up the cipher letters inside the table:
-                        <pre>
-
-                            antipod esan tipodes anti podesa ...
-                            pursues some greatly good intent ...
-                            QHKAJTW XG ...
-                        </pre>
                     </p>
+                    <pre>
+                        antipod esan tipodes anti podesa ...
+                        pursues some greatly good intent ...
+
+                    </pre>
+                    <p>
+                        Next, using the key letter to tell you the column and the plaintext to tell you the row, look up the cipher letters inside the table:
+                    </p>
+                    <pre>
+                        antipod esan tipodes anti podesa ...
+                        pursues some greatly good intent ...
+                        QHKAJTW XG ...
+                    </pre>
+                </solution>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Use the key word <c>happy</c> to enchipher Jefferson's birthday of April 13, 1743.
+                    </p>
+                </statement>
+                <answer>
+                    <pre>
+                        IQGYJ IDQWB K
+                    </pre>
+                </answer>
+                <solution>
+                    <p>
+                        As before write out the message with the key lined up above it.  Then you can look up the key letter along the top of Jefferson's table and the message letters or numbers along the sides.
+                    </p>
+                    <pre>
+                        happy happy h
+                        april 13174 3
+                        IQGYJ IDQWB K
+                    </pre>
                 </solution>
             </exercise>
         </subsection>
@@ -116,9 +136,26 @@
             <exercise>
                 <statement>
                     <p>
-                        Insert Jefferson Exercise Here!!!
+                        Use the Jefferson Wheel simulator below to encipher the message <q>Jefferson</q>.
                     </p>
                 </statement>
+                <answer>
+                    <p>
+                        Because after lining up the letters you want you can choose to write down any other row, there are multiple different asnwers.  One posibility is: <c>G&amp;DDYULMC</c>
+                    </p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Decipher the message <c>DINK&amp;HCQT</c> below using the simulator.
+                    </p>
+                </statement>
+                <answer>
+                    <pre>
+                        attack now
+                    </pre>
+                </answer>
             </exercise>
             <figure>
             <caption>Jefferson's Cipher Wheel</caption>

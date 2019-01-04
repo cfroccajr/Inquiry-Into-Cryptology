@@ -12,6 +12,20 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <figure>
+                    <caption><q>You can put wings on a pig, ...</q></caption>
+                    <image>
+                        <latex-image>
+                            \begin{tikzpicture}
+                                \draw (0,-0.5) \ppy\ppo\ppu\ppc\ppa\ppn\ppp\ppu\ppt\ppw\ppi\ppn\ppg\pps\ppo\ppn\ppa\ppp\ppi\ppg;
+                                \draw (0,-1) \ppb\ppu\ppt\ppy\ppo\ppu\ppd\ppo\ppn\ppt\ppm\ppa\ppk\ppe\ppi\ppt\ppa\ppn\ppe\ppa;
+                                \draw (0,-1.5) \ppg\ppl\ppe\ppw\ppi\ppl\ppl\ppi\ppa\ppm\ppj\ppc\ppl\ppi\ppn\ppt\ppo\ppn;
+                            \end{tikzpicture}
+                        </latex-image>
+                    </image>
+                </figure>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -30,13 +44,16 @@
                     </image>
                 </figure>
             </statement>
+            <answer>
+                <pre>
+                    That's All Folks
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    Encipher the following message with Alberti's polyalphabetic cipher, 
-                    <xref ref="appendix_figure_alberti" text="type-global"/>, use and index letter of <em>s</em> and key 
-                    letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
+                    Encipher the following message with Alberti's polyalphabetic cipher (use the simulator below); use and index letter of <em>s</em> and key letters <em>C</em>, <em>G</em>, and <em>X</em> (switch key letter after every other word).
                 </p>
                 <blockquote>
                     <p>
@@ -46,12 +63,22 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    Cdmb sxb G&amp;h tmm Xxkpg&amp; ke Clm nnhff
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    Start by setting the index to <em>s</em> and the key letter to <em>C</em>.  Then you can start translating the plaintext to ciphertext.  Remember that you need to write the key letter down each time you change it, the plaintext for Alberti are the uppercase letters around the outside of his formula, and sometimes you need to leave letters out or make substitutions since not all the letters are available.  In the end you should have something like: <c>Cdmb sxb G&amp;h tmm Xxkpg&amp; ke Clm nnhff</c>.
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
                     Encipher the following message using the modern version of the Vigenere Square 
-                    <xref ref="appendix_figure_vigenere_new" text="type-global"/> and a keyword of <em>FRANCE</em>.
+                    <xref ref="appendix_figure_vigenere_new" text="type-global"/> (you can check your final answer using the simulator below, but you should be able to do this by hand) and a keyword of <em>FRANCE</em>.
                 </p>
                 <blockquote>
                     <p>
@@ -61,20 +88,50 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    MFPRKW FXOBFF WVAXHE XKBHVM YZSNDE IJUCRI W
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    Write down the plaintext with the key above it and then, using the key letter to indicate the row and plain letter the column, look up the ciphertext in the table.
+                </p>
+                <pre>
+                    france france france france france france f
+                    hopeis agoodb reakfa stbuti tisaba dsuppe r
+                    MFPRKW FXOBFF WVAXHE XKBHVM YZSNDE IJUCRI W
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    Use the modern Vigenere Square 
+                    Use the modern Vigenere Square
                     <xref ref="appendix_figure_vigenere_new" text="type-global"/>
-                    to decipher the following message which was enciphered using a key word of <em>STATE</em>.
+                    to decipher the following message which was enciphered using a key word of <em>STATE</em>. (Again, you can check your final answer using the simulator below, but you should be able to do this by hand.)
                 </p>
                     <pre>
-                        LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS 
-                        XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY 
+                        LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS
+                        XIRXT SKAMM GGHTV VPOKO SGDEI SKNBR YYRHQ XTIEY
                         JXCHP AGPHA WEL
                     </pre>
             </statement>
+            <answer>
+                <p>
+                    <q>There are no secrets to success, it is the result of prparation, hardwork, and learning from failure.</q> - Colin Powell
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Write out the ciphertext with the key word written above it as before.  Now look use each key letter to tell which row to look in and slide your finger along to the cipher letter; the column header is your plaintext letter.
+                </p>
+                <pre>
+                    state state state state state state state state ...
+                    LAEKI SKEGS KXCKI LLTHW MVCXW KBTBW LAEKI KNLMS ...
+                    there are ...
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -91,6 +148,21 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    ERGFO OUMIO FTLXF CSPHN OQATA M ...
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    write out the message with the key above, like Vigenere's polyalphabetic cipher, but now the key is essentially the message its self.  Above the first letter is our key letter, then after that you write down the message.  Thne lok up the key letter on the side of the table and find the plain letter in the corresponding row.  This last step is a little tricky because the letters are in pairs, so if the key letter is S and we need a plain t the cipher letter will be F.
+                </p>
+                <pre>
+                    FOBST ACLES ARETH OSEFR IGHTF U ...
+                    obsta clesa retho sefri ghtfu l ...
+                    ERGFO OUMIO FTLXF CSPHN OQATA M ...
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -102,11 +174,26 @@
                 <blockquote>
                     <p>
                         <q>
-                            Success is not final, failure is not fatal: it is the courage to continue that counts. 
+                            Success is not final, failure is not fatal: it is the courage to continue that counts.
                         </q> - Winston Churchill
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    KMWEG WKAAF BHYNV NLQFI TFLVM AFBHY FTTLT BBALA LGQIL ...
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    As before write out the message, place the key letter above the first plaintext letter, and write out the rest of your message after that as a key.  Then, using the modern Vigenere table, the key letters in the top row tell you which row to look in and the plain letters gives you the column.
+                </p>
+                <pre>
+                    SSUCC ESSIS NOTFI NALFA ILURE ISNOT FATAL ITIST HECOU ...
+                    succe ssisn otfin alfai lurei snotf atali tisth ecour ...
+                    KMWEG WKAAF BHYNV NLQFI TFLVM AFBHY FTTLT BBALA LGQIL ...
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -120,93 +207,107 @@
                     </pre>
             </statement>
         </exercise>
-<!--            <exercise>
-                <statement>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following message using Falconers Columnar Transposition with 
+                    a key of <em>{ACB,BCA,CAB,ABC}</em>.
+                    <xref ref="appendix_trans_table" text="type-global"/>
+                </p>
+                <blockquote>
                     <p>
-                        Jefferson practice enciphering
+                        <q>
+                            Were I not a king, I would be a university man.
+                        </q> -  King James I
                     </p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Encipher the following message using Falconers Columnar Transposition with 
+                    a key of <em>{CBA,ABC,BCA,CAB,ACB,BAC}</em>.
+                    <xref ref="appendix_trans_table" text="type-global"/>
+                </p>
+                <blockquote>
                     <p>
-                        Jefferson practice enciphering
+                        <q>
+                            I have loved justice and hated iniquity: therefore I die in exile. 
+                        </q> -  Pope Gregory VII
                     </p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p>
-                        Jefferson practice deciphering
-                    </p>
-                </statement>
-            </exercise> -->
-            <exercise>
-                <statement>
-                    <p>
-                        Encipher the following message using Falconers Columnar Transposition with 
-                        a key of <em>{ACB,BCA,CAB,ABC}</em>.
-                        <xref ref="appendix_trans_table" text="type-global"/>
-                    </p>
-                    <blockquote>
-                        <p>
-                            <q>
-                                Were I not a king, I would be a university man.
-                            </q> -  King James I
-                        </p>
-                    </blockquote>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p>
-                        Encipher the following message using Falconers Columnar Transposition with 
-                        a key of <em>{CBA,ABC,BCA,CAB,ACB,BAC}</em>.
-                        <xref ref="appendix_trans_table" text="type-global"/>
-                    </p>
-                    <blockquote>
-                        <p>
-                            <q>
-                                I have loved justice and hated iniquity: therefore I die in exile. 
-                            </q> -  Pope Gregory VII
-                        </p>
-                    </blockquote>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p>
-                        Decipher the following message using Falconers Columnar Transposition with 
-                        a key of <em>{ABC,BCA,BCA,ACB}</em>.
-                        <xref ref="appendix_trans_table" text="type-global"/>
-                    </p>
-                        <pre>
-                            ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI  
-                            ES IHNLH TLBEK EOTWS HDUSE
-                        </pre>
-                </statement>
-            </exercise>
-            <conclusion>
-                <p><alert>Substitution Cipher Cell:</alert></p>
+                </blockquote>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decipher the following message using Falconers Columnar Transposition with 
+                    a key of <em>{ABC,BCA,BCA,ACB}</em>.
+                    <xref ref="appendix_trans_table" text="type-global"/>
+                </p>
+                    <pre>
+                        ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI  
+                        ES IHNLH TLBEK EOTWS HDUSE
+                    </pre>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Jefferson practice enciphering
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Jefferson practice enciphering
+                </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Jefferson practice deciphering
+                </p>
+            </statement>
+        </exercise>
+        <conclusion>
+            <p><alert>Substitution Cipher Cell:</alert></p>
 
-                <sage>
-                    <input><xi:include href="../sage_code/subst_cipher.sage" parse="text"/></input>
-                    <output></output>
-                </sage>
+            <sage>
+                <input><xi:include href="../sage_code/subst_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
 
-                <p><em><alert>Vigenere Cipher Cell:</alert></em></p>
+            <p><em><alert>Alberti's Cipher Formula:</alert></em></p>
 
-                <sage>
-                    <input><xi:include href="../sage_code/vigenere_cipher.sage" parse="text"/></input>
-                    <output></output>
-                </sage>
+            <sage>
+                <input><xi:include href="../sage_code/alberti_disc.sage" parse="text"/></input>
+                <output></output>
+            </sage>
 
-                <p><alert>Falconer's Tabular Cipher:</alert></p>
+            <p><em><alert>Vigenere Cipher Cell:</alert></em></p>
 
-                <sage>
-                    <input><xi:include href="../sage_code/falconer_cipher.sage" parse="text"/></input>
-                    <output></output>
-                </sage>
+            <sage>
+                <input><xi:include href="../sage_code/vigenere_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
 
-            </conclusion>
+            <p><alert>Falconer's Tabular Cipher:</alert></p>
+
+            <sage>
+                <input><xi:include href="../sage_code/falconer_cipher.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+            <p><alert>Jefferson's Wheel Cipher:</alert></p>
+
+            <sage>
+                <input><xi:include href="../sage_code/jefferson_wheels.sage" parse="text"/></input>
+                <output></output>
+            </sage>
+
+        </conclusion>
     </exercises>

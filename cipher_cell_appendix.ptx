@@ -36,7 +36,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
         <p>Substitution Cipher Cell</p>
-        <sage xml:id="sage_sub_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/subst_cipher.sage" parse="text" />
             </input>
@@ -44,7 +44,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Affine Cipher Cell</p>
-        <sage xml:id="sage_affine_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/affine_cipher.sage" parse="text" />
             </input>
@@ -52,7 +52,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Alberti Cipher Formula</p>
-        <sage xml:id="sage_alberti_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/alberti_disc.sage" parse="text" />
             </input>
@@ -60,7 +60,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Vigenere Cipher Cell</p>
-        <sage xml:id="sage_vigenere_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/vigenere_cipher.sage" parse="text" />
             </input>
@@ -68,7 +68,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Falconer Cipher Cell</p>
-        <sage xml:id="sage_falconer_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/falconer_cipher.sage" parse="text" />
             </input>
@@ -76,7 +76,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Jefferson's Wheel Cipher</p>
-        <sage xml:id="sage_jefferson_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/jefferson_wheels.sage" parse="text" />
             </input>
@@ -84,7 +84,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>Hill Cipher Cell</p>
-        <sage xml:id="sage_hill_cell">
+        <sage >
             <input>
                 <xi:include href="sage_code/hills_cipher.sage" parse="text" />
             </input>

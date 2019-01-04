@@ -33,7 +33,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <title>Sage Cell Analysis Utilities</title>
 
         <p>Word Count Cell</p>
-        <sage xml:id="sage_word_cell">
+        <sage>
             <input>
                 <xi:include href="sage_code/word_analysis.sage" parse="text" />
             </input>
@@ -41,7 +41,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
         <p>String Count Cell</p>
-        <sage xml:id="sage_string_cell">
+        <sage>
             <input>
                 <xi:include href="sage_code/string_analysis.sage" parse="text" />
             </input>
@@ -50,7 +50,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
             <p>N-Gram Analysis Cell</p>
-            <sage xml:id="sage_ngram_cell">
+            <sage>
                 <input>
                     <xi:include href="sage_code/ngram_analysis.sage" parse="text" />
                 </input>
@@ -59,7 +59,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
             <p>Subset Analysis Cell</p>
-            <sage xml:id="sage_subset_cell">
+            <sage>
                 <input>
                     <xi:include href="sage_code/subset_analysis.sage" parse="text" />
                 </input>
