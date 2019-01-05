@@ -1,5 +1,6 @@
 import re
 import textwrap
+
 @interact
 def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
         key=input_box('sage', label="Enter your key", height=1, width=20, type=str),

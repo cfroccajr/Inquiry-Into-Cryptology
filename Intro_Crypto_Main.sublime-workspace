@@ -187,6 +187,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sage_code/vigenere_cipher.sage",
+			"settings":
+			{
+				"buffer_size": 1344,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -1560,7 +1568,7 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
@@ -1800,8 +1808,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sage_code/vigenere_cipher.sage",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
