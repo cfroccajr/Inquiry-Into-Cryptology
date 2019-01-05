@@ -198,7 +198,7 @@
         <exercise>
             <statement>
                 <p>
-                    Use the modern Vigenere Square 
+                    Use the modern Vigenere Square
                     <xref ref="appendix_figure_vigenere_new" text="type-global"/>
                     to decipher the following message which was enciphered using an Autokey Cipher and key letter of <em>X</em>.
                 </p>
@@ -206,12 +206,26 @@
                         ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
                     </pre>
             </statement>
+            <answer>
+                <p>
+                    <q>Donuts, is there anything they can't do?</q> - Matt Groening
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    To decipher this you need to decipher the first character with the X, look in row X for the A and then there is a d at the top of that column.  Now repeaet the process with the D you just found and the R, this is how you get the o.  Keep repeating this process until you find the message.
+                </p>
+                <pre>
+                    Xdonu tsist herea nythi ngthe ycant domat tgroe ning
+                    ARBHN LAALA LVVEN LRAPV TZALC ACNGW RAMTM ZXFSR VVT
+                    donut sisth erean ythin gthey cantd omatt groen ing
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    Encipher the following message using Falconers Columnar Transposition with 
-                    a key of <em>{ACB,BCA,CAB,ABC}</em>.
+                    Encipher the following message using Falconers Columnar Transposition with a key of <em>{ACB,BCA,CAB,ABC}</em>.
                     <xref ref="appendix_trans_table" text="type-global"/>
                 </p>
                 <blockquote>
@@ -222,6 +236,30 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    WGI RWE EIV NLI EOR IUS TBY AEM ODT KAA IUN NN
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    Create a table with three three columns and four rows.  Label the rows with the keys and the columns with A, B, and C.  Write down the message character by character with the keys at the side telling you which columns to write the characters in.  Finally, write down the blocks of text from left to right and top to bottom.
+                </p>
+                <p>
+                    Cipher Table:
+                </p>
+                <pre>
+                                 A   B   C
+                        ACB :   WGI RWE EIV
+                        BCA :   NLI EOR IUS
+                        CAB :   TBY AEM ODT
+                        ABC :   KAA IUN NN
+                </pre>
+                <p> Final cipher text:</p>
+                <pre>
+                    WGI RWE EIV NLI EOR IUS TBY AEM ODT KAA IUN NN
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -233,24 +271,73 @@
                 <blockquote>
                     <p>
                         <q>
-                            I have loved justice and hated iniquity: therefore I die in exile. 
+                            I have loved justice and hated iniquity: therefore I die in exile.
                         </q> -  Pope Gregory VII
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>
+                    AHF HDE INR VAO ETR LEE ENI ODI VID JQI UUN DIE SIE
+                    IYI TTX EHE CTL AE
+                </pre>
+            </answer>
+            <solution>
+                <p>
+                    Cipher Table:
+                </p>
+                <pre>
+                             A   B   C
+                    CBA :   AHF HDE INR
+                    ABC :   VAO ETR LEE
+                    BCA :   ENI ODI VID
+                    CAB :   JQI UUN DIE
+                    ACB :   SIE IYI TTX
+                    BAC :   EHE CTL AE
+                </pre>
+                <p>
+                    Completed Message:
+                </p>
+                <pre>
+                    AHF HDE INR VAO ETR LEE ENI ODI VID JQI UUN DIE SIE
+                    IYI TTX EHE CTL AE
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
                 <p>
-                    Decipher the following message using Falconers Columnar Transposition with 
-                    a key of <em>{ABC,BCA,BCA,ACB}</em>.
+                    Decipher the following message using Falconers Columnar Transposition with a key of <em>{ABC,BCA,BCA,ACB}</em>.
                     <xref ref="appendix_trans_table" text="type-global"/>
                 </p>
                     <pre>
-                        ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI  
-                        ES IHNLH TLBEK EOTWS HDUSE
+                        ISUIIP TTRNLE IADOLA OTTSM SREUIR NSSRAE NOYVA TOI ES IHNLH TLBEK
+                        EOTWS HDUSE
                     </pre>
             </statement>
+            <answer>
+                <p>
+                    <q>It is not in the stars to hold our destiny, but in ourselves.</q> - William Shakespeare
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Set up a table with columns labeled A, B, C, and rows labeled with the keys.  Write each block of text into the table from right to left and top to bottom.  Finally, read the characters out of the table one at a time based in the order given by the keys.
+                </p>
+                <pre>
+                            A      B      C
+                    ABC : ISUIIP TTRNLE IADOLA
+                    BCA : OTTSM  SREUIR NSSRAE
+                    BCA : NOYVA  TOIES  IHNLH
+                    ACB : TLBEK  EOTWS  HDUSE
+                </pre>
+                <p>
+                    Completed Message:
+                </p>
+                <p>
+                    <q>It is not in the stars to hold our destiny, but in ourselves.</q> - William Shakespeare
+                </p>
+            </solution>
         </exercise>
         <exercise>
             <statement>
