@@ -36,6 +36,9 @@
             </p>
             <xi:include href="../quote_code/falconer_factors.ptx" />
             <p>
+                <alert>Comprehension Check:</alert>
+            </p>
+            <p>
                 <ul>
                     <li>
                         What are <em>prime numbers</em> and what are the <em>prime divisors</em> of a number?
@@ -47,12 +50,10 @@
                         Have you ever learned a rule that may have told you that 225 and 75 were divisible by 3?
                     </li>
                     <li>
-                        Looking at the second table in the above quote, 
-                        where do we get the numbers in the top row?
+                        Looking at the second table in the above quote, where do we get the numbers in the top row?
                     </li>
                     <li>
-                        In the second column of the second table there is a 6 under the 3, how did Falconer 
-                        come up with that?
+                        In the second column of the second table there is a 6 under the 3, how did Falconer come up with that?
                     </li>
                     <li>
                         In the third column how did he get the 9 and the 18?
@@ -61,46 +62,294 @@
                         What about the other columns, where did those numbers come from?
                     </li>
                     <li>
-                        In the last paragraph Falconer tells us that if 450 were the number of blocks 
-                        of text in the enciphered message then one of the factors of 450 
-                        is the number of key letters in the message.  Looking back at how Falconer's 
-                        transposition cipher works why is this the case?
+                        Falconer tells us to multiply each prime in the second table by all the figures to its left, why don't we get duplicate numbers then?  What rule did he not explicitly state?
+                    </li>
+                    <li>
+                        In the last paragraph Falconer tells us that if 450 were the number of blocks of text in the enciphered message then one of the factors of 450 is the number of key letters in the message.  Looking back at how Falconer's transposition cipher works why is this the case?
                     </li>
                 </ul>
             </p>
             <exercise>
                 <statement>
                     <p>
-                        Test your understanding of what Falconer has described by factoring 980 into prime factors and then writing out 
-                        all the different divisors
+                        Test your understanding of what Falconer has described by factoring 210 into prime factors and then writing out all the different divisors
                     </p>
                 </statement>
+                <answer>
+                    <sidebyside>
+                        <table>
+                            <caption>Prime Factorization</caption>
+                            <tabular left="minor" right="minor" halign="left">
+                                <row>
+                                    <cell> 210 </cell>
+                                    <cell> 105 </cell>
+                                    <cell> 35 </cell>
+                                    <cell> 7 </cell>
+                                    <cell> 1 </cell>
+                                </row>
+                                <row>
+                                    <cell> 2 </cell>
+                                    <cell> 3 </cell>
+                                    <cell> 5 </cell>
+                                    <cell> 7 </cell>
+                                    <cell>  </cell>
+                                </row>
+                            </tabular>
+                        </table>
+                        <table>
+                            <caption>All Possible Factors</caption>
+                            <tabular halign="right">
+                                <row  left="minor">
+                                    <cell right="minor"> 2 </cell>
+                                    <cell right="minor"> 3 </cell>
+                                    <cell right="minor"> 5 </cell>
+                                    <cell right="minor"> 7 </cell>
+                                </row>
+                                <row>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 6 </cell>
+                                    <cell right="minor"> 10 </cell>
+                                    <cell right="minor"> 14 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 15 </cell>
+                                    <cell right="minor"> 21 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 30 </cell>
+                                    <cell right="minor"> 42 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 35 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 70 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor">105 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor">210 </cell>
+                                </row>
+                            </tabular>
+                        </table>
+                    </sidebyside>
+                </answer>
+                <solution>
+                    <p>
+                        First make a table of the primes factors by writing down the 210 and under that a 2 (since it is even), then next to the 210 write 105=210/2.  Next, with a little work, we see that 105 is divisible by 3, so write 3 under the 105 and 35 next to 105, since 35=105/3.  Continue this process to fill in <xref ref="primes_first_checkpoint"/> with the rest of the prime factors.
+                    </p>
+                    <p>
+                        Now make a table with the prime factors written across the top.  Starting with the second column, multiply each number in the table by all the numbers to its left by which it has not already been multiplied.  So, we multiply 3 by 2 to get 6, then 5 by 2 to get 10 and so on.  Try to finish filling in <xref ref="factors_first_checkpoint"/>.
+                    </p>
+                    <sidebyside>
+                        <table xml:id="primes_first_checkpoint">
+                            <caption>Prime Factorization</caption>
+                            <tabular left="minor" right="minor" halign="left">
+                                <row>
+                                    <cell> 210 </cell>
+                                    <cell> 105 </cell>
+                                    <cell> 35 </cell>
+                                    <cell> <nbsp/><nbsp/> </cell>
+                                    <cell> <nbsp/><nbsp/> </cell>
+                                </row>
+                                <row>
+                                    <cell> 2 </cell>
+                                    <cell> 3 </cell>
+                                    <cell>  </cell>
+                                    <cell>  </cell>
+                                    <cell>  </cell>
+                                </row>
+                            </tabular>
+                        </table>
+                        <table xml:id="factors_first_checkpoint">
+                            <caption>All Possible Factors</caption>
+                            <tabular halign="right">
+                                <row  left="minor">
+                                    <cell right="minor"> 2 </cell>
+                                    <cell right="minor"> 3 </cell>
+                                    <cell right="minor"> 5 </cell>
+                                    <cell right="minor"> 7 </cell>
+                                </row>
+                                <row>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 6 </cell>
+                                    <cell right="minor"> 10 </cell>
+                                    <cell right="minor"> 14 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> 21 </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"><nbsp/> </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"><nbsp/> </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"><nbsp/> </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor"><nbsp/> </cell>
+                                </row>
+                                <row>
+                                    <cell> </cell>
+                                    <cell> </cell>
+                                    <cell right="minor"> </cell>
+                                    <cell right="minor">210</cell>
+                                </row>
+                            </tabular>
+                        </table>
+                    </sidebyside>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p>
-                        Look at the text enciphered below using Falconer's transposition cipher.  Using the 
-                        techniques described above, how many key letters may have been used to 
-                        encipher this message?
+                        Test your understanding of what Falconer has described by factoring 980 into prime factors and then writing out all the different divisors
+                    </p>
+                </statement>
+                <answer>
+                    <table>
+                        <caption>Prime Factorization</caption>
+                        <tabular left="minor" right="minor" halign="left">
+                            <row>
+                                <cell> 980 </cell>
+                                <cell> 490 </cell>
+                                <cell> 245 </cell>
+                                <cell> 49 </cell>
+                                <cell> 7 </cell>
+                                <cell> 1 </cell>
+                            </row>
+                            <row>
+                                <cell> 2 </cell>
+                                <cell> 2 </cell>
+                                <cell> 5 </cell>
+                                <cell> 7 </cell>
+                                <cell> 7 </cell>
+                                <cell>  </cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <table>
+                        <caption>All Possible Factors</caption>
+                        <tabular halign="right">
+                            <row  left="minor">
+                                <cell right="minor"> 2 </cell>
+                                <cell right="minor"> 2 </cell>
+                                <cell right="minor"> 5 </cell>
+                                <cell right="minor"> 7 </cell>
+                                <cell right="minor"> 7 </cell>
+                            </row>
+                            <row>
+                                <cell right="minor"> </cell>
+                                <cell right="minor"> 4 </cell>
+                                <cell right="minor"> 10 </cell>
+                                <cell right="minor"> 14 </cell>
+                                <cell right="minor"> 49 </cell>
+                            </row>
+                            <row>
+                                <cell> </cell>
+                                <cell right="minor"> </cell>
+                                <cell right="minor"> 20 </cell>
+                                <cell right="minor"> 28 </cell>
+                                <cell right="minor"> 98 </cell>
+                            </row>
+                            <row>
+                                <cell> </cell>
+                                <cell> </cell>
+                                <cell right="minor"> </cell>
+                                <cell right="minor"> 35 </cell>
+                                <cell right="minor"> 196 </cell>
+                            </row>
+                            <row>
+                                <cell> </cell>
+                                <cell> </cell>
+                                <cell right="minor"> </cell>
+                                <cell right="minor"> 70 </cell>
+                                <cell right="minor"> 245 </cell>
+                            </row>
+                            <row>
+                                <cell> </cell>
+                                <cell> </cell>
+                                <cell right="minor"> </cell>
+                                <cell right="minor"> 140 </cell>
+                                <cell right="minor"> 490 </cell>
+                            </row>
+                            <row>
+                                <cell> </cell>
+                                <cell> </cell>
+                                <cell> </cell>
+                                <cell right="minor"> </cell>
+                                <cell right="minor">980 </cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Look at the text enciphered below using Falconer's transposition cipher.  Using the techniques described above, how many key letters may have been used to encipher this message?
                     </p>
                     <pre>
-                        NILOEOTHIETTSGTN HCITRTSRNIAEOIOC TATEUOOOETURHVFS 
-                        LNEURRHYMSIHHIHQ EELHEFETTMRDUNRO NEAMTDPLHYETLOAS 
-                        TTEPEEYTPEOESTTA THMOIITESHTEUPUE ETDSEBASETFEONOU 
-                        OEKEBDAFASNHDSRT NSECLSEREWHHEICM EMTWKRIEBRNTAYTK 
-                        TUEEFUWEREIAPTHA IYWAEUHBIFTWDRUD WHSLSNTOPLFNTEMN 
-                        GRVEDCGTEPTDATIM RMSIIYLDEEECRBOE AEEBEINOTPNLEOAR 
-                        SEOTLWLAIHTOTEOW RRMHLHINTAEULNFO DHLTAAAROREANLOH 
-                        ETAUHHOEFEMEIETT HOTYTPNTRTSTGFBI AURSUPTHOHRHTWEN 
-                        GEIATHLHNIIDVSRS FSRSNHFTNOUTIDHR EIUASTSREHGFLETI 
+                        NILOEOTHIETTSGTN HCITRTSRNIAEOIOC TATEUOOOETURHVFS
+                        LNEURRHYMSIHHIHQ EELHEFETTMRDUNRO NEAMTDPLHYETLOAS
+                        TTEPEEYTPEOESTTA THMOIITESHTEUPUE ETDSEBASETFEONOU
+                        OEKEBDAFASNHDSRT NSECLSEREWHHEICM EMTWKRIEBRNTAYTK
+                        TUEEFUWEREIAPTHA IYWAEUHBIFTWDRUD WHSLSNTOPLFNTEMN
+                        GRVEDCGTEPTDATIM RMSIIYLDEEECRBOE AEEBEINOTPNLEOAR
+                        SEOTLWLAIHTOTEOW RRMHLHINTAEULNFO DHLTAAAROREANLOH
+                        ETAUHHOEFEMEIETT HOTYTPNTRTSTGFBI AURSUPTHOHRHTWEN
+                        GEIATHLHNIIDVSRS FSRSNHFTNOUTIDHR EIUASTSREHGFLETI
                         DDSEISTOTTIIELAE DEAREEAEENFOELEH NBETSIHENAEDHIDE
                     </pre>
                 </statement>
                 <hint>
                     <p>
-                        Start by counting the number of blocks of letters.
+                        <ul>
+                            <li>Start by counting the number of blocks of letters.</li>
+                            <li>Use what we have learned to factor the number of blocks into its prime factors, and find all the possible divisors.</li>
+                            <li>Look back at how Falconer's transposition works (<xref ref="falconer_transposition"/>), what can the factors tell us about the enciphering process?</li>
+                        </ul>
                     </p>
                 </hint>
+                <answer>
+                    <p>
+                        There are thirty blocks of text.  Factoring that, we get the prime factors 2,3, and 5.  Putting these together, the complete list of factors of 30 is 2, 3, 5, 6, 10, 15, and 30.  Since Falconer's cipher requires writing letters into a table, we can conclude that the table's dimensions were likely 3 by 10, 5 by 6, 6 by 5, or 10 by 3. (It is unlikely that the table was 1 by 30 or 2 by 15.)  Using this information we can conclude that there were likely 3, 5, or 6 key letters and we could try to pick apart the message.
+                    </p>
+                </answer>
             </exercise>
         </subsection>
         <subsection>
@@ -154,7 +403,9 @@
             </table>
 
             <xi:include href="../quote_code/falconer_simple_sol2.ptx" />
-
+            <p>
+                <alert>Comprehension Check:</alert>
+            </p>
             <p>
                 Taking Falconer's advice from step one look at each line of 
                 <xref ref="falconer_transposed_message" text="type-global" /> 
@@ -222,9 +473,7 @@
                 </tabular>
             </table>
             <p>
-                Test your understanding by working on the following exercises of increasing size, be patient they are 
-                finicky and time consuming. As a hint, all of the 
-                quotes contain the word <em>WINTER</em>.
+                Test your understanding by working on the following exercises of increasing size, be patient they are finicky and time consuming. As a hint, all of the quotes contain the word <em>WINTER</em>.
             </p>
             <exercise>
                 <statement>
@@ -232,21 +481,70 @@
                         Try to use this new method to decipher this quote.
                     </p>
                     <pre>
-                        IRPL WPDL FSNE INIH NIEE 
-                        RBY  OFY  TNRY CEB  EGC 
+                        IRPL WPDL FSNE INIH NIEE
+                        RBY  OFY  TNRY CEB  EGC
                         MAS  SBH  ERS  CEE  AHS
                     </pre>
                 </statement>
                 <hint>
                     <p>
                         <ul>
-                            <li>Transpose each block, you will end up with a table of four lines and fifteen columns.</li>
+                            <li>Transpose each block, you will end up with a table of four lines and fifteen columns like <xref ref="falconer_transposed_message"/>.</li>
                             <li>Can you find common or even not so common words or combinations in any lines?</li>
                             <li>When you rearrange the columns do you see more words?</li>
                             <li>Stay organized, if you don't keep things lined up this will never work</li>
                         </ul>
                     </p>
                 </hint>
+                <answer>
+                    <p>
+                        <q>If winter comes, can spring be far behind</q>  By Percy Bysshe Shelly
+                    </p>
+                </answer>
+                <solution>
+                    <p>
+                        Begin by writing each block of text vertically and looking for scrambled words.  From the hint we know to look for the word WINTER.  Spotting the letters to spell WINTER in the top row we rearrange the columns and then start to look for other words.
+                    </p>
+                    <pre>
+                        1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+                        I W F I N R O T C E  M  S  E  C  A
+                        R P S N I B F N E G  A  B  R  E  H
+                        P D N I E Y Y R B C  S  H  A  E  S
+                        L L E H E     Y
+                    </pre>
+                    <p>
+                        You should notice that columns 3 and 4 can spell IF in the first row and if we put them at the beginning we also get the word SPRING in the second row.
+                    </p>
+                    <pre>
+                        2 1 5 8 10 6 3 4 7 9 11 12 13 14 15
+                        W I N T E  R F I O C M  E  S  C  A
+                        P R I N G  B S N F E A  B  R  E  H
+                        ...
+                    </pre>
+                    <p>
+                        Reassuringly we see that this also gives us the name PERCY in the third row and SHELLY wrapping around from row 3 to 4.  Finally, you may notice that swapping columns 9 and 7, and columns 12 and 13 will give us the word COMES in the first row.
+                    </p>
+                    <pre>
+                        4 3 2 1 5 8 10 6 7 9 11 12 13 14 15
+                        I F W I N T E  R O C M  S  E  C  A
+                        N S P R I N G  B F E A  B  R  E  H
+                        I N D P E R C  Y Y B S  H  S  E  S
+                        H E L L E Y
+                    </pre>
+                    <p>
+                        After make those last two swaps we can now read off an entire message.
+                    </p>
+                    <pre>
+                        4 3 2 1 5 8 10 6 9 7 11 13 12 14 15
+                        I F W I N T E  R C O M  E  S  C  A
+                        N S P R I N G  B E F A  R  B  E  H
+                        I N D P E R C  Y B Y S  S  H  E  S
+                        H E L L E Y
+                    </pre>
+                    <p>
+                        <q>If winter comes, can spring be far behind</q>  By Percy Bysshe Shelly
+                    </p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -254,20 +552,25 @@
                         Try to use this new method to decipher this quote.
                     </p>
                     <pre>
-                        UIA ARM LDU GVN EWC RIE TSA HEF INV HRT 
+                        UIA ARM LDU GVN EWC RIE TSA HEF INV HRT
                         STI TEC NMU EFO SRR UOH AE  TTG TH  HHO
                     </pre>
                 </statement>
                 <hint>
                     <p>
                         <ul>
-                            <li>Transpose each block, you will end up with a table of three lines and twenty columns.</li>
+                            <li>Transpose each block, you will end up with a table of four lines and fifteen columns like <xref ref="falconer_transposed_message"/>.</li>
                             <li>Can you find common or even not so common words or combinations in any lines?</li>
                             <li>When you rearrange the columns do you see more words?</li>
                             <li>Stay organized, if you don't keep things lined up this will never work</li>
                         </ul>
                     </p>
                 </hint>
+                <answer>
+                    <p>
+                        <q>Laughter is the sun that drives winter from the human face.</q> Victor Hugo
+                    </p>
+                </answer>
             </exercise>
             <exercise>
                 <statement>
@@ -283,31 +586,67 @@
                 <hint>
                     <p>
                         <ul>
-                            <li>Transpose each block, you will end up with a table of six lines and twenty columns.</li>
+                            <li>Transpose each block, you will end up with a table of four lines and fifteen columns like <xref ref="falconer_transposed_message"/>.</li>
                             <li>Can you find common or even not so common words or combinations in any lines?</li>
                             <li>When you rearrange the columns do you see more words?</li>
                             <li>Stay organized, if you don't keep things lined up this will never work</li>
                         </ul>
                     </p>
                 </hint>
+                <answer>
+                    <p>
+                        <q>It was one of those March days, when the sun shines hot and the wind blows cold.  When it is summer in the light and winter in the shade.</q> Charles Dickens
+                    </p>
+                </answer>
             </exercise>
+            <p>
+                Part of what helped you in the previous three examples was knowing that the word WINTER was in each quote, this is called a <term>crib</term>.
+            </p>
+            <definition>
+                <title>Cryptologic Crib</title>
+                <statement>
+                    <p>
+                        In cryptology a <term>crib</term><idx><h>crib</h></idx> is a piece of information about a cipher text, such as a known piece of the plain text, which helps you decrypt the cipher.
+                    </p>
+                </statement>
+            </definition>
             <p>
                 A few closing observations:
             </p>
             <p>
                 <ul>
                     <li>
-                        Look carefully at how the blocks of characters (columns in the tables) are grouped after they are deciphered, 
-                        i.e. did you ever get column one next to column thirteen or fourteen?  
+                        Look carefully at how the blocks of characters (columns in the tables) are grouped after they are deciphered, i.e. did you ever get column one next to column thirteen or fourteen?
                     </li>
                     <li>
                         Why do you think this happened? How might it be related to the number of key letters?
                     </li>
                     <li>
-                        Given your answers to the previous questions, how can we make use of Falconer's strategies for 
-                        finding divisors and the number of key letters?
+                        Given your answers to the previous questions, how can we make use of Falconer's strategies for finding divisors and the number of key letters?
                     </li>
                 </ul>
             </p>
+        </subsection>
+        <subsection>
+            <title>Mathematical Interlude</title>
+            <p>
+                Prime numbers and factors are significant in mathematics and play a central role not just here but in modern cryptographic systems used by computers.  Therefore, a clear definition of primes and divisibility are crucial.
+            </p>
+            <definition>
+                <title>Divisibility</title>
+                <statement>
+                    <p>
+                        We say that one whole number <m>a</m> is <term>divisible</term><idx><h>divisibility</h></idx> by another whole number <m>b</m> if there exists a unique whole number <m>q</m> called the quotient such that <m>a=qb</m>.
+                    </p>
+                </statement>
+            </definition>
+            <definition>
+                <title>Prime Number and Factor</title>
+                <statement>
+                    <p>
+                        A number is <term>prime</term><idx><h>prime number</h></idx> if it is divisible only by one and its self.  A <term>prime factor</term><idx><h>prime factor</h></idx> of a number is a prime number which divides evenly, without remainder, into that number.
+                    </p>
+                </statement>
+            </definition>
         </subsection>
     </section>
