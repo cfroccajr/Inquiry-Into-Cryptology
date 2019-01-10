@@ -5,7 +5,7 @@
                         repeatedly combined with the same letters or the key.
                     </p>
                     <p>
-                        If we encipher with the key <q><c>Berlin</c></q> as above, we shall frequently find in the 
+                        If we encipher with the key <q><c>BERLIN</c></q> as above, we shall frequently find in the 
                         cipher text in columns 1 and 2 the ciphers <c>UL</c>, in 2 and 3 <c>XY</c>, in 3 and 4 <c>KS</c>, 
                         in 4 and 5 <c>EP</c>, and in 5 and 6 <c>BU</c> because these ciphers 
                         <c>UL, XY, KS, EP</c> and <c>BU</c> have arisen by combining 

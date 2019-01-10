@@ -13,8 +13,8 @@
             <xi:include href="../quote_code/falconer_poly.ptx" />
 
             <p>
-                So begins John Falconer's discussion of using the polyalphabetic cipher.  As with other cryptographers 
-                of his time he agrees that the cipher, while secure, is to slow an cumbersome and so not worth the 
+                So begins John Falconer's discussion of using the polyalphabetic cipher.  Falconer agrees with other cryptographers
+                of his time that the cipher, while secure, is to slow and cumbersome and so not worth the 
                 trouble of using.  However, for the sake of giving a complete account of the current state of the 
                 science of cryptography in his time, Falconer goes on to discuss in detail 
                 how to encipher and decipher messages with this type of cipher.  What is interesting and more 
@@ -28,6 +28,7 @@
 
             <xi:include href="../quote_code/falconer_poly2.ptx"/>
 
+            <p> For reference, here is a copy of the Vigenere table (what Falconer calls the <em>counter-table</em>) as Falconer was using it:</p>
             <figure xml:id="figure_falconer_table">
                 <caption>Falconer's Counter-Table</caption>
                 <image width="90%" archive="svg png pdf">
@@ -64,6 +65,7 @@
                     </latex-image>
                 </image>
             </figure>
+            <p><alert>Comprehension Check:</alert></p>
             <p>
                 <ul>
                     <li>
@@ -75,7 +77,7 @@
                         the first line of the cipher text?
                     </li>
                     <li>
-                        Verify that the fifteenth line is the correct one to use for the first line by deciphering the rest of the 
+                        Verify that the fifteenth line, the one labeled <em>P</em>, is the correct one to use for the first line by deciphering the rest of the 
                         line.
                     </li>
                     <li>
@@ -96,8 +98,29 @@
             <xi:include href="../quote_code/falconer_poly3.ptx"/>
 
             <p>
-                Let's try to see if we can make sense of Falconer's advice and decipher the message below.
+                <alert>Comprehension Check:</alert> Refer to this cipher text when answering the comprehension check questions.
             </p>
+            <sidebyside widths="10% 70% 10%">
+                <p></p>
+                <pre>
+                         1  2    3          4      5      6            7      8
+                    1 -  MX EIB  WKG        LOCD   SK     GWZRF,
+                    2 -  BM ZEW  CQN        YQTUW  YP     YNQIX,
+                    3 -  WG OSL  XLH        IPN    QH     FSCNYW,
+                    4 -  NY INF  MAX        EKH    XO     HQQNLUKPGUU,
+                    5 -  SD AEX  GUR        XHGUA  RI     KNTRNO,
+                    6 -  LW FKC  YMI        RCBPU  GY     MQFUHGYOMXB,
+                    7 -  RC YCU  DRO        XIEXSR BS     DBZAM,
+                    8 -  MX EIB  WKG        COKCYX SK     QNEXARFF,
+                    9 -  BM ZEW  CQN        URTLPI YP     MSTI,
+                    10 - WG OSL  XLH        ERWCNA QH     NOCZKSB,
+                    11 - AI UNQ  XNXKQMABFY FHIRUH DB,
+                    12 - YG TKN  RSYMNRL    ORSBER NL,
+                    13 - ZH ENAN CNN        QYSXQ  HNWIGY GB           AXNXF,
+                    14 - ZH ENAN CNN        QYSXQ  HNNIGY GUR          GMAXK  ZDB
+                </pre>
+                <p></p>
+            </sidebyside>
             <p>
                 <ul>
                     <li>
@@ -125,25 +148,9 @@
                     </li>
                 </ul>
             </p>
-            <pre>
-                MX EIB WKG LOCD SK GWZRF, 
-                BM ZEW CQN YQTUW YP YNQIX, 
-                WG OSL XLH IPN QH FSCNYW, 
-                NY INF MAX EKH XO HQQNLUKPGUU, 
-                SD AEX GUR XHGUA RI KNTRNO,
-                LW FKC YMI RCBPU GY MQFUHGYOMXB,
-                RC YCU DRO XIEXSR BS DBZAM,
-                MX EIB WKG COKCYX SK QNEXARFF,
-                BM ZEW CQN URTLPI YP MSTI,
-                WG OSL XLH ERWCNA QH NOCZKSB, 
-                AI UNQ XNXKQMABFY FHIRUH DB,
-                YG TKN RSYMNRL ORSBER NL,
-                ZH ENAN CNN QYSXQ HNWIGY GB AXNXF,
-                ZH ENAN CNN QYSXQ HNNIGY GUR GMAXK ZDB -
-                RW UKQTW, DRO TIWNSH INF LG IDU TRSN WKG ZBOCOXD TIWNSH, GUNG LGEX 
-                RI RCB PQLULGUW KEDRYBSDSOC NRXNXYIH BA BML EHWQK ANLNRDNM, HQT QYYN
-                SW SBE XNBD, MQ CQN UXRGTNCWLXG NOQBOO SK PBZCNEWFBA GFDQ
-            </pre>
+        </subsection>
+        <conclusion>
+            <title>Reflection:</title>
             <p>
                 Exactly one hundred years after Vigen&#x00E8;re published his work Falconer lead us in the right direction to 
                 crack the  polyalphabetic substitution cipher. First, he pointed out that whether we encipher 
@@ -158,6 +165,5 @@
                 <idx>Kasiski, Friedrich</idx>
                  would recognize how to expand these ideas into a general plan of attack.
             </p>
-        </subsection>
-
+        </conclusion>
     </section>

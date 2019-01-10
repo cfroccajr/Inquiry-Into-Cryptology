@@ -12,62 +12,91 @@
             <subsubsection>
                 <title>Initial Observations</title>
                 <p>
-                    What follows are excerpts from Friedrich Kasiski's 1863 text on cryptography 
-                    <em>Die Geheimschriften und die Dechiffrir-Kunst</em>, 
-                    which was translated into English and privately published 
-                    by R. W. Pettengill in 1954 as <em>Secret Writings and the Art of Deciphering</em><xref ref="cr_crypt_kasiski"/>.  
-                    For brevity we will only examine a few of Kasiski's key points and we will use a long English rather than 
-                    a short German quote in order to make his points.  While these adjustments have been made to aid in understanding 
+                    What follows are excerpts from Friedrich Kasiski's 1863 text on cryptography
+                    <em>Die Geheimschriften und die Dechiffrir-Kunst</em>,
+                    which was translated into English and privately published
+                    by R. W. Pettengill in 1954 as <em>Secret Writings and the Art of Deciphering</em><xref ref="cr_crypt_kasiski"/>.
+                    For brevity we will only examine a few of Kasiski's key points and we will use a long English rather than
+                    a short German quote in order to make his points.  While these adjustments have been made to aid in understanding,
                     whenever possible we will remain faithful to the original.
                 </p>
                 <p>
-                    For this section we will use the following quote for our analysis.  It is enciphered using a Vigen&#x00E8;re cipher with 
-                    the keyword <c>BERLIN</c>.
+                    For this section we will use the following example quote for our analysis.  It is enciphered using a Vigen&#x00E8;re cipher with 
+                    the keyword <c>BERLIN</c>.  You may find it useful to redo the enciphering for yourself.
                 </p>
                 <example xml:id="example_kasiski">
-                    <title>Sample  Vigen&#x00E8;re Enciphering</title>
-                    <p>
-                        Plain Text:
-                    </p>
-                    <p>
-                        <q>
-                            Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, 
-                            and the French, the English, and the Americans on the western front which is currently all quiet.
-                        </q>
-                        <fn>
-                            Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
-                        </fn>
-                    </p>
-                    <p>
-                        Cipher Text:
-                    </p>
-                    <p>
-                        <cd>
-                            <cline>     123456  123456  123456  123456 </cline>
-                            <cline> </cline>
-                            <cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
-                            <cline> </cline>
-                            <cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
-                            <cline> </cline>
-                            <cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
-                            <cline> </cline>
-                            <cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
-                            <cline> </cline>
-                            <cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
-                            <cline> </cline>
-                            <cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
-                            <cline> </cline>
-                            <cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
-                            <cline> </cline>
-                            <cline> (7) SVVYBY  ZECWYH  JIK</cline>
-                        </cd>
-                    </p>
+                    <title>
+                        Sample  Vigen&#x00E8;re Enciphering
+                    </title>
+                    <sidebyside widths="45% 55%">
+                        <stack>
+                            <p>
+                                <alert>Plain Text:</alert>
+                                <fn>
+                                    Kasiski's original quote was <q>Die Armee wird mobil gemacht</q> also enciphered with BERLIN.
+                                </fn>
+                            </p>
+                            <p>
+                                <cd>
+                                    <cline></cline>
+                                    <cline></cline>
+                                    <cline></cline>
+                                    <cline></cline>
+                                    <cline></cline>
+                                    <cline></cline>
+                                    <cline>Tell the general, Remarque,</cline>
+                                    <cline></cline>
+                                    <cline>that the army has mobilized</cline>
+                                    <cline></cline>
+                                    <cline>to attack the Russians on the</cline>
+                                    <cline></cline>
+                                    <cline>eastern front, and the French,</cline>
+                                    <cline></cline>
+                                    <cline>the English, and the Americans</cline>
+                                    <cline></cline>
+                                    <cline>on the western front which</cline>
+                                    <cline></cline>
+                                    <cline>is currently all quiet.</cline>
+                                    <cline></cline>
+                                </cd>
+<!--                                 <q>
+                                    Tell the general, Remarque, that the army has mobilized to attack the Russians on the eastern front, and the French, the English, and the Americans on the western front which is currently all quiet.
+                                </q> -->
+                            </p>
+                        </stack>
+                        <stack>
+                            <p>
+                                <alert>Cipher Text:</alert>
+                            </p>
+                            <p>
+                                <cd>
+                                    <cline>     123456  123456  123456  123456 </cline>
+                                    <cline> </cline>
+                                    <cline>Key: BERLIN  BERLIN  BERLIN  BERLIN </cline>
+                                    <cline> </cline>
+                                    <cline> (1) UICWBU  FKVYME  BPIPUN  SULPBU  </cline>
+                                    <cline> </cline>
+                                    <cline> (2) BXKSMN  SQPSIF  NSSTTV  AIUEWN  </cline>
+                                    <cline> </cline>
+                                    <cline> (3) UXRNSG  IIIFAF  JEEDWA  ULVPIF </cline>
+                                    <cline> </cline>
+                                    <cline> (4) UIIYNE  PRKLVQ  ULVQZR  OGYEPR  </cline>
+                                    <cline> </cline>
+                                    <cline> (5) FRXWQF  IEEOBU  FEDPZV  DEEDWA  </cline>
+                                    <cline> </cline>
+                                    <cline> (6) ULVHMF  UIIYNE  PRKHPV  DLZDKH </cline>
+                                    <cline> </cline>
+                                    <cline> (7) SVVYBY  ZECWYH  JIK</cline>
+                                </cd>
+                            </p>
+                        </stack>
+                    </sidebyside>
                 </example>
 
                 <xi:include href="../quote_code/kasiski_poly1.ptx" />
 
                 <p>
-                    Reading Questions:
+                    <alert>Comprehension Check:</alert>
                 </p>
                 <p>
                     <ul>
@@ -106,7 +135,7 @@
                 <xi:include href="../quote_code/kasiski_poly2.ptx" />
 
                 <p>
-                    Reading Questions: (For these it will be helpful for you to look at the work you did in the  
+                    <alert>Comprehension Check:</alert> (For these it will be helpful for you to look at the work you did in the  
                     above questions.)
                 </p>
                 <p>
@@ -136,31 +165,31 @@
             <subsubsection>
                 <title>Determining the Key</title>
                 <p>
-                    First we find the key length:
+                    Kasiski's observations above, and Falconer's previously, give us a way to attack Vigenere's cipher if we know the key length.  But first we need to find the key length.
                 </p>
 
                 <xi:include href="../quote_code/kasiski_poly3.ptx" />
 
                 <p>
-                    Reading Questions:
+                    <alert>Comprehension Check:</alert>
                 </p>
                 <p>
                     <ul>
                         <li>
-                            Why did Kasiski add two to the number of characters between the 
+                            Why did Kasiski add two to the number of characters between the
                             two repeated copies of <c>UL</c>?
                         </li>
                         <li>
-                            The three letter cipher <c>ULV</c> is also appears more than once, 
-                            after counting the number of characters from one to the next how many 
-                            letters should you add to that count before factoring it?  What about for the 
+                            The three letter cipher <c>ULV</c> also appears more than once,
+                            after counting the number of characters from one to the next how many
+                            letters should you add to that count before factoring it?  What about for the
                             repeated cipher <c>UIIY</c>?
                         </li>
                         <li>
-                            Go through the entire cipher text in <xref ref="example_kasiski" text="type-global" />, 
-                            look for all the repeated ciphers which are at least two characters long, then 
-                            for each one write down the distance between them and the factors of those 
-                            distances.  What number(s) pop up most often?  Why does this make sense? 
+                            Go through the entire cipher text in <xref ref="example_kasiski" text="type-global" />,
+                            look for all the repeated ciphers which are at least two characters long, then
+                            for each one write down the distance between them and the factors of those
+                            distances.  What number(s) pop up most often?  Why does this make sense?
                         </li>
                     </ul>
                 </p>
@@ -241,7 +270,7 @@
                 <xi:include href="../quote_code/kasiski_poly4.ptx" />
 
                 <p>
-                    Reading Questions:
+                    <alert>Comprehension Check:</alert>
                 </p>
                 <p>
                     <ul>
@@ -292,12 +321,13 @@
                         </li>
                     </ul>
                 </p>
+                <p>
+                    Try to practice what we have been looking at with these exercises.  You can also look at the sample Vigenere analysis in the appendix (<xref ref="sample_vigenere_analysis"/>).
+                </p>
                 <exercise>
                     <statement>
                         <p>
-                            The following text was enciphered using a key of <c>CIPHER</c>. 
-                            Follow Kasiski's steps to see if you could have found this for 
-                            your self.
+                            The following text was enciphered using a key of <c>CIPHER</c>. Follow Kasiski's steps to see if you could have found this for yourself.
                         </p>
                         <p>
                             <cd>
@@ -332,30 +362,31 @@
                                     Look for repeated strings.
                                 </li>
                                 <li>
-                                    For each pair of repeated strings write them down and 
-                                    next to them write down the number of characters 
-                                    from the start of one to the start of the next 
-                                    and the factors of that number.
+                                    For each pair of repeated strings write them down and next to them write down the number of characters from the start of one to the start of the next and the factors of that number.
                                 </li>
                                 <li>
-                                    Assuming that the most common factor is 6, which we know it should be, 
-                                    use the subset cell to find the most common letters in each column.
+                                    Assuming that the most common factor is 6, which we know it should be, use the subset cell to find the most common letters in each column.
                                 </li>
                                 <li>
-                                    Use these letters and the key table 
-                                    (<xref ref="kasiski_key_table" text="type-global"/>) 
-                                    to try and find the key, which 
-                                    should be <c>CIPHER</c>.
+                                    Use these letters and the key table (<xref ref="kasiski_key_table" text="type-global"/>) to try and find the key, which should be <c>CIPHER</c>.
                                 </li>
                             </ol>
                         </p>
                     </hint>
+                    <answer>
+                        <blockquote>
+                            <p>
+                                <q>
+                                    Since Aramis's singular transformation into a confessor of the order, Baisemeaux was no longer the same man. Up to that period, the place which Aramis had held in the worthy governor's estimation was that of a prelate whom he respected and a friend to whom he owed a debt of gratitude; but now he felt himself an inferior, and that Aramis was his master. He himself lighted a lantern, summoned a turnkey, and said, returning to Aramis, "I am at your orders, monseigneur." Aramis merely nodded his head, as much as to say, "Very good"; and signed to him with his hand to lead the way.
+                                </q> <em>The Man in the Iron Mask</em>, Alexandre Dumas
+                            </p>
+                        </blockquote>
+                    </answer>
                 </exercise>
-                <exercise><!-- ironmask -->
+                <exercise><!-- key = ironmask -->
                     <statement>
                         <p>
-                            Follow Kasiski's steps to find the key for this message.  Then use 
-                            the Vigen&#x00E8;re cipher cell to decipher it.
+                            Follow Kasiski's steps to find the key for this message.  Then use the Vigen&#x00E8;re cipher cell to decipher it.
                         </p>
                         <p>
                             <cd>
@@ -408,29 +439,40 @@
                                     Look for repeated strings.
                                 </li>
                                 <li>
-                                    For each pair of repeated strings write them down and 
-                                    next to them write down the number of characters 
-                                    from the start of one to the start of the next 
-                                    and the factors of that number.
-                                </li>
-                                <li> 
-                                    Use the subset cell to find the most common letters in each <q>column</q> 
-                                    as if you had split up the cipher according to the length you found 
-                                    in the previous step.
+                                    For each pair of repeated strings write them down and next to them write down the number of characters from the start of one to the start of the next and the factors of that number.
                                 </li>
                                 <li>
-                                    Use these letters and the key table 
-                                    (<xref ref="kasiski_key_table" text="type-global"/>) 
-                                    to try and find the key.
+                                    Use the subset cell to find the most common letters in each <q>column</q> as if you had split up the cipher according to the length you found in the previous step.
+                                </li>
+                                <li>
+                                    Use these letters and the key table (<xref ref="kasiski_key_table" text="type-global"/>) to try and find the key.
                                 </li>
                             </ol>
                         </p>
                     </hint>
+                    <answer>
+                        <p>The keyword is <q>ironmask</q> </p>
+                        <p>The message is:</p>
+                        <blockquote>
+                            <p>
+                                <q>
+                                    And from that moment, D'Artagnan, accommodating his action to the pace of the horse, like a true centaur, gave up his thoughts to nothing - that is to say, to everything. He asked himself why the king had sent for him back; why the Iron Mask had thrown the silver plate at the feet of Raoul. As to the first subject, the reply was negative; he knew right well that the king's calling him was from necessity. He still further knew that Louis XIV. must experience an imperious desire for a private conversation with one whom the possession of such a secret placed on a level with the highest powers of the kingdom. But as to saying exactly what the king's wish was, D'Artagnan found himself completely at a loss. The musketeer had no doubts, either, upon the reason which had urged the unfortunate Philippe to reveal his character and birth. Philippe, buried forever beneath a mask of steel, exiled to a country where the men seemed little more than slaves of the elements; Philippe, deprived even of the society of D'Artagnan, who had loaded him with honors ...
+                                </q> <em>The Man in the Iron Mask</em>, Alexandre Dumas
+                            </p>
+                        </blockquote>
+                    </answer>
                 </exercise>
                 <figure xml:id="suzuki_kasiski_video">
                     <caption>Modern look at Kasiski</caption>
                     <video youtube="TxClRjnRNJw" width="80%" />
                 </figure>
+                <p>Sage Cell for counting instances of specific strings:</p>
+                <sage>
+                    <input>
+                        <xi:include href="../sage_code/string_analysis.sage" parse="text" />
+                    </input>
+                    <output></output>
+                </sage>
                 <p>
                     Sage cell for calculating subsets of letters in a message:
                 </p>

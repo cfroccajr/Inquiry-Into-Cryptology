@@ -187,14 +187,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sage_code/vigenere_cipher.sage",
-			"settings":
-			{
-				"buffer_size": 1344,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -1568,10 +1560,16 @@
 	"expanded_folders":
 	[
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/table_code"
 	],
 	"file_history":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sample_vigenere_analysis.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_analysis/second_poly_attack.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/kasiski_poly2.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_analysis/first_poly_attack.ptx",
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/prime_practice.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
@@ -1693,13 +1691,7 @@
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex",
 		"/Users/cfroccajr/Documents/Temp/books.csv",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall Indirect Proofs Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring 272 Chapter 4-5 Test.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Practice Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/MAT 272 Linear Alg Old/2011 Spring Chapter 2-3 Test.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/SphereDistance.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 3 Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall History of Algebra Exam.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Fall Indirect Proofs Exam.tex"
 	],
 	"find":
 	{
@@ -1717,6 +1709,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n",
+			"\n        ",
+			"\n",
+			"([A-Z])\\s+([0-9])+\\s+([0-9]+\\.[0-9]+)",
+			"\n",
+			"Dumas",
+			"([A-Z]+)",
+			"\n",
 			"<(/)*paragraphs>",
 			"<(/)*line>",
 			"&",
@@ -1774,9 +1774,15 @@
 		"highlight": true,
 		"in_selection": true,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"</cline>\n<cline>",
+			"$1</cell><cell>$2</cell><cell>$3</cell></row>",
+			"\n<row><cell>",
+			"<row><cell>",
+			"<c>$1</c>",
+			"</cline>\n<cline>",
 			"<$1stack>",
 			"<$1p>",
 			"&amp;",
@@ -1808,39 +1814,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "sage_code/vigenere_cipher.sage",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								1344
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1881,7 +1856,7 @@
 	},
 	"output.exec":
 	{
-		"height": 217.0
+		"height": 73.0
 	},
 	"output.find_results":
 	{
@@ -1895,7 +1870,7 @@
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 94.0
 	},
 	"save_all_on_build": true,
 	"select_file":

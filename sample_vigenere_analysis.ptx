@@ -1,0 +1,245 @@
+<section xml:id="sample_vigenere_analysis">
+    <title>Sample Vigenere Analysis</title>
+    <p>
+        We start by looking through this cipher text for repeated strings and counting the spaces between them:
+    </p>
+        <p>
+            <cd>
+                <cline>PRMOUL FMJOZX JOLDLN KRHMFB QIEQOE WDKIJC KOGXRM </cline>
+                <cline></cline>
+                <cline>ZXDLCI LNTRDR XORFYS VBIYWH VBLNCK ZIKMRU CNEEUY </cline>
+                <cline></cline>
+                <cline>QESOFA LCHTYO UENKVV VBBLZD WLVLXS ZXHSJK WAEIWI </cline>
+                <cline></cline>
+                <cline>DODNUZ UATDLC RVOYEY QERDDL CLHFFB HTYOHV VXLNXW </cline>
+                <cline></cline>
+                <cline>UVVBOO TMDRVN EUKVLT KVHASY XTYSVO JDHNJS ELVLXS </cline>
+                <cline></cline>
+                <cline>ZXHSJK QDDYUE FFHRYS VWZPHW RCLNTR DRXORF YSVBIY </cline>
+                <cline></cline>
+                <cline>WHVBLN CKZTYO VHFZZA JCPACV DNUCRW RCWHVR RUJOLT </cline>
+                <cline></cline>
+                <cline>NKVOEO RFKRRS VQUIDI ERZMNH FEVEJG KITRHX ZCWEUS </cline>
+                <cline></cline>
+                <cline>QLRBJE HEDNKS WIVCEE WYUEKR HEIKRF IOFOEC WRLMWI </cline>
+                <cline></cline>
+                <cline>FXGANX HDLZRN CYQDFX WHVCKO GGDSRC TURBHB FHRFRZ </cline>
+                <cline></cline>
+                <cline>OATOZI KRWHVP UOEDJL RJHDZX VMRVOP RXHSZX WHVNDY </cline>
+                <cline></cline>
+                <cline>KSPEKR HDFYUR VWDIEO GCCYVE USQTYO HVVXLN XSWSKY </cline>
+                <cline></cline>
+                <cline>RDUSVC IOHTCI EUKCXS GSFIFE VLPKMA I</cline>
+            </cd>
+        </p>
+    <p>
+        There are a lot of different repeated strings at different spacings, but the most common divisor for the spacings is 4.  Thus, 4 is likely the length of the key.
+    </p>
+    <p>
+        <ul>
+            <li><c>LN</c>: 32, 20, 96, 72, 20</li>
+            <li><c>TYO</c>: 64, 104, 228</li>
+            <li><c>VB</c>: 6, 36, 68, 78, 6</li>
+            <li><c>JO</c>: 4</li>
+            <li><c>VO</c>: 100</li>
+            <li><c>YQE</c>: 60</li>
+            <li><c>LC</c>: 45, 46, 13</li>
+            <li><c>DLC</c>: 13, 91, 104</li>
+            <li><c>LVLXSZXHSJK</c>: 96</li>
+            <li><c>FX</c>: 16</li>
+            <li><c>LNTRDRXORFYSVBIYWHVBLNCKZ</c>: 188</li>
+        </ul>
+    </p>
+    <p>
+        Dividing the cipher text into four subsets and finding frequencies for each we get:
+    </p>
+    <sidebyside>
+        <stack>
+            <p>
+                The length of this subset is 134
+            </p>
+            <tabular>
+                <row><cell>Character</cell><cell>Count</cell><cell>Percent</cell></row>
+                <row><cell>H</cell><cell>20</cell><cell>14.93</cell></row>
+                <row><cell>W</cell><cell>14</cell><cell>10.45</cell></row>
+                <row><cell>V</cell><cell>12</cell><cell>8.955</cell></row>
+                <row><cell>R</cell><cell>12</cell><cell>8.955</cell></row>
+                <row><cell>D</cell><cell>11</cell><cell>8.209</cell></row>
+                <row><cell>L</cell><cell>10</cell><cell>7.463</cell></row>
+<!--                 <row><cell>U</cell><cell>9</cell><cell>6.716</cell></row>
+                <row><cell>Q</cell><cell>7</cell><cell>5.224</cell></row>
+                <row><cell>E</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>O</cell><cell>5</cell><cell>3.731</cell></row>
+                <row><cell>Z</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>X</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>K</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>J</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>P</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>F</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>G</cell><cell>2</cell><cell>1.493</cell></row>
+                <row><cell>T</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>N</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>M</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>B</cell><cell>1</cell><cell>0.7463</cell></row> -->
+            </tabular>
+            <p>
+                And, the index of coincidence for this set is 0.06973
+            </p>
+        </stack>
+        <stack>
+            <p>
+                The length of this subset is 134
+            </p>
+            <tabular>
+                <row><cell>Character</cell><cell>Count</cell><cell>Percent</cell></row>
+                <row><cell>E</cell><cell>14</cell><cell>10.45</cell></row>
+                <row><cell>N</cell><cell>12</cell><cell>8.955</cell></row>
+                <row><cell>I</cell><cell>11</cell><cell>8.209</cell></row>
+                <row><cell>S</cell><cell>9</cell><cell>6.716</cell></row>
+                <row><cell>O</cell><cell>9</cell><cell>6.716</cell></row>
+                <row><cell>L</cell><cell>9</cell><cell>6.716</cell></row>
+<!--                 <row><cell>A</cell><cell>9</cell><cell>6.716</cell></row>
+                <row><cell>T</cell><cell>8</cell><cell>5.97</cell></row>
+                <row><cell>R</cell><cell>8</cell><cell>5.97</cell></row>
+                <row><cell>H</cell><cell>8</cell><cell>5.97</cell></row>
+                <row><cell>F</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>D</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>U</cell><cell>5</cell><cell>3.731</cell></row>
+                <row><cell>V</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>W</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>M</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>C</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>B</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>Y</cell><cell>2</cell><cell>1.493</cell></row>
+                <row><cell>X</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>P</cell><cell>1</cell><cell>0.7463</cell></row> -->
+            </tabular>
+            <p>
+                And, the index of coincidence for this set is 0.05558
+            </p>
+        </stack>
+    </sidebyside>
+    <sidebyside>
+        <stack>
+            <p>
+                The length of this subset is 134
+            </p>
+            <tabular>
+                <row><cell>Character</cell><cell>Count</cell><cell>Percent</cell></row>
+                <row><cell>V</cell><cell>16</cell><cell>11.94</cell></row>
+                <row><cell>K</cell><cell>12</cell><cell>8.955</cell></row>
+                <row><cell>R</cell><cell>11</cell><cell>8.209</cell></row>
+                <row><cell>F</cell><cell>11</cell><cell>8.209</cell></row>
+                <row><cell>Z</cell><cell>10</cell><cell>7.463</cell></row>
+                <row><cell>C</cell><cell>9</cell><cell>6.716</cell></row>
+<!--                 <row><cell>Y</cell><cell>8</cell><cell>5.97</cell></row>
+                <row><cell>J</cell><cell>8</cell><cell>5.97</cell></row>
+                <row><cell>E</cell><cell>7</cell><cell>5.224</cell></row>
+                <row><cell>U</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>T</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>I</cell><cell>6</cell><cell>4.478</cell></row>
+                <row><cell>X</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>L</cell><cell>4</cell><cell>2.985</cell></row>
+                <row><cell>N</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>G</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>D</cell><cell>3</cell><cell>2.239</cell></row>
+                <row><cell>W</cell><cell>2</cell><cell>1.493</cell></row>
+                <row><cell>S</cell><cell>2</cell><cell>1.493</cell></row>
+                <row><cell>P</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>M</cell><cell>1</cell><cell>0.7463</cell></row>
+                <row><cell>H</cell><cell>1</cell><cell>0.7463</cell></row> -->
+            </tabular>
+            <p>
+                And, the index of coincidence for this set is 0.05814
+            </p>
+        </stack>
+        <stack>
+            <p>
+                The length of this subset is 133
+            </p>
+            <tabular>
+                <row><cell>Character</cell><cell>Count</cell><cell>Percent</cell></row>
+                <row><cell>O</cell><cell>15</cell><cell>11.28</cell></row>
+                <row><cell>X</cell><cell>13</cell><cell>9.774</cell></row>
+                <row><cell>S</cell><cell>12</cell><cell>9.023</cell></row>
+                <row><cell>C</cell><cell>12</cell><cell>9.023</cell></row>
+                <row><cell>Y</cell><cell>11</cell><cell>8.271</cell></row>
+                <row><cell>R</cell><cell>9</cell><cell>6.767</cell></row>
+<!--                 <row><cell>K</cell><cell>8</cell><cell>6.015</cell></row>
+                <row><cell>B</cell><cell>8</cell><cell>6.015</cell></row>
+                <row><cell>D</cell><cell>7</cell><cell>5.263</cell></row>
+                <row><cell>V</cell><cell>5</cell><cell>3.759</cell></row>
+                <row><cell>M</cell><cell>5</cell><cell>3.759</cell></row>
+                <row><cell>Z</cell><cell>4</cell><cell>3.008</cell></row>
+                <row><cell>I</cell><cell>4</cell><cell>3.008</cell></row>
+                <row><cell>N</cell><cell>3</cell><cell>2.256</cell></row>
+                <row><cell>L</cell><cell>3</cell><cell>2.256</cell></row>
+                <row><cell>E</cell><cell>3</cell><cell>2.256</cell></row>
+                <row><cell>W</cell><cell>2</cell><cell>1.504</cell></row>
+                <row><cell>Q</cell><cell>2</cell><cell>1.504</cell></row>
+                <row><cell>P</cell><cell>2</cell><cell>1.504</cell></row>
+                <row><cell>G</cell><cell>2</cell><cell>1.504</cell></row>
+                <row><cell>J</cell><cell>1</cell><cell>0.7519</cell></row>
+                <row><cell>H</cell><cell>1</cell><cell>0.7519</cell></row>
+                <row><cell>F</cell><cell>1</cell><cell>0.7519</cell></row> -->
+            </tabular>
+            <p>
+                And, the index of coincidence for this set is 0.0597
+            </p>
+        </stack>
+    </sidebyside>
+    <p>
+        Now looking in Kasiski's Key Table <xref ref="kasiski_key_table"/> for the columns labeled with the most common characters in each subset we get a likely key of <q>DARK.</q>  Testing this we get this deciphered message:
+    </p>
+    <p>
+        <cd>
+            <cline>MRVERL OCGOIN GOUTIN THEMOR NINGLE FTHISS HOPNOM </cline>
+            <cline></cline>
+            <cline>INALLY INCHAR GEOFHI SBROTH ERINLA WITCOU LDBEDO </cline>
+            <cline></cline>
+            <cline>NEBECA USETHE REWASV ERYLIT TLEBUS INESSA TANYTI </cline>
+            <cline></cline>
+            <cline>MEANDP RACTIC ALLYNO NEATAL LBEFOR ETHEEV ENINGM </cline>
+            <cline></cline>
+            <cline>RVERLO CCARED BUTLIT TLEABO UTHISO STENSI BLEBUS </cline>
+            <cline></cline>
+            <cline>INESSA NDMORE OVERHI SWIFEW ASINCH ARGEOF HISBRO </cline>
+            <cline></cline>
+            <cline>THERIN LAWTHE SHOPWA SSMALL ANDSOW ASTHEH OUSEIT </cline>
+            <cline></cline>
+            <cline>WASONE OFTHOS EGRIMY BRICKH OUSESW HICHEX ISTEDI </cline>
+            <cline></cline>
+            <cline>NLARGE QUANTI TIESBE FORETH EERAOF RECONS TRUCTI </cline>
+            <cline></cline>
+            <cline>ONDAWN EDUPON LONDON THESHO PWASAS QUAREB OXOFAP </cline>
+            <cline></cline>
+            <cline>LACEWI THTHEF RONTGL AZEDIN SMALLP ANESIN THEDAY </cline>
+            <cline></cline>
+            <cline>TIMETH EDOORR EMAINE DCLOSE DINTHE EVENIN GITSTO </cline>
+            <cline></cline>
+            <cline>ODDISC REETLY BUTSUS PICIOU SLYAJA R</cline>
+       </cd>
+    </p>
+    <p>
+        Once we clean this up and do a quick search for the text online we find this passage:
+    </p>
+    <blockquote>
+        <p>
+            <q>Mr Verloc, going out in the morning, left his shop nominally in charge of his brother-in-law.  It could be done, because there was very little business at any time, and practically none at all before the evening.  Mr Verloc cared but little about his ostensible business.  And, moreover, his wife was in charge of his brother-in-law.</q>
+        </p>
+        <p>
+            <q>The shop was small, and so was the house.  It was one of those grimy brick houses which existed in large quantities before the era of reconstruction dawned upon London.  The shop was a square box of a place, with the front glazed in small panes.  In the daytime the door remained closed; in the evening it stood discreetly but suspiciously ajar.</q> - <em>The Secret Agent: A Simple Tale</em> by Joseph Conrad
+        </p>
+    </blockquote>
+    <p>Finally, here is the sort of hand scrap work you would expect to do.</p>
+    <sidebyside widths="60% 40%">
+        <figure xml:id="poly_analysis_page_one">
+                <caption>Sample Vigenere Analysis Page 1:</caption>
+                <image width="100%" source="images/sample_vigenere_decipher1.png"/>
+        </figure>
+        <figure xml:id="poly_analysis_page_two">
+                <caption>Sample Vigenere Analysis Page 2:</caption>
+                <image width="80%" source="images/sample_vigenere_decipher2.png"/>
+        </figure>
+    </sidebyside>
+</section>
