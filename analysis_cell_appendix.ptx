@@ -49,22 +49,29 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </sage>
 
 
-            <p>N-Gram Analysis Cell</p>
-            <sage>
-                <input>
-                    <xi:include href="sage_code/ngram_analysis.sage" parse="text" />
-                </input>
-                <output></output>
-            </sage>
+        <p>N-Gram Analysis Cell</p>
+        <sage>
+            <input>
+                <xi:include href="sage_code/ngram_analysis.sage" parse="text" />
+            </input>
+            <output></output>
+        </sage>
 
+        <p>Transposition Tool Cell</p>
+        <sage>
+            <input>
+                <xi:include href="sage_code/transposition_analysis.sage" parse="text"/>
+            </input>
+            <output></output>
+        </sage>
 
-            <p>Subset Analysis Cell</p>
-            <sage>
-                <input>
-                    <xi:include href="sage_code/subset_analysis.sage" parse="text" />
-                </input>
-                <output></output>
-            </sage>
+        <p>Subset Analysis Cell</p>
+        <sage>
+            <input>
+                <xi:include href="sage_code/subset_analysis.sage" parse="text" />
+            </input>
+            <output></output>
+        </sage>
 
 
 

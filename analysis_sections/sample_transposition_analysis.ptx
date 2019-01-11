@@ -1,0 +1,9 @@
+<section xml:id="sample_transposition_analysis">
+    <title>Sample Transpposition Analysis</title>
+
+        <figure xml:id="trans_analysis">
+                <caption>Sample Transposition Analysis:</caption>
+                <image width="100%" source="images/sample_transposition_analysis.png" archive="png svg pdf"/>
+        </figure>
+
+</section>

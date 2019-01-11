@@ -17,7 +17,7 @@
             </answer>
             <solution>
                 <p>
-                    Set up a cipher table with the rows labled by the set of keys and the columns by the letters A, B, and C.
+                    Set up a cipher table with the rows labled by the set of keys and the columns by the letters A, B, and C.  Then place the characters from the message into the table one at a time following the key for each row.
                 </p>
                 <p>
                     Cipher Table:
@@ -49,7 +49,16 @@
                     HYAEQ  RNTUA  FETRE  TTENR  RITDO  YHNDT  IMOER
                 </pre>
             </statement>
-        </exercise>     
+            <answer>
+                <pre>
+                    weather report for march thirty first
+                    rain temps nearly steady in the mid to
+                    upper thirties winds e at ten to twenty
+                    mph chance of rain one hundred percent
+                    rain fall around a quarter of an inch
+                </pre>
+            </answer>
+        </exercise>
         <exercise>
             <statement>
                 <p>
@@ -61,7 +70,16 @@
                     DHWVAI  CAHEVP  AMOHUA  IIIEEE DWHVEC RDCIBR ONIGEE
                 </pre>
             </statement>
-        </exercise>     
+            <answer>
+                <pre>
+                    how are you he said cordially
+                    gripping my hand with a strength
+                    for which I should hardly have
+                    given him credit you have been
+                    in afghanistan i perceive
+                </pre>
+            </answer>
+        </exercise>
         <exercise>
             <statement>
                 <p>
@@ -71,9 +89,15 @@
                     IQAY ASHE PECV FIIR NUJA UCND
                     LKX OYD  ZLE  ITA  MWG  BAR
                 </pre>
-
             </statement>
-        </exercise>     
+            <answer>
+                <pre>
+                    painful zombies
+                    quickly watch a
+                    jinxed graveyard
+                </pre>
+            </answer>
+        </exercise>
         <exercise>
             <statement>
                 <p>
@@ -85,7 +109,12 @@
                     </p>
                 </blockquote>
             </statement>
-        </exercise> 
+            <answer>
+                <pre>
+                    WBRCMN NUXDAM QXOSWO RLRGNU KKBBPY FHITBU YGNIMI DJBXMN RG
+                </pre>
+            </answer>
+        </exercise>
         <exercise>
             <statement>
                 <p>
@@ -116,6 +145,85 @@
                     ZITCPZXOD HQ YFF POH GWBCCWXOWPQD.
                 </pre>
             </statement>
+            <answer>
+                <p>Keyword <q>lock</q>.</p>
+                <pre>
+                    we met next day as he had arranged and inspected the rooms at no b
+                    baker street of which he had spoken at our meeting they consisted
+                    of a couple of comfortable bedrooms and a single large airy sitting
+                    room cheerfully furnished and illuminated by two broad windows so
+                    desirable in every way were the apartments and so moderate did the
+                    terms seem when divided between us that the bargain was concluded
+                    upon the spot and we at once entered into possession that very
+                    evening i moved my things round from the hotel and on the following
+                    morning sherlock holmes followed me with several boxes and
+                    portmanteaus for a day or two we were busily employed in unpacking
+                    and laying out our property to the best advantage that done we
+                    gradually began to settle down and to accommodate ourselves to our
+                    new surroundings
+                </pre>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the techniques you learned from Falconer and Kasiski.
+                </p>
+                <pre>
+                    NUTZSK BLYBAU JWUONX BWZFXG OCTUCS BWEXCZ IUSSQO
+                    MFOBGR FAXBHJ IYCBMU GUTBHI JYTUBA HOKOIZ GUSJFE
+                    BHJIUJ PHIFVK FHCFUR UBECOZ BMKSCK TILNCY GIXUOT
+                    FMNBXX FXADYJ ICSUIC BHZUIG WIOENN FGUSNO GCIBNO
+                    PHIPHY FKAFHZ VJUOBO TXOTUY UYXTBK MYLUHK XIXMYG
+                    OMZIYI JNEPZN JMLPLK GUZIYX TUTENU PEAQBO TLKTCJ
+                    FHIFUZ TORMCB BHYJMR BHJOYG SWNBLR FMZPHY POZIWG
+                    SIRJHG UBOTCY MUTECY BPKSSY JHMVFG SITFCZ DITTCY
+                    UMUGFO UNRFYR TYZIUT UBKTYG TUTEUT ECYBVU VNZILK
+                    FGOMYY MITHCZ TVXFUJ UBGUHU QIOONK YWKFXY BKABLZ
+                    FLUGUS JFKJNO TMKQUX BNKEZX PGZIYS BCTMUT EVEBMI
+                    BLIFFE QYXDYV UCHMYI SYKLIU ACTHCZ TQGZNN SIAHBG
+                    XCREYX OYYTIL SYKEMG OXYMCS FULBPU SCZFLK TIXUIL
+                    UBKNUX TBNFHZ IYBFAK UUZJIT BMSJAN UVKTOV QIYFXO
+                    TMIBHZ PLGUFK BMZEQG SZOTBT PNXFYY PZGOSS BATJNA
+                    EYGSYZ PVKTYK OHKBLZ IYCFMZ FLTFRZ SYSJNE XBKSYL
+                    PLZNIA MNXJYY UUTEMG OXCIYX FUXFMU NYSJMK SUHMYL
+                    SUSFVA JFJJHM TNKOUT UYJEOX JHMTOS NYXCSZ IYLVAO
+                    UCBFML SISDBG SFKTNU OXATNG OXLFPK SGGZVK GIAOXO
+                    OXKFXZ IYHSCY UFEQUR NYZUIH VNZIYC IIRFCY MUTEQO
+                    UBZIYK YWKQNO PHUGNN JMCFMZ FLTQIO ONGOXG MCTFIL
+                    IUXEQN JNKCYG DBUONN FMKBWU BMZJMI PPKSYJ XCZIUJ
+                    FHYFOT EYXHLU XNNPZZ IYYXYK UGESNR FMUNOI IJXJTK
+                    EVEUBK IIXUCI VFZVLO TNYPZK OARBHJ UBKTBX VVNFLK
+                    PZZFHG UNGJHY UBKIYO HBZPZL JZZFYT PLZXYT USLFYZ
+                    BHJGIX NMGOUR NIYUCS QYTFNX BVRFWU QJODYH VLZIYT
+                    JHMUBK BCXXCZ ICZTZX BAXBHI F
+                </pre>
+            </statement>
+            <answer>
+                <p>Keyword <q>bug</q>.</p>
+                <pre>
+                    many years ago i contracted an intimacy with a mr william legrand he
+                    was of an ancient huguenot family and had once been wealthy but a
+                    series of misfortunes had reduced him to want to avoid the
+                    mortification consequent upon his disasters he left new orleans the
+                    city of his forefathers and took up his residence at sullivans island
+                    near charleston south carolina this island is a very singular one it
+                    consists of little else than the sea sand and is about three miles long
+                    its breadth at no point exceeds a quarter of a mile it is separated
+                    from the main land by a scarcely perceptible creek oozing its way
+                    through a wilderness of reeds and slime a favorite resort of the marsh
+                    hen the vegetation as might be supposed is scant or at least dwarfish
+                    no trees of any magnitude are to be seen near the western extremity
+                    where fort moultrie stands and where are some miserable frame buildings
+                    tenanted during summer by the fugitives from charleston dust and fever
+                    may be found indeed the bristly palmetto but the whole island with the
+                    exception of this western point and a line of hard white beach on the
+                    seacoast is covered with a dense undergrowth of the sweet myrtle so much
+                    prized by the horticulturists of england the shrub here often attains
+                    the height of fifteen or twenty feet and forms an almost impenetrable
+                    coppice burthening the air with its fragrance
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
@@ -124,86 +232,89 @@
                     techniques you learned from Falconer and Kasiski.
                 </p>
                 <pre>
-                    NUTZSK BLYBAU JWUONX BWZFXG OCTUCS BWEXCZ IUSSQO 
-                    MFOBGR FAXBHJ IYCBMU GUTBHI JYTUBA HOKOIZ GUSJFE 
-                    BHJIUJ PHIFVK FHCFUR UBECOZ BMKSCK TILNCY GIXUOT 
-                    FMNBXX FXADYJ ICSUIC BHZUIG WIOENN FGUSNO GCIBNO 
-                    PHIPHY FKAFHZ VJUOBO TXOTUY UYXTBK MYLUHK XIXMYG 
-                    OMZIYI JNEPZN JMLPLK GUZIYX TUTENU PEAQBO TLKTCJ 
-                    FHIFUZ TORMCB BHYJMR BHJOYG SWNBLR FMZPHY POZIWG 
-                    SIRJHG UBOTCY MUTECY BPKSSY JHMVFG SITFCZ DITTCY 
-                    UMUGFO UNRFYR TYZIUT UBKTYG TUTEUT ECYBVU VNZILK 
-                    FGOMYY MITHCZ TVXFUJ UBGUHU QIOONK YWKFXY BKABLZ 
-                    FLUGUS JFKJNO TMKQUX BNKEZX PGZIYS BCTMUT EVEBMI 
-                    BLIFFE QYXDYV UCHMYI SYKLIU ACTHCZ TQGZNN SIAHBG 
-                    XCREYX OYYTIL SYKEMG OXYMCS FULBPU SCZFLK TIXUIL 
-                    UBKNUX TBNFHZ IYBFAK UUZJIT BMSJAN UVKTOV QIYFXO 
-                    TMIBHZ PLGUFK BMZEQG SZOTBT PNXFYY PZGOSS BATJNA 
-                    EYGSYZ PVKTYK OHKBLZ IYCFMZ FLTFRZ SYSJNE XBKSYL 
-                    PLZNIA MNXJYY UUTEMG OXCIYX FUXFMU NYSJMK SUHMYL 
-                    SUSFVA JFJJHM TNKOUT UYJEOX JHMTOS NYXCSZ IYLVAO 
-                    UCBFML SISDBG SFKTNU OXATNG OXLFPK SGGZVK GIAOXO 
-                    OXKFXZ IYHSCY UFEQUR NYZUIH VNZIYC IIRFCY MUTEQO 
-                    UBZIYK YWKQNO PHUGNN JMCFMZ FLTQIO ONGOXG MCTFIL 
-                    IUXEQN JNKCYG DBUONN FMKBWU BMZJMI PPKSYJ XCZIUJ 
-                    FHYFOT EYXHLU XNNPZZ IYYXYK UGESNR FMUNOI IJXJTK 
-                    EVEUBK IIXUCI VFZVLO TNYPZK OARBHJ UBKTBX VVNFLK 
-                    PZZFHG UNGJHY UBKIYO HBZPZL JZZFYT PLZXYT USLFYZ 
-                    BHJGIX NMGOUR NIYUCS QYTFNX BVRFWU QJODYH VLZIYT 
-                    JHMUBK BCXXCZ ICZTZX BAXBHI F
-                </pre>
-            </statement>
-        </exercise>     
-        <exercise>
-            <statement>
-                <p>
-                    Decrypt this message enciphered with a Vigen&#x00E8;re cipher by using the 
-                    techniques you learned from Falconer and Kasiski.
-                </p>
-                <pre>
-                    REZIAK VVISWB KSHYAL VISJMM CLTSHM QCKVHO OIDZBE 
-                    ARQHPF ROHQQQ CMOEDP TTMKHQ GUFVZT TPVVZZ RTPLZX 
-                    CEODVM MXTUDV LTJNYT BYEOTT TZVEYI ZVWWXC EETKII 
-                    OWDXBZ RBWAJT UFZTTT NZVNTE IMGXJT TTIKXV IZBMEX 
-                    JFYNEZ WCEEGM XEMDUC ODEMJA GGZXRO GALYEQ ENTMEW 
-                    ORMCOV XCEDTN FVZIRX PRHIOF UQIWOA FIMDTO EPIPVQ 
-                    ZTTDLN LDCTHP VLVDTT ZJIGFE JOXINT QSBYIM EPJKZR 
-                    BTTTJR GJNUPV TMKHQG BFMOSX DEVWOE XTUVRO SRDZDE 
-                    IYTDCI WDLMQW LVZDMI BYMNWA GSRRYF UCICPT WTTVZL 
-                    VDDTLL GZDFWM SEXOZX IEJDVQ HGDFJL EIWKLM EQXNVP 
-                    OTTPBZ LVDMRK FQKLUH PVHVLX IPRXRA EEWJWD BXTQEX 
-                    CAFLIP ACEZXP RHVRDX DVHVTF WQJVZS GABRRY HMSBVW 
-                    OEPXBJ EXCGGI TCDNID ZBMIGU UMCXDN MEWJMO IACBFI 
-                    SPQGQD IITIXB YQTNQL SESRLQ SOVSIT TTWCHI UYQMIG 
-                    DPTTZW MMSFXE ISOEAJ BDCHEF WWUSAR QSCTXD OZPARW 
-                    JRFDNR HYEZSC DXJTTT XRTZRI WQTLDH MSXIIK ADTLWS 
-                    MMMGRF VTTTTV ZQVDQP SVCOOO XXYIMA ZSWEIO OPTKZT 
-                    CEDQGK LDSFXU VXCEZX OYXRAE LMCPJN MCLKLZ GDTGFJ 
-                    ZADAGD SMNUCO NENBQV QERDNS IWJXZA XXVSCO HQTLXI 
-                    NORIPV FGIZSA ZAVSZD BJPZEB NPFAZV QGQNEN TADULG 
-                    CEJRQK IYTAIP ZRFORH TVIKFA GBYINO XKQEKJ FFWMGV 
-                    JBXTUJ IZMQSI CQJSFL QKLDNY NOIENP QMKZXZ DFDIJX 
-                    VTQLPZ GCAXBW JXARUV PKIIEP BMSCDT EXVKII SUIGZK 
-                    JTDTIU CHYODX PSATTT VLQWED RQGLZR MCLDCI EIAGGV 
-                    ZPMGMU OZYIXB YEIERU WIXRHU RPKSJK YTICPH YDTAFP 
-                    PTUDVZ AZNFDV JXZAPX TPAMIF XVXMOS BGWGIM LQIBVV 
-                    PNPTZV EXHODU SMIAFX WEADTT DCKSIC QAWFOD NSQITO 
-                    AODXSE IRTTPB VZZNEW WLPYSA BMFJOH QAMKXZ REQMDM 
-                    NPXPKV HDNFWM BITTTT KYEICQ DNIIXO SCQJMI GFWMIM 
-                    BHFDVV WROGAL SIGADV MCCDNO GMRWZD NNAVID NSPKFR 
-                    NIPTZR FGEZJU SIMORA MKXZRE IWXIOH QGBYII ISAIEG 
-                    ZDAKMI XCEIWW CIVNPU WLRYTT PBDEIY AUBYIN YYQWCW 
-                    HAPTCG PZTFTZ JADTTH CTLVBM HQJXJW AGSFRO HQGMJX 
-                    RAEDVC CGANDC IEAEII MEXVTU KMVJAO DIARRY ITPLTS 
-                    MRQRBV HOHQZM PXJASG MVQZNF LQKLNO YTWWXC EODUSM 
+                    REZIAK VVISWB KSHYAL VISJMM CLTSHM QCKVHO OIDZBE
+                    ARQHPF ROHQQQ CMOEDP TTMKHQ GUFVZT TPVVZZ RTPLZX
+                    CEODVM MXTUDV LTJNYT BYEOTT TZVEYI ZVWWXC EETKII
+                    OWDXBZ RBWAJT UFZTTT NZVNTE IMGXJT TTIKXV IZBMEX
+                    JFYNEZ WCEEGM XEMDUC ODEMJA GGZXRO GALYEQ ENTMEW
+                    ORMCOV XCEDTN FVZIRX PRHIOF UQIWOA FIMDTO EPIPVQ
+                    ZTTDLN LDCTHP VLVDTT ZJIGFE JOXINT QSBYIM EPJKZR
+                    BTTTJR GJNUPV TMKHQG BFMOSX DEVWOE XTUVRO SRDZDE
+                    IYTDCI WDLMQW LVZDMI BYMNWA GSRRYF UCICPT WTTVZL
+                    VDDTLL GZDFWM SEXOZX IEJDVQ HGDFJL EIWKLM EQXNVP
+                    OTTPBZ LVDMRK FQKLUH PVHVLX IPRXRA EEWJWD BXTQEX
+                    CAFLIP ACEZXP RHVRDX DVHVTF WQJVZS GABRRY HMSBVW
+                    OEPXBJ EXCGGI TCDNID ZBMIGU UMCXDN MEWJMO IACBFI
+                    SPQGQD IITIXB YQTNQL SESRLQ SOVSIT TTWCHI UYQMIG
+                    DPTTZW MMSFXE ISOEAJ BDCHEF WWUSAR QSCTXD OZPARW
+                    JRFDNR HYEZSC DXJTTT XRTZRI WQTLDH MSXIIK ADTLWS
+                    MMMGRF VTTTTV ZQVDQP SVCOOO XXYIMA ZSWEIO OPTKZT
+                    CEDQGK LDSFXU VXCEZX OYXRAE LMCPJN MCLKLZ GDTGFJ
+                    ZADAGD SMNUCO NENBQV QERDNS IWJXZA XXVSCO HQTLXI
+                    NORIPV FGIZSA ZAVSZD BJPZEB NPFAZV QGQNEN TADULG
+                    CEJRQK IYTAIP ZRFORH TVIKFA GBYINO XKQEKJ FFWMGV
+                    JBXTUJ IZMQSI CQJSFL QKLDNY NOIENP QMKZXZ DFDIJX
+                    VTQLPZ GCAXBW JXARUV PKIIEP BMSCDT EXVKII SUIGZK
+                    JTDTIU CHYODX PSATTT VLQWED RQGLZR MCLDCI EIAGGV
+                    ZPMGMU OZYIXB YEIERU WIXRHU RPKSJK YTICPH YDTAFP
+                    PTUDVZ AZNFDV JXZAPX TPAMIF XVXMOS BGWGIM LQIBVV
+                    PNPTZV EXHODU SMIAFX WEADTT DCKSIC QAWFOD NSQITO
+                    AODXSE IRTTPB VZZNEW WLPYSA BMFJOH QAMKXZ REQMDM
+                    NPXPKV HDNFWM BITTTT KYEICQ DNIIXO SCQJMI GFWMIM
+                    BHFDVV WROGAL SIGADV MCCDNO GMRWZD NNAVID NSPKFR
+                    NIPTZR FGEZJU SIMORA MKXZRE IWXIOH QGBYII ISAIEG
+                    ZDAKMI XCEIWW CIVNPU WLRYTT PBDEIY AUBYIN YYQWCW
+                    HAPTCG PZTFTZ JADTTH CTLVBM HQJXJW AGSFRO HQGMJX
+                    RAEDVC CGANDC IEAEII MEXVTU KMVJAO DIARRY ITPLTS
+                    MRQRBV HOHQZM PXJASG MVQZNF LQKLNO YTWWXC EODUSM
                     IAFXWE WDNFWM TMKHQG
                 </pre>
             </statement>
+            <answer>
+                <p>Keyword <q>vampire</q>.</p>
+                <pre>
+                    i went straight to my own room and commenced to work afresh on the
+                    biliteral cipher more than ever had i the conviction upon me that
+                    the reading of the secret writing would be the first step to the
+                    attainment of my wishes regarding marjory it would have been strange
+                    therefore if i had not first attempted the method which she had
+                    herself suggested the reducing the baconian cipher to its lowest
+                    elements for many hours i laboured at this work and finally when i
+                    had reduced the baconian five symbols to three i felt that i had
+                    accomplished all that was possible in that way when i had arrived
+                    at this result and had tested its accuracy in working i felt in a
+                    position to experiment with my new knowledge on the old number cipher
+                    first i wrote out my method of reduction as a sort of addendum to
+                    the paper which i had prepared for marjory then i made a key to
+                    cipher and one to decipher by this time the night was well on and the
+                    grey of early morning was beginning to steal in by the edges of the
+                    blinds i was not sleepy however i was too much excited to think of
+                    sleep for the solving of the problem seemed almost within my grasp
+                    excited to a state which almost frightened me by its intensity i got
+                    ready my copy of the number cipher and my newly prepared key with an
+                    effort which took me all my resolution i went on steadily writing
+                    its proper letter under each combination without once looking back
+                    for i knew that even should some of the letters be misplaced in the
+                    key the chance of recognising the right ones would be largely
+                    increased by seeing a considerable number of letters together then
+                    i glanced over the whole and found that many of the symbols made up
+                    letters with such a basis to work on the rest was only labour a few
+                    tentative efforts and i had corrected the key to agreement with some
+                    of the combinations in the cipher
+                </pre>
+            </answer>
         </exercise>
         <conclusion>
             <p>
                 These will be helpful in completing these problems.
             </p>
+            <p>Transposition Tool Cell</p>
+            <sage>
+                <input>
+                    <xi:include href="../sage_code/transposition_analysis.sage" parse="text"/>
+                </input>
+                <output></output>
+            </sage>
             <p>
                 Sage cell for calculating subsets of letters in a message:
             </p>
@@ -212,7 +323,9 @@
                 <input><xi:include href="../sage_code/subset_analysis.sage" parse="text"/></input>
                 <output></output>
             </sage>
-
+            <p>
+                Kasiski's Key Table: <xref ref="kasiski_key_table"/>
+            </p>
             <p>
                 Sage cell for enciphering and deciphering the Vigen&#x00E8;re Cipher:
             </p>
