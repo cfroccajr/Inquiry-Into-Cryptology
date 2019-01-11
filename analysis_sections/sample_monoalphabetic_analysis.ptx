@@ -1,5 +1,5 @@
     <section>
-        <title>Sample Monoalphabetic Analysis</title>
+        <title>Monoalphabetic Analysis</title>
 
         <p>
             Let us see if we can determine what is happening in this message:
@@ -109,15 +109,17 @@
             with the use of frequency analysis is our first tool."
         </p>
 
-        <figure xml:id="mono_analysis_page_one">
-            <caption>Sample Keyword Analysis Page 1:</caption>
-            <image width="100%" source="images/SampleMonoP1.jpg" />
-        </figure>
+        <sidebyside widths="50% 50%">
+            <figure xml:id="mono_analysis_page_one">
+                <caption>Sample Keyword Analysis Page 1:</caption>
+                <image width="100%" source="images/SampleMonoP1.jpg" />
+            </figure>
 
-        <figure xml:id="mono_analysis_page_two">
-            <caption>Sample Keyword Analysis Page 2:</caption>
-            <image width="100%" source="images/SampleMonoP2.jpg" />
-        </figure>
+            <figure xml:id="mono_analysis_page_two">
+                <caption>Sample Keyword Analysis Page 2:</caption>
+                <image width="100%" source="images/SampleMonoP2.jpg" />
+            </figure>
+        </sidebyside>
 
     <!--     <p>
             Filling in tables and data analysis are really just the first part of our analysis.  The "Frequency Analysis" and "Repeated Strings" tables are for keeping track of the count of the letter frequencies and for making notes on which strings we come across most often.  The contact table is used to make an accurate count of repeated digraphs (two letter combinations).  The first letter goes on the right and the second along the top, the number of times the digraph appears is counted in the box where row and column intersect.

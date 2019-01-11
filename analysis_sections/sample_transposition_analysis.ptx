@@ -1,9 +1,102 @@
 <section xml:id="sample_transposition_analysis">
-    <title>Sample Transpposition Analysis</title>
-
-        <figure xml:id="trans_analysis">
-                <caption>Sample Transposition Analysis:</caption>
-                <image width="100%" source="images/sample_transposition_analysis.png" archive="png svg pdf"/>
-        </figure>
+    <title>Transposition Analysis</title>
+    <p>
+        Consider this exercise from <xref ref="new_analysis_exercises" />:
+    </p>
+    <exercise>
+        <statement>
+            <p>
+                Decrypt this transposition cipher with crib <c>WEATHER</c>:
+            </p>
+            <pre>
+                HIPYEN TAUTCI WSDWPF ETTEEA ARONRN ENPMNC RTEPTH
+                RERHR  EMTCA  PPHHI  OREOL  FAIEL  TETCA  RNRNF OSIAN
+                MYWRR  RTNIU  CEDNN  ASIAO  RLSFA  IITHU  TDENA HASOD
+                HYAEQ  RNTUA  FETRE  TTENR  RITDO  YHNDT  IMOER
+            </pre>
+        </statement>
+        <answer>
+            <pre>
+                weather report for march thirty first
+                rain temps nearly steady in the mid to
+                upper thirties winds e at ten to twenty
+                mph chance of rain one hundred percent
+                rain fall around a quarter of an inch
+            </pre>
+        </answer>
+    </exercise>
+    <p>
+        To crack the cipher you need to first transpose each block of characters into a vertical column.
+    </p>
+    <pre>
+        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+        1 H T W E A E R R E  P  O  F  T  R  O  M  R  C  A  R  I  T  H  H  R  F  T  R  Y  I
+        2 I A S T R N T E M  P  R  A  E  N  S  Y  T  E  S  L  I  D  A  Y  N  E  T  I  H  M
+        3 P U D T O P E R T  H  E  I  T  R  I  W  N  D  I  S  T  E  S  A  T  T  E  T  N  O
+        4 Y T W E N M P H C  H  O  E  C  N  A  R  I  N  A  F  H  N  O  E  U  R  N  D  D  E
+        5 E C P E R N T R A  I  L  L  A  F  N  R  U  N  O  A  U  A  D  Q  A  E  R  O  T  R
+        6 N I F A N C H
+    </pre>
+    <p>
+        Next we need to identify words in the text which are jumbled up like an anagram.  Since we were given the crib <c>WEATHER</c> our task will be easier.  In the first row columns 3, 4, 5, 2, 1, 6, 7 can spell out <c>weather</c>.
+    </p>
+    <pre>
+        0 3 4 5 2 1 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+        1 W E A T H E R R E  P  O  F  T  R  O  M  R  C  A  R  I  T  H  H  R  F  T  R  Y  I
+        2 S T R A I N T E M  P  R  A  E  N  S  Y  T  E  S  L  I  D  A  Y  N  E  T  I  H  M
+        3 D T O U P P E R T  H  E  I  T  R  I  W  N  D  I  S  T  E  S  A  T  T  E  T  N  O
+        4 W E N T Y M P H C  H  O  E  C  N  A  R  I  N  A  F  H  N  O  E  U  R  N  D  D  E
+        5 P E R C E N T R A  I  L  L  A  F  N  R  U  N  O  A  U  A  D  Q  A  E  R  O  T  R
+        6 F A N I N C H
+    </pre>
+    <p>
+        Then if we take columns 8, 9, 10, 11, 14, 13 we get the word <c>report</c>.  And, after making that change we can see than 12, 15, 20 spells <c>for</c>.
+    </p>
+    <pre>
+        0 3 4 5 2 1 6 7 8 9 10 11 14 13 12 15 17 16 18 19 20 21 22 23 24 25 26 27 28 29 30
+        1 W E A T H E R R E  P  O  R  T  F  O  R  M  C  A  R  I  T  H  H  R  F  T  R  Y  I
+        2 S T R A I N T E M  P  R  N  E  A  S  T  Y  E  S  L  I  D  A  Y  N  E  T  I  H  M
+        3 D T O U P P E R T  H  E  R  T  I  I  N  W  D  I  S  T  E  S  A  T  T  E  T  N  O
+        4 W E N T Y M P H C  H  O  N  C  E  A  I  R  N  A  F  H  N  O  E  U  R  N  D  D  E
+        5 P E R C E N T R A  I  L  F  A  L  N  U  R  N  O  A  U  A  D  Q  A  E  R  O  T  R
+        6 F A N I N C H
+    </pre>
+    <p>
+        It would make since for the next few words to be a date and if we arrange the columns as 16, 19, 20, 18, 23, 22, 24, 21, 25, 27, 29, 26, 30, 28 then we get <c>march thirty first</c>.
+    </p>
+    <pre>
+        0 3 4 5 2 1 6 7 8 9 10 11 14 13 12 15 17 16 19 20 18 23 22 24 21 25 27 29 26 30 28
+        1 W E A T H E R R E  P  O  R  T  F  O  R  M  A  R  C  H  T  H  I  R  T  Y  F  I  R
+        2 S T R A I N T E M  P  R  N  E  A  S  T  Y  S  L  E  A  D  Y  I  N  T  H  E  M  I
+        3 D T O U P P E R T  H  E  R  T  I  I  N  W  I  S  D  S  E  A  T  T  E  N  T  O  T
+        4 W E N T Y M P H C  H  O  N  C  E  A  I  R  A  F  N  O  N  E  H  U  N  D  R  E  D
+        5 P E R C E N T R A  I  L  F  A  L  N  U  R  O  A  N  D  A  Q  U  A  R  T  E  R  O
+        6 F A N I N C H
+    </pre>
+    <p>
+        Now the first row looks good, but the others are a little off.  After some inspection you should see that swapping columns 11 and 15, and columns 17 and 20 should fix that.
+    </p>
+    <pre>
+        0 3 4 5 2 1 6 7 8 9 10 15 14 13 12 11 20 16 19 17 18 23 22 24 21 25 27 29 26 30 28
+        1 W E A T H E R R E  P  O  R  T  F  O  R  M  A  R  C  H  T  H  I  R  T  Y  F  I  R
+        2 S T R A I N T E M  P  S  N  E  A  R  L  Y  S  T  E  A  D  Y  I  N  T  H  E  M  I
+        3 D T O U P P E R T  H  I  R  T  I  E  S  W  I  N  D  S  E  A  T  T  E  N  T  O  T
+        4 W E N T Y M P H C  H  A  N  C  E  O  F  R  A  I  N  O  N  E  H  U  N  D  R  E  D
+        5 P E R C E N T R A  I  N  F  A  L  L  A  R  O  U  N  D  A  Q  U  A  R  T  E  R  O
+        6 F A N I N C H
+    </pre>
+    <p>Which, with a little work, gives:</p>
+    <pre>
+        weather report for march thirty first
+        rain temps nearly steady in the mid to
+        upper thirties winds e at ten to twenty
+        mph chance of rain one hundred percent
+        rain fall around a quarter of an inch
+    </pre>
+    <p>Along the way this is the sort of scrap work you will produce.</p>
+    <figure xml:id="trans_analysis">
+            <caption>Sample Transposition Analysis:</caption>
+            <image width="80%" source="images/sample_transposition_analysis.png" archive="png svg pdf"/>
+    </figure>
 
 </section>

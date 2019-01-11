@@ -1,5 +1,5 @@
 <section xml:id="sample_vigenere_analysis">
-    <title>Sample Vigenere Analysis</title>
+    <title>Vigenere Analysis</title>
     <p>
         We start by looking through this cipher text for repeated strings and counting the spaces between them:
     </p>

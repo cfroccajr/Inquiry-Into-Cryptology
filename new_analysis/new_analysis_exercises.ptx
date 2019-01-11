@@ -1,4 +1,4 @@
-    <exercises xmlns:xi="http://www.w3.org/2001/XInclude">
+    <exercises xml:id="new_analysis_exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
         <title>Do You Feel Logical?</title>
         <exercise>
             <statement>
