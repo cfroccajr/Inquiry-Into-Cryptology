@@ -78,13 +78,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 
-    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-        Monoalphabetics: Friedman, Sukhotin's Algorithm 
-
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
-
-    <xi:include href="new_analysis/statistical_attack.ptx"/>
 
     <xi:include href="new_analysis/new_analysis_exercises.ptx"/>
 

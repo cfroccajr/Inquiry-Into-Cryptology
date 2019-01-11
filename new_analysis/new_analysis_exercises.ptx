@@ -12,6 +12,30 @@
                     </p>
                 </blockquote>
             </statement>
+            <answer>
+                <pre>ANWZS UOLS QTIE KHEG IFLI CTJX VNAB OEPN MEOU MMDA EERO EYIT</pre>
+            </answer>
+            <solution>
+                <p>
+                    Set up a cipher table with the rows labled by the set of keys and the columns by the letters A, B, and C.
+                </p>
+                <p>
+                    Cipher Table:
+                </p>
+                <pre>
+                             A       B       C
+                    ACB :   ANWZS   UOLS    QTIE
+                    BCA :   KHEG    IFLI    CTJX
+                    CBA :   VNAB    OEPN    MEOU
+                    BAC :   MMDA    EERO    EYIT
+                </pre>
+                <p>
+                    Completed Message:
+                </p>
+                <pre>
+                    ANWZS UOLS QTIE KHEG IFLI CTJX VNAB OEPN MEOU MMDA EERO EYIT
+                </pre>
+            </solution>
         </exercise>
         <exercise>
             <statement>
@@ -92,7 +116,7 @@
                     ZITCPZXOD HQ YFF POH GWBCCWXOWPQD.
                 </pre>
             </statement>
-        </exercise>     
+        </exercise>
         <exercise>
             <statement>
                 <p>

@@ -52,4 +52,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <xi:include href="mechanical_ciphers/mech_ciphers.ptx"/>
     <xi:include href="mechanical_ciphers/wwii_ciphers.ptx"/>
 
+    <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+        Monoalphabetics: Friedman, Sukhotin's Algorithm 
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+    <xi:include href="mechanical_ciphers/statistical_attack.ptx"/>
+
+
 </chapter>
