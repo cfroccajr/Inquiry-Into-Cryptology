@@ -1,55 +1,50 @@
 # wheels:
-cipher_alphabet0 = "abcdefghijkl&mnopqrstuvwxyz"
-cipher_alphabet1 = "qwertyuiopasdfghjklzxcvbnm&"
-cipher_alphabet2 = "qazxswe&dcvfrtgbnhyujmkliop"
-cipher_alphabet3 = "alskdjhfgqwpoeiuyrt&zxmnbvc"
-cipher_alphabet4 = "&alksjhgfdqpoiuytrewmnbvcxz"
-cipher_alphabet8 = "zxcvbnmlkjhgfdsa&qwertyuiop"
-cipher_alphabet7 = "qazwsxedcrfvtgbyhn&ujmikolp"
-cipher_alphabet6 = "qwertyuiopmnbvcxz&laksjdhfg"
-cipher_alphabet5 = "zyxwvutsrqponmlkjihgfedcba&"
-
+disk_0 = list("A0LOVTZSMHNJRUIEWCDQPKBYGXF")
+disk_1 = list("AXZTKYMHPESDURFLWIVOGNBQ1JC")
+disk_2 = list("AJDWQIYCFXMUSGLBZTH2RVENKPO")
+disk_3 = list("AEVDQULIBSJ3HNPFWMYKGXCZTRO")
+disk_4 = list("AHUNFRILTG4MDOQPEXSYJKVWBCZ")
+disk_5 = list("AEUMDGZRJBQTXC5SLYFPNIVOHKW")
+disk_6 = list("A6LOVTZSMHNJRUIEWCDQPKBYGXF")
+disk_7 = list("AXZTKYMHPESDURFLWIVOGNBQ7JC")
+disk_8 = list("AJDWQIYCFXMUSGLBZTH8RVENKPO")
+disk_9 = list("AEVDQULIBSJ9HNPFWMYKGXCZTRO")
+disk_10 = list("AHUNFRILTGdMDOQPEXSYJKVWBCZ")
+disk_11 = list("AEGZRJBQTXCoSLYFPNIVOHKUMDW")
 
 # cylinder:
-cylinder = [cipher_alphabet0,cipher_alphabet1,cipher_alphabet2,cipher_alphabet3,cipher_alphabet4,cipher_alphabet5,cipher_alphabet6,cipher_alphabet7,cipher_alphabet8]
-
-# slider lists
-L0 = [cipher_alphabet0[i] for i in range(len(cipher_alphabet0))]
-L1 = [cipher_alphabet1[i] for i in range(len(cipher_alphabet1))]
-L2 = [cipher_alphabet2[i] for i in range(len(cipher_alphabet2))]
-L3 = [cipher_alphabet3[i] for i in range(len(cipher_alphabet3))]
-L4 = [cipher_alphabet4[i] for i in range(len(cipher_alphabet4))]
-L5 = [cipher_alphabet5[i] for i in range(len(cipher_alphabet5))]
-L6 = [cipher_alphabet6[i] for i in range(len(cipher_alphabet6))]
-L7 = [cipher_alphabet7[i] for i in range(len(cipher_alphabet7))]
-L8 = [cipher_alphabet8[i] for i in range(len(cipher_alphabet8))]
-
+cylinder = [disk_0,disk_1,disk_2,disk_3,disk_4,disk_5,disk_6,disk_7,disk_8,disk_9,disk_10,disk_11]
 
 # interactive:
 @interact
 def _(
-        wheel0=("Wheel 0:",slider(L0)),
-	    wheel1=("Wheel 1:",slider(L1)),
-	    wheel2=("Wheel 2:",slider(L2)),
-	    wheel3=("Wheel 3:",slider(L3)),
-	    wheel4=("Wheel 4:",slider(L4)),
-	    wheel5=("Wheel 5:",slider(L5)),
-	    wheel6=("Wheel 6:",slider(L6)),
-	    wheel7=("Wheel 7:",slider(L7)),
-	    wheel8=("Wheel 8:",slider(L8))
-	):
-    cylinder_settings=[wheel0,wheel1,wheel2,wheel3,wheel4,wheel5,wheel6,wheel7,wheel8]
+        wheel0=("Wheel 0:",slider(disk_0)),
+        wheel1=("Wheel 1:",slider(disk_1)),
+        wheel2=("Wheel 2:",slider(disk_2)),
+        wheel3=("Wheel 3:",slider(disk_3)),
+        wheel4=("Wheel 4:",slider(disk_4)),
+        wheel5=("Wheel 5:",slider(disk_5)),
+        wheel6=("Wheel 6:",slider(disk_6)),
+        wheel7=("Wheel 7:",slider(disk_7)),
+        wheel8=("Wheel 8:",slider(disk_8)),
+        wheel9=("Wheel 9:",slider(disk_9)),
+        wheelA=("Wheel 10:",slider(disk_10)),
+        wheelB=("Wheel 11:",slider(disk_11))
+    ):
+    args=locals()
     text_plot_sum = text("",(0,0))
     column_index = 3
-    for alphabet,character in zip(cylinder,cylinder_settings):
-    	temp_wheel = alphabet[alphabet.index(character):]+alphabet[:alphabet.index(character)]
-    	row_index=0
-    	for i in range(-3,4):
-            text_plot_sum += text(str(column_index-3),(column_index,1.5),fontsize=16,color="blue")
+    for alphabet,wheel in zip(cylinder,sorted(args)):
+        character = args[wheel]
+        temp_wheel = alphabet[alphabet.index(character):]+alphabet[:alphabet.index(character)]
+        row_index=0
+        for i in range(-3,4):
+            column_head = (column_index-3)/2
+            text_plot_sum += text(str(column_head),(column_index,1.5),fontsize=16,color="blue")
             if temp_wheel[i]==character:
-    	        text_plot_sum += text(temp_wheel[i].upper(),(column_index,-row_index),fontsize=16,color="red",fontweight="heavy")
+                text_plot_sum += text(temp_wheel[i],(column_index,-row_index),fontsize=16,color="red",fontweight="heavy")
             else:
                 text_plot_sum += text(temp_wheel[i],(column_index,-row_index),fontsize=16,color="green")
-    	    row_index+=1
-    	column_index+=1
-    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[4,5])
+            row_index+=2
+        column_index+=2
+    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[5,5])

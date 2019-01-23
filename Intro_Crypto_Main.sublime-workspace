@@ -536,6 +536,62 @@
 				[
 					"Main PTX Build",
 					"Windows Main PTX Build"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
 				],
 				[
 					"Packages/LaTeXTools/LaTeX.sublime-build",
@@ -1504,7 +1560,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows Main PTX Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1559,11 +1615,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/table_code"
+		"/C/GIT/Inquiry-Into-Cryptology/src",
+		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sample_vigenere_analysis.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_analysis/second_poly_attack.ptx",
@@ -1690,8 +1747,7 @@
 		"/Users/cfroccajr/Library/texmf/tex/latex/Historical_Persons.tex",
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Complex Numbers and Visuals.tex",
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex",
-		"/Users/cfroccajr/Documents/Temp/books.csv"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex"
 	],
 	"find":
 	{
@@ -1706,9 +1762,11 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"L([0-9]+)",
+			"cipher_alphabet",
 			"\n",
 			"\n        ",
 			"\n",
@@ -1772,11 +1830,13 @@
 			"para"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"disk_$1",
+			"disk_",
 			"</cline>\n<cline>",
 			"$1</cell><cell>$2</cell><cell>$3</cell></row>",
 			"\n<row><cell>",
@@ -1856,7 +1916,7 @@
 	},
 	"output.exec":
 	{
-		"height": 73.0
+		"height": 166.0
 	},
 	"output.find_results":
 	{
@@ -1870,7 +1930,7 @@
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
-		"height": 94.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
