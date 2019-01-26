@@ -341,24 +341,38 @@
         </exercise>
         <exercise>
             <statement>
+                <!-- declaration - WHIQCGXXWTH -->
                 <p>
-                    Jefferson practice enciphering
+                    Encipher <c>declaration</c> using Jefferson's wheel cipher.
                 </p>
             </statement>
+            <answer>
+                <pre>WHIQCGXXWTH</pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
+                <!-- independence - EBWVEUJUNPZG -->
                 <p>
-                    Jefferson practice enciphering
+                    Encipher <c>independence</c> using Jefferson's wheel cipher.
                 </p>
             </statement>
+            <answer>
+                <pre>
+                    EBWVEUJUNPZG
+                </pre>
+            </answer>
         </exercise>
         <exercise>
             <statement>
+                <!-- ZI2UHM6OXHII - moving on up to -->
                 <p>
-                    Jefferson practice deciphering
+                    Decipher <c>ZI2UHM6OXHII</c>, which was enciphered with Jefferson's wheel cipher.
                 </p>
             </statement>
+            <answer>
+                <pre>moving on up to</pre>
+            </answer>
         </exercise>
         <conclusion>
             <p><alert>Substitution Cipher Cell:</alert></p>
