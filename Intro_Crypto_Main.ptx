@@ -72,6 +72,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="chapter7_modern_cryptology.ptx" />
 
+    <!-- Chapter 8 Content -->
+
+        <xi:include href="chapter8_Future_cryptology.ptx" />
+
+
     <!-- Backmatter Content -->
 
         <xi:include href="crypto_backmatter.ptx" />

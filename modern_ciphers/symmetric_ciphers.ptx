@@ -13,7 +13,19 @@
                 </li>
             </ul>
         </objectives>
-        <todo>
-            Fill In Missing Material
-        </todo>
+        <subsection>
+            <title>Data Encryption Standard and Lucifer (DES)</title>
+            <p>Enter a Little History</p>
+            <p>Enter Quoets from Mini-DES</p>
+            <p>Enter Questions</p>
+        </subsection>
+        <subsection>
+            <title>Advanced Encryption Standard (AES)</title>
+            <p>Enter a Little History</p>
+            <p>Enter Quoets from Mini-AES</p>
+            <p>Enter Questions</p>
+        </subsection>
+        <conclusion>
+            <p>Comments about PGP combining DES and RSA</p>
+        </conclusion>
     </section>

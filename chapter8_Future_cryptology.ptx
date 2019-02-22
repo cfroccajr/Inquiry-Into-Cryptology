@@ -28,8 +28,8 @@ You should have received a copy of the GNU General Public License
 along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
-<chapter xml:id="ModernCrypto" xmlns:xi="http://www.w3.org/2001/XInclude">
-    <title> (*) The Modern Age </title>
+<chapter xml:id="FutureCrypto" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title> (*) The Future Age </title>
     <objectives>
         <ul>
             <li> Symmetric ciphers (DES, AES) and the roll of group theory and linear algebra</li>
@@ -38,10 +38,10 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </ul>
     </objectives>
 
-    <xi:include href="modern_ciphers/public_ciphers.ptx"/>
-    <xi:include href="modern_ciphers/assymmetric_ciphers.ptx"/>
-    <xi:include href="modern_ciphers/symmetric_ciphers.ptx"/>
-    <xi:include href="modern_ciphers/modern_cipher_exercises.ptx"/>
+    <xi:include href="modern_ciphers/quantum_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/lattice_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/elliptic_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/homomorphic_ciphers.ptx"/>
 
 
 </chapter>

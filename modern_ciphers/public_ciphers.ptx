@@ -10,7 +10,19 @@
                 </li>
             </ul>
         </objectives>
-        <todo>
-            Fill In Missing Material
-        </todo>
+        <subsection>
+            <p>
+                Enter a little history
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter some quotes from DH paper
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter comments on general ideas for enciphering vs. key exchange vs. signature schemes ...
+            </p>
+        </subsection>
     </section>

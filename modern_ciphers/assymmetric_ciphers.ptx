@@ -16,7 +16,29 @@
                 </li>
             </ul>
         </objectives>
-        <todo>
-            Fill In Missing Material
-        </todo>
+        <subsection>
+            <p>
+                Enter a little history ...
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter mathematical material from RSA ...
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter some general content on Number Theory...
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter cipher material from RSA ...
+            </p>
+        </subsection>
+        <subsection>
+            <p>
+                Enter material about DH key exchange
+            </p>
+        </subsection>
     </section>
