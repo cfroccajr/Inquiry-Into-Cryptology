@@ -84,6 +84,11 @@
 					"cmd": ["xsltproc", "--xinclude", "c:/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../tmp"
+				},
+				{"name": "Windows Main PTX Build with Calculator",
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+					"working_dir": "$project_path/../tmp"
 				}
 			]
 		}

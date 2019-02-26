@@ -594,6 +594,106 @@
 					"Windows Main PTX Build"
 				],
 				[
+					"Main PTX Build",
+					"Windows Main PTX Build with Calculator"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					""
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to HTML"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Process PreTeXt to LaTeX"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build latex-image images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build asymptote images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Build sageplot images"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Fetch Youtube thumbnails (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract MyOpenMath problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Extract WeBWorK problems (beta)"
+				],
+				[
+					"Packages/PreTeXtual/PreTeXt.sublime-build",
+					"Update PreTeXt"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build with Calculator"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
 					"Packages/LaTeXTools/LaTeX.sublime-build",
 					""
 				],
@@ -1560,7 +1660,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build",
+	"build_varint": "Windows Main PTX Build with Calculator",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1615,11 +1715,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/GIT/Inquiry-Into-Cryptology/src",
-		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
+		"/C/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sample_vigenere_analysis.ptx",
@@ -1637,7 +1737,6 @@
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/orbits.sage",
-		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
 		"/C/Users/roccac/AppData/Local/Temp/The_Papers_of_Thomas_Jefferson_Volume_40-1.bibtex",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
@@ -1746,8 +1845,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 5 Exam.tex",
 		"/Users/cfroccajr/Library/texmf/tex/latex/Historical_Persons.tex",
 		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Complex Numbers and Visuals.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 4 Exam.tex"
+		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex"
 	],
 	"find":
 	{
@@ -1765,6 +1863,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"geogebra",
 			"L([0-9]+)",
 			"cipher_alphabet",
 			"\n",
@@ -1832,7 +1931,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"disk_$1",
