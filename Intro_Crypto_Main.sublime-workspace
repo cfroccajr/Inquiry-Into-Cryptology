@@ -187,6 +187,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Cipher Chain/cipher_cellv2.html",
+			"settings":
+			{
+				"buffer_size": 2196,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -1660,7 +1669,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Main PTX Build with Calculator",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1973,8 +1982,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Cipher Chain/cipher_cellv2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1587,
+								1587
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
