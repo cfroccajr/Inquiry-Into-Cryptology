@@ -1,9 +1,9 @@
-    <exercises xml:id="modular_hill_exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <exercises xml:id="math_cipher_exercises" xmlns:xi="http://www.w3.org/2001/XInclude">
         <title>Up Hill struggle?</title>
         <exercise>
             <statement>
                 <p>
-                    Construct an addition and multiplication table modulo 6.  Which pairs of numbers are additive inverses? 
+                    Construct an addition and multiplication table modulo 6.  Which pairs of numbers are additive inverses?
                     Which pairs are multiplicative inverses, and how do they relate to 6?
                 </p>
             </statement>
