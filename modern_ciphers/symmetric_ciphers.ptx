@@ -14,6 +14,21 @@
             </ul>
         </objectives>
         <subsection>
+            <title>Feistel Cipher</title>
+            <p>General Description</p>
+            <p>Graphic of Cipher</p>
+            <p>Specific Mini-Example</p>
+            <p>Practice</p>
+            <p>Video</p>
+<!--             <subsubsection>
+                <title>Feistel Cipher</title>
+                <figure xml:id="feistel_video">
+                    <caption>Overview of a Feistel Cipher</caption>
+                    <video youtube="4RhLNDqcjpA" width="80%"/>
+                </figure>
+            </subsubsection> -->
+        </subsection>
+        <subsection>
             <title>Data Encryption Standard and Lucifer (DES)</title>
             <p>Enter a Little History</p>
             <p>Enter Quoets from Mini-DES</p>
