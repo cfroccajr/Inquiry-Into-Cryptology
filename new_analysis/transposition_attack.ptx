@@ -78,7 +78,7 @@
                 <answer>
                     <sidebyside>
                         <table>
-                            <caption>Prime Factorization</caption>
+                            <title>Prime Factorization</title>
                             <tabular left="minor" right="minor" halign="left">
                                 <row>
                                     <cell> 210 </cell>
@@ -97,7 +97,7 @@
                             </tabular>
                         </table>
                         <table>
-                            <caption>All Possible Factors</caption>
+                            <title>All Possible Factors</title>
                             <tabular halign="right">
                                 <row  left="minor">
                                     <cell right="minor"> 2 </cell>
@@ -160,7 +160,7 @@
                     </p>
                     <sidebyside>
                         <table xml:id="primes_first_checkpoint">
-                            <caption>Prime Factorization</caption>
+                            <title>Prime Factorization</title>
                             <tabular left="minor" right="minor" halign="left">
                                 <row>
                                     <cell> 210 </cell>
@@ -179,7 +179,7 @@
                             </tabular>
                         </table>
                         <table xml:id="factors_first_checkpoint">
-                            <caption>All Possible Factors</caption>
+                            <title>All Possible Factors</title>
                             <tabular halign="right">
                                 <row  left="minor">
                                     <cell right="minor"> 2 </cell>
@@ -242,7 +242,7 @@
                 </statement>
                 <answer>
                     <table>
-                        <caption>Prime Factorization</caption>
+                        <title>Prime Factorization</title>
                         <tabular left="minor" right="minor" halign="left">
                             <row>
                                 <cell> 980 </cell>
@@ -263,7 +263,7 @@
                         </tabular>
                     </table>
                     <table>
-                        <caption>All Possible Factors</caption>
+                        <title>All Possible Factors</title>
                         <tabular halign="right">
                             <row  left="minor">
                                 <cell right="minor"> 2 </cell>
@@ -373,7 +373,7 @@
                 Which transforms to the following when we rewrite it following Falconer's directions:
             </p>
             <table xml:id="falconer_transposed_message">
-                <caption>Transpose Table for a Falconer Cipher</caption>
+                <title>Transpose Table for a Falconer Cipher</title>
                 <tabular halign="right">
                     <row bottom="minor">
                         <cell right="minor"></cell>
@@ -437,7 +437,7 @@
                 this table to help you.
             </p>
             <table xml:id="blank_transpose_table">
-                <caption>Blank Transpose Table for a Falconer Cipher</caption>
+                <title>Blank Transpose Table for a Falconer Cipher</title>
                 <tabular halign="right">
                     <row bottom="minor">
                         <cell right="minor">Col's</cell>

@@ -44,11 +44,11 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <!-- Prefix to enhance Sage notebook contents -->
     <!-- <initialism>AATA</initialism> -->
 
-    <search>
+<!--     <search>
         <google>
             <cx>009171000619888925795:oupg1mw6ts0</cx>
         </google>
-    </search>
+    </search> -->
 
 
     <macros>

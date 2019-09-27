@@ -178,7 +178,7 @@
                     the key word is <em>ZEBRA</em> with key letter <em>f</em> we start as follows:
                 </p>
                 <table xml:id="cipher_zebra">
-                    <caption>Keyword Cipher: Word=<em>ZEBRA</em>, Letter=<em>f</em></caption>
+                    <title>Keyword Cipher: Word=<em>ZEBRA</em>, Letter=<em>f</em></title>
                     <tabular top="minor" left="minor" right="minor" halign="center">
                         <row>
                             <cell>plain</cell>
