@@ -223,7 +223,7 @@
             </sidebyside>
             <sidebyside widths="45% 40%">
                 <table xml:id="falconer_trans_table_3">
-                    <table> Falconer's Transposition Table Fully Filled</table>
+                    <title> Falconer's Transposition Table Fully Filled</title>
                     <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                         <row>
                             <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
