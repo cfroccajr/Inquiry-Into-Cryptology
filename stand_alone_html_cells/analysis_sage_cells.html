@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+ 
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Analysis Sage Cells</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+
+  </head>
+  
+
+  <body >
+
+  <center><h1><font color="black">Analysis Sage Cells</font></h1></center>
+
+
+<h2>n-Gram Analysis</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+import re
+
+@interact
+def ngram_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=5, width=50, type=str),N=[1..6],
+                    mode=selector(['All Characters','Alpha-Numeric','Alpha Only'],buttons=True)):
+    message = text.upper()
+    if mode == 'Alpha Only':
+        message = re.sub('[^A-Z]','',message)
+    elif mode=='Alpha-Numeric':
+        message = re.sub('[\\W]|[_]','',message)
+    message = re.sub('\\s+','',message)
+    count = {}
+    for i in range(len(message)-N+1):
+        c = message[i:i+N]
+        if c in count: count[c] += 1
+        else: count[c] = 1
+    print("The length of your message is {} characters".format(len(message)))
+    count = sorted([(value, key) for key, value in count.items()])
+    print("\tRank\tN-Gram\tCount\tPercent")
+    count.reverse()
+    rank = 1
+    for c in count[0:min(30,len(count))]:
+        if len(c[1])>6: 
+            tab=" "
+        else:
+            tab="\t"
+        print(str("\t"+str(rank)+"."),tab,c[1],tab,c[0],"\t %.4G" % (c[0]/len(message)*100.0))
+        rank += 1
+    if len(count)==26 and N==1 and mode=='Alpha Only': print("Pangram!!!")
+    </script></div>
+
+
+<h2>String Analysis</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+# Place Sage code here without indents
+import re
+@interact
+def string_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),
+                    key=input_box('sage', label="String to search", height=1, width=20, type=str)):
+    message = re.sub('[^A-Z]',' ',str(text.encode('ascii','replace').decode()).upper())+" "
+    message = re.sub('\\s+',' ',message)
+    print("This is what your cleaned up message looks like:\n\n",message[0:min(60,len(message))],"...\n\nis this what you intended?\n")
+    count = 0
+    K = re.sub('[^A-Z]',' ',str(key.encode('ascii','replace').decode()).upper())
+    N = len(K)
+    c=""
+    for i in range(len(message)-N+1):
+        c = message[i:i+N]
+        if c == K: 
+            count += 1
+            print("Instance",str(count),"\t",message[max(i-2,0):min(i+N+2,len(message))])
+    print("\nYour string appears ",str(count)," times.")
+
+    </script></div>
+
+
+<h2>Word Analysis</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+# Place Sage code here without indents
+import re
+@interact
+def word_count_simple(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),
+                    nWords=input_box(30,height=1,width=4,label="Number of Words",type=int)):
+    message = re.sub('[^A-Z]',' ',str(text.encode('ascii','replace').decode()).upper())+" "
+    count = {}
+    words = 0
+    c=""
+    for l in message:
+        if l==" ":
+            if c in count:
+                words += 1 
+                count[c] += 1
+            elif c!="": 
+                count[c] = 1
+                words += 1
+            c=""
+        else: c=c+l
+    print("The total number of words in your message is {}".format(words))
+    print("The number of distinct words in your message is {}".format(len(count)))
+    count = sorted([(value, key) for key, value in count.items()])
+    print("Word\t\tCount\t\tPercent\t\tTotal Percent")
+    count.reverse()
+    totalPercent=0
+    for c in count[0:min(nWords,len(count))]:
+        if len(c[1])>6: 
+            tab="\t"
+        else:
+            tab="\t\t"
+        percent=(c[0]/words*100.0)
+        if percent>1:
+            tab2="\t\t"
+        else:
+            tab2="\t"
+        totalPercent+=percent
+        print(c[1],tab,c[0],"\t\t %.4G" % percent,tab2,"%.4G" % totalPercent)
+    </script></div>
+
+
+<h2>Subset Analysis</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+# Place Sage code here without indents
+@interact
+def subset_count(
+                    text=input_box('Place the text that you would like to analyze here!!!', 
+                    label="Enter your message", height=3, width=50, type=str),
+                    Subsets=[1..10]):
+    message = AlphabeticStrings().encoding(str(text.encode('ascii','replace').decode()))
+    S = Subsets
+    sets = [""]*S
+    for i in range(0,len(message)):
+        sets[i%S] += str(message[i])
+    for i in range(S):
+        tmp_message = sets[i]
+        count = {}
+        for i in range(len(tmp_message)):
+            c = tmp_message[i:i+1]
+            if c in count: count[c] += 1
+            else: count[c] = 1
+        print("The length of this subset is {}".format(len(tmp_message)))
+        count = sorted([(value, key) for key, value in count.items()])
+        print("Character\tCount\t\tPercent")
+        count.reverse()
+        IC = 0
+        for c in count[0:min(30,len(count))]:
+            if len(c[1])>6: 
+                tab="\t"
+            else:
+                tab="\t\t"
+            print(c[1],tab,c[0],"\t\t %.4G" % (c[0]/len(tmp_message)*100.0))
+            IC += c[0]*(c[0]-1.0)/len(tmp_message)^2
+        print("And, the index of coincidence for this set is %.4G\n" %  (IC))
+
+    </script></div>
+
+
+<h2>Transposition Analysis</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+# Place Sage code here without indents
+@interact
+def _(message=input_box('EUS HJY TXZ UPE ISE QML COP BEN KVI WHO RRG OTD FL NEG OA',label="Message",type=str,width=50,height=3),
+        key_order_str=input_box('1,2,3,4,5,6,7,8,9,10,11,12,13,14,15',label="Column Order",type=str,width=50,height=2)):
+
+    message_blocks = message.split()
+    key_order = list(map(int,key_order_str.split(',')))
+    print(message_blocks)
+    print(key_order)
+
+    for i in range(len(max(message_blocks, key=len))+1):
+        row=''+str(i)
+        for j in key_order:
+            row += ' '
+            if i == 0:
+                row += str(j)
+            else:
+                if len(str(j))>1:
+                    row += ' '
+                try:
+                    row += message_blocks[j-1][i-1]
+                except:
+                    row += ' '
+        print(row)
+
+    </script></div>
+
+
+<h2>Sukhotin's Algorithm (Prototype)</h2>
+<font color="white">Enter the Sage cell code below, in the htnl that is between the div and script tags.</font>
+<!--Place Sage code here without indents-->
+    <div class="compute"><script type="text/x-sage">
+# Place Sage code here without indents
+# This SageMath Cell implements Sukhotin's Algorithm.  
+# To do so it views the inputed string as a graph; 
+# develops a list of nodes and sets up a dictionary 
+# for the adjacency matrix.
+
+import re
+
+def sukhotin(key,weights,edges):
+    for node in weights:
+        weights[node] = weights[node]-2*edges.get(key+node,0)
+        weights[node] = weights[node]-2*edges.get(node+key,0)
+    return weights
+
+@interact
+def sukhotin_algorithm(text=input_box('Place the text that you would like to analyze here!!!',label="Enter your message", height=3, width=84, type=str)): 
+                       
+# Clean up the input string
+    graph = re.sub('[^a-z]',"",str(text.encode('ascii','replace').decode()).lower())
+
+# Set up the initial list of nodes and the modified adjacency matrix
+    node_weights={}
+    edges={}
+    previous_node = graph[-1]
+
+    for node in graph:
+        if previous_node != node:
+            edge = previous_node+node
+            node_weights[node] = node_weights.get(node,0)+2
+            edges[edge] = edges.get(edge,0)+1
+        previous_node = node
+
+# Run through Sukhotin's algorithm to identify potential vowels
+    vowels = []
+    while max(node_weights.values())>0:
+        vowel = max(node_weights, key=node_weights.get)
+        vowels.append(vowel)
+        del node_weights[vowel]
+        node_weights = sukhotin(vowel,node_weights,edges)
+
+# Output the results of the algorithm
+    print("These are the list of potential vowels in your text:\n\t",vowels)
+    print("These are the letters that are left:\n\t",node_weights.keys())
+    </script></div>
+
+
+  </body>
+</html>
