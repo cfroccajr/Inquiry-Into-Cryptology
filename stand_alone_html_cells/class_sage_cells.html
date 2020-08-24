@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html>
+ 
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Classroom Sage Cells</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+
+  </head>
+  
+
+  <body >
+
+  <center><h1><font color="black">Class Sage Cells</font></h1></center>
+
+
+<h2>Brute Force Factorization</h2>
+<font color="white">Type your own Sage computation below and click “Evaluate”.</font>
+    <div class="compute"><script type="text/x-sage">
+      
+def brute(n):
+    count = 0
+    stop = math.ceil(math.sqrt(n))
+    temp_factor = 2
+    factored = False
+    while temp_factor <= stop and factored == False:
+        if n/temp_factor == n//temp_factor:
+            factored = True
+        else:
+            count += 1
+            temp_factor = next_prime(temp_factor)
+    print "a =", temp_factor
+    print "b =", n/temp_factor
+    print "computations =", 3*count+1
+
+brute(7661)
+
+
+
+    </script></div>
+
+<h2>Fermat Factorization</h2>
+<font color="white">Type your own Sage computation below and click “Evaluate”.</font>
+    <div class="compute"><script type="text/x-sage">
+      
+def fermat(n):
+    count=0
+    s=math.ceil(math.sqrt(n))
+    factored = False
+    while factored == False:
+        t = math.sqrt(s^2-n)
+        if t == floor(t):
+            factored = true
+        else:
+            count += 1
+            s += 1
+    print "s =", s
+    print "t =", t
+    print "a =", s+t
+    print "b =", s-t
+    print "computations =", 4*count
+
+fermat(7661)
+
+    </script></div>
+
+
+
+<h2>Pollard Rho Factorization</h2>
+<font color="white">Type your own Sage computation below and click “Evaluate”.</font>
+    <div class="compute"><script type="text/x-sage">
+      
+def p_rho(n,seed,count):
+    if count == 1:
+        x = (seed^2+1).mod(n)
+    else:
+        x = seed
+    print "x",count,"=",x
+    x_next = x
+    for i in range(count):
+        x_next = (x_next^2+1).mod(n)
+        print "x",count+i+1,"=",x_next
+    print "---------------------------"
+    temp_factor = gcd(n,x_next-x)
+    if temp_factor>1:
+        print "a =",temp_factor
+        print "b =",n/temp_factor
+        print "computations =",5*count
+    else:
+        new_seed = (x^2+1).mod(n)
+        p_rho(n,new_seed,count+1)
+
+p_rho(7661,2,1)
+
+    </script></div>
+
+
+<h2>Check Sum Sample:</h2>
+<font color="black">This is set up to find and append the check digit using the passport scheme in the text.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+id_number = "216738"
+coef = "731731"
+digit = 0
+for i in range(6):
+    digit = (digit+int(id_number[i])*int(coef[i]))%10
+final_id = id_number+"-"+str(digit)
+print "The complete id number is:",final_id
+    </script></div>
+
+
+
+<h2>Hash Functions and Collisions</h2>
+<font color="black">This implements the hash functions and collision avoidance described in the text.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+# In the function below "k" is the number to be hashed, "i" is the shift that should be used if there is a collision, "m" is the modulus of the hash function.
+
+def hi_hash(k,i,m):
+    try:
+        return Mod(k+i,m)
+    except:
+        return "Error"
+
+def g_hash(k,m):
+    try:
+        return Mod(k+1,m-2)
+    except:
+        return "Error"
+    
+# Here are a few lines showing the operation of the functions g and h
+
+id_number = 222334444
+modulus = 101
+slip = 0
+print hi_hash(id_number,slip,modulus)
+print g_hash(id_number,modulus)
+
+# Here is a sample of code with a loop which avoids collisions.
+
+id_numbers = [111223333,222334444,333445555,444556666,555667777,666778888,777889999,888990000,999001111,11222]
+modulus = 101
+slip = 0
+hashed_ids_noslip=[]
+hashed_ids=[]
+for ID in id_numbers:
+    temp_hash = hi_hash(ID,slip,modulus)
+    hashed_ids_noslip.append(temp_hash)
+    while temp_hash in hashed_ids:
+        slip = slip + 1
+        temp_hash = hi_hash(ID,slip,modulus)
+    slip = 0
+    hashed_ids.append(temp_hash)
+print "This list of hashed ids may have collisions:", hashed_ids_noslip
+print "This list of hashed ids should not have collisions:", hashed_ids
+    </script></div>
+
+
+<h2>Primality Testing</h2>
+<font color="black">Here are basic implementations of the Primality tests we discussed in class.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+        
+def basic_fermat(b,n):
+    prime = True
+    if n%2 == 0 or gcd(b,n)>1:
+        prime = False
+    elif power_mod(b,n,n)!=b:
+        prime = False
+    if prime:
+        return str("%i is prime or pseudoprime to the base %i" %(n,b))
+    else:
+        return str("%i is composite" %n)
+
+def miller_test(b,n):
+    prime = True
+    if n%2 == 0 or gcd(b,n)>1:
+        prime = False
+    else:
+        n1_factors = (n-1).factor()
+        s = n1_factors[0][1]
+        t = int((n-1)/(2**s))
+        if power_mod(b,t,n) != 1:
+            prime = False
+            j = 1
+            while prime == False and j<s:
+                exp = int(2**j*t)
+                if power_mod(b,exp,n) == n-1:
+                    prime = True
+                else:
+                    j += 1
+    if prime:
+        return str("%i is prime or a strong pseudoprime to the base %i" %(n,b))
+    else:
+        return str("%i is not prime" %n)
+
+def lucas_test(b,n):
+    prime = True
+    if n%2 == 0 or gcd(b,n)>1:
+        prime = False
+    else:
+        exp = int((n-1)/2)
+        if power_mod(b,exp,n) != (n-1):
+            prime = False
+        else:
+            n1_factors = (n-1).factor()
+            q_n1 = [q for q,e in n1_factors]
+            for q in q_n1:
+                exp = int((n-1)/q)
+                if power_mod(b,exp,n) == 1:
+                    prime = False
+                    break
+    if prime:
+        return str("%i is prime when checked with base %i" %(n,b))
+    else:
+        return str("%i may not be prime when checked with base %i" %(n,b))
+
+
+def proths_test(b,n):
+    prime = True
+    if n%2 == 0 or gcd(b,n)>1:
+        prime = False
+    else:
+        n1_factors = (n-1).factor()
+        m = n1_factors[0][1]
+        k = int((n-1)/(2**m))
+        exp = int((n-1)/2)
+        if power_mod(b,exp,n) != (n-1) or k >= 2**m:
+            prime = False
+    if prime:
+        return str("%i is prime when checked with base %i" %(n,b))
+    else:
+        return str("%i may not be prime when checked with base %i" %(n,b))
+
+print "Example of just using Fermat:"
+print "\t",basic_fermat(2,341)
+print str("\t341 = " + str(341.factor()))
+
+print "Example of using Miller's Test:"
+print "\t",miller_test(2,2047)
+print str("\t2047 = " + str(2047.factor()))
+
+print "Example of using Lucas's Test:"
+print "\t",lucas_test(2,1009)
+print "\t",lucas_test(11,1009)
+
+print "Example of using Proth's Test:"
+print "\t",proths_test(2,3329)
+print "\t",proths_test(3,3329)
+    </script></div>
+
+
+
+<h2>Caeser Shift Cipher Cell</h2>
+<font color="black">This cell demonstrates some of what you might need to know to implement ciphers.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+def caeser_shift(plain,shift):
+    cipher = ""
+    try:
+        for char in plain:
+            char_number = ord(char) # this converts characters to numbers
+            char_shift = (char_number + shift-33)%97+33 # there are a limited number to characters, and they start at 33
+            char_cipher = chr(char_shift) # this converts numbers back to characters
+            cipher += char_cipher # this adds the new character to our output
+        return cipher
+    except:
+        print "Error in Input!"
+    
+
+print caeser_shift("Hello World",23)
+    </script></div>
+
+
+
+
+
+<h2>Your own computations</h2>
+<font color="black">Type your own Sage computation below and click “Evaluate”.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage"></script></div>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

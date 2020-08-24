@@ -1,0 +1,358 @@
+<!DOCTYPE HTML>
+<html>
+ 
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cipher Sage Cells</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+
+  </head>
+  
+
+  <body >
+
+  <center><h1><font color="black">Cipher Sage Cells</font></h1></center>
+
+
+<h2>Substitution Cipher</h2>
+    <div class="compute"><script type="text/x-sage">
+      
+import textwrap
+@interact
+def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=50,height=1),
+            c = input_box('ZYXWVUTSRQPONMLKJIHGFEDCBA',label='Cipher', type=str,width=50,height=1),
+            shift=[0..25],
+            mode=selector(['encipher','decipher'], buttons=True),
+            spaces = selector(['yes','no'], buttons=True),
+            m=input_box('sage', label="Message", height=5, width=50, type=str)):
+    P = str(p.encode('ascii','replace').decode()).upper()
+    C = str(c.encode('ascii','replace').decode()).upper()
+    C = C[shift:]+C[:shift]
+    Message = str(m.encode('ascii','replace').decode()).upper()
+    print("\nPlain alphabet: \t", str(P).lower())
+    print("Cipher alphabet:\t", str(C))
+    if len(C)!=len(P):
+        print("Key lengths do not match.")
+    else:
+        if mode == 'encipher':
+            inText = P
+            outText = C
+        else:
+            inText = C.lower()
+            outText = P.lower()
+            Message = Message.lower()
+        output = ""
+        for char in Message:
+            try:
+                position = inText.index(char)
+                output += outText[position]
+            except:
+                if spaces=='yes': output += char
+                else: pass
+        print("\nHere is your output:\n")
+        if spaces == 'yes':
+            print(textwrap.fill(output, 50))
+        else:
+            for i in range(0,len(output),5):
+                print(output[i:i+5],)
+                if (i+5)%50 == 0: print("\n")
+
+    </script></div>
+
+
+<h2>Affine Cipher:</h2>
+    <div class="compute"><script type="text/x-sage">
+      
+@interact
+def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=str),m=[1..25], s=[0..25]):
+    S = AffineCryptosystem(AlphabeticStrings())
+    clean_text = S.encoding(str(me.encode('ascii','replace').decode()))
+    try:
+        e = S(m,s)
+        cipher_text = e(clean_text)
+        print("Your affine enciphering text is\n")
+        for i in range(0,len(cipher_text),5):
+            print(cipher_text[i:i+5])
+            if (i+5)%50 == 0: print("\n")
+    except:
+        print("error, likely in your key")
+        cipher_text = clean_text
+
+
+    </script></div>
+
+
+<h2>Alberti's Disc</h2>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+# constants:
+plain_alphabet = "ABCDEFGILMNOPQRSTVXZ1234"
+cipher_alphabet = "acegklnprtvz&xysomqihfdb"
+U = [plain_alphabet[i] for i in range(len(plain_alphabet))]
+L = [cipher_alphabet[i] for i in range(len(cipher_alphabet))]
+
+
+# interactive:
+@interact
+def _(Key=("Key Letter",slider(U)),
+      index_letter=("Index Letter",slider(L))):
+    alpha_len = min(len(plain_alphabet),len(cipher_alphabet))
+    angle = 2*pi/alpha_len
+    #print Key,index_letter
+    text_plot_sum = text("",(0,0))
+    radius=1
+    index1 = cipher_alphabet.index(index_letter)
+    index2 = plain_alphabet.index(Key)
+    index = index1-index2
+    #print index
+    for i in range(alpha_len):
+        if cipher_alphabet[i]==index_letter:
+            text_plot_sum += text(cipher_alphabet[i],(radius*cos(-angle*i),radius*sin(-angle*i)),rotation=-90-180/pi*angle*i,axes="none",fontsize=16,color="green",fontweight="heavy")
+            text_plot_sum += text(plain_alphabet[(i-index)%alpha_len],(1.25*radius*cos(-angle*i),1.25*radius*sin(-angle*i)),rotation=-90-180/pi*angle*i,axes="none",fontsize=16,color="green",fontweight="heavy")
+        else:
+            text_plot_sum += text(cipher_alphabet[i],(radius*cos(-angle*i),radius*sin(-angle*i)),rotation=-90-180/pi*angle*i,axes="none",fontsize=16)
+            text_plot_sum += text(plain_alphabet[(i-index)%alpha_len],(1.25*radius*cos(-angle*i),1.25*radius*sin(-angle*i)),rotation=-90-180/pi*angle*i,axes="none",fontsize=16,color="red")
+    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[4,4])
+    </script></div>
+
+<h2>Vigenere's Cipher</h2>
+    <div class="compute"><script type="text/x-sage">
+      
+import re
+import textwrap
+
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
+        key=input_box('sage', label="Enter your key", height=1, width=20, type=str),
+        mode = selector(['encipher','decipher'], buttons=True),
+        spaces = selector(['yes','no'], buttons=True)):
+    plain_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    clean_message = str(m.encode('ascii','replace').decode()).upper()
+    if spaces == 'no':
+        clean_message = re.sub('[^A-Z]','',clean_message)
+    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace').decode()).upper())
+    key_list = [plain_alpha.index(ch) for ch in cipher_key]
+    if mode == 'decipher':
+        key_list = [-1*k for k in key_list] 
+    cipher_text = ""
+    key_counter = 0
+    for ch in clean_message:
+        try:
+            tmp_pos = plain_alpha.index(ch)
+            cipher_pos = (tmp_pos+key_list[key_counter])%26
+            cipher_text += plain_alpha[cipher_pos]
+            key_counter = (key_counter+1)%len(key_list)
+        except:
+            if spaces == 'yes':
+                cipher_text += ch
+    print("\nHere is your output:\n")
+    if spaces == 'yes':
+        print(textwrap.fill(cipher_text, 42))
+    else:
+        for i in range(0,len(cipher_text),6):
+            print(cipher_text[i:i+6],)
+            if (i+6)%42 == 0: print("\n")
+
+    </script></div>
+
+<h2>Autokey Cipher</h2>
+    <div class="compute"><script type="text/x-sage">
+import re
+import textwrap
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
+        alpha=input_box('ABCDEFGHIJKLMNOPQRSTUVWXYZ', label="Alphabet", height=1, width=50, type=str),
+        key=input_box('sage', label="Enter your key", height=1, width=20, type=str),
+        mode = selector(['encipher','decipher'], buttons=True),
+        model = selector(['original','modern'], buttons=True),
+        spaces = selector(['yes','no'], buttons=True)):
+
+# Clean input text and set key:
+
+    clean_message = str(m.encode('ascii','replace').decode()).upper()
+    spaceless_message = re.sub('[^A-Z]','',clean_message)
+    if spaces == 'no':
+        clean_message = spaceless_message
+    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace').decode()).upper())
+    cipher_key += spaceless_message
+    key_list = [alpha.index(ch) for ch in cipher_key]
+
+# Set method original/modern
+
+    if model == 'original':
+        temp_keys=[]
+        for key in key_list:
+            temp_keys.append((key-key%2)/2)
+        key_list=temp_keys
+
+# Set key to encipher/decipher:
+
+    if mode == 'decipher':
+        key_list = [-1*k for k in key_list] 
+    cipher_text = ""
+    key_counter = 0
+
+# Encipher/decipher message:
+
+    for ch in clean_message:
+        try:
+            tmp_pos = alpha.index(ch)
+            cipher_pos = (tmp_pos+key_list[key_counter])%26
+            cipher_text += alpha[cipher_pos]
+            key_counter = (key_counter+1)%len(key_list)
+        except:
+            if spaces == 'yes':
+                cipher_text += ch
+
+# Print message:
+
+    print("\nHere is your output:\n")
+    if spaces == 'yes':
+        print(textwrap.fill(cipher_text, 42))
+    else:
+        for i in range(0,len(cipher_text),6):
+            print(cipher_text[i:i+6],)
+            if (i+6)%42 == 0: print("\n")
+    </script></div>
+
+
+<h2>Falconer's Cipher</h2>
+    <div class="compute"><script type="text/x-sage">
+        
+import textwrap
+import re
+@interact
+def falconer(message=input_box("The quick brown fox jumps over the lazy sleeping dog.",
+                                  label="Message:", type=str, width=50, height=3),
+             keys=input_grid(1,6,default=["CBA", "CAB", "ACB", "BCA","BAC",""],
+                    label="Keys:", to_value=list, type=str),
+            chars=[3..5]):
+    text = re.sub('[^A-Z]','',str(message.encode('ascii','replace').decode()).upper())
+    columns = "ABCDE"
+    key = keys[0]
+    while "" in key: key.remove("")
+    message_table = [["" for x in range(chars)] for y in range(len(key))]
+    for i in range(0,len(text),chars):
+        row = (i/chars)%len(key)
+        for j in range(chars):
+            try:
+                col = columns.index(key[row][j])
+            except:
+                col = chars-1 #pass
+            try:
+                message_table[row][col] += str(text[i+j])
+            except:
+                pass
+    out_message = ""
+    print("Chracters in text: ",len(text))
+    print("Cipher Table:")
+    for k in range(len(key)):
+        print("\t",str(key[k][0:chars]),":\t","\t".join(message_table[k]))
+        for i in range(chars):
+            out_message += str(message_table[k][i])+" "
+    print("Completed Message:")
+    #for i in xrange(0,len(out_message),50):
+    #    print("\t",out_message[i:min(i+50,len(out_message))].strip())
+    print(textwrap.fill(out_message, 50))
+    </script></div>
+
+<h2>Jefferson's Cipher Wheel</h2>
+<font color="black">Type your own Sage computation below and click “Evaluate”.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage">
+# wheels:
+disk_0 = list("A0LOVTZSMHNJRUIEWCDQPKBYGXF")
+disk_1 = list("AXZTKYMHPESDURFLWIVOGNBQ1JC")
+disk_2 = list("AJDWQIYCFXMUSGLBZTH2RVENKPO")
+disk_3 = list("AEVDQULIBSJ3HNPFWMYKGXCZTRO")
+disk_4 = list("AHUNFRILTG4MDOQPEXSYJKVWBCZ")
+disk_5 = list("AEUMDGZRJBQTXC5SLYFPNIVOHKW")
+disk_6 = list("A6LOVTZSMHNJRUIEWCDQPKBYGXF")
+disk_7 = list("AXZTKYMHPESDURFLWIVOGNBQ7JC")
+disk_8 = list("AJDWQIYCFXMUSGLBZTH8RVENKPO")
+disk_9 = list("AEVDQULIBSJ9HNPFWMYKGXCZTRO")
+disk_A = list("AHUNFRILTGdMDOQPEXSYJKVWBCZ")
+disk_B = list("AEGZRJBQTXCoSLYFPNIVOHKUMDW")
+
+# cylinder:
+cylinder = [disk_0,disk_1,disk_2,disk_3,disk_4,disk_5,disk_6,disk_7,disk_8,disk_9,disk_A,disk_B]
+
+# interactive:
+@interact(layout={'top': [['wheel0', 'wheel1','wheel2','wheel3'],['wheel4', 'wheel5','wheel6','wheel7'],['wheel8','wheel9','wheelA','wheelB']]})
+def _(
+        wheel0=selector(disk_0,label="0"),
+        wheel1=selector(disk_1,label="1"),
+        wheel2=selector(disk_2,label="2"),
+        wheel3=selector(disk_3,label="3"),
+        wheel4=selector(disk_4,label="4"),
+        wheel5=selector(disk_5,label="5"),
+        wheel6=selector(disk_6,label="6"),
+        wheel7=selector(disk_7,label="7"),
+        wheel8=selector(disk_8,label="8"),
+        wheel9=selector(disk_9,label="9"),
+        wheelA=selector(disk_A,label="10"),
+        wheelB=selector(disk_B,label="11")
+    ):
+    args=locals()
+    text_plot_sum = text("",(0,0))
+    column_index = 3
+    for alphabet,wheel in zip(cylinder,sorted(args)):
+        character = args[wheel]
+        temp_wheel = alphabet[alphabet.index(character):]+alphabet[:alphabet.index(character)]
+        row_index=0
+        for i in range(-3,4):
+            column_head = (column_index-3)/2
+            text_plot_sum += text(str(column_head),(column_index,1.5),fontsize=16,color="blue")
+            if temp_wheel[i]==character:
+                text_plot_sum += text(temp_wheel[i],(column_index,-row_index),fontsize=16,color="red",fontweight="heavy")
+            else:
+                text_plot_sum += text(temp_wheel[i],(column_index,-row_index),fontsize=16,color="green")
+            row_index+=2
+        column_index+=2
+    text_plot_sum.show(axes=False,aspect_ratio=1,figsize=[5,5])
+    </script></div>
+  </body>
+</html>
+
+<h2>Hill's Cipher</h2>
+    <div class="compute"><script type="text/x-sage">
+@interact
+def _(m=input_box('sage', label="Enter your message", height=3, 
+    width=50, type=str),
+    key=input_grid(2,2,default=[[7,12],[3,3]],type=int,width=2)):
+    S = HillCryptosystem(AlphabeticStrings(),2)
+    M = MatrixSpace(IntegerModRing(26),2,2)
+    e = S(M(key).transpose())
+    clean_text = S.encoding(str(m.encode('ascii','replace').decode()))
+    if len(clean_text)%2 == 1:
+        clean_text = S.encoding(str(m)+"Z")
+    cipher_text = e(clean_text)
+    print(str("Your Hill enciphering text is\n"))
+    for i in range(0,len(cipher_text),5):
+        print(cipher_text[i:i+5],)
+        if (i+5)%50 == 0: print("\n")
+    </script></div>
+
+<h2>Your own computations</h2>
+<font color="black">Type your own Sage computation below and click “Evaluate”.</font>
+<p></p>
+    <div class="compute"><script type="text/x-sage"></script></div>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
