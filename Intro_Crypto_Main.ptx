@@ -29,7 +29,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************-->
 
 
-<mathbook  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<pretext  xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
 
 
     <!-- author, brand, latex macros, etc. -->
@@ -82,4 +82,4 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <xi:include href="crypto_backmatter.ptx" />
 
     </book>
-</mathbook>
+</pretext>

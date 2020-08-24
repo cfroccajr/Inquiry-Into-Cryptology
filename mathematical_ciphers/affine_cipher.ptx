@@ -96,7 +96,7 @@
                     Test your understanding by filling in the rest of this multiplication table:
                 </p>
                 <table xml:id="mod_fourteen_table">
-                    <caption>Multiplication Modulo 14</caption>
+                    <title>Multiplication Modulo 14</title>
                     <tabular halign="right">
                         <row bottom="minor">
                             <cell right="minor" ><m>\times_{14}</m></cell>
@@ -205,7 +205,7 @@
                     Finally, fill in this addition table for addition modulo 14.
                 </p>
                 <table xml:id="mod_fourteen_table_addition">
-                    <caption>Addition Modulo 14</caption>
+                    <title>Addition Modulo 14</title>
                     <tabular halign="right">
                         <row bottom="minor">
                             <cell right="minor" ><m>+_{14}</m></cell>

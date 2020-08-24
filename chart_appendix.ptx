@@ -179,7 +179,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
     <table xml:id="appendix_trans_table">
-        <caption> Falconer's Transposition Table</caption>
+        <title> Falconer's Transposition Table</title>
         <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
             <row>
                 <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>

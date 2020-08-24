@@ -173,7 +173,7 @@
             </p>
             <sidebyside widths="45% 45%">
                 <table xml:id="falconer_trans_table_1">
-                    <caption> Falconer's Transposition Table Initial Setup</caption>
+                    <title> Falconer's Transposition Table Initial Setup</title>
                     <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                         <row>
                             <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
@@ -196,7 +196,7 @@
                     </tabular>
                 </table>
                 <table xml:id="falconer_trans_table_2">
-                    <caption> Falconer's Transposition Table After the First Pass</caption>
+                    <title> Falconer's Transposition Table After the First Pass</title>
                     <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                         <row>
                             <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
@@ -223,7 +223,7 @@
             </sidebyside>
             <sidebyside widths="45% 40%">
                 <table xml:id="falconer_trans_table_3">
-                    <caption> Falconer's Transposition Table Fully Filled</caption>
+                    <title> Falconer's Transposition Table Fully Filled</title>
                     <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                         <row>
                             <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
@@ -272,7 +272,7 @@
                         First put the blocks of text into the table row by row in alphabetical order:
                     </p>
                     <table xml:id="falconer_trans_practice_1">
-                        <caption> Falconer's Transposition Practice</caption>
+                        <title> Falconer's Transposition Practice</title>
                         <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                             <row>
                                 <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
@@ -348,7 +348,7 @@
                         Then copy each character into the table using the combination keys at the side to tell us which column to put each character in.
                     </p>
                     <table xml:id="falconer_practice_table_2">
-                        <caption> Falconer's Transposition Practice</caption>
+                        <title> Falconer's Transposition Practice</title>
                         <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                             <row>
                                 <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>
@@ -382,8 +382,7 @@
                 <statement>
                     <p>
                         Encipher the following message using the three letters as before, but with the row keys 
-                        <c>ACB - CAB - BAC - ABC</c>, <xref ref="appendix_trans_table" text="type-global"/> is a blank table you 
-                        can copy if you need to:
+                        <c>ACB - CAB - BAC - ABC</c>, <xref ref="appendix_trans_table" text="type-global"/> is a blank table you can copy if you need to:
                     </p>
                     <blockquote>
                         <p>
@@ -421,7 +420,7 @@
                         Then copy each character into the table using the combination keys at the side to tell us which column to put each character in.
                     </p>
                     <table xml:id="falconer_practice_table_3">
-                        <caption> Falconer's Transposition Practice</caption>
+                        <title> Falconer's Transposition Practice</title>
                         <tabular top="minor" left="minor" right="minor" halign="center" bottom="minor">
                             <row>
                                 <cell /><cell> </cell><cell>A</cell><cell>B</cell><cell>C</cell>

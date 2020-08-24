@@ -1,5 +1,5 @@
 <table xml:id="blank_key_table">
-    <caption>Monoalphabetic Substitution Table</caption>
+    <title>Monoalphabetic Substitution Table</title>
     <tabular top="minor" left="minor" right="minor" halign="center">
         <row>
             <cell>plain</cell>

@@ -28,7 +28,7 @@
 	[
 		{
 			"name": "Main PTX Build",
-			"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+			"cmd": ["xsltproc", "--xinclude", "--stringparam", "debug.colors", "orange_navy", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 			"working_dir": "$project_path/../tmp",
 
@@ -39,11 +39,17 @@
 				// {"name": "PWD",
 				// 	"cmd":"pwd"
 				// },
-				{"name":"to HTML Folder",
-					"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+				{"name":"WCSU Color Build to HTML Folder",
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "debug.colors", "orange_navy", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../html"
 				},
+
+				// {"name":"to HTML Folder",
+				// 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+				// 	"working_dir": "$project_path/../html"
+				// },
 				
 				{"name": "Check Schema",
 					"cmd": ["java", "-classpath", "/Users/cfroccajr/Applications/GIT/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar", "/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"]
