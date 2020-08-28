@@ -96,11 +96,16 @@
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../html"
 				},
-				{"name": "Windows Main PTX Build with Calculator",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+				{"name": "Windows Check Schema",
+					"cmd": ["java", "-classpath", "c:/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "c:/jing-trang/build/jing.jar", "c:/git/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"],
+                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../tmp"
-				}
+				},
+				// {"name": "Windows Main PTX Build with Calculator",
+				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+				// 	"working_dir": "$project_path/../tmp"
+				// }
 			]
 		}
 	]
