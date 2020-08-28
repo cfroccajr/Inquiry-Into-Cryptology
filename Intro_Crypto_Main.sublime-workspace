@@ -187,15 +187,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Cipher Chain/cipher_cellv2.html",
-			"settings":
-			{
-				"buffer_size": 2196,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -494,6 +485,130 @@
 			[
 				"Main PTX Build",
 				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build with Calculator"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Main PTX Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build with Calculator"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows WCSU Color Build to HTML Folder"
 			]
 		],
 		[
@@ -1669,7 +1784,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Windows WCSU Color Build to HTML Folder",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1727,6 +1842,26 @@
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/affine_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/stand_alone_html_cells/analysis_sage_cells.html",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/stand_alone_html_cells/cipher_sage_cells.html",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/prime_practice.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/vigenere_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/transposition_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subset_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/string_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/falconer_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/autokey_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Cipher Chain/cipher_cellv2.html",
 		"/C/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/GIT/mathbook/examples/sample-article/sample-article.xml",
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
@@ -1834,27 +1969,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Venezia_Board.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/paper_size_test.tex",
 		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter1_Vectors.mbx",
-		"/Users/cfroccajr/Dropbox/WCSU/Elmore_File.tex",
-		"/Users/cfroccajr/Applications/GIT/git_play/testing/dangermouse.txt",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/gfdl-mathbook.xml",
-		"/Users/cfroccajr/Downloads/Latex_A_Document_Preparation_System_2_E.bibtex",
-		"/Users/cfroccajr/Downloads/Math essay Wayne .docx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_frontmatter.mbx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.mbx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx.xml",
-		"/Users/cfroccajr/Documents/CryptoText/src/Intro_Crypto_Main.mbx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 207 - Proofs/2017 Number Theory Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fal MAT 110 Beyond Counting.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/2017 Fall Geometry Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 110 - Great Ideas in Mathematics/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/texmf/tex/latex/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/WCSU/2012 Spring Make Ups/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/WCSU/MATH 363/Historical_Persons.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/MAT 272 - Linear Algebra/2017 Fall Unit 5 Exam.tex",
-		"/Users/cfroccajr/Library/texmf/tex/latex/Historical_Persons.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Complex Numbers and Visuals.tex",
-		"/Users/cfroccajr/Dropbox/Apps/TeX Writer/MAT110/Games Unit 2 Exam - v2.tex"
+		"/Users/cfroccajr/Dropbox/WCSU/Elmore_File.tex"
 	],
 	"find":
 	{
@@ -1982,37 +2097,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Cipher Chain/cipher_cellv2.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2196,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1587,
-								1587
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -2053,7 +2139,7 @@
 	},
 	"output.exec":
 	{
-		"height": 166.0
+		"height": 358.0
 	},
 	"output.find_results":
 	{
@@ -2063,7 +2149,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Main PTX Build",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
@@ -2108,7 +2194,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":
