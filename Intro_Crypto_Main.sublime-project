@@ -92,7 +92,7 @@
 					"working_dir": "$project_path/../tmp"
 				},
 				{"name":"Windows WCSU Color Build to HTML Folder",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "debug.colors", "orange_navy", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+					"cmd": ["xsltproc", "--xinclude", "--stringparam", "publisher", "publication.xml", "--stringparam", "debug.colors", "orange_navy", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../html"
 				},
