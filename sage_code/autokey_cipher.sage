@@ -10,11 +10,11 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
 
 # Clean input text and set key:
 
-    clean_message = str(m.encode('ascii','replace')).upper()
+    clean_message = str(m.encode('ascii','replace').decode()).upper()
     spaceless_message = re.sub('[^A-Z]','',clean_message)
     if spaces == 'no':
         clean_message = spaceless_message
-    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace')).upper())
+    cipher_key = re.sub('[^A-Z]','',str(key.encode('ascii','replace').decode()).upper())
     cipher_key += spaceless_message
     key_list = [alpha.index(ch) for ch in cipher_key]
 
@@ -25,7 +25,6 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
         for key in key_list:
             temp_keys.append((key-key%2)/2)
         key_list=temp_keys
-    print key_list
 
 # Set key to encipher/decipher:
 
@@ -48,10 +47,10 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
 
 # Print message:
 
-    print "\nHere is your output:\n"
+    print("\nHere is your output:\n")
     if spaces == 'yes':
-        print textwrap.fill(cipher_text, 42)
+        print(textwrap.fill(cipher_text, 42))
     else:
-        for i in xrange(0,len(cipher_text),6):
-            print cipher_text[i:i+6],
-            if (i+6)%42 == 0: print "\n"
+        for i in range(0,len(cipher_text),6):
+            print(cipher_text[i:i+6],)
+            if (i+6)%42 == 0: print("\n")

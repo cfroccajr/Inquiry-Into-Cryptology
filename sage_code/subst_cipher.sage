@@ -6,14 +6,14 @@ def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=5
             mode=selector(['encipher','decipher'], buttons=True),
             spaces = selector(['yes','no'], buttons=True),
             m=input_box('sage', label="Message", height=5, width=50, type=str)):
-    P = str(p.encode('ascii','replace')).upper()
-    C = str(c.encode('ascii','replace')).upper()
+    P = str(p.encode('ascii','replace').decode()).upper()
+    C = str(c.encode('ascii','replace').decode()).upper()
     C = C[shift:]+C[:shift]
-    Message = str(m.encode('ascii','replace')).upper()
-    print "\nPlain alphabet: \t", str(P).lower()
-    print "Cipher alphabet:\t", str(C)
+    Message = str(m.encode('ascii','replace').decode()).upper()
+    print("\nPlain alphabet: \t", str(P).lower())
+    print("Cipher alphabet:\t", str(C))
     if len(C)!=len(P):
-        print "Key lengths do not match."
+        print("Key lengths do not match.")
     else:
         if mode == 'encipher':
             inText = P
@@ -30,10 +30,10 @@ def _(p = input_box('abcdefghijklmnopqrstuvwxyz',label='Plain', type=str,width=5
             except:
                 if spaces=='yes': output += char
                 else: pass
-        print "\nHere is your output:\n"
+        print("\nHere is your output:\n")
         if spaces == 'yes':
-            print textwrap.fill(output, 50)
+            print(textwrap.fill(output, 50))
         else:
-            for i in xrange(0,len(output),5):
-                print output[i:i+5],
-                if (i+5)%50 == 0: print "\n"
+            for i in range(0,len(output),5):
+                print(output[i:i+5],)
+                if (i+5)%50 == 0: print("\n")

@@ -8,9 +8,9 @@ def factor_practice(
     solution = selector(['Hide Solution','Show Solution'], buttons=True),
     problem = selector(['Current','New'], buttons=True)):
     global number
-    print "Try to find the factors of =",number
+    print("Try to find the factors of =",number)
     if solution=='Show Solution':
-        print factor(number)
+        print(factor(number))
     if problem == 'New':
         solution = 'Hide Solution'
         number = random.randint(2,210)

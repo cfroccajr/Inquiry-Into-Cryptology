@@ -1,4 +1,3 @@
-
 # constants:
 plain_alphabet = "ABCDEFGILMNOPQRSTVXZ1234"
 cipher_alphabet = "acegklnprtvz&xysomqihfdb"

@@ -15,7 +15,7 @@ def sukhotin(key,weights,edges):
 def sukhotin_algorithm(text=input_box('Place the text that you would like to analyze here!!!',label="Enter your message", height=3, width=84, type=str)): 
                        
 # Clean up the input string
-    graph = re.sub('[^a-z]',"",str(text.encode('ascii','replace')).lower())
+    graph = re.sub('[^a-z]',"",str(text.encode('ascii','replace').decode()).lower())
 
 # Set up the initial list of nodes and the modified adjacency matrix
     node_weights={}
@@ -38,5 +38,5 @@ def sukhotin_algorithm(text=input_box('Place the text that you would like to ana
         node_weights = sukhotin(vowel,node_weights,edges)
 
 # Output the results of the algorithm
-    print "These are the list of potential vowels in your text:\n\t",vowels
-    print "These are the letters that are left:\n\t",node_weights.keys()
+    print("These are the list of potential vowels in your text:\n\t",vowels)
+    print("These are the letters that are left:\n\t",node_weights.keys())
