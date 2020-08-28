@@ -1,3 +1,5 @@
+
+import re
 @interact
 def _(me=input_box('sage', label="Enter your message", height=3, width=50, type=str),m=[1..25], s=[0..25]):
     S = AffineCryptosystem(AlphabeticStrings())
