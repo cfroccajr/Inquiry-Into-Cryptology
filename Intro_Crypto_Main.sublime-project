@@ -101,6 +101,9 @@
                     "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../tmp"
 				},
+				{"name": "Windows Build latex-image to all Images",
+					"cmd": ["c:/git/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				},
 				// {"name": "Windows Main PTX Build with Calculator",
 				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
 				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",

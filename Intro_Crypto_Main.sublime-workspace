@@ -187,16 +187,8 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Intro_Crypto_Main.sublime-project",
-			"settings":
-			{
-				"buffer_size": 5096,
-				"line_ending": "Windows"
-			}
-		}
 	],
-	"build_system": "Main PTX Build",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -1770,6 +1762,22 @@
 		[
 			[
 				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
 					"Packages/User/MBX.sublime-build",
 					""
 				],
@@ -1856,7 +1864,7 @@
 			]
 		]
 	],
-	"build_varint": "Windows Check Schema",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1911,9 +1919,16 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology",
+		"/C/git/Inquiry-Into-Cryptology/src",
+		"/C/git/Inquiry-Into-Cryptology/src/basic_analysis"
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/dummy.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/Users/roccac/Downloads/chinese.tex",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/affine_cipher.sage",
@@ -2037,11 +2052,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Sample_Odds.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/ProbabilityNotes.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Math of Games Unit-1-Exam.tex",
-		"/Users/cfroccajr/Downloads/Abstract_Algebra.bibtex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Venezia_Board.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/paper_size_test.tex",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter1_Vectors.mbx",
-		"/Users/cfroccajr/Dropbox/WCSU/Elmore_File.tex"
+		"/Users/cfroccajr/Downloads/Abstract_Algebra.bibtex"
 	],
 	"find":
 	{
@@ -2169,38 +2180,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Intro_Crypto_Main.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5096,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5096,
-								5096
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1512.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -2251,7 +2232,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "Main PTX Build",
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
