@@ -187,8 +187,26 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Intro_Crypto_Main.sublime-project",
+			"settings":
+			{
+				"buffer_size": 6362,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
+			"settings":
+			{
+				"buffer_size": 545302,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
-	"build_system": "Main PTX Build",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -671,6 +689,150 @@
 				],
 				[
 					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build TeX File Rocca Version"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Build TeX File"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
 					"Windows Build latex-image to all Images"
 				]
 			],
@@ -741,6 +903,78 @@
 			[
 				"Main PTX Build",
 				"Windows WCSU Color Build to HTML Folder"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Build TeX File"
 			]
 		],
 		[
@@ -1712,7 +1946,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"PdfLaTeX"
+				"XeLaTeX"
 			]
 		],
 		[
@@ -1932,7 +2166,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "XeLaTeX",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -1987,11 +2221,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/git/Inquiry-Into-Cryptology/src",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp"
 	],
 	"file_history":
 	[
+		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/geometry/geometry.sty",
+		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/mathbook/pretext/pretext",
 		"/C/git/mathbook/pretext/README.md",
@@ -2117,13 +2351,11 @@
 		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/README.md",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/guesstimates.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/coding_student_blocks.py",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Games Unit 2 Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/FT of Algebra.tex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -2248,8 +2480,65 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Intro_Crypto_Main.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1174,
+								1174
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 545302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								920,
+								920
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -2300,7 +2589,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "Main PTX Build",
+	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{

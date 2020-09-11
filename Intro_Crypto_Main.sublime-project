@@ -33,6 +33,28 @@
 			"working_dir": "$project_path/../tmp",
 
 			"variants": [
+                {"name": "Windows Main PTX Build",
+                    "cmd": ["xsltproc", "--xinclude", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                    "working_dir": "$project_path/../tmp"
+                },
+                {"name":"Windows WCSU Color Build to HTML Folder",
+                    "cmd": ["xsltproc", "--xinclude", "--stringparam", "publisher", "publication.xml",  "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                    "working_dir": "$project_path/../html"
+                },
+                {"name": "Windows Check Schema",
+                    "cmd": ["java", "-classpath", "c:/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "c:/jing-trang/build/jing.jar", "c:/git/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"],
+                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                    "working_dir": "$project_path/../tmp"
+                },
+                {"name": "Windows Build TeX File",
+                    "cmd": ["xsltproc",  "-xinclude", "-o","Crypt.tex","c:/git/mathbook/xsl/pretext-latex.xsl", "../src/$project_base_name.ptx"],
+                    "working_dir": "$project_path/../latex_tmp"
+                },
+                {"name": "Windows Build latex-image to all Images",
+                    "cmd": ["c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+                },
 				// {"name": "Echo Stuff",
 				// 	"cmd":["echo","$project_base_name.ptx"]
 				// },
@@ -44,7 +66,6 @@
 					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
 					"working_dir": "$project_path/../html"
 				},
-
 				// {"name":"to HTML Folder",
 				// 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
 				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
@@ -85,30 +106,7 @@
 
 				{"name": "Build youtube to all Images",
 					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-cyoutube", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-				},
-				{"name": "Windows Main PTX Build",
-					"cmd": ["xsltproc", "--xinclude", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-					"working_dir": "$project_path/../tmp"
-				},
-				{"name":"Windows WCSU Color Build to HTML Folder",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "publisher", "publication.xml",  "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-					"working_dir": "$project_path/../html"
-				},
-				{"name": "Windows Check Schema",
-					"cmd": ["java", "-classpath", "c:/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "c:/jing-trang/build/jing.jar", "c:/git/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"],
-                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-					"working_dir": "$project_path/../tmp"
-				},
-				{"name": "Windows Build latex-image to all Images",
-					"cmd": ["c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-				},
-				// {"name": "Windows Main PTX Build with Calculator",
-				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-				// 	"working_dir": "$project_path/../tmp"
-				// }
+				}
 			]
 		}
 	]
