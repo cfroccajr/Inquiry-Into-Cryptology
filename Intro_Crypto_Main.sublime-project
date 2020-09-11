@@ -102,7 +102,7 @@
 					"working_dir": "$project_path/../tmp"
 				},
 				{"name": "Windows Build latex-image to all Images",
-					"cmd": ["c:/git/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+					"cmd": ["c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
 				},
 				// {"name": "Windows Main PTX Build with Calculator",
 				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "html.calculator", "geogebra-classic", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
@@ -114,3 +114,13 @@
 	]
 }
 //"--stringparam", "debug.colors", "orange_navy",
+
+// Install a python virtual environnement with the command $ python -m venv virtual (this created a folder in the current directory named virtual).
+// Activate the virtual environnement with the command $ . virtual/Scripts/activate  (note the dot and the space after).
+// You should see (virtual) above the command line if the virtual environnement is activated.  
+// Once inside the virtual environnement, run the following commands to install python packages needed for the pretext script to work.
+// pip install pdfCropMargins
+// pip install lxml
+// pip install requests  
+// Run the pretext script using the command $ python ~/mathbook/pretext/pretext -vv -c latex-image -f svg -d [path to output directory for images files] [name of xml file]  . The script should be ran from the same folder you are when you compile your html version.
+// To desactivate the virtual environnement, use the command $ deactivate 

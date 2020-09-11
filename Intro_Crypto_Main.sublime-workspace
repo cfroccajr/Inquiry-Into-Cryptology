@@ -188,7 +188,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system": "Main PTX Build",
 	"build_system_choices":
 	[
 		[
@@ -609,6 +609,74 @@
 			[
 				"Main PTX Build",
 				"Windows Check Schema"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Build latex-image to all Images"
 			]
 		],
 		[
@@ -1919,15 +1987,19 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology",
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/basic_analysis"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/mathbook/pretext/pretext",
+		"/C/git/mathbook/pretext/README.md",
+		"/C/git/mathbook/script/mbx",
+		"/C/git/mathbook/pretext/pretext.cfg",
+		"/C/git/mathbook/script/README.md",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/dummy.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/Users/roccac/Downloads/chinese.tex",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml",
@@ -2047,12 +2119,7 @@
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/coding_student_blocks.py",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex",
 		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Games Unit 2 Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/FT of Algebra.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/ProbabilityStuffSheet.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Sample_Odds.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/ProbabilityNotes.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Mathematics of Games/Math of Games Unit-1-Exam.tex",
-		"/Users/cfroccajr/Downloads/Abstract_Algebra.bibtex"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/FT of Algebra.tex"
 	],
 	"find":
 	{
@@ -2070,6 +2137,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"python",
 			"geogebra",
 			"L([0-9]+)",
 			"cipher_alphabet",
@@ -2232,7 +2300,7 @@
 	{
 		"height": 240.0
 	},
-	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"pinned_build_system": "Main PTX Build",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
