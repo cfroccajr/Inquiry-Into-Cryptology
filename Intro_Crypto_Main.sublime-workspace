@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"valid",
+				"valid_d"
+			],
+			[
+				"tabula",
+				"tabularnewline"
+			],
+			[
 				"line",
 				"line"
 			],
@@ -187,24 +195,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "Intro_Crypto_Main.sublime-project",
-			"settings":
-			{
-				"buffer_size": 6362,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
-			"settings":
-			{
-				"buffer_size": 545302,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
@@ -503,6 +493,90 @@
 			[
 				"Main PTX Build",
 				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Build TeX File"
 			]
 		],
 		[
@@ -933,6 +1007,14 @@
 				],
 				[
 					"Main PTX Build",
+					"Python Build with PreTeXt-cli"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli with Image Build"
+				],
+				[
+					"Main PTX Build",
 					"WCSU Color Build to HTML Folder"
 				],
 				[
@@ -974,7 +1056,155 @@
 			],
 			[
 				"Main PTX Build",
-				"Windows Build TeX File"
+				"Python Build with PreTeXt-cli with Image Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Python Build with PreTeXt-cli"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Windows Build latex-image to all Images"
 			]
 		],
 		[
@@ -2166,7 +2396,7 @@
 			]
 		]
 	],
-	"build_varint": "XeLaTeX",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -2202,7 +2432,7 @@
 	},
 	"console":
 	{
-		"height": 55.0,
+		"height": 62.0,
 		"history":
 		[
 			"xsltproc --xinclude --stringparam whitespace flexible /Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl ../src/Intro_Crypto_Main.mbx",
@@ -2224,15 +2454,52 @@
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Calculus and Precalculus Review Materials/PrecalcToKnow.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Calculus and Precalculus Review Materials/TypesOfFunctionsFile.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 127 Intro to Cryptology/2019 Spring MAT 127 Syllabus.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Math Department/Rocca Spring 2021 Schedule.htm",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Calculus and Precalculus Review Materials/TypesOfFunctionsFilev2.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 127 Intro to Cryptology/Assignment 1.tex",
+		"/C/Users/roccac/Downloads/Mathematica_LaTeX_Demo.tex",
+		"/C/Users/roccac/Downloads/geogebra-export.tex",
+		"/C/Users/roccac/Downloads/geogebra-export.txt",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/GGH.sage",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/GGH_Code.html",
+		"/C/Users/roccac/Downloads/tikzducks-doc.tex",
+		"/C/Users/roccac/Downloads/tikzducks-generic.tex",
+		"/C/Users/roccac/AppData/Local/Temp/Temp1_tikzducks.zip/tikzducks/tikzducks-doc.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/quadratic_residues.py",
+		"/C/Users/roccac/OneDrive - WCSU/Latex/FY Poster Draft.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Technical Typesetting in LaTeX/Poster_Sample.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Latex/roulete_poster.tex",
+		"/C/Users/roccac/OneDrive - WCSU/DropBox Backups/TeX Writer/TeX Writer/MAT 127/rSDES.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 127 Intro to Cryptology/feistel.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/Diffie-Gamal-RSA.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 467 & 528 - Number Theory/class_sage_cells.html",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/Misc_Code_Exercises.html",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/Random_Latex_Helper.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/dummy.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 150 Mathematics Seminar/9-22-2020 Raw Cipher Practice",
+		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/author2.tex",
+		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/referenc.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/sample ciphers.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/coincidence.py",
+		"/C/Users/roccac/Downloads/output (2).bbl",
+		"/C/Users/roccac/Downloads/output.bbl",
+		"/C/Users/roccac/Downloads/output (1).bbl",
+		"/C/Users/roccac/Downloads/LATEX.bibtex",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
+		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Latex/Revised_Paper.tex",
 		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/geometry/geometry.sty",
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/mathbook/pretext/pretext",
 		"/C/git/mathbook/pretext/README.md",
 		"/C/git/mathbook/script/mbx",
 		"/C/git/mathbook/pretext/pretext.cfg",
 		"/C/git/mathbook/script/README.md",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/dummy.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
 		"/C/Users/roccac/Downloads/chinese.tex",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
@@ -2314,48 +2581,11 @@
 		"/Users/cfroccajr/Downloads/pigpen/texinput/pigpen.tex",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/modern_disk_image.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/alberti_polyalpha.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/image_code/charts_image.ptx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT 467 & 528 - Number Theory/Number Theory Comp/2010 Fall Number Theory Final Exam.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/2018 Fall Crypto FY FDS Syllabus.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/code/boilerplate.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/Brookfield Pres.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/MAT467 Proposals",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/sage_code/systems_cell.sage",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_determinants.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_systems.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.sublime-project",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_vectorspaces.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Reference_File.txt",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-project",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/chapter_maps.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/WCSU_Linear_OER.sublime-workspace",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_backmatter.ptx",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/PreTeXtual.sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/PreTeXtual.sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeXTools (Advanced).sublime-settings",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeXTools.sublime-settings",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/Linear_bookinfo.ptx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.ptx.mbx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/glossary.mbx",
-		"/Users/cfroccajr/Applications/GIT/WCSU-MAT272-LinearAlgebra/src/OER_Linear_Alg.mbx",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/PreTeXtual/README.md",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Lesson Reasources/guesstimates.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/coding_student_blocks.py",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Latex/funny_brace.tex"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -2366,9 +2596,13 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"\\lfrac",
+			"[^A-Z]",
+			"[^a-zA-Z\"]",
+			"[\\s,\\n]",
 			"python",
 			"geogebra",
 			"L([0-9]+)",
@@ -2435,12 +2669,14 @@
 			"suppoe ",
 			"para"
 		],
-		"highlight": true,
+		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"\\frac",
+			"",
 			"disk_$1",
 			"disk_",
 			"</cline>\n<cline>",
@@ -2480,65 +2716,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Intro_Crypto_Main.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6362,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1174,
-								1174
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 594.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 545302,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								920,
-								920
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -2579,7 +2758,7 @@
 	},
 	"output.exec":
 	{
-		"height": 358.0
+		"height": 224.0
 	},
 	"output.find_results":
 	{
@@ -2587,7 +2766,7 @@
 	},
 	"output.latextools":
 	{
-		"height": 240.0
+		"height": 172.0
 	},
 	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"project": "Intro_Crypto_Main.sublime-project",
