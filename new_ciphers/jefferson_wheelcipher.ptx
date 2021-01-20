@@ -45,18 +45,18 @@
                         <p>
                             Below is the rest of the quote from Thomas Blacklock that Jefferson started enciphering.  Try to complete the enciphering.
                         </p>
-                        <blockquote>
-                            <poem>
-                                <stanza>
-                                    <line>The man, whose mind on virtue bent,</line>
-                                    <line>Pursues some greatly good intent,</line>
-                                    <line indent="1">With undiverted aim,</line>
-                                    <line>Serene, beholds the angry crowd;</line>
-                                    <line>Nor can their clamors, fierce and loud,</line>
-                                    <line indent="1">His stubborn honor tame.</line>
-                                 </stanza>
-                            </poem>
-                        </blockquote>
+                        <sidebyside>
+                                <poem>
+                                    <stanza>
+                                        <line>The man, whose mind on virtue bent,</line>
+                                        <line>Pursues some greatly good intent,</line>
+                                        <line indent="1">With undiverted aim,</line>
+                                        <line>Serene, beholds the angry crowd;</line>
+                                        <line>Nor can their clamors, fierce and loud,</line>
+                                        <line indent="1">His stubborn honor tame.</line>
+                                     </stanza>
+                                </poem>
+                        </sidebyside>
                         <!-- The man, whose mind on virtue bent,Pursues some greatly good intent,With undiverted aim,Serene, beholds the angry crowd;Nor can their clamors, fierce and loud His stubborn honor tame. -->
                 </statement>
                 <answer>
