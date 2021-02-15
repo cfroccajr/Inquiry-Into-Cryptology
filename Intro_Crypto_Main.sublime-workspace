@@ -4,6 +4,86 @@
 		"selected_items":
 		[
 			[
+				"khan",
+				"khan_grille"
+			],
+			[
+				"y",
+				"y_coord"
+			],
+			[
+				"open",
+				"open_points"
+			],
+			[
+				"coord",
+				"coord_str"
+			],
+			[
+				"blan",
+				"blank_dict"
+			],
+			[
+				"grill",
+				"grille_seed"
+			],
+			[
+				"blank",
+				"blank_dict"
+			],
+			[
+				"random",
+				"random_grille"
+			],
+			[
+				"_",
+				"__getitem__"
+			],
+			[
+				"char",
+				"char_dict"
+			],
+			[
+				"ch",
+				"char_dict"
+			],
+			[
+				"count",
+				"count_dict"
+			],
+			[
+				"dict",
+				"digram_dict"
+			],
+			[
+				"diag",
+				"digram_dict"
+			],
+			[
+				"spy",
+				"spy_dict"
+			],
+			[
+				"digram",
+				"digram_dict"
+			],
+			[
+				"tabular",
+				"tabularnewline"
+			],
+			[
+				"table",
+				"table_str"
+			],
+			[
+				"temp",
+				"temp_str"
+			],
+			[
+				"r",
+				"r_ch"
+			],
+			[
 				"valid",
 				"valid_d"
 			],
@@ -66,10 +146,6 @@
 			[
 				"al",
 				"alert"
-			],
-			[
-				"table",
-				"table_numeric_alpha"
 			],
 			[
 				"ata",
@@ -196,7 +272,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system": "Main PTX Build",
 	"build_system_choices":
 	[
 		[
@@ -576,7 +652,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Windows Build TeX File"
+				"Python Build with PreTeXt-cli to HTML"
 			]
 		],
 		[
@@ -2451,9 +2527,28 @@
 	},
 	"expanded_folders":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/grille_cipher.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/vigenere.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/cipher_txt.txt",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/theSpy.txt",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python-CFRoccaJr.py",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
+		"/C/git/mathbook/examples/sample-book/sage/groups-sage.xml",
+		"/C/git/mathbook/examples/sample-article/sample-article.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/basic_analysis/arab_analysis.ptx",
+		"/C/git/mathbook/examples/sample-book/code/symmetric-group-8.sage",
+		"/C/git/mathbook/examples/sample-book/sage/integers-sage.xml",
+		"/C/git/mathbook/examples/sample-book/sage/groups-info.xml",
+		"/C/git/mathbook/examples/sample-book/sage/integers-sage-exercises.xml",
+		"/C/git/mathbook/examples/sample-book/sage/cyclic-info.xml",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Calculus and Precalculus Review Materials/PrecalcToKnow.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Calculus and Precalculus Review Materials/TypesOfFunctionsFile.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 127 Intro to Cryptology/2019 Spring MAT 127 Syllabus.tex",
@@ -2489,7 +2584,6 @@
 		"/C/Users/roccac/Downloads/output.bbl",
 		"/C/Users/roccac/Downloads/output (1).bbl",
 		"/C/Users/roccac/Downloads/LATEX.bibtex",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
 		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Latex/Revised_Paper.tex",
@@ -2565,23 +2659,7 @@
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Basic Ciphers Group Exam - V2.tex",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/glossary.ptx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp_Guide.tex",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/table_code/mono_key_table.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quotations_appendix.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_autokey.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/agripa_pig.ptx",
-		"/Users/cfroccajr/Downloads/pigpen/texinput/pigpen.tex",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/quote_code/vigenere_cipher.ptx",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Reference_File.txt"
+		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex"
 	],
 	"find":
 	{
@@ -2599,6 +2677,61 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"/",
+			",",
+			"/",
+			",",
+			"[0-9]",
+			"[/,}]",
+			" ",
+			"Z Y X W V U T S R  P O N M L K J I H G F E D C B A",
+			" ",
+			"A",
+			"J",
+			"P",
+			"H",
+			"E",
+			"C",
+			"X",
+			"N",
+			"U",
+			"R",
+			"W",
+			"F",
+			"D",
+			"Y",
+			"V",
+			"L",
+			"S",
+			"Q",
+			"K",
+			"O",
+			"G",
+			"T",
+			"I",
+			"Z",
+			"T",
+			"I",
+			"Z",
+			" ZIT ",
+			"\\n",
+			"([0-9]+ )",
+			"([A-Z]+ )",
+			"([0-9]+[.] )",
+			"\\t",
+			"([\\n])",
+			"([0-9]+ )",
+			"([A-Z]+ )",
+			"([0-9]+[.] )",
+			"([A-Z] )",
+			"([0-9]+.)",
+			"[\\n]",
+			"[\\r]",
+			"<poem>",
+			"poem",
+			"interactive",
+			"sage",
+			"interactive",
 			"\\lfrac",
 			"[^A-Z]",
 			"[^a-zA-Z\"]",
@@ -2670,11 +2803,54 @@
 			"para"
 		],
 		"highlight": false,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			",",
+			"],[",
+			",",
+			"],[",
+			"",
+			" & ",
+			"k",
+			"q",
+			"j",
+			"p",
+			"c",
+			"v",
+			"u",
+			"y",
+			"g",
+			"d",
+			"b",
+			"n",
+			"m",
+			"f",
+			"w",
+			"s",
+			"l",
+			"a",
+			"r",
+			"i",
+			"o",
+			"e",
+			"h",
+			"t",
+			"e",
+			"h",
+			"t",
+			" \\alert{the} ",
+			"\\alert{the}",
+			" \\\\tabularnewline \\n",
+			"$1 &",
+			" ",
+			" \\\\tabularnewline $1 ",
+			"\\\\tabularnewline $1 ",
+			"\\tabularnewline $1 ",
+			"$1 &",
+			", ",
 			"\\frac",
 			"",
 			"disk_$1",
@@ -2758,7 +2934,7 @@
 	},
 	"output.exec":
 	{
-		"height": 224.0
+		"height": 390.0
 	},
 	"output.find_results":
 	{
@@ -2768,7 +2944,7 @@
 	{
 		"height": 172.0
 	},
-	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
@@ -2813,7 +2989,7 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":

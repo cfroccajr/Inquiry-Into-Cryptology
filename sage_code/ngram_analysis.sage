@@ -21,11 +21,20 @@ def ngram_count_simple(
     print("\tRank\tN-Gram\tCount\tPercent")
     count.reverse()
     rank = 1
+    alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     for c in count[0:min(30,len(count))]:
+        alphabet=alphabet.replace(c[1],"")
         if len(c[1])>6: 
             tab=" "
         else:
             tab="\t"
         print(str("\t"+str(rank)+"."),tab,c[1],tab,c[0],"\t %.4G" % (c[0]/len(message)*100.0))
         rank += 1
-    if len(count)==26 and N==1 and mode=='Alpha Only': print("Pangram!!!")
+    if N==1:
+        if alphabet=="": 
+            print("Pangram!!! Congratulations you used all your letters.")
+        else:
+            temp_str=""
+            for ch in alphabet:
+                temp_str+=ch+", "
+            print("Characters not in this text:",temp_str[0:-2])
