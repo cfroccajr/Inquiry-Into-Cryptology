@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"he",
+				"header_row"
+			],
+			[
+				"k",
+				"k"
+			],
+			[
+				"L",
+				"LaTeX"
+			],
+			[
+				"Lat",
+				"LaTeX_Table"
+			],
+			[
 				"khan",
 				"khan_grille"
 			],
@@ -271,6 +287,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Intro_Crypto_Main.sublime-project",
+			"settings":
+			{
+				"buffer_size": 6980,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -648,6 +672,98 @@
 				[
 					"Main PTX Build",
 					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Python Build with PreTeXt-cli to HTML"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
 				]
 			],
 			[
@@ -2472,7 +2588,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Python Build with PreTeXt-cli to HTML",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -2525,13 +2641,20 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/sage_code"
-	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/MonoChapter.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/vigenere_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/affine_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/autokey_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/falconer_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/HON 498 Math and Lit/2021 Fall Honors Math Lit Course.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/grille_cipher.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/vigenere.py",
@@ -2539,7 +2662,6 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/cipher_txt.txt",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/theSpy.txt",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python-CFRoccaJr.py",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
 		"/C/git/mathbook/examples/sample-book/sage/groups-sage.xml",
 		"/C/git/mathbook/examples/sample-article/sample-article.xml",
@@ -2648,18 +2770,7 @@
 		"/C/GIT/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/MonoChapter.tex",
-		"/H/Classes/Math 127/Workbook/MonoChapter.tex",
-		"/H/Classes/Math 127/Workbook/Solution Narrative.tex",
-		"/H/Classes/Math 127/Workbook/WorkbookTest.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/Cracking_Practice.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Cracking_Practice.tex",
-		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/code/Arabic_cipher_dictionary_shell.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Vocab and Reading Quiz pages 26 to 44.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/FY Materials/Crypto FY/Basic Ciphers Group Exam - V2.tex",
-		"/C/GIT/Inquiry-Into-Cryptology/src/chapter1_early_ciphers.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/glossary.ptx",
-		"/Users/cfroccajr/OneDrive - Western Connecticut State University/Classes/Modern and Abstract Algebra/Algebra_Comp.tex"
+		"/H/Classes/Math 127/Workbook/MonoChapter.tex"
 	],
 	"find":
 	{
@@ -2677,6 +2788,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"(TBA)",
+			"(Justification)",
+			"(\\\\textit{)",
+			"\\n",
+			" ",
+			"  ",
+			"\\n",
+			" ",
+			"  ",
+			" ",
+			"  ",
+			"[\" \"]\\{2\\}",
+			"[\\s]\\{2\\}",
+			"\\n",
+			"([0-9]+)",
+			"   ",
+			"[\\s]\\{4\\}",
+			"[\\s]\\{3\\}",
+			"[\\s^\\n]+",
+			"[\\s]+",
+			"\\t",
+			"([.][0-9]+)[\\n]",
+			"([.][0-9]+\\n)",
+			"[\\s]*([A-Z0-9]*[.])",
+			"[\" \"]*([A-Z0-9])",
+			"[\" \"]",
 			"/",
 			",",
 			"/",
@@ -2778,36 +2915,34 @@
 			"\\\\",
 			" & ",
 			"Rank\tN-Gram\tCount\tPercent\\\\",
-			" \t",
-			"\n",
-			" \t",
-			" \t\t",
-			"<slate",
-			"surface=\"sage\"",
-			"<interactive ",
-			"mhmd",
-			"<hint",
-			"<exercises",
-			"<sidebyside",
-			"sidebyside",
-			"amp",
-			"sage",
-			" ",
-			"q>",
-			"Compr",
-			"com",
-			"\\small",
-			"xi:include",
-			"Suppose",
-			"suppoe ",
-			"para"
+			" \t"
 		],
 		"highlight": false,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"\\\\textcolor{red}{\\\\textbf{$1}}",
+			"\\\\underline{$1}",
+			"$1 Justification: ",
+			"\\\\tabularnewline\\n",
+			" & ",
+			" ",
+			"\\\\tabularnewline\\n",
+			" &  ",
+			" ",
+			" & ",
+			" ",
+			"\\\\tabularnewline\\n",
+			"\\onslide<2>{$1}",
+			" & ",
+			" ",
+			"$1 \\\\tabularnewline\\n",
+			"$1 \\\\tabularnewline",
+			"\\n\\t $1",
+			"$1",
+			"",
 			",",
 			"],[",
 			",",
@@ -2892,8 +3027,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Intro_Crypto_Main.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6980,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -2934,7 +3098,7 @@
 	},
 	"output.exec":
 	{
-		"height": 390.0
+		"height": 289.0
 	},
 	"output.find_results":
 	{
@@ -2942,9 +3106,9 @@
 	},
 	"output.latextools":
 	{
-		"height": 172.0
+		"height": 403.0
 	},
-	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"pinned_build_system": "",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
@@ -2986,8 +3150,8 @@
 	"settings":
 	{
 	},
-	"show_minimap": false,
-	"show_open_files": true,
+	"show_minimap": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 333.0,

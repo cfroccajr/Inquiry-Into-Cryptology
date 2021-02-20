@@ -5,7 +5,7 @@ import textwrap
 def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=str),
         key=input_box('sage', label="Enter your key", height=1, width=20, type=str),
         mode = selector(['encipher','decipher'], buttons=True),
-        spaces = selector(['yes','no'], buttons=True)):
+        spaces = selector(['yes','no','LaTeX'], buttons=True)):
     plain_alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     clean_message = str(m.encode('ascii','replace').decode()).upper()
     if spaces == 'no':
@@ -29,6 +29,14 @@ def _(m=input_box('sage', label="Enter your message", height=3, width=50, type=s
     if spaces == 'yes':
         print(textwrap.fill(cipher_text, 42))
     else:
-        for i in range(0,len(cipher_text),6):
-            print(cipher_text[i:i+6],)
-            if (i+6)%42 == 0: print("\n")
+    # Build output in blocks
+        text_blocks=""
+        for i in range(0,len(cipher_text),5):
+            text_blocks+=str(cipher_text[i:i+5])+" "
+            if spaces =='LaTeX': text_blocks+="& "
+            if (i+5)%40 == 0:
+                if spaces =='LaTeX': 
+                    text_blocks=text_blocks[0:-2]
+                    text_blocks+="\\tabularnewline"
+                text_blocks+="\n"
+        print(text_blocks)

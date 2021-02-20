@@ -34,10 +34,10 @@
 
 			"variants": [
                 {"name": "Python Build with PreTeXt-cli to HTML",
-                	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-o../output","html"]
+                	"cmd":["pretext", "-v", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-o../output","html"]
                 },
                 {"name": "Python Build with PreTeXt-cli to HTML with Image Build",
-                	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx","-d","-o../output","html"]
+                	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-d","-o../output","html"]
                 },
                 {"name": "Python Build with PreTeXt-cli to LaTeX",
                 	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-o../output","latex"]

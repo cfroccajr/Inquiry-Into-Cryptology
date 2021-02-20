@@ -66,8 +66,8 @@
             Let the letters of the alphabet be associated with the integers as follows:
         </p>
         <!--- The paragraph and sidebyside are there because table can't be in an assemblage, change this if that gets updated-->
-        <table xml:id="hill_alpha_numeric_corespondence">
-            <!-- <sidebyside width="30%" margins="auto"> -->
+        <sidebyside width="100%" margins="auto">
+            <table xml:id="hill_alpha_numeric_corespondence">
                     <tabular halign="right">
                         <row>
                             <cell>a</cell><cell>b</cell><cell>c</cell><cell>d</cell><cell>e</cell>
@@ -90,12 +90,12 @@
                             <cell>22</cell><cell>11</cell><cell>9</cell>
                         </row>
                     </tabular>
-            <!-- </sidebyside> -->
-        </table>
+            </table>
+        </sidebyside>
         <p>
             or, in another convenient formulation:
         </p>
-        <sidebyside width="30%" margins="auto">
+        <sidebyside width="100%" margins="auto">
                 <tabular halign="right">
                     <row>
                         <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
@@ -134,7 +134,7 @@
         <p>
             Since this particular alphabet will be used several times, in illustration of further developments, we append the following table of negatives and reciprocals:
         </p>
-        <sidebyside width="30%" margins="auto">
+        <sidebyside width="100%" margins="auto">
             <tabular halign="left">
                 <row>
                     <cell>Letter</cell><cell>:</cell>
