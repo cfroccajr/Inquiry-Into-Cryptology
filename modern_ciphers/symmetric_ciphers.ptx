@@ -3,16 +3,22 @@
         <objectives>
             <ul>
                 <li>
+                    Arithmetic with Bits
+                </li>
+                <li>
+                    Feistel and Lucifer
+                </li>
+                <li>
                     DES and Lucifer
-                </li>
-                <li>
-                    AES
-                </li>
-                <li>
-                    PGP
                 </li>
             </ul>
         </objectives>
+        <subsection>
+            <title>Bitwise Addition</title>
+            <p>Binary Representations</p>
+            <p>ASCII</p>
+            <p>Adding Bits</p>
+        </subsection>
         <subsection>
             <title>Feistel Cipher</title>
             <p>General Description</p>
@@ -34,13 +40,4 @@
             <p>Enter Quoets from Mini-DES</p>
             <p>Enter Questions</p>
         </subsection>
-        <subsection>
-            <title>Advanced Encryption Standard (AES)</title>
-            <p>Enter a Little History</p>
-            <p>Enter Quoets from Mini-AES</p>
-            <p>Enter Questions</p>
-        </subsection>
-        <conclusion>
-            <p>Comments about PGP combining DES and RSA</p>
-        </conclusion>
     </section>

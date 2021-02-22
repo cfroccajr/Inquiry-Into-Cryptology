@@ -291,7 +291,35 @@
 			"file": "Intro_Crypto_Main.sublime-project",
 			"settings":
 			{
-				"buffer_size": 6980,
+				"buffer_size": 7006,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapter7_modern_cryptology.ptx",
+			"settings":
+			{
+				"buffer_size": 1903,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modern_ciphers/symmetric_ciphers.ptx",
+			"settings":
+			{
+				"buffer_size": 1455,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modern_ciphers/aes.ptx",
+			"settings":
+			{
+				"buffer_size": 768,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -2641,8 +2669,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/C/git/Inquiry-Into-Cryptology/src",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers"
+	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/MonoChapter.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
@@ -2707,7 +2741,6 @@
 		"/C/Users/roccac/Downloads/output (1).bbl",
 		"/C/Users/roccac/Downloads/LATEX.bibtex",
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
-		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Latex/Revised_Paper.tex",
 		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/geometry/geometry.sty",
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
@@ -3027,7 +3060,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -3036,15 +3069,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6980,
+						"buffer_size": 7006,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								120,
-								120
+								784,
+								784
 							]
 						],
 						"settings":
@@ -3052,10 +3085,102 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chapter7_modern_cryptology.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1903,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1693,
+								1693
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modern_ciphers/symmetric_ciphers.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "modern_ciphers/aes.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								677,
+								677
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

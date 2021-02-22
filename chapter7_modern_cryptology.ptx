@@ -38,8 +38,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </ul>
     </objectives>
 
-    <xi:include href="modern_ciphers/public_ciphers.ptx"/>
     <xi:include href="modern_ciphers/symmetric_ciphers.ptx"/>
+    <xi:include href="modern_ciphers/aes.ptx"/>
+    <xi:include href="modern_ciphers/public_ciphers.ptx"/>
     <xi:include href="modern_ciphers/assymmetric_ciphers.ptx"/>
     <xi:include href="modern_ciphers/modern_cipher_exercises.ptx"/>
 

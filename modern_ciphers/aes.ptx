@@ -1,0 +1,24 @@
+    <section xml:id="aes_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Advancing Symmetry</title>
+        <objectives>
+            <ul>
+                <li>
+                    More Arithmetic with Bits
+                </li>
+                <li>
+                    AES
+                </li>
+            </ul>
+        </objectives>
+        <subsection>
+            <title>Bitwise Multiplications</title>
+            <p>The Basics</p>
+            <p>Polynomials and Why it Works</p>
+        </subsection>
+        <subsection>
+            <title>Advanced Encryption Standard (AES)</title>
+            <p>Enter a Little History</p>
+            <p>Enter Quotes from Mini-AES</p>
+            <p>Enter Questions</p>
+        </subsection>
+    </section>
