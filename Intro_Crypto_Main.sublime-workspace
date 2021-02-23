@@ -288,10 +288,13 @@
 	"buffers":
 	[
 		{
+			"contents": "{\n\t\"folders\":\n\t[\n\t\t{\n\t\t\t\"path\": \"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \".\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp_images\"\n\t\t},\n\t\t{\n\t\t\t\"path\": \"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/html_tmp\"\n\t\t}\n\t],\n\n\t\"settings\":\n\t[\n\t\t{\n\t\t\t\"detect_indentation\": false,\n\t\t\t\"draw_indent_guides\": false,\n\t\t\t\"draw_white_space\": \"selection\"\n\t\t}\n\t],\n\n\t\"build_systems\":\n\t[\n\t\t{\n\t\t\t\"name\": \"Main PTX Build\",\n\t\t\t\"cmd\": [\"xsltproc\", \"--xinclude\", \"--stringparam\", \"debug.colors\", \"orange_navy\", \"/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl\", \"../src/$project_base_name.ptx\"],\n\t\t\t\"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n\t\t\t\"working_dir\": \"$project_path/../tmp\",\n\n\t\t\t\"variants\": [\n                {\"name\": \"Pretext Build to HTML\",\n                \t\"cmd\":[\"pretext\", \"-vv\", \"build\", \"-i../src/$project_base_name.ptx\", \"-p../src/publication.xml\", \"-o../output\",\"html\"]\n                },\n                {\"name\": \"Pretext Build to HTML with Image Build\",\n                \t\"cmd\":[\"pretext\", \"-vv\", \"build\", \"-i../src/$project_base_name.ptx\", \"-p../src/publication.xml\", \"-d\",\"-o../output\",\"html\"]\n                },\n                {\"name\": \"Pretext Build to LaTeX\",\n                \t\"cmd\":[\"pretext\", \"build\", \"-i../src/$project_base_name.ptx\", \"-o../output\",\"latex\"]\n                },\n                // the below is based on this, but creating PNG this way throws an error\n\t\t\t\t// python c:/git/mathbook/pretext/pretext -vv -c latex-image -f all -d ../tmp_images Intro_Crypto_Main.ptx\n                {\"name\": \"Pretext latex-image to PDF\",\n                    \"cmd\": [\"python\", \"c:/git/mathbook/pretext/pretext\", \"-vv\", \"-clatex-image\", \"-fpdf\", \"-d../tmp_images\", \"../src/$project_base_name.ptx\"]\n                },\n                {\"name\": \"Pretext latex-image to SVG\",\n                    \"cmd\": [\"python\", \"c:/git/mathbook/pretext/pretext\", \"-vv\", \"-clatex-image\", \"-fsvg\", \"-d../tmp_images\", \"../src/$project_base_name.ptx\"]\n                },\n\t\t\t\t// Use these at a command prompt to convert to png.\n\t\t\t\t// for file in *.pdf; do convert -density 300 \"$file\" -quality 100 \"{$file%.*}.png\"; done\n\t\t\t\t// FOR %a in (*.pdf) DO convert -density 300 %a -quality 100 %~na.png\n                {\"name\": \"PDF to PNG\",\n                \t\"cmd\":[\"FOR %a in (../tmp_images/*.pdf) DO convert ../tmp_images/%a ../tmp_images/%~na.png\"]\n                },\n\n\t\t\t]\n\t\t}\n\t]\n}\n\n\n\n\n\n// Install a python vcd Introirtual environnement with the command $ python -m venv virtual (this created a folder in the current directory named virtual).\n// Activate the virtual environnement with the command $ . virtual/Scripts/activate  (note the dot and the space after).\n// You should see (virtual) above the command line if the virtual environnement is activated.  \n// Once inside the virtual environnement, run the following commands to install python packages needed for the pretext script to work.\n// pip install pdfCropMargins\n// pip install lxml\n// pip install requests  \n// Run the pretext script using the command $ python ~/mathbook/pretext/pretext -vv -c latex-image -f svg -d [path to output directory for images files] [name of xml file]  . The script should be ran from the same folder you are when you compile your html version.\n// To desactivate the virtual environnement, use the command $ deactivate \n\n\n\n\n// Old Build commands\n\t\t\t\t//\"--stringparam\", \"debug.colors\", \"orange_navy\",\n                // {\"name\": \"Build latex-image to all Images\",\n                //     \"cmd\": [\"pretext\", \"-v\", \"-clatex-image\", \"-fall\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n                // },\n\t\t\t\t// {\"name\": \"Build latex-image to all Images\",\n\t\t\t\t// \t\"cmd\": [\"c:/git/mathbook/script/mbx\", \"-v\", \"-clatex-image\", \"-fall\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\t\t\t\t// {\"name\": \"Echo Stuff\",\n\t\t\t\t// \t\"cmd\":[\"echo\",\"$project_base_name.ptx\"]\n\t\t\t\t// },\n\t\t\t\t// {\"name\": \"PWD\",\n\t\t\t\t// \t\"cmd\":\"pwd\"\n\t\t\t\t// },\n                // {\"name\": \"Windows Main PTX Build\",\n                //     \"cmd\": [\"xsltproc\", \"--xinclude\", \"c:/git/mathbook/xsl/pretext-html.xsl\", \"../src/$project_base_name.ptx\"],\n                //     \"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n                //     \"working_dir\": \"$project_path/../tmp\"\n                // },\n                // {\"name\":\"Windows WCSU Color Build to HTML Folder\",\n                //     \"cmd\": [\"xsltproc\", \"--xinclude\", \"--stringparam\", \"publisher\", \"publication.xml\",  \"c:/git/mathbook/xsl/pretext-html.xsl\", \"../src/$project_base_name.ptx\"],\n                //     \"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n                //     \"working_dir\": \"$project_path/../html\"\n                // },\n                // {\"name\": \"Windows Check Schema\",\n                //     \"cmd\": [\"java\", \"-classpath\", \"c:/jing-trang/build\", \"-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration\", \"-jar\", \"c:/jing-trang/build/jing.jar\", \"c:/git/mathbook/schema/pretext.rng\", \"../src/$project_base_name.ptx\"],\n                //     \"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n                //     \"working_dir\": \"$project_path/../tmp\"\n                // },\n                // {\"name\": \"Windows Build TeX File\",\n                //     \"cmd\": [\"xsltproc\",  \"-xinclude\", \"-o\",\"Crypt.tex\",\"c:/git/mathbook/xsl/pretext-latex.xsl\", \"../src/$project_base_name.ptx\"],\n                //     \"working_dir\": \"$project_path/../latex_tmp\"\n                // },\t\t\t\t\n    \t\t\t// {\"name\":\"WCSU Color Build to HTML Folder\",\n\t\t\t\t// \t\"cmd\": [\"xsltproc\", \"--xinclude\", \"--stringparam\", \"debug.colors\", \"orange_navy\", \"/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl\", \"../src/$project_base_name.ptx\"],\n\t\t\t\t// \t\"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n\t\t\t\t// \t\"working_dir\": \"$project_path/../html\"\n\t\t\t\t// },\n\t\t\t\t// // {\"name\":\"to HTML Folder\",\n\t\t\t\t// // \t\"cmd\": [\"xsltproc\", \"--xinclude\", \"/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl\", \"../src/$project_base_name.ptx\"],\n\t\t\t\t// // \t\"file_regex\": \"^[ ]*File \\\"(...*?)\\\", line ([0-20]*)\",\n\t\t\t\t// // \t\"working_dir\": \"$project_path/../html\"\n\t\t\t\t// // },\n\t\t\t\t\n\t\t\t\t// {\"name\": \"Check Schema\",\n\t\t\t\t// \t\"cmd\": [\"java\", \"-classpath\", \"/Users/cfroccajr/Applications/GIT/jing-trang/build\", \"-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration\", \"-jar\", \"/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar\", \"/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build TeX File\",\n\t\t\t\t// \t\"cmd\": [\"xsltproc\", \"--xinclude\", \"--stringparam\", \"exercise.backmatter.statement\", \"no\", \"--stringparam\", \"exercise.backmatter.solution\", \"yes\", \"--stringparam\", \"exercise.inline.answer\", \"no\", \"--stringparam\", \"exercise.divisional.answer\", \"no\", \"--stringparam\", \"exercise.divisional.solution\", \"no\", \"--stringparam\", \"whitespace\", \"flexible\", \"/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build TeX File Rocca Version\",\n\t\t\t\t// \t\"cmd\": [\"xsltproc\", \"--xinclude\", \"/Users/cfroccajr/applications/git/mathbook/user/mathbook-latex-rocca.xsl\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Xelatex the .tex file\",\n\t\t\t\t// \t\"cmd\": [\"xelatex\",\"$project_base_name.tex\"],\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Open the .pdf file\",\n\t\t\t\t// \t\"cmd\": [\"open\",\"$project_base_name.pdf\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build latex-image to all Images\",\n\t\t\t\t// \t\"cmd\": [\"/Users/cfroccajr/Applications/GIT/mathbook/script/mbx\", \"-v\", \"-clatex-image\", \"-fall\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build sageplot to svg Images\",\n\t\t\t\t// \t\"cmd\": [\"/Users/cfroccajr/applications/git/mathbook/script/mbx\", \"-v\", \"-csageplot\", \"-fsvg\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build sageplot to pdf Images\",\n\t\t\t\t// \t\"cmd\": [\"/Users/cfroccajr/applications/git/mathbook/script/mbx\", \"-v\", \"-csageplot\", \"-fpdf\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// },\n\n\t\t\t\t// {\"name\": \"Build youtube to all Images\",\n\t\t\t\t// \t\"cmd\": [\"/Users/cfroccajr/applications/git/mathbook/script/mbx\", \"-v\", \"-cyoutube\", \"-fall\", \"-dimages\", \"../src/$project_base_name.ptx\"]\n\t\t\t\t// }",
 			"file": "Intro_Crypto_Main.sublime-project",
+			"file_size": 8492,
+			"file_write_time": 132585783191916928,
 			"settings":
 			{
-				"buffer_size": 7681,
+				"buffer_size": 8492,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -594,6 +597,74 @@
 			[
 				"Main PTX Build",
 				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"PDF to PNG"
+				]
+			],
+			[
+				"Main PTX Build",
+				"PDF to PNG"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"PDF to PNG"
+				]
+			],
+			[
+				"Main PTX Build",
+				"PDF to PNG"
 			]
 		],
 		[
@@ -2737,7 +2808,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext latex-image to all Images",
+	"build_varint": "PDF to PNG",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -2795,13 +2866,18 @@
 	],
 	"file_history":
 	[
+		"/C/git/mathbook/user/pretext.cfg",
+		"/C/git/mathbook/pretext/pretext.py",
+		"/C/git/pretext-cli/pretext/static/pretext/pretext.cfg",
+		"/C/git/mathbook/script/braille/pretext-liblouis.cfg",
+		"/C/git/mathbook/pretext/pretext.cfg",
+		"/C/git/Inquiry-Into-Cryptology/log_info.txt",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/crypto_bookinfo.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/aes.ptx",
-		"/C/git/mathbook/pretext/pretext.py",
 		"/C/git/mathbook/pretext/README.md",
 		"/C/git/Inquiry-Into-Cryptology/output/html/images/image-35.tex",
 		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
@@ -2874,7 +2950,6 @@
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
 		"/C/git/mathbook/pretext/pretext",
 		"/C/git/mathbook/script/mbx",
-		"/C/git/mathbook/pretext/pretext.cfg",
 		"/C/git/mathbook/script/README.md",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
 		"/C/Users/roccac/Downloads/chinese.tex",
@@ -2918,15 +2993,11 @@
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - Western Connecticut State University/Classes/MAT 467 - Group Theory/orbits.sage",
 		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_references.ptx",
-		"/C/Users/roccac/AppData/Local/Temp/The_Papers_of_Thomas_Jefferson_Volume_40-1.bibtex",
-		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
-		"/C/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/A and C Images.tex"
+		"/C/Users/roccac/AppData/Local/Temp/The_Papers_of_Thomas_Jefferson_Volume_40-1.bibtex"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -2940,6 +3011,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"convert",
 			"(TBA)",
 			"(Justification)",
 			"(\\\\textit{)",
@@ -3066,8 +3138,7 @@
 			"``",
 			"\\\\",
 			" & ",
-			"Rank\tN-Gram\tCount\tPercent\\\\",
-			" \t"
+			"Rank\tN-Gram\tCount\tPercent\\\\"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3188,15 +3259,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7681,
+						"buffer_size": 8492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1577,
-								1577
+								1576,
+								1679
 							]
 						],
 						"settings":
@@ -3204,7 +3275,7 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 648.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -3250,7 +3321,7 @@
 	},
 	"output.exec":
 	{
-		"height": 491.0
+		"height": 407.0
 	},
 	"output.find_results":
 	{
@@ -3302,10 +3373,10 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 333.0,
 	"status_bar_visible": true,
 	"template_settings":
