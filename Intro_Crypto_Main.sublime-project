@@ -11,6 +11,9 @@
 			"path": "/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp"
 		},
 		{
+			"path": "/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/tmp_images"
+		},
+		{
 			"path": "/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/html_tmp"
 		}
 	],
@@ -42,16 +45,29 @@
                 {"name": "Pretext Build to LaTeX",
                 	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-o../output","latex"]
                 },
-                {"name": "Pretext latex-image to all Images",
-                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-c latex-image", "-f all", "-d tmp_images", "src/$project_base_name.ptx"]
+                // the below is based on this, but creating PNG this way throws an error
+				// python c:/git/mathbook/pretext/pretext -vv -c latex-image -f all -d ../tmp_images Intro_Crypto_Main.ptx
+                {"name": "Pretext latex-image to PDF",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-clatex-image", "-fpdf", "-d../tmp_images", "../src/$project_base_name.ptx"]
                 },
-// python c:/git/mathbook/pretext/pretext -vv -c latex-image -f all -d ../tmp_images Intro_Crypto_Main.ptx
+                {"name": "Pretext latex-image to SVG",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-clatex-image", "-fsvg", "-d../tmp_images", "../src/$project_base_name.ptx"]
+                },
+				// Use these at a command prompt to convert to png.
+				// for file in *.pdf; do convert -density 300 "$file" -quality 100 "{$file%.*}.png"; done
+				// FOR %a in (*.pdf) DO convert -density 300 %a -quality 100 %~na.png
+                {"name": "PDF to PNG",
+                	"cmd":["FOR %a in (../tmp_images/*.pdf) DO convert ../tmp_images/%a ../tmp_images/%~na.png"]
+                },
 
 			]
 		}
 	]
 }
-//"--stringparam", "debug.colors", "orange_navy",
+
+
+
+
 
 // Install a python vcd Introirtual environnement with the command $ python -m venv virtual (this created a folder in the current directory named virtual).
 // Activate the virtual environnement with the command $ . virtual/Scripts/activate  (note the dot and the space after).
@@ -67,7 +83,7 @@
 
 
 // Old Build commands
-
+				//"--stringparam", "debug.colors", "orange_navy",
                 // {"name": "Build latex-image to all Images",
                 //     "cmd": ["pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
                 // },
