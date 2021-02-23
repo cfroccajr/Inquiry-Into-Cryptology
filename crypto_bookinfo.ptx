@@ -127,12 +127,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     Inserted in the preamble to each standalone latex-based image for HMTL SVG output.
     -->
     <latex-image-preamble>
-    \usepackage{pgfplots}               % loads tikz package
-    \usepackage{smartdiagram}           % for a circular diagram
-    \pgfplotsset{axis x line = middle,
-                 axis y line = middle}
-    \usetikzlibrary{backgrounds}
-    \usetikzlibrary{arrows,matrix}
+        \usepackage{pgfplots}               % loads tikz package
+        \usepackage{smartdiagram}           % for a circular diagram
+        \pgfplotsset{axis x line = middle,
+                     axis y line = middle}
+        \usetikzlibrary{backgrounds}
+        \usetikzlibrary{arrows,matrix}
+        \usetikzlibrary{calc}
     </latex-image-preamble>
 
     <images>

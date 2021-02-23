@@ -1,0 +1,30 @@
+<figure xml:id="feistel_image">
+        <caption>Outline of a Feistel Cipher</caption>
+        <image width="65%" archive="svg png pdf">
+            <description> 
+                This figure gives an outline of the workings of a feistel style cipher.
+            </description>
+            <latex-image>
+                <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
+                <![CDATA[\begin{tikzpicture}[scale=1,cap=round,>=latex]
+                    \node (start) at (0,0){};
+                    \node (left) at (-1,-1){};
+                    \node (right) at (1,-1){};
+                    \draw (start.center) node{Message};
+                    \draw[->] (start.south) -- (left.north) node[anchor=north east]{$L_0$=Left Half};
+                    \draw[->] (start.south) -- (right.north) node[anchor=north west]{$R_0$=Right Half};
+                    \foreach \dy in {1,...,4}{
+                        \node (templ) at ($(left)+(0,-1)$){};
+                        \node (tempr) at ($(right)+(0,-1)$){};
+                        \pgfmathparse{int(\dy-1)}\let\pr=\pgfmathresult;
+                        \draw[->] (right.south) -- (templ.north) node[anchor=east]{$L_\dy$};
+                        \draw[->] (left.south) -- (tempr.north) node[anchor=west]{
+                            $R_\dy=L_\pr\oplus f\left(R_\pr,k_\pr\right)$
+                        };
+                        \node (right) at (tempr){};
+                        \node (left) at (templ){};
+                    }
+                \end{tikzpicture}]]>
+            </latex-image>
+        </image>
+    </figure>

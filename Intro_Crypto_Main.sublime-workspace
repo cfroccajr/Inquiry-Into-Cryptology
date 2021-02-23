@@ -291,36 +291,9 @@
 			"file": "Intro_Crypto_Main.sublime-project",
 			"settings":
 			{
-				"buffer_size": 7006,
+				"buffer_size": 7681,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "chapter7_modern_cryptology.ptx",
-			"settings":
-			{
-				"buffer_size": 1903,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "modern_ciphers/symmetric_ciphers.ptx",
-			"settings":
-			{
-				"buffer_size": 1455,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "modern_ciphers/aes.ptx",
-			"settings":
-			{
-				"buffer_size": 768,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -631,6 +604,154 @@
 				],
 				[
 					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Pretext latex-image to all Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Build latex-image to all Images"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Script Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Python Build with PreTeXt-cli to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Windows Main PTX Build"
+				],
+				[
+					"Main PTX Build",
+					"Windows WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Windows Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Windows Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"WCSU Color Build to HTML Folder"
+				],
+				[
+					"Main PTX Build",
+					"Check Schema"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File"
+				],
+				[
+					"Main PTX Build",
+					"Build TeX File Rocca Version"
+				],
+				[
+					"Main PTX Build",
+					"Xelatex the .tex file"
+				],
+				[
+					"Main PTX Build",
+					"Open the .pdf file"
+				],
+				[
+					"Main PTX Build",
+					"Build latex-image to all Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to svg Images"
+				],
+				[
+					"Main PTX Build",
+					"Build sageplot to pdf Images"
+				],
+				[
+					"Main PTX Build",
+					"Build youtube to all Images"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Pretext Script Image Build"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
 					"Python Build with PreTeXt-cli to HTML"
 				],
 				[
@@ -704,7 +825,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Python Build with PreTeXt-cli to HTML"
+				"Windows Build latex-image to all Images"
 			]
 		],
 		[
@@ -2616,7 +2737,7 @@
 			]
 		]
 	],
-	"build_varint": "Python Build with PreTeXt-cli to HTML",
+	"build_varint": "Pretext latex-image to all Images",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -2671,11 +2792,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/crypto_bookinfo.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/aes.ptx",
+		"/C/git/mathbook/pretext/pretext.py",
+		"/C/git/mathbook/pretext/README.md",
+		"/C/git/Inquiry-Into-Cryptology/output/html/images/image-35.tex",
 		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/MonoChapter.tex",
@@ -2745,7 +2873,6 @@
 		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/geometry/geometry.sty",
 		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
 		"/C/git/mathbook/pretext/pretext",
-		"/C/git/mathbook/pretext/README.md",
 		"/C/git/mathbook/script/mbx",
 		"/C/git/mathbook/pretext/pretext.cfg",
 		"/C/git/mathbook/script/README.md",
@@ -2795,15 +2922,7 @@
 		"/C/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
 		"/C/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/C/GIT/Inquiry-Into-Cryptology/src/chapter2_arab_analysis.ptx",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/A and C Images.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/Curriculum Development/Honors Course/Honors Math Lit Course.tex",
-		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/Basic Analysis Group Exam.tex",
-		"/C/GIT/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/analysis_cell_appendix.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/crypto_backmatter.ptx",
-		"/C/GIT/Inquiry-Into-Cryptology/src/MonoChapter.tex",
-		"/H/Classes/Math 127/Workbook/MonoChapter.tex"
+		"/C/Users/roccac/OneDrive - Western Connecticut State University/General Education/FY Materials/Crypto FY/A and C Images.tex"
 	],
 	"find":
 	{
@@ -3060,7 +3179,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -3069,15 +3188,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7006,
+						"buffer_size": 7681,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								784,
-								784
+								1577,
+								1577
 							]
 						],
 						"settings":
@@ -3085,102 +3204,10 @@
 							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "chapter7_modern_cryptology.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1903,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1693,
-								1693
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "modern_ciphers/symmetric_ciphers.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								408,
-								408
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 648.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "modern_ciphers/aes.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 768,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								677,
-								677
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -3223,7 +3250,7 @@
 	},
 	"output.exec":
 	{
-		"height": 289.0
+		"height": 491.0
 	},
 	"output.find_results":
 	{

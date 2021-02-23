@@ -33,96 +33,27 @@
 			"working_dir": "$project_path/../tmp",
 
 			"variants": [
-                {"name": "Python Build with PreTeXt-cli to HTML",
-                	"cmd":["pretext", "-v", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-o../output","html"]
+                {"name": "Pretext Build to HTML",
+                	"cmd":["pretext", "-vv", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-o../output","html"]
                 },
-                {"name": "Python Build with PreTeXt-cli to HTML with Image Build",
-                	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-d","-o../output","html"]
+                {"name": "Pretext Build to HTML with Image Build",
+                	"cmd":["pretext", "-vv", "build", "-i../src/$project_base_name.ptx", "-p../src/publication.xml", "-d","-o../output","html"]
                 },
-                {"name": "Python Build with PreTeXt-cli to LaTeX",
+                {"name": "Pretext Build to LaTeX",
                 	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-o../output","latex"]
                 },
-                {"name": "Windows Main PTX Build",
-                    "cmd": ["xsltproc", "--xinclude", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-                    "working_dir": "$project_path/../tmp"
+                {"name": "Pretext latex-image to all Images",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-c latex-image", "-f all", "-d tmp_images", "src/$project_base_name.ptx"]
                 },
-                {"name":"Windows WCSU Color Build to HTML Folder",
-                    "cmd": ["xsltproc", "--xinclude", "--stringparam", "publisher", "publication.xml",  "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
-                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-                    "working_dir": "$project_path/../html"
-                },
-                {"name": "Windows Check Schema",
-                    "cmd": ["java", "-classpath", "c:/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "c:/jing-trang/build/jing.jar", "c:/git/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"],
-                    "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-                    "working_dir": "$project_path/../tmp"
-                },
-                {"name": "Windows Build TeX File",
-                    "cmd": ["xsltproc",  "-xinclude", "-o","Crypt.tex","c:/git/mathbook/xsl/pretext-latex.xsl", "../src/$project_base_name.ptx"],
-                    "working_dir": "$project_path/../latex_tmp"
-                },
-                {"name": "Windows Build latex-image to all Images",
-                    "cmd": ["c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-                },
-				// {"name": "Echo Stuff",
-				// 	"cmd":["echo","$project_base_name.ptx"]
-				// },
-				// {"name": "PWD",
-				// 	"cmd":"pwd"
-				// },
-				{"name":"WCSU Color Build to HTML Folder",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "debug.colors", "orange_navy", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
-					"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-					"working_dir": "$project_path/../html"
-				},
-				// {"name":"to HTML Folder",
-				// 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
-				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
-				// 	"working_dir": "$project_path/../html"
-				// },
-				
-				{"name": "Check Schema",
-					"cmd": ["java", "-classpath", "/Users/cfroccajr/Applications/GIT/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar", "/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"]
-				},
+// python c:/git/mathbook/pretext/pretext -vv -c latex-image -f all -d ../tmp_images Intro_Crypto_Main.ptx
 
-				{"name": "Build TeX File",
-					"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "--stringparam", "exercise.backmatter.solution", "yes", "--stringparam", "exercise.inline.answer", "no", "--stringparam", "exercise.divisional.answer", "no", "--stringparam", "exercise.divisional.solution", "no", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
-				},
-
-				{"name": "Build TeX File Rocca Version",
-					"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/applications/git/mathbook/user/mathbook-latex-rocca.xsl", "../src/$project_base_name.ptx"]
-				},
-
-				{"name": "Xelatex the .tex file",
-					"cmd": ["xelatex","$project_base_name.tex"],
-				},
-
-				{"name": "Open the .pdf file",
-					"cmd": ["open","$project_base_name.pdf"]
-				},
-
-				{"name": "Build latex-image to all Images",
-					"cmd": ["/Users/cfroccajr/Applications/GIT/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-				},
-
-				{"name": "Build sageplot to svg Images",
-					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fsvg", "-dimages", "../src/$project_base_name.ptx"]
-				},
-
-				{"name": "Build sageplot to pdf Images",
-					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fpdf", "-dimages", "../src/$project_base_name.ptx"]
-				},
-
-				{"name": "Build youtube to all Images",
-					"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-cyoutube", "-fall", "-dimages", "../src/$project_base_name.ptx"]
-				}
 			]
 		}
 	]
 }
 //"--stringparam", "debug.colors", "orange_navy",
 
-// Install a python virtual environnement with the command $ python -m venv virtual (this created a folder in the current directory named virtual).
+// Install a python vcd Introirtual environnement with the command $ python -m venv virtual (this created a folder in the current directory named virtual).
 // Activate the virtual environnement with the command $ . virtual/Scripts/activate  (note the dot and the space after).
 // You should see (virtual) above the command line if the virtual environnement is activated.  
 // Once inside the virtual environnement, run the following commands to install python packages needed for the pretext script to work.
@@ -131,3 +62,86 @@
 // pip install requests  
 // Run the pretext script using the command $ python ~/mathbook/pretext/pretext -vv -c latex-image -f svg -d [path to output directory for images files] [name of xml file]  . The script should be ran from the same folder you are when you compile your html version.
 // To desactivate the virtual environnement, use the command $ deactivate 
+
+
+
+
+// Old Build commands
+
+                // {"name": "Build latex-image to all Images",
+                //     "cmd": ["pretext", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+                // },
+				// {"name": "Build latex-image to all Images",
+				// 	"cmd": ["c:/git/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				// },
+				// {"name": "Echo Stuff",
+				// 	"cmd":["echo","$project_base_name.ptx"]
+				// },
+				// {"name": "PWD",
+				// 	"cmd":"pwd"
+				// },
+                // {"name": "Windows Main PTX Build",
+                //     "cmd": ["xsltproc", "--xinclude", "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+                //     "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                //     "working_dir": "$project_path/../tmp"
+                // },
+                // {"name":"Windows WCSU Color Build to HTML Folder",
+                //     "cmd": ["xsltproc", "--xinclude", "--stringparam", "publisher", "publication.xml",  "c:/git/mathbook/xsl/pretext-html.xsl", "../src/$project_base_name.ptx"],
+                //     "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                //     "working_dir": "$project_path/../html"
+                // },
+                // {"name": "Windows Check Schema",
+                //     "cmd": ["java", "-classpath", "c:/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "c:/jing-trang/build/jing.jar", "c:/git/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"],
+                //     "file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+                //     "working_dir": "$project_path/../tmp"
+                // },
+                // {"name": "Windows Build TeX File",
+                //     "cmd": ["xsltproc",  "-xinclude", "-o","Crypt.tex","c:/git/mathbook/xsl/pretext-latex.xsl", "../src/$project_base_name.ptx"],
+                //     "working_dir": "$project_path/../latex_tmp"
+                // },				
+    			// {"name":"WCSU Color Build to HTML Folder",
+				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "debug.colors", "orange_navy", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+				// 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+				// 	"working_dir": "$project_path/../html"
+				// },
+				// // {"name":"to HTML Folder",
+				// // 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/Applications/git/mathbook/xsl/mathbook-html.xsl", "../src/$project_base_name.ptx"],
+				// // 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-20]*)",
+				// // 	"working_dir": "$project_path/../html"
+				// // },
+				
+				// {"name": "Check Schema",
+				// 	"cmd": ["java", "-classpath", "/Users/cfroccajr/Applications/GIT/jing-trang/build", "-Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration", "-jar", "/Users/cfroccajr/Applications/GIT/jing-trang/build/jing.jar", "/Users/cfroccajr/Applications/GIT/mathbook/schema/pretext.rng", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Build TeX File",
+				// 	"cmd": ["xsltproc", "--xinclude", "--stringparam", "exercise.backmatter.statement", "no", "--stringparam", "exercise.backmatter.solution", "yes", "--stringparam", "exercise.inline.answer", "no", "--stringparam", "exercise.divisional.answer", "no", "--stringparam", "exercise.divisional.solution", "no", "--stringparam", "whitespace", "flexible", "/Users/cfroccajr/applications/git/mathbook/xsl/mathbook-latex.xsl", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Build TeX File Rocca Version",
+				// 	"cmd": ["xsltproc", "--xinclude", "/Users/cfroccajr/applications/git/mathbook/user/mathbook-latex-rocca.xsl", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Xelatex the .tex file",
+				// 	"cmd": ["xelatex","$project_base_name.tex"],
+				// },
+
+				// {"name": "Open the .pdf file",
+				// 	"cmd": ["open","$project_base_name.pdf"]
+				// },
+
+				// {"name": "Build latex-image to all Images",
+				// 	"cmd": ["/Users/cfroccajr/Applications/GIT/mathbook/script/mbx", "-v", "-clatex-image", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Build sageplot to svg Images",
+				// 	"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fsvg", "-dimages", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Build sageplot to pdf Images",
+				// 	"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-csageplot", "-fpdf", "-dimages", "../src/$project_base_name.ptx"]
+				// },
+
+				// {"name": "Build youtube to all Images",
+				// 	"cmd": ["/Users/cfroccajr/applications/git/mathbook/script/mbx", "-v", "-cyoutube", "-fall", "-dimages", "../src/$project_base_name.ptx"]
+				// }
