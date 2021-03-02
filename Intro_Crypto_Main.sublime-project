@@ -45,21 +45,25 @@
                 {"name": "Pretext Build to LaTeX",
                 	"cmd":["pretext", "build", "-i../src/$project_base_name.ptx", "-o../output","latex"]
                 },
-                // the below is based on this, but creating PNG this way throws an error
+                // the below is based on this, but creating PNG this way throws an error without modifying pretext.cfg
 				// python c:/git/mathbook/pretext/pretext -vv -c latex-image -f all -d ../tmp_images Intro_Crypto_Main.ptx
                 {"name": "Pretext latex-image to PDF",
-                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-clatex-image", "-fpdf", "-d../tmp_images", "../src/$project_base_name.ptx"]
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fpdf", "-d../tmp_images", "../src/$project_base_name.ptx"]
                 },
                 {"name": "Pretext latex-image to SVG",
-                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-vv", "-clatex-image", "-fsvg", "-d../tmp_images", "../src/$project_base_name.ptx"]
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fsvg", "-d../tmp_images", "../src/$project_base_name.ptx"]
                 },
-				// Use these at a command prompt to convert to png.
+                // To get all to work on Windows added full path and .exe to pdfpng in /mathbook/user/pretext.cfg
+                {"name": "Pretext latex-image to All",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-d../tmp_images", "../src/$project_base_name.ptx"]
+                },
+                // Not clear if this is still needed with the PreTeXt script
+                {"name": "Pretext youtube to All",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-cyoutube", "-fall", "-d../tmp_images", "../src/$project_base_name.ptx"]
+                },
+				// These can be used at a command prompt to convert to png.
 				// for file in *.pdf; do convert -density 300 "$file" -quality 100 "{$file%.*}.png"; done
 				// FOR %a in (*.pdf) DO convert -density 300 %a -quality 100 %~na.png
-                {"name": "PDF to PNG",
-                	"cmd":["FOR %a in (../tmp_images/*.pdf) DO convert ../tmp_images/%a ../tmp_images/%~na.png"]
-                },
-
 			]
 		}
 	]
@@ -76,7 +80,8 @@
 // pip install pdfCropMargins
 // pip install lxml
 // pip install requests  
-// Run the pretext script using the command $ python ~/mathbook/pretext/pretext -vv -c latex-image -f svg -d [path to output directory for images files] [name of xml file]  . The script should be ran from the same folder you are when you compile your html version.
+// Run the pretext script using the command $ python ~/mathbook/pretext/pretext -vv -c latex-image -f svg -d [path to output directory for images files] [name of xml file]  . 
+// The script should be ran from the same folder you are when you compile your html version.
 // To desactivate the virtual environnement, use the command $ deactivate 
 
 
