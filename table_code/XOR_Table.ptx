@@ -1,0 +1,20 @@
+        <table xml:id="table_xor">
+            <title>Exclusive Or Truth Table</title>
+            <tabular top="minor" bottom="minor" left="minor" right="minor" halign="center">
+                <row>
+                    <cell> <m>P</m> </cell> <cell> <m>Q</m> </cell> <cell> <m>P\bigoplus Q</m> </cell>
+                </row>
+                <row>
+                    <cell>False</cell><cell>False</cell><cell>False</cell>
+                </row>
+                <row>
+                    <cell>False</cell><cell>True</cell><cell>True</cell>
+                </row>
+                <row>
+                    <cell>True</cell><cell>False</cell><cell>True</cell>
+                </row>
+                <row>
+                    <cell>True</cell><cell>True</cell><cell>False</cell>
+                </row>
+            </tabular>
+        </table>

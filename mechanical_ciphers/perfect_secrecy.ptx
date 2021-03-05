@@ -29,6 +29,21 @@
             <subsubsection xml:id="baudot_murray">
                 <title>Baudot, Murray, and ITA</title>
                 <p> Stuff about Baudot-Murray codes</p>
+                <!-- %By Jean Maurice Emile Baudot - Image Full patent, Public Domain, https://commons.wikimedia.org/w/index.php?curid=57431249
+                %By User:Huestones with derivative work by User:TedColes - Old version of File:International Telegraph Alphabet 2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=82195717 -->
+                <figure xml:id="figure_baudot">
+                    <caption>Baudot's Printing Telegraph Code from 1888</caption>
+                    <image width="60%" source="images/Baudot_1888_patent.png">
+                        <description>Baudot's Printing Telegraph Code from 1888</description>
+                    </image>
+                </figure>
+                <!-- %By User:Huestones with derivative work by User:TedColes - Old version of File:International Telegraph Alphabet 2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=82195717 -->
+                <figure xml:id="figure_ita2">
+                    <caption>International Telegraph Alphabet 2 ca. 1924</caption>
+                    <image width="60%" source="images/ITA2_Code.png">
+                        <description>International Telegraph Alphabet 2 ca. 1924</description>
+                    </image>
+                </figure>
             </subsubsection>
         </subsection>
     <!-- Subsection on Vernam and Perfect Secrecy -->
@@ -44,14 +59,23 @@
             </introduction>
             <subsection xml:id="logic_circuits">
                 <title>Comments on Circuits and Logic</title>
+                <p>
+                    In order to complete a circuit and light a light bulb, the bulb needs to be connected to both sides of a battery and pass through a ground connection (<xref ref="figure_battery_ground"/>). In figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> we will say a switch is on if it is connected toward the battery and off if it is switched toward ground.  With all of this in mind take a careful look at figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> and then try to answer the comprehension questions below them.
+                </p>
+                <figure xml:id="figure_battery_ground">
+                    <caption>Battery and Ground</caption>
+                    <image width="40%" source="images/Battery_Ground.png" archive="svg png">
+                        <description>Symbols for Batteries and Ground</description>
+                    </image>
+                </figure>
                 <sidebyside widths="45% 45%" margins="0%">
-                    <figure xml:id="xor_gg">
+                    <figure xml:id="figure_xor_gg">
                         <caption>Open circuit with both contacts to ground</caption>
                         <image width="80%" source="images/XOR_GG.png" archive="svg png">
                             <description>Open circuit with both contacts to ground</description>
                         </image>
                     </figure>
-                    <figure xml:id="xor_gg">
+                    <figure xml:id="figure_xor_gb">
                         <caption>Closed circuit with one contact to ground and one to a battery</caption>
                         <image width="80%" source="images/XOR_GB.png" archive="svg png">
                             <description>Closed circuit with one contact to ground and one to a battery</description>
@@ -59,23 +83,64 @@
                     </figure>
                 </sidebyside>
                 <sidebyside widths="45% 45%" margins="0%">
-                    <figure xml:id="xor_gg">
+                    <figure xml:id="figure_xor_bg">
                         <caption>Closed circuit with one contact to a battery and one to ground</caption>
                         <image width="80%" source="images/XOR_BG.png" archive="svg png">
                             <description>Closed circuit with one contact to a battery and one to ground</description>
                         </image>
                     </figure>
-                    <figure xml:id="xor_gg">
+                    <figure xml:id="figure_xor_bb">
                         <caption>Open circuit with both contacts to batteries</caption>
                         <image width="80%" source="images/XOR_BB.png" archive="svg png">
                             <description>Open circuit with both contacts to batteries</description>
                         </image>
                     </figure>
                 </sidebyside>
+                <subsubsubsection>
+                    <p>
+                        <alert>Comprehension Check:</alert>
+                        <ul>
+                            <li>Looking at figure <xref ref="figure_xor_gg"/>, why isn't the bulb lit up? What positions are the switches S1 and S2 in?</li>
+                            <li>Looking at figure <xref ref="figure_xor_bb"/>, why isn't the bulb lit up? What positions are the switches S1 and S2 in?</li>
+                            <li>Looking at figures <xref ref="figure_xor_gb"/> and <xref ref="figure_xor_bg"/>, why are the bulbs lit up? What positions are the switches S1 and S2 in?</li>
+                            <li>In the circuit shown in the figures, which combinations of switch positions light up the bulb and which do not?</li>
+                            <li>
+                                <p>
+                                    Assuming <alert>+ means on</alert> and <alert>- means off</alert> which of the following combinations light up the bulb
+                                    <ul>
+                                        <li>S1=- and S2=-</li>
+                                        <li>S1=- and S2=+</li>
+                                        <li>S1=+ and S2=-</li>
+                                        <li>S1=+ and S2=+</li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </subsubsubsection>
+                <p>
+                    This sort of circuit is referred to as an exclusive or, XOR, circuit in reference to the term XOR from mathematical logic.
+                </p>
+                <definition xml:id="definition_xor">
+                    <title>Logical Exclusive Or</title>
+                    <statement>
+                        <p>
+                            If we combine two statements <m>P</m> and <m>Q</m> with and <alert>exclusive or</alert> then the compound statement, <m>P\ XOR\ Q</m>, is true when precisely one of the statements is true.  This is sometimes represented in a truth table like so
+                        </p>
+                        <xi:include href="../table_code/XOR_Table.ptx"/>
+                        <p>
+                            Notationally the XOR is written with the symbol <m>\bigoplus</m>.  Also, in some settings <q>False</q> may be represented by a <q>0</q> or <q>-</q> sign and True my be represented by a <q>1</q> or <q>+</q> sign.
+                        </p>
+                    </statement>
+                </definition>
             </subsection>
         <!-- Basic Concept from Vernam -->
             <subsubsection xml:id="basic_idea">
                 <title>Vernam's Plan</title>
+                <p><alert>Enciphering</alert></p>
+                <p>
+                    What follows is a Vernam's description of how his Secret Signaling System enciphers a character.  The numbers in the paragraph correspond to labels in the circuit diagram in his 1919 patent. For us the numbers are important as a way of referring to steps in the process, try not to let them overwhelm you.  But remember it is okay to be confused and struggle, that is how we learn.
+                </p>
                 <assemblage>
                     <p> 
                         Let us suppose that the first character of the message to he transmitted is <q>A.</q> The code
@@ -99,20 +164,138 @@
                     </p>
                     <p>
                         As a result of this combination of contacts in the two transmitters, it will be seen
-                        that the relay 19 is connected at both ends to battery; that relay 20 is connected at one
-                        end to battery at 24 and at the other end to ground at 35; that relay 21 is connected at
+                        that the relay 19 is connected at both ends to a battery; that relay 20 is connected at one
+                        end to a battery at 24 and at the other end to ground at 35; that relay 21 is connected at
                         one end to ground through the resistance 31, and at the other end to ground at 35 ; that
                         relay 22 is connected at one end to ground through resistance 31, and at the other end
                         to battery at 34, and that relay 23 is connected to ground through the resistance 31
                         at one end and the battery 34 at the other. Therefore, relays 20, 22 and 23 will close
                         their contacts; and relays 19 and 21 will remain open. Consequently, as the distributer
-                        arm 10 rotates over the contacts 1 to 5, impulses will be transmitted to the line :from
+                        arm 10 rotates over the contacts 1 to 5, impulses will be transmitted to the line from
                         contacts 2, 4 and 5 and none from contacts 1 and 3. This means that the signal
                         <q>-+-++</q> will be transmitted over the line and this signal represents the letter
                         <q>G</q> and not the letter <q>A</q> which is the character of the message to be transmitted.
-
                     </p>
                 </assemblage>
+                <subsubsubsection>
+                    <p>
+                        <alert> Comprehension Check:</alert>
+                        <ul>
+                            <li>Which combination of +'s and -'s represent the letter A?</li>
+                            <li>Which combination of +'s and -'s represent the letter B?</li>
+                            <li>The letter G is represented by (-+-++). Look at the representations of A and B and the definition of <alert>exclusive or</alert> (<xref ref="definition_xor"/>) and use these to explain how we arrived at the representation of G.</li>
+                            <li>Vernam says that the <q>relay 19 is connected at both ends to a battery</q> and so will remain open.  Comparing this to the questions you answered about figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> what do you notice?</li>
+                            <li>Vernam says that the <q>relay 20 is connected at one end to a battery at 24 and at the other end to ground at 35</q> and so it will close.  Comparing this to the questions you answered about figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> what do you notice?</li>
+                            <li>Repeat the previous two questions for relays numbered 21, 22, and 23.</li>
+                        </ul>
+                    </p>
+                </subsubsubsection>
+                <exercise>
+                    <statement>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write E as (+----) and write Q as (+++-+).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
+                    </statement>
+                    <hint>
+                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that + is True and - is False. </p>
+                    </hint>
+                    <answer>
+                        <p>You should get (-++-+) which is P.</p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write U as (+++--) and write H as (--+-+).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
+                    </statement>
+                    <hint>
+                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that + is True and - is False. </p>
+                    </hint>
+                    <answer>
+                        <p>You should get (++--+) which is W.</p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) look up the codes for F and T.  Add these together using the exclusive or operation just like Vernam added A and B.</p>
+                    </statement>
+                    <hint>
+                        <p>When you read the ITA2 table you should read top to bottom with <m>+\equiv\bullet</m> and <m>-\equiv \circ</m>(a blank space)</p>
+                    </hint>
+                    <answer>
+                        <p>You should get (+-+++) which is X.</p>
+                    </answer>
+                </exercise>
+                <exercise xml:id="exercise_self_inverse">
+                    <statement>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) look up the code for K.  Add K to its self using the exclusive or operation just like Vernam added A and B.</p>
+                    </statement>
+                    <hint>
+                        <p>When you read the ITA2 table you should read top to bottom with <m>+\equiv\bullet</m> and <m>-\equiv \circ</m>(a blank space)</p>
+                    </hint>
+                    <answer>
+                        <p>You should get (-----) which is listed as not in use.</p>
+                    </answer>
+                </exercise>
+                <p><alert>Deciphering</alert></p>
+                <p>
+                    After the above passage Vernam, with some more reference to the circuit diagram for his device, goes on to explain how deciphering is identical to enciphering.  For example to encipher we added A(++---) to B(+--++) to get G(-+-++).  To decipher the person receiving the message will add B again to recover A.
+                </p>
+                <subsubsubsection>
+                    <p>
+                        <alert> Comprehension Check:</alert>
+                        <ul>
+                            <li>Add B (+--++) to G (-+-++), does this in fact return A (++---)?</li>
+                            <li>Verify that adding C (-+++-) and D (+--+-) gives U (+++--). Then add D to U, do you get C back?</li>
+                            <li>What happens when you add B to B?</li>
+                            <li>What happens when you add M to M?</li>
+                            <li>What happens when you add F to F?</li>
+                            <li>What will happen if you add any letter to its self?</li>
+                            <li>Can you explain in terms of exclusive or (definition <xref ref="definition_xor"/>) why you got the results you did for the previous few questions?</li>
+                        </ul>
+                    </p>
+                </subsubsubsection>
+                <exercise>
+                    <statement>
+                        <p>Encipher the word <q>hello</q> by adding the key <q>ABCHE</q></p>
+                    </statement>
+                    <hint>
+                        <p>Translate the letters into code using figure <xref ref="figure_ita2"/>. Then, add the letters one character at a time, i.e. start with <m>H\bigoplus A</m> then proceed from there.</p>
+                    </hint>
+                    <answer>
+                        <p>You should get the ciphertext <q>QOMIB</q>.</p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>Encipher the word <q>pizza</q> by adding the key <q>ATTACK</q></p>
+                    </statement>
+                    <hint>
+                        <p>Translate the letters into code using figure <xref ref="figure_ita2"/>. Then, add the letters one character at a time, i.e. start with <m>P\bigoplus A</m> then proceed from there.</p>
+                    </hint>
+                    <answer>
+                        <p>You should get the ciphertext <q>YPELFR</q>.</p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>Decipher the text <q>GYTVS</q> by adding the key <q>QWYRT</q>.</p>
+                    </statement>
+                    <hint>
+                        <p>Translate the letters into code using figure <xref ref="figure_ita2"/>. Then, add the letters one character at a time, i.e. start with <m>G\bigoplus Q</m> then proceed from there.</p>
+                    </hint>
+                    <answer>
+                        <p>You should get the plaintext <q>fishy</q>.</p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>Decipher the text <q>GOANBZT</q> by adding the key <q>BHFOEKS</q></p>
+                    </statement>
+                    <hint>
+                        <p>Translate the letters into code using figure <xref ref="figure_ita2"/>. Then, add the letters one character at a time, i.e. start with <m>G\bigoplus B</m> then proceed from there.</p>
+                    </hint>
+                    <answer>
+                        <p>You should get the plaintext <q>anchovy</q>.</p>
+                    </answer>
+                </exercise>
             </subsubsection>
         <!-- Vernam compared to Vigenere -->
             <subsubsection xml:id="vs_vigenere">
