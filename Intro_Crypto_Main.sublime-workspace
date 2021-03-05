@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"Mu",
+				"MURRAY_CODE_DICT"
+			],
+			[
+				"re",
+				"reverse_murray_dictionary"
+			],
+			[
+				"M",
+				"MURRAY_CODE_DICT"
+			],
+			[
+				"morse",
+				"morse_encipher"
+			],
+			[
+				"Mor",
+				"MORSE_CODE_DICT"
+			],
+			[
 				"al",
 				"ALPHA"
 			],
@@ -288,7 +308,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -760,6 +780,134 @@
 				[
 					"Main PTX Build",
 					"PDF to PNG"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to All"
+				],
+				[
+					"Main PTX Build",
+					"PDF to PNG"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Pretext latex-image to All"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to All"
+				],
+				[
+					"Main PTX Build",
+					"Pretext youtube to All"
+				]
+			],
+			[
+				"Main PTX Build",
+				"Pretext Build to HTML"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to All"
+				],
+				[
+					"Main PTX Build",
+					"Pretext youtube to All"
 				],
 				[
 					"Packages/Python/Python.sublime-build",
@@ -2972,18 +3120,22 @@
 	"expanded_folders":
 	[
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/new_analysis"
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code"
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/vigenere.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/morse.py",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/development_code.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/mech_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Geometry/Transformation_Investigation.tex",
 		"/C/git/mathbook/user/pretext.cfg",
 		"/C/git/mathbook/pretext/pretext.py",
 		"/C/git/pretext-cli/README.md",
 		"/C/git/pretext-cli/pretext/utils.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python.py",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
-		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/string_analysis.sage",
 		"/C/git/pretext-cli/pretext/static/pretext/pretext.cfg",
 		"/C/git/mathbook/script/braille/pretext-liblouis.cfg",
@@ -3010,7 +3162,6 @@
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/HON 498 Math and Lit/2021 Fall Honors Math Lit Course.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/grille_cipher.py",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/vigenere.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/cipher_txt.txt",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/theSpy.txt",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python-CFRoccaJr.py",
@@ -3100,10 +3251,7 @@
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
 		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
-		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/new_ciphers/falconer_transcipher.ptx",
-		"/Users/cfroccajr/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+		"/Users/cfroccajr/Applications/GIT/Inquiry-Into-Cryptology/src/sage_code/alberti_disc.sage"
 	],
 	"find":
 	{
@@ -3121,6 +3269,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"([0-9]{5})",
+			"([0-1]*)",
+			"\\n",
+			"([A-Z])",
 			"pdfpng",
 			"convert",
 			"([0-9]+[.][0-9]+)",
@@ -3244,11 +3396,7 @@
 			"figure",
 			"\\\\item(\\s.*)",
 			"\\_",
-			"\\\\vsp{.+}",
-			"\\ec",
-			"\\bc",
-			"''",
-			"``"
+			"\\\\vsp{.+}"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3256,6 +3404,10 @@
 		"regex": true,
 		"replace_history":
 		[
+			"'$1'",
+			", ",
+			"'$1'",
+			"\"$1\"",
 			"\"$1\\\\%\"",
 			"\\\\textcolor{red}{\\\\textbf{$1}}",
 			"\\\\underline{$1}",
@@ -3403,7 +3555,7 @@
 	},
 	"output.exec":
 	{
-		"height": 407.0
+		"height": 306.0
 	},
 	"output.find_results":
 	{
@@ -3413,7 +3565,7 @@
 	{
 		"height": 253.0
 	},
-	"pinned_build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
+	"pinned_build_system": "",
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{

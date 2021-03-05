@@ -49,7 +49,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
     <xi:include href="mechanical_ciphers/wwi_ciphers.ptx"/>
-    <xi:include href="mechanical_ciphers/mech_ciphers.ptx"/>
+    <xi:include href="mechanical_ciphers/perfect_secrecy.ptx"/>
+    <xi:include href="mechanical_ciphers/between_wars.ptx"/>
     <xi:include href="mechanical_ciphers/wwii_ciphers.ptx"/>
 
     <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 

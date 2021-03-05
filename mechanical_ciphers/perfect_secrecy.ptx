@@ -1,0 +1,129 @@
+    <section xml:id="perfect_secrecy_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Perfect Secrecy</title>
+        <objectives>
+            <ul>
+                <li>
+                    Vernam One-Time Pad and Perfect Secrecy
+                    <!-- Frank Miller: Inventor of the One-Time Pad, Cryptologia 7/12/2011, vol. 35 issue 3)
+                            Vernam Patent US1310719 A
+                    -->
+                    <!-- See also Vernam's Patent from 1918, start on page 3.
+                    -->
+                </li>
+            </ul>
+        </objectives>
+    <!-- Subsection on Telegraph type codes -->
+        <subsection xml:id="mores_and_friends">
+            <title>Morse Code and Friends</title>
+            <introduction>
+                <p>
+                    Add a little commentary/history
+                </p>
+            </introduction>
+        <!-- Morse Code -->
+            <subsubsection xml:id="morse">
+                <title>Morse Code</title>
+                <p> Stuff about Morse code</p>
+            </subsubsection>
+        <!-- Telegraph Codes -->
+            <subsubsection xml:id="baudot_murray">
+                <title>Baudot, Murray, and ITA</title>
+                <p> Stuff about Baudot-Murray codes</p>
+            </subsubsection>
+        </subsection>
+    <!-- Subsection on Vernam and Perfect Secrecy -->
+        <subsection xml:id="perfect_secrecy">
+            <title>Gilbert Vernam and Perfect Secrecy</title>
+            <introduction>
+                <p>
+                    Add a little commentary/history
+                </p>
+                <p> 
+                    Some stuff about Vernam
+                </p>
+            </introduction>
+            <subsection xml:id="logic_circuits">
+                <title>Comments on Circuits and Logic</title>
+                <sidebyside widths="45% 45%" margins="0%">
+                    <figure xml:id="xor_gg">
+                        <caption>Open circuit with both contacts to ground</caption>
+                        <image width="80%" source="images/XOR_GG.png" archive="svg png">
+                            <description>Open circuit with both contacts to ground</description>
+                        </image>
+                    </figure>
+                    <figure xml:id="xor_gg">
+                        <caption>Closed circuit with one contact to ground and one to a battery</caption>
+                        <image width="80%" source="images/XOR_GB.png" archive="svg png">
+                            <description>Closed circuit with one contact to ground and one to a battery</description>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <sidebyside widths="45% 45%" margins="0%">
+                    <figure xml:id="xor_gg">
+                        <caption>Closed circuit with one contact to a battery and one to ground</caption>
+                        <image width="80%" source="images/XOR_BG.png" archive="svg png">
+                            <description>Closed circuit with one contact to a battery and one to ground</description>
+                        </image>
+                    </figure>
+                    <figure xml:id="xor_gg">
+                        <caption>Open circuit with both contacts to batteries</caption>
+                        <image width="80%" source="images/XOR_BB.png" archive="svg png">
+                            <description>Open circuit with both contacts to batteries</description>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </subsection>
+        <!-- Basic Concept from Vernam -->
+            <subsubsection xml:id="basic_idea">
+                <title>Vernam's Plan</title>
+                <assemblage>
+                    <p> 
+                        Let us suppose that the first character of the message to he transmitted is <q>A.</q> The code
+                        signal of <q>A</q> is <q>++---,</q> where <q>-</q> represents an <q>open</q> or <q>spacing</q> impulse
+                        and <q>+</q> represents a <q>closed</q> or <q>marking</q> impulse in the system here illustrated,
+                        although it will be understood that positive and negative current impulses may be used
+                        instead of closed and open circuit operation if desired. For ciphering and deciphering
+                        the message the ciphering devices at the opposite ends of the line are provided with
+                        identical sections of tape upon which are recorded a series of code signals which are
+                        preferably selected at random but if desired may themselves represent a predetermined
+                        series of letters or words. Let us suppose that the letter <q>B</q> happens to be in the
+                        ciphering transmitter at the same moment that the letter <q>A</q> is being sent from the
+                        normal transmitter. The code for the letter <q>B</q> is <q>+--++.</q> The sending of <q>A</q>
+                        from the normal transmitter means that the contacts 25 and 26 will be closed, while the
+                        contacts 27, 28 and 29 are open. Thus, relays 14 and 15 will be energized and close
+                        their contacts, while relays 16, 17 and 18 remain unenergized. The presence of the letter
+                        <q>B</q> in the code transmitter means that contacts 36, 39 and 40, representing the plus
+                        impulses for <q>B,</q> will be in contact with the bus-bar 32, which is connected to [the] battery
+                        and that contacts 37 and 38, representing the negative impulses for this character
+                        will be in contact with bus-bar 33 which is grounded.
+                    </p>
+                    <p>
+                        As a result of this combination of contacts in the two transmitters, it will be seen
+                        that the relay 19 is connected at both ends to battery; that relay 20 is connected at one
+                        end to battery at 24 and at the other end to ground at 35; that relay 21 is connected at
+                        one end to ground through the resistance 31, and at the other end to ground at 35 ; that
+                        relay 22 is connected at one end to ground through resistance 31, and at the other end
+                        to battery at 34, and that relay 23 is connected to ground through the resistance 31
+                        at one end and the battery 34 at the other. Therefore, relays 20, 22 and 23 will close
+                        their contacts; and relays 19 and 21 will remain open. Consequently, as the distributer
+                        arm 10 rotates over the contacts 1 to 5, impulses will be transmitted to the line :from
+                        contacts 2, 4 and 5 and none from contacts 1 and 3. This means that the signal
+                        <q>-+-++</q> will be transmitted over the line and this signal represents the letter
+                        <q>G</q> and not the letter <q>A</q> which is the character of the message to be transmitted.
+
+                    </p>
+                </assemblage>
+            </subsubsection>
+        <!-- Vernam compared to Vigenere -->
+            <subsubsection xml:id="vs_vigenere">
+                <title>Vigen&#x00E8;re Perfected</title>
+                <p> Stuff about Vigen&#x00E8;re vs Vernam</p>
+            </subsubsection>
+        <!-- Definition and Example of Perfect Secrecy -->
+            <subsubsection xml:id="perfect_secrecy">
+                <title>Perfect Secrecy</title>
+                <p> Stuff about Perfect Secrecy</p>
+            </subsubsection>
+        </subsection>
+
+    </section>
