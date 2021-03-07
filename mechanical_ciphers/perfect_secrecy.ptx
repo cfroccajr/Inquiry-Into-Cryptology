@@ -2,65 +2,105 @@
         <title>Perfect Secrecy</title>
         <objectives>
             <ul>
+                <li>Telegraphs, Teletypes, Codes</li>
                 <li>
-                    Vernam One-Time Pad and Perfect Secrecy
+                    Vernam One-Time Pad
                     <!-- Frank Miller: Inventor of the One-Time Pad, Cryptologia 7/12/2011, vol. 35 issue 3)
                             Vernam Patent US1310719 A
                     -->
                     <!-- See also Vernam's Patent from 1918, start on page 3.
                     -->
                 </li>
+                <li>Comparison with Vigen&#x00E8;re</li>
+                <li>Perfect Secrecy</li>
             </ul>
         </objectives>
     <!-- Subsection on Telegraph type codes -->
-        <subsection xml:id="mores_and_friends">
-            <title>Morse Code and Friends</title>
+        <subsection xml:id="telegraphs_teletype">
+            <title>Telegraphs and Teletype</title>
             <introduction>
                 <p>
-                    Add a little commentary/history
+                    By the middle of the nineteenth century the invention of the telegraph by Samuel Morse had made high speed communication a reality.  The telegraph allowed people to send signals, short bursts of electricity, along wires from one point to another.  The signals were initiated with a key and received with a sounder (figure <xref ref="figure_telegraph_sounder"/>).  But, the sounder didn't generate any sort of sophisticated sound like the telephone would, it just generated beeps or buzzes.  What was needed was a code.
                 </p>
             </introduction>
-        <!-- Morse Code -->
-            <subsubsection xml:id="morse">
-                <title>Morse Code</title>
-                <p> Stuff about Morse code</p>
-            </subsubsection>
-        <!-- Telegraph Codes -->
-            <subsubsection xml:id="baudot_murray">
-                <title>Baudot, Murray, and ITA</title>
-                <p> Stuff about Baudot-Murray codes</p>
-                <!-- %By Jean Maurice Emile Baudot - Image Full patent, Public Domain, https://commons.wikimedia.org/w/index.php?curid=57431249
-                %By User:Huestones with derivative work by User:TedColes - Old version of File:International Telegraph Alphabet 2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=82195717 -->
-                <figure xml:id="figure_baudot">
-                    <caption>Baudot's Printing Telegraph Code from 1888</caption>
-                    <image width="60%" source="images/Baudot_1888_patent.png">
-                        <description>Baudot's Printing Telegraph Code from 1888</description>
+           <!-- Telegraph Codes -->
+                <p> 
+                    The answer to this came from Samuel Morse.  Morse code would translate letters into a series of dots, <alert><m>.</m></alert>, and dashes, <alert><m>-</m></alert>, which the telegraph sounder indicated with shorter beeps and longer beeps (see table <xref ref="table_morse_code"/>).
+                </p>
+                <xi:include href="../table_code/morse_code_table.ptx"/>
+                <!-- %By Daderot - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=48455286 -->
+                <figure xml:id="figure_telegraph_sounder">
+                    <caption>Telegraph Key and Sounder</caption>
+                    <image width="50%" source="images/telegraph_sounder.png">
+                        <description>Image of a telegraph key and sounder</description>
                     </image>
                 </figure>
+                <p>
+                    While a skilled telegraph operator could send dozens of words per minute they were no match for the industrial revolution and machines.  The Jacquard Loom developed around 1804 used a series of cards with holes punched into them to mechanize the process of weaving.  It was soon realized that information other than fabric patterns could be encoded in this way.  Charles Babbage and Ada Lovelace used this idea to try and create a programmable mechanical computer over one hundred years prior to the invention of the electronic computer in the 1940's.  In the latter half of the nineteenth century it was also realized that messages could be encoded on card or paper tape in this same way and then read at high speed by a machine.  These machines eventually evolved into tape readers such as the Creed Model Tape Reader in figure <xref ref="figure_teletype_machine"/>.  But to do this there was a need for a new code.
+                </p>
+                <sidebyside widths="45% 45%" margins="0%">
+                    <!-- %By TedColes - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=76086538 -->
+                    <figure xml:id="figure_teletype_machine">
+                        <caption>Creed Model Tape Reader ca. 1924</caption>
+                        <image width="60%" source="images/Creed_model_6S-2_paper_tape_reader.png">
+                            <description>Image of a 1924 Creed Model Tape Reader</description>
+                        </image>
+                    </figure>
+                    <!-- %By Jean Maurice Emile Baudot - Image Full patent, Public Domain, https://commons.wikimedia.org/w/index.php?curid=57431249 -->
+                    <figure xml:id="figure_baudot">
+                        <caption>Baudot's Printing Telegraph Code from 1888</caption>
+                        <image width="60%" source="images/Baudot_1888_patent.png">
+                            <description>Baudot's Printing Telegraph Code from 1888</description>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>
+                    One early candidate came from &#x00C9;mile Baudot in 1888 (see figure <xref ref="figure_baudot"/>).  In his patent he represented characters abstractly using pluses and minuses, where a plus would represent a hole in a punch card and a minus would represent not a hole.  Donald Murray modified this around 1901 and the code eventually evolved into the International Telegraph Alphabet like the one in figure <xref ref="figure_ita2"/>.
+                </p>
                 <!-- %By User:Huestones with derivative work by User:TedColes - Old version of File:International Telegraph Alphabet 2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=82195717 -->
                 <figure xml:id="figure_ita2">
                     <caption>International Telegraph Alphabet 2 ca. 1924</caption>
-                    <image width="60%" source="images/ITA2_Code.png">
+                    <image width="100%" source="images/ITA2_Code.png">
                         <description>International Telegraph Alphabet 2 ca. 1924</description>
                     </image>
                 </figure>
-            </subsubsection>
+                <p>
+                    <alert>Comprehension Check:</alert>
+                    <ul>
+                        <li>Looking at figures <xref ref="figure_ita2"/>, how many dots are used to represent <q>E</q>?</li>
+                        <li>Looking at figures <xref ref="figure_ita2"/>, how many dots are used to represent <q>T</q>?</li>
+                        <li>Looking at figures <xref ref="figure_ita2"/>, how many dots are used to represent <q>V</q>?</li>
+                        <li>How do your previous answers compare to how these letters are represented the Morse code in table <xref ref="table_morse_code"/>?</li>
+                        <li>If you compare this to what you know about letter frequencies, can you make a conjecture about the number or dots used to represent a letter and the letter's frequency?</li>
+                        <li>From the practical standpoint of using/implementing these codes, why do you think the creators made this choice?</li>
+                    </ul>
+                </p>
         </subsection>
+    
     <!-- Subsection on Vernam and Perfect Secrecy -->
         <subsection xml:id="perfect_secrecy">
-            <title>Gilbert Vernam and Perfect Secrecy</title>
+            <title>Gilbert S. Vernam and Perfect Secrecy</title>
             <introduction>
                 <p>
-                    Add a little commentary/history
+                    All the codes discussed above were not code or ciphers as we have discussed them previously.  These codes did not serve to obfuscate meaning, their roll was to facilitate high speed communications.  So, in this age of the machine how can we keep a message secure.  One way to do this would be to encipher a message by hand, transmit the enciphered message mechanically, and finally decipher that message by hand.  This, however, would be a suboptimal solution to this problem in an industrial age.
                 </p>
-                <p> 
-                    Some stuff about Vernam
-                </p>
-            </introduction>
-            <subsection xml:id="logic_circuits">
-                <title>Comments on Circuits and Logic</title>
                 <p>
-                    In order to complete a circuit and light a light bulb, the bulb needs to be connected to both sides of a battery and pass through a ground connection (<xref ref="figure_battery_ground"/>). In figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> we will say a switch is on if it is connected toward the battery and off if it is switched toward ground.  With all of this in mind take a careful look at figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> and then try to answer the comprehension questions below them.
+                    In 1919, just five years after completing college at Worcester Polytechnic Institute, Gilbert S. Vernam had an idea.  He proposed a system in which you would feed two paper tapes through a machine at the same time.  On one tape would be the message that you wanted to send and on the other would be a random string of characters which acted as a key.  The machine would translate both strings of characters into teletype code and then <q>add</q> them together using an exclusive or operation (in modern computers this is now called bitwise addition).  The recipient of the message would use an identical copy of the key and identical machine could then decipher it.
+                </p>
+                <figure xml:id="figure_vernam_patent">
+                    <caption>Gilbert S. Vernam Secret Signaling System Patent</caption>
+                    <image width="60%" source="images/Vernam_Cipher_System_Patent.png">
+                        <description>Gilbert S. Vernam Secret Signaling System Patent</description>
+                    </image>
+                </figure>
+            </introduction>
+            <subsubsection xml:id="logic_circuits">
+                <title>Comments on Circuits and Logic</title>
+                <introduction>
+                    Before looking at an excerpt from Vernam's 1919 patent we need to learn a little about the idea of an <alert>exclusive or</alert> and how we can visualize it using an electrical circuit.
+                </introduction>
+                <p>
+                    In order to complete a circuit and light a light bulb, the bulb needs to be connected to both sides of a battery and the circuit must pass through a ground connection (<xref ref="figure_battery_ground"/>). For this discussion, we will say a switch is <alert>on if it is switched toward the battery</alert> and <alert>off if it is switched toward ground</alert>.  With all of this in mind take a careful look at figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> and then try to answer the comprehension questions below them.
                 </p>
                 <figure xml:id="figure_battery_ground">
                     <caption>Battery and Ground</caption>
@@ -106,12 +146,12 @@
                             <li>In the circuit shown in the figures, which combinations of switch positions light up the bulb and which do not?</li>
                             <li>
                                 <p>
-                                    Assuming <alert>+ means on</alert> and <alert>- means off</alert> which of the following combinations light up the bulb
+                                    Assuming <alert><m>+</m> means on</alert> and <alert><m>-</m> means off</alert> which of the following combinations light up the bulb
                                     <ul>
-                                        <li>S1=- and S2=-</li>
-                                        <li>S1=- and S2=+</li>
-                                        <li>S1=+ and S2=-</li>
-                                        <li>S1=+ and S2=+</li>
+                                        <li>S1=<m>-</m> and S2=<m>-</m></li>
+                                        <li>S1=<m>-</m> and S2=<m>+</m></li>
+                                        <li>S1=<m>+</m> and S2=<m>-</m></li>
+                                        <li>S1=<m>+</m> and S2=<m>+</m></li>
                                     </ul>
                                 </p>
                             </li>
@@ -129,23 +169,24 @@
                         </p>
                         <xi:include href="../table_code/XOR_Table.ptx"/>
                         <p>
-                            Notationally the XOR is written with the symbol <m>\bigoplus</m>.  Also, in some settings <q>False</q> may be represented by a <q>0</q> or <q>-</q> sign and True my be represented by a <q>1</q> or <q>+</q> sign.
+                            Notationally the XOR is written with the symbol <m>\bigoplus</m>.  In some settings <q>False</q> may be represented by a <q>0</q> or <q><m>-</m></q> sign and True my be represented by a <q>1</q> or <q><m>+</m></q> sign.
                         </p>
                     </statement>
                 </definition>
-            </subsection>
+            </subsubsection>
+    
         <!-- Basic Concept from Vernam -->
             <subsubsection xml:id="basic_idea">
                 <title>Vernam's Plan</title>
                 <p><alert>Enciphering</alert></p>
                 <p>
-                    What follows is a Vernam's description of how his Secret Signaling System enciphers a character.  The numbers in the paragraph correspond to labels in the circuit diagram in his 1919 patent. For us the numbers are important as a way of referring to steps in the process, try not to let them overwhelm you.  But remember it is okay to be confused and struggle, that is how we learn.
+                    What follows is Vernam's description of how his Secret Signaling System enciphers a character.  The numbers in the paragraph correspond to labels in the circuit diagram in his 1919 patent. For us the numbers are important as a way of referring to steps in the process, try not to let them overwhelm you.  But remember it is okay to be confused and struggle, that is how we learn.
                 </p>
                 <assemblage>
                     <p> 
                         Let us suppose that the first character of the message to he transmitted is <q>A.</q> The code
-                        signal of <q>A</q> is <q>++---,</q> where <q>-</q> represents an <q>open</q> or <q>spacing</q> impulse
-                        and <q>+</q> represents a <q>closed</q> or <q>marking</q> impulse in the system here illustrated,
+                        signal of <q>A</q> is <q><m>++---</m>,</q> where <q><m>-</m></q> represents an <q>open</q> or <q>spacing</q> impulse
+                        and <q><m>+</m></q> represents a <q>closed</q> or <q>marking</q> impulse in the system here illustrated,
                         although it will be understood that positive and negative current impulses may be used
                         instead of closed and open circuit operation if desired. For ciphering and deciphering
                         the message the ciphering devices at the opposite ends of the line are provided with
@@ -153,7 +194,7 @@
                         preferably selected at random but if desired may themselves represent a predetermined
                         series of letters or words. Let us suppose that the letter <q>B</q> happens to be in the
                         ciphering transmitter at the same moment that the letter <q>A</q> is being sent from the
-                        normal transmitter. The code for the letter <q>B</q> is <q>+--++.</q> The sending of <q>A</q>
+                        normal transmitter. The code for the letter <q>B</q> is <q><m>+--++</m>.</q> The sending of <q>A</q>
                         from the normal transmitter means that the contacts 25 and 26 will be closed, while the
                         contacts 27, 28 and 29 are open. Thus, relays 14 and 15 will be energized and close
                         their contacts, while relays 16, 17 and 18 remain unenergized. The presence of the letter
@@ -173,7 +214,7 @@
                         their contacts; and relays 19 and 21 will remain open. Consequently, as the distributer
                         arm 10 rotates over the contacts 1 to 5, impulses will be transmitted to the line from
                         contacts 2, 4 and 5 and none from contacts 1 and 3. This means that the signal
-                        <q>-+-++</q> will be transmitted over the line and this signal represents the letter
+                        <q><m>-+-++</m></q> will be transmitted over the line and this signal represents the letter
                         <q>G</q> and not the letter <q>A</q> which is the character of the message to be transmitted.
                     </p>
                 </assemblage>
@@ -181,9 +222,9 @@
                     <p>
                         <alert> Comprehension Check:</alert>
                         <ul>
-                            <li>Which combination of +'s and -'s represent the letter A?</li>
-                            <li>Which combination of +'s and -'s represent the letter B?</li>
-                            <li>The letter G is represented by (-+-++). Look at the representations of A and B and the definition of <alert>exclusive or</alert> (<xref ref="definition_xor"/>) and use these to explain how we arrived at the representation of G.</li>
+                            <li>Which combination of <m>+</m>'s and <m>-</m>'s represent the letter A?</li>
+                            <li>Which combination of <m>+</m>'s and <m>-</m>'s represent the letter B?</li>
+                            <li>The letter G is represented by (<m>-+-++</m>). Look at the representations of A and B and the definition of <alert>exclusive or</alert> (<xref ref="definition_xor"/>) and use these to explain how we arrived at the representation of G.</li>
                             <li>Vernam says that the <q>relay 19 is connected at both ends to a battery</q> and so will remain open.  Comparing this to the questions you answered about figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> what do you notice?</li>
                             <li>Vernam says that the <q>relay 20 is connected at one end to a battery at 24 and at the other end to ground at 35</q> and so it will close.  Comparing this to the questions you answered about figures <xref ref="figure_xor_gg"/> through <xref ref="figure_xor_bb"/> what do you notice?</li>
                             <li>Repeat the previous two questions for relays numbered 21, 22, and 23.</li>
@@ -192,24 +233,24 @@
                 </subsubsubsection>
                 <exercise>
                     <statement>
-                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write E as (+----) and write Q as (+++-+).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write E as (<m>+----</m>) and write Q as (<m>+++-+</m>).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
                     </statement>
                     <hint>
-                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that + is True and - is False. </p>
+                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that <m>+</m> is True and <m>-</m> is False. </p>
                     </hint>
                     <answer>
-                        <p>You should get (-++-+) which is P.</p>
+                        <p>You should get (<m>-++-+</m>) which is P.</p>
                     </answer>
                 </exercise>
                 <exercise>
                     <statement>
-                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write U as (+++--) and write H as (--+-+).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
+                        <p>Using the ITA2 codes (figure <xref ref="figure_ita2"/>) we can write U as (<m>+++--</m>) and write H as (<m>--+-+</m>).  Add these together using the exclusive or operation just like Vernam added A and B.</p>
                     </statement>
                     <hint>
-                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that + is True and - is False. </p>
+                        <p>You can use the truth table <xref ref="table_xor"/> to help you if you recall that <m>+</m> is True and <m>-</m> is False. </p>
                     </hint>
                     <answer>
-                        <p>You should get (++--+) which is W.</p>
+                        <p>You should get (<m>++--+</m>) which is W.</p>
                     </answer>
                 </exercise>
                 <exercise>
@@ -220,7 +261,7 @@
                         <p>When you read the ITA2 table you should read top to bottom with <m>+\equiv\bullet</m> and <m>-\equiv \circ</m>(a blank space)</p>
                     </hint>
                     <answer>
-                        <p>You should get (+-+++) which is X.</p>
+                        <p>You should get (<m>+-+++</m>) which is X.</p>
                     </answer>
                 </exercise>
                 <exercise xml:id="exercise_self_inverse">
@@ -231,19 +272,19 @@
                         <p>When you read the ITA2 table you should read top to bottom with <m>+\equiv\bullet</m> and <m>-\equiv \circ</m>(a blank space)</p>
                     </hint>
                     <answer>
-                        <p>You should get (-----) which is listed as not in use.</p>
+                        <p>You should get (<m>-----</m>) which is listed as not in use.</p>
                     </answer>
                 </exercise>
                 <p><alert>Deciphering</alert></p>
                 <p>
-                    After the above passage Vernam, with some more reference to the circuit diagram for his device, goes on to explain how deciphering is identical to enciphering.  For example to encipher we added A(++---) to B(+--++) to get G(-+-++).  To decipher the person receiving the message will add B again to recover A.
+                    After the above passage Vernam, with some more reference to the circuit diagram for his device, goes on to explain how deciphering is identical to enciphering.  For example to encipher we added A(<m>++---</m>) to B(<m>+--++</m>) to get G(<m>-+-++</m>).  To decipher the person receiving the message will add B to G and recover A.
                 </p>
                 <subsubsubsection>
                     <p>
                         <alert> Comprehension Check:</alert>
                         <ul>
-                            <li>Add B (+--++) to G (-+-++), does this in fact return A (++---)?</li>
-                            <li>Verify that adding C (-+++-) and D (+--+-) gives U (+++--). Then add D to U, do you get C back?</li>
+                            <li>Add B (<m>+--++</m>) to G (<m>-+-++</m>), does this in fact return A (<m>++---</m>)?</li>
+                            <li>Verify that adding C (<m>-+++-</m>) and D (<m>+--+-</m>) gives U (<m>+++--</m>). Then add D to U, do you get C back?</li>
                             <li>What happens when you add B to B?</li>
                             <li>What happens when you add M to M?</li>
                             <li>What happens when you add F to F?</li>
@@ -297,16 +338,110 @@
                     </answer>
                 </exercise>
             </subsubsection>
+    
         <!-- Vernam compared to Vigenere -->
             <subsubsection xml:id="vs_vigenere">
                 <title>Vigen&#x00E8;re Perfected</title>
-                <p> Stuff about Vigen&#x00E8;re vs Vernam</p>
+                <p>
+                    There are two ways in which we can compare Vigen&#x00E8;re's cipher to Vernam's plan.  First if we encipher a length of plain text, <q>Bright vixens jump; dozy fowl quack,</q> using Vigen&#x00E8;re's cipher and a random key that is equal in length to the plain text like so
+                </p>
+                <table xml:id="table_perfect_vigenere">
+                    <title>Vigen&#x00E8;re Perfected</title>
+                    <tabular halign="center">
+                        <row>
+                            <cell halign="right">KEY:</cell><cell>HEPYT</cell><cell>DMAWP</cell><cell>TWQMF</cell><cell>TALTE</cell><cell>MTFDQ</cell><cell>PTNS</cell>
+                        </row>
+                        <row>
+                            <cell halign="right">plain:</cell><cell>brigh</cell><cell>tvixe</cell><cell>nsjum</cell><cell>pdozy</cell><cell>fowlq</cell><cell>uack</cell>
+                        </row>
+                        <row>
+                            <cell halign="right">CIPHER:</cell><cell>IVXEA</cell><cell>WHITT</cell><cell>GOZGR</cell><cell>IDZSC</cell><cell>RHBOG</cell><cell>JTPC</cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>
+                    Then, the plaintext is one of the input tapes in Vernam's system, the key is the other input tape, and the ciphertext is the output.  The other way to compare the two systems is to recognize that each row in the modern Vigen&#x00E8;re table (figure <xref ref="appendix_figure_vigenere_new"/>) is a shift, row a is shifted by 0, row b by 1, row c by 2, etc.  Thus when we encipher a <q>b</q> with the key letter <q>H</q> to get the cipher <q>I</q> we can picture it as addition <m>1+7=8</m>.
+                </p>
             </subsubsection>
+    
         <!-- Definition and Example of Perfect Secrecy -->
             <subsubsection xml:id="perfect_secrecy">
                 <title>Perfect Secrecy</title>
-                <p> Stuff about Perfect Secrecy</p>
+                <p>
+                    What Vernam's system offers is a system which if used correctly offers absolute unbreakable security, this is called <alert>perfect secrecy</alert>.  To understand what this means from a technical standpoint we need a couple definitions.
+                </p>
+                <definition xml:id="definition_spaces">
+                    <title>Plaintext, Ciphertext, and Key Spaces</title>
+                    <statement>
+                        <p>
+                            The <alert>plaintext</alert>, <alert>ciphertext</alert>, and <alert>key</alert> spaces are the sets of all possible plaintexts, ciphertexts, and keys for an encryption system.
+                        </p>
+                    </statement>
+                </definition>
+                <example>
+                    <title>Some Familiar Key Spaces</title>
+                    <p>
+                        The plaintext space is all the messages you may wish to send and the ciphertext is all the ways those message may be enciphered, while important they are not what we need to immediately consider.  What is really important is how many keys we can have.  Consider the sizes of key spaces for some ciphers studied early in this text.
+                    </p>
+                    <ul>
+                        <li> Monoalphabetic Cipher: |Key Space| <m>= 26!\approx 4\times10^{26}</m> </li>
+                        <li> Vigen&#x00E8;re's Cipher using only English words for keys: |Key Space| <m>\approx 470,000</m> </li>
+                        <li> Falconer's Transposition with 4 letter keys: |Key Space|= <m>16777216=2^{4!}</m> </li>
+                    </ul>
+                    <p>
+                        While these numbers are large they hardly compare to the size of the plaintext or ciphertext spaces.  Even if we restrict ourselves to counting the number of five character messages there are already <m>26^5=11,881,376</m> possibilities; sentences of length 30 would bring that up to <m>26^{30}\approx 3\cdot 10^{42}</m>.
+                    </p>
+                </example>
+                <definition xml:id="definition_prefect_secrecy">
+                    <title>Perfect Secrecy</title>
+                    <statement>
+                        <p>
+                            An encryption system has <alert>perfect secrecy</alert> if having a piece of ciphertext gives know information about the plaintext.  That is with a randomly chosen key a plaintext message is equally likely to be enciphered as any possible ciphertext.
+                        </p>
+                    </statement>
+                </definition>
+                <p>
+                    <alert>Comprehension Check</alert>
+                </p>
+                <p>
+                    Suppose that you intercepted the message <c>ZZZZZZ</c> which you happen to know was enciphered using the modern Vigen&#x00E8;re table (figure <xref ref="appendix_figure_vigenere_new"/>).
+                </p>
+                <ul>
+                    <li>What would the plaintext be if the key were <c>ZGGZXP</c>?</li>
+                    <li>What would the plaintext be if the key were <c>WVUVMW</c>?</li>
+                    <li>What would the plaintext be if the key were <c>KRAAZH</c>?</li>
+                    <li>Could you find a key so that <c>ZZZZZZ</c> represents the plaintext <q>thirty</q>?</li>
+                    <li>Could you find a key so that <c>ZZZZZZ</c> represents the plaintext <q>purple</q>?</li>
+                    <li>Could you find a key so that <c>ZZZZZZ</c> represents any six character plaintext that you like?</li>
+                    <li>How do you think these observations relate to the definition of perfect secrecy (definition <xref ref="definition_prefect_secrecy"/>)?</li>
+                </ul>
+                <example>
+                    <title>Vigen&#x00E8;re Spaces</title>
+                    <p>
+                        Suppose we want to encipher a message using a Vigen&#x00E8;re cipher, but we encipher six characters at a time and each block is enciphered using a different, random, six letter key.  In this situation we would have
+                    </p>
+                    <ul>
+                        <li> |Plaintext Space|=|all possible six character combinations|=<m>26^6=308,915,776</m></li>
+                        <li> |Key Space|=|all possible six character combinations|=<m>26^6=308,915,776</m></li>
+                        <li> |Ciphertext Space|=|all possible six character combinations|=<m>26^6=308,915,776</m></li>
+                    </ul>
+                </example>
+                <theorem xml:id="theorem_perfect_secrecy">
+                    <title>Perfect Secrecy</title>
+                    <statement>
+                        <p>
+                            If the key, plaintext, and ciphertext spaces in encryption system are identical in size, each potential key, <m>k,</m> can be chosen with equal likelihood, and for each message <m>m</m> and ciphertext <m>c</m> there is exactly one key that enciphers <m>m</m> as <m>c,</m> then the encryption system offers perfect secrecy.
+                        </p>
+                    </statement>
+                </theorem>
             </subsubsection>
         </subsection>
-
+        <remark>
+            <p>
+                It should be noted that the security of Vernam's cipher relies on being able to generated truly random sequences (a currently unsolved problem in computer science) and being able to keep the keys synchronized and secret.  With advances in quantum computing technology these are becoming more likely, but realizing/implementing truly perfect secrecy remains difficult at best.
+            </p>
+            <p>
+                Finally, make sure that you have paid close attention to the idea of combining strings with the exclusive or.  This is a topic we will return to later when we consider Feistel cipher's and the Data Encryption Standard.
+            </p>
+        </remark>
     </section>

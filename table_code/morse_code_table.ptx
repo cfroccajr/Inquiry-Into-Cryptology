@@ -1,0 +1,9 @@
+        <table xml:id="table_morse_code">
+            <title>Morse Code</title>
+            <tabular halign="left"><!-- top="minor" bottom="minor" left="minor" right="minor"  -->
+				<row><cell>A: <alert><m>.-</m></alert></cell><cell>B: <alert><m>-...</m></alert></cell><cell>C: <alert><m>-.-.</m></alert></cell><cell>D: <alert><m>-..</m></alert></cell><cell>E: <alert><m>.</m></alert></cell><cell>F: <alert><m>..-.</m></alert></cell><cell>G: <alert><m>--.</m></alert></cell><cell>H: <alert><m>....</m></alert></cell></row>
+				<row><cell>I: <alert><m>..</m></alert></cell><cell>J: <alert><m>.---</m></alert></cell><cell>K: <alert><m>-.-</m></alert></cell><cell>L: <alert><m>.-..</m></alert></cell><cell>M: <alert><m>--</m></alert></cell><cell>N: <alert><m>-.</m></alert></cell><cell>O: <alert><m>---</m></alert></cell><cell>P: <alert><m>.--.</m></alert></cell></row>
+				<row><cell>Q: <alert><m>--.-</m></alert></cell><cell>R: <alert><m>.-.</m></alert></cell><cell>S: <alert><m>...</m></alert></cell><cell>T: <alert><m>-</m></alert></cell><cell>U: <alert><m>..-</m></alert></cell><cell>V: <alert><m>...-</m></alert></cell><cell>W: <alert><m>.--</m></alert></cell><cell>X: <alert><m>-..-</m></alert></cell></row>
+				<row><cell>Y: <alert><m>-.--</m></alert></cell><cell>Z: <alert><m>--..</m></alert></cell><cell /><cell /><cell /><cell /><cell /><cell /></row>
+            </tabular>
+        </table>
