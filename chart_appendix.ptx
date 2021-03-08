@@ -260,6 +260,20 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+    ITA2 Code
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+    <!-- %By User:Huestones with derivative work by User:TedColes - Old version of File:International Telegraph Alphabet 2.jpg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=82195717 -->
+    <figure xml:id="appendix_figure_ita2">
+        <caption>International Telegraph Alphabet 2 ca. 1924</caption>
+        <image width="100%" source="images/ITA2_Code.png" archive="svg png">
+            <description>International Telegraph Alphabet 2 ca. 1924</description>
+        </image>
+    </figure>
+
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     Multiplication Table Modulo 26
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  -->

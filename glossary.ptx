@@ -148,6 +148,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 <em>Enciphering</em> is the process by which blocks of plaintext are replaced by ciphertext.
             </p>
         </li>
+        <li>
+                    <title>Logical Exclusive Or</title>
+                    <idx>exclusive or</idx>
+                        <p>
+                            If we combine two statements <m>P</m> and <m>Q</m> with an <alert>exclusive or</alert> then the compound statement, <m>P\ XOR\ Q</m>, is true when precisely one of the statements is true.  Notationally the XOR is written with the symbol <m>\bigoplus</m>.  In some settings <q>False</q> may be represented by a <q>0</q> or <q><m>-</m></q> sign and True may be represented by a <q>1</q> or <q><m>+</m></q> sign.
+                        </p>
+        </li>
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   F   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
@@ -297,6 +304,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             </p>
         </li>
         <li>
+                <title>Perfect Secrecy</title>
+                <idx>perfect secrecy</idx>
+            <p>
+                An encryption system has <alert>perfect secrecy</alert> if having a piece of ciphertext gives no information about the plaintext.  That is with a randomly chosen key a plaintext message is equally likely to be enciphered as any possible ciphertext.
+            </p>
+        </li>
+        <li>
                 <title>Plaintext</title>
                 <idx>plaintext</idx>
             <p>
@@ -304,7 +318,13 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
                 The <em>plaintext</em> is the message you wish to transmit written in a readable form.
             </p>
         </li>
-
+        <li>
+                <title>Plaintext, Ciphertext, and Key Spaces</title>
+                <idx>plaintext space</idx><idx>ciphertext space</idx><idx>key space</idx>
+            <p>
+                The <alert>plaintext</alert>, <alert>ciphertext</alert>, and <alert>key</alert> spaces are the sets of all possible plaintexts, ciphertexts, and keys for an encryption system.
+            </p>
+        </li>
         <li>
                 <title>Polyalphabetic Substitution Cipher</title>
                 <idx>polyalphabetic substitution cipher</idx>

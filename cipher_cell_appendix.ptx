@@ -92,6 +92,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
             <output></output>
         </sage>
 
+        <p>ITA2/Vernam Cipher Cell</p>
+        <sage >
+            <input>
+                <xi:include href="sage_code/ita.sage" parse="text" />
+            </input>
+            <output></output>
+        </sage>
+
         <p>Hill Cipher Cell</p>
         <sage >
             <input>
