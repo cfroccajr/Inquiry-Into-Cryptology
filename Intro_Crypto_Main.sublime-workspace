@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"def",
+				"definition_affine"
+			],
+			[
+				"table",
+				"table_code"
+			],
+			[
 				"cipher",
 				"cipher_text"
 			],
@@ -30,10 +38,6 @@
 			[
 				"a",
 				"alert"
-			],
-			[
-				"table",
-				"table_morse_code"
 			],
 			[
 				"figure_",
@@ -996,7 +1000,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"PdfLaTeX"
+				"XeLaTeX"
 			]
 		],
 		[
@@ -3244,17 +3248,29 @@
 	"expanded_folders":
 	[
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/basic_analysis"
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers",
+		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/affine_cipher.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/modular_arithmetic.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/temp_stuff.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code/Mod14_Addition.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code/Mod14_Multiplication.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/new_analysis/second_poly_attack.ptx",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/main.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/tex/logic_gates.tex",
+		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ita.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/morse.py",
 		"/C/git/Inquiry-Into-Cryptology/src/glossary.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/new_analysis/second_poly_attack.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/quote_code/agripa_pig.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter5_mechanical_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/early_ciphers/shift_cipher.ptx",
@@ -3262,15 +3278,12 @@
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/XOR_Table.ptx",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/vigenere.py",
 		"/C/git/Inquiry-Into-Cryptology/src/new_ciphers/agripa_pigcipher.ptx",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/tex/logic_gates.tex",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/main.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/wwi_ciphers.ptx",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/tex/New_Defs.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/tex/MyDefs.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/between_wars.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/mech_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/development_code.sage",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Geometry/Transformation_Investigation.tex",
 		"/C/git/mathbook/user/pretext.cfg",
@@ -3290,7 +3303,6 @@
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/aes.ptx",
 		"/C/git/mathbook/pretext/README.md",
 		"/C/git/Inquiry-Into-Cryptology/output/html/images/image-35.tex",
-		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter3_new_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/MonoChapter.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/quote_code/hill_crypto_alpha.ptx",
@@ -3369,13 +3381,7 @@
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/transposition_analysis.sage",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subset_analysis.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/string_analysis.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/ngram_analysis.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/jefferson_wheels.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/falconer_cipher.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/autokey_cipher.sage"
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subset_analysis.sage"
 	],
 	"find":
 	{
@@ -3393,6 +3399,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<xref",
+			"mod_14_example",
+			"mod_14",
+			"four",
 			"<alert>",
 			"</cell>\\n",
 			".\n",
@@ -3516,11 +3526,7 @@
 			"biblio",
 			"a normal line",
 			"line break",
-			"blockquote",
-			"archive",
-			"image",
-			"today when we use the vi",
-			"jefferson"
+			"blockquote"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3682,7 +3688,7 @@
 	},
 	"output.exec":
 	{
-		"height": 375.0
+		"height": 277.0
 	},
 	"output.find_results":
 	{
@@ -3690,7 +3696,7 @@
 	},
 	"output.latextools":
 	{
-		"height": 253.0
+		"height": 215.0
 	},
 	"pinned_build_system": "",
 	"project": "Intro_Crypto_Main.sublime-project",

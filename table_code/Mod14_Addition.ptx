@@ -1,0 +1,95 @@
+                    <table xml:id="mod_fourteen_table_addition">
+                        <title>Addition Modulo 14</title>
+                        <tabular halign="right">
+                            <row bottom="minor">
+                                <cell right="minor" ><m>+_{14}</m></cell>
+                                <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell>
+                                <cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell>
+                                <cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >0</cell>
+                                <cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell>
+                                <cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell>
+                                <cell>12</cell><cell>13</cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >1</cell>
+                                <cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell>
+                                <cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell><cell>12</cell>
+                                <cell>13</cell><cell>0</cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >2</cell>
+                                <cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell>
+                                <cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell><cell>12</cell>
+                                <cell>13</cell><cell>0</cell><cell>1</cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >3</cell>
+                                <cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell>
+                                <cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell><cell>12</cell>
+                                <cell>13</cell><cell>0</cell><cell>1</cell><cell>2</cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >4</cell>
+                                <cell>4</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >5</cell>
+                                <cell>5</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >6</cell>
+                                <cell>6</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >7</cell>
+                                <cell>7</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >8</cell>
+                                <cell>8</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >9</cell>
+                                <cell>9</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >10</cell>
+                                <cell>10</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >11</cell>
+                                <cell>11</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >12</cell>
+                                <cell>12</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell right="minor" >13</cell>
+                                <cell>13</cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell><cell></cell><cell></cell><cell></cell><cell></cell><cell></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
