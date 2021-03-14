@@ -28,7 +28,7 @@
                         and characters of the cipher text are deciphered with the formula
                         <me>plain\,\equiv\, m^{-1}(CIPHER-s)\pmod{26},</me>
                         or
-                        <me>plain\,\equiv\, m^{-1}CIPHER-m^{-1}s\pmod{26}.</me>
+                        <me>plain\,\equiv\, m^{-1}CIPHER-(m^{-1}s)\pmod{26}.</me>
                         Note that the multiplier <m>m</m> must be relatively prime to the modulus so that it has a 
                         multiplicative inverse. (See definitions <xref ref="multiplicative_inverse" text="type-global"/> and <xref ref="relatively_prime" text="type-global"/>)
                     </p>
@@ -139,15 +139,17 @@
                 </answer>
             </exercise>
         </subsection>
+
+<!-- Section on Decrypting Affine Ciphers -->
+
         <subsection xml:id="affine_cipher_decryption">
             <title>Affine Cipher: Decryption</title>
-
 
             <p>
                 To <em>decrypt</em>, as opposed to just decipher, an affine cipher you can use the techniques we learned in 
                 <xref ref="chapter_basic_analysis" text="type-global"/> since they are a type of 
                 monoalphabetic substitution cipher.  However, we can also take advantage of the fact that it is an 
-                affine cipher.
+                affine cipher and use the formulas in definition <xref ref="definition_affine"/>.
             </p>
             <p>
                 <cd>
@@ -163,32 +165,31 @@
                 Analyzing this we get that the most common characters are <c>Y</c>, <c>D</c>, <c>I</c>, <c>O</c> 
                 and <c>U</c>; the most common bigrams are <c>DZ</c>, <c>ZY</c>, <c>YG</c>, and <c>OB</c>; the 
                 most common trigrams are <c>DZY</c>, <c>OBO</c>, <c>LDZ</c>, and <c>DZO</c>.  Therefore it is 
-                reasonable to assume that <c>DZY</c> is <c>the</c>, <c>Y</c>  is <c>e</c>, and <c>D</c> 
-                is <c>t</c>.  So when this was enciphered we have to of had 
+                reasonable to assume that <c>DZY</c> is <sq>the</sq>, <c>Y</c>  is <sq>e</sq>, and <c>D</c> 
+                is <sq>t</sq>.  So when this was enciphered we have to of had 
                 <md>
-                    <mrow>24\equiv m\cdot 4+s \pmod{26}</mrow>
-                    <mrow>3 \equiv m\cdot 19+s \pmod{26}</mrow>
+                    <mrow>m\cdot 4+s\equiv 24 \pmod{26}</mrow>
+                    <mrow>m\cdot 19+s\equiv 3 \pmod{26}</mrow>
                 </md>
                 Subtracting the second expression from the first we get
                 <md>
-                    <mrow>21\equiv m\cdot -15 \pmod{26}</mrow>
+                    <mrow>m\cdot -15\equiv 21 \pmod{26}</mrow>
                 </md>
                 or
                 <md>
-                    <mrow>21\equiv m\cdot 11 \pmod{26}.</mrow>
+                    <mrow>m\cdot 11\equiv 24 \pmod{26}.</mrow>
                 </md>
-                Looking at the multiplication table modulo 26 we can see that <m>m=9</m> since 
+                Looking at the multiplication table modulo 26 (figure <xref ref="appendix_figure_mod26"/> we can see that <m>m=9</m> since 
                 <m>9\cdot 11\equiv 21\pmod{26}</m>.  Substituting <m>m=9</m> into the first equation above 
                 we get 
                 <md>
-                    <mrow>24\equiv 9\cdot 4+s \pmod{26}</mrow>
+                    <mrow>9\cdot 4+s\equiv 24 \pmod{26}</mrow>
                 </md>
                 which simplifies to
                 <md>
-                    <mrow>24-10\equiv s \pmod{26}</mrow>
+                    <mrow>s\equiv 24-10 \pmod{26}</mrow>
                 </md>
-                so that <m>s=14</m>.  We can then get the inverse keys <m>m^{-1}\equiv 3\pmod{26}</m> and 
-                <m>-m^{-1}s\equiv 10\pmod{26}</m>.  Using these with the affine cipher cell we get the 
+                so that <m>s=14</m>.  We can then get the inverse keys <me>m^{-1}\equiv 3\pmod{26}\ \text{and}\ -(m^{-1}s)\equiv 10\pmod{26}.</me>  Using these with the affine cipher cell we get the 
                 deciphered message:
                 <cd>
                     <cline>thisi sthef irsta ffine ciphe rmess ageth atwew illde crypt </cline>
@@ -207,6 +208,16 @@
                     </q>
                 </p>
             </blockquote>
+            <p>
+                <alert>Comprehension Check:</alert>
+                <ul>
+                    <li>Above we assumsed ciphertext <c>Y</c> is plaintext <sq>e</sq>, how did this give us <m>m\cdot 4+s\equiv 24 \pmod{26}</m>?</li>
+                    <li>Above we assumsed ciphertext <c>D</c> is plaintext <sq>t</sq>, how did this give us <m>m\cdot 19+s\equiv 3 \pmod{26}</m>?</li>
+                    <li>How did we then get the -15 and 21 in <m>m\cdot -15\equiv 21 \pmod{26}</m>?</li>
+                    <li>In the calculations above we simplified <m>9\cdot 4+s\equiv 24 \pmod{26}</m> to <m>s\equiv 24-10 \pmod{26}</m>, where did the -10 come from?</li>
+                    <li>How and why did we then calculate <me>m^{-1}\equiv 3\pmod{26}\ \text{and}\ -(m^{-1}s)\equiv 10\pmod{26}?</me></li>
+                </ul>
+            </p>
             <exercise>
                 <statement>
                     <p>
@@ -257,6 +268,112 @@
                     </p>
                 </answer>
             </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Try to decrypt this message which was enciphered using an affine cipher.
+                        <!-- m=7, s=11 -->
+                        <cd>
+                            <cline>IGZMZ KZMZU DZPHX DYZHM YLIFH UFUGT JHUXQ ZDRZX </cline>
+                            <cline>FKRUD MZORS YZQMF QZMIR ZXUFI RUORV ZUFTX IFZHM </cline>
+                            <cline>IGHXQ ZDRZX RGHXI ZUIFQ FRUIF TIDTX IFJHM RYLJH </cline>
+                            <cline>XBTZM HORUV HXFMO RUHML GTJHU SZRUV XIGZR MORXV </cline>
+                            <cline>TRXZG FPZEZ MSZDH JZIMH UXQHM ZUIRU IGZKH DZFKI </cline>
+                            <cline>GZKFY YFPRU VFSXZ MEHIR FUXSL IGZHT IGFMR IPHXH </cline>
+                            <cline>IFUDZ FSERF TXIGZ HTIGF MNUZP ZEZML IGRUV NUZPZ </cline>
+                            <cline>EZMLI GRUVH UOPHX IHNRU VRIRU GRXXI MROZI GZYRU </cline>
+                            <cline>ZHUOR IMZJS YZMZJ ZJSZM RUVRI ZEZUU FPMZH OGRXZ </cline>
+                            <cline>LZXXY FPYLM FEZOH SFTII GZMFF JEHVT ZDGRY YXHXX </cline>
+                            <cline>HRYZO JZRIM RZOIF QRDIT MZIGZ ZLZXO ROIGZ LMFYY </cline>
+                            <cline>YRNZO RJZXI GZQHX XHVZR UORDH IZOUF IIGZL XZZJZ </cline>
+                            <cline>OIFJF EZIGM FTVGI GZHRM UFIFE ZMIGZ XTMKH DZMHI </cline>
+                            <cline>GZMMH QROYL HQQHM ZUIYL UFFUZ RUIGZ XIFML PHXXT </cline>
+                            <cline>MQMRX ZOIGH IXPGH IIRQQ ZOJZF KKUFX RVUFK HJHWZ </cline>
+                            <cline>JZUIH IXTDG HUFTI MHVZF TXIGR UVIGZ ZLZXG HEZRI </cline>
+                            <cline>SLQGR YRQNO RDN </cline>
+                        </cd>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>
+                                First use frequency analysis to identify at least two of the letters in the message.
+                            </li>
+                            <li>
+                                With your two letters set up two equations like this:
+                                <me>CIPHER\equiv m(plain)+s\pmod{26}.</me>
+                            </li>
+                            <li>
+                                Subtract the second equation from the first and try to find <m>m</m>.
+                            </li>
+                            <li>
+                                Substitute your value for <m>m</m> into the first equation and use it to find 
+                                <m>s</m>.
+                            </li>
+                            <li>
+                                Now that you have the key you should be able to decipher the message as you had previously.
+                            </li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        The message begins with <q>The reference was clearly to a nonhuman species of incredible properties, ...</q>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        Try to decrypt this message which was enciphered using an affine cipher.
+                        <!-- m=17, s=5 -->
+                        <cd>
+                            <cline>FXJHS DBFSP VNFSZ TVQNU ULZAJ IQIFL QFQFE FZULB </cline>
+                            <cline>FDLSV QJXJH IZVKM FEJSR HLGJQ VJMVL DUQVV SFEJS </cline>
+                            <cline>RHLGJ QVPLQ UJHQU LZNJI ZVKVQ PLQUJ HQULZ NJFQJ </cline>
+                            <cline>MBFLK PLQUJ HQULZ NHLZZ VZFEJ SRHLG JQVNK JQUVE </cline>
+                            <cline>LSFPJ JKVSE JHWKV QQUVW KHVNJ KJIJM PULNU UFEMF </cline>
+                            <cline>EVELS QJFSF BVKVZ ZZUFE VWVQP VVSKV VZJMP LSVFS </cline>
+                            <cline>EFUVF YVSKX FOHIV MFNVK JSDFS EWIJP SULDU NUVVT </cline>
+                            <cline>WJSVZ FZLDS JMZFD FNLQX QUVBF GLKKF IXBHZ NKVZV </cline>
+                            <cline>SJIBJ HZKXE VYVKJ AVEFS LSMFK KLWKV ZLDSW XPULN </cline>
+                            <cline>UFDFZ NJSBF XFKPF XZWVE VQVNQ VEQUI VVBHZ TVQVV </cline>
+                            <cline>IZWXF KVGFS EIVEH BFZ </cline>
+                        </cd>
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ul>
+                            <li>
+                                First use frequency analysis to identify at least two of the letters in the message.
+                            </li>
+                            <li>
+                                With your two letters set up two equations like this:
+                                <me>CIPHER\equiv m(plain)+s\pmod{26}.</me>
+                            </li>
+                            <li>
+                                Subtract the second equation from the first and try to find <m>m</m>.
+                            </li>
+                            <li>
+                                Substitute your value for <m>m</m> into the first equation and use it to find 
+                                <m>s</m>.
+                            </li>
+                            <li>
+                                Now that you have the key you should be able to decipher the message as you had previously.
+                            </li>
+                        </ul>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        The message begins with <q>A young man--we can sketch his portrait at a dash. Imagine to yourself a Don Quixote of eighteen; ...</q>
+                    </p>
+                </answer>
+            </exercise>
+
             <p> 
                 Sage N-Gram Cell:
             </p>
@@ -281,7 +398,7 @@
 
         <figure>
             <caption>Affine Cipher Cell</caption>
-            <interactive platform="sage" width="100%" aspect="8:5">
+            <interactive platform="sage" width="100%" aspect="16:10">
                 <slate surface="sage">
                     <xi:include href="../sage_code/affine_cipher.sage" parse="text"/>
                 </slate>
