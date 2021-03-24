@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"def",
-				"definition_affine"
+				"add",
+				"add_inv"
 			],
 			[
 				"table",
-				"table_code"
+				"table_txt"
+			],
+			[
+				"inv",
+				"invMod"
+			],
+			[
+				"tab",
+				"table_txt"
+			],
+			[
+				"def",
+				"definition_affine"
 			],
 			[
 				"cipher",
@@ -3192,7 +3204,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext Build to HTML",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3254,6 +3266,8 @@
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/modular_tables.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/Dictionary_Demo.py",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/affine_cipher.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/modular_arithmetic.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
@@ -3379,9 +3393,7 @@
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/prime_practice.sage",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/vigenere_cipher.sage",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/transposition_analysis.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subst_cipher.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/subset_analysis.sage"
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/sukhotin_algorithm.sage"
 	],
 	"find":
 	{
@@ -3399,6 +3411,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"-m^{-1}s",
 			"<xref",
 			"mod_14_example",
 			"mod_14",
@@ -3525,15 +3538,15 @@
 			"&",
 			"biblio",
 			"a normal line",
-			"line break",
-			"blockquote"
+			"line break"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"-(m^{-1}s)",
 			"</cell>",
 			"<q>$1</q>",
 			"<q>$a</q>",
@@ -3743,7 +3756,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 271.0,
 	"status_bar_visible": true,
 	"template_settings":

@@ -124,7 +124,7 @@
                 </md>
             </p>
             <p>
-                Before moving on to see how Hill used these ideas to create a cipher practice your arithmetic with 
+                Before moving on to see how Hill used these ideas to create a cipher, practice your arithmetic with 
                 matrices and vectors, you will want to use <xref ref="appendix_figure_mod26" text="type-global" /> 
                 so that the multiplication is not so tedious.
             </p>
@@ -559,6 +559,78 @@
                         </p>
                     </answer>
                 </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            Check your understanding by finding the inverse of 
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}3 &amp; 7 \\ 2 &amp; 1\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <md>
+                                <mrow>
+                                    det(m)=ad-bc.
+                                </mrow>
+                            </md>
+                            and                         
+                            <md>
+                                <mrow>
+                                    m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            <md>
+                                <mrow>
+                                    m^{-1}=\begin{pmatrix}7 &amp; 3 \\ 12 &amp; 21\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </answer>
+                </exercise>
+                <exercise>
+                    <statement>
+                        <p>
+                            Check your understanding by finding the inverse of 
+                            <md>
+                                <mrow>
+                                    m=\begin{pmatrix}3 &amp; 3 \\ 6 &amp; 9\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </statement>
+                    <hint>
+                        <p>
+                            <md>
+                                <mrow>
+                                    det(m)=ad-bc.
+                                </mrow>
+                            </md>
+                            and                         
+                            <md>
+                                <mrow>
+                                    m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </hint>
+                    <answer>
+                        <p>
+                            <md>
+                                <mrow>
+                                    m^{-1}=\begin{pmatrix}1 &amp; 17 \\ 8 &amp; 9\end{pmatrix}.
+                                </mrow>
+                            </md>
+                        </p>
+                    </answer>
+                </exercise>
                 <p>
                     We are now, finally, ready to decipher a message.  Suppose the message <c>NDGUF SJV</c> 
                     had been enciphered using Hill's cipher with multiplier
@@ -721,6 +793,14 @@
                     multiple characters at a time in order to mix up the frequencies, this means it is a type of 
                     <term>polygraphic cipher</term><idx>polygraphic cipher</idx>.
                 </p>
+            <figure>
+                <caption>Hill's Cipher Cell</caption>
+                <interactive platform="sage" width="100%" aspect="16:10">
+                    <slate surface="sage">
+                        <xi:include href="../sage_code/hills_cipher.sage" parse="text"/>
+                    </slate>
+                </interactive>
+            </figure>
             </subsubsection>
             <subsubsection>
                 <title>Alternate Explanation</title>
