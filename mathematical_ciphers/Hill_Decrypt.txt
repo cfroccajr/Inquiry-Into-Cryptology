@@ -1,0 +1,157 @@
+On my right hand there were lines of fishing stakes resembling a mysterious system of half-submerged bamboo fences, incomprehensible in its division of the domain of tropical fishes, and crazy of aspect as if abandoned forever by some nomad tribe of fishermen now gone to the other end of the ocean; for there was no sign of human habitation as far as the eye could reach. To the left a group of barren islets, suggesting ruins of stone walls, towers, and blockhouses, had its foundations set in a blue sea that itself looked solid, so still and stable did it lie below my feet; even the track of light from the westering sun shone smoothly, without that animated glitter which tells of an imperceptible ripple. And when I turned my head to take a parting glance at the tug which had just left us anchored outside the bar, I saw the straight line of the flat shore joined to the stable sea, edge to edge, with a perfect and unmarked closeness, in one leveled floor half brown, half blue under the enormous dome of the sky. Corresponding in their insignificance to the islets of the sea, two small clumps of trees, one on each side of the only fault in the impeccable joint, marked the mouth of the river Meinam we had just left on the first preparatory stage of our homeward journey; and, far back on the inland level, a larger and loftier mass, the grove surrounding the great Paknam pagoda, was the only thing on which the eye could rest from the vain task of exploring the monotonous sweep of the horizon. Here and there gleams as of a few scattered pieces of silver marked the windings of the great river; and on the nearest of them, just within the bar, the tug steaming right into the land became lost to my sight, hull and funnel and masts, as though the impassive earth had swallowed her up without an effort, without a tremor. My eye followed the light cloud of her smoke, now here, now there, above the plain, according to the devious curves of the stream, but always fainter and farther away, till I lost it at last behind the miter-shaped hill of the great pagoda. And then I was left alone with my ship, anchored at the head of the Gulf of Siam. -THE SECRET SHARER By Joseph Conrad
+
+m=[[3,7],[4,9]]
+3*9-4*7=-1
+s=0
+
+DRWED KPJCJ NNMBX MBAQU BALMP KWQYN UMZWD CFJSM 
+IWBAE ERFLM DCGEQ YHIDK ACYAQ YHIES MFZVL APLMG 
+PSHRD ERFKA REBSI WLTAE LBBAX MJGFP JCLTB VXVPN 
+UMSCH WSJXM DIKWL TZXUV RJMYZ VTOZF IWNNX EZQJE 
+ZXWGV SJXWG HZHJN NDIPK SFFBD XBNPM WQMGH WKWMB 
+DKFOZ XTOZF BNMGA NOUMU PKZUC JGMCJ BNZDD ISJXM 
+EWMQW TFBCJ BNKGW GHWGO FLZXF AKWKL HJBVD PSCNA 
+LNPXW GCJOA WCAEH XYJMQ DTZUC JLLVJ FYHVA CNEWD 
+PXBAR UBPPF YAYEU IFJLT HVMWJ GZXFJ DRKGZ VDYZU 
+QUVWN NQVBO YUPYE IIWVC NGBEJ QVPJM JSDRY APFLT 
+HJRQI WMQCJ DPBVE EQLBO IQHRW QLMFS MKJSG NNNFS 
+FYCZH RTHBV LMTZL LOUWE REPFD XZDCJ PFZQY UZXLM 
+PJORT MNLXM QUFJB NLTOE VPZFD RIWES TTUXS IBVPY 
+LRCJD PNNEK DPHRR TBVHI XGZWD THIGN WQPUR ULBBN 
+ISWXF PJCDK UNJCN NHCXM RUPWM DHRWE XMVBZ UFYGY 
+BFPXJ SDCRT NNISD PCJPF YELVM YSNVB LIFJJ CSJEI 
+NNDTF BHRAC BETHP FXMDE DKCUR ZXMFJ ZQOIY RLMPK 
+ZXCJV JHSBE PYBAV GLTHR ZUCJI WFYCZ IWMQH RUIZU 
+HRUIS ECJBF BNREJ XNNTK TEPXG YXEBO EEPKY ALTDR 
+LLDXL LHROP KAWBZ VWDTM BXVCQ LCZKM VPLWC FXMZD 
+FBESE IDIMG ZXCJI WQWAE ONIWN EIBLT WSQPX MNDLT 
+GOFLH ZMYNN ISZUC JQKBP PFWQS JXMEE DPIGI YZVVK 
+RQLBW QSJBA IWDRG MPKOS RITHG MSJXM DRTAP UHXJS 
+QPXME KVSUA HJJCV GLTLC PXGYM BXMES LRPYS JXMDK 
+NQFUQ KNAIM JBVBL IFJJC SJDRC JVJND FJIFN VPXDP 
+FBQYF YUIZX ACWBW IKGPX UPACM DYYNN SFPXD EYUDR 
+CJQKM VNNIH DXLLZ VPXUI ZQIBB OSJAQ FUWGF JXMHV 
+HLIWX ZTMVP NGDCC JCSBA DPTIR BGETI MUJMO KFJXM 
+DRTAC JLTMU LQZWD TCJOA WCAEH XYJIW ORTMN LXMLG 
+LTFYU GZXRP SDFBL TVNXM ESHWZ UHWEI AKOAN ESJXM 
+PYDKR SKLBN MQIBC JBNCS JCGEC UWQPU REKQG IINBN 
+HRXCA IIWZX GOYZB NKWRC HRCJK GLTNG DCWQS JXMHV 
+MQUVP NBNNN DIQPX MPKPX IWZUS JXMVZ EIDOB VZWQP 
+XMDEC FXMPW OEHIG ELTHV OIYRL TZUCJ LLNNQ VAIGE 
+LLMKI NWIQY OIYRF AGNNN SFVPP KHSIB KWFJC UFJPY 
+YEYRX MEKTI YAPNO APXCJ VCFSO KGNOU HRXMJ ORYBV 
+PYLRN NVJJQ CFSEC JACFY UVSUF BWEYY VJPZB OQUMB 
+XMLMP JTQBO DDZXX MVWES GYHWL VBNZD OUCJB NMQXA 
+NQCJN VHSLT OSAEU RLTVN TTXML WPAAC QMXZN QWQSJ 
+XMFJB AGENC FYFIM ILNEU QPBNN NSFPX CJBNY QMIJS 
+GNXBM KJSFY ETWGM HJBLT MBXMO QHIVW VCVSG XXBBO 
+SJXMH VMQGD QCLFA AIBCJ ZDWWW GJCSJ ZVDRK GBVBG 
+QYZWT IBSPY BAJMI NXMXM VBZXC JCSHX JQLAY GXJHX
+
+The length of your message is 1720 characters
+	Rank	N-Gram	Count	Percent
+	1. 	 J 	 102 	 5.93
+	2. 	 M 	 94 	 5.465
+	3. 	 N 	 90 	 5.233
+	4. 	 X 	 87 	 5.058
+	5. 	 B 	 84 	 4.884
+	6. 	 P 	 76 	 4.419
+	7. 	 C 	 76 	 4.419
+	8. 	 W 	 74 	 4.302
+	9. 	 I 	 72 	 4.186
+	10. 	 L 	 71 	 4.128
+	11. 	 F 	 66 	 3.837
+	12. 	 E 	 65 	 3.779
+	13. 	 D 	 65 	 3.779
+	14. 	 V 	 63 	 3.663
+	15. 	 S 	 62 	 3.605
+	16. 	 Q 	 60 	 3.488
+	17. 	 Z 	 59 	 3.43
+	18. 	 Y 	 57 	 3.314
+	19. 	 R 	 55 	 3.198
+	20. 	 U 	 53 	 3.081
+	21. 	 G 	 53 	 3.081
+	22. 	 H 	 52 	 3.023
+	23. 	 T 	 51 	 2.965
+	24. 	 A 	 51 	 2.965
+	25. 	 K 	 45 	 2.616
+	26. 	 O 	 37 	 2.151
+
+The length of your message is 1720 characters
+	Rank	N-Gram	Count	Percent
+	1. 	 XM 	 36 	 2.093
+	2. 	 CJ 	 30 	 1.744
+	3. 	 NN 	 22 	 1.279
+	4. 	 LT 	 20 	 1.163
+	5. 	 SJ 	 17 	 0.9884
+	6. 	 PX 	 16 	 0.9302
+	7. 	 BN 	 16 	 0.9302
+	8. 	 IW 	 15 	 0.8721
+	9. 	 ZX 	 14 	 0.814
+	10. 	 JX 	 14 	 0.814
+	11. 	 HR 	 13 	 0.7558
+	12. 	 FJ 	 13 	 0.7558
+	13. 	 JC 	 12 	 0.6977
+	14. 	 JB 	 12 	 0.6977
+	15. 	 WQ 	 11 	 0.6395
+	16. 	 VP 	 11 	 0.6395
+	17. 	 FY 	 11 	 0.6395
+	18. 	 DR 	 11 	 0.6395
+	19. 	 ZU 	 10 	 0.5814
+	20. 	 BV 	 10 	 0.5814
+	21. 	 BA 	 10 	 0.5814
+	22. 	 PK 	 9 	 0.5233
+	23. 	 MQ 	 9 	 0.5233
+	24. 	 MD 	 9 	 0.5233
+	25. 	 LM 	 9 	 0.5233
+	26. 	 FB 	 9 	 0.5233
+	27. 	 DP 	 9 	 0.5233
+	28. 	 WG 	 8 	 0.4651
+	29. 	 TH 	 8 	 0.4651
+	30. 	 PY 	 8 	 0.4651
+
+
+
+Known Plaintext:
+
+WEATHER ADVISORY
+ISSUED: 10:54 AM MAR. 26, 2021 – NATIONAL WEATHER SERVICE
+...WIND ADVISORY REMAINS IN EFFECT UNTIL MIDNIGHT EDT TONIGHT...
+
+* WHAT...West winds 15 to 30 mph with gusts up to 50 mph
+expected.
+
+* WHERE...Southern Vermont, Litchfield County, Connecticut, the
+Berkshires of western Massachusetts, the eastern Catskills,
+Mohawk Valley, Schoharie Valley, Greater Capital Region,
+Taconics, and the mid Hudson Valley.
+
+* WHEN...Until midnight EDT tonight.
+
+* IMPACTS...Gusty winds could blow around unsecured objects. Tree
+limbs could be blown down, large tree limbs could come down and
+a few power outages may result.
+
+PRECAUTIONARY/PREPAREDNESS ACTIONS...
+
+Use extra caution when driving, especially if operating a high
+profile vehicle. Secure outdoor objects.
+
+m=[[7,-1][2,1]]
+s=[1,7]
+
+VDIAU ZQPBI NPEAF LFJHZ WNVRK YOHWB IWQSV DIAUZ 
+YHMGK FLPRH LKYKK FJFSN MTHFS KPZKL FWBRK NVAUI 
+ZNJAZ DFOAS LMIWZ DFOSG IAVDE KRHLK EKJVV SRHXA 
+XNEKD LJEJV VSGMY PWEAS SGMGL HBDXA MGTCM GTTVA 
+SLCVT ABBXG BZYIG RBZBU BRWBV FLMUZ ENGZQ YOOLH 
+QOVDE KMGCT JZXRI STNKI MLXAZ TJZAX DCPLM LLJPO 
+LDOQF DYWQS WHVVI SOQKY BBSXP OFNAK DPAXO RMWMQ 
+QSMTJ BIWET BZGPX DOUDG UZZNP UIYJF TCQSW HRZUZ 
+UBVAU IZNJA ZDFOA SLMIW ZDFOT JCLWE RXTNG RRHLK 
+VTBDX GXUZF KYBDL KYITV VFMTI BZSBR MLNKZ TSLGG 
+VTBDX GENXU ZFLKZ FDSKY NXNKZ TSLGG VTBDX GBZDJ 
+IBMMO UWNGV KOZFM GBDET NXLDD FMTDL HWLCB RHBWB 
+IWKYY SMTCL MTJAL HXRWE RLWZT NZTNU QPPLS ORLSD 
+UZLKI XKFIN LHYPH TQSCB ACGYM GIASK RTQDK ALCQO 
+UIIKW WDZWH TVVFM TBDBW HXCDZ SBRML 

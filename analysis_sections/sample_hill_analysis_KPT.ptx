@@ -1,0 +1,129 @@
+<section xml:id="sample_hill_analysis_kpt">
+    <title>Hill's Cipher Analysis (Known Plaintext)</title>
+    <p>
+        Suppose that we intercept the following cipher text:
+    </p>
+    <pre>
+        VDIAU ZQPBI NPEAF LFJHZ WNVRK YOHWB IWQSV DIAUZ 
+        YHMGK FLPRH LKYKK FJFSN MTHFS KPZKL FWBRK NVAUI 
+        ZNJAZ DFOAS LMIWZ DFOSG IAVDE KRHLK EKJVV SRHXA 
+        XNEKD LJEJV VSGMY PWEAS SGMGL HBDXA MGTCM GTTVA 
+        SLCVT ABBXG BZYIG RBZBU BRWBV FLMUZ ENGZQ YOOLH 
+        QOVDE KMGCT JZXRI STNKI MLXAZ TJZAX DCPLM LLJPO 
+        LDOQF DYWQS WHVVI SOQKY BBSXP OFNAK DPAXO RMWMQ 
+        QSMTJ BIWET BZGPX DOUDG UZZNP UIYJF TCQSW HRZUZ 
+        UBVAU IZNJA ZDFOA SLMIW ZDFOT JCLWE RXTNG RRHLK 
+        VTBDX GXUZF KYBDL KYITV VFMTI BZSBR MLNKZ TSLGG 
+        VTBDX GENXU ZFLKZ FDSKY NXNKZ TSLGG VTBDX GBZDJ 
+        IBMMO UWNGV KOZFM GBDET NXLDD FMTDL HWLCB RHBWB 
+        IWKYY SMTCL MTJAL HXRWE RLWZT NZTNU QPPLS ORLSD 
+        UZLKI XKFIN LHYPH TQSCB ACGYM GIASK RTQDK ALCQO 
+        UIIKW WDZWH TVVFM TBDBW HXCDZ SBRML 
+    </pre>
+    <p>
+        And, further suppose that we know it is a weather report of some sort so that it starts with the word <q>weather.</q> That is we know that the ciphertext <c>VDIAUZQ</c> pairs with the plaintext <q>weather,</q>  this is called a <term>crib</term>. Finally, suppose that either through analysis or espionage we know that a Hill's Cipher was used to encipher the message.  Let's see if we can recover the key.
+    </p>
+    <p>
+        Using the crib (<c>VDIAUZQ</c> equals <q>weather</q>) we can set up three equations, the minimum needed to solve a general Hill's cipher:
+        <md>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} V \\ D\end{pmatrix}+s &amp; \equiv \begin{pmatrix}w \\ e \end{pmatrix} 
+            </mrow>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} I \\ A\end{pmatrix}+s &amp; \equiv \begin{pmatrix}a \\ t \end{pmatrix} 
+            </mrow>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} U \\ Z\end{pmatrix}+s &amp; \equiv \begin{pmatrix}h \\ e \end{pmatrix} 
+            </mrow>
+        </md>
+        or written with numbers:
+        <mdn>
+            <mrow xml:id="hill_KPT_equation_1">
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 21 \\ 3\end{pmatrix}+s &amp; \equiv \begin{pmatrix}22 \\ 4 \end{pmatrix} 
+            </mrow>
+            <mrow xml:id="hill_KPT_equation_2">
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 8 \\ 0\end{pmatrix}+s &amp; \equiv \begin{pmatrix}0 \\ 19 \end{pmatrix} 
+            </mrow>
+            <mrow xml:id="hill_KPT_equation_3">
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 20 \\ 25\end{pmatrix}+s &amp; \equiv \begin{pmatrix}7 \\ 4 \end{pmatrix} 
+            </mrow>
+        </mdn>
+        If we subtract equation <xref ref="hill_KPT_equation_2"/> from <xref ref="hill_KPT_equation_1"/> and <xref ref="hill_KPT_equation_3"/> from <xref ref="hill_KPT_equation_2"/>, we eliminate the <m>s</m> and can then solve for the matrix (remember that all the arithmetic is modulo 26):
+        <md>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 13 \\ 3\end{pmatrix} &amp; \equiv \begin{pmatrix}22 \\ 11 \end{pmatrix} 
+            </mrow>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 14 \\ 1\end{pmatrix} &amp; \equiv \begin{pmatrix}19 \\ 15 \end{pmatrix} 
+            </mrow>
+        </md>
+        or condensed to a single equation:
+        <md>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix}\begin{pmatrix} 13 \amp 14\\ 3 \amp 1\end{pmatrix} &amp; \equiv \begin{pmatrix}22 \amp 19 \\ 11\amp 15 \end{pmatrix}.
+            </mrow>
+        </md>
+        Solving for the unknown matrix we get:
+        <md>
+            <mrow>
+                \begin{pmatrix} a &amp; b\\ c &amp; d\end{pmatrix} &amp; \equiv \begin{pmatrix}22 \amp 19 \\ 11\amp 15 \end{pmatrix}\begin{pmatrix} 13 \amp 14\\ 3 \amp 1\end{pmatrix}^{-1}
+            </mrow>
+            <mrow>
+                &amp; \equiv \begin{pmatrix}22 \amp 19 \\ 11\amp 15 \end{pmatrix}(23^{-1})\begin{pmatrix} 1 \amp -14\\ -3 \amp 13\end{pmatrix}
+            </mrow>
+            <mrow xml:id="hill_KPT-matrix" number="yes">
+                &amp; \equiv \begin{pmatrix}3 \amp 3 \\ 20\amp 21 \end{pmatrix}=m^{-1}.
+            </mrow>
+        </md>
+        Armed now with the matrix from equation <xref ref="hill_KPT-matrix"/> we can substitute that into equation <xref ref="hill_KPT_equation_1"/> to find <m>s</m>:
+        <md>
+            <mrow>
+                s\amp = \begin{pmatrix}22 \\ 4 \end{pmatrix}- \begin{pmatrix}3 \amp 3 \\ 20\amp 21 \end{pmatrix}\begin{pmatrix}21 \\ 3 \end{pmatrix}
+            </mrow>
+            <mrow xml:id="hill_KPT_shift" number="yes">
+                \amp = \begin{pmatrix}2 \\ 15 \end{pmatrix}.
+            </mrow>
+        </md>
+        Finally, we can test our work by applying the shift <m>s</m> from equation <xref ref="hill_KPT_shift"/> and the matrix <m>m^{-1}</m> from equation <xref ref="hill_KPT-matrix"/> to our cipher text using the Hill's Cipher App in <xref ref="sage_cipher_cells"/> to see if we get a meaningful message. The key does give a message; it appears to be part of the following weather advisory:
+    </p>
+    <pre>
+        WEATHER ADVISORY
+        ISSUED: 10:54 AM MAR. 26, 2021 – NATIONAL WEATHER SERVICE
+        ...WIND ADVISORY REMAINS IN EFFECT UNTIL MIDNIGHT EDT TONIGHT...
+
+        * WHAT...West winds 15 to 30 mph with gusts up to 50 mph
+        expected.
+
+        * WHERE...Southern Vermont, Litchfield County, Connecticut, the
+        Berkshires of western Massachusetts, the eastern Catskills,
+        Mohawk Valley, Schoharie Valley, Greater Capital Region,
+        Taconics, and the mid Hudson Valley.
+
+        * WHEN...Until midnight EDT tonight.
+
+        * IMPACTS...Gusty winds could blow around unsecured objects. Tree
+        limbs could be blown down, large tree limbs could come down and
+        a few power outages may result.
+
+        PRECAUTIONARY/PREPAREDNESS ACTIONS...
+
+        Use extra caution when driving, especially if operating a high
+        profile vehicle. Secure outdoor objects.
+    </pre>
+    <p>
+        Below is a copy of the scrap hand work that went into finding the key for this cipher.
+    </p>
+
+    <sidebyside widths="50% 50%">
+        <figure xml:id="hill_KPT_analysis">
+            <caption>Sample Hill's Cipher Known Plaintext Analysis</caption>
+            <image width="100%" source="images/hillkpt.png" />
+        </figure>
+
+        <figure xml:id="hill_analysis_page_four">
+            <caption>Multiplication Table Modulo 26</caption>
+            <image width="100%" source="images/hill_Page_7.png" />
+        </figure>
+    </sidebyside>
+
+</section>

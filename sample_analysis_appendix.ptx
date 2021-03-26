@@ -38,4 +38,9 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
         <xi:include href="analysis_sections/sample_vigenere_analysis.ptx" />
 
+        <xi:include href="analysis_sections/sample_hill_analysis.ptx" />
+
+        <xi:include href="analysis_sections/sample_hill_analysis_KPT.ptx" />
+
+
 </appendix>

@@ -1,0 +1,190 @@
+<section xml:id="sample_hill_analysis">
+    <title>Hill's Cipher Analysis (Ciphertext Only)</title>
+    <p>
+        Suppose that we are gievn the following cipher text:
+    </p>
+    <pre>
+        DRWED KPJCJ NNMBX MBAQU BALMP KWQYN UMZWD CFJSM 
+        IWBAE ERFLM DCGEQ YHIDK ACYAQ YHIES MFZVL APLMG 
+        PSHRD ERFKA REBSI WLTAE LBBAX MJGFP JCLTB VXVPN 
+        UMSCH WSJXM DIKWL TZXUV RJMYZ VTOZF IWNNX EZQJE 
+        ZXWGV SJXWG HZHJN NDIPK SFFBD XBNPM WQMGH WKWMB 
+        DKFOZ XTOZF BNMGA NOUMU PKZUC JGMCJ BNZDD ISJXM 
+        EWMQW TFBCJ BNKGW GHWGO FLZXF AKWKL HJBVD PSCNA 
+        LNPXW GCJOA WCAEH XYJMQ DTZUC JLLVJ FYHVA CNEWD 
+        PXBAR UBPPF YAYEU IFJLT HVMWJ GZXFJ DRKGZ VDYZU 
+        QUVWN NQVBO YUPYE IIWVC NGBEJ QVPJM JSDRY APFLT 
+        HJRQI WMQCJ DPBVE EQLBO IQHRW QLMFS MKJSG NNNFS 
+        FYCZH RTHBV LMTZL LOUWE REPFD XZDCJ PFZQY UZXLM 
+        PJORT MNLXM QUFJB NLTOE VPZFD RIWES TTUXS IBVPY 
+        LRCJD PNNEK DPHRR TBVHI XGZWD THIGN WQPUR ULBBN 
+        ISWXF PJCDK UNJCN NHCXM RUPWM DHRWE XMVBZ UFYGY 
+        BFPXJ SDCRT NNISD PCJPF YELVM YSNVB LIFJJ CSJEI 
+        NNDTF BHRAC BETHP FXMDE DKCUR ZXMFJ ZQOIY RLMPK 
+        ZXCJV JHSBE PYBAV GLTHR ZUCJI WFYCZ IWMQH RUIZU 
+        HRUIS ECJBF BNREJ XNNTK TEPXG YXEBO EEPKY ALTDR 
+        LLDXL LHROP KAWBZ VWDTM BXVCQ LCZKM VPLWC FXMZD 
+        ...
+    </pre>
+    <p>
+        Looking at the character frequencies we can see that this is not a monoalphabetic or transposition cipher.  A little more playing around with frequencies of subsets, or looking for evenly spaced repeated strings, reveals that it is probably not a Vigen&#x00E8;re cipher either.  Let's try to see if it was enciphered with a Hill's Cipher.
+    </p>
+    <sidebyside>
+        <stack>
+            <p>The length of your message is 1720 characters</p>
+            <tabular>
+                <row><cell>Rank</cell>    <cell>N-Gram</cell>  <cell>Count</cell>   <cell>Percent</cell></row>
+                <row><cell>1.</cell>   <cell>J</cell>   <cell>102</cell>     <cell>5.93</cell></row>
+                <row><cell>2.</cell>   <cell>M</cell>   <cell>94</cell>      <cell>5.465</cell></row>
+                <row><cell>3.</cell>   <cell>N</cell>   <cell>90</cell>      <cell>5.233</cell></row>
+                <row><cell>4.</cell>   <cell>X</cell>   <cell>87</cell>      <cell>5.058</cell></row>
+                <row><cell>5.</cell>   <cell>B</cell>   <cell>84</cell>      <cell>4.884</cell></row>
+                <row><cell>6.</cell>   <cell>P</cell>   <cell>76</cell>      <cell>4.419</cell></row>
+                <row><cell>7.</cell>   <cell>C</cell>   <cell>76</cell>      <cell>4.419</cell></row>
+                <row><cell>8.</cell>   <cell>W</cell>   <cell>74</cell>      <cell>4.302</cell></row>
+                <row><cell>9.</cell>   <cell>I</cell>   <cell>72</cell>      <cell>4.186</cell></row>
+                <row><cell>10.</cell>      <cell>L</cell>   <cell>71</cell>      <cell>4.128</cell></row>
+            </tabular>
+        </stack>
+        <stack>
+            <p>The length of your message is 1720 characters</p>
+            <tabular>
+                <row><cell>Rank</cell>    <cell>N-Gram</cell>  <cell>Count</cell>   <cell>Percent</cell></row>
+                <row><cell>1.</cell>   <cell>XM</cell>      <cell>36</cell>      <cell>2.093</cell></row>
+                <row><cell>2.</cell>   <cell>CJ</cell>      <cell>30</cell>      <cell>1.744</cell></row>
+                <row><cell>3.</cell>   <cell>NN</cell>      <cell>22</cell>      <cell>1.279</cell></row>
+                <row><cell>4.</cell>   <cell>LT</cell>      <cell>20</cell>      <cell>1.163</cell></row>
+                <row><cell>5.</cell>   <cell>SJ</cell>      <cell>17</cell>      <cell>0.9884</cell></row>
+                <row><cell>6.</cell>   <cell>PX</cell>      <cell>16</cell>      <cell>0.9302</cell></row>
+                <row><cell>7.</cell>   <cell>BN</cell>      <cell>16</cell>      <cell>0.9302</cell></row>
+                <row><cell>8.</cell>   <cell>IW</cell>      <cell>15</cell>      <cell>0.8721</cell></row>
+                <row><cell>9.</cell>   <cell>ZX</cell>      <cell>14</cell>      <cell>0.814</cell></row>
+                <row><cell>10.</cell>      <cell>JX</cell>      <cell>14</cell>      <cell>0.814</cell></row>
+            </tabular>
+        </stack>
+    </sidebyside>
+    <p>
+        Since a basic Hill's cipher encrypts two characters at a time we will focus on bigrams.  The most common bigrams in the ciphertext are <c>XM</c> and <c>CJ</c>, one of these probably represents <sq>th</sq> and the other is likely <sq>he</sq>.  The first possibility we will test is:
+            <me>
+                m\begin{pmatrix} t \\ h\end{pmatrix}=\begin{pmatrix} X \\ M\end{pmatrix}\ \text{and}\ m\begin{pmatrix} h \\ e\end{pmatrix}=\begin{pmatrix} C \\ J\end{pmatrix}.
+            </me>
+        where <m>m</m> is the matrix used to encipher the text. Converting the letters to numbers this gives:
+            <me>
+                m\begin{pmatrix} 19 \\ 7\end{pmatrix}=\begin{pmatrix} 23 \\ 12\end{pmatrix}\ \text{and}\ m\begin{pmatrix} 7 \\ 4\end{pmatrix}=\begin{pmatrix} 2 \\ 9\end{pmatrix}.
+            </me>
+        Which further simplifies to:
+            <me>
+                m^{-1}\begin{pmatrix} 23 \\ 12\end{pmatrix}=\begin{pmatrix} 19 \\ 7\end{pmatrix}\ \text{and}\ m^{-1}\begin{pmatrix} 2 \\ 9\end{pmatrix}=\begin{pmatrix} 7 \\ 4\end{pmatrix}.
+            </me>
+        If we write 
+            <me>
+                m^{-1}=\begin{pmatrix}a &amp; b\\ c &amp; d\end{pmatrix}
+            </me>
+        then these equations give us four equations and four unknowns:
+    </p>
+    <sidebyside>
+        <p>
+            <md>
+                <mrow>
+                    23a+12b &amp; \equiv 19&amp;\pmod{26}
+                </mrow>
+                <mrow>
+                    2a+9b &amp; \equiv 7&amp;\pmod{26}
+                </mrow>
+            </md>
+        </p>
+        <p>
+            <md>
+                <mrow>
+                    23c+12d &amp; \equiv 7&amp;\pmod{26}
+                </mrow>
+                <mrow>
+                    2c+9d &amp; \equiv 4&amp;\pmod{26}
+                </mrow>
+            </md>
+        </p>
+    </sidebyside>
+    <p>
+        If we solve these equations we get <m>a=9</m>, <m>b=19</m>, <m>c=15</m>, and <m>d=0</m>, that is
+            <me>
+                m^{-1}=\begin{pmatrix}9 &amp; 19\\ 15 &amp; 0\end{pmatrix}.
+            </me>
+        Using the Hill's Cipher app in <xref ref="sage_cipher_cells"/> we get the output:
+    </p>
+    <pre>
+                CIPHER: DRWED KPJCJ...
+                plain: mtosj turhe...
+    </pre>
+    <p>
+        This means our first attempt was not successful.  Let's try the second possibility listed above.
+    </p>
+    <p>
+        The second pairing of bigrams will give us:
+            <me>
+                m\begin{pmatrix} t \\ h\end{pmatrix}=\begin{pmatrix} C \\ J\end{pmatrix}\ \text{and}\ m\begin{pmatrix} h \\ e\end{pmatrix}=\begin{pmatrix} X \\ M\end{pmatrix},
+            </me>
+        or in numbers
+            <me>
+                m\begin{pmatrix} 19 \\ 7\end{pmatrix}=\begin{pmatrix} 2 \\ 9\end{pmatrix}\ \text{and}\ m\begin{pmatrix} 7 \\ 4\end{pmatrix}=\begin{pmatrix} 23 \\ 12\end{pmatrix}.
+            </me>
+        This time however we can try being a little more clever by noting that we can combine these to get:
+            <me>
+                m\begin{pmatrix} 7 &amp; 19\\ 4 &amp; 7\end{pmatrix}=\begin{pmatrix} 23 &amp; 2\\ 12 &amp; 9 \end{pmatrix}. 
+            </me>
+        We can use this to find <m>m^{-1}</m> with matrix multiplication and inverses instead of systems of equations:
+        <md>
+            <mrow>
+                m^{-1} &amp;= \begin{pmatrix} 7 &amp; 19\\ 4 &amp; 7\end{pmatrix}\begin{pmatrix} 23 &amp; 2\\ 12 &amp; 9 \end{pmatrix}^{-1}
+            </mrow>
+            <mrow>
+                &amp;= \begin{pmatrix} 7 &amp; 19\\ 4 &amp; 7\end{pmatrix}(1)\begin{pmatrix} 9 &amp; -2\\ -12 &amp; 23 \end{pmatrix}
+            </mrow>
+            <mrow>
+                &amp;= \begin{pmatrix} 7 &amp; 19\\ 4 &amp; 7\end{pmatrix}\begin{pmatrix} 9 &amp; 24\\ 14 &amp; 23 \end{pmatrix}
+            </mrow>
+            <mrow>
+                &amp;= \begin{pmatrix} 17 &amp; 7\\ 4 &amp; 23\end{pmatrix}.
+            </mrow>
+        </md>
+        Again, using the Hill's Cipher app in <xref ref="sage_cipher_cells"/> we get the output:
+    </p>
+    <pre>
+                CIPHER: DRWED KPJCJ...
+                plain: onmyr ighth...
+    </pre>
+    <p>
+        This means that our plaintext seems to start with <q>On my right ...</q>, and so we have found the correct key.  Deciphering the entire original quote points to the following text:
+    </p>
+    <blockquote>
+        <q>On my right hand there were lines of fishing stakes resembling a mysterious system of half-submerged bamboo fences, incomprehensible in its division of the domain of tropical fishes, and crazy of aspect as if abandoned forever by some nomad tribe of fishermen now gone to the other end of the ocean; for there was no sign of human habitation as far as the eye could reach. To the left a group of barren islets, suggesting ruins of stone walls, towers, and blockhouses, had its foundations set in a blue sea that itself looked solid, so still and stable did it lie below my feet; even the track of light from the westering sun shone smoothly, without that animated glitter which tells of an imperceptible ripple. And when I turned my head to take a parting glance at the tug which had just left us anchored outside the bar, I saw the straight line of the flat shore joined to the stable sea, edge to edge, with a perfect and unmarked closeness, in one leveled floor half brown, half blue under the ...</q> -<pubtitle>The Secret Sharer</pubtitle> By Joseph Conrad
+    </blockquote>
+    <p>
+        Below are copies of the scrap hand work that went into finding the key for this cipher.  Notice that things don't always work perfectly the first time, this doesn't mean that they won't work at all, it might just take some additional attempts.
+    </p>
+
+    <sidebyside widths="50% 50%">
+        <figure xml:id="hill_analysis_page_one">
+            <caption>Sample Hill's Cipher Analysis Page 1</caption>
+            <image width="100%" source="images/hill_Page_1.png" />
+        </figure>
+
+        <figure xml:id="hill_analysis_page_two">
+            <caption>Sample Hill's Cipher Analysis Page 2</caption>
+            <image width="100%" source="images/hill_Page_3.png" />
+        </figure>
+    </sidebyside>
+
+    <sidebyside widths="50% 50%">
+        <figure xml:id="hill_analysis_page_three">
+            <caption>Sample Hill's Cipher Analysis Page 3</caption>
+            <image width="100%" source="images/hill_Page_5.png" />
+        </figure>
+
+        <figure xml:id="hill_analysis_page_four">
+            <caption>Multiplication Table Modulo 26</caption>
+            <image width="100%" source="images/hill_Page_7.png" />
+        </figure>
+    </sidebyside>
+
+
+</section>
