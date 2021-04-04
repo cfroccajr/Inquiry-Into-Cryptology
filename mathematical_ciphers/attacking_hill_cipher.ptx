@@ -1,0 +1,474 @@
+<section xml:id="hill_decrypt_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>Decrypting Hill's Cipher</title>
+        <objectives>
+            <ul>
+                <li>
+                    Review some matrix material
+                </li>
+                <li>
+                    Ciphertext only attack on Hill's Cipher
+                </li>
+                <li>
+                	Known plaintext attack on Hill's Cipher
+                </li>
+            </ul>
+        </objectives>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <introduction>
+        	<p>
+        		Stuff
+        	</p>
+        </introduction>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Inverse Matrix Observations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <subsection xml:id="matrix_inverse_comments">
+        	<title>Comments on Matrix Inverses</title>
+        	<p>
+        		Recall from <xref ref="hill_section"/> that to find the inverse of a matrix <m>m</m> we need to find
+                    <md>
+                        <mrow>
+                            m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
+                        </mrow>
+                    </md>        		
+				And, the matrix <m>m</m> will have a multiplicative inverse <m>m^{-1}</m> if and only if <m>det(m)=ad-bc</m> has a multiplicative inverse.  For example consider the matrix
+				<me>
+					m=
+					\begin{pmatrix}
+						5 \amp 3 \\
+						4 \amp 3
+					\end{pmatrix}
+				</me>
+				using the formula above we get that the inverse is
+				<md>
+					<mrow>
+						m^{-1}
+						\amp=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}
+					</mrow>
+					<mrow>
+						\equiv\amp (5\cdot 3-3\cdot 4)^{-1}\begin{pmatrix}3 &amp; -3 \\ -4 &amp; 5\end{pmatrix}
+					</mrow>
+					<mrow>
+						\equiv\amp 3^{-1}\begin{pmatrix}3 &amp; -3 \\ -4 &amp; 5\end{pmatrix}
+					</mrow>
+					<mrow>
+						\equiv\amp 9\begin{pmatrix}3 &amp; -3 \\ -4 &amp; 5\end{pmatrix}
+					</mrow>
+					<mrow>
+						\equiv\amp \begin{pmatrix}1 &amp; 25 \\ 16 &amp; 19\end{pmatrix}
+					</mrow>
+				</md>
+        	</p>
+        	<p>
+        		Decryption will require us to be able to find matrix inverses(review <xref ref="subsection_matrix_inveres"/>).  So, it will be helpful to be able to tell at a glance when a matrix definitely isn't invertible so that you don't spend time trying to find an inverse that doesn't exist.  Fortunately, sense <m>(ad-bc)</m> must be invertible modulo 26 for our examples we know that it must be <em>relatively prime</em> to 26, so it can not be divisible by 2 or 13.  In order for <m>(ad-bc)</m> to be even it must have one of four formats:
+        	</p>
+    		<sidebyside>
+    			<p>
+					<md>
+						<mrow>
+							m\amp=\begin{pmatrix}n &amp; odd \\ odd &amp; even\end{pmatrix}
+						</mrow>
+						<mrow>
+							m\amp=\begin{pmatrix}odd &amp; n \\ even &amp; odd\end{pmatrix}
+						</mrow>
+					</md>
+    			</p>
+    			<p>
+					<md>
+						<mrow>
+							m\amp=\begin{pmatrix}odd &amp; even \\ n &amp; odd\end{pmatrix}
+						</mrow>
+						<mrow>
+							m\amp=\begin{pmatrix}even &amp; odd \\ odd &amp; n\end{pmatrix}
+						</mrow>
+					</md>
+    			</p>
+    		</sidebyside>
+    		<p>
+    			In each case we get a determinant of the form <m>n\cdot even-odd\cdot odd</m> or <m>odd\cdot odd-n\cdot even</m> both of which will be odd for any value of <m>n</m>.  They may still be a multiple of 13, but at least they won't be even.
+    		</p>
+    		<exercise>
+    			<statement>
+    				<p>
+    					Looking at the four types of matrices listed above try to determine if this matrix is invertible before calculating the determinant, then try to find the inverse if it exists.  Be sure to justify your answers and show your work.
+    					<me>
+    						m=
+							\begin{pmatrix}
+								5 \amp 3 \\
+								4 \amp 3
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</statement>
+    			<answer>
+    				<p>
+    					Yes this appear invertible and we can get:
+    					<me>
+    						m^{-1}=
+							\begin{pmatrix}
+								1 \amp 25 \\
+								16 \amp 19
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</answer>
+    		</exercise>
+    		<exercise>
+    			<statement>
+    				<p>
+    					Looking at the four types of matrices listed above try to determine if this matrix is invertible before calculating the determinant, then try to find the inverse if it exists.  Be sure to justify your answers and show your work.
+    					<me>
+    						m=
+							\begin{pmatrix}
+								2 \amp 17 \\
+								0 \amp 3
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</statement>
+    			<answer>
+    				<p>
+    					Not invertible
+    				</p>
+    			</answer>
+    		</exercise>
+    		<exercise>
+    			<statement>
+    				<p>
+    					Looking at the four types of matrices listed above try to determine if this matrix is invertible before calculating the determinant, then try to find the inverse if it exists.  Be sure to justify your answers and show your work.
+    					<me>
+    						m=
+							\begin{pmatrix}
+								3 \amp 4 \\
+								17 \amp 7
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</statement>
+    			<answer>
+    				<p>
+    					Not invertible
+    				</p>
+    			</answer>
+    		</exercise>
+    		<exercise>
+    			<statement>
+    				<p>
+    					Looking at the four types of matrices listed above try to determine if this matrix is invertible before calculating the determinant, then try to find the inverse if it exists.  Be sure to justify your answers and show your work.
+    					<me>
+    						m=
+							\begin{pmatrix}
+								0 \amp 7 \\
+								-3 \amp 14
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</statement>
+    			<answer>
+    				<p>
+    					Yes this appear invertible and we can get:
+    					<me>
+    						m^{-1}=
+							\begin{pmatrix}
+								18 \amp 17 \\
+								15 \amp 0
+							\end{pmatrix}
+    					</me>
+    				</p>
+    			</answer>
+    		</exercise>
+        </subsection>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ciphertext Only %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!--
+	Mr. McGregor caught sight of him
+	at the corner, but Peter did not care.
+	He slipped underneath the gate, and
+	was safe at last in the wood outside
+	the garden.
+	Mr. McGregor hung up the little
+	jacket and the shoes for a scare-crow
+	to frighten the blackbirds.
+	Peter never stopped running or
+	looked behind him till he got home to
+	the big fir-tree.
+	He was so tired that he flopped
+	down upon the nice soft sand on the
+	floor of the rabbit-hole, and shut his
+	eyes. His mother was busy cooking;
+	she wondered what he had done with
+	his clothes. It was the
+
+	m=[[0,7],[-3,14]]
+	s=[0,0]
+
+	PUOSP MQUPO AUQYD LEGXC UJXFG ODGXP OQPOC RHPDY 
+	CLCZV RVSUB OXPEX IWGEB BJVEN SCVNB AOXPX PQUDG 
+	AOVDA MWQJS AOZTW SEDDT CJUAV AKEWN VSDUC JAIVR 
+	NOPUO SPMQU POKZQ TBUXP ZMDIZ TLKOC CAAVV DXPWG 
+	UTWGU ZABOA PEOQU PDSJC EJXCC ZDTCJ ZVOCH KPGWJ 
+	CLCZN BRWPS DEBMC LPVNS EVQTP OUHSU VECBE NVDEN 
+	DWZAX NQUDQ UTCUU JXPHC QIETD HCFXI YKWSU MEDCF 
+	DXAFX PJGUH BJVEU FNMBU NKXPN OOEWG JCWNN AUFDT 
+	CJZJU YUPDR CJABH LDIUT CXNAW JKZXP WUMMW GENGK 
+	DQCJY XWSKR MWUIS UNCWA CJUAV DPSVE XGDGC JAFVH 
+	NKYKD IXZWU ZSDQC JEGYR WSXPN OZQ 
+
+	th he er re in=XP CJ PS CF NC
+
+
+	The length of your message is 428 characters
+	Rank	N-Gram	Count	Percent
+	1. 	 XP 	 11 	 2.57
+	2. 	 CJ 	 9 	 2.103
+	3. 	 QU 	 6 	 1.402
+	4. 	 WG 	 5 	 1.168
+	5. 	 TC 	 5 	 1.168
+	6. 	 PO 	 5 	 1.168
+	7. 	 WS 	 4 	 0.9346
+	8. 	 VE 	 4 	 0.9346
+	9. 	 VD 	 4 	 0.9346
+	10. 	 UP 	 4 	 0.9346
+-->
+
+
+        <subsection xml:id="hill_ciphertext_only">
+        	<title>Ciphertext Only Attack</title>
+        	<p>
+        		Suppose we intercept the message below and through espionage we know that it was enciphered using a Hill's Cipher with only a multiplier.
+        	</p>
+        	<pre>
+				PUOSP MQUPO AUQYD LEGXC UJXFG ODGXP OQPOC RHPDY 
+				CLCZV RVSUB OXPEX IWGEB BJVEN SCVNB AOXPX PQUDG 
+				AOVDA MWQJS AOZTW SEDDT CJUAV AKEWN VSDUC JAIVR 
+				NOPUO SPMQU POKZQ TBUXP ZMDIZ TLKOC CAAVV DXPWG 
+				UTWGU ZABOA PEOQU PDSJC EJXCC ZDTCJ ZVOCH KPGWJ 
+				CLCZN BRWPS DEBMC LPVNS EVQTP OUHSU VECBE NVDEN 
+				DWZAX NQUDQ UTCUU JXPHC QIETD HCFXI YKWSU MEDCF 
+				DXAFX PJGUH BJVEU FNMBU NKXPN OOEWG JCWNN AUFDT 
+				CJZJU YUPDR CJABH LDIUT CXNAW JKZXP WUMMW GENGK 
+				DQCJY XWSKR MWUIS UNCWA CJUAV DPSVE XGDGC JAFVH 
+				NKYKD IXZWU ZSDQC JEGYR WSXPN OZQ 
+        	</pre>
+        	<p>
+        		As always we need to start with frequency analysis, but if we assume the message used a Hill's cipher with a <m>2\times 2</m> matrix we will focus on bigrams.  The text above the bigrams frequencies:
+	       	</p>
+    		<table>
+    			<title>Bigrams from a message with 428 characters</title>
+    			<tabular>
+					<row><cell> Rank </cell> <cell>N-Gram </cell>        <cell> Count </cell><cell> Percent </cell></row>
+					<row><cell> 1. </cell>	 <cell> <c>XP</c> </cell>	 <cell> 10 </cell>	 <cell> 2.336 </cell></row>
+					<row><cell> 2. </cell>	 <cell> <c>CJ</c> </cell>	 <cell> 9 </cell>	 <cell> 2.103 </cell></row>
+					<row><cell> 3. </cell>	 <cell> <c>QU</c> </cell>	 <cell> 5 </cell>	 <cell> 1.168 </cell></row>
+					<row><cell> 4. </cell>	 <cell> <c>WG</c> </cell>	 <cell> 5 </cell>	 <cell> 1.168 </cell></row>
+					<row><cell> 5. </cell>	 <cell> <c>TC</c> </cell>	 <cell> 5 </cell>	 <cell> 1.168 </cell></row>
+					<row><cell> 6. </cell>	 <cell> <c>PO</c> </cell>	 <cell> 4 </cell>	 <cell> 0.9346 </cell></row>
+					<row><cell> 7. </cell>	 <cell> <c>WS</c> </cell>	 <cell> 4 </cell>	 <cell> 0.9346 </cell></row>
+					<row><cell> 8. </cell>	 <cell> <c>VE</c> </cell>	 <cell> 4 </cell>	 <cell> 0.9346 </cell></row>
+					<row><cell> 9. </cell>	 <cell> <c>VD</c> </cell>	 <cell> 4 </cell>	 <cell> 0.9346 </cell></row>
+					<row><cell> 10. </cell>	 <cell> <c>UP</c> </cell>	 <cell> 4 </cell>	 <cell> 0.9346 </cell></row>
+    			</tabular>
+    		</table>
+    		<p>
+    			From what is above we can guess that <c>XP</c> and <c>CJ</c> represent plaintext th and he or vice versa.  Using this we can write the possible equations:
+    			<md>
+    				<mrow>
+    					m\begin{pmatrix} t \\ h\end{pmatrix}\amp\equiv \begin{pmatrix} X \\ P\end{pmatrix}\ \text{and}
+    				</mrow>
+    				<mrow>
+    					m\begin{pmatrix} h \\ e\end{pmatrix}\amp\equiv \begin{pmatrix} C \\ J\end{pmatrix}.
+    				</mrow>
+    			</md>
+    			Translating the letters into numbers this gives the equations:
+    			<md>
+    				<mrow>
+    					m\begin{pmatrix} 19 \\ 7\end{pmatrix}\amp\equiv \begin{pmatrix} 23 \\ 15\end{pmatrix}\ \text{and}
+    				</mrow>
+    				<mrow>
+    					m\begin{pmatrix} 7 \\ 4\end{pmatrix}\amp\equiv \begin{pmatrix} 2 \\ 9\end{pmatrix}
+    				</mrow>
+    			</md>
+    			which can be condensed to the matrix equation:
+    			<me>
+    					m\begin{pmatrix} 19 \amp 7\\ 7\amp 4\end{pmatrix}\equiv \begin{pmatrix} 23\amp 2 \\ 15\amp 9\end{pmatrix}.
+    			</me>
+    			Solving this for <m>m^{-1}</m> we get the inverse key:
+    			<md>
+					<mrow>    				
+    					m^{-1}\amp\equiv \begin{pmatrix} 19 \amp 7\\ 7\amp 4\end{pmatrix} \begin{pmatrix} 23\amp 2 \\ 15\amp 9\end{pmatrix}^{-1}
+    				</mrow>
+    				<mrow>
+    					\amp\equiv \begin{pmatrix} 19 \amp 7\\ 7\amp 4\end{pmatrix} \begin{pmatrix} 19\amp 16 \\ 3\amp 11\end{pmatrix}
+    				</mrow>
+    				<mrow>
+    					\amp\equiv \begin{pmatrix} 23-5 \amp 18-1\\ 3+12\amp 8-8\end{pmatrix}
+    				</mrow>
+    				<mrow>
+    					\amp\equiv \begin{pmatrix} 18 \amp 17\\ 15\amp 0\end{pmatrix}
+    				</mrow>
+    			</md>
+    		Applying the inverse matrix
+    		<me>
+    			m^{-1}=\begin{pmatrix} 18 \amp 17\\ 15\amp 0\end{pmatrix}
+    		</me>
+    		to the first little bit of the cipher text gives us the output
+    		</p>
+    		<pre>
+    			MRMCG REGOR CAUGH TSIGH TOFHI MATTH ECORN ERBUT
+    		</pre>
+    		<p>
+	    		or <q>Mr. McGregor caught sight of him at the corner but ...</q>
+	    	</p>
+	    	<exercise>
+	    		<statement>
+	    			<p>
+	    				Suppose that frequency analysis tells you that a Hill's cipher with just a multiplier <m>m</m> seems to have enciphered th as <c>QR</c> and he as <c>FI</c>. Use this information to find the deciphering matrix <m>m^{-1}</m>.
+	    			</p>
+	    		</statement>
+	    		<answer>
+	    			<p>
+		    			<me>
+		    				m^{-1}=\begin{pmatrix} 5 \amp 1\\ 10\amp 17\end{pmatrix}
+		    			</me>
+		    		</p>
+	    		</answer>
+	    	</exercise>
+	    	<exercise>
+	    		<statement>
+	    			<p>
+	    				Suppose that frequency analysis tells you that in a message enciphered with Hill's cipher with just a multiplier <m>m</m> the three most common bigrams are <c>HR</c>, <c>KL</c>, and <c>TY</c>.  Given that the most common English bigrams are th, he, and in, try and find the deciphering matrix <m>m^{-1}</m>.
+	    			</p>
+	    		</statement>
+	    		<hint>
+	    			<p>
+	    				After enciphering th is not necessarily going to be the most common bigram but it will probably be near the top along with he.
+	    			</p>
+	    		</hint>
+	    		<answer>
+	    			<p>
+		    			<me>
+		    				m^{-1}=\begin{pmatrix} 6 \amp 1\\ 5\amp 15\end{pmatrix}
+		    			</me>
+		    		</p>
+	    		</answer>
+	    	</exercise>
+	    	<exercise>
+	    		<statement>
+	    			<p>
+	    				Given a message with 1230 characters and the following bigrams:
+	    			</p>
+    				<table>
+    					<tabular>
+							<row><cell>Rank</cell><cell>N-Gram</cell><cell>Count</cell><cell>Percent</cell></row>
+							<row><cell>1.</cell><cell><c>DT</c></cell><cell>25</cell><cell>2.033</cell></row>
+							<row><cell>2.</cell><cell><c>LY</c></cell><cell>23</cell><cell>1.87</cell></row>
+							<row><cell>3.</cell><cell><c>ZN</c></cell><cell>18</cell><cell>1.463</cell></row>
+							<row><cell>4.</cell><cell><c>FU</c></cell><cell>17</cell><cell>1.382</cell></row>
+							<row><cell>5.</cell><cell><c>YK</c></cell><cell>14</cell><cell>1.138</cell></row>
+							<row><cell>6.</cell><cell><c>SY</c></cell><cell>14</cell><cell>1.138</cell></row>
+							<row><cell>7.</cell><cell><c>IH</c></cell><cell>14</cell><cell>1.138</cell></row>
+							<row><cell>8.</cell><cell><c>AO</c></cell><cell>13</cell><cell>1.057</cell></row>
+							<row><cell>9.</cell><cell><c>KB</c></cell><cell>12</cell><cell>0.9756</cell></row>
+							<row><cell>10.</cell><cell><c>XO</c></cell><cell>11</cell><cell>0.8943</cell></row>
+						</tabular>
+					</table>
+					<p>
+						Which bigrams most likely represent th and he?  Try to use this information to find the deciphering matrix <m>m^{-1}</m>.  Check your work by deciphering this snippet of the text
+						<c>ORLQO EZHXB CRQHY JDTPT YLJQE QTRHS SYQQG PANVJ ... </c>.
+	    			</p>
+	    		</statement>
+	    		<hint>
+	    			<p>
+	    				After enciphering th is not necessarily going to be the most common bigram but it will probably be near the top along with he.
+	    			</p>
+	    		</hint>
+	    		<answer>
+	    			<p>
+	    				In this case <c>DT</c> is he and <c>LY</c> is th.  Using this information we can get:
+		    			<me>
+		    				m^{-1}=\begin{pmatrix} 9 \amp 14\\ 9\amp 7\end{pmatrix}
+		    			</me>
+		    		</p>
+	    		</answer>
+	    	</exercise>
+        </subsection>
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Known Plaintext %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+<!-- 
+	Be ne vo le nt Le ad er
+	EN OL YT IH TM IH SE AG
+	m=[[3,9][2,7]]
+	s=[17,9]
+	m^-1=[[11,-3],[8,1]]
+	m^{-1}s=[4,15]
+ -->
+
+
+        <subsection xml:id="hill_plaintext_only">
+        	<title>Known Plaintext Attack</title>
+        	<p>
+        		Suppose that you know your opponent issues a status update to their minions every day at 5 am and always signs it <q>Benevolent Leader.</q>  This is an example of a <em>crib</em> (see <xref ref="def_crib"/><idx>crib</idx>).  We can use this to crack whatever cipher that is being used.
+        	</p>
+        	<p>
+	        	Let's assume in this instance that a Hills cipher with a shift was used so that enciphering looked like <me>\mathtt{C}\equiv m\, M+s</me> so that we will use <me>M\equiv m^{-1}\, \mathtt{C}+(-m^{-1}s)</me> to decipher.  With the crib <q>Benevolent Leader</q> and the ciphertext <c>EN OL YT IH TM IH SE AG</c> we get the following equations (once we change the letters to numbers):
+	        </p>
+	        <sidebyside>
+	        	<p>
+		        	<mdn>
+		        		<mrow xml:id="kpt_hill_eq1">
+		        			m\begin{pmatrix}1\\ 4\end{pmatrix}+s\amp \equiv \begin{pmatrix}4 \\ 13\end{pmatrix}
+		        		</mrow>
+		        		<mrow xml:id="kpt_hill_eq2">
+		        			m\begin{pmatrix}13\\ 4\end{pmatrix}+s\amp \equiv \begin{pmatrix}14 \\ 11\end{pmatrix}
+		        		</mrow>
+		        		<mrow xml:id="kpt_hill_eq3">
+		        			m\begin{pmatrix}21\\ 14\end{pmatrix}+s\amp \equiv \begin{pmatrix}24 \\ 19\end{pmatrix}
+		        		</mrow>
+		        		<mrow>
+		        			m\begin{pmatrix}11\\ 4\end{pmatrix}+s\amp \equiv \begin{pmatrix}8 \\ 7\end{pmatrix}
+		        		</mrow>
+		        	</mdn>
+		        </p>
+	        	<p>
+		        	<mdn>
+		        		<mrow>
+		        			m\begin{pmatrix}13\\ 19\end{pmatrix}+s\amp \equiv \begin{pmatrix}19 \\ 12\end{pmatrix}
+		        		</mrow>
+		        		<mrow>
+		        			m\begin{pmatrix}11\\ 4\end{pmatrix}+s\amp \equiv \begin{pmatrix}8 \\ 7\end{pmatrix}
+		        		</mrow>
+		        		<mrow>
+		        			m\begin{pmatrix}0\\ 3\end{pmatrix}+s\amp \equiv \begin{pmatrix}18 \\ 4\end{pmatrix}
+		        		</mrow>
+		        		<mrow>
+		        			m\begin{pmatrix}4\\ 17\end{pmatrix}+s\amp \equiv \begin{pmatrix}0 \\ 6\end{pmatrix}
+		        		</mrow>
+		        	</mdn>
+		        </p>
+		    </sidebyside>
+		    <p>
+		    	Just as with the affine cipher we need to subtract pairs of equations from one another to get rid of the shift <m>s</m>.  But, we need to be sure we are left with matrices that can be inverted.  For example if we subtracted <xref ref="kpt_hill_eq2"/> from <xref ref="kpt_hill_eq1"/> and <xref ref="kpt_hill_eq2"> we could write:
+		    	<me>
+		    		m\begin{pmatrix}-12 \amp-8 \\ 0 \amp -10\end{pmatrix}\equiv\begin{pmatrix}-10 \amp -10 \\ 2 \amp -8 \end{pmatrix}
+		    	</me>
+		    	and the matrix on the right hand side is not invertible. So, we need to keep in mind the ideas from <xref ref="matrix_inverse_comments"/> and pick the equations that will leave us some invertible matrices.
+		    </p>
+        </subsection>
+
+
+<!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hill's Cipher Cell %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+
+        <figure>
+            <caption>Hill's Cipher Cell</caption>
+            <interactive platform="sage" width="100%" aspect="16:10">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/hills_cipher.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+</section>

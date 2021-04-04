@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"hill_KPT",
+				"hill_KPT-matrix"
+			],
+			[
+				"hill",
+				"hill_KPT_shift"
+			],
+			[
+				"hi",
+				"hill_KPT_equation_1"
+			],
+			[
+				"h",
+				"hill_KPT_equation_2"
+			],
+			[
 				"c",
 				"c"
 			],
@@ -375,33 +391,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "mathematical_ciphers/hill_cipher.ptx",
-			"settings":
-			{
-				"buffer_size": 37619,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "mathematical_ciphers/Hill_Decrypt.txt",
-			"settings":
-			{
-				"buffer_size": 5739,
-				"encoding": "UTF-8",
-				"line_ending": "Windows",
-				"name": "On my right hand there were lines of fishing stake"
-			}
-		},
-		{
-			"file": "Intro_Crypto_Main.sublime-project",
-			"settings":
-			{
-				"buffer_size": 9036,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -3239,7 +3228,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Pretext Build to HTML",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3294,10 +3283,21 @@
 	},
 	"expanded_folders":
 	[
-		"/C/git/Inquiry-Into-Cryptology/src"
+		"/C/git/Inquiry-Into-Cryptology/src",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections",
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers",
+		"/C/git/Inquiry-Into-Cryptology/src/new_analysis"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/hill_cipher.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
+		"/C/git/mathbook/examples/sample-article/sample-article.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/Hill_Decrypt.txt",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis_KPT.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_vigenere_analysis.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/hill.py",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/Hill_old_version.sage",
@@ -3313,7 +3313,6 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/main.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Lesson Reasources/Logic and Circuits/tex/logic_gates.tex",
 		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ita.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
@@ -3367,7 +3366,6 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/analysis_python-CFRoccaJr.py",
 		"/C/git/Inquiry-Into-Cryptology/src/new_ciphers/jefferson_wheelcipher.ptx",
 		"/C/git/mathbook/examples/sample-book/sage/groups-sage.xml",
-		"/C/git/mathbook/examples/sample-article/sample-article.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/basic_analysis/arab_analysis.ptx",
 		"/C/git/mathbook/examples/sample-book/code/symmetric-group-8.sage",
 		"/C/git/mathbook/examples/sample-book/sage/integers-sage.xml",
@@ -3419,13 +3417,7 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
 		"/C/Users/roccac/Downloads/chinese.tex",
 		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/affine_cipher.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/stand_alone_html_cells/analysis_sage_cells.html",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/stand_alone_html_cells/cipher_sage_cells.html",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/word_analysis.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/prime_practice.sage",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/sage_code/vigenere_cipher.sage"
+		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml"
 	],
 	"find":
 	{
@@ -3443,6 +3435,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<mdn>",
+			"number=",
+			"number",
+			"@number",
+			"<md",
+			"blue",
+			"([A-Z0-9.]+)",
+			"([A-Z0-9]+)",
 			"-m^{-1}s",
 			"<xref",
 			"mod_14_example",
@@ -3562,15 +3562,7 @@
 			"\n",
 			"([A-Z])\\s+([0-9])+\\s+([0-9]+\\.[0-9]+)",
 			"\n",
-			"Dumas",
-			"([A-Z]+)",
-			"\n",
-			"<(/)*paragraphs>",
-			"<(/)*line>",
-			"&",
-			"biblio",
-			"a normal line",
-			"line break"
+			"Dumas"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3578,6 +3570,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<cell>$1</cell>",
+			"</cell>$1<cell>",
 			"-(m^{-1}s)",
 			"</cell>",
 			"<q>$1</q>",
@@ -3691,96 +3685,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "mathematical_ciphers/hill_cipher.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 37619,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5864,
-								5864
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3024.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "mathematical_ciphers/Hill_Decrypt.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								2158
-							]
-						],
-						"settings":
-						{
-							"auto_name": "On my right hand there were lines of fishing stake",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Intro_Crypto_Main.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9036,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 648.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],

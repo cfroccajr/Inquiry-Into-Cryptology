@@ -404,7 +404,7 @@
                     </answer>
                 </exercise>
             </subsubsection>
-            <subsubsection>
+            <subsubsection xml:id="subsection_matrix_inveres">
                 <title>Matrix Inverses and Deciphering</title>
                 <p>
                     We will be able to decipher messages which used Hill's cipher in exactly the 

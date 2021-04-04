@@ -67,6 +67,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <xi:include href="mathematical_ciphers/hill_cipher.ptx" />
 
+    <xi:include href="mathematical_ciphers/attacking_hill_cipher.ptx" />
+
 
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

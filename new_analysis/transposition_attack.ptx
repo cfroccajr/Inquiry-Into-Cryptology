@@ -602,7 +602,7 @@
             <p>
                 Part of what helped you in the previous three examples was knowing that the word WINTER was in each quote, this is called a <term>crib</term>.
             </p>
-            <definition>
+            <definition xml:id="def_crib">
                 <title>Cryptologic Crib</title>
                 <statement>
                     <p>
