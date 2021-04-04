@@ -19,7 +19,15 @@
 
         <introduction>
         	<p>
-        		Stuff
+        		Recall that when we encipher a message using hill's Cipher we use either the equation:
+        		<me>
+        			\mathtt{Cipher}\equiv m\cdot Message\ \text{or}\ \mathtt{Cipher}\equiv m\cdot Message+s.
+        		</me>
+        		Solving these for the ciphertext we got the equations:
+        		<me>
+        			Message = m^{-1}\mathtt{Cipher}\ \text{or}\ Message = m^{-1}\mathtt{Cipher}+(-m^{-1}s).
+        		</me>
+        		In either case we need to find <m>m^{-1}</m> and if there is a shift <m>(-m^{-1}s)</m>.  For more details on how we used this previously look back at <xref ref="subsection_matrix_inveres"/>.  What is important here is that to decrypt Hill's cipher we will need to find the same quantities, but we will need to set up equations to find them, like we did when cracking affine ciphers in <xref ref="affine_cipher_decryption"/>.
         	</p>
         </introduction>
 
@@ -29,7 +37,7 @@
         <subsection xml:id="matrix_inverse_comments">
         	<title>Comments on Matrix Inverses</title>
         	<p>
-        		Recall from <xref ref="hill_section"/> that to find the inverse of a matrix <m>m</m> we need to find
+        		Recall from <xref ref="subsection_matrix_inveres"/> that to find the inverse of a matrix <m>m</m> we need to find
                     <md>
                         <mrow>
                             m^{-1}=(det(m))^{-1}\begin{pmatrix}d &amp; -b \\ -c &amp; a\end{pmatrix}.
@@ -64,7 +72,7 @@
 				</md>
         	</p>
         	<p>
-        		Decryption will require us to be able to find matrix inverses(review <xref ref="subsection_matrix_inveres"/>).  So, it will be helpful to be able to tell at a glance when a matrix definitely isn't invertible so that you don't spend time trying to find an inverse that doesn't exist.  Fortunately, sense <m>(ad-bc)</m> must be invertible modulo 26 for our examples we know that it must be <em>relatively prime</em> to 26, so it can not be divisible by 2 or 13.  In order for <m>(ad-bc)</m> to be even it must have one of four formats:
+        		Decryption will require us to be able to find matrix inverses (again review <xref ref="subsection_matrix_inveres"/>).  So, it will be helpful to be able to tell at a glance when a matrix definitely isn't invertible so that you don't spend time trying to find an inverse that doesn't exist.  Fortunately, sense <m>(ad-bc)</m> must be invertible modulo 26 for our examples we know that it must be <em>relatively prime</em> to 26, so it can not be divisible by 2 or 13.  In order for <m>(ad-bc)</m> to be even it must have one of four formats:
         	</p>
     		<sidebyside>
     			<p>
@@ -414,7 +422,7 @@
         		Suppose that you know your opponent issues a status update to their minions every day at 5 am and always signs it <q>Benevolent Leader.</q>  This is an example of a <em>crib</em> (see <xref ref="def_crib"/><idx>crib</idx>).  We can use this to crack whatever cipher that is being used.
         	</p>
         	<p>
-	        	Let's assume in this instance that a Hills cipher with a shift was used so that enciphering looked like <me>\mathtt{C}\equiv m\, M+s</me> so that we will use <me>M\equiv m^{-1}\, \mathtt{C}+(-m^{-1}s)</me> to decipher.  With the crib <q>Benevolent Leader</q> and the ciphertext <c>EN OL YT IH TM IH SE AG</c> we get the following equations (once we change the letters to numbers):
+	        	Let's assume in this instance that a Hills cipher with a shift was used so that enciphering looked like <me>\mathtt{C}\equiv m\, M+s</me> so that we will use <me>M\equiv m^{-1}\, \mathtt{C}+(-m^{-1}s)</me> to decipher.  Suppose the message ends with <c>EN OL YT IH TM IH SE AG</c> which corresponds to <q>Benevolent Leader</q>, this is our crib, using these we get the following equations (once we change the letters to numbers):
 	        </p>
 	        <sidebyside>
 	        	<p>
@@ -435,27 +443,74 @@
 		        </p>
 	        	<p>
 		        	<mdn>
-		        		<mrow>
+		        		<mrow xml:id="kpt_hill_eq5">
 		        			m\begin{pmatrix}13\\ 19\end{pmatrix}+s\amp \equiv \begin{pmatrix}19 \\ 12\end{pmatrix}
 		        		</mrow>
-		        		<mrow>
+		        		<mrow xml:id="kpt_hill_eq6">
 		        			m\begin{pmatrix}11\\ 4\end{pmatrix}+s\amp \equiv \begin{pmatrix}8 \\ 7\end{pmatrix}
 		        		</mrow>
-		        		<mrow>
+		        		<mrow xml:id="kpt_hill_eq7">
 		        			m\begin{pmatrix}0\\ 3\end{pmatrix}+s\amp \equiv \begin{pmatrix}18 \\ 4\end{pmatrix}
 		        		</mrow>
-		        		<mrow>
+		        		<mrow xml:id="kpt_hill_eq8">
 		        			m\begin{pmatrix}4\\ 17\end{pmatrix}+s\amp \equiv \begin{pmatrix}0 \\ 6\end{pmatrix}
 		        		</mrow>
 		        	</mdn>
 		        </p>
 		    </sidebyside>
 		    <p>
-		    	Just as with the affine cipher we need to subtract pairs of equations from one another to get rid of the shift <m>s</m>.  But, we need to be sure we are left with matrices that can be inverted.  For example if we subtracted <xref ref="kpt_hill_eq2"/> from <xref ref="kpt_hill_eq1"/> and <xref ref="kpt_hill_eq2"> we could write:
+		    	Just as with an affine cipher we need to subtract pairs of equations from one another to get rid of the shift <m>s</m>.  But, we need to be sure we are left with matrices that can be inverted.  For example if we subtracted equation <xref ref="kpt_hill_eq2"/> from equation <xref ref="kpt_hill_eq1"/> and equation <xref ref="kpt_hill_eq3"/> from <xref ref="kpt_hill_eq2"/> we are left with the matrix equation:
 		    	<me>
 		    		m\begin{pmatrix}-12 \amp-8 \\ 0 \amp -10\end{pmatrix}\equiv\begin{pmatrix}-10 \amp -10 \\ 2 \amp -8 \end{pmatrix}
 		    	</me>
 		    	and the matrix on the right hand side is not invertible. So, we need to keep in mind the ideas from <xref ref="matrix_inverse_comments"/> and pick the equations that will leave us some invertible matrices.
+		    </p>
+		    <p>
+		    	Since equation <xref ref="kpt_hill_eq5"/> is the only one that has an odd number in the first entry on the right it turns out we have to use that one.  We can subtract equation <xref ref="kpt_hill_eq2"/> from it to get:
+		    	<md>
+		    		<mrow>
+		    			m\begin{pmatrix} 0 \\ 15 \end{pmatrix}\equiv\begin{pmatrix} 5 \\ 1 \end{pmatrix}
+		    		</mrow>
+		    	</md>
+		    	Since we have two odds on the right we need to combine a couple equations to get an even and an odd, and a determinant that isn't a multiple of 13.  For example subtracting equation <xref ref="kpt_hill_eq8"/> from equation <xref ref="kpt_hill_eq6"/> we get
+		    	<md>
+		    		<mrow>
+		    			m\begin{pmatrix} 7 \\ -13 \end{pmatrix}\equiv\begin{pmatrix} 8 \\ 1 \end{pmatrix}.
+		    		</mrow>
+		    	</md>
+		    	Combining the previous two equations we get the matrix equation:
+		    	<me>
+		    		m\begin{pmatrix}0 \amp 7 \\ 15 \amp 13\end{pmatrix}\equiv\begin{pmatrix} 5 \amp 8 \\ 1 \amp 1 \end{pmatrix}.
+		    	</me>
+		    	Now we can solve for <m>m^{-1}</m> as we have before:
+		    	<md>
+		    		<mrow>
+		    			m^{-1} \amp\equiv \begin{pmatrix}0 \amp 7 \\ 15 \amp 13\end{pmatrix}\begin{pmatrix} 5 \amp 8 \\ 1 \amp 1 \end{pmatrix}^{-1}
+		    		</mrow>
+		    		<mrow>
+		    			\amp\equiv \begin{pmatrix}0 \amp 7 \\ 15 \amp 13\end{pmatrix}\begin{pmatrix} -9 \amp -6 \\ 9 \amp 7 \end{pmatrix}^{-1}
+		    		</mrow>
+		    		<mrow>
+		    			\amp\equiv \begin{pmatrix}11 \amp 23 \\ 8 \amp 1\end{pmatrix}.
+		    		</mrow>
+		    	</md>
+		    	Finally, back substituting this into equation <xref ref="kpt_hill_eq8"/> we can solve for <m>m^{-1}s</m>:
+		    	<md>
+		    		<mrow>
+		    			m^{-1}s\amp \equiv \begin{pmatrix}11 \amp 23 \\ 8 \amp 1\end{pmatrix}\begin{pmatrix}0  \\ 6 \end{pmatrix}-\begin{pmatrix} 4 \\ 17\end{pmatrix}
+		    		</mrow>
+		    		<mrow>
+		    			\amp \equiv \begin{pmatrix} 8 \\ 6 \end{pmatrix}-\begin{pmatrix} 4 \\ 17\end{pmatrix}
+		    		</mrow>
+		    		<mrow>
+		    			\amp \equiv \begin{pmatrix} 4 \\ -11 \end{pmatrix}\equiv \begin{pmatrix} 4 \\ 15\end{pmatrix}.
+		    		</mrow>
+		    	</md>
+		    	Armed now with the decryption key:
+		    	<me>
+		    		m^{-1}=\begin{pmatrix}11 \amp 23 \\ 8 \amp 1\end{pmatrix}\ \text{and}\ (-m^{-1}s)= \begin{pmatrix} -4 \\ -15\end{pmatrix}
+		    	</me>
+		    	we can check that it works to decipher our known piece of text and then decipher the original message.
 		    </p>
         </subsection>
 
