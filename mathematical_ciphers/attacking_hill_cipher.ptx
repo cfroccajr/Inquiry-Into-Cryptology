@@ -19,7 +19,7 @@
 
         <introduction>
         	<p>
-        		Recall that when we encipher a message using hill's Cipher we use either the equation:
+        		Recall that when we encipher a message using Hill's Cipher we use either the equation:
         		<me>
         			\mathtt{Cipher}\equiv m\cdot Message\ \text{or}\ \mathtt{Cipher}\equiv m\cdot Message+s.
         		</me>
@@ -27,7 +27,7 @@
         		<me>
         			Message = m^{-1}\mathtt{Cipher}\ \text{or}\ Message = m^{-1}\mathtt{Cipher}+(-m^{-1}s).
         		</me>
-        		In either case we need to find <m>m^{-1}</m> and if there is a shift <m>(-m^{-1}s)</m>.  For more details on how we used this previously look back at <xref ref="subsection_matrix_inveres"/>.  What is important here is that to decrypt Hill's cipher we will need to find the same quantities, but we will need to set up equations to find them, like we did when cracking affine ciphers in <xref ref="affine_cipher_decryption"/>.
+        		In either case we need to find <m>m^{-1}</m> and if there is a shift <m>(-m^{-1}s)</m>.  For more details on how we used this previously look back at <xref ref="subsection_matrix_inveres"/>.  What is important here is that to decrypt Hill's cipher we will need to find the same values, but we will need to set up equations to find them, like we did when cracking affine ciphers in <xref ref="affine_cipher_decryption"/>.
         	</p>
         </introduction>
 
@@ -72,7 +72,7 @@
 				</md>
         	</p>
         	<p>
-        		Decryption will require us to be able to find matrix inverses (again review <xref ref="subsection_matrix_inveres"/>).  So, it will be helpful to be able to tell at a glance when a matrix definitely isn't invertible so that you don't spend time trying to find an inverse that doesn't exist.  Fortunately, sense <m>(ad-bc)</m> must be invertible modulo 26 for our examples we know that it must be <em>relatively prime</em> to 26, so it can not be divisible by 2 or 13.  In order for <m>(ad-bc)</m> to be even it must have one of four formats:
+        		Decryption will require us to be able to find matrix inverses (again review <xref ref="subsection_matrix_inveres"/>).  So, it will be helpful to be able to tell at a glance when a matrix definitely isn't invertible so that you don't spend time trying to find an inverse that doesn't exist.  Fortunately, sense <m>(ad-bc)</m> must be invertible modulo 26 for our examples we know that it must be <em>relatively prime</em> to 26, so it can not be divisible by 2 or 13.  In order for <m>(ad-bc)</m> to be odd it must have one of four formats:
         	</p>
     		<sidebyside>
     			<p>
@@ -263,7 +263,7 @@
 				NKYKD IXZWU ZSDQC JEGYR WSXPN OZQ 
         	</pre>
         	<p>
-        		As always we need to start with frequency analysis, but if we assume the message used a Hill's cipher with a <m>2\times 2</m> matrix we will focus on bigrams.  The text above the bigrams frequencies:
+        		As always we need to start with frequency analysis, but if we assume the message used a Hill's cipher with a <m>2\times 2</m> matrix we will focus on bigrams.  For the text above the bigrams frequencies are as follows:
 	       	</p>
     		<table>
     			<title>Bigrams from a message with 428 characters</title>
@@ -300,7 +300,7 @@
     					m\begin{pmatrix} 7 \\ 4\end{pmatrix}\amp\equiv \begin{pmatrix} 2 \\ 9\end{pmatrix}
     				</mrow>
     			</md>
-    			which can be condensed to the matrix equation:
+    			which can be combined into the matrix equation:
     			<me>
     					m\begin{pmatrix} 19 \amp 7\\ 7\amp 4\end{pmatrix}\equiv \begin{pmatrix} 23\amp 2 \\ 15\amp 9\end{pmatrix}.
     			</me>
@@ -330,6 +330,7 @@
     		</pre>
     		<p>
 	    		or <q>Mr. McGregor caught sight of him at the corner but ...</q>
+	    		<fn>For another example of this be sure to read through <xref ref="sample_hill_analysis"/>.</fn>
 	    	</p>
 	    	<exercise>
 	    		<statement>
@@ -422,7 +423,7 @@
         		Suppose that you know your opponent issues a status update to their minions every day at 5 am and always signs it <q>Benevolent Leader.</q>  This is an example of a <em>crib</em> (see <xref ref="def_crib"/><idx>crib</idx>).  We can use this to crack whatever cipher that is being used.
         	</p>
         	<p>
-	        	Let's assume in this instance that a Hills cipher with a shift was used so that enciphering looked like <me>\mathtt{C}\equiv m\, M+s</me> so that we will use <me>M\equiv m^{-1}\, \mathtt{C}+(-m^{-1}s)</me> to decipher.  Suppose the message ends with <c>EN OL YT IH TM IH SE AG</c> which corresponds to <q>Benevolent Leader</q>, this is our crib, using these we get the following equations (once we change the letters to numbers):
+	        	Let's assume in this instance that a Hill's cipher with a shift was used so that the enciphering algorithm looked like <me>\mathtt{C}\equiv m\, M+s</me> this means we will use <me>M\equiv m^{-1}\, \mathtt{C}+(-m^{-1}s)</me> to decipher.  Suppose the message ends with <c>EN OL YT IH TM IH SE AG</c> which corresponds to <q>Benevolent Leader</q>, this is our crib, using these we get the following equations (once we change the letters to numbers):
 	        </p>
 	        <sidebyside>
 	        	<p>
@@ -511,19 +512,84 @@
 		    		m^{-1}=\begin{pmatrix}11 \amp 23 \\ 8 \amp 1\end{pmatrix}\ \text{and}\ (-m^{-1}s)= \begin{pmatrix} -4 \\ -15\end{pmatrix}
 		    	</me>
 		    	we can check that it works to decipher our known piece of text and then decipher the original message.
+		    	<fn>For another example of this be sure to read through <xref ref="sample_hill_analysis_kpt"/>.</fn>
 		    </p>
+		    <exercise>
+		    	<statement>
+		    		<p>
+		    			Given the cipher text <c>EIYPL HZPXJ XE</c> and corresponding known plaintext <q>weather alert</q> determine the deciphering key.
+		    		</p>
+		    	</statement>
+		    	<hint>
+		    		Only a matrix was used to encipher the message, there is no shift.
+	    		</hint>
+		    	<answer>
+		    		<p>
+		    			<me>
+		    				m^{-1}=\begin{pmatrix}17 \amp 4\\ 7 \amp 23\end{pmatrix}
+		    			</me>
+		    		</p>
+		    	</answer>
+		    </exercise>
+		    <exercise>
+		    	<statement>
+		    		<p>
+		    			Given the cipher text <c>XSVCC KZYLL LV</c> and corresponding known plaintext <q>status update</q> determine the deciphering key.
+		    		</p>
+		    	</statement>
+		    	<hint>
+		    		This cipher used a shift as well as a multiplier.
+	    		</hint>
+		    	<answer>
+		    		<p>
+		    			<me>
+		    				m^{-1}=\begin{pmatrix}4 \amp -1\\ -11 \amp 3\end{pmatrix}\ \text{and}\ m^{-1}s=\begin{pmatrix}4\\ 16\end{pmatrix}
+		    			</me>
+		    		</p>
+		    	</answer>
+		    </exercise>
+		    <exercise>
+		    	<statement>
+		    		<p>
+		    			Given the cipher text <c>UIYJG NQTYF GM</c> and corresponding known plaintext <q>dear students</q> determine the deciphering key.
+		    		</p>
+		    	</statement>
+		    	<hint>
+		    		This cipher used a shift as well as a multiplier.
+	    		</hint>
+		    	<answer>
+		    		<p>
+		    			<me>
+		    				m^{-1}=\begin{pmatrix}19 \amp -1\\ 16 \amp 1\end{pmatrix}\ \text{and\ m^{-1}s=\begin{pmatrix}5\\ 12\end{pmatrix}
+		    			</me>
+		    		</p>
+		    	</answer>
+		    </exercise>
         </subsection>
 
 
 <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hill's Cipher Cell %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-
-        <figure>
-            <caption>Hill's Cipher Cell</caption>
-            <interactive platform="sage" width="100%" aspect="16:10">
-                <slate surface="sage">
-                    <xi:include href="../sage_code/hills_cipher.sage" parse="text"/>
-                </slate>
-            </interactive>
-        </figure>
+	<subsection>
+		<title> Utilities</title>
+		<p>
+			When you are enciphering you need to put in the keys <m>m</m> and <m>s</m>.  When deciphering you need to put in <m>m^{-1}</m> and <m>(-m^{-1}s)</m>.		
+		</p>
+	    <figure>
+	        <caption>Hill's Cipher Cell</caption>
+	        <interactive platform="sage" width="100%" aspect="16:10">
+	            <slate surface="sage">
+	                <xi:include href="../sage_code/hills_cipher.sage" parse="text"/>
+	            </slate>
+	        </interactive>
+	    </figure>
+	    <figure>
+	        <caption>N-Gram Analysis Cell</caption>
+	        <interactive platform="sage" width="100%" aspect="7:82">
+	            <slate surface="sage">
+	                <xi:include href="../sage_code/ngram_analysis.sage" parse="text"/>
+	            </slate>
+	        </interactive>
+	    </figure>
+	</subsection>
 </section>
