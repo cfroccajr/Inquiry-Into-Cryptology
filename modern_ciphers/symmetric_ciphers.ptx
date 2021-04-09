@@ -1,74 +1,156 @@
-    <section xml:id="symetric_section" xmlns:xi="http://www.w3.org/2001/XInclude">
-        <title>Symmetric Ciphers</title>
-        <objectives>
+<section xml:id="symetric_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Symmetric Ciphers</title>
+    <objectives>
+        <ul>
+            <li>
+                Study Binary
+            </li>
+            <li>
+                Arithmetic with Bits
+            </li>
+            <li>
+                Feistel and Lucifer
+            </li>
+        </ul>
+    </objectives>
+    <subsection>
+        <title>Binary</title>
+        <p>
+            Some stuff about binary
+        </p>
+        <definition xml:id="definition_base_ten"><idx>base 10</idx>
+            In <term>base 10</term> numbers are expressed in terms of powers of 10 using the digits 0 through 9.  That is if for each <m>i</m> <m>d_i</m> is a digit from 0 to 9, we understand <m>d_4d_3d_2d_1d_0</m> to mean:
+            <me> d_4d_3d_2d_1d_0 = d_4\cdot 10^4+d_3\cdot 10^3+d_2\cdot 10^2+d_1\cdot 10^1+d_0\cdot 10^0.</me>
+        </definition>
+        <example>
+            <title>Writing a Number in Base 10</title>
+            <md>
+                <mrow>72381 \amp = 70000+2000+300+80+1</mrow>
+                <mrow> \amp =7\cdot 10000+2\cdot 1000+3\cdot 100+8\cdot 10+1\cdot 1</mrow>
+                <mrow> \amp =7\cdot 10^4+2\cdot 10^3+3\cdot 10^2+8\cdot 10^1+1\cdot 10^0</mrow>
+            </md>
+        </example>
+        <example>
+            <title>Another Number in Base 10</title>
+            <md>
+                <mrow>3.145 \amp = 3+1/10+4/100+5/1000</mrow>
+                <mrow> \amp =3\cdot 1+1\cdot 1/10+4\cdot 1/100+5\cdot 1/1000</mrow>
+                <mrow> \amp =3\cdot 10^0+1\cdot 10^{-1}+4\cdot 10^{-2}+5\cdot 10^{-3}</mrow>
+            </md>
+        </example>
+        <definition xml:id="definition_binary"><idx>base 2</idx><idx>binary</idx>
+            In <term>base 2</term> or <term>binary</term> numbers are expressed in terms of powers of 2 using the digits 0 and 1.  That is if for each <m>i</m> <m>b_i</m> is either 0 or 1, we understand <m>b_4b_3b_2b_1b_0</m> to mean:
+            <me> b_4b_3b_2b_1b_0 = b_4\cdot 2^4+b_3\cdot 2^3+b_2\cdot 2^2+b_1\cdot 2^1+b_0\cdot 2^0.</me>
+        </definition>
+        <example>
+            <title>Converting a Base 2 Number to Base 10</title>
+            <md>
+                <mrow>(1001001)_2\amp = 1\cdot 2^6+0\cdot 2^5+0\cdot 2^4+1\cdot 2^3+0\cdot 2^2+0\cdot 2^1+1\cdot 2^0</mrow>
+                <mrow>\amp = 1\cdot 64+1\cdot 8+1\cdot 1</mrow>
+                <mrow>\amp = 64+ 8+ 1</mrow>
+                <mrow>\amp = 73</mrow>
+            </md>
+        </example>
+        <example>
+            <title>Converting Another Base 2 Number to Base 10</title>
+            <md>
+                <mrow>(0101011)_2\amp = 0\cdot 2^6+1\cdot 2^5+0\cdot 2^4+1\cdot 2^3+0\cdot 2^2+1\cdot 2^1+1\cdot 2^0</mrow>
+                <mrow>\amp = 1\cdot 32+1\cdot 8+1\cdot 2+1\cdot 1</mrow>
+                <mrow>\amp = 32+ 8+ 2+1</mrow>
+                <mrow>\amp = 43</mrow>
+            </md>
+        </example>
+        <example>
+            <title>Converting Base 10 to Base 2</title>
+            <introduction>
+                We can convert any number like <m>n=728</m> from base 10 to base 2 in the following way.
+            </introduction>
+            <task xml:id="binary_conversion_step_one">
+                <p>
+                    Find the largest power of 2 less than <m>n=728</m>; in this case it is <m>512=2^9</m>.
+                </p>
+            </task>
+            <task>
+                <p>
+                    Subtract this number from <m>n=728</m> to get <m>n=728-512=216</m>.  Now repeat <xref ref="binary_conversion_step_one"/> until you have zero left.
+                    <ol>
+                        <li><m>712-512=216</m></li>
+                        <li><m>216-128=88</m></li>
+                        <li><m>88-64=24</m></li>
+                        <li><m>24-16=8</m></li>
+                        <li><m>8-8=0</m></li>
+                    </ol>
+                </p>
+            </task>
+            <task>
+                <p>
+                    Now putting together the powers of 2 we get:
+                </p>
+                <md>
+                    <mrow>712 \amp = 512+128+64+16+8</mrow>
+                    <mrow> \amp = 2^9+2^7+2^6+2^4+2^3</mrow>
+                    <mrow> \amp = 2^9+0\cdot 2^8+2^7+2^6+0\cdot 2^5+2^4+2^3+0\cdot 2^2+0\cdot 2^1+0\cdot 2^0</mrow>
+                    <mrow> \amp = (1011011000)_2</mrow>
+                </md>
+            </task>
+        </example>
+        <figure>
+            <caption>ITA2/Vernam Cipher Cell - Replace with base converter</caption>
+            <interactive xml:id="ita_vernam_sage" platform="sage" width="100%" aspect="2:1">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/base_converter.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+    </subsection>
+    <subsection>
+        <title>Bitwise Addition</title>
+        <definition xml:id="definition_bit_addition"><idx>bitwsie addition</idx>
+            A bit is a single 1 or 0 and when we add bitwise we follow the following rules:
             <ul>
-                <li>
-                    Arithmetic with Bits
-                </li>
-                <li>
-                    Feistel and Lucifer
-                </li>
-                <li>
-                    DES and Lucifer
-                </li>
+                <li><m>0\oplus 0 = 0</m></li>
+                <li><m>0\oplus 1 = 1</m></li>
+                <li><m>1\oplus 0 = 1</m></li>
+                <li><m>1\oplus 1 = 0</m></li>
             </ul>
-        </objectives>
-        <subsection>
-            <title>Bitwise Addition</title>
-            <p>Binary Representations</p>
-            <p>ASCII</p>
-            <p>Adding Bits</p>
-        </subsection>
-        <subsection>
-            <title>Feistel Cipher</title>
+            This is essentially the same as using <em>XOR</em> (see <xref ref="definition_xor"/>).
+        </definition>
+        <p>
+            So given <m>A\equiv(1000001)</m> and <m>r\equiv(1110010)</m> we calculate <m>A\oplus r</m> as:
+            <md>
+                <mrow> A\oplus r \amp \equiv (1000001) \oplus (111001)</mrow>
+                <mrow> \amp = (0110011)</mrow>
+                <mrow> \amp \equiv 3</mrow>
+            </md>
+            Where we added the 0's and 1's term by term.  This is essentially the same as the <m>\oplus/XOR</m> operation in <xref ref="perfect_secrecy_section"/>.
+        </p>
+        <p>
+            Modern computers and programing languages use <term>Unicode</term><idx>Unicode</idx> or <term>ASCII Code</term><idx>ASCII</idx> to convert characters to collections of bits instead of the International Telegraph Code (<xref ref="figure_ita2"/>) we studied previously.  We can read the ASCII codes on <xref ref="full_ascii_table"/>.  The bits for a character are listed as <m>(b_7b_6b_5b_4b_3b_2b_1)</m> with the first three bits along the top and the next four on the side.  If we look up the character G, the top of the column gives (100) and on the left we read (0111), so that <m>G\equiv(1000111)</m>.  You should also see that at the top of the column is 64 and on the left is 7, so we can also write <m>G\equiv 64+7=71</m> which is the value of <m>(1000111)</m> in base 2.
+        </p>
+        <xi:include href="../table_code/ascii_full.ptx" />
+        <p>Adding Bits</p>
+    </subsection>
+    <subsection>
+        <title>Feistel Cipher</title>
+        <sidebyside>
             <p>General Description</p>
-            <p>Graphic of Cipher</p>
-                <!-- <xi:include href="image_code/feistel_image.ptx" /> -->
-                <figure xml:id="feistel_image">
-                    <caption>Outline of a Feistel Cipher</caption>
-                    <image width="65%" archive="svg png pdf">
-                        <description> 
-                            This figure gives an outline of the workings of a feistel style cipher.
-                        </description>
-                        <latex-image>
-                            <!-- CDATA prevents certain LaTeX code from being interpreted as xml -->
-                            <![CDATA[\begin{tikzpicture}[scale=1,cap=round,>=latex]
-                                \node (start) at (0,0){};
-                                \node (left) at (-1,-1){};
-                                \node (right) at (1,-1){};
-                                \draw (start.center) node{Message};
-                                \draw[->] (start.south) -- (left.north) node[anchor=north east]{$L_0$=Left Half};
-                                \draw[->] (start.south) -- (right.north) node[anchor=north west]{$R_0$=Right Half};
-                                \foreach \dy in {1,...,4}{
-                                    \node (templ) at ($(left)+(0,-1)$){};
-                                    \node (tempr) at ($(right)+(0,-1)$){};
-                                    \pgfmathparse{int(\dy-1)}\let\pr=\pgfmathresult;
-                                    \draw[->] (right.south) -- (templ.north) node[anchor=east]{$L_\dy$};
-                                    \draw[->] (left.south) -- (tempr.north) node[anchor=west]{
-                                        $R_\dy=L_\pr\oplus f\left(R_\pr,k_\pr\right)$
-                                    };
-                                    \node (right) at (tempr){};
-                                    \node (left) at (templ){};
-                                }
-                            \end{tikzpicture}]]>
-                        </latex-image>
-                    </image>
-                </figure>
-            <p>Specific Mini-Example</p>
-            <p>Practice</p>
-            <p>Video</p>
-<!--             <subsubsection>
-                <title>Feistel Cipher</title>
-                <figure xml:id="feistel_video">
-                    <caption>Overview of a Feistel Cipher</caption>
-                    <video youtube="4RhLNDqcjpA" width="80%"/>
-                </figure>
-            </subsubsection> -->
-        </subsection>
-        <subsection>
-            <title>Data Encryption Standard and Lucifer (DES)</title>
-            <p>Enter a Little History</p>
-            <p>Enter Quoets from Mini-DES</p>
-            <p>Enter Questions</p>
-        </subsection>
-    </section>
+            <figure xml:id="feistel_image">
+                <caption>Outline of a Feistel Cipher</caption>
+                <image source="images/feistel_image.png" archive="svg png pdf">
+                    <description> 
+                        This figure gives an outline of the workings of a Feistel style cipher.
+                    </description>
+                </image>
+            </figure>
+        </sidebyside>
+        <p>Specific Mini-Example</p>
+        <p>Practice</p>
+    </subsection>
+<!--         <subsection>
+        <title>Feistel Cipher Alternate Explanation</title>
+        <figure xml:id="feistel_video">
+            <caption>Overview of a Feistel Cipher</caption>
+            <video youtube="4RhLNDqcjpA" width="80%"/>
+        </figure>
+    </subsection> -->
+</section>

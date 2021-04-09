@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"he",
+				"header_hex"
+			],
+			[
+				"hed",
+				"header_bin"
+			],
+			[
+				"head",
+				"head_bin"
+			],
+			[
+				"header_",
+				"header_bin"
+			],
+			[
+				"for",
+				"format"
+			],
+			[
+				"m",
+				"mrow"
+			],
+			[
+				"kpt",
+				"kpt_hill_eq8"
+			],
+			[
+				"kpt_",
+				"kpt_hill_eq5"
+			],
+			[
+				"matrix",
+				"matrix_inverse_comments"
+			],
+			[
+				"md",
+				"md"
+			],
+			[
+				"l",
+				"li"
+			],
+			[
 				"hill_KPT",
 				"hill_KPT-matrix"
 			],
@@ -134,10 +178,6 @@
 			[
 				"k",
 				"kasiski_common"
-			],
-			[
-				"he",
-				"header_row"
 			],
 			[
 				"L",
@@ -392,7 +432,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Main PTX Build",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -1083,8 +1123,8 @@
 				]
 			],
 			[
-				"Main PTX Build",
-				"Pretext Build to HTML"
+				"Packages/Python/Python.sublime-build",
+				""
 			]
 		],
 		[
@@ -3228,7 +3268,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext Build to HTML",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3284,19 +3324,21 @@
 	"expanded_folders":
 	[
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections",
-		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers",
-		"/C/git/Inquiry-Into-Cryptology/src/new_analysis"
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections"
 	],
 	"file_history":
 	[
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/ascii.py",
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/attacking_hill_cipher.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis_KPT.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis.ptx",
+		"/C/git/mathbook/examples/sample-article/sample-article.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/new_analysis/transposition_attack.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/hill_cipher.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
-		"/C/git/mathbook/examples/sample-article/sample-article.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/Hill_Decrypt.txt",
-		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis_KPT.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_vigenere_analysis.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/hill.py",
@@ -3305,7 +3347,6 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/Dictionary_Demo.py",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/affine_cipher.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/modular_arithmetic.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/temp_stuff.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/Mod14_Addition.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/Mod14_Multiplication.ptx",
@@ -3414,10 +3455,7 @@
 		"/C/git/mathbook/pretext/pretext",
 		"/C/git/mathbook/script/mbx",
 		"/C/git/mathbook/script/README.md",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html",
-		"/C/Users/roccac/Downloads/chinese.tex",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
-		"/C/Users/roccac/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/src/publication.xml"
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html"
 	],
 	"find":
 	{
@@ -3435,6 +3473,36 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"footnote",
+			"number=",
+			"number",
+			"<mdn>",
+			"crib",
+			"</cell>",
+			"</row>",
+			"([0-9.]+)</row>",
+			".</row>",
+			".</row>.",
+			".</row>",
+			"<cell>([0-9.]+)</cell>",
+			"<cell>",
+			"<cell>.</cell>",
+			"<cell>",
+			"([A-Z]{2})",
+			"([0-9.]+)[\\n]+",
+			"([A-Z0-9.]+)[\\t ]+",
+			"([A-Z]{2})",
+			"([A-Z0-9.]+)[\\n]",
+			"([A-Z0-9.]+)[\\t ]",
+			"([A-Z0-9.]+)[\\t ]+",
+			"([A-Z0-9.]+)[\\n\\t ]+",
+			"([A-Z0-9.]+)[\\t ]+",
+			"([A-Z]+[ ])",
+			"<table",
+			"table",
+			"inverse",
+			"<me>",
+			"inverse",
 			"<mdn>",
 			"number=",
 			"number",
@@ -3532,44 +3600,27 @@
 			"Z",
 			" ZIT ",
 			"\\n",
-			"([0-9]+ )",
-			"([A-Z]+ )",
-			"([0-9]+[.] )",
-			"\\t",
-			"([\\n])",
-			"([0-9]+ )",
-			"([A-Z]+ )",
-			"([0-9]+[.] )",
-			"([A-Z] )",
-			"([0-9]+.)",
-			"[\\n]",
-			"[\\r]",
-			"<poem>",
-			"poem",
-			"interactive",
-			"sage",
-			"interactive",
-			"\\lfrac",
-			"[^A-Z]",
-			"[^a-zA-Z\"]",
-			"[\\s,\\n]",
-			"python",
-			"geogebra",
-			"L([0-9]+)",
-			"cipher_alphabet",
-			"\n",
-			"\n        ",
-			"\n",
-			"([A-Z])\\s+([0-9])+\\s+([0-9]+\\.[0-9]+)",
-			"\n",
-			"Dumas"
+			"([0-9]+ )"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"$1",
+			".",
+			"<c>$1</c>",
+			"<cell>$1</cell></row>\\n",
+			"<cell>$1</cell></row>",
+			"<cell>$1</cell>",
+			"<c>$1</c>",
+			"<c> $1 </c>",
+			"<cell> $1 </cell>\\n",
+			"<cell> $1 </cell>",
+			"<cell> $1 </cell>\\\\n",
+			"<cell> $1 </cell>",
+			"<cell> $1</cell>",
 			"<cell>$1</cell>",
 			"</cell>$1<cell>",
 			"-(m^{-1}s)",
@@ -3727,7 +3778,7 @@
 	},
 	"output.exec":
 	{
-		"height": 277.0
+		"height": 572.0
 	},
 	"output.find_results":
 	{
@@ -3782,8 +3833,8 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 271.0,
+	"side_bar_visible": false,
+	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

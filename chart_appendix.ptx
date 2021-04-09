@@ -310,6 +310,14 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         </image>
     </figure>
 
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    ASCII Table Sample
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+        <xi:include href="../table_code/ascii_full.ptx" />
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -317,7 +325,15 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
-    <xi:include href="image_code/feistel_image.ptx" />
+    <figure xml:id="appendix_feistel_image">
+        <caption>Outline of a Feistel Cipher</caption>
+        <image width="65%" source="images/feistel_image.png" archive="svg png pdf">
+            <description> 
+                This figure gives an outline of the workings of a feistel style cipher.
+            </description>
+        </image>
+    </figure>
+
 
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -1,0 +1,69 @@
+<table xml:id="sample_ascii_table">
+    <title>Sample from an ASCII Table</title>
+    <tabular halign="right">
+        <col halign="center"/>
+        <col halign="center" right="minor" />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+        <row>
+			<cell colspan="2"><m>b_7\, b_6\, b_5 \rightarrow</m></cell><cell> 010 </cell><cell> 011 </cell><cell> 100 </cell><cell> 101 </cell><cell> 110 </cell><cell> 111  </cell>
+		</row>
+    	<row bottom="minor">
+			<cell colspan="2"><m>\downarrow b_4\, b_3\, b_2\, b_1</m> </cell><cell> 32 </cell><cell> 48 </cell><cell> 64 </cell><cell> 80 </cell><cell> 96 </cell><cell> 112 </cell>
+		</row>
+    	<row>
+			<cell>0000 </cell><cell> 0 </cell><cell>&#x2423;</cell><cell> 0 </cell><cell> @ </cell><cell> P </cell><cell> ` </cell><cell> p </cell>
+		</row>
+    	<row>
+			<cell>0001 </cell><cell> 1 </cell><cell> ! </cell><cell> 1 </cell><cell> A </cell><cell> Q </cell><cell> a </cell><cell> q </cell>
+		</row>
+    	<row>
+			<cell>0010 </cell><cell> 2 </cell><cell> " </cell><cell> 2 </cell><cell> B </cell><cell> R </cell><cell> b </cell><cell> r </cell>
+		</row>
+    	<row>
+			<cell>0011 </cell><cell> 3 </cell><cell> # </cell><cell> 3 </cell><cell> C </cell><cell> S </cell><cell> c </cell><cell> s </cell>
+		</row>
+    	<row>
+			<cell>0100 </cell><cell> 4 </cell><cell> $ </cell><cell> 4 </cell><cell> D </cell><cell> T </cell><cell> d </cell><cell> t </cell>
+		</row>
+    	<row>
+			<cell>0101 </cell><cell> 5 </cell><cell> % </cell><cell> 5 </cell><cell> E </cell><cell> U </cell><cell> e </cell><cell> u </cell>
+		</row>
+    	<row>
+			<cell>0110 </cell><cell> 6 </cell><cell> &amp; </cell><cell> 6 </cell><cell> F </cell><cell> V </cell><cell> f </cell><cell> v </cell>
+		</row>
+    	<row>
+			<cell>0111 </cell><cell> 7 </cell><cell> ' </cell><cell> 7 </cell><cell> G </cell><cell> W </cell><cell> g </cell><cell> w </cell>
+		</row>
+    	<row>
+			<cell>1000 </cell><cell> 8 </cell><cell> ( </cell><cell> 8 </cell><cell> H </cell><cell> X </cell><cell> h </cell><cell> x </cell>
+		</row>
+    	<row>
+			<cell>1001 </cell><cell> 9 </cell><cell> ) </cell><cell> 9 </cell><cell> I </cell><cell> Y </cell><cell> i </cell><cell> y </cell>
+		</row>
+    	<row>
+			<cell>1010 </cell><cell> 10 </cell><cell> * </cell><cell> : </cell><cell> J </cell><cell> Z </cell><cell> j </cell><cell> z </cell>
+		</row>
+    	<row>
+			<cell>1011 </cell><cell> 11 </cell><cell> + </cell><cell> ; </cell><cell> K </cell><cell> [ </cell><cell> k </cell><cell> <m>\{</m> </cell>
+		</row>
+    	<row>
+			<cell>1100 </cell><cell> 12 </cell><cell> , </cell><cell> &lt; </cell><cell> L </cell><cell> <m>\backslash</m> </cell><cell> l </cell><cell> | </cell>
+		</row>
+    	<row>
+			<cell>1101 </cell><cell> 13 </cell><cell> - </cell><cell> = </cell><cell> M </cell><cell> ] </cell><cell> m </cell><cell> <m>\}</m> </cell>
+		</row>
+    	<row>
+			<cell>1110 </cell><cell> 14 </cell><cell> . </cell><cell> &gt; </cell><cell> N </cell><cell> <m>\wedge</m> </cell><cell> n </cell><cell> <m>\sim</m> </cell>
+		</row>
+    	<row>
+			<cell>1111 </cell><cell> 15 </cell><cell> / </cell><cell> ? </cell><cell> O </cell><cell> <m>\_</m> </cell><cell> o </cell><cell> DEL  </cell>
+		</row>
+    </tabular>
+</table>
+

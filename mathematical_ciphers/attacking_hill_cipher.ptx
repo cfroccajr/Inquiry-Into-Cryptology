@@ -560,7 +560,7 @@
 		    	<answer>
 		    		<p>
 		    			<me>
-		    				m^{-1}=\begin{pmatrix}19 \amp -1\\ 16 \amp 1\end{pmatrix}\ \text{and\ m^{-1}s=\begin{pmatrix}5\\ 12\end{pmatrix}
+		    				m^{-1}=\begin{pmatrix}19 \amp -1\\ 16 \amp 1\end{pmatrix}\ \text{and}\ m^{-1}s=\begin{pmatrix}5\\ 12\end{pmatrix}
 		    			</me>
 		    		</p>
 		    	</answer>
@@ -585,7 +585,7 @@
 	    </figure>
 	    <figure>
 	        <caption>N-Gram Analysis Cell</caption>
-	        <interactive platform="sage" width="100%" aspect="7:82">
+	        <interactive platform="sage" width="100%" aspect="3:4">
 	            <slate surface="sage">
 	                <xi:include href="../sage_code/ngram_analysis.sage" parse="text"/>
 	            </slate>

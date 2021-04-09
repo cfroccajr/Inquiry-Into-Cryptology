@@ -1,0 +1,16 @@
+    <section xml:id="standards_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Encryption Standards</title>
+        <objectives>
+            <ul>
+                <li>
+                    DES and Lucifer
+                </li>
+            </ul>
+        </objectives>
+        <subsection>
+            <title>Data Encryption Standard and Lucifer (DES)</title>
+            <p>Enter a Little History</p>
+            <p>Enter Quoets from Mini-DES</p>
+            <p>Enter Questions</p>
+        </subsection>
+    </section>
