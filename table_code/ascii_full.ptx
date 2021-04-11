@@ -14,7 +14,7 @@
         <col />
         <col />
     <row>
-        <cell colspan="2"><m>b_7\, b_6\, b_5 \rightarrow </m></cell><cell>000</cell><cell>001</cell><cell>010</cell><cell>11</cell><cell>100</cell><cell>101</cell><cell>110</cell><cell>111</cell> 
+        <cell colspan="2"><m>b_7\, b_6\, b_5 \rightarrow </m></cell><cell>000</cell><cell>001</cell><cell>010</cell><cell>011</cell><cell>100</cell><cell>101</cell><cell>110</cell><cell>111</cell> 
     </row>
     <row bottom="minor">
         <cell colspan="2"><m>\downarrow b_4\, b_3\, b_2\, b_1</m></cell><cell>0</cell><cell>16</cell><cell>32</cell><cell>48</cell><cell>64</cell><cell>80</cell><cell>96</cell><cell>112</cell> 

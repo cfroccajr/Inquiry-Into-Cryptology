@@ -9,7 +9,10 @@
                 Arithmetic with Bits
             </li>
             <li>
-                Feistel and Lucifer
+                Key Streams
+            </li>
+            <li>
+                Feistel
             </li>
         </ul>
     </objectives>
@@ -19,8 +22,12 @@
             Some stuff about binary
         </p>
         <definition xml:id="definition_base_ten"><idx>base 10</idx>
-            In <term>base 10</term> numbers are expressed in terms of powers of 10 using the digits 0 through 9.  That is if for each <m>i</m> <m>d_i</m> is a digit from 0 to 9, we understand <m>d_4d_3d_2d_1d_0</m> to mean:
-            <me> d_4d_3d_2d_1d_0 = d_4\cdot 10^4+d_3\cdot 10^3+d_2\cdot 10^2+d_1\cdot 10^1+d_0\cdot 10^0.</me>
+            <statement>
+                <p>
+                    In <term>base 10</term> numbers are expressed in terms of powers of 10 using the digits 0 through 9.  That is if for each <m>i</m> <m>d_i</m> is a digit from 0 to 9, we understand <m>d_4d_3d_2d_1d_0</m> to mean:
+                    <me> d_4d_3d_2d_1d_0 = d_4\cdot 10^4+d_3\cdot 10^3+d_2\cdot 10^2+d_1\cdot 10^1+d_0\cdot 10^0.</me>
+                </p>
+            </statement>
         </definition>
         <example>
             <title>Writing a Number in Base 10</title>
@@ -39,8 +46,12 @@
             </md>
         </example>
         <definition xml:id="definition_binary"><idx>base 2</idx><idx>binary</idx>
-            In <term>base 2</term> or <term>binary</term> numbers are expressed in terms of powers of 2 using the digits 0 and 1.  That is if for each <m>i</m> <m>b_i</m> is either 0 or 1, we understand <m>b_4b_3b_2b_1b_0</m> to mean:
-            <me> b_4b_3b_2b_1b_0 = b_4\cdot 2^4+b_3\cdot 2^3+b_2\cdot 2^2+b_1\cdot 2^1+b_0\cdot 2^0.</me>
+            <statement>
+                <p>
+                    In <term>base 2</term> or <term>binary</term> numbers are expressed in terms of powers of 2 using the digits 0 and 1.  That is if for each <m>i</m> <m>b_i</m> is either 0 or 1, we understand <m>b_4b_3b_2b_1b_0</m> to mean:
+                    <me> b_4b_3b_2b_1b_0 = b_4\cdot 2^4+b_3\cdot 2^3+b_2\cdot 2^2+b_1\cdot 2^1+b_0\cdot 2^0.</me>
+                </p>
+            </statement>
         </definition>
         <example>
             <title>Converting a Base 2 Number to Base 10</title>
@@ -63,16 +74,16 @@
         <example>
             <title>Converting Base 10 to Base 2</title>
             <introduction>
-                We can convert any number like <m>n=728</m> from base 10 to base 2 in the following way.
+                <p>We can convert any number like <m>n=728</m> from base 10 to base 2 in the following way.</p>
             </introduction>
-            <task xml:id="binary_conversion_step_one">
+            <task>
                 <p>
                     Find the largest power of 2 less than <m>n=728</m>; in this case it is <m>512=2^9</m>.
                 </p>
             </task>
             <task>
                 <p>
-                    Subtract this number from <m>n=728</m> to get <m>n=728-512=216</m>.  Now repeat <xref ref="binary_conversion_step_one"/> until you have zero left.
+                    Subtract this number from <m>n=728</m> to get <m>n=728-512=216</m>.  Now repeat previous step until you have zero left.
                     <ol>
                         <li><m>712-512=216</m></li>
                         <li><m>216-128=88</m></li>
@@ -94,9 +105,75 @@
                 </md>
             </task>
         </example>
+        <example>
+            <title>Converting Base 10 to Base 2 Example 2</title>
+            <introduction>
+                <p>We can convert any number like <m>n=397</m> from base 10 to base 2 in the following way.</p>
+            </introduction>
+            <task>
+                <p>
+                    Find the largest power of 2 less than <m>n=397</m>; in this case it is <m>256=2^8</m>.
+                </p>
+            </task>
+            <task>
+                <p>
+                    Subtract this number from <m>n=387</m> to get <m>n=397-256=141</m>.  Now repeat the previous step until you have zero left.
+                    <ol>
+                        <li><m>712-256=141</m></li>
+                        <li><m>141-128=13</m></li>
+                        <li><m>13-8=5</m></li>
+                        <li><m>5-4=1</m></li>
+                        <li><m>1-1=0</m></li>
+                    </ol>
+                </p>
+            </task>
+            <task>
+                <p>
+                    Now putting together the powers of 2 we get:
+                </p>
+                <md>
+                    <mrow>712 \amp = 256+128+8+4+1</mrow>
+                    <mrow> \amp = 2^8+2^7+2^3+2^2+2^1</mrow>
+                    <mrow> \amp = 2^8+2^7+0\cdot 2^6+0\cdot 2^5+0\cdot 2^4+2^3+2^2+0\cdot 2^1+2^0</mrow>
+                    <mrow> \amp = (110001101)_2</mrow>
+                </md>
+            </task>
+        </example>
+        <exercise>
+            <statement>
+                <p>Convert <m>n=(1001101)_2</m> into base 10.</p>
+            </statement>
+            <answer>
+                <p><m>n=77</m></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Convert <m>n=(110110)_2</m> into base 10.</p>
+            </statement>
+            <answer>
+                <p><m>n=54</m></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Convert <m>197</m> into base 2.</p>
+            </statement>
+            <answer>
+                <p><m>n=(11000101)_2</m></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Convert <m>342</m> into base 2.</p>
+            </statement>
+            <answer>
+                <p><m>n=(101010110)_2</m></p>
+            </answer>
+        </exercise>
         <figure>
-            <caption>ITA2/Vernam Cipher Cell - Replace with base converter</caption>
-            <interactive xml:id="ita_vernam_sage" platform="sage" width="100%" aspect="2:1">
+            <caption>Base Converter Cell</caption>
+            <interactive xml:id="base_converter_sage" platform="sage" width="100%" aspect="2:1">
                 <slate surface="sage">
                     <xi:include href="../sage_code/base_converter.sage" parse="text"/>
                 </slate>
@@ -105,15 +182,82 @@
     </subsection>
     <subsection>
         <title>Bitwise Addition</title>
+        <p>
+            Modern computers and programing languages use <term>Unicode</term><idx>Unicode</idx> or <term>ASCII Code</term><idx>ASCII</idx> to convert characters to collections of bits (0's and 1's) instead of the International Telegraph Code (<xref ref="figure_ita2"/>) we studied previously.  We can read the ASCII codes on <xref ref="full_ascii_table"/>.  The bits for a character are listed as <m>(b_7b_6b_5b_4b_3b_2b_1)</m> with the first three bits along the top and the next four on the side.  If we look up the character <m>G</m>, the top of the column gives (100) and on the left we read (0111), so that <m>G\equiv(1000111)</m>.  You should also see that at the top of the column is 64 and on the left is 7, so we can also write <m>G\equiv 64+7=71</m> which is the value of <m>(1000111)</m> in base 2.
+        </p>
+        <xi:include href="../table_code/ascii_full.ptx" />
+        <p>
+            If you look in the ASCII table you will notice that the first 32 entries are different from the others.  These are called control characters.  Rather than printing something out they tell the computer to do something.  For example <c>LF</c> stands for line feed and it tells the computer to go back to the beginning of the line.  And <c>CR</c> stands for carriage return and tells the computer to go down one line.
+        </p>
+        <exercise>
+            <statement>
+                <p>
+                    What number represents <q>Y</q> in ASCII?  What is its binary representation?
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Be sure to pay close attention to the way we read off <q>G</q> in above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>n=89=(1011001)_2</m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Looking at the top of the column with the <q>Y</q> we see 80 and it is in row 9, so <m>n=89</m>.  Also at the top of the column are the bits (101) and the row is labeled (1001) so in binary we get <m>(1011001)_2</m>.
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    What number represents <q>@</q> in ASCII?  What is its binary representation?
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Be sure to pay close attention to the way we read off <q>G</q> in above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>n=64=(1000000)_2</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    What number represents <q><m>\}</m></q> in ASCII?  What is its binary representation?
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Be sure to pay close attention to the way we read off <q>G</q> in above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>n=125=(1111101)_2</m>
+                </p>
+            </answer>
+        </exercise>
         <definition xml:id="definition_bit_addition"><idx>bitwsie addition</idx>
-            A bit is a single 1 or 0 and when we add bitwise we follow the following rules:
-            <ul>
-                <li><m>0\oplus 0 = 0</m></li>
-                <li><m>0\oplus 1 = 1</m></li>
-                <li><m>1\oplus 0 = 1</m></li>
-                <li><m>1\oplus 1 = 0</m></li>
-            </ul>
-            This is essentially the same as using <em>XOR</em> (see <xref ref="definition_xor"/>).
+            <statement>
+                <p>
+                    A bit is a single 1 or 0 and when we add bitwise we follow the following rules:
+                    <ul>
+                        <li><m>0\oplus 0 = 0</m></li>
+                        <li><m>0\oplus 1 = 1</m></li>
+                        <li><m>1\oplus 0 = 1</m></li>
+                        <li><m>1\oplus 1 = 0</m></li>
+                    </ul>
+                    This is essentially the same as using <em>XOR</em> (see <xref ref="definition_xor"/>).
+                </p>
+            </statement>
         </definition>
         <p>
             So given <m>A\equiv(1000001)</m> and <m>r\equiv(1110010)</m> we calculate <m>A\oplus r</m> as:
@@ -124,16 +268,135 @@
             </md>
             Where we added the 0's and 1's term by term.  This is essentially the same as the <m>\oplus/XOR</m> operation in <xref ref="perfect_secrecy_section"/>.
         </p>
-        <p>
-            Modern computers and programing languages use <term>Unicode</term><idx>Unicode</idx> or <term>ASCII Code</term><idx>ASCII</idx> to convert characters to collections of bits instead of the International Telegraph Code (<xref ref="figure_ita2"/>) we studied previously.  We can read the ASCII codes on <xref ref="full_ascii_table"/>.  The bits for a character are listed as <m>(b_7b_6b_5b_4b_3b_2b_1)</m> with the first three bits along the top and the next four on the side.  If we look up the character G, the top of the column gives (100) and on the left we read (0111), so that <m>G\equiv(1000111)</m>.  You should also see that at the top of the column is 64 and on the left is 7, so we can also write <m>G\equiv 64+7=71</m> which is the value of <m>(1000111)</m> in base 2.
-        </p>
-        <xi:include href="../table_code/ascii_full.ptx" />
-        <p>Adding Bits</p>
+        <exercise>
+            <statement>
+                <p>
+                    Convert <q>T</q> and <q>4</q> to bits and add them together using the bitwise addition (<m>\oplus</m>) operation.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Look back at how we added <q>A</q> and <q>r</q> up above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>T\oplus 4\equiv (101 0100)_2\oplus(011 0100)_2=(110 0000)_2</m>
+                </p>
+            </answer>
+            <solution>
+                <p>
+                    Looking at the top and sides of the table we get <m>T\equiv 84 =(1010100)_2</m> and <m>4\equiv 52=(011 0100)_2</m>.  Then we add these together term by term using <xref ref="definition_bit_addition"/> we get <me>T\oplus 4\equiv (101 0100)_2\oplus(011 0100)_2=(110 0000)_2.</me>
+                </p>
+            </solution>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Convert <q>N</q> and <q>c</q> to bits and add them together using the bitwise addition (<m>\oplus</m>) operation.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Look back at how we added <q>A</q> and <q>r</q> up above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>N\oplus c\equiv (100 1110)\oplus(110 0011)_2=(010 1101)_2</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Convert <q>$</q> and <q>/</q> to bits and add them together using the bitwise addition (<m>\oplus</m>) operation.
+                </p>
+            </statement>
+            <hint>
+                <p>
+                    Look back at how we added <q>A</q> and <q>r</q> up above.
+                </p>
+            </hint>
+            <answer>
+                <p>
+                    <m>$\oplus /\equiv (010 0100)\oplus(010 1111)_2=(000 1011)_2</m>
+                </p>
+            </answer>
+        </exercise>
+        <figure>
+            <caption>Bit Addition Cell</caption>
+            <interactive xml:id="bit_add_sage" platform="sage" width="100%" aspect="8:3">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/bit_addition.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
     </subsection>
     <subsection>
-        <title>Feistel Cipher</title>
+        <title>Key Streams</title>
+        <definition xml:id="definition_stream_cipher"><idx>stream cipher</idx>
+            <statement>
+                <p>
+                    A <term>stream cipher</term> is a cipher that uses a sequence (or stream) of different keys in order to encipher successive pieces of plaintext.  Examples of this include Vigen&#x00E8;re's autokey cipher (<xref ref="autokey_cipher"/>) and Vernam's one-time pad cipher (<xref ref="basic_idea"/>).
+                </p>
+            </statement>
+        </definition>
+        <p>
+            One way to generate a stream of keys is to convert an initial key to bits and then use successive pieces of the result.  For example suppose our random key is <m>key=19FA9ED5</m>.  In bits this is <me>k=1100\ 0111\ 1001\ 1000\ 1101\ 0000\ 0111\ 1001\ 1000\ 1011\ 0001\ 0011\ 0101</me>  from which we might use four bits at a time.  We will do this by taking the first four bits, then shifting over one bit and taking the next four, and the repeating that pattern. This creates what is called a <term>key schedule</term><idx>key schedule</idx> like below.
+        </p>
+        <table xml:id="sample_key_table">
+            <title>Partial Key Schedule based on <m>key=19FA9ED5</m></title>
+            <tabular>
+                <row><cell> <m>key\ 0\ =\ 1100 </m></cell><cell> <m>key\  1\ =\ 1000 </m></cell><cell> <m>key\  2\ =\ 0001 </m></cell></row>
+                <row><cell> <m>key\  3\ =\ 0011 </m></cell><cell> <m>key\  4\ =\ 0111 </m></cell><cell> <m>key\  5\ =\ 1111 </m></cell></row>
+                <row><cell> <m>key\  6\ =\ 1110 </m></cell><cell> <m>key\  7\ =\ 1100 </m></cell><cell> <m>key\  8\ =\ 1001 </m></cell></row>
+                <row><cell> <m>key\  9\ =\ 0011 </m></cell><cell> <m>key\  10\ =\ 0110 </m></cell><cell> <m>key\  11\ =\ 1100 </m></cell></row>
+                <row><cell> <m>key\  12\ =\ 1000 </m></cell><cell> <m>key\  13\ =\ 0001 </m></cell><cell> <m>key\  14\ =\ 0011 </m></cell></row>
+                <row><cell> <m>key\  15\ =\ 0110 </m></cell><cell> <m>key\  16\ =\ 1101 </m></cell><cell> <m>key\  17\ =\ 1010 </m></cell></row>
+            </tabular>
+        </table>
+        <p>
+            <alert>Comprehension Check:</alert>
+            <ul>
+                <li>How did we get <m>key\ 0</m> and <m>key\ 1</m> from <m>k</m>?</li>
+                <li>How about <m>key\ 2</m> and <m>key\ 3</m> from <m>k</m>?</li>
+                <li>
+                    What is the general pattern for generating keys from
+                    <me>k=1100\ 0111\ 1001\ 1000\ 1101\ 0000\ 0111\ 1001\ 1000\ 1011\ 0001\ 0011\ 0101?</me>
+                </li>
+                <li>Since there are 52 bits in the sequence above, what is the maximum number of keys in the key schedule?</li>
+                <li>Can you explain why not all the keys are unique in this example?</li>
+            </ul>
+        </p>
+        <p>
+            Now that we have a key schedule we can look at a much more modern version of a stream cipher.
+        </p>
+    </subsection>
+    <subsection>
+        <title>Feistel Cipher</title><idx>Feistel cipher</idx>
+        <p>
+            A <term>Feistel cipher</term> is a cipher that enciphers the plaintext in rounds by splitting the information up like a deck of cards and shuffling it around.  Part of this shuffling process involves a function called <m>f</m> which is used to combine half of the text being enciphered with a key from the key schedule.  For our example here we will just add the bits together, that is <me>f((1101),(0100))=(1101)\oplus(0100)=(1001).</me>  The general algorithm we will follow is outlined below.
+        </p>
         <sidebyside>
-            <p>General Description</p>
+            <stack>
+                <p>
+                    <ol>
+                        <li>Convert your message to bits.</li>
+                        <li>Split the bits into two halves, left and right.</li>
+                        <li>
+                            In reach round, except the last, move the right half to the left and make the new right half equal to 
+                            <me>R_{i+1}=L_i\oplus f(R_i,k_i)=L_i\oplus R_i \oplus k_i.</me>
+                        </li>
+                        <li>
+                            In the last round just swap the left and right hand sides, this ensures that deciphering will work <alert>exactly</alert> like enciphering but with the key schedule reversed.
+                        </li>
+                        <li>
+                            Finally, put the two halves back together.
+                        </li>
+                    </ol>
+                </p>
+            </stack>
             <figure xml:id="feistel_image">
                 <caption>Outline of a Feistel Cipher</caption>
                 <image source="images/feistel_image.png" archive="svg png pdf">
@@ -143,8 +406,193 @@
                 </image>
             </figure>
         </sidebyside>
-        <p>Specific Mini-Example</p>
-        <p>Practice</p>
+        <example>
+            <title>Two Round Feistel Example: Encipher <q>hi</q></title>
+            <task>
+                <title>Get Bits</title>
+                <p>
+                    Convert <q>hi</q> to bits:
+                    <me>1101000 1101001</me>
+                </p>
+            </task>
+            <task>
+                <title>Expand</title>
+                <p>
+                    Expand this by adding two bits to the front of this to make it 16 bits long (a multiple of 8):
+                    <me>0011010001101001</me>
+                </p>
+            </task>
+            <task>
+                <title>Split</title>
+                <p>
+                    Split this into two messages of length 8:
+                    <me>M_0=00110100\ \text{and}\ M_1=01101001</me>
+                </p>
+            </task>
+            <task>
+                <title>Encipher <m>M_0</m></title>
+                <p>
+                    Split <m>M_0=00110100</m> into a left and right piece:
+                    <me>L_0=0011,\ R_0=0100</me>
+                    Now we are ready to use our keys.
+                </p>
+            </task>
+            <task>
+                <title>Round 1:</title>
+                <p>
+                    First Round:
+                    <md>
+                        <mrow>L_1\amp=R_0=0100</mrow>
+                        <mrow>R_1\amp=L_0\oplus f(R_0,k_0)</mrow>
+                        <mrow>\amp=L_0\oplus R_0 \oplus k_0</mrow>
+                        <mrow>\amp=0011\oplus 0100 \oplus 1100</mrow>
+                        <mrow>\amp=1011</mrow>
+                    </md>
+                </p>
+            </task>
+            <task>
+                <title>Round 2:</title>
+                <p>
+                    Next round:
+                    <md>
+                        <mrow>L_2\amp =R_1=1011</mrow>
+                        <mrow>R_2\amp=L_1\oplus f(R_1,k_1)</mrow>
+                        <mrow>\amp=L_1\oplus R_1 \oplus k_1</mrow>
+                        <mrow>\amp=0100\oplus 1011 \oplus 1000</mrow>
+                        <mrow>\amp=0111</mrow>
+                    </md>
+                </p>
+            </task>
+            <task>
+                <title>Round 3:</title>
+                <p>
+                    Final round:
+                    <md>
+                        <mrow>L_3\amp =R_2=0111</mrow>
+                        <mrow>R_3\amp =L_2=1011</mrow>
+                    </md>
+                    And so the enciphered version of <m>M_0</m> is
+                    <me>C_0=L_3\, R_3=0111 1011</me>
+                </p>
+            </task>
+            <task>
+                <title>Repeat</title>
+                <p>
+                    Repeat for each block of bits
+                </p>
+            </task>
+        </example>
+        <exercise>
+            <introduction>
+                <p>
+                    Follow the steps above to encipher the second half of the message <me>M_1=01101001.</me>  For the keys use <m>key\ 2=0001</m> and <m>key\ 3=0011</m> from above.
+                </p>
+            </introduction>
+            <task>
+                <title>Encipher <m>M_1</m></title>
+                <p>
+                    Split <m>M_1</m> into a left and right piece.
+                </p>
+                <answer>
+                    <p>
+                        <m>L_0=0110</m> and <m>R_0=1001</m>
+                    </p>
+                </answer>
+            </task>
+            <task>
+                <title>Round 1:</title>
+                <p>
+                    Swap the halves and add the round key, <m>key\ 2</m>                    
+                </p>
+                <answer>
+                    <p>
+                        <m>L_1=1001</m> and <m>R_1=1110</m>
+                    </p>
+                </answer>
+            </task>
+            <task>
+                <title>Round 2:</title>
+                <p>
+                    Swap the halves and add the round key, <m>key\ 3</m>
+                </p>
+                <answer>
+                    <p>
+                        <m>L_2=1110</m> and <m>R_2=0100</m>
+                    </p>
+                </answer>
+            </task>
+            <task>
+                <title>Round 3:</title>
+                <p>
+                    Final round, just swap the sides and paste them together.
+                </p>
+                <answer>
+                    <p>
+                        <m>L_3=0100</m> and <m>R_2=1110</m> so that <m>C_1=0100 1110</m>
+                    </p>
+                </answer>
+            </task>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Suppose there was a third part to our message <m>M_2=1110 1101</m>, use <m>key\ 4=0111</m> and <m>key\ 5=1111</m> from above and encipher this.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>C_2=0110 0100</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Follow the exact same algorithm as above with <m>C_0=0111 1011</m>, using <m>key\ 1=1000</m> and then <m>key\ 0=1100</m>, if you are careful you will end up with <m>M_0=00110100</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>M_0=00110100</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Follow the exact same algorithm as above with <m>C_1=0100 1110</m>, using <m>key\ 3=0011</m> and then <m>key\ 2=0001</m>, if you are careful you will end up with <m>M_1=01101001</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>M_1=01101001</m>
+                </p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>
+                    Follow the exact same algorithm as above with <m>C_2=0110 0100</m>, using <m>key\ 5=1111</m> and then <m>key\ 4=0111</m>, if you are careful you will end up with <m>M_2=1110 1101</m>.
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    <m>M_2=1110 1101</m>
+                </p>
+            </answer>
+        </exercise>
+        <p>
+            The Sage Cell below can carry out a single round of the basic Feistel cipher described above.  You should still strive to understand how the cipher works, but this should help with a little of the grunt work.  When you need to just swap the left and right sides use the key 0000; why does this work?
+        </p>
+        <figure>
+            <caption>Single Feistel Round Cell</caption>
+            <interactive xml:id="feistel_sage" platform="sage" width="100%" aspect="2:1">
+                <slate surface="sage">
+                    <xi:include href="../sage_code/feistel.sage" parse="text"/>
+                </slate>
+            </interactive>
+        </figure>
+
     </subsection>
 <!--         <subsection>
         <title>Feistel Cipher Alternate Explanation</title>
