@@ -343,78 +343,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
     <figure xml:id="appendix_figure_rSDES">
         <caption>A Highly Simplified two step DES</caption>
-        <image width="100%" archive="svg png pdf">
+        <image width="100%" source="images/des_image.png" archive="svg png pdf">
             <description> This is a highly simplified example of the Data Encryption Standard </description>
-            <latex-image>
-                \scalebox{0.75}{
-                \begin{picture}(600,500)(0,-75)
-                    %\put(0,-75){\framebox(600,500){}}
-                    \put(300,410){\makebox(0,0)[b]{Two Round rSDES (really Simple DES)}}
-                    \put(110,375){\makebox(0,0)[b]{$M$}}
-                    \put(110,373){\vector(0,-1){50}}
-                    \put(110,310){\makebox(0,0)[b]{$IP=[2,6,3,1,4,8,5,7]$}}
-                    \put(110,308){\vector(-1,-1){50}}
-                    \put(110,308){\vector(1,-1){50}}
-                    \put(60,245){\makebox(0,0)[b]{$L_0$}}
-                    \put(160,245){\makebox(0,0)[b]{$R_0$}}
-                    \put(160,243){\vector(-2,-1){100}}
-                    \put(60,243){\line(2,-1){45}}
-                    \put(115,215.5){\vector(2,-1){45}} 
-                    \put(60,180){\makebox(0,0)[b]{$L_1=R_0$}}
-                    \put(160,180){\makebox(0,0)[b]{$R_1=L_0\oplus f(R_0\, ,K_0)$}}
-                    
-                    \qbezier(220,186)(260,186)(260,266)
-                    \qbezier(260,266)(260,330)(280,330)
-                    \put(280,330){\vector(1,0){10}}
-                    \put(292,330){\makebox(0,0)[l]{Round Function}}
-                    \put(328,310){\makebox(0,0)[b]{$R_i$}}
-                    \put(328,308){\vector(0,-1){50}}
-                    \put(328,245){\makebox(0,0)[b]{$E=[4,1,2,3,2,3,4,1]$}}
-                    \put(328,243){\vector(0,-1){50}}
-                    \put(328,180){\makebox(0,0)[b]{$\oplus K_i$}}
-                    
-                    \qbezier(340,186)(400,186)(400,266)
-                    \qbezier(400,266)(400,330)(464,330)
-                    \put(462,330){\vector(1,0){10}}
-                    \put(474,330){\makebox(0,0)[l]{Key Schedule}}
-                    \put(510,310){\makebox(0,0)[b]{$K=[1001101100]$}}
-                    \put(510,288){\makebox(0,0)[b]{$K_0=[10011011]$}}
-                    \put(510,266){\makebox(0,0)[b]{$K_1=[00110110]$}}
-                    
-                    \put(328,178){\vector(1,-1){50}}
-                    \put(328,178){\vector(-1,-1){50}}
-                    \put(278,117){\makebox(0,0)[b]{$S_1$}}
-                    \put(378,117){\makebox(0,0)[b]{$S_2$}}
-                    
-                    \qbezier(385,123)(400,123)(400,153)
-                    \qbezier(400,153)(400,180)(464,180)
-                    \put(464,180){\vector(1,0){10}}
-                    \put(474,180){\makebox(0,0)[l]{S-Boxes}}
-                    \put(484,84){\makebox(0,0)[b]{$S_1=\sboxOne$}}
-                    \put(484,-16){\makebox(0,0)[b]{$S_2=\sboxTwo$}}
-                    
-                    
-                    \put(278,115){\vector(1,-1){50}}
-                    \put(378,115){\vector(-1,-1){50}}
-                    \put(328,52){\makebox(0,0)[b]{$P_4=[2,4,3,1]$}}
-                    \put(328,50){\vector(0,-1){50}}
-                    \put(328,-13){\makebox(0,0){$f(R_i\, ,K_i)$}}
-                    \qbezier(304,-7)(260,-7)(260,80)
-                    \qbezier(260,80)(260,180)(230,180)
-                    \put(230,180){\vector(-1,0){10}}
-                    
-                    \put(60,180){\vector(0,-1){50}}
-                    \put(160,180){\vector(0,-1){50}}
-                    \put(160,117){\makebox(0,0)[b]{$R_2=R_1$}}
-                    \put(60,117){\makebox(0,0)[b]{$L_2=L_1\oplus f(R_1\, ,K_1)$}}
-                    \put(60,115){\vector(1,-1){50}}
-                    \put(160,115){\vector(-1,-1){50}}
-                    \put(110,52){\makebox(0,0)[b]{$IP^{-1}=[4,1,3,5,7,2,8,6]$}}
-                    \put(110,50){\vector(0,-1){50}}
-                    \put(110,-13){\makebox(0,0){$C$}}
-                \end{picture}
-                }
-            </latex-image>
         </image>
     </figure>
 

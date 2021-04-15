@@ -39,7 +39,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     </objectives>
 
     <xi:include href="modern_ciphers/symmetric_ciphers.ptx"/>
-    <xi:include href="modern_ciphers/encryption_standards.ptx"/>
+    <xi:include href="modern_ciphers/DES_section.ptx"/>
     <xi:include href="modern_ciphers/aes.ptx"/>
     <xi:include href="modern_ciphers/public_ciphers.ptx"/>
     <xi:include href="modern_ciphers/assymmetric_ciphers.ptx"/>

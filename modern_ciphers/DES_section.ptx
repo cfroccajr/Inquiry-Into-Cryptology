@@ -1,0 +1,144 @@
+    <section xml:id="standards_section" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <title>Data Encryption Standard</title>
+        <objectives>
+            <ul>
+                <li>
+                    Lucifer
+                </li>
+                <li>
+                    Really SImple DES
+                </li>
+                <li>
+                    DES
+                </li>
+            </ul>
+        </objectives>
+        <subsection>
+            <title>A Little History</title>
+        </subsection>
+        <subsection>
+            <title>Overview</title>
+            <p>
+                <ol>
+                    <li>Create a <em>Key Schedule</em>, assume the keys are each 8 bits; a group of 8 bits is called a <term>byte</term><idx>byte</idx></li>
+                    <li>Convert the input into a stream of bits</li>
+                    <li>Split the bit stream into bytes</li>
+                    <li>Permute the entries in each byte</li>
+                    <li>Run the permuted byte through two enciphering rounds with the function<m>f(R_i,K_i)</m></li>
+                    <li>Swap the left and right in the final round</li>
+                    <li>Apply the inverse of the initial permutation</li>
+                </ol>
+            </p>
+            <figure xml:id="section_figure_rSDES">
+                <caption>A Highly Simplified two step DES</caption>
+                <image width="100%" source="images/des_image.png" archive="svg png pdf">
+                    <description> This is a highly simplified example of the Data Encryption Standard </description>
+                </image>
+            </figure>
+            <example>
+                <title>Encipher <q>bye</q>: Convert and Split</title>
+                <p>
+                    Suppose we want to encipher <q>bye</q> using the <xref ref="full_ascii_table" /> we get:
+                    <me>bye\equiv(1100010 1111001 1100101)</me>
+                    which we expand to
+                    <me>bye\equiv(00011000 10111100 11100101)</me>
+                    the the number of bits is a multiple of 8.  Now spliting this into bytes we get three pieces:
+                    <md>
+                        <mrow>M_1=(00011000)</mrow>
+                        <mrow>M_2=(10111100)</mrow>
+                        <mrow>M_3=(11100101)</mrow>.
+                    </md>
+                    Next we will need to look at how we <em>permute</em> the bits in each subpiece inorder to start enciphering.
+                </p>
+            </example>
+        </subsection>
+        <subsection>
+            <title>Permutation</title>
+            <p>
+                As part of the encryption process each byte of information will be run through a fixed initial permutation before enciphering and through the inverse of the permutation at the end.  The permuation we will be using is:
+                <me>IP=[2,6,3,1,4,8,5,7].</me>
+            </p>
+            <sidebyside>
+                <p>
+                    We read this as:
+                    <ul>
+                        <li>move bit 1 to position 4</li>
+                        <li>move bit 2 to position 1</li>
+                        <li>move bit 3 to position 3</li>
+                        <li>move bit 4 to position 5</li>
+                        <li>move bit 5 to position 7</li>
+                        <li>move bit 6 to position 2</li>
+                        <li>move bit 7 to position 7</li>
+                        <li>move bit 8 to position 6</li>
+                    </ul>
+                </p>
+                <figure xml:id="section_DES_permutations">
+                    <caption>Initial and Terminal Permutations for DES</caption>
+                    <image width="100%" source="images/permutations.png" archive="svg png pdf">
+                        <description>diagram of the permutations used at the very start and end of the permutation process</description>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                Once we have completed all the rounds of the Feistel cipher that is at the heart of DES we will apply the inverse permutation:
+                <me>IP^{-1}=[4,1,3,5,7,2,8,6].</me>
+                As we can see in <xref ref="section_DES_permutations"/> if there were no intermediate steps this would just give us back the exact same byte.
+            </p>
+            <example>
+                <title>Encipher <q>bye</q>: Initial Permutation</title>
+                <p>
+                    If we take the first byte in our example above
+                    <me>M_1=(0 0 0 1 1 0 0 0)</me>
+                    and permute it we get
+                    <me>IP\left(M_1\right)=(0 0 0 0 1 0 1 0).</me>
+                    We can then split this into left and right <term>nibbles</term><idx>nibble</idx> (a set of 4 bits, and in case you were wondering 2 bits is a <term>crumb</term><idx>crumb</idx>) in preparation for enciphering:
+                    <md>
+                        <mrow>L_0=(0 0 0 0)</mrow>
+                        <mrow>R_0=(1 0 1 0).</mrow>
+                    </md>
+                </p>
+            </example>
+        </subsection>
+        <subsection>
+            <title>Enciphering Function</title>
+            <p>
+                Now that we have an initial pair of left and right nibbles we are ready to start the process of shuffling them together with our Feistel cipher.  As usual <me>L_1=R_0</me> and <me>R_1=L_0\oplus f(R_0,K_0)</me>.  But unlike the simple <m>f</m> in <xref ref="symmetric_section"/>, here the function combinig <m>R_0</m> and <m>K_0</m> is devilishly complicated; this is what gives DES its strength.
+            </p>
+            <p>
+                <ol>
+                    <li>Expand the right half to 8 bits</li>
+                    <li>Add the round key</li>
+                    <li>Use the S-boxes to reduce the 8-bits back to 4</li>
+                    <li>Permute the 4 bits</li>
+                </ol>
+            </p>
+        </subsection>
+        <subsection>
+            <title>S-Boxes</title>
+            <sidebyside>
+                <table>
+                    <title>S-Box 1</title>
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                        <row bottom="minor"><cell> </cell><cell> 00 </cell><cell> 01 </cell><cell> 10 </cell><cell> 11 </cell></row>
+                        <row bottom="minor"><cell>  00 </cell><cell> 01 </cell><cell> 11 </cell><cell> 10 </cell><cell> 11 </cell></row>
+                        <row bottom="minor"><cell>  01 </cell><cell> 11 </cell><cell> 10 </cell><cell> 01 </cell><cell> 00 </cell></row>
+                        <row bottom="minor"><cell>  10 </cell><cell> 00 </cell><cell> 10 </cell><cell> 01 </cell><cell> 11 </cell></row>
+                        <row><cell>  11 </cell><cell> 11 </cell><cell> 01 </cell><cell> 11 </cell><cell> 10 </cell></row>
+                    </tabular>
+                </table>
+                <table>
+                    <title>S-Box 2</title>
+                    <tabular top="medium" bottom="medium" left="medium" right="medium">
+                        <row bottom="minor"><cell>  </cell><cell> 00 </cell><cell> 01 </cell><cell> 10 </cell><cell> 11 </cell></row>
+                        <row bottom="minor"><cell>  00 </cell><cell> 00 </cell><cell> 01 </cell><cell> 10 </cell><cell> 11 </cell></row>
+                        <row bottom="minor"><cell>  01 </cell><cell> 10 </cell><cell> 00 </cell><cell> 01 </cell><cell> 11 </cell></row>
+                        <row bottom="minor"><cell>  10 </cell><cell> 11 </cell><cell> 00 </cell><cell> 01 </cell><cell> 00 </cell></row>
+                        <row><cell>  11 </cell><cell> 10 </cell><cell> 01 </cell><cell> 10 </cell><cell> 11 </cell></row>
+                    </tabular>
+                </table>
+            </sidebyside>
+        </subsection>
+        <conclusion>
+            <title>Comments on Full DES</title>
+        </conclusion>
+    </section>

@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"rg",
+				"right_half"
+			],
+			[
+				"r",
+				"right_half"
+			],
+			[
+				"l",
+				"left_half"
+			],
+			[
+				"key",
+				"key_counter"
+			],
+			[
+				"mes",
+				"message_bytes"
+			],
+			[
+				"me",
+				"message_bytes"
+			],
+			[
+				"to",
+				"to_bytes"
+			],
+			[
+				"in",
+				"input_str"
+			],
+			[
+				"md",
+				"md"
+			],
+			[
+				"m",
+				"md"
+			],
+			[
+				"def",
+				"definition_bit_addition"
+			],
+			[
+				"rea",
+				"reading_ascii"
+			],
+			[
+				"bi",
+				"binary_conversion_step_one"
+			],
+			[
+				"tab",
+				"tabular"
+			],
+			[
+				"n",
+				"nibbles_list"
+			],
+			[
+				"bit",
+				"bit_string"
+			],
+			[
+				"to_",
+				"to_nibbles"
+			],
+			[
+				"key_",
+				"key_value"
+			],
+			[
 				"he",
 				"header_hex"
 			],
@@ -24,10 +96,6 @@
 				"format"
 			],
 			[
-				"m",
-				"mrow"
-			],
-			[
 				"kpt",
 				"kpt_hill_eq8"
 			],
@@ -38,14 +106,6 @@
 			[
 				"matrix",
 				"matrix_inverse_comments"
-			],
-			[
-				"md",
-				"md"
-			],
-			[
-				"l",
-				"li"
 			],
 			[
 				"hill_KPT",
@@ -72,10 +132,6 @@
 				"b"
 			],
 			[
-				"in",
-				"in_str"
-			],
-			[
 				"add",
 				"add_inv"
 			],
@@ -88,20 +144,8 @@
 				"invMod"
 			],
 			[
-				"tab",
-				"table_txt"
-			],
-			[
-				"def",
-				"definition_affine"
-			],
-			[
 				"cipher",
 				"cipher_text"
-			],
-			[
-				"key",
-				"key_out"
 			],
 			[
 				"pli",
@@ -258,10 +302,6 @@
 			[
 				"temp",
 				"temp_str"
-			],
-			[
-				"r",
-				"r_ch"
 			],
 			[
 				"valid",
@@ -432,7 +472,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system": "Main PTX Build",
 	"build_system_choices":
 	[
 		[
@@ -996,7 +1036,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Pretext Build to HTML"
+				"Pretext Build to HTML with Image Build"
 			]
 		],
 		[
@@ -1076,7 +1116,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"XeLaTeX"
+				"PdfLaTeX"
 			]
 		],
 		[
@@ -3268,7 +3308,7 @@
 			]
 		]
 	],
-	"build_varint": "",
+	"build_varint": "Pretext Build to HTML with Image Build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3324,15 +3364,29 @@
 	"expanded_folders":
 	[
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections"
+		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
+		"/C/git/mathbook/examples/sample-article/sample-article.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/bit_addition.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/feistel.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/ascii.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/feistel.py",
+		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/base_converter.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_full.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_sample.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/encryption_standards.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/attacking_hill_cipher.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis_KPT.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis.ptx",
-		"/C/git/mathbook/examples/sample-article/sample-article.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/new_analysis/transposition_attack.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/hill_cipher.ptx",
@@ -3340,7 +3394,6 @@
 		"/C/git/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/Hill_Decrypt.txt",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_vigenere_analysis.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/hill.py",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/Hill_old_version.sage",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/modular_tables.py",
@@ -3356,10 +3409,8 @@
 		"/C/git/Inquiry-Into-Cryptology/output/latex/main.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/ita.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/cipher_cell_appendix.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/morse.py",
 		"/C/git/Inquiry-Into-Cryptology/src/glossary.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/quote_code/agripa_pig.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter5_mechanical_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/early_ciphers/shift_cipher.ptx",
@@ -3385,8 +3436,6 @@
 		"/C/git/mathbook/script/braille/pretext-liblouis.cfg",
 		"/C/git/mathbook/pretext/pretext.cfg",
 		"/C/git/Inquiry-Into-Cryptology/log_info.txt",
-		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/crypto_bookinfo.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/aes.ptx",
@@ -3447,15 +3496,7 @@
 		"/C/Users/roccac/Downloads/output (2).bbl",
 		"/C/Users/roccac/Downloads/output.bbl",
 		"/C/Users/roccac/Downloads/output (1).bbl",
-		"/C/Users/roccac/Downloads/LATEX.bibtex",
-		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Crypt.tex",
-		"/C/Users/roccac/OneDrive - WCSU/Latex/Revised_Paper.tex",
-		"/C/Program Files (x86)/MiKTeX 2.9/tex/latex/geometry/geometry.sty",
-		"/C/git/Inquiry-Into-Cryptology/latex_tmp/Latex_text.tex",
-		"/C/git/mathbook/pretext/pretext",
-		"/C/git/mathbook/script/mbx",
-		"/C/git/mathbook/script/README.md",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/IoRadPage.html"
+		"/C/Users/roccac/Downloads/LATEX.bibtex"
 	],
 	"find":
 	{
@@ -3473,6 +3514,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<exercise",
+			"<task",
+			"comprehen",
+			"<m>key",
+			"<task",
+			"<definition",
+			"d_([i0-9]{1})",
+			"d\\_([i0-9]{1})",
+			"d_([i0-9]{1})",
+			"<cell>([A-Z]{2})",
+			"<cell>([A-Z]{2-3})",
+			"ascii",
+			"(</row>)",
+			"(<row>)",
+			"\\$(.*?)\\$",
+			"\\$(.*)\\$",
+			"$(.*)$",
+			"([01]{4})",
+			"\\\\tabularnewline",
+			"\\\\alert<[0-9]>",
+			"&",
+			"<tabular",
+			"table",
+			"sidebyside",
 			"footnote",
 			"number=",
 			"number",
@@ -3576,38 +3641,26 @@
 			"P",
 			"H",
 			"E",
-			"C",
-			"X",
-			"N",
-			"U",
-			"R",
-			"W",
-			"F",
-			"D",
-			"Y",
-			"V",
-			"L",
-			"S",
-			"Q",
-			"K",
-			"O",
-			"G",
-			"T",
-			"I",
-			"Z",
-			"T",
-			"I",
-			"Z",
-			" ZIT ",
-			"\\n",
-			"([0-9]+ )"
+			"C"
 		],
 		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"<m>key\\ ",
+			"b_$1",
+			"<cell halign=\"left\">$1",
+			"\\n\\t\\t$1",
+			"$1\\n\\t\\t\\t",
+			"$1\\n",
+			"<m>$1</m>",
+			"<row><cell>$1",
+			"<row><cell>",
+			"</cell></row>",
+			"",
+			"</cell><cell>",
 			"$1",
 			".",
 			"<c>$1</c>",
@@ -3723,9 +3776,7 @@
 			" & ",
 			"\\\\\n",
 			" & ",
-			"",
-			"em>",
-			"\\footnotesize"
+			""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -3778,7 +3829,7 @@
 	},
 	"output.exec":
 	{
-		"height": 572.0
+		"height": 257.0
 	},
 	"output.find_results":
 	{
