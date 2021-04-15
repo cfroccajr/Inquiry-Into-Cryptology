@@ -53,6 +53,9 @@
                 {"name": "Pretext latex-image to SVG",
                     "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fsvg", "-d../output/ind_images", "../src/$project_base_name.ptx"]
                 },
+                {"name": "Pretext latex-image to PNG",
+                    "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fpng", "-d../output/ind_images", "../src/$project_base_name.ptx"]
+                },
                 // To get all to work on Windows added full path and .exe to pdfpng in /mathbook/user/pretext.cfg
                 {"name": "Pretext latex-image to All",
                     "cmd": ["python", "c:/git/mathbook/pretext/pretext", "-v", "-clatex-image", "-fall", "-d../output/ind_images", "../src/$project_base_name.ptx"]

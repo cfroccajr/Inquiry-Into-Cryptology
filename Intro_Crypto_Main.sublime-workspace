@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"sec",
+				"section_DES_permutations"
+			],
+			[
 				"rg",
 				"right_half"
 			],
@@ -448,10 +452,6 @@
 				"center"
 			],
 			[
-				"sec",
-				"section"
-			],
-			[
 				"block",
 				"blockquote"
 			],
@@ -471,8 +471,70 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "chart_appendix.ptx",
+			"settings":
+			{
+				"buffer_size": 14409,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "table_code/ascii_full.ptx",
+			"settings":
+			{
+				"buffer_size": 3698,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modern_ciphers/DES_section.ptx",
+			"settings":
+			{
+				"buffer_size": 7997,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "chapter7_modern_cryptology.ptx",
+			"settings":
+			{
+				"buffer_size": 1959,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "mathematical_ciphers/attacking_hill_cipher.ptx",
+			"settings":
+			{
+				"buffer_size": 24775,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "modern_ciphers/symmetric_ciphers.ptx",
+			"settings":
+			{
+				"buffer_size": 26824,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/git/mathbook/examples/sample-article/sample-article.xml",
+			"settings":
+			{
+				"buffer_size": 784176,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "Main PTX Build",
+	"build_system": "Packages/LaTeXTools/LaTeX.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -1036,7 +1098,7 @@
 			],
 			[
 				"Main PTX Build",
-				"Pretext Build to HTML with Image Build"
+				"Pretext Build to HTML"
 			]
 		],
 		[
@@ -1116,7 +1178,7 @@
 			],
 			[
 				"Packages/LaTeXTools/LaTeX.sublime-build",
-				"PdfLaTeX"
+				"XeLaTeX"
 			]
 		],
 		[
@@ -3308,7 +3370,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext Build to HTML with Image Build",
+	"build_varint": "XeLaTeX",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3364,11 +3426,16 @@
 	"expanded_folders":
 	[
 		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code"
 	],
 	"file_history":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/permutations.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/des_image.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/DES_section.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
 		"/C/git/mathbook/examples/sample-article/sample-article.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/bit_addition.sage",
@@ -3378,7 +3445,6 @@
 		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/base_converter.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_full.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_sample.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
@@ -3390,7 +3456,6 @@
 		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/new_analysis/transposition_attack.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/hill_cipher.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
 		"/C/git/Inquiry-Into-Cryptology/src/sample_analysis_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/Hill_Decrypt.txt",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_vigenere_analysis.ptx",
@@ -3493,10 +3558,7 @@
 		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/referenc.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/sample ciphers.tex",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/coincidence.py",
-		"/C/Users/roccac/Downloads/output (2).bbl",
-		"/C/Users/roccac/Downloads/output.bbl",
-		"/C/Users/roccac/Downloads/output (1).bbl",
-		"/C/Users/roccac/Downloads/LATEX.bibtex"
+		"/C/Users/roccac/Downloads/output (2).bbl"
 	],
 	"find":
 	{
@@ -3514,6 +3576,31 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<read",
+			"<task",
+			"<row>",
+			"&",
+			"\\\\\\\\[ \\t]*\\\\hline",
+			"<table",
+			"table",
+			"\\\\\\\\[\\t ]*\\\\hline",
+			"\\\\\\\\[ ]*\\\\hline",
+			"&",
+			"sage",
+			"image",
+			"\\draw[",
+			"\\\\alert",
+			"\\\\alert<[0-9,]+>{(.*)}",
+			"\\\\alert<[0-9-,]+>{(.*)}",
+			"\\\\alert<[0-9-]+>{(.*)}",
+			"\\node[]",
+			"\\\\node[]",
+			"\\\\onslide<[0-9-]+>{(.*)}",
+			"\\\\onslide<11>{\\draw[->] (FRK) to[out=180,in=270] (4.5,1.5) to[out=90,in=0] (R2);}",
+			"\\onslide<11>{\\draw[->] (FRK) to[out=180,in=270] (4.5,1.5) to[out=90,in=0] (R2);}",
+			"\\\\onslide<[0-9-]+>{(.*)}",
+			"\\\\alert<[0-9]+>{(.*)}",
+			"diagNode[,]*",
 			"<exercise",
 			"<task",
 			"comprehen",
@@ -3616,32 +3703,7 @@
 			"[\\s]\\{2\\}",
 			"\\n",
 			"([0-9]+)",
-			"   ",
-			"[\\s]\\{4\\}",
-			"[\\s]\\{3\\}",
-			"[\\s^\\n]+",
-			"[\\s]+",
-			"\\t",
-			"([.][0-9]+)[\\n]",
-			"([.][0-9]+\\n)",
-			"[\\s]*([A-Z0-9]*[.])",
-			"[\" \"]*([A-Z0-9])",
-			"[\" \"]",
-			"/",
-			",",
-			"/",
-			",",
-			"[0-9]",
-			"[/,}]",
-			" ",
-			"Z Y X W V U T S R  P O N M L K J I H G F E D C B A",
-			" ",
-			"A",
-			"J",
-			"P",
-			"H",
-			"E",
-			"C"
+			"   "
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3649,6 +3711,15 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<row bottom=\"minor\">",
+			"</cell><cell>",
+			"</cell></row>",
+			"</cell><cell>",
+			"\\draw[thick,",
+			"$1",
+			"\\node",
+			"$1",
+			"",
 			"<m>key\\ ",
 			"b_$1",
 			"<cell halign=\"left\">$1",
@@ -3767,16 +3838,7 @@
 			" ",
 			"",
 			"<li>$1</li>",
-			"_",
-			"",
-			"\"",
-			"",
-			" ",
-			"Rank & N-Gram & Count & Percent\\\\",
-			" & ",
-			"\\\\\n",
-			" & ",
-			""
+			"_"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -3787,8 +3849,218 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "chart_appendix.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14409,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12907,
+								12907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5364.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "table_code/ascii_full.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3698,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "modern_ciphers/DES_section.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7997,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5660,
+								5660
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1542.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "chapter7_modern_cryptology.ptx",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "mathematical_ciphers/attacking_hill_cipher.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 24775,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5476,
+								5476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2430.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "modern_ciphers/symmetric_ciphers.ptx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/git/mathbook/examples/sample-article/sample-article.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 784176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83792,
+								83797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 24074.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -3884,7 +4156,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":
