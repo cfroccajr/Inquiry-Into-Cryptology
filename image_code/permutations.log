@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.9.11)  15 APR 2021 14:28
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.9.11)  18 APR 2021 15:05
 entering extended mode
 **C:/git/Inquiry-Into-Cryptology/src/image_code/permutations.tex
 (C:/git/Inquiry-Into-Cryptology/src/image_code/permutations.tex
@@ -443,11 +443,11 @@ LaTeX Font Info:    ... okay on input line 9.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(0.0pt, 375.80377pt, 0.0pt)
-* v-part:(T,H,B)=(0.0pt, 169.83493pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 90.3375pt, 0.0pt)
 * \paperwidth=375.80377pt
-* \paperheight=169.83493pt
+* \paperheight=90.3375pt
 * \textwidth=375.80377pt
-* \textheight=169.83493pt
+* \textheight=90.3375pt
 * \oddsidemargin=-72.26999pt
 * \evensidemargin=-72.26999pt
 * \topmargin=-109.26999pt
@@ -470,18 +470,9 @@ LaTeX Font Info:    ... okay on input line 9.
 
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 12.
+(Font)              <7> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 12.
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
+(Font)              <5> on input line 32.
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -495,12 +486,12 @@ Missing character: There is no ; in font nullfont!
 
 ] (permutations.aux) ) 
 Here is how much of TeX's memory you used:
- 12268 strings out of 414472
- 255148 string characters out of 2904926
- 489835 words of memory out of 3000000
- 29336 multiletter control sequences out of 15000+200000
+ 12248 strings out of 414472
+ 254675 string characters out of 2904926
+ 480871 words of memory out of 3000000
+ 29316 multiletter control sequences out of 15000+200000
  535096 words of font info for 30 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,5n,65p,469b,718s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,5n,65p,469b,706s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on permutations.pdf (1 page).

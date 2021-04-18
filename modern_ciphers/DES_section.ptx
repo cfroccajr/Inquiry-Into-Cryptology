@@ -17,8 +17,9 @@
             <title>A Little History</title>
         </subsection>
         <subsection>
-            <title>Overview</title>
+            <title>Overview <em>Really</em> Simple DES</title>
             <p>
+                The algorithm for the <em>really simple data encryption standard</em> follows this general pattern:
                 <ol>
                     <li>Create a <em>Key Schedule</em>, assume the keys are each 8 bits; a group of 8 bits is called a <term>byte</term><idx>byte</idx></li>
                     <li>Convert the input into a stream of bits</li>
@@ -28,6 +29,7 @@
                     <li>Swap the left and right in the final round</li>
                     <li>Apply the inverse of the initial permutation</li>
                 </ol>
+                The diagram below gives a little more detail and we will walk through this a bit at a time in this section.
             </p>
             <figure xml:id="section_figure_rSDES">
                 <caption>A Highly Simplified two step DES</caption>
@@ -35,6 +37,22 @@
                     <description> This is a highly simplified example of the Data Encryption Standard </description>
                 </image>
             </figure>
+            <example>
+                <title>Encipher <q>bye</q>: Key Schedule</title>
+                <p>
+                    Starting with the initial 32 bit key:
+                    <me>K=11100111 10010101 00010011 10001001 </me>
+                    we generate a key schedule in which key 0 consists of bits 1 through 8, key 1 is bits 2 through 9, key 3 is bits 3 through 10, etc..  Doing this the first five keys are:
+                    <md>
+                        <mrow>Key\ 0=11100111</mrow>
+                        <mrow>Key\ 1=11001111</mrow>
+                        <mrow>Key\ 2=10011110</mrow>
+                        <mrow>Key\ 3=00111100</mrow>
+                        <mrow>Key\ 4=01111001</mrow>
+                        <mrow>Key\ 5=11110010</mrow>
+                    </md>
+                </p>
+            </example>
             <example>
                 <title>Encipher <q>bye</q>: Convert and Split</title>
                 <p>
@@ -55,7 +73,7 @@
         <subsection>
             <title>Permutation</title>
             <p>
-                As part of the encryption process each byte of information will be run through a fixed initial permutation before enciphering and through the inverse of the permutation at the end.  The permuation we will be using is:
+                As part of the encryption process each byte of information will be run through a fixed initial permutation before enciphering and through the inverse of the permutation at the end.  The permutation we will be using is:
                 <me>IP=[2,6,3,1,4,8,5,7].</me>
             </p>
             <sidebyside>
@@ -102,21 +120,58 @@
         <subsection>
             <title>Enciphering Function</title>
             <p>
-                Now that we have an initial pair of left and right nibbles we are ready to start the process of shuffling them together with our Feistel cipher.  As usual <me>L_1=R_0</me> and <me>R_1=L_0\oplus f(R_0,K_0)</me>.  But unlike the simple <m>f</m> in <xref ref="symmetric_section"/>, here the function combinig <m>R_0</m> and <m>K_0</m> is devilishly complicated; this is what gives DES its strength.
-            </p>
-            <p>
+                Now that we have an initial pair of left and right nibbles we are ready to start the process of shuffling them together with our Feistel cipher.  As usual <me>L_1=R_0</me> and <me>R_1=L_0\oplus f(R_0,K_0)</me>.  But unlike the simple <m>f</m> in <xref ref="symmetric_section"/>, here the function combining <m>R_0</m> and <m>K_0</m> is devilishly complicated; this is what gives DES its strength.
                 <ol>
                     <li>Expand the right half to 8 bits</li>
                     <li>Add the round key</li>
                     <li>Use the S-boxes to reduce the 8-bits back to 4</li>
                     <li>Permute the 4 bits</li>
                 </ol>
+                The first couple of steps and the last step are fairly straight forward and we will look at them below. They work in ways similar to the permutation above and to the Feistel cipher we had discussed before. The third step will need more discussion.
             </p>
-        </subsection>
-        <subsection>
-            <title>S-Boxes</title>
             <sidebyside>
-                <table>
+                <p>
+                    We read this as:
+                    <ul>
+                        <li>copy bit 1 to positions 2 and 8</li>
+                        <li>copy bit 2 to positions 3 and 5</li>
+                        <li>copy bit 3 to positions 4 and 6</li>
+                        <li>copy bit 4 to positions 1 and 7</li>
+                    </ul>
+                </p>
+                <figure xml:id="section_DES_expansion">
+                    <caption>Expansion in the round function for DES</caption>
+                    <image width="100%" source="images/expansion.png" archive="svg png pdf">
+                        <description>diagram of the expansion used in each round of the enciphering process</description>
+                    </image>
+                </figure>
+            </sidebyside>
+            <p>
+                Once this is done we can add the expanded right side and the key as we have before:
+                <md>
+                    <mrow>R_i\oplus K_i\amp =(b_4,b_1,b_2,b_3,b_2,b_3,b_4,b_1)\oplus (k_1,k_2,k_3,k_4,k_5,k_6,k_7,k_8)</mrow>
+                    <mrow>\amp = (b_4\oplus k_1,b_1\oplus k_2,b_2\oplus k_3,b_3\oplus k_4,b_2\oplus k_5,b_3\oplus k_6,b_4\oplus k_7,b_1\oplus k_8)</mrow>
+                </md>
+            </p>
+            <example>
+                <title>Encipher <q>bye</q>: Expansion and Key</title>
+                <p>
+                    The initial left and right nibbles are
+                    <me>L_0=(0 0 0 0)\ \text{and}\ R_0=(1 0 1 0).</me>
+                    The next left side is <m>L_1=R_0=(1 0 1 0)</m>.  To find the next right side we first run <m>R_0</m> and <m>K_0</m> through the round function:
+                    <md>
+                        <mrow>f\left(R_0,K_0\right)\amp = E(1010)\oplus K_0</mrow>
+                        <mrow>\amp = (0 1 0 1 0 1 0 1)\oplus (1 1 1 0 0 1 1 1)</mrow>
+                        <mrow>\amp = (1 0 1 1 0 0 1 0).</mrow>
+                    </md>
+                    The result of this needs to be run through the s-boxes to compress this output back to a nibble.
+                </p>
+            </example>
+            <p>
+                The s-boxes serve the opposite roll of the expansion; they turn bytes into nibbles.  To compress the byte split it into two nibbles run the first nibble through s-box 1 and the second through s-box 2, then put the outputs back together into a single nibble.  We send a nibble through an s-box by using the first two bits as the row label and the second as a column label, where they intersect is the output. For example in s-box 1 below the nibble (1101) leads us to row (11) and column (01) so that the output is (01).
+            </p>
+            <sidebyside>
+                <table xml:id="section_DES_sboxes">
                     <title>S-Box 1</title>
                     <tabular top="medium" bottom="medium" left="medium" right="medium">
                         <row bottom="minor"><cell> </cell><cell> 00 </cell><cell> 01 </cell><cell> 10 </cell><cell> 11 </cell></row>
@@ -137,6 +192,121 @@
                     </tabular>
                 </table>
             </sidebyside>
+            <example>
+                <title>Encipher <q>bye</q>: Finishing the Round </title>
+                <p>
+                    After expanding and adding the key we are left with the byte <m>(10 11 00 10)</m> which gives two nibbles:
+                    <me>n_1=(10 11)\ \text{and}\ n_2=(00 10).</me>
+                    Running <m>n_1</m> through s-box 1 we get (11) and <m>n_2</m> through s-box 2 gives (10).  These combine to give the nibble (1110).
+                </p>
+                <p>
+                    The last step is to apply the permutation <m>P=[2,4,3,1]</m> to get:
+                    <me>f\left(R_0,K_0)=(1011)\right).</me>  Adding this to <m>L_0=(0000)</m> we finally get
+                    <md>
+                        <mrow>R_1\amp = L_0\oplus f\left(R_0,K_0\right)</mrow>
+                        <mrow>\amp = (0000)\oplus(1011)</mrow>
+                        <mrow>\amp = (1011).</mrow>
+                    </md>
+                </p>
+            </example>
+        </subsection>
+        <subsection>
+            <p>
+                Looking at <xref ref="section_figure_rSDES"/> we see that we run the left and right pieces through the cipher function two times total, swap the sides so that deciphering will work identically to enciphering, and finally apply the inverse of the initial permutation.
+            </p>
+            <example>
+                <title>Encipher <q>bye</q>: Completing Encryption </title>
+                <p>
+                    Starting with half our message <m>M_1=(0 0 0 1 1 0 0 0)</m> we now are at the point where we have:
+                    <me>L_1=(1 0 1 0)\ \text{and}\ R_1=(1 0 1 1).</me>
+                    Running through second full round gives us <m>L_2=(1011)</m> and
+                    <md>
+                        <mrow>R_2\amp = L_1\oplus f(R_1,K_1)</mrow>
+                        <mrow>\amp = (1010)\oplus (1111)</mrow>
+                        <mrow>\amp = (0101)</mrow>.
+                    </md>
+                    Swapping sides without using the function gives
+                    <me>L_3=(0 1 0 1)\ \text{and}\ R_3=(1 0 1 1).</me> 
+                    Finally putting these together, (0101 1011), and applying <m>IP^{-1}</m> we get
+                    <me>C_1=(10011110).</me>
+                </p>
+            </example>
+        </subsection>
+        <subsection>
+            <exercise>
+                <task>
+                    <statement>
+                        <p>
+                            Apply the initial permutation IP to <m>M_2=(10111100)</m> and split it into <m>L_0</m> and <m>R_0</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_0=0111</m> and <m>R_0=1010</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Expand <m>R_0</m> with <m>E=[4,1,2,3,2,3,4,1]</m> and add round key <m>Key\ 2=10011110</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>E(R_0)\oplus K_2 = 1100\, 1011</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Apply the s-boxes to <m>E(R_0)\oplus K_2 = 1100\, 1011</m> to reduce it to a nibble, and then apply the permutation <m>P=[2,4,3,1]</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>f\left(R_0,K_0)\right)=1001</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Add <m>f\left(R_0,K_0\right)=1001</m> to <m>L_0</m> in order to get <m>R_1</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_1=1010</m> and <m>R_1=1110</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Run <m>L_1=1010</m> and <m>R_1=1110</m> through another full round using the <m>Key\ 3=00111100</m> in order to get <m>L_2</m> and <m>R_2</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_2=1110</m> and <m>R_2=0111</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Swap the left and right sides one more time, without applying the function, and then apply <m>IP^{-1}</m> to get <m>C_2</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>C_2=10111101</m>
+                        </p>
+                    </answer>
+                </task>
+            </exercise>
         </subsection>
         <conclusion>
             <title>Comments on Full DES</title>
