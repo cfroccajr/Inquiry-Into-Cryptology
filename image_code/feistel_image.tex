@@ -1,14 +1,16 @@
-\documentclass{minimal}
+\documentclass{report}
+\usepackage[margin=0in,paperheight=8.75in]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \begin{document}
-    \begin{tikzpicture}[scale=2.75,cap=round,>=latex,every node/.style={scale=2}]
+\centering
+    \begin{tikzpicture}[scale=4,cap=round,>=latex,every node/.style={scale=2}]
         \node (start) at (0,0){};
         \node (left) at (-1,-0.5){};
         \node (right) at (1,-0.5){};
         \draw (start.center) node[yshift=5pt]{Message};
-        \draw[->] (start.south) -- (left.north) node[anchor=north east]{$L_0$=Left Half};
-        \draw[->] (start.south) -- (right.north) node[anchor=north west]{$R_0$=Right Half};
+        \draw[->] (start.south west) -- (left.north) node[anchor=north east]{$L_0$=Left Half};
+        \draw[->] (start.south east) -- (right.north) node[anchor=north west]{$R_0$=Right Half};
         \foreach \dy in {1,...,3}{
             \node (templ) at ($(left)+(0,-1)$){};
             \node (tempr) at ($(right)+(0,-1)$){};
@@ -31,8 +33,8 @@
         \node (templ) at ($(left)+(0,-0.5)$){};
         \node (tempr) at ($(right)+(0,-0.5)$){};
         \node (finish) at ($(templ)!0.5!(tempr)$){};
-        \draw[->] (right.south) -- (finish.north);
-        \draw[->] (left.south) -- (finish.north);
+        \draw[->] (right.south) -- (finish.north east);
+        \draw[->] (left.south) -- (finish.north west);
         \node[yshift=-5pt] at (finish) {Final Message=$(L_4\, R_4)$};
     \end{tikzpicture}
 

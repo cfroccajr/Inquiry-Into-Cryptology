@@ -53,6 +53,46 @@
                     </md>
                 </p>
             </example>
+            <exercise>
+                <title>Expanding a Key Schedule</title>
+                <statement>
+                    <p>
+                        Continuing with the main key:
+                        <me>K=11100111 10010101 00010011 10001001 </me>
+                        find keys <m>Key\ 6</m>, <m>Key\ 7</m>, and <m>Key\ 8</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>Key\ 6=11100101</mrow>
+                            <mrow>Key\ 7=11001010</mrow>
+                            <mrow>Key\ 8=10010101</mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <title>Finding Another Key Schedule</title>
+                <statement>
+                    <p>
+                        Using the key:
+                        <me>K_2=11100100 10001000 10001111 00010010</me>
+                        find keys <m>Key\ 0</m>, <m>Key\ 1</m>, <m>Key\ 2</m>, and <m>Key\ 3</m>.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>Key\ 0=11100100</mrow>
+                            <mrow>Key\ 1=11001001</mrow>
+                            <mrow>Key\ 2=10010010</mrow>
+                            <mrow>Key\ 3=00100100</mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
             <example>
                 <title>Encipher <q>bye</q>: Convert and Split</title>
                 <p>
@@ -66,9 +106,33 @@
                         <mrow>M_2=(10111100)</mrow>
                         <mrow>M_3=(11100101)</mrow>.
                     </md>
-                    Next we will need to look at how we <em>permute</em> the bits in each subpiece inorder to start enciphering.
+                    Next we will need to look at how we <em>permute</em> the bits in each sub piece in order to start enciphering.
                 </p>
             </example>
+
+            <exercise>
+                <title>Encipher <q>hi</q>: Convert and Split</title>
+                <statement>
+                    <p>
+                        Suppose we want to encipher <q>hi</q>.  Use <xref ref="full_ascii_table" /> to convert this to bits, and then split it up into bytes. 
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        Be sure to look back at <xref ref="bitwise_addition_ascii"/> to review looking up characters in the ASCII table.  Also, remember to tack on a couple of extra 0 bits at the start in order to make the length of the message a multiple of 8.
+                    </p>
+                </hint>
+                <answer>
+                    <!-- ['00110100', '01101001'] -->
+                    <p>
+                        <md>
+                            <mrow>M_1=(00110100)</mrow>
+                            <mrow>M_2=(01101001)</mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
+
         </subsection>
         <subsection>
             <title>Permutation</title>
@@ -116,6 +180,19 @@
                     </md>
                 </p>
             </example>
+            <exercise>
+                <title>Encipher <q>hi</q>: Initial Permutation</title>
+                <statement>
+                    <p>
+                        If you started with <m>M_1=(00110100)</m> what would you get by applying <m>IP</m> and then splitting the message into <m>L_0</m> and <m>R_0</m>?
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>L_0=0110</m> and <m>R_0=1000</m>
+                    </p>
+                </answer>
+            </exercise>
         </subsection>
         <subsection>
             <title>Enciphering Function</title>
@@ -127,11 +204,14 @@
                     <li>Use the S-boxes to reduce the 8-bits back to 4</li>
                     <li>Permute the 4 bits</li>
                 </ol>
-                The first couple of steps and the last step are fairly straight forward and we will look at them below. They work in ways similar to the permutation above and to the Feistel cipher we had discussed before. The third step will need more discussion.
+                The first couple of steps and the last step are fairly straight forward and we will look at them just below. They work in ways similar to the permutation above and to the Feistel cipher we had discussed before. The third step will need more discussion.
+            </p>
+            <p>
+                The first step in the round function is to expand the 4-bit nibble <m>R_i</m> into an 8-bit byte so that it can be added to the round key <m>K_i</m>.  This is expressed in the diagram as <me>E=[4,1,2,3,2,3,4,1]</me> which we read in much the same way we read the initial permutation <m>IP</m>.
             </p>
             <sidebyside>
                 <p>
-                    We read this as:
+                    We read <m>E</m> as:
                     <ul>
                         <li>copy bit 1 to positions 2 and 8</li>
                         <li>copy bit 2 to positions 3 and 5</li>
@@ -149,7 +229,7 @@
             <p>
                 Once this is done we can add the expanded right side and the key as we have before:
                 <md>
-                    <mrow>R_i\oplus K_i\amp =(b_4,b_1,b_2,b_3,b_2,b_3,b_4,b_1)\oplus (k_1,k_2,k_3,k_4,k_5,k_6,k_7,k_8)</mrow>
+                    <mrow>E(R_i)\oplus K_i\amp =(b_4,b_1,b_2,b_3,b_2,b_3,b_4,b_1)\oplus (k_1,k_2,k_3,k_4,k_5,k_6,k_7,k_8)</mrow>
                     <mrow>\amp = (b_4\oplus k_1,b_1\oplus k_2,b_2\oplus k_3,b_3\oplus k_4,b_2\oplus k_5,b_3\oplus k_6,b_4\oplus k_7,b_1\oplus k_8)</mrow>
                 </md>
             </p>
@@ -158,17 +238,40 @@
                 <p>
                     The initial left and right nibbles are
                     <me>L_0=(0 0 0 0)\ \text{and}\ R_0=(1 0 1 0).</me>
-                    The next left side is <m>L_1=R_0=(1 0 1 0)</m>.  To find the next right side we first run <m>R_0</m> and <m>K_0</m> through the round function:
+                    The next left side is <m>L_1=R_0=(1 0 1 0)</m>.  To find the next right side we first run <m>R_0</m> and <m>K_0</m> through the round function which begins by expanding and adding the key.
                     <md>
-                        <mrow>f\left(R_0,K_0\right)\amp = E(1010)\oplus K_0</mrow>
-                        <mrow>\amp = (0 1 0 1 0 1 0 1)\oplus (1 1 1 0 0 1 1 1)</mrow>
+                        <mrow>E(1010)\oplus K_0\amp = (0 1 0 1 0 1 0 1)\oplus (1 1 1 0 0 1 1 1)</mrow>
                         <mrow>\amp = (1 0 1 1 0 0 1 0).</mrow>
                     </md>
                     The result of this needs to be run through the s-boxes to compress this output back to a nibble.
                 </p>
             </example>
+
+            <exercise>
+                <title>Encipher <q>hi</q>: Expansion and Key</title>
+                <statement>
+                    <p>
+                        What do we get if we expand <m>R_0=1000</m> and add it to the key <m>k_0=11100100</m>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>E(R_0)\amp=01000001</mrow>
+                            <mrow>E(R_0)\oplus k_0\amp=10100101</mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
             <p>
-                The s-boxes serve the opposite roll of the expansion; they turn bytes into nibbles.  To compress the byte split it into two nibbles run the first nibble through s-box 1 and the second through s-box 2, then put the outputs back together into a single nibble.  We send a nibble through an s-box by using the first two bits as the row label and the second as a column label, where they intersect is the output. For example in s-box 1 below the nibble (1101) leads us to row (11) and column (01) so that the output is (01).
+                The s-boxes serve the opposite roll of the expansion; they turn bytes into nibbles.  To compress the byte,
+                <ol>
+                    <li>split it into two nibbles,</li>
+                    <li>run the first nibble through s-box 1,</li> 
+                    <li>run the second nibble through s-box 2, and</li>
+                    <li>put the output crumbs back together into a single nibble.</li>
+                </ol>
+                We send a nibble through an s-box by using the first two bits as the row label and the second as a column label, where they intersect is the output. For example in s-box 1 below the nibble (1101) leads us to row (11) and column (01) so that the output is (01).
             </p>
             <sidebyside>
                 <table xml:id="section_DES_sboxes">
@@ -209,15 +312,25 @@
                     </md>
                 </p>
             </example>
+            <exercise>
+                <title>Encipher <q>hi</q>: Finishing the Round</title>
+                <statement>
+                    <p>
+                        Use the s-boxes to compress <m>(10100101)</m> down to a nibble and apply the final permutation <m>P</m>.
+                    </p>
+                </statement>
+                <answer><p><m>f(R_0,k_0)=1000</m></p></answer>
+            </exercise>
         </subsection>
         <subsection>
+            <title>Finishing Enciphering</title>
             <p>
                 Looking at <xref ref="section_figure_rSDES"/> we see that we run the left and right pieces through the cipher function two times total, swap the sides so that deciphering will work identically to enciphering, and finally apply the inverse of the initial permutation.
             </p>
             <example>
                 <title>Encipher <q>bye</q>: Completing Encryption </title>
                 <p>
-                    Starting with half our message <m>M_1=(0 0 0 1 1 0 0 0)</m> we now are at the point where we have:
+                    Starting with <m>M_1=(0 0 0 1 1 0 0 0)</m> we now have:
                     <me>L_1=(1 0 1 0)\ \text{and}\ R_1=(1 0 1 1).</me>
                     Running through second full round gives us <m>L_2=(1011)</m> and
                     <md>
@@ -231,9 +344,28 @@
                     <me>C_1=(10011110).</me>
                 </p>
             </example>
+            <exercise>
+                <title>Encipher <q>hi</q>: Completing Encryption</title>
+                <statement>
+                    <p>
+                        Given <m>L_1=1000</m> and <m>R_1=1110</m> use the key <m>k_1=11001001</m> to go through another round with the enciphering function, and then finish the enciphering process.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>L_2\amp =1110\ \text{and}\ R_2=0011</mrow>
+                            <mrow>L_3\amp =0011\ \text{and}\ R_3=1110</mrow>
+                            <mrow>C\amp =10111001 </mrow>
+                        </md>
+                    </p>
+                </answer>
+            </exercise>
         </subsection>
         <subsection>
+            <title>A Little More Practice</title>
             <exercise>
+                <title>Encipher <m>M_2</m></title>
                 <task>
                     <statement>
                         <p>
@@ -266,14 +398,14 @@
                     </statement>
                     <answer>
                         <p>
-                            <m>f\left(R_0,K_0)\right)=1001</m>
+                            <m>f\left(R_0,K_2\right)=1001</m>
                         </p>
                     </answer>
                 </task>
                 <task>
                     <statement>
                         <p>
-                            Add <m>f\left(R_0,K_0\right)=1001</m> to <m>L_0</m> in order to get <m>R_1</m>.
+                            Add <m>f\left(R_0,K_2\right)=1001</m> to <m>L_0</m> in order to get <m>R_1</m>.
                         </p>
                     </statement>
                     <answer>
@@ -307,8 +439,151 @@
                     </answer>
                 </task>
             </exercise>
+            <exercise>
+                <title>Encipher <m>M_3</m></title>
+                <task>
+                    <statement>
+                        <p>
+                            Apply the initial permutation IP to <m>M_3=(11100101)</m> and split it into <m>L_0</m> and <m>R_0</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_0=1111</m> and <m>R_0=0100</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Expand <m>R_0</m> with <m>E=[4,1,2,3,2,3,4,1]</m> and add round key <m>Key\ 4=01111001</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>E(R_0)\oplus K_4 = 0101\, 0001</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Apply the s-boxes to <m>E(R_0)\oplus K_4 = 1100\, 1011</m> to reduce it to a nibble, and then apply the permutation <m>P=[2,4,3,1]</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>f\left(R_0,K_4\right)=0101</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Add <m>f\left(R_0,K_4\right)=0101</m> to <m>L_0</m> in order to get <m>R_1</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_1=0100</m> and <m>R_1=1010</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Run <m>L_1=0100</m> and <m>R_1=1010</m> through another full round using the <m>Key\ 5=11110010</m> in order to get <m>L_2</m> and <m>R_2</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>L_2=1010</m> and <m>R_2=1010</m>
+                        </p>
+                    </answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Swap the left and right sides one more time, without applying the function, and then apply <m>IP^{-1}</m> to get <m>C_3</m>.
+                        </p>
+                    </statement>
+                    <answer>
+                        <p>
+                            <m>C_3=01111000</m>
+                        </p>
+                    </answer>
+                </task>
+            </exercise>
+            <exercise>
+                <title>Encipher <m>M_4</m></title>
+                <p>
+                    Suppose that there is a fourth part to our message <m>M_4=01110011</m>.
+                </p>
+                <task>
+                    <statement>
+                        <p>
+                            Apply <m>IP</m> to <m>M_4</m> and split it to get <m>L_0</m> and <m>R_0</m>.
+                        </p>
+                    </statement>
+                    <answer><p><m>L_0=1010</m> and <m>R_0=1101</m></p></answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Now find the next set of nibbles <m>L_1</m> and <m>R_1</m>, use the round key <m>Key\ 6=11100101</m>.
+                        </p>
+                    </statement>
+                    <answer><p><m>L_1=1101</m> and <m>R_1=0000</m></p></answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Now find the next set of nibbles <m>L_2</m> and <m>R_2</m>, use the round key <m>Key\ 7=11001010</m>.
+                        </p>
+                    </statement>
+                    <answer><p><m>L_2=0000</m> and <m>R_2=0000</m></p></answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Now find the next set of nibbles <m>L_3</m> and <m>R_3</m>.
+                        </p>
+                    </statement>
+                    <answer><p><m>L_3=0000</m> and <m>R_3=0000</m></p></answer>
+                </task>
+                <task>
+                    <statement>
+                        <p>
+                            Finish up the enciphering process.
+                        </p>
+                    </statement>
+                    <answer><p><m>C_4=0000 0000</m></p></answer>
+                </task>
+            </exercise>
+            <exercise>
+                <title>Sample Decipherment</title>
+                <statement>
+                    <p>
+                        Decipher the message <m>C=10000100</m> which was enciphered using the two keys <m>k_2=10010010</m> and <m>k_3=00100100</m>.
+                    </p>
+                </statement>
+                <hint>
+                    <p>
+                        <ol>
+                            <li>Recall that the enciphering and deciphering algorithms are identical.</li>
+                            <li>Remember to reverse the order in which you use the keys when deciphering the message.</li>
+                        </ol>
+                    </p>
+                </hint>
+                <answer>
+                    <p>
+                        <m>M=01101001</m>
+                    </p>
+                </answer>
+            </exercise>
         </subsection>
         <conclusion>
             <title>Comments on Full DES</title>
+
         </conclusion>
     </section>

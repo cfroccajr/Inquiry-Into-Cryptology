@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.9.11)  19 APR 2021 14:19
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2020.9.11)  19 APR 2021 14:29
 entering extended mode
-**C:/git/Inquiry-Into-Cryptology/src/image_code/des_image.tex
-(C:/git/Inquiry-Into-Cryptology/src/image_code/des_image.tex
+**C:/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex
+(C:/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-09-03>
 ("C:\Program Files (x86)\MiKTeX 2.9\tex/latex/base\report.cls"
@@ -384,56 +384,37 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 s\tikzlibrarycalc.code.tex"
 File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibrarydecorations.pathreplacing.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/librarie
-s\tikzlibrarydecorations.code.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex/generic/pgf/modules\pgfmoduledecoration
-s.code.tex"
-\pgfdecoratedcompleteddistance=\dimen195
-\pgfdecoratedremainingdistance=\dimen196
-\pgfdecoratedinputsegmentcompleteddistance=\dimen197
-\pgfdecoratedinputsegmentremainingdistance=\dimen198
-\pgf@decorate@distancetomove=\dimen199
-\pgf@decorate@repeatstate=\count198
-\pgfdecorationsegmentamplitude=\dimen256
-\pgfdecorationsegmentlength=\dimen257
-)
-\tikz@lib@dec@box=\box56
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgfli
-brarydecorations.pathreplacing.code.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex/latex/l3backend\l3backend-xetex.def"
 File: l3backend-xetex.def 2020-09-01 L3 backend support: XeTeX
-\g__graphics_track_int=\count199
-\l__pdf_internal_box=\box57
-\g__pdf_backend_object_int=\count266
-\g__pdf_backend_annotation_int=\count267
+\g__graphics_track_int=\count198
+\l__pdf_internal_box=\box56
+\g__pdf_backend_object_int=\count199
+\g__pdf_backend_annotation_int=\count266
 )
-(des_image.aux)
-\openout1 = `des_image.aux'.
+(feistel_image.aux)
+\openout1 = `feistel_image.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 5
 .
  ("C:\Program Files (x86)\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -442,12 +423,12 @@ LaTeX Font Info:    ... okay on input line 9.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(0.0pt, 758.83499pt, 0.0pt)
-* v-part:(T,H,B)=(0.0pt, 442.65375pt, 0.0pt)
-* \paperwidth=758.83499pt
-* \paperheight=442.65375pt
-* \textwidth=758.83499pt
-* \textheight=442.65375pt
+* h-part:(L,W,R)=(0.0pt, 614.295pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 632.36249pt, 0.0pt)
+* \paperwidth=614.295pt
+* \paperheight=632.36249pt
+* \textwidth=614.295pt
+* \textheight=632.36249pt
 * \oddsidemargin=-72.26999pt
 * \evensidemargin=-72.26999pt
 * \topmargin=-109.26999pt
@@ -459,7 +440,7 @@ LaTeX Font Info:    ... okay on input line 9.
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=9.03374pt
+* \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
@@ -470,19 +451,22 @@ LaTeX Font Info:    ... okay on input line 9.
 
 ABD: EveryShipout initializing macros
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 59.
+(Font)              <7> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 59.
+(Font)              <5> on input line 12.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
  [1
 
-] (des_image.aux) ) 
+] (feistel_image.aux) ) 
 Here is how much of TeX's memory you used:
- 12358 strings out of 414472
- 255815 string characters out of 2904926
- 499502 words of memory out of 3000000
- 29426 multiletter control sequences out of 15000+200000
+ 11788 strings out of 414472
+ 238843 string characters out of 2904926
+ 481473 words of memory out of 3000000
+ 28868 multiletter control sequences out of 15000+200000
  535096 words of font info for 30 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 60i,10n,65p,466b,602s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,5n,60p,470b,701s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on des_image.pdf (1 page).
+Output written on feistel_image.pdf (1 page).

@@ -1,0 +1,181 @@
+M_2
+	Original Message: 10111100
+	Permuted Message: 0111 1010
+	Round 2:
+		Round Key:10011110
+		Begin the round function:
+			Expanded nibble 01010101
+			Sum with key 11001011
+			Crumbs from s-boxes 11 and 00
+		f(1010,10011110)=1001
+		New L=1010, R=1110
+	Round 3:
+		Round Key:00111100
+		Begin the round function:
+			Expanded nibble 01111101
+			Sum with key 01000001
+			Crumbs from s-boxes 11 and 01
+		f(1110,00111100)=1101
+		New L=1110, R=0111
+	Final Swap:
+		New L=0111, R=1110
+	Enciphered Message: 10111101
+
+	Original Message: 10111101
+	Permuted Message: 0111 1110
+	Round 3:
+		Round Key:00111100
+		Begin the round function:
+			Expanded nibble 01111101
+			Sum with key 01000001
+			Crumbs from s-boxes 11 and 01
+		f(1110,00111100)=1101
+		New L=1110, R=1010
+	Round 2:
+		Round Key:10011110
+		Begin the round function:
+			Expanded nibble 01010101
+			Sum with key 11001011
+			Crumbs from s-boxes 11 and 00
+		f(1010,10011110)=1001
+		New L=1010, R=0111
+	Final Swap:
+		New L=0111, R=1010
+	Enciphered Message: 10111100
+
+M_3
+	Original Message: 11100101
+	Permuted Message: 1111 0100
+	Round 4:
+		Round Key:01111001
+		Begin the round function:
+			Expanded nibble 00101000
+			Sum with key 01010001
+			Crumbs from s-boxes 10 and 01
+		f(0100,01111001)=0101
+		New L=0100, R=1010
+	Round 5:
+		Round Key:11110010
+		Begin the round function:
+			Expanded nibble 01010101
+			Sum with key 10100111
+			Crumbs from s-boxes 01 and 11
+		f(1010,11110010)=1110
+		New L=1010, R=1010
+	Final Swap:
+		New L=1010, R=1010
+	Enciphered Message: 01111000
+
+	Original Message: 01111000
+	Permuted Message: 1010 1010
+	Round 5:
+		Round Key:11110010
+		Begin the round function:
+			Expanded nibble 01010101
+			Sum with key 10100111
+			Crumbs from s-boxes 01 and 11
+		f(1010,11110010)=1110
+		New L=1010, R=0100
+	Round 4:
+		Round Key:01111001
+		Begin the round function:
+			Expanded nibble 00101000
+			Sum with key 01010001
+			Crumbs from s-boxes 10 and 01
+		f(0100,01111001)=0101
+		New L=0100, R=1111
+	Final Swap:
+		New L=1111, R=0100
+	Enciphered Message: 11100101
+
+M_4
+	Original Message: 01110011
+	Permuted Message: 1010 1101
+	Round 6:
+		Round Key:11100101
+		Begin the round function:
+			Expanded nibble 11101011
+			Sum with key 00001110
+			Crumbs from s-boxes 01 and 10
+		f(1101,11100101)=1010
+		New L=1101, R=0000
+	Round 7:
+		Round Key:11001010
+		Begin the round function:
+			Expanded nibble 00000000
+			Sum with key 11001010
+			Crumbs from s-boxes 11 and 01
+		f(0000,11001010)=1101
+		New L=0000, R=0000
+	Final Swap:
+		New L=0000, R=0000
+	Enciphered Message: 00000000
+
+	Original Message: 00000000
+	Permuted Message: 0000 0000
+	Round 7:
+		Round Key:11001010
+		Begin the round function:
+			Expanded nibble 00000000
+			Sum with key 11001010
+			Crumbs from s-boxes 11 and 01
+		f(0000,11001010)=1101
+		New L=0000, R=1101
+	Round 6:
+		Round Key:11100101
+		Begin the round function:
+			Expanded nibble 11101011
+			Sum with key 00001110
+			Crumbs from s-boxes 01 and 10
+		f(1101,11100101)=1010
+		New L=1101, R=1010
+	Final Swap:
+		New L=1010, R=1101
+	Enciphered Message: 01110011
+
+"hi"
+k2="111001001000100010001111000100"
+	hi=['00110100', '01101001']
+	Original Message: 00110100
+	Permuted Message: 0110 1000
+	Round 0:
+		Round Key:11100100
+		Begin the round function:
+			Expanded nibble 01000001
+			Sum with key 10100101
+			Crumbs from s-boxes 01 and 00
+		f(1000,11100100)=1000
+		New L=1000, R=1110
+	Round 1:
+		Round Key:11001001
+		Begin the round function:
+			Expanded nibble 01111101
+			Sum with key 10110100
+			Crumbs from s-boxes 11 and 10
+		f(1110,11001001)=1011
+		New L=1110, R=0011
+	Final Swap:
+		New L=0011, R=1110
+	Enciphered Message: 10111001
+
+	Original Message: 01101001
+	Permuted Message: 1010 0110
+	Round 2:
+		Round Key:10010010
+		Begin the round function:
+			Expanded nibble 00111100
+			Sum with key 10101110
+			Crumbs from s-boxes 01 and 10
+		f(0110,10010010)=1010
+		New L=0110, R=0000
+	Round 3:
+		Round Key:00100100
+		Begin the round function:
+			Expanded nibble 00000000
+			Sum with key 00100100
+			Crumbs from s-boxes 10 and 10
+		f(0000,00100100)=0011
+		New L=0000, R=0101
+	Final Swap:
+		New L=0101, R=0000
+	Enciphered Message: 10000100

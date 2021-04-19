@@ -4,8 +4,64 @@
 		"selected_items":
 		[
 			[
+				"hi",
+				"hi_bytes"
+			],
+			[
+				"K",
+				"K_nib"
+			],
+			[
+				"bit",
+				"bitwise"
+			],
+			[
+				"b",
+				"build_bits"
+			],
+			[
+				"str",
+				"strnd"
+			],
+			[
+				"de",
+				"decipher"
+			],
+			[
+				"s",
+				"subsection"
+			],
+			[
+				"I",
+				"IPI_RL"
+			],
+			[
+				"rnd",
+				"rnd_key"
+			],
+			[
+				"IPI",
+				"IPI_RL"
+			],
+			[
+				"f",
+				"fR"
+			],
+			[
+				"IP",
+				"IP_M"
+			],
+			[
+				"k",
+				"K_nib"
+			],
+			[
+				"E",
+				"E_nib"
+			],
+			[
 				"sec",
-				"section_DES_permutations"
+				"section_figure_rSDES"
 			],
 			[
 				"rg",
@@ -68,10 +124,6 @@
 				"nibbles_list"
 			],
 			[
-				"bit",
-				"bit_string"
-			],
-			[
 				"to_",
 				"to_nibbles"
 			],
@@ -120,20 +172,12 @@
 				"hill_KPT_shift"
 			],
 			[
-				"hi",
-				"hill_KPT_equation_1"
-			],
-			[
 				"h",
 				"hill_KPT_equation_2"
 			],
 			[
 				"c",
 				"c"
-			],
-			[
-				"b",
-				"b"
 			],
 			[
 				"add",
@@ -222,10 +266,6 @@
 			[
 				"al",
 				"ALPHA"
-			],
-			[
-				"k",
-				"kasiski_common"
 			],
 			[
 				"L",
@@ -472,63 +512,10 @@
 	"buffers":
 	[
 		{
-			"file": "chart_appendix.ptx",
-			"settings":
-			{
-				"buffer_size": 14409,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "table_code/ascii_full.ptx",
-			"settings":
-			{
-				"buffer_size": 3698,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "modern_ciphers/DES_section.ptx",
 			"settings":
 			{
-				"buffer_size": 7997,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Intro_Crypto_Main.sublime-project",
-			"settings":
-			{
-				"buffer_size": 9274,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "chapter7_modern_cryptology.ptx",
-			"settings":
-			{
-				"buffer_size": 1959,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "mathematical_ciphers/attacking_hill_cipher.ptx",
-			"settings":
-			{
-				"buffer_size": 24775,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "modern_ciphers/symmetric_ciphers.ptx",
-			"settings":
-			{
-				"buffer_size": 26824,
+				"buffer_size": 28849,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -1279,7 +1266,143 @@
 			],
 			[
 				"Main PTX Build",
-				"Pretext latex-image to PNG"
+				"Pretext Build to HTML"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PNG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to All"
+				],
+				[
+					"Main PTX Build",
+					"Pretext youtube to All"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"XeLaTeX"
+			]
+		],
+		[
+			[
+				[
+					"Main PTX Build",
+					""
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to HTML with Image Build"
+				],
+				[
+					"Main PTX Build",
+					"Pretext Build to LaTeX"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PDF"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to SVG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to PNG"
+				],
+				[
+					"Main PTX Build",
+					"Pretext latex-image to All"
+				],
+				[
+					"Main PTX Build",
+					"Pretext youtube to All"
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
 			]
 		],
 		[
@@ -3423,7 +3546,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext latex-image to PNG",
+	"build_varint": "Pretext Build to HTML",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3478,29 +3601,33 @@
 	},
 	"expanded_folders":
 	[
+		"/C/git/Inquiry-Into-Cryptology/src",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code"
 	],
 	"file_history":
 	[
-		"/C/git/Inquiry-Into-Cryptology/src/image_code/permutations.tex",
-		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
-		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/image_code/des_image.tex",
-		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/DES_section.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
 		"/C/git/mathbook/examples/sample-article/sample-article.xml",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/sage_code/rsdes.py",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/Cipher_Data.txt",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/des_image.tex",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/feistel.py",
+		"/C/Users/roccac/OneDrive - WCSU/Classes/code/ascii.py",
+		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_full.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/attacking_hill_cipher.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/Intro_Crypto_Main.sublime-project",
+		"/C/git/Inquiry-Into-Cryptology/src/image_code/permutations.tex",
+		"/C/git/Inquiry-Into-Cryptology/src/chapter7_modern_cryptology.ptx",
+		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/DES_section.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/bit_addition.sage",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/feistel.sage",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/ascii.py",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/feistel.py",
-		"/C/git/Inquiry-Into-Cryptology/src/chart_appendix.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/base_converter.sage",
-		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_full.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/table_code/ascii_sample.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/mechanical_ciphers/perfect_secrecy.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/sage_code/hills_cipher.sage",
-		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/encryption_standards.ptx",
-		"/C/git/Inquiry-Into-Cryptology/src/mathematical_ciphers/attacking_hill_cipher.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis_KPT.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/analysis_sections/sample_hill_analysis.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/chapter6_mathematical_ciphers.ptx",
@@ -3606,9 +3733,7 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 150 Mathematics Seminar/9-22-2020 Raw Cipher Practice",
 		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/author2.tex",
 		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/referenc.tex",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/sample ciphers.tex",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/code/coincidence.py",
-		"/C/Users/roccac/Downloads/output (2).bbl"
+		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/sample ciphers.tex"
 	],
 	"find":
 	{
@@ -3626,6 +3751,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"<exercise",
+			"<project",
+			"<read",
+			"<statement",
 			"<read",
 			"<task",
 			"<row>",
@@ -3749,11 +3878,7 @@
 			"  ",
 			" ",
 			"  ",
-			"[\" \"]\\{2\\}",
-			"[\\s]\\{2\\}",
-			"\\n",
-			"([0-9]+)",
-			"   "
+			"[\" \"]\\{2\\}"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -3899,200 +4024,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "chart_appendix.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 14409,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12907,
-								12907
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5364.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "table_code/ascii_full.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3698,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "modern_ciphers/DES_section.ptx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7997,
+						"buffer_size": 28849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5677,
-								5677
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1542.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Intro_Crypto_Main.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3675,
-								3675
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "chapter7_modern_cryptology.ptx",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1959,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "mathematical_ciphers/attacking_hill_cipher.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 24775,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5476,
-								5476
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2430.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "modern_ciphers/symmetric_ciphers.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 26824,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227,
-								227
+								20225,
+								20225
 							]
 						],
 						"settings":
@@ -4103,14 +4052,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 6578.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 1,
 					"file": "/C/git/mathbook/examples/sample-article/sample-article.xml",
 					"semi_transient": false,
 					"settings":
@@ -4122,8 +4071,8 @@
 						"selection":
 						[
 							[
-								83792,
-								83797
+								0,
+								0
 							]
 						],
 						"settings":
@@ -4133,10 +4082,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 24074.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -4179,7 +4128,7 @@
 	},
 	"output.exec":
 	{
-		"height": 257.0
+		"height": 183.0
 	},
 	"output.find_results":
 	{
@@ -4187,7 +4136,7 @@
 	},
 	"output.latextools":
 	{
-		"height": 215.0
+		"height": 373.0
 	},
 	"pinned_build_system": "",
 	"project": "Intro_Crypto_Main.sublime-project",
@@ -4234,7 +4183,7 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":

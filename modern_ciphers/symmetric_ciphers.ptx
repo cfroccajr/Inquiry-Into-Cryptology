@@ -180,7 +180,7 @@
             </interactive>
         </figure>
     </subsection>
-    <subsection>
+    <subsection xml:id="bitwise_addition_ascii">
         <title>Bitwise Addition</title>
         <p>
             Modern computers and programing languages use <term>Unicode</term><idx>Unicode</idx> or <term>ASCII Code</term><idx>ASCII</idx> to convert characters to collections of bits (0's and 1's) instead of the International Telegraph Code (<xref ref="figure_ita2"/>) we studied previously.  We can read the ASCII codes on <xref ref="full_ascii_table"/>.  The bits for a character are listed as <m>(b_7b_6b_5b_4b_3b_2b_1)</m> with the first three bits along the top and the next four on the side.  If we look up the character <m>G</m>, the top of the column gives (100) and on the left we read (0111), so that <m>G\equiv(1000111)</m>.  You should also see that at the top of the column is 64 and on the left is 7, so we can also write <m>G\equiv 64+7=71</m> which is the value of <m>(1000111)</m> in base 2.
