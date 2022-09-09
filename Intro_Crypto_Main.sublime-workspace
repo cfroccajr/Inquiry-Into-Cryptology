@@ -511,24 +511,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "modern_ciphers/DES_section.ptx",
-			"settings":
-			{
-				"buffer_size": 28849,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/git/mathbook/examples/sample-article/sample-article.xml",
-			"settings":
-			{
-				"buffer_size": 784176,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Main PTX Build",
 	"build_system_choices":
@@ -3546,7 +3528,7 @@
 			]
 		]
 	],
-	"build_varint": "Pretext Build to HTML",
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -3601,11 +3583,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/git/Inquiry-Into-Cryptology/src",
-		"/C/git/Inquiry-Into-Cryptology/src/image_code"
 	],
 	"file_history":
 	[
+		"/Users/chuckrocca/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/modern_ciphers/DES_section.ptx",
+		"/Users/chuckrocca/OneDrive - WCSU/GitHub/Inquiry-Into-Cryptology/Intro_Crypto_Main.sublime-project",
 		"/C/git/mathbook/examples/sample-article/sample-article.xml",
 		"/C/git/Inquiry-Into-Cryptology/src/modern_ciphers/symmetric_ciphers.ptx",
 		"/C/git/Inquiry-Into-Cryptology/src/image_code/feistel_image.tex",
@@ -3731,13 +3713,11 @@
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/Random_Latex_Helper.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/code/dummy.py",
 		"/C/Users/roccac/OneDrive - WCSU/Classes/MAT 150 Mathematics Seminar/9-22-2020 Raw Cipher Practice",
-		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/author2.tex",
-		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/referenc.tex",
-		"/C/Users/roccac/OneDrive - WCSU/Classes/Cryptology/sample ciphers.tex"
+		"/C/Users/roccac/AppData/Local/Microsoft/Windows/INetCache/Content.Outlook/VHO4D83B/author2.tex"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -4016,84 +3996,24 @@
 			"_"
 		],
 		"reverse": false,
+		"scrollbar_highlights": true,
 		"show_context": true,
 		"use_buffer2": true,
+		"use_gitignore": true,
 		"whole_word": false,
 		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "modern_ciphers/DES_section.ptx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 28849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								20225,
-								20225
-							]
-						],
-						"settings":
-						{
-							"spell_check": true,
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6578.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/git/mathbook/examples/sample-article/sample-article.xml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 784176,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -4142,7 +4062,7 @@
 	"project": "Intro_Crypto_Main.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
