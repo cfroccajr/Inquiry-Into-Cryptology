@@ -43,7 +43,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
     <section>
         <title>Chapter 1 Quotes:</title>
         <p><alert>Julius Caesar Shift:</alert></p>
-        <xi:include href="quote_code/julius_shift.ptx" />
+        <xi:include href="quote_code/Julius_Shift.ptx" />
 
         <p><alert>Augustus Caesar Shift:</alert></p>
         <xi:include href="quote_code/augustus_shift.ptx" />
